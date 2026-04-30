@@ -1,17 +1,17 @@
 ---
 type: character-sheet
-character: Dr. [LEADER]
+character: Dr. Aisha Al Mansoori
 status: PLACEHOLDER — pending UAE friend outreach to lock name, emirate, religious practice level, family details, Arabic-phrase texture
 sheet-depth: full
 chapter: The Crossing (Closing Chapter)
 ---
 
-# Character Sheet — Dr. [LEADER], Mission Director
+# Character Sheet — Dr. Aisha Al Mansoori, Mission Director
 
 ## Identity
 
-- **Name:** `[LEADER]` placeholder. Pending UAE friend reaction to candidates: Khalid Al Mansoori, Hessa Al Maktoum, Mohammed Al Marzooqi, Reem Al Hashemi, Saif Al Mazrouei. Female. Final name to be locked after CO outreach.
-- **Title in narrative:** Dr. [LEADER]. Role title: "Mission Director" (NOT "Captain" — accurate to civilian research vessel hierarchy where the vessel master is a separate role).
+- **Name:** **Dr. Aisha Al Mansoori** is the working placeholder — Emirati equivalent of "Dr. Jane Smith" (Aisha is the most widely-distributed female Arabic name; Al Mansoori is among the most common Emirati family names with no ruling-family associations). Use in prose drafts so writing flows naturally. Final name pending UAE friend reaction. Female alternatives if friend prefers something different: Mariam Al Marzooqi, Fatima Al Shamsi, Noura Al Mazrouei, Reem Al Hashemi, Sara Al Falasi. Do NOT use ruling-family surnames (Al Maktoum / Dubai, Al Nahyan / Abu Dhabi, Al Qasimi / Sharjah-RAK, Al Sharqi / Fujairah, Al Mualla / Umm Al Quwain, Al Nuaimi / Ajman) — presumptuous for a fictional commoner.
+- **Title in narrative:** Dr. Aisha Al Mansoori. Role title: "Mission Director" (NOT "Captain" — accurate to civilian research vessel hierarchy where the vessel master is a separate role).
 - **Age at mission:** 47–52. Old enough to carry institutional gravity; young enough to still be operationally active at sea.
 - **Nationality:** UAE (Emirati national).
 - **Emirate background:** Pending UAE friend input. PAO recommendation if no input: Abu Dhabi (federal capital, strongest Antarctic-program plausibility) or Dubai (DIFC connection most direct to book's regulatory framing).
@@ -19,7 +19,7 @@ chapter: The Crossing (Closing Chapter)
 
 ## Professional biography (one paragraph)
 
-Dr. [LEADER] trained at NYU Abu Dhabi (BSc Marine Biology) and earned her PhD in Physical Oceanography at Woods Hole (joint program with MIT). Twelve years as an oceanographer with the UAE's Khalifa University and the Mohamed bin Zayed Climate Institute, with research stints at Norway's Norwegian Polar Institute and India's NCPOR (National Centre for Polar and Ocean Research). She has commanded three previous research-vessel missions, none of them under-ice. Sunfish-1 is her first submarine command. The mission's sponsoring consortium (UAE-led, with Indian, Brazilian, French, and Norwegian co-funders) selected her partly for her oceanographic credentials and partly because her academic-political portfolio includes the kind of multi-jurisdictional procurement diplomacy a multinational submarine deployment requires. She is not a naval officer. She is a senior climate scientist who has accepted a command-grade role for one mission.
+Dr. Aisha Al Mansoori trained at NYU Abu Dhabi (BSc Marine Biology) and earned her PhD in Physical Oceanography at Woods Hole (joint program with MIT). Twelve years as an oceanographer with the UAE's Khalifa University and the Mohamed bin Zayed Climate Institute, with research stints at Norway's Norwegian Polar Institute and India's NCPOR (National Centre for Polar and Ocean Research). She has commanded three previous research-vessel missions, none of them under-ice. Sunfish-1 is her first submarine command. The mission's sponsoring consortium (UAE-led, with Indian, Brazilian, French, and Norwegian co-funders) selected her partly for her oceanographic credentials and partly because her academic-political portfolio includes the kind of multi-jurisdictional procurement diplomacy a multinational submarine deployment requires. She is not a naval officer. She is a senior climate scientist who has accepted a command-grade role for one mission.
 
 ## Personality / voice
 
@@ -70,7 +70,7 @@ The mother thread is the most important. Charlie's story in Ch22 includes the au
 **Act V resolution (placeholder):**
 > *The architecture does not solve mortality. The architecture queues against mortality. Built today, intended to outlast its conditions, knowing the conditions will eventually outlast it. I write this knowing the system that runs in 2090 will not be this one. I write it anyway, because the principle has to survive the system that taught it.*
 
-These voice samples are PAO drafts. The locked voice — once UAE friend input arrives — should feel like Dr. [LEADER], not like the author, not like Charlie's narrator from Ch22.
+These voice samples are PAO drafts. The locked voice — once UAE friend input arrives — should feel like Dr. Aisha Al Mansoori, not like the author, not like Charlie's narrator from Ch22.
 
 ## What the UAE friend should react to about this character
 

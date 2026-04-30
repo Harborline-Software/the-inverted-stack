@@ -75,7 +75,7 @@ Phase 4 prune deferred until #45 voice-pass unlocks Ch23 §Collaborator Revocati
 2. **Phase 4 prune** (PAO directs, Yeoman executes): post-voice-pass cuts to Ch22+Ch23 (~-3k); cuts on Ch11+Ch20 §Performance Contracts/Budgets (~-400); cuts on Ch16 §Per-Data-Class (~-300).
 3. **Foreword**: external contributor needed.
 4. **Phase 7 reference-list split**: split Ch15's combined reference list into Ch15/Ch22/Ch23 per the Phase 5 inventory addendum (`.pao-inbox/_decisions/2026-04-30-upf-ch15-split-phase5-ch23-addendum.md`).
-5. **Closing Chapter — The Crossing** (vision-of-solution narrative chapter): concept note + character sheets in place at `.pao-inbox/_creative/`; chapter draft awaits CO outreach to UAE professional associate(s) for cultural authenticity on Dr. [LEADER]; full plan in `.pao-inbox/_decisions/antarctic-vision-chapter-concept-2026-04-30.md`.
+5. **Closing Chapter — The Crossing** (vision-of-solution narrative chapter): concept note + character sheets in place at `.pao-inbox/_creative/`; chapter draft awaits CO outreach to UAE professional associate(s) for cultural authenticity on Dr. Aisha Al Mansoori; full plan in `.pao-inbox/_decisions/antarctic-vision-chapter-concept-2026-04-30.md`.
 6. **Final assembly**: set all chapters to `icm/assembled` after voice-pass + Phase 4 prune + The Crossing chapter draft; run `make draft-pdf`.
 
 ## Build

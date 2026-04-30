@@ -12,7 +12,7 @@ status: CONCEPT — awaiting CO outreach to UAE friend, then full character shee
 
 ## One-paragraph elevator pitch
 
-A multinational civilian climate research submarine — *Sunfish-1* in the fiction, closing the project name loop — deploys to the Antarctic Filchner-Ronne ice shelf. The crew is led by **Dr. [LEADER]**, a UAE oceanographer (placeholder pending CO outreach to UAE friend). The cast carries Part I's named victims forward as mission crew — their earlier failures became the credentials that put them on this boat. Submerged transit for weeks. Mid-mission, a senior crew member dies on bridge watch — brain aneurysm — and the body must be preserved in the freezer until landfall. The architecture cannot prevent the death. Through one terrible relay window where the data appears not to come back, the architecture *seems* to fail. Then the queue resumes. The dead man's mission logs, his photographs, his observations, his handoff documentation reach his family before the boat returns to port. The chapter is written as the Mission Director's post-mission staff history. The architecture is the protagonist not because it saves anyone — it never does — but because it queues against silence, holds work through the windows that don't come, and delivers when delivery becomes possible.
+A multinational civilian climate research submarine — *Sunfish-1* in the fiction, closing the project name loop — deploys to the Antarctic Filchner-Ronne ice shelf. The crew is led by **Dr. Aisha Al Mansoori**, a UAE oceanographer (placeholder pending CO outreach to UAE friend). The cast carries Part I's named victims forward as mission crew — their earlier failures became the credentials that put them on this boat. Submerged transit for weeks. Mid-mission, a senior crew member dies on bridge watch — brain aneurysm — and the body must be preserved in the freezer until landfall. The architecture cannot prevent the death. Through one terrible relay window where the data appears not to come back, the architecture *seems* to fail. Then the queue resumes. The dead man's mission logs, his photographs, his observations, his handoff documentation reach his family before the boat returns to port. The chapter is written as the Mission Director's post-mission staff history. The architecture is the protagonist not because it saves anyone — it never does — but because it queues against silence, holds work through the windows that don't come, and delivers when delivery becomes possible.
 
 ## Why this chapter exists
 
@@ -24,7 +24,7 @@ This chapter is the answer. It connects the cast (Part I victims become mission 
 
 1. **Placement.** Between Part V (Ch23) and the existing Epilogue. The chapter is a new Closing Chapter, not a Part. The existing Epilogue stays untouched — its dense philosophical register is the calm reflection after the narrative climax, not a competitor with it.
 2. **Voice register.** Fictional first-person staff history. The Mission Director writes the chapter as a post-mission account. The reader knows it's fiction (the book is non-fiction; this is the vision-of-solution chapter); the frame is accepted as thought experiment. Same register as Ch22's first-person Uncle Charlie passage — author voice already established for first-person in this book.
-3. **Author boundary.** Dr. [LEADER] is fictional. The Mission Director is NOT the author. The bridge-death event is a fictional dramatic event in a fictional mission, not attributed to author experience. Charlie stays in Ch22 only — no cross-reference in The Crossing; the reader carries the connection.
+3. **Author boundary.** Dr. Aisha Al Mansoori is fictional. The Mission Director is NOT the author. The bridge-death event is a fictional dramatic event in a fictional mission, not attributed to author experience. Charlie stays in Ch22 only — no cross-reference in The Crossing; the reader carries the connection.
 
 ## Five-act narrative outline
 
@@ -81,7 +81,7 @@ Detailed character sheets in `.pao-inbox/_creative/character-sheets/`. Brief sum
 
 | Crew role | Sheet status | Provenance |
 |---|---|---|
-| **Dr. [LEADER]** — Mission Director | Full sheet (placeholder name pending UAE outreach) | New character; UAE oceanographer; female |
+| **Dr. Aisha Al Mansoori** — Mission Director | Full sheet (placeholder name pending UAE outreach) | New character; UAE oceanographer; female |
 | **Maria Santos** — Mission Medical Officer | Full sheet | Ch1 hospital data-loss disaster; arc from victim to authority; still scarred |
 | **Senior Technical Specialist** — dies on watch | Full sheet | New character; Norwegian polar veteran; emotional weight of his death is the chapter's load-bearing scene |
 | **Lead Instrumentation Engineer** | Brief sheet | Renamed from Ch1 construction PM |
@@ -114,8 +114,8 @@ Reference notes only, not full sheets — already characterized in Ch5–Ch9:
 
 These are blocked on CO outreach to UAE friend:
 
-1. **Dr. [LEADER]'s name** — pending UAE friend reaction to candidates (Khalid Al Mansoori, Hessa Al Maktoum, Mohammed Al Marzooqi, Reem Al Hashemi, Saif Al Mazrouei) or alternative
-2. **Dr. [LEADER]'s emirate background** — Abu Dhabi, Dubai, Sharjah, RAK, etc.
+1. **Dr. Aisha Al Mansoori's name** — Aisha Al Mansoori is the working placeholder ("Dr. Jane Smith" equivalent). Female alternatives if UAE friend prefers something different: Mariam Al Marzooqi, Fatima Al Shamsi, Noura Al Mazrouei, Reem Al Hashemi, Sara Al Falasi. Avoid ruling-family surnames (Al Maktoum, Al Nahyan, Al Qasimi, Al Sharqi, Al Mualla, Al Nuaimi).
+2. **Dr. Aisha Al Mansoori's emirate background** — Abu Dhabi, Dubai, Sharjah, RAK, etc.
 3. **Religious practice level** — default moderately observant; UAE friend may calibrate
 4. **Specific Arabic phrases** that would slip into Director's English narration naturally
 5. **Family details** — does the Director have children? A spouse? Parents in Abu Dhabi? These shape the mortality fear specifically
