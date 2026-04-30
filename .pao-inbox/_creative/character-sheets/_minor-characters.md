@@ -7,7 +7,7 @@ chapter: The Crossing (Closing Chapter)
 
 # Minor Characters — Brief Sheets
 
-Full sheets exist for Dr. Aisha Al Mansoori, Maria Santos, and the Senior Technical Specialist. The remaining named crew get brief sheets here. Council member cameos at end.
+Full sheets exist for Dr. Anna Yusupova, Maria Santos, and the Senior Technical Specialist. The remaining named crew get brief sheets here. Council member cameos at end.
 
 ---
 
@@ -57,7 +57,7 @@ Full sheets exist for Dr. Aisha Al Mansoori, Maria Santos, and the Senior Techni
 
 **Identity:** Male. French or Norwegian. PAO recommendation: French (closes Barker market on the EU side; Norwegian slot already filled by Senior Technical Specialist). Name candidate: Dr. Étienne Marchand or Dr. Jean-Pierre Bouchard. Age 50–57.
 
-**Backstory:** Sorbonne PhD in glaciology. Thirty years of Antarctic research. Co-PI on Sunfish-1's scientific program. Reports to Dr. Aisha Al Mansoori for command questions, leads scientific decision-making for the mission.
+**Backstory:** Sorbonne PhD in glaciology. Thirty years of Antarctic research. Co-PI on Sunfish-1's scientific program. Reports to Dr. Anna Yusupova for command questions, leads scientific decision-making for the mission.
 
 **Role in chapter:** Background presence; one or two scenes. Provides scientific framing in the Director's narration when the mission's instrumentation deployment proceeds in Act V. Does not feature heavily in Acts III or IV.
 
@@ -97,4 +97,4 @@ These characters are already established in Ch5–Ch9. The Crossing references t
 
 ## Crew not named individually
 
-Several other crew members are present on the boat but not named. The Director may reference them collectively: "the watch rotation" or "the science team" or "the mess crew." Naming every crew member would crowd the chapter. PAO recommendation: 8–10 named characters maximum (Dr. Aisha Al Mansoori, Maria, Senior Technical Specialist, Lead Instrumentation Engineer, Logistics & Procurement Officer, Submarine Life-Support Engineer, Chief Scientist, Communications & Data Officer = 8). Add 1–2 more if the chapter draft demands it; do not exceed 10.
+Several other crew members are present on the boat but not named. The Director may reference them collectively: "the watch rotation" or "the science team" or "the mess crew." Naming every crew member would crowd the chapter. PAO recommendation: 8–10 named characters maximum (Dr. Anna Yusupova, Maria, Senior Technical Specialist, Lead Instrumentation Engineer, Logistics & Procurement Officer, Submarine Life-Support Engineer, Chief Scientist, Communications & Data Officer = 8). Add 1–2 more if the chapter draft demands it; do not exceed 10.

@@ -5,14 +5,14 @@ working-title: The Crossing
 chapter-position: Closing Chapter (between Part V and Epilogue)
 voice-register: fictional first-person staff history
 target-word-count: ~5,000 words
-status: CONCEPT — awaiting CO outreach to UAE friend, then full character sheets, then chapter draft
+status: CONCEPT — Mission Director LOCKED as Dr. Anna Yusupova (Uzbek-Russian) per CO directive 2026-04-30. Character sheets in place. Chapter draft pending advisor calibration on Anna's biographical details.
 ---
 
 # Concept Note — The Crossing (Closing Chapter)
 
 ## One-paragraph elevator pitch
 
-A multinational civilian climate research submarine — *Sunfish-1* in the fiction, closing the project name loop — deploys to the Antarctic Filchner-Ronne ice shelf. The crew is led by **Dr. Aisha Al Mansoori**, a UAE oceanographer (placeholder pending CO outreach to UAE friend). The cast carries Part I's named victims forward as mission crew — their earlier failures became the credentials that put them on this boat. Submerged transit for weeks. Mid-mission, a senior crew member dies on bridge watch — brain aneurysm — and the body must be preserved in the freezer until landfall. The architecture cannot prevent the death. Through one terrible relay window where the data appears not to come back, the architecture *seems* to fail. Then the queue resumes. The dead man's mission logs, his photographs, his observations, his handoff documentation reach his family before the boat returns to port. The chapter is written as the Mission Director's post-mission staff history. The architecture is the protagonist not because it saves anyone — it never does — but because it queues against silence, holds work through the windows that don't come, and delivers when delivery becomes possible.
+A multinational civilian climate research submarine — *Sunfish-1* in the fiction, closing the project name loop — deploys to the Antarctic Filchner-Ronne ice shelf. The crew is led by **Dr. Anna Yusupova**, an Uzbek-Russian climate oceanographer based at the Arctic and Antarctic Research Institute (AARI) in St. Petersburg, born in Tashkent. The cast carries Part I's named victims forward as mission crew — their earlier failures became the credentials that put them on this boat. Submerged transit for weeks. Mid-mission, a senior crew member dies on bridge watch — brain aneurysm — and the body must be preserved in the freezer until landfall. The architecture cannot prevent the death. Through one terrible relay window where the data appears not to come back, the architecture *seems* to fail. Then the queue resumes. The dead man's mission logs, his photographs, his observations, his handoff documentation reach his family before the boat returns to port. The chapter is written as the Mission Director's post-mission staff history. The architecture is the protagonist not because it saves anyone — it never does — but because it queues against silence, holds work through the windows that don't come, and delivers when delivery becomes possible.
 
 ## Why this chapter exists
 
@@ -24,7 +24,7 @@ This chapter is the answer. It connects the cast (Part I victims become mission 
 
 1. **Placement.** Between Part V (Ch23) and the existing Epilogue. The chapter is a new Closing Chapter, not a Part. The existing Epilogue stays untouched — its dense philosophical register is the calm reflection after the narrative climax, not a competitor with it.
 2. **Voice register.** Fictional first-person staff history. The Mission Director writes the chapter as a post-mission account. The reader knows it's fiction (the book is non-fiction; this is the vision-of-solution chapter); the frame is accepted as thought experiment. Same register as Ch22's first-person Uncle Charlie passage — author voice already established for first-person in this book.
-3. **Author boundary.** Dr. Aisha Al Mansoori is fictional. The Mission Director is NOT the author. The bridge-death event is a fictional dramatic event in a fictional mission, not attributed to author experience. Charlie stays in Ch22 only — no cross-reference in The Crossing; the reader carries the connection.
+3. **Author boundary.** Dr. Anna Yusupova is fictional. The Mission Director is NOT the author. Anna's backstory through high school is informed by the lived pattern of post-Soviet Central Asian diaspora professional women (Tashkent → Russia in teens → strong-in-chemistry → ambitious-overachiever profile), with biographical firewall at university — Anna pursued chemistry into chemical oceanography, NOT medical school. Backstory before university is informed-by-knowledge; backstory from university forward is fiction. The bridge-death event is a fictional dramatic event in a fictional mission, not attributed to author experience. Charlie stays in Ch22 only — no cross-reference in The Crossing; the reader carries the connection.
 
 ## Five-act narrative outline
 
@@ -81,7 +81,7 @@ Detailed character sheets in `.pao-inbox/_creative/character-sheets/`. Brief sum
 
 | Crew role | Sheet status | Provenance |
 |---|---|---|
-| **Dr. Aisha Al Mansoori** — Mission Director | Full sheet (placeholder name pending UAE outreach) | New character; UAE oceanographer; female |
+| **Dr. Anna Yusupova** — Mission Director | Full sheet (LOCKED) | New character; Uzbek-Russian climate oceanographer at AARI St. Petersburg; female; ambitious / blunt / selfless / loyal |
 | **Maria Santos** — Mission Medical Officer | Full sheet | Ch1 hospital data-loss disaster; arc from victim to authority; still scarred |
 | **Senior Technical Specialist** — dies on watch | Full sheet | New character; Norwegian polar veteran; emotional weight of his death is the chapter's load-bearing scene |
 | **Lead Instrumentation Engineer** | Brief sheet | Renamed from Ch1 construction PM |
@@ -112,11 +112,10 @@ Reference notes only, not full sheets — already characterized in Ch5–Ch9:
 
 ## Open decisions before chapter draft
 
-These are blocked on CO outreach to UAE friend:
+These are blocked on CO advisor calibration (CO has built-in advisor — wife with Tashkent-Russia background — for the Anna direction):
 
-1. **Dr. Aisha Al Mansoori's name** — Aisha Al Mansoori is the working placeholder ("Dr. Jane Smith" equivalent). Female alternatives if UAE friend prefers something different: Mariam Al Marzooqi, Fatima Al Shamsi, Noura Al Mazrouei, Reem Al Hashemi, Sara Al Falasi. Avoid ruling-family surnames (Al Maktoum, Al Nahyan, Al Qasimi, Al Sharqi, Al Mualla, Al Nuaimi).
-2. **Dr. Aisha Al Mansoori's emirate background** — Abu Dhabi, Dubai, Sharjah, RAK, etc.
-3. **Religious practice level** — default moderately observant; UAE friend may calibrate
+1. **Anna's surname** — Yusupova is the working placeholder. Advisor may swap if a different Uzbek family name fits better.
+2. **Religious practice level** — default nominally Muslim by family heritage, secular in personal practice (Soviet-secular educational formation overlays Hanafi-Sunni heritage); advisor may calibrate
 4. **Specific Arabic phrases** that would slip into Director's English narration naturally
 5. **Family details** — does the Director have children? A spouse? Parents in Abu Dhabi? These shape the mortality fear specifically
 
@@ -145,9 +144,9 @@ Breakdown:
 2. **Character sheets** — directory `.pao-inbox/_creative/character-sheets/`. Drafting now.
 3. **Book-structure.md update** — add Closing Chapter entry. Drafting now.
 4. **ASSEMBLY.md update** — add planned chapter row with `icm/concept` stage. Drafting now.
-5. **CO outreach to UAE friend** — CO does this on his own timeline.
-6. **Open decisions locked** — CO returns with UAE friend input + locks decisions 1–5.
-7. **Concept note revised** — incorporate UAE friend feedback.
+5. **Advisor calibration** — CO surfaces wife's feedback on Anna's biographical details when ready.
+6. **Open decisions locked** — surname + religious practice calibrated; chapter draft begins.
+7. **Concept note revised** — incorporate advisor feedback.
 8. **Chapter draft** — first draft against this concept note + locked sheets.
 9. **Lit-board review** — same workflow as other chapters.
 10. **Polish** — same workflow.
@@ -155,4 +154,4 @@ Breakdown:
 
 ---
 
-**End of concept note.** Awaiting CO outreach to UAE friend before chapter draft begins. PAO can proceed with character sheets + structure updates in parallel.
+**End of concept note.** Mission Director LOCKED as Dr. Anna Yusupova (Uzbek-Russian) per CO directive 2026-04-30. Chapter draft pending CO advisor calibration on Anna's biographical details. UAE direction (Dr. Aisha Al Mansoori) archived at `.pao-inbox/_creative/character-sheets/_archive/dr-leader-mission-director-uae-not-chosen.md` for design-process record.
