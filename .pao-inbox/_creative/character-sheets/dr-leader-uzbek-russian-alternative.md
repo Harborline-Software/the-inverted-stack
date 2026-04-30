@@ -139,29 +139,54 @@ If the CO chooses Anna Yusupova over Aisha Al Mansoori:
 6. **Charlie / Ch22 boundary unchanged.** No cross-reference. Reader carries the connection.
 7. **Voss flashback cameo unchanged.**
 
-## Parallel plot material — Telegram bracket (LOCKED placement)
+## Parallel plot material — Telegram departure scene (Act I LOCKED; Act V pending)
 
-**CO directive:** Tashkent classmate **Rustam Karimov**, Russian Army captain by actual commission, has ribbed Anna about her civilian "Captain" / "Mission Director" title since their thirties. The dynamic is incorporated into The Crossing as a **two-message Telegram bracket**, ~105 words total across Acts I and V. Single-sentence-each-side compression. The reader never hears Rustam speak. He exists in Anna's interiority and in two quoted text messages.
+**CO directive:** Tashkent classmate **Rustam Karimov**, Russian Army captain by actual commission, has ribbed Anna about her civilian "Captain" / "Mission Director" title for fifteen years through the gymnasium classmates Telegram group. On the morning of Sunfish-1 departure, **Anna has had enough**. She leaves the group as her boat readies to leave port. The act pairs the literal voyage (submarine to Antarctica) with shedding an old pattern — she removes the noise so she can be fully present for the work that begins as the group thread disappears from her phone.
 
-**Why Telegram:** Russian-CIS friends live on Telegram; a pre-departure ribbing message arrives in text the way it would in real life. The medium is itself a character beat — the friendship runs on Telegram and has run on Telegram for years. Both quoted messages are in English; the joke runs in English specifically because the title is the joke and the title is in English. (Russian/Uzbek code-switching surfaces elsewhere in Anna's interiority — calls to her mother, internal phrases — not in the Rustam exchanges.)
+**Important reframing:** Anna does not leave because Rustam wounded her. She leaves because his recurring pattern has begun to disrespect the work she is about to do. The Mission Director cannot board a submarine to Antarctica with a "fake captain" Telegram still echoing in her head. The leaving is itself a form of loyalty — to the mission, to her own preparation, to the people whose lives depend on her being fully present. This is consistent with her core character (blunt, selfless, loyal, doesn't tolerate stupid) — *stupid* in this moment includes the pattern she has carried for fifteen years that has finally exceeded its useful life.
 
-**Why a bracket (Act I + Act V):** Open with banter, close with banter that has been transformed by what happened in between. The transformation does not require explanation. The reader feels it. The compression mirrors Anna's bluntness register — she would not write a paragraph about her classmate when one sentence does the work.
+**Why Telegram:** Russian-CIS friends live on Telegram; gymnasium classmates groups persist for decades; the medium is itself a character beat — the friendship and the joke have run on Telegram for years. The Telegram group is also why Anna's exit is a *real act* with social consequence — leaving a fifteen-year-old classmate group is significant in Russian/CIS culture, not casual.
 
-**Why two messages, not a phone call:** Phone calls require dramatized dialogue, which adds screen time. Telegram messages are quoted text inside Anna's narration — interiority compresses where scene cannot. Anna does not reply to either message in the chapter prose; the reader fills in her response. King move: the relationship is so established that the reply is implied.
+**Why a single substantive scene, not the original symmetric bracket:** The leaving is heavy enough to carry the dynamic on its own. The original bracket structure (single sentence Act I + single sentence Act V) worked when the dynamic was "the joke persists across the mission." The new version is "the joke has reached its limit and Anna severs the venue where it lived." The leaving is the beat. Anna does not need to return to the group in Act V for the scene to land.
 
-### Act I — Telegram before departure (~68 words)
+### Act I — Telegram leaving the group, morning of departure (~130 words)
 
-> Rustam Karimov, my classmate from the Tashkent gymnasium and now a Russian Army captain by actual commission rather than civilian courtesy, sent his Telegram at 04:17 the morning of departure. *Don't lose the boat, fake captain.* He has sent some version of that message before every research voyage since I was thirty-two. I read it and put my phone down. He is not entirely wrong, and we both know it.
+> Rustam Karimov, my classmate from the Tashkent gymnasium and now a Russian Army captain by actual commission, sent his Telegram at 04:17 the morning of departure. *Don't lose the boat, fake captain.* He had sent some version of that message before every research voyage since I was thirty-two. I had read every one of them with the same dry tolerance — until that morning. I opened the gymnasium classmates group, where the joke had run for fifteen years and where forty-seven of us still spoke, half about children, half about each other's shortcomings. I typed a goodbye. *I am leaving for the ice today. Do not wait for me. The mission is enough work for the time I have.* I left the group. The thread disappeared from my list. I put my phone down. I did not look at it again before the boat left port.
 
-The sentence does the structural work in one breath: who Rustam is, the technical-legitimacy hook (his commission is real; hers is civilian-courtesy), the duration (two decades of the joke), Anna's bearing (she reads it and puts her phone down — no reply needed), and the line that lands (*we both know it*).
+The scene does several things at once:
+- Establishes Rustam (one sentence), the legitimacy hook, and the fifteen-year duration
+- Shows Anna's tolerance ending without dramatizing wound — *until that morning* is all the explanation the reader needs
+- Names the group (forty-seven classmates, mixed register of children-and-shortcomings) so the leaving carries weight
+- Quotes Anna's goodbye in her own bluntness register — three short sentences; no apology; no softening; *the mission is enough work for the time I have* is the line that lands
+- Renders the leaving as a sequence of physical actions (typed, left, disappeared, put down, did not look) — King move, the action carries the meaning
+- Does not show Rustam's reaction or any other classmate's reaction; the reader fills in the social aftermath
 
-### Act V — Telegram after return (~35 words)
+### Act V — pending decision
 
-> Rustam's Telegram arrived the morning after I got home. *Welcome back, fake captain.* He has not changed the joke. The work has not changed it for him. I would not want it to.
+The original symmetric bracket plan had a brief Act V beat (Rustam's "welcome back, fake captain" message after Anna returns). With the new Act I (leaving the group entirely), Act V has three plausible paths. **CO needs to choose:**
 
-Three short sentences, mirroring the Act I structure. The transformation is implicit. *The work has not changed it for him* carries the weight of everything that happened on the boat without naming it. Anna does not reply to Rustam, does not tell him about the freezer, does not tell him about the silent relay window. The work settled the question for her; Rustam doesn't need to know the question was settled. The friendship persists exactly as it was, which is the point.
+**Option V-A: No Act V beat. The leaving is the only beat.**
+- The chapter does not return to the Telegram group, to Rustam, to the classmates.
+- Anna comes home, completes mission paperwork, sits with the staff history. The reader doesn't see whether Rustam reaches out, whether she rejoins the group, whether the friendship survives.
+- Pros: Maximum compression; trusts the reader; lets the leaving carry full weight.
+- Cons: Leaves the dynamic unresolved (which may be the point, or may feel incomplete depending on chapter register).
 
-**Total chapter cost: ~103 words.** Two locations, both within Anna's existing interiority register, no new scenes required, no new on-page characters, no expansion of the cast.
+**Option V-B: Brief private message from Rustam (~35 words).** A private Telegram from Rustam, not the group, arrives after Anna returns. Not an apology — Rustam doesn't apologize. An acknowledgment that he saw her leave and is reaching across the absence.
+> *I saw you left. Welcome back, Captain. The boat needed you more than the group did. Davay.*
+- Pros: Restores the bracket symmetry. Lets the friendship persist in altered form (group → individual; ribbing dropped to recognition). Rustam acknowledges what the leaving meant without sentimentalizing.
+- Cons: Risks neat resolution. The dropped "fake" might feel engineered.
+
+**Option V-C: Anna initiates a private message to one classmate (not Rustam).** Anna reaches out to a different gymnasium classmate (one of the forty-seven, not the one who triggered the departure) to ask after a specific person — perhaps the classmate who had a sick child mentioned in the group, perhaps the classmate she was actually closest to before Rustam dominated the dynamic. The message reframes the leaving — Anna stepped away from the *pattern*, not from the *people*; her loyalty to specific friendships persists; she just no longer participates in the venue where Rustam's pattern operated.
+- Pros: Adds texture to Anna's loyalty. Shows that the leaving was about the venue, not the relationships. Allows the chapter to honor friendship without restoring the joke.
+- Cons: Adds a new minor character. Requires more words (~50–80). Risks complicating an already-loaded character beat.
+
+**PAO recommendation: V-A.** The leaving is heavy enough. Acts II–V have plenty of other material to carry. Coming back to Rustam or the classmates risks competing with the chapter's emotional close (the Senior Technical Specialist's death, the silent relay window, the staff history's resolution). The reader carrying the absence of resolution is exactly what King would want — the chapter trusts the reader to know that some severances do not get bracketed, that a goodbye written at 04:17 the morning of departure has the weight it has.
+
+If you pick V-B or V-C, I'll execute. If you pick V-A or stay silent, that's the lock.
+
+**Total chapter cost (Act I only): ~130 words.** One location, within Anna's existing interiority register. Single concrete scene rather than two interiority-bracketed beats.
+
+**If V-B or V-C is chosen, total chapter cost: ~165–210 words.**
 
 **Author-boundary note:** Rustam Karimov is fictional. The Tashkent-classmate-into-Russian-military-service pattern is a real and common post-Soviet trajectory; this character draws on the pattern, not on a particular person. Karimov surname is widespread (defensible at "Smith" level of commonness; the Karimov-ruling-family resonance is real but a Russian Army officer career separates Rustam from the political association). Easy to swap if advisor flags it.
 
