@@ -374,8 +374,46 @@ team, a hostile OS, a multi-party data handoff, a regulatory event escalating a 
 
 ---
 
+## Closing Chapter — The Crossing
+*~5,000 words. Working title placeholder — final title may change.*
+
+**The book's vision-of-the-solution chapter.** The first 23 chapters carry overwhelmingly cautionary
+narrative scaffolding (Part I victims, Part II council battle scars, the 2022 SaaS terminations).
+This Closing Chapter is the narrative payoff: a fictional first-person staff history of a
+multinational civilian climate research submarine deployment to the Antarctic Filchner-Ronne ice
+shelf. The architecture is the protagonist not because it saves anyone — it never does — but
+because it queues against silence, holds work through windows that don't come, and delivers when
+delivery becomes possible.
+
+- Mission codename Sunfish-1 (closes the project name loop)
+- Mission Director: Dr. [LEADER], a fictional UAE oceanographer (placeholder name pending CO outreach)
+- Connected cast: Part I victims (Maria Santos, the construction PM, the BFSI loan officer, the GCC
+  field engineer) return as mission crew — their Part I failures became the credentials that put
+  them on this boat
+- Five-act structure: Departure → Submerged Transit (with mid-mission jurisdictional crisis) →
+  Death on Watch (present-tense set-piece) → Silent Relay Window → Return
+- Voice register: fictional first-person staff history (consistent with Ch22's Charlie passage's
+  first-person register; not a memoir of the author)
+- King critique items baked in: antagonist made material (historical pattern of vendor abandonment),
+  Maria still scarred (residual tic), Director's specific fear named (mortality + long-now compound),
+  architecture appears to fail before it succeeds, death scened in present tense, dedication earned
+  through scene
+- Charlie stays in Ch22 only — no cross-reference; reader carries the connection
+- Concept note: `.pao-inbox/_creative/the-crossing-concept-note-2026-04-30.md`
+- Character sheets: `.pao-inbox/_creative/character-sheets/`
+- Status: PRE-DRAFT — awaiting CO outreach to UAE professional associate(s) for cultural authenticity
+  on Dr. [LEADER]; chapter draft begins after that input lands
+
+---
+
 ## Epilogue — What the Stack Owes You
 *~2,500 words*
+
+**Note on placement:** The existing Epilogue stays untouched. The new Closing Chapter (The Crossing)
+sits between Ch23 and the Epilogue, providing the narrative climax. The Epilogue then serves as
+the calmer philosophical close after the climax — the manifesto-grade "what the architecture owes
+you" register works *after* a vision moment, not as a vision moment itself.
+
 - What the council agreed the architecture must never compromise
 - The open questions that remain genuinely unsettled: relay commoditization moat,
   GDPR Article 17 in CRDT systems, formal verification of domain-level invariants,
@@ -453,9 +491,10 @@ team, a hostile OS, a multi-party data handoff, a regulatory event escalating a 
 | Part III — Reference Architecture (Ch 11–16; Ch15 slimmed post-split) | ~21,500 |
 | Part IV — Implementation Playbooks (Ch 17–20) | ~14,000 |
 | Part V — Operational Concerns (Ch 21–22) | ~16,500 |
+| Closing Chapter — The Crossing | ~5,000 |
 | Epilogue | ~2,500 |
 | Appendices A–G | ~13,000 |
-| **Total** | **~105,700** |
+| **Total** | **~110,700** |
 
 (Pre-split target was ~84,700; post-split + Part V + Appendices F+G adds Part V's ~16,500
 and Appendices F+G's ~5,000 while moving ~10,000 words from Ch15 to Ch22 — net target
