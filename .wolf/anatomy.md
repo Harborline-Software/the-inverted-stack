@@ -1,11 +1,22 @@
 # anatomy.md
 
-> Auto-maintained by OpenWolf. Last scanned: 2026-04-29T18:16:26.240Z
-> Files: 222 tracked | Anatomy hits: 0 | Misses: 0
+> Auto-maintained by OpenWolf. Last scanned: 2026-04-30T20:06:39.490Z
+> Files: 267 tracked | Anatomy hits: 0 | Misses: 0
+
+## ../../../../tmp/
+
+- `ch15_phase3_split.py` — UPF Ch15 split — Phase 3 batch executor. (~1225 tok)
+- `ch23_split.py` — parse_sections, main, wc (~2210 tok)
+- `phase5_redirects.py` — should_skip, redirect_in_text, process_file, main (~1374 tok)
+
+## ../../../../tmp/sunfish-pao-incident-wt/icm/_state/research-inbox/
+
+- `pao-incident-2026-04-30T07-35Z-destructive-action-reset-hard.md` — PAO incident report — destructive `git reset --hard` against shared working tree (~1576 tok)
 
 ## ../../.claude/projects/-Users-christopherwood-Projects-the-inverted-stack/memory/
 
-- `MEMORY.md` — Memory Index — The Inverted Stack Book Project (~925 tok)
+- `feedback_no_reset_hard_without_audit.md` (~701 tok)
+- `MEMORY.md` — Memory Index — The Inverted Stack Book Project (~1367 tok)
 - `project_audiobook_topology.md` — Topology (~3242 tok)
 - `reference_migration_memory_path.md` — What happened (~808 tok)
 
@@ -40,7 +51,8 @@
 ## ./
 
 - `.gitignore` — Git ignore rules (~130 tok)
-- `book-structure.md` — BOOK-STRUCTURE (~6016 tok)
+- `ASSEMBLY.md` — Assembly Manifest (~2270 tok)
+- `book-structure.md` — BOOK-STRUCTURE (~8079 tok)
 - `LICENSE` (~204 tok)
 - `pytest.ini` (~34 tok)
 
@@ -93,12 +105,65 @@
 ## .github/ISSUE_TEMPLATE/
 
 
+## .pao-inbox/
+
+- `yeoman-question-2026-04-29T23-22Z-phase3-complete.md` — <Section Name> (~952 tok)
+- `yeoman-question-2026-04-30T07-27Z-ch15-forward-pointers-routed.md` — Declares work (~499 tok)
+- `yeoman-question-2026-04-30T07-32Z-phase5-spot-check-stragglers.md` — Declares table (~876 tok)
+- `yeoman-question-2026-04-30T07-35Z-ch22-ch23-diagrams-applied.md` — Declares table (~619 tok)
+- `yeoman-question-2026-04-30T07-41Z-broader-xref-spotcheck-clean.md` — task: routing (~712 tok)
+- `yeoman-question-2026-04-30T07-46Z-ch19-review-ack-shipasis.md` (~419 tok)
+- `yeoman-question-2026-04-30T07-47Z-audiobook-extended-ch22-ch23.md` (~446 tok)
+- `yeoman-resumed-2026-04-29T23-19Z-recovery-ack-phase3-start.md` (~542 tok)
+- `yeoman-resumed-2026-04-30T01-30Z-recovery-after-pao-reset.md` (~815 tok)
+
+## .pao-inbox/_creative/
+
+- `the-crossing-concept-note-2026-04-30.md` — Concept Note — The Crossing (Closing Chapter) (~4423 tok)
+
+## .pao-inbox/_creative/character-sheets/
+
+- `_minor-characters.md` — Minor Characters — Brief Sheets (~2105 tok)
+- `dr-leader-mission-director.md` — Character Sheet — Dr. Aisha Al Mansoori, Mission Director (~2091 tok)
+- `maria-santos.md` — Character Sheet — Maria Santos, Mission Medical Officer (~1529 tok)
+- `senior-technical-specialist.md` — Character Sheet — Senior Technical Specialist (~2063 tok)
+
+## .pao-inbox/_decisions/
+
+- `2026-04-30-upf-ch15-split-phase5-ch23-addendum.md` — UPF Ch15 Split — Phase 5 Cross-Reference Inventory Addendum (Ch22/Ch23 routing) (~1512 tok)
+- `2026-04-30-voice-pass-priority-queue.md` — Voice-Pass Priority Queue (~1640 tok)
+- `2026-04-30-word-count-target-revision-proposal.md` — Word-Count Target Revision — PAO Recommendation (~1522 tok)
+- `antarctic-vision-chapter-concept-2026-04-30.md` — Antarctic Vision Chapter — Concept State and Resume Instructions (~5210 tok)
+- `co-seat-deferred-structural-decisions-2026-04-30.md` — CO-Seat Deferred Structural Decisions — Ch11 + Ch15 (~2015 tok)
+
+## .pao-inbox/_editorial-reviews/
+
+- `ch05-literary-board-2026-04-30.md` — Literary Board Review — Ch05 (The Enterprise Lens) (~1933 tok)
+- `ch06-literary-board-2026-04-30.md` — Literary Board Review — Ch06 (The Distributed Systems Lens) (~2185 tok)
+- `ch07-literary-board-2026-04-30.md` — Literary Board Review — Ch07 (The Security Lens) (~2402 tok)
+- `ch08-literary-board-2026-04-30.md` — Literary Board Review — Ch08 (The Product / Economic Lens) (~2225 tok)
+- `ch09-literary-board-2026-04-30.md` — Literary Board Review — Ch09 (The Local-First Practitioner Lens) (~2085 tok)
+- `ch10-literary-board-2026-04-30.md` — Literary Board Review — Ch10 (Synthesis: What the Council Finally Agreed On) (~1591 tok)
+- `ch11-literary-board-2026-04-30.md` — Literary Board Review — Ch11 (Node Architecture) (~1896 tok)
+- `ch12-literary-board-2026-04-30.md` — Literary Board Review — Ch12 (CRDT Engine and Data Layer) (~1882 tok)
+- `ch13-literary-board-2026-04-30.md` — Literary Board Review — Ch13 (Schema Migration and Evolution) (~1940 tok)
+- `ch14-literary-board-2026-04-30.md` — Literary Board Review — Ch14 (Sync Daemon Protocol) (~1977 tok)
+- `ch15-literary-board-2026-04-30.md` — Literary Board Review — Ch15 (Security Architecture) (~2241 tok)
+- `ch19-compression-2026-04-30.md` — Ch19 (Shipping to Enterprise) — Compression Review (~987 tok)
+- `ch22-ch23-diagram-proposals-2026-04-30.md` — Ch22 + Ch23 Diagram Proposals (~2068 tok)
+- `ch22-literary-board-2026-04-30.md` — Literary Board Review — Ch22 (Key Lifecycle Operations) (~1710 tok)
+- `ch23-literary-board-2026-04-30.md` — Literary Board Review — Ch23 (Endpoint, Collaborator, and Custody Operations) (~1979 tok)
+
+## .pao-inbox/_state-snapshots/
+
+- `snapshot-2026-04-30.md` — Book State Snapshot — 2026-04-30 (post Ch15 split) (~1832 tok)
+
 ## build/
 
 - `__init__.py` — build/__init__.py (~6 tok)
 - `apply_phase0a.py` — One-shot Phase 0a HIGH-tier compressor. (~15490 tok)
 - `AUDIO-DOCKER.md` — Audiobook Generation — Docker Setup (~4120 tok)
-- `audiobook.py` — Generate audiobook MP3s from chapter markdown using a local Kokoro TTS server. (~19396 tok)
+- `audiobook.py` — Generate audiobook MP3s from chapter markdown using a local Kokoro TTS server. (~19434 tok)
 - `build_overlays.py` — Whispersync-capable EPUB build (Phases B-E). (~6341 tok)
 - `check_audit.py` — Reference-integrity check: every jurisdiction in inline prose appears in Appendix F. (~581 tok)
 - `check_first_use.py` — First-use rule checker. (~3348 tok)
@@ -110,8 +175,9 @@
 - `generate_chapter_overview.py` — Generate chapter-overview.md for the inverted-stack-conformance skill. (~874 tok)
 - `generate_implementation_spec.py` — Generate the human-readable implementation-specification.md from the (~3052 tok)
 - `librivox_browse.py` — Browse LibriVox for usable narrator reference clips. (~3880 tok)
+- `lint.py` — Structural integrity checks for The Inverted Stack manuscript. (~2352 tok)
 - `m4b.py` — Build a single .m4b audiobook file from the per-chapter MP3s. (~2027 tok)
-- `Makefile` — The Inverted Stack — Build Targets (~3878 tok)
+- `Makefile` — The Inverted Stack — Build Targets (~3970 tok)
 - `normalize.py` — EBU R128 loudness normalization for the audiobook MP3s. (~2557 tok)
 - `promote.py` — Phase 4 promotion script. (~2233 tok)
 - `remediate_first_use.py` — Remediate first-use rule violations across all chapter sources. (~3156 tok)
@@ -119,11 +185,11 @@
 - `verify_loudness.py` — Verify normalized chapter MP3s land within their target loudness spec. (~2823 tok)
 - `voice_upload.py` — Mac-side client for the Chatterbox voice-upload API. (~2974 tok)
 - `voice-pass.py` — Voice-agent orchestrator: rewrite chapters through guest voice agents (~5068 tok)
-- `word-count.py` — Word count per chapter vs. target. (~666 tok)
+- `word-count.py` — Word count per chapter vs. target. (~688 tok)
 
 ## chapters/
 
-- `voice-plan.yaml` — Voice-pass plan: chapter -> primary voice agent (pass 1) (~666 tok)
+- `voice-plan.yaml` — Voice-pass plan: chapter -> primary voice agent (pass 1) (~732 tok)
 
 ## chapters/_voice-drafts/final/
 
@@ -173,11 +239,11 @@
 ## chapters/appendices/
 
 - `appendix-a-sync-daemon-wire-protocol.md` — Appendix A — Sync Daemon Wire Protocol (~6830 tok)
-- `appendix-b-threat-model-worksheets.md` — Appendix B — Threat Model Worksheets (~7554 tok)
+- `appendix-b-threat-model-worksheets.md` — Appendix B — Threat Model Worksheets (~7569 tok)
 - `appendix-c-further-reading.md` — Appendix C — Further Reading (~6367 tok)
 - `appendix-d-testing-the-inverted-stack.md` — Appendix D — Testing the Inverted Stack (~5969 tok)
 - `appendix-e-citation-style.md` — Appendix E — Citation Style (~1667 tok)
-- `appendix-f-regulatory-coverage.md` — Appendix F — Regulatory Coverage Map — 7-region matrix of 40+ frameworks with per-chapter reverse index; the canonical compliance reference for the book (~3200 tok)
+- `appendix-f-regulatory-coverage.md` — Appendix F — Regulatory Coverage Map (~4425 tok)
 - `appendix-g-glossary.md` — Appendix G — Glossary (~6224 tok)
 
 ## chapters/epilogue/
@@ -197,21 +263,21 @@
 
 ## chapters/part-2-council-reads-the-paper/
 
-- `ch05-enterprise-lens.md` — Chapter 5 — The Enterprise Lens (~6496 tok)
-- `ch06-distributed-systems-lens.md` — Chapter 6 — The Distributed Systems Lens (~6714 tok)
-- `ch07-security-lens.md` — Chapter 7 — The Security Lens (~7325 tok)
-- `ch08-product-economic-lens.md` — Who Is Jordan Kelsey (~6961 tok)
-- `ch09-local-first-practitioner-lens.md` — Chapter 9 — The Local-First Practitioner Lens (~7650 tok)
-- `ch10-synthesis.md` — Chapter 10 — Synthesis: What the Council Finally Agreed On (~5754 tok)
+- `ch05-enterprise-lens.md` — Chapter 5 — The Enterprise Lens (~6959 tok)
+- `ch06-distributed-systems-lens.md` — Chapter 6 — The Distributed Systems Lens (~7448 tok)
+- `ch07-security-lens.md` — Chapter 7 — The Security Lens (~7587 tok)
+- `ch08-product-economic-lens.md` — Chapter 8 — The Product & Economic Lens (~7814 tok)
+- `ch09-local-first-practitioner-lens.md` — Chapter 9 — The Local-First Practitioner Lens (~8221 tok)
+- `ch10-synthesis.md` — Chapter 10 — Synthesis: What the Council Finally Agreed On (~6094 tok)
 
 ## chapters/part-3-reference-architecture/
 
-- `ch11-node-architecture.md` — Chapter 11 — Node Architecture (~9292 tok)
-- `ch12-crdt-engine-data-layer.md` — Chapter 12 — CRDT Engine and Data Layer (~10389 tok)
-- `ch13-schema-migration-evolution.md` — Chapter 13 — Schema Migration and Evolution (~6932 tok)
-- `ch14-sync-daemon-protocol.md` — Chapter 14 — Sync Daemon Protocol (~7080 tok)
-- `ch15-security-architecture.md` — Chapter 15 — Security Architecture (~39197 tok)
-- `ch16-persistence-beyond-the-node.md` — Chapter 16 — Persistence Beyond the Node (~12416 tok)
+- `ch11-node-architecture.md` — Chapter 11 — Node Architecture (~12989 tok)
+- `ch12-crdt-engine-data-layer.md` — Chapter 12 — CRDT Engine and Data Layer (~9310 tok)
+- `ch13-schema-migration-evolution.md` — Chapter 13 — Schema Migration and Evolution (~7847 tok)
+- `ch14-sync-daemon-protocol.md` — Chapter 14 — Sync Daemon Protocol (~7953 tok)
+- `ch15-security-architecture.md` — Chapter 15 — Security Architecture (~12247 tok)
+- `ch16-persistence-beyond-the-node.md` — Chapter 16 — Persistence Beyond the Node (~11525 tok)
 
 ## chapters/part-4-implementation-playbooks/
 
@@ -219,6 +285,12 @@
 - `ch18-migrating-existing-saas.md` — Chapter 18 — Migrating an Existing SaaS (~7278 tok)
 - `ch19-shipping-to-enterprise.md` — The Procurement Conversation (~8859 tok)
 - `ch20-ux-sync-conflict.md` — Chapter 20 — UX, Sync, and Conflict (~15917 tok)
+
+## chapters/part-5-operational-concerns/
+
+- `ch21-operating-a-fleet.md` — Chapter 21 — Operating a Fleet of Local-First Nodes (~12385 tok)
+- `ch22-security-operations.md` — Chapter 22 — Key Lifecycle Operations (~13380 tok)
+- `ch23-endpoint-collaborator-ops.md` — Chapter 23 — Endpoint, Collaborator, and Custody Operations (~17509 tok)
 
 ## docs/audio/
 

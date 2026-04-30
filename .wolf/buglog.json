@@ -2145,6 +2145,358 @@
       "related_bugs": [],
       "occurrences": 1,
       "last_seen": "2026-04-29T18:14:43.657Z"
+    },
+    {
+      "id": "bug-134",
+      "timestamp": "2026-04-29T23:05:51.355Z",
+      "error_message": "Significant refactor of ",
+      "file": "chapters/part-3-reference-architecture/ch12-crdt-engine-data-layer.md",
+      "root_cause": "4 lines replaced/restructured",
+      "fix": "Rewrote 9→3 lines (4 removed)",
+      "tags": [
+        "auto-detected",
+        "refactor",
+        "md"
+      ],
+      "related_bugs": [],
+      "occurrences": 1,
+      "last_seen": "2026-04-29T23:05:51.355Z"
+    },
+    {
+      "id": "bug-135",
+      "timestamp": "2026-04-29T23:06:42.447Z",
+      "error_message": "Significant refactor of ",
+      "file": "chapters/part-3-reference-architecture/ch16-persistence-beyond-the-node.md",
+      "root_cause": "17 lines replaced/restructured",
+      "fix": "Rewrote 27→3 lines (17 removed) | Also: CRDT documents grow monotonically under naive stor; **Strategy 1 — Library-level compaction.** Modern ",
+      "tags": [
+        "auto-detected",
+        "refactor",
+        "md"
+      ],
+      "related_bugs": [],
+      "occurrences": 2,
+      "last_seen": "2026-04-29T23:07:01.744Z"
+    },
+    {
+      "id": "bug-136",
+      "timestamp": "2026-04-30T07:24:05.226Z",
+      "error_message": "Significant refactor of ",
+      "file": "book-structure.md",
+      "root_cause": "9 lines replaced/restructured",
+      "fix": "Rewrote 24→36 lines (9 removed) | Also: *~18,000 words (target). Post-deploy lifecycle: ho; once it's in users' hands. Distinct from Part IV (",
+      "tags": [
+        "auto-detected",
+        "refactor",
+        "md"
+      ],
+      "related_bugs": [],
+      "occurrences": 2,
+      "last_seen": "2026-04-30T07:24:12.163Z"
+    },
+    {
+      "id": "bug-137",
+      "timestamp": "2026-04-30T07:27:45.030Z",
+      "error_message": "Significant refactor of ",
+      "file": "../../../../tmp/phase5_redirects.py",
+      "root_cause": "2 lines replaced/restructured",
+      "fix": "Rewrote 16→21 lines (2 removed)",
+      "tags": [
+        "auto-detected",
+        "refactor",
+        "py"
+      ],
+      "related_bugs": [],
+      "occurrences": 1,
+      "last_seen": "2026-04-30T07:27:45.030Z"
+    },
+    {
+      "id": "bug-138",
+      "timestamp": "2026-04-30T07:34:09.614Z",
+      "error_message": "Wrong reference: Epilogue should be Ch22",
+      "file": "chapters/appendices/appendix-f-regulatory-coverage.md",
+      "root_cause": "Used \"Epilogue\" instead of \"Ch22\"",
+      "fix": "Changed Epilogue → Ch22",
+      "tags": [
+        "auto-detected",
+        "wrong-reference",
+        "md"
+      ],
+      "related_bugs": [],
+      "occurrences": 3,
+      "last_seen": "2026-04-30T07:34:37.904Z"
+    },
+    {
+      "id": "bug-139",
+      "timestamp": "2026-04-30T07:41:25.371Z",
+      "error_message": "Wrong reference: Ch15 should be Ch22",
+      "file": "chapters/part-4-implementation-playbooks/ch20-ux-sync-conflict.md",
+      "root_cause": "Used \"Ch15\" instead of \"Ch22\"",
+      "fix": "Changed Ch15 → Ch22",
+      "tags": [
+        "auto-detected",
+        "wrong-reference",
+        "md"
+      ],
+      "related_bugs": [],
+      "occurrences": 1,
+      "last_seen": "2026-04-30T07:41:25.371Z"
+    },
+    {
+      "id": "bug-140",
+      "timestamp": "2026-04-30T07:41:42.955Z",
+      "error_message": "Wrong reference: ch20 should be ch23",
+      "file": "build/lint.py",
+      "root_cause": "Used \"ch20\" instead of \"ch23\"",
+      "fix": "Changed ch20 → ch23",
+      "tags": [
+        "auto-detected",
+        "wrong-reference",
+        "py"
+      ],
+      "related_bugs": [],
+      "occurrences": 2,
+      "last_seen": "2026-04-30T07:41:50.234Z"
+    },
+    {
+      "id": "bug-141",
+      "timestamp": "2026-04-30T09:31:21.986Z",
+      "error_message": "Incorrect value in code",
+      "file": "chapters/part-5-operational-concerns/ch22-security-operations.md",
+      "root_cause": "Had \"post-compromise security\"",
+      "fix": "Changed to 's 2016 work, which Signal, MLS, and Noise have si",
+      "tags": [
+        "auto-detected",
+        "wrong-value",
+        "md"
+      ],
+      "related_bugs": [],
+      "occurrences": 1,
+      "last_seen": "2026-04-30T09:31:21.987Z"
+    },
+    {
+      "id": "bug-142",
+      "timestamp": "2026-04-30T09:33:32.537Z",
+      "error_message": "Incorrect value in code",
+      "file": "chapters/part-5-operational-concerns/ch23-endpoint-collaborator-ops.md",
+      "root_cause": "Had 's handshake layer (Ch14 §Sync Daemon Protocol). `",
+      "fix": "Changed to 's handshake layer. Ch14 §Sync Daemon Protocol spe",
+      "tags": [
+        "auto-detected",
+        "wrong-value",
+        "md"
+      ],
+      "related_bugs": [],
+      "occurrences": 1,
+      "last_seen": "2026-04-30T09:33:32.537Z"
+    },
+    {
+      "id": "bug-143",
+      "timestamp": "2026-04-30T10:01:27.876Z",
+      "error_message": "Incorrect value in code",
+      "file": "chapters/part-3-reference-architecture/ch11-node-architecture.md",
+      "root_cause": "Had 's engineering team treats interaction latency as ",
+      "fix": "Changed to 's engineering team treats interaction latency as ",
+      "tags": [
+        "auto-detected",
+        "wrong-value",
+        "md"
+      ],
+      "related_bugs": [],
+      "occurrences": 2,
+      "last_seen": "2026-04-30T10:01:37.144Z"
+    },
+    {
+      "id": "bug-144",
+      "timestamp": "2026-04-30T11:35:45.457Z",
+      "error_message": "Incorrect value in code",
+      "file": "chapters/part-5-operational-concerns/ch23-endpoint-collaborator-ops.md",
+      "root_cause": "Had 's key hierarchy (§Key Hierarchy) places the root ",
+      "fix": "Changed to 's key hierarchy (Ch15 §Key Hierarchy) places the ",
+      "tags": [
+        "auto-detected",
+        "wrong-value",
+        "md"
+      ],
+      "related_bugs": [],
+      "occurrences": 1,
+      "last_seen": "2026-04-30T11:35:45.457Z"
+    },
+    {
+      "id": "bug-145",
+      "timestamp": "2026-04-30T14:25:40.333Z",
+      "error_message": "Incorrect value in code",
+      "file": "chapters/part-5-operational-concerns/ch22-security-operations.md",
+      "root_cause": "Had 's Federal Law 242-FZ, and POPIA Section 72 (South",
+      "fix": "Changed to 's Federal Law 242-FZ, NDPR (Nigeria), Kenya DPA, ",
+      "tags": [
+        "auto-detected",
+        "wrong-value",
+        "md"
+      ],
+      "related_bugs": [],
+      "occurrences": 1,
+      "last_seen": "2026-04-30T14:25:40.333Z"
+    },
+    {
+      "id": "bug-146",
+      "timestamp": "2026-04-30T16:18:44.613Z",
+      "error_message": "Incorrect value in code",
+      "file": "chapters/part-2-council-reads-the-paper/ch10-synthesis.md",
+      "root_cause": "Had 's answer — local retention with no relay-exposed ",
+      "fix": "Changed to 's local-retention model answers structurally, not",
+      "tags": [
+        "auto-detected",
+        "wrong-value",
+        "md"
+      ],
+      "related_bugs": [],
+      "occurrences": 1,
+      "last_seen": "2026-04-30T16:18:44.613Z"
+    },
+    {
+      "id": "bug-147",
+      "timestamp": "2026-04-30T17:02:16.632Z",
+      "error_message": "Significant refactor of ",
+      "file": "chapters/part-2-council-reads-the-paper/ch05-enterprise-lens.md",
+      "root_cause": "2 lines replaced/restructured",
+      "fix": "Rewrote 5→9 lines (2 removed) | Also: The cryptographic description is correct. The admi; Voss scored deprovisioning at a seven and attached | Also: WSL2 requires the Windows Subsystem for Linux feat; Condition C2: document Podman Windows substrate op",
+      "tags": [
+        "auto-detected",
+        "refactor",
+        "md"
+      ],
+      "related_bugs": [],
+      "occurrences": 3,
+      "last_seen": "2026-04-30T17:02:52.597Z"
+    },
+    {
+      "id": "bug-148",
+      "timestamp": "2026-04-30T17:12:04.269Z",
+      "error_message": "Incorrect value in code",
+      "file": "chapters/part-2-council-reads-the-paper/ch06-distributed-systems-lens.md",
+      "root_cause": "Had 's DPDP (Digital Personal Data Protection) Act + R",
+      "fix": "Changed to 's NIS2 Directive (cybersecurity audit obligations",
+      "tags": [
+        "auto-detected",
+        "wrong-value",
+        "md"
+      ],
+      "related_bugs": [],
+      "occurrences": 1,
+      "last_seen": "2026-04-30T17:12:04.269Z"
+    },
+    {
+      "id": "bug-149",
+      "timestamp": "2026-04-30T17:22:20.718Z",
+      "error_message": "Significant refactor of ",
+      "file": "chapters/part-2-council-reads-the-paper/ch07-security-lens.md",
+      "root_cause": "8 lines replaced/restructured",
+      "fix": "Rewrote 17→9 lines (8 removed)",
+      "tags": [
+        "auto-detected",
+        "refactor",
+        "md"
+      ],
+      "related_bugs": [],
+      "occurrences": 1,
+      "last_seen": "2026-04-30T17:22:20.718Z"
+    },
+    {
+      "id": "bug-150",
+      "timestamp": "2026-04-30T17:34:18.053Z",
+      "error_message": "Significant refactor of ",
+      "file": "chapters/part-2-council-reads-the-paper/ch08-product-economic-lens.md",
+      "root_cause": "3 lines replaced/restructured",
+      "fix": "Rewrote 5→3 lines (3 removed)",
+      "tags": [
+        "auto-detected",
+        "refactor",
+        "md"
+      ],
+      "related_bugs": [],
+      "occurrences": 1,
+      "last_seen": "2026-04-30T17:34:18.053Z"
+    },
+    {
+      "id": "bug-151",
+      "timestamp": "2026-04-30T17:43:23.948Z",
+      "error_message": "Incorrect value in code",
+      "file": "chapters/part-2-council-reads-the-paper/ch09-local-first-practitioner-lens.md",
+      "root_cause": "Had 's BSI (Bundesamt für Sicherheit in der Informatio",
+      "fix": "Changed to 's BSI and France'",
+      "tags": [
+        "auto-detected",
+        "wrong-value",
+        "md"
+      ],
+      "related_bugs": [],
+      "occurrences": 2,
+      "last_seen": "2026-04-30T17:43:56.124Z"
+    },
+    {
+      "id": "bug-152",
+      "timestamp": "2026-04-30T17:44:12.379Z",
+      "error_message": "Wrong reference: Checked should be Met",
+      "file": "chapters/part-2-council-reads-the-paper/ch09-local-first-practitioner-lens.md",
+      "root_cause": "Used \"Checked\" instead of \"Met\"",
+      "fix": "Changed Checked → Met",
+      "tags": [
+        "auto-detected",
+        "wrong-reference",
+        "md"
+      ],
+      "related_bugs": [],
+      "occurrences": 1,
+      "last_seen": "2026-04-30T17:44:12.379Z"
+    },
+    {
+      "id": "bug-153",
+      "timestamp": "2026-04-30T18:02:50.969Z",
+      "error_message": "Incorrect value in code",
+      "file": "chapters/part-3-reference-architecture/ch14-sync-daemon-protocol.md",
+      "root_cause": "Had 's transfer-safeguard requirements for EU personal",
+      "fix": "Changed to 's DIFC (Dubai International Financial Centre) DPL",
+      "tags": [
+        "auto-detected",
+        "wrong-value",
+        "md"
+      ],
+      "related_bugs": [],
+      "occurrences": 1,
+      "last_seen": "2026-04-30T18:02:50.969Z"
+    },
+    {
+      "id": "bug-154",
+      "timestamp": "2026-04-30T20:01:07.812Z",
+      "error_message": "Incorrect value in code",
+      "file": "ASSEMBLY.md",
+      "root_cause": "Had `chapters/epilogue/epilogue-what-the-stack-owes-yo",
+      "fix": "Changed to `chapters/closing/the-crossing.md`",
+      "tags": [
+        "auto-detected",
+        "wrong-value",
+        "md"
+      ],
+      "related_bugs": [],
+      "occurrences": 1,
+      "last_seen": "2026-04-30T20:01:07.812Z"
+    },
+    {
+      "id": "bug-155",
+      "timestamp": "2026-04-30T20:06:24.604Z",
+      "error_message": "Incorrect value in code",
+      "file": ".pao-inbox/_creative/character-sheets/dr-leader-mission-director.md",
+      "root_cause": "Had `[LEADER]`",
+      "fix": "Changed to \"Dr. Jane Smith\"",
+      "tags": [
+        "auto-detected",
+        "wrong-value",
+        "md"
+      ],
+      "related_bugs": [],
+      "occurrences": 1,
+      "last_seen": "2026-04-30T20:06:24.604Z"
     }
   ]
 }

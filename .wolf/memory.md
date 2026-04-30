@@ -1601,3 +1601,349 @@
 
 | Time | Action | File(s) | Outcome | ~Tokens |
 |------|--------|---------|---------|--------|
+| 17:29 | Session end: 28 writes across 17 files (book-structure.md, reference_yeoman_beacon_protocol.md, MEMORY.md, 2026-04-29-upf-ch15-split-triage.md, 2026-04-29-upf-ch15-split-phase5-xref-inventory.md) | 14 reads | ~71047 tok |
+| 17:45 | Session end: 28 writes across 17 files (book-structure.md, reference_yeoman_beacon_protocol.md, MEMORY.md, 2026-04-29-upf-ch15-split-triage.md, 2026-04-29-upf-ch15-split-phase5-xref-inventory.md) | 14 reads | ~71047 tok |
+| 18:16 | Session end: 28 writes across 17 files (book-structure.md, reference_yeoman_beacon_protocol.md, MEMORY.md, 2026-04-29-upf-ch15-split-triage.md, 2026-04-29-upf-ch15-split-phase5-xref-inventory.md) | 14 reads | ~71047 tok |
+| 18:47 | Session end: 28 writes across 17 files (book-structure.md, reference_yeoman_beacon_protocol.md, MEMORY.md, 2026-04-29-upf-ch15-split-triage.md, 2026-04-29-upf-ch15-split-phase5-xref-inventory.md) | 14 reads | ~71047 tok |
+| 19:04 | Created ../../.claude/projects/-Users-christopherwood-Projects-the-inverted-stack/memory/feedback_no_reset_hard_without_audit.md | — | ~734 |
+| 19:04 | Edited ../../.claude/projects/-Users-christopherwood-Projects-the-inverted-stack/memory/MEMORY.md | 1→2 lines | ~196 |
+| 19:05 | Edited chapters/part-3-reference-architecture/ch12-crdt-engine-data-layer.md | inline fix | ~95 |
+| 19:05 | Edited chapters/part-3-reference-architecture/ch12-crdt-engine-data-layer.md | removed 8 lines | ~127 |
+| 19:05 | Edited chapters/part-3-reference-architecture/ch12-crdt-engine-data-layer.md | reduced (-6 lines) | ~119 |
+| 19:06 | Edited chapters/part-3-reference-architecture/ch12-crdt-engine-data-layer.md | inline fix | ~228 |
+| 19:06 | Edited chapters/part-3-reference-architecture/ch12-crdt-engine-data-layer.md | 5 → 6 | ~109 |
+| 19:06 | Edited chapters/part-3-reference-architecture/ch12-crdt-engine-data-layer.md | 5 → 6 | ~76 |
+| 19:06 | Edited chapters/part-3-reference-architecture/ch11-node-architecture.md | inline fix | ~182 |
+| 19:06 | Edited chapters/part-3-reference-architecture/ch16-persistence-beyond-the-node.md | reduced (-24 lines) | ~127 |
+| 19:07 | Edited chapters/part-3-reference-architecture/ch16-persistence-beyond-the-node.md | removed 11 lines | ~144 |
+| 19:07 | Edited chapters/part-3-reference-architecture/ch16-persistence-beyond-the-node.md | inline fix | ~239 |
+| 19:07 | Edited chapters/voice-plan.yaml | 7→11 lines | ~104 |
+| 19:09 | Created .pao-inbox/yeoman-resumed-2026-04-30T01-30Z-recovery-after-pao-reset.md | — | ~870 |
+| 19:10 | Session end: 42 writes across 19 files (book-structure.md, reference_yeoman_beacon_protocol.md, MEMORY.md, 2026-04-29-upf-ch15-split-triage.md, 2026-04-29-upf-ch15-split-phase5-xref-inventory.md) | 18 reads | ~70908 tok |
+| 19:19 | Created .pao-inbox/yeoman-resumed-2026-04-29T23-19Z-recovery-ack-phase3-start.md | — | ~579 |
+| 19:21 | Created ../../../../tmp/ch15_phase3_split.py | — | ~1225 |
+| 19:22 | Created .pao-inbox/yeoman-question-2026-04-29T23-22Z-phase3-complete.md | — | ~1016 |
+| 19:23 | Session end: 45 writes across 22 files (book-structure.md, reference_yeoman_beacon_protocol.md, MEMORY.md, 2026-04-29-upf-ch15-split-triage.md, 2026-04-29-upf-ch15-split-phase5-xref-inventory.md) | 19 reads | ~74656 tok |
+| 19:54 | Session end: 45 writes across 22 files (book-structure.md, reference_yeoman_beacon_protocol.md, MEMORY.md, 2026-04-29-upf-ch15-split-triage.md, 2026-04-29-upf-ch15-split-phase5-xref-inventory.md) | 19 reads | ~74656 tok |
+| 20:20 | Session end: 45 writes across 22 files (book-structure.md, reference_yeoman_beacon_protocol.md, MEMORY.md, 2026-04-29-upf-ch15-split-triage.md, 2026-04-29-upf-ch15-split-phase5-xref-inventory.md) | 19 reads | ~74656 tok |
+| 20:46 | Session end: 45 writes across 22 files (book-structure.md, reference_yeoman_beacon_protocol.md, MEMORY.md, 2026-04-29-upf-ch15-split-triage.md, 2026-04-29-upf-ch15-split-phase5-xref-inventory.md) | 19 reads | ~74656 tok |
+| 21:13 | Session end: 45 writes across 22 files (book-structure.md, reference_yeoman_beacon_protocol.md, MEMORY.md, 2026-04-29-upf-ch15-split-triage.md, 2026-04-29-upf-ch15-split-phase5-xref-inventory.md) | 19 reads | ~74656 tok |
+| 21:38 | Session end: 45 writes across 22 files (book-structure.md, reference_yeoman_beacon_protocol.md, MEMORY.md, 2026-04-29-upf-ch15-split-triage.md, 2026-04-29-upf-ch15-split-phase5-xref-inventory.md) | 19 reads | ~74656 tok |
+| 22:04 | Session end: 45 writes across 22 files (book-structure.md, reference_yeoman_beacon_protocol.md, MEMORY.md, 2026-04-29-upf-ch15-split-triage.md, 2026-04-29-upf-ch15-split-phase5-xref-inventory.md) | 19 reads | ~74656 tok |
+| 22:35 | Session end: 45 writes across 22 files (book-structure.md, reference_yeoman_beacon_protocol.md, MEMORY.md, 2026-04-29-upf-ch15-split-triage.md, 2026-04-29-upf-ch15-split-phase5-xref-inventory.md) | 19 reads | ~74656 tok |
+| 23:06 | Session end: 45 writes across 22 files (book-structure.md, reference_yeoman_beacon_protocol.md, MEMORY.md, 2026-04-29-upf-ch15-split-triage.md, 2026-04-29-upf-ch15-split-phase5-xref-inventory.md) | 19 reads | ~74656 tok |
+| 23:37 | Session end: 45 writes across 22 files (book-structure.md, reference_yeoman_beacon_protocol.md, MEMORY.md, 2026-04-29-upf-ch15-split-triage.md, 2026-04-29-upf-ch15-split-phase5-xref-inventory.md) | 19 reads | ~74656 tok |
+| 00:08 | Session end: 45 writes across 22 files (book-structure.md, reference_yeoman_beacon_protocol.md, MEMORY.md, 2026-04-29-upf-ch15-split-triage.md, 2026-04-29-upf-ch15-split-phase5-xref-inventory.md) | 19 reads | ~74656 tok |
+| 00:40 | Session end: 45 writes across 22 files (book-structure.md, reference_yeoman_beacon_protocol.md, MEMORY.md, 2026-04-29-upf-ch15-split-triage.md, 2026-04-29-upf-ch15-split-phase5-xref-inventory.md) | 19 reads | ~74656 tok |
+| 01:10 | Session end: 45 writes across 22 files (book-structure.md, reference_yeoman_beacon_protocol.md, MEMORY.md, 2026-04-29-upf-ch15-split-triage.md, 2026-04-29-upf-ch15-split-phase5-xref-inventory.md) | 19 reads | ~74656 tok |
+| 01:41 | Session end: 45 writes across 22 files (book-structure.md, reference_yeoman_beacon_protocol.md, MEMORY.md, 2026-04-29-upf-ch15-split-triage.md, 2026-04-29-upf-ch15-split-phase5-xref-inventory.md) | 19 reads | ~74656 tok |
+| 02:12 | Session end: 45 writes across 22 files (book-structure.md, reference_yeoman_beacon_protocol.md, MEMORY.md, 2026-04-29-upf-ch15-split-triage.md, 2026-04-29-upf-ch15-split-phase5-xref-inventory.md) | 19 reads | ~74656 tok |
+| 02:43 | Session end: 45 writes across 22 files (book-structure.md, reference_yeoman_beacon_protocol.md, MEMORY.md, 2026-04-29-upf-ch15-split-triage.md, 2026-04-29-upf-ch15-split-phase5-xref-inventory.md) | 19 reads | ~74656 tok |
+| 03:14 | Session end: 45 writes across 22 files (book-structure.md, reference_yeoman_beacon_protocol.md, MEMORY.md, 2026-04-29-upf-ch15-split-triage.md, 2026-04-29-upf-ch15-split-phase5-xref-inventory.md) | 19 reads | ~74656 tok |
+| 03:23 | Created ../../../../tmp/ch23_split.py | — | ~2210 |
+| 03:23 | Edited chapters/voice-plan.yaml | 5→6 lines | ~71 |
+| 03:24 | Edited book-structure.md | expanded (+12 lines) | ~660 |
+| 03:24 | Edited book-structure.md | 4→5 lines | ~103 |
+| 03:25 | Created .pao-inbox/_decisions/2026-04-30-upf-ch15-split-phase5-ch23-addendum.md | — | ~1613 |
+| 03:26 | Edited chapters/part-3-reference-architecture/ch15-security-architecture.md | 22 → 23 | ~23 |
+| 03:26 | Edited chapters/part-3-reference-architecture/ch15-security-architecture.md | 22 → 23 | ~26 |
+| 03:26 | Edited chapters/part-3-reference-architecture/ch15-security-architecture.md | 22 → 23 | ~23 |
+| 03:26 | Edited chapters/part-3-reference-architecture/ch15-security-architecture.md | 22 → 23 | ~23 |
+| 03:27 | Created ../../../../tmp/phase5_redirects.py | — | ~1290 |
+| 03:27 | Edited chapters/part-3-reference-architecture/ch15-security-architecture.md | 22 → 23 | ~21 |
+| 03:27 | Edited ../../../../tmp/phase5_redirects.py | 16→21 lines | ~320 |
+| 03:28 | Created .pao-inbox/yeoman-question-2026-04-30T07-27Z-ch15-forward-pointers-routed.md | — | ~532 |
+| 03:28 | Edited chapters/appendices/appendix-b-threat-model-worksheets.md | inline fix | ~181 |
+| 03:31 | Created .pao-inbox/yeoman-question-2026-04-30T07-32Z-phase5-spot-check-stragglers.md | — | ~935 |
+| 03:32 | Created .pao-inbox/_editorial-reviews/ch22-ch23-diagram-proposals-2026-04-30.md | — | ~2206 |
+| 03:32 | Session end: 61 writes across 30 files (book-structure.md, reference_yeoman_beacon_protocol.md, MEMORY.md, 2026-04-29-upf-ch15-split-triage.md, 2026-04-29-upf-ch15-split-phase5-xref-inventory.md) | 23 reads | ~153195 tok |
+| 03:33 | Edited chapters/part-5-operational-concerns/ch22-security-operations.md | expanded (+11 lines) | ~186 |
+| 03:33 | Edited chapters/part-5-operational-concerns/ch22-security-operations.md | expanded (+12 lines) | ~208 |
+| 03:33 | Edited chapters/appendices/appendix-f-regulatory-coverage.md | 3→3 lines | ~68 |
+| 03:34 | Edited chapters/appendices/appendix-f-regulatory-coverage.md | 3→3 lines | ~29 |
+| 03:34 | Edited chapters/appendices/appendix-f-regulatory-coverage.md | 3→3 lines | ~25 |
+| 03:34 | Edited chapters/appendices/appendix-f-regulatory-coverage.md | 5→5 lines | ~20 |
+| 03:34 | Edited chapters/appendices/appendix-f-regulatory-coverage.md | 3→3 lines | ~54 |
+| 03:34 | Edited chapters/appendices/appendix-f-regulatory-coverage.md | inline fix | ~18 |
+| 03:34 | Edited chapters/appendices/appendix-f-regulatory-coverage.md | 3→3 lines | ~48 |
+| 03:34 | Edited chapters/part-5-operational-concerns/ch23-endpoint-collaborator-ops.md | expanded (+22 lines) | ~366 |
+| 03:34 | Edited chapters/appendices/appendix-f-regulatory-coverage.md | inline fix | ~19 |
+| 03:34 | Edited chapters/appendices/appendix-f-regulatory-coverage.md | 3→3 lines | ~34 |
+| 03:34 | Edited chapters/appendices/appendix-f-regulatory-coverage.md | 3→3 lines | ~40 |
+| 03:34 | Edited chapters/appendices/appendix-f-regulatory-coverage.md | inline fix | ~31 |
+| 03:34 | Edited chapters/appendices/appendix-f-regulatory-coverage.md | 3→3 lines | ~58 |
+| 03:34 | Edited chapters/appendices/appendix-f-regulatory-coverage.md | 3→3 lines | ~47 |
+| 03:34 | Edited chapters/appendices/appendix-f-regulatory-coverage.md | inline fix | ~21 |
+| 03:34 | Edited chapters/appendices/appendix-f-regulatory-coverage.md | inline fix | ~22 |
+| 03:34 | Edited chapters/appendices/appendix-f-regulatory-coverage.md | inline fix | ~13 |
+| 03:34 | Edited chapters/appendices/appendix-f-regulatory-coverage.md | inline fix | ~20 |
+| 03:34 | Edited chapters/part-5-operational-concerns/ch23-endpoint-collaborator-ops.md | expanded (+22 lines) | ~272 |
+| 03:35 | Edited chapters/appendices/appendix-f-regulatory-coverage.md | 2→4 lines | ~204 |
+| 03:35 | Edited chapters/part-5-operational-concerns/ch23-endpoint-collaborator-ops.md | expanded (+15 lines) | ~397 |
+| 03:35 | Created .pao-inbox/yeoman-question-2026-04-30T07-35Z-ch22-ch23-diagrams-applied.md | — | ~660 |
+| 03:36 | Session end: 85 writes across 33 files (book-structure.md, reference_yeoman_beacon_protocol.md, MEMORY.md, 2026-04-29-upf-ch15-split-triage.md, 2026-04-29-upf-ch15-split-phase5-xref-inventory.md) | 26 reads | ~177592 tok |
+| 03:36 | Created ../../../../tmp/sunfish-pao-incident-wt/icm/_state/research-inbox/pao-incident-2026-04-30T07-35Z-destructive-action-reset-hard.md | — | ~1681 |
+| 03:40 | Edited chapters/appendices/appendix-b-threat-model-worksheets.md | inline fix | ~12 |
+| 03:41 | Edited chapters/appendices/appendix-b-threat-model-worksheets.md | inline fix | ~68 |
+| 03:41 | Edited chapters/part-4-implementation-playbooks/ch20-ux-sync-conflict.md | 15 → 22 | ~41 |
+| 03:41 | Edited chapters/part-3-reference-architecture/ch16-persistence-beyond-the-node.md | inline fix | ~67 |
+| 03:41 | Edited chapters/part-5-operational-concerns/ch21-operating-a-fleet.md | 15 → 22 | ~51 |
+| 03:41 | Edited chapters/part-4-implementation-playbooks/ch20-ux-sync-conflict.md | inline fix | ~34 |
+| 03:41 | Edited build/lint.py | inline fix | ~25 |
+| 03:41 | Edited build/lint.py | 10→15 lines | ~257 |
+| 03:41 | Edited build/lint.py | inline fix | ~23 |
+| 03:41 | Created .pao-inbox/yeoman-question-2026-04-30T07-41Z-broader-xref-spotcheck-clean.md | — | ~759 |
+| 03:41 | Edited build/lint.py | inline fix | ~10 |
+| 03:41 | Edited build/lint.py | 4→4 lines | ~45 |
+| 03:42 | Session end: 98 writes across 38 files (book-structure.md, reference_yeoman_beacon_protocol.md, MEMORY.md, 2026-04-29-upf-ch15-split-triage.md, 2026-04-29-upf-ch15-split-phase5-xref-inventory.md) | 28 reads | ~180457 tok |
+| 03:44 | Created .pao-inbox/_editorial-reviews/ch19-compression-2026-04-30.md | — | ~1053 |
+| 03:45 | Created .pao-inbox/yeoman-question-2026-04-30T07-46Z-ch19-review-ack-shipasis.md | — | ~447 |
+| 03:45 | Session end: 100 writes across 40 files (book-structure.md, reference_yeoman_beacon_protocol.md, MEMORY.md, 2026-04-29-upf-ch15-split-triage.md, 2026-04-29-upf-ch15-split-phase5-xref-inventory.md) | 29 reads | ~183051 tok |
+| 03:46 | Created .pao-inbox/_state-snapshots/snapshot-2026-04-30.md | — | ~1954 |
+| 03:47 | Edited build/Makefile | 7→12 lines | ~217 |
+| 03:47 | Edited build/audiobook.py | 2→4 lines | ~70 |
+| 03:48 | Created .pao-inbox/yeoman-question-2026-04-30T07-47Z-audiobook-extended-ch22-ch23.md | — | ~476 |
+| 03:48 | Session end: 104 writes across 44 files (book-structure.md, reference_yeoman_beacon_protocol.md, MEMORY.md, 2026-04-29-upf-ch15-split-triage.md, 2026-04-29-upf-ch15-split-phase5-xref-inventory.md) | 35 reads | ~212194 tok |
+| 03:50 | Session end: 104 writes across 44 files (book-structure.md, reference_yeoman_beacon_protocol.md, MEMORY.md, 2026-04-29-upf-ch15-split-triage.md, 2026-04-29-upf-ch15-split-phase5-xref-inventory.md) | 35 reads | ~212194 tok |
+| 03:53 | Session end: 104 writes across 44 files (book-structure.md, reference_yeoman_beacon_protocol.md, MEMORY.md, 2026-04-29-upf-ch15-split-triage.md, 2026-04-29-upf-ch15-split-phase5-xref-inventory.md) | 35 reads | ~212194 tok |
+| 04:17 | Created .pao-inbox/_decisions/2026-04-30-word-count-target-revision-proposal.md | — | ~1624 |
+| 04:18 | Session end: 105 writes across 45 files (book-structure.md, reference_yeoman_beacon_protocol.md, MEMORY.md, 2026-04-29-upf-ch15-split-triage.md, 2026-04-29-upf-ch15-split-phase5-xref-inventory.md) | 36 reads | ~215456 tok |
+| 04:19 | Created .pao-inbox/_decisions/2026-04-30-voice-pass-priority-queue.md | — | ~1750 |
+| 04:20 | Session end: 106 writes across 46 files (book-structure.md, reference_yeoman_beacon_protocol.md, MEMORY.md, 2026-04-29-upf-ch15-split-triage.md, 2026-04-29-upf-ch15-split-phase5-xref-inventory.md) | 37 reads | ~218971 tok |
+| 04:20 | Session end: 106 writes across 46 files (book-structure.md, reference_yeoman_beacon_protocol.md, MEMORY.md, 2026-04-29-upf-ch15-split-triage.md, 2026-04-29-upf-ch15-split-phase5-xref-inventory.md) | 37 reads | ~218971 tok |
+| 04:25 | Session end: 106 writes across 46 files (book-structure.md, reference_yeoman_beacon_protocol.md, MEMORY.md, 2026-04-29-upf-ch15-split-triage.md, 2026-04-29-upf-ch15-split-phase5-xref-inventory.md) | 37 reads | ~218971 tok |
+| 04:46 | Session end: 106 writes across 46 files (book-structure.md, reference_yeoman_beacon_protocol.md, MEMORY.md, 2026-04-29-upf-ch15-split-triage.md, 2026-04-29-upf-ch15-split-phase5-xref-inventory.md) | 37 reads | ~218971 tok |
+| 04:51 | Session end: 106 writes across 46 files (book-structure.md, reference_yeoman_beacon_protocol.md, MEMORY.md, 2026-04-29-upf-ch15-split-triage.md, 2026-04-29-upf-ch15-split-phase5-xref-inventory.md) | 37 reads | ~218971 tok |
+| 05:30 | Session end: 106 writes across 46 files (book-structure.md, reference_yeoman_beacon_protocol.md, MEMORY.md, 2026-04-29-upf-ch15-split-triage.md, 2026-04-29-upf-ch15-split-phase5-xref-inventory.md) | 37 reads | ~218971 tok |
+| 05:31 | Edited chapters/part-5-operational-concerns/ch22-security-operations.md | "post-compromise security" → "s 2016 work, which Signal" | ~256 |
+| 05:31 | Session end: 107 writes across 46 files (book-structure.md, reference_yeoman_beacon_protocol.md, MEMORY.md, 2026-04-29-upf-ch15-split-triage.md, 2026-04-29-upf-ch15-split-phase5-xref-inventory.md) | 37 reads | ~232223 tok |
+| 05:33 | Edited chapters/part-5-operational-concerns/ch23-endpoint-collaborator-ops.md | "s handshake layer (Ch14 §" → "s handshake layer. Ch14 §" | ~223 |
+| 06:01 | Edited chapters/part-3-reference-architecture/ch11-node-architecture.md | "s engineering team treats" → "s engineering team treats" | ~97 |
+| 06:01 | Edited chapters/part-3-reference-architecture/ch11-node-architecture.md | "s Human Interface Guideli" → "s Human Interface Guideli" | ~79 |
+| 06:02 | Session end: 110 writes across 46 files (book-structure.md, reference_yeoman_beacon_protocol.md, MEMORY.md, 2026-04-29-upf-ch15-split-triage.md, 2026-04-29-upf-ch15-split-phase5-xref-inventory.md) | 37 reads | ~232825 tok |
+| 06:02 | Session end: 110 writes across 46 files (book-structure.md, reference_yeoman_beacon_protocol.md, MEMORY.md, 2026-04-29-upf-ch15-split-triage.md, 2026-04-29-upf-ch15-split-phase5-xref-inventory.md) | 37 reads | ~232825 tok |
+| 06:06 | Session end: 110 writes across 46 files (book-structure.md, reference_yeoman_beacon_protocol.md, MEMORY.md, 2026-04-29-upf-ch15-split-triage.md, 2026-04-29-upf-ch15-split-phase5-xref-inventory.md) | 37 reads | ~232825 tok |
+| 06:11 | Session end: 110 writes across 46 files (book-structure.md, reference_yeoman_beacon_protocol.md, MEMORY.md, 2026-04-29-upf-ch15-split-triage.md, 2026-04-29-upf-ch15-split-phase5-xref-inventory.md) | 37 reads | ~232825 tok |
+| 06:16 | Session end: 110 writes across 46 files (book-structure.md, reference_yeoman_beacon_protocol.md, MEMORY.md, 2026-04-29-upf-ch15-split-triage.md, 2026-04-29-upf-ch15-split-phase5-xref-inventory.md) | 37 reads | ~232825 tok |
+| 06:28 | Session end: 110 writes across 46 files (book-structure.md, reference_yeoman_beacon_protocol.md, MEMORY.md, 2026-04-29-upf-ch15-split-triage.md, 2026-04-29-upf-ch15-split-phase5-xref-inventory.md) | 37 reads | ~232825 tok |
+| 06:42 | Session end: 110 writes across 46 files (book-structure.md, reference_yeoman_beacon_protocol.md, MEMORY.md, 2026-04-29-upf-ch15-split-triage.md, 2026-04-29-upf-ch15-split-phase5-xref-inventory.md) | 37 reads | ~232825 tok |
+| 07:01 | Edited chapters/part-5-operational-concerns/ch23-endpoint-collaborator-ops.md | inline fix | ~66 |
+| 07:01 | Edited build/word-count.py | 9→13 lines | ~75 |
+| 07:02 | Session end: 112 writes across 47 files (book-structure.md, reference_yeoman_beacon_protocol.md, MEMORY.md, 2026-04-29-upf-ch15-split-triage.md, 2026-04-29-upf-ch15-split-phase5-xref-inventory.md) | 38 reads | ~233636 tok |
+| 07:08 | Session end: 112 writes across 47 files (book-structure.md, reference_yeoman_beacon_protocol.md, MEMORY.md, 2026-04-29-upf-ch15-split-triage.md, 2026-04-29-upf-ch15-split-phase5-xref-inventory.md) | 38 reads | ~233636 tok |
+| 07:33 | Edited chapters/part-5-operational-concerns/ch23-endpoint-collaborator-ops.md | inline fix | ~187 |
+| 07:34 | Session end: 113 writes across 47 files (book-structure.md, reference_yeoman_beacon_protocol.md, MEMORY.md, 2026-04-29-upf-ch15-split-triage.md, 2026-04-29-upf-ch15-split-phase5-xref-inventory.md) | 38 reads | ~233836 tok |
+| 07:34 | Edited chapters/part-5-operational-concerns/ch22-security-operations.md | inline fix | ~48 |
+| 07:34 | Edited chapters/part-5-operational-concerns/ch22-security-operations.md | inline fix | ~186 |
+| 07:34 | Edited chapters/part-5-operational-concerns/ch23-endpoint-collaborator-ops.md | inline fix | ~70 |
+| 07:35 | Edited chapters/part-5-operational-concerns/ch23-endpoint-collaborator-ops.md | inline fix | ~90 |
+| 07:35 | Edited chapters/part-5-operational-concerns/ch23-endpoint-collaborator-ops.md | inline fix | ~47 |
+| 07:35 | Edited chapters/part-5-operational-concerns/ch23-endpoint-collaborator-ops.md | inline fix | ~49 |
+| 07:35 | Edited chapters/part-5-operational-concerns/ch23-endpoint-collaborator-ops.md | inline fix | ~70 |
+| 07:35 | Edited chapters/part-5-operational-concerns/ch23-endpoint-collaborator-ops.md | inline fix | ~74 |
+| 07:35 | Edited chapters/part-5-operational-concerns/ch23-endpoint-collaborator-ops.md | inline fix | ~32 |
+| 07:35 | Edited chapters/part-5-operational-concerns/ch23-endpoint-collaborator-ops.md | inline fix | ~54 |
+| 07:35 | Edited chapters/part-5-operational-concerns/ch23-endpoint-collaborator-ops.md | inline fix | ~39 |
+| 07:35 | Edited chapters/part-5-operational-concerns/ch23-endpoint-collaborator-ops.md | inline fix | ~19 |
+| 07:35 | Edited chapters/part-5-operational-concerns/ch23-endpoint-collaborator-ops.md | inline fix | ~20 |
+| 07:35 | Edited chapters/part-5-operational-concerns/ch23-endpoint-collaborator-ops.md | inline fix | ~20 |
+| 07:35 | Edited chapters/part-5-operational-concerns/ch23-endpoint-collaborator-ops.md | inline fix | ~29 |
+| 07:35 | Edited chapters/part-5-operational-concerns/ch23-endpoint-collaborator-ops.md | "s key hierarchy (§Key Hie" → "s key hierarchy (Ch15 §Ke" | ~33 |
+| 07:35 | Edited chapters/part-5-operational-concerns/ch22-security-operations.md | inline fix | ~47 |
+| 07:35 | Edited chapters/part-5-operational-concerns/ch22-security-operations.md | inline fix | ~48 |
+| 07:36 | Edited chapters/part-5-operational-concerns/ch22-security-operations.md | inline fix | ~81 |
+| 07:36 | Edited chapters/part-5-operational-concerns/ch22-security-operations.md | inline fix | ~59 |
+| 07:36 | Edited chapters/part-5-operational-concerns/ch22-security-operations.md | inline fix | ~39 |
+| 07:36 | Edited chapters/part-5-operational-concerns/ch22-security-operations.md | inline fix | ~31 |
+| 07:37 | Session end: 135 writes across 47 files (book-structure.md, reference_yeoman_beacon_protocol.md, MEMORY.md, 2026-04-29-upf-ch15-split-triage.md, 2026-04-29-upf-ch15-split-phase5-xref-inventory.md) | 38 reads | ~235103 tok |
+| 08:00 | Session end: 135 writes across 47 files (book-structure.md, reference_yeoman_beacon_protocol.md, MEMORY.md, 2026-04-29-upf-ch15-split-triage.md, 2026-04-29-upf-ch15-split-phase5-xref-inventory.md) | 38 reads | ~235103 tok |
+| 08:08 | Edited chapters/appendices/appendix-b-threat-model-worksheets.md | inline fix | ~62 |
+| 08:09 | Session end: 136 writes across 47 files (book-structure.md, reference_yeoman_beacon_protocol.md, MEMORY.md, 2026-04-29-upf-ch15-split-triage.md, 2026-04-29-upf-ch15-split-phase5-xref-inventory.md) | 38 reads | ~235169 tok |
+| 08:25 | Session end: 136 writes across 47 files (book-structure.md, reference_yeoman_beacon_protocol.md, MEMORY.md, 2026-04-29-upf-ch15-split-triage.md, 2026-04-29-upf-ch15-split-phase5-xref-inventory.md) | 38 reads | ~235169 tok |
+| 08:42 | Session end: 136 writes across 47 files (book-structure.md, reference_yeoman_beacon_protocol.md, MEMORY.md, 2026-04-29-upf-ch15-split-triage.md, 2026-04-29-upf-ch15-split-phase5-xref-inventory.md) | 38 reads | ~235169 tok |
+| 08:51 | Session end: 136 writes across 47 files (book-structure.md, reference_yeoman_beacon_protocol.md, MEMORY.md, 2026-04-29-upf-ch15-split-triage.md, 2026-04-29-upf-ch15-split-phase5-xref-inventory.md) | 38 reads | ~235169 tok |
+| 09:13 | Session end: 136 writes across 47 files (book-structure.md, reference_yeoman_beacon_protocol.md, MEMORY.md, 2026-04-29-upf-ch15-split-triage.md, 2026-04-29-upf-ch15-split-phase5-xref-inventory.md) | 38 reads | ~235169 tok |
+| 09:17 | Session end: 136 writes across 47 files (book-structure.md, reference_yeoman_beacon_protocol.md, MEMORY.md, 2026-04-29-upf-ch15-split-triage.md, 2026-04-29-upf-ch15-split-phase5-xref-inventory.md) | 38 reads | ~235169 tok |
+| 09:23 | Session end: 136 writes across 47 files (book-structure.md, reference_yeoman_beacon_protocol.md, MEMORY.md, 2026-04-29-upf-ch15-split-triage.md, 2026-04-29-upf-ch15-split-phase5-xref-inventory.md) | 38 reads | ~235169 tok |
+| 09:43 | Session end: 136 writes across 47 files (book-structure.md, reference_yeoman_beacon_protocol.md, MEMORY.md, 2026-04-29-upf-ch15-split-triage.md, 2026-04-29-upf-ch15-split-phase5-xref-inventory.md) | 38 reads | ~235169 tok |
+| 09:46 | Created ASSEMBLY.md | — | ~2264 |
+| 09:47 | Session end: 137 writes across 48 files (book-structure.md, reference_yeoman_beacon_protocol.md, MEMORY.md, 2026-04-29-upf-ch15-split-triage.md, 2026-04-29-upf-ch15-split-phase5-xref-inventory.md) | 39 reads | ~237594 tok |
+| 10:02 | Session end: 137 writes across 48 files (book-structure.md, reference_yeoman_beacon_protocol.md, MEMORY.md, 2026-04-29-upf-ch15-split-triage.md, 2026-04-29-upf-ch15-split-phase5-xref-inventory.md) | 39 reads | ~237594 tok |
+| 10:09 | Session end: 137 writes across 48 files (book-structure.md, reference_yeoman_beacon_protocol.md, MEMORY.md, 2026-04-29-upf-ch15-split-triage.md, 2026-04-29-upf-ch15-split-phase5-xref-inventory.md) | 39 reads | ~237594 tok |
+| 10:24 | Created .pao-inbox/_editorial-reviews/ch22-literary-board-2026-04-30.md | — | ~1824 |
+| 10:25 | Session end: 138 writes across 49 files (book-structure.md, reference_yeoman_beacon_protocol.md, MEMORY.md, 2026-04-29-upf-ch15-split-triage.md, 2026-04-29-upf-ch15-split-phase5-xref-inventory.md) | 42 reads | ~223843 tok |
+| 10:25 | Edited chapters/part-5-operational-concerns/ch22-security-operations.md | 3→1 lines | ~173 |
+| 10:25 | Edited chapters/part-5-operational-concerns/ch22-security-operations.md | "s Federal Law 242-FZ, and" → "s Federal Law 242-FZ, NDP" | ~388 |
+| 10:25 | Edited chapters/part-5-operational-concerns/ch22-security-operations.md | inline fix | ~43 |
+| 10:26 | Edited chapters/part-5-operational-concerns/ch22-security-operations.md | 1→3 lines | ~403 |
+| 10:26 | Edited chapters/part-5-operational-concerns/ch22-security-operations.md | inline fix | ~204 |
+| 10:30 | Session end: 143 writes across 49 files (book-structure.md, reference_yeoman_beacon_protocol.md, MEMORY.md, 2026-04-29-upf-ch15-split-triage.md, 2026-04-29-upf-ch15-split-phase5-xref-inventory.md) | 42 reads | ~225402 tok |
+| 10:34 | Created .pao-inbox/_editorial-reviews/ch23-literary-board-2026-04-30.md | — | ~2111 |
+| 10:34 | Session end: 144 writes across 50 files (book-structure.md, reference_yeoman_beacon_protocol.md, MEMORY.md, 2026-04-29-upf-ch15-split-triage.md, 2026-04-29-upf-ch15-split-phase5-xref-inventory.md) | 43 reads | ~229643 tok |
+| 10:35 | Edited chapters/part-5-operational-concerns/ch23-endpoint-collaborator-ops.md | inline fix | ~189 |
+| 10:35 | Edited chapters/part-5-operational-concerns/ch23-endpoint-collaborator-ops.md | inline fix | ~108 |
+| 10:35 | Edited chapters/part-5-operational-concerns/ch23-endpoint-collaborator-ops.md | 9→11 lines | ~850 |
+| 10:35 | Edited chapters/part-5-operational-concerns/ch23-endpoint-collaborator-ops.md | inline fix | ~156 |
+| 10:35 | Edited chapters/part-5-operational-concerns/ch23-endpoint-collaborator-ops.md | inline fix | ~75 |
+| 10:36 | Edited chapters/part-5-operational-concerns/ch23-endpoint-collaborator-ops.md | 4→6 lines | ~229 |
+| 10:36 | Edited chapters/part-5-operational-concerns/ch23-endpoint-collaborator-ops.md | 1→3 lines | ~357 |
+| 10:36 | Edited chapters/part-5-operational-concerns/ch23-endpoint-collaborator-ops.md | modified during() | ~586 |
+| 10:36 | Edited chapters/part-5-operational-concerns/ch23-endpoint-collaborator-ops.md | 5→9 lines | ~245 |
+| 10:38 | Session end: 153 writes across 50 files (book-structure.md, reference_yeoman_beacon_protocol.md, MEMORY.md, 2026-04-29-upf-ch15-split-triage.md, 2026-04-29-upf-ch15-split-phase5-xref-inventory.md) | 43 reads | ~232635 tok |
+| 10:39 | Session end: 153 writes across 50 files (book-structure.md, reference_yeoman_beacon_protocol.md, MEMORY.md, 2026-04-29-upf-ch15-split-triage.md, 2026-04-29-upf-ch15-split-phase5-xref-inventory.md) | 43 reads | ~232635 tok |
+| 11:05 | Session end: 153 writes across 50 files (book-structure.md, reference_yeoman_beacon_protocol.md, MEMORY.md, 2026-04-29-upf-ch15-split-triage.md, 2026-04-29-upf-ch15-split-phase5-xref-inventory.md) | 43 reads | ~232635 tok |
+| 11:09 | Edited chapters/part-5-operational-concerns/ch21-operating-a-fleet.md | inline fix | ~96 |
+| 11:10 | Edited chapters/part-5-operational-concerns/ch21-operating-a-fleet.md | inline fix | ~52 |
+| 11:10 | Edited chapters/part-5-operational-concerns/ch21-operating-a-fleet.md | inline fix | ~127 |
+| 11:10 | Session end: 156 writes across 50 files (book-structure.md, reference_yeoman_beacon_protocol.md, MEMORY.md, 2026-04-29-upf-ch15-split-triage.md, 2026-04-29-upf-ch15-split-phase5-xref-inventory.md) | 43 reads | ~232929 tok |
+| 11:11 | Session end: 156 writes across 50 files (book-structure.md, reference_yeoman_beacon_protocol.md, MEMORY.md, 2026-04-29-upf-ch15-split-triage.md, 2026-04-29-upf-ch15-split-phase5-xref-inventory.md) | 43 reads | ~232929 tok |
+| 11:36 | Session end: 156 writes across 50 files (book-structure.md, reference_yeoman_beacon_protocol.md, MEMORY.md, 2026-04-29-upf-ch15-split-triage.md, 2026-04-29-upf-ch15-split-phase5-xref-inventory.md) | 43 reads | ~232929 tok |
+| 11:42 | Session end: 156 writes across 50 files (book-structure.md, reference_yeoman_beacon_protocol.md, MEMORY.md, 2026-04-29-upf-ch15-split-triage.md, 2026-04-29-upf-ch15-split-phase5-xref-inventory.md) | 43 reads | ~232929 tok |
+| 12:02 | Session end: 156 writes across 50 files (book-structure.md, reference_yeoman_beacon_protocol.md, MEMORY.md, 2026-04-29-upf-ch15-split-triage.md, 2026-04-29-upf-ch15-split-phase5-xref-inventory.md) | 43 reads | ~232929 tok |
+| 12:18 | Edited chapters/part-2-council-reads-the-paper/ch10-synthesis.md | expanded (+8 lines) | ~399 |
+| 12:18 | Edited chapters/part-2-council-reads-the-paper/ch10-synthesis.md | "s answer — local retentio" → "s local-retention model a" | ~322 |
+| 12:18 | Edited chapters/part-2-council-reads-the-paper/ch10-synthesis.md | inline fix | ~308 |
+| 12:18 | Edited chapters/part-2-council-reads-the-paper/ch10-synthesis.md | 1→3 lines | ~238 |
+| 12:20 | Created .pao-inbox/_editorial-reviews/ch10-literary-board-2026-04-30.md | — | ~1697 |
+| 12:20 | Session end: 161 writes across 52 files (book-structure.md, reference_yeoman_beacon_protocol.md, MEMORY.md, 2026-04-29-upf-ch15-split-triage.md, 2026-04-29-upf-ch15-split-phase5-xref-inventory.md) | 44 reads | ~241857 tok |
+| 12:20 | Session end: 161 writes across 52 files (book-structure.md, reference_yeoman_beacon_protocol.md, MEMORY.md, 2026-04-29-upf-ch15-split-triage.md, 2026-04-29-upf-ch15-split-phase5-xref-inventory.md) | 44 reads | ~241857 tok |
+| 12:25 | Session end: 161 writes across 52 files (book-structure.md, reference_yeoman_beacon_protocol.md, MEMORY.md, 2026-04-29-upf-ch15-split-triage.md, 2026-04-29-upf-ch15-split-phase5-xref-inventory.md) | 44 reads | ~241857 tok |
+| 12:51 | Session end: 161 writes across 52 files (book-structure.md, reference_yeoman_beacon_protocol.md, MEMORY.md, 2026-04-29-upf-ch15-split-triage.md, 2026-04-29-upf-ch15-split-phase5-xref-inventory.md) | 44 reads | ~241857 tok |
+
+## Session: 2026-04-30 12:58
+
+| Time | Action | File(s) | Outcome | ~Tokens |
+|------|--------|---------|---------|--------|
+| 13:00 | Created .pao-inbox/_editorial-reviews/ch05-literary-board-2026-04-30.md | — | ~2062 |
+| 13:00 | Session end: 1 writes across 1 files (ch05-literary-board-2026-04-30.md) | 1 reads | ~8705 tok |
+| 13:00 | Session end: 1 writes across 1 files (ch05-literary-board-2026-04-30.md) | 1 reads | ~8705 tok |
+| 13:00 | Edited chapters/part-2-council-reads-the-paper/ch05-enterprise-lens.md | inline fix | ~33 |
+| 13:00 | Edited chapters/part-2-council-reads-the-paper/ch05-enterprise-lens.md | inline fix | ~72 |
+| 13:01 | Edited chapters/part-2-council-reads-the-paper/ch05-enterprise-lens.md | 5→5 lines | ~342 |
+| 13:01 | Edited chapters/part-2-council-reads-the-paper/ch05-enterprise-lens.md | 3→5 lines | ~418 |
+| 13:01 | Edited chapters/part-2-council-reads-the-paper/ch05-enterprise-lens.md | inline fix | ~294 |
+| 13:01 | Edited chapters/part-2-council-reads-the-paper/ch05-enterprise-lens.md | inline fix | ~313 |
+| 13:02 | Edited chapters/part-2-council-reads-the-paper/ch05-enterprise-lens.md | 5→9 lines | ~515 |
+| 13:02 | Edited chapters/part-2-council-reads-the-paper/ch05-enterprise-lens.md | 5→3 lines | ~220 |
+| 13:02 | Edited chapters/part-2-council-reads-the-paper/ch05-enterprise-lens.md | 3→3 lines | ~175 |
+| 13:03 | Edited chapters/part-2-council-reads-the-paper/ch05-enterprise-lens.md | inline fix | ~123 |
+| 13:03 | Edited chapters/part-2-council-reads-the-paper/ch05-enterprise-lens.md | 5→3 lines | ~279 |
+| 13:04 | Session end: 12 writes across 2 files (ch05-literary-board-2026-04-30.md, ch05-enterprise-lens.md) | 1 reads | ~12428 tok |
+| 13:05 | Session end: 12 writes across 2 files (ch05-literary-board-2026-04-30.md, ch05-enterprise-lens.md) | 1 reads | ~12428 tok |
+| 13:09 | Session end: 12 writes across 2 files (ch05-literary-board-2026-04-30.md, ch05-enterprise-lens.md) | 4 reads | ~22666 tok |
+| 13:11 | Created .pao-inbox/_editorial-reviews/ch06-literary-board-2026-04-30.md | — | ~2331 |
+| 13:11 | Edited chapters/part-2-council-reads-the-paper/ch06-distributed-systems-lens.md | inline fix | ~166 |
+| 13:11 | Session end: 14 writes across 4 files (ch05-literary-board-2026-04-30.md, ch05-enterprise-lens.md, ch06-literary-board-2026-04-30.md, ch06-distributed-systems-lens.md) | 4 reads | ~25340 tok |
+| 13:12 | Edited chapters/part-2-council-reads-the-paper/ch06-distributed-systems-lens.md | "s DPDP (Digital Personal " → "s NIS2 Directive (cyberse" | ~310 |
+| 13:12 | Session end: 15 writes across 4 files (ch05-literary-board-2026-04-30.md, ch05-enterprise-lens.md, ch06-literary-board-2026-04-30.md, ch06-distributed-systems-lens.md) | 4 reads | ~25672 tok |
+| 13:12 | Edited chapters/part-2-council-reads-the-paper/ch06-distributed-systems-lens.md | inline fix | ~120 |
+| 13:12 | Edited chapters/part-2-council-reads-the-paper/ch06-distributed-systems-lens.md | inline fix | ~177 |
+| 13:12 | Edited chapters/part-2-council-reads-the-paper/ch06-distributed-systems-lens.md | inline fix | ~225 |
+| 13:12 | Edited chapters/part-2-council-reads-the-paper/ch06-distributed-systems-lens.md | 1→5 lines | ~545 |
+| 13:14 | Session end: 19 writes across 4 files (ch05-literary-board-2026-04-30.md, ch05-enterprise-lens.md, ch06-literary-board-2026-04-30.md, ch06-distributed-systems-lens.md) | 4 reads | ~26816 tok |
+| 13:14 | Session end: 19 writes across 4 files (ch05-literary-board-2026-04-30.md, ch05-enterprise-lens.md, ch06-literary-board-2026-04-30.md, ch06-distributed-systems-lens.md) | 4 reads | ~26816 tok |
+| 13:19 | Session end: 19 writes across 4 files (ch05-literary-board-2026-04-30.md, ch05-enterprise-lens.md, ch06-literary-board-2026-04-30.md, ch06-distributed-systems-lens.md) | 7 reads | ~37058 tok |
+| 13:21 | Created .pao-inbox/_editorial-reviews/ch07-literary-board-2026-04-30.md | — | ~2563 |
+| 13:21 | Session end: 20 writes across 5 files (ch05-literary-board-2026-04-30.md, ch05-enterprise-lens.md, ch06-literary-board-2026-04-30.md, ch06-distributed-systems-lens.md, ch07-literary-board-2026-04-30.md) | 7 reads | ~39804 tok |
+| 13:22 | Edited chapters/part-2-council-reads-the-paper/ch07-security-lens.md | reduced (-8 lines) | ~504 |
+| 13:22 | Session end: 21 writes across 6 files (ch05-literary-board-2026-04-30.md, ch05-enterprise-lens.md, ch06-literary-board-2026-04-30.md, ch06-distributed-systems-lens.md, ch07-literary-board-2026-04-30.md) | 7 reads | ~40344 tok |
+| 13:23 | Edited chapters/part-2-council-reads-the-paper/ch07-security-lens.md | expanded (+8 lines) | ~1058 |
+| 13:23 | Edited chapters/part-2-council-reads-the-paper/ch07-security-lens.md | inline fix | ~111 |
+| 13:23 | Edited chapters/part-2-council-reads-the-paper/ch07-security-lens.md | inline fix | ~131 |
+| 13:23 | Edited chapters/part-2-council-reads-the-paper/ch07-security-lens.md | 9→5 lines | ~296 |
+| 13:23 | Edited chapters/part-2-council-reads-the-paper/ch07-security-lens.md | inline fix | ~126 |
+| 13:25 | Session end: 26 writes across 6 files (ch05-literary-board-2026-04-30.md, ch05-enterprise-lens.md, ch06-literary-board-2026-04-30.md, ch06-distributed-systems-lens.md, ch07-literary-board-2026-04-30.md) | 7 reads | ~42188 tok |
+| 13:31 | Created .pao-inbox/_editorial-reviews/ch08-literary-board-2026-04-30.md | — | ~2374 |
+| 13:31 | Session end: 27 writes across 7 files (ch05-literary-board-2026-04-30.md, ch05-enterprise-lens.md, ch06-literary-board-2026-04-30.md, ch06-distributed-systems-lens.md, ch07-literary-board-2026-04-30.md) | 8 reads | ~51692 tok |
+| 13:32 | Edited chapters/part-2-council-reads-the-paper/ch08-product-economic-lens.md | modified if() | ~688 |
+| 13:32 | Edited chapters/part-2-council-reads-the-paper/ch08-product-economic-lens.md | inline fix | ~171 |
+| 13:32 | Edited chapters/part-2-council-reads-the-paper/ch08-product-economic-lens.md | 1→5 lines | ~605 |
+| 13:33 | Edited chapters/part-2-council-reads-the-paper/ch08-product-economic-lens.md | expanded (+10 lines) | ~652 |
+| 13:33 | Edited chapters/part-2-council-reads-the-paper/ch08-product-economic-lens.md | 5→7 lines | ~506 |
+| 13:33 | Edited chapters/part-2-council-reads-the-paper/ch08-product-economic-lens.md | inline fix | ~90 |
+| 13:34 | Edited chapters/part-2-council-reads-the-paper/ch08-product-economic-lens.md | inline fix | ~186 |
+| 13:34 | Edited chapters/part-2-council-reads-the-paper/ch08-product-economic-lens.md | 5→3 lines | ~228 |
+| 13:35 | Session end: 35 writes across 8 files (ch05-literary-board-2026-04-30.md, ch05-enterprise-lens.md, ch06-literary-board-2026-04-30.md, ch06-distributed-systems-lens.md, ch07-literary-board-2026-04-30.md) | 8 reads | ~55041 tok |
+| 13:42 | Created .pao-inbox/_editorial-reviews/ch09-literary-board-2026-04-30.md | — | ~2224 |
+| 13:42 | Edited chapters/part-2-council-reads-the-paper/ch09-local-first-practitioner-lens.md | 5→5 lines | ~194 |
+| 13:42 | Session end: 37 writes across 10 files (ch05-literary-board-2026-04-30.md, ch05-enterprise-lens.md, ch06-literary-board-2026-04-30.md, ch06-distributed-systems-lens.md, ch07-literary-board-2026-04-30.md) | 11 reads | ~71375 tok |
+| 13:43 | Edited chapters/part-2-council-reads-the-paper/ch09-local-first-practitioner-lens.md | 1→3 lines | ~561 |
+| 13:43 | Edited chapters/part-2-council-reads-the-paper/ch09-local-first-practitioner-lens.md | "s BSI (Bundesamt für Sich" → "s BSI and France" | ~468 |
+| 13:43 | Edited chapters/part-2-council-reads-the-paper/ch09-local-first-practitioner-lens.md | 3→3 lines | ~481 |
+| 13:44 | Edited chapters/part-2-council-reads-the-paper/ch09-local-first-practitioner-lens.md | 5→5 lines | ~163 |
+| 13:44 | Edited chapters/part-2-council-reads-the-paper/ch09-local-first-practitioner-lens.md | inline fix | ~56 |
+| 13:45 | Session end: 42 writes across 10 files (ch05-literary-board-2026-04-30.md, ch05-enterprise-lens.md, ch06-literary-board-2026-04-30.md, ch06-distributed-systems-lens.md, ch07-literary-board-2026-04-30.md) | 11 reads | ~73227 tok |
+| 13:51 | Created .pao-inbox/_editorial-reviews/ch13-literary-board-2026-04-30.md | — | ~2069 |
+| 13:52 | Edited chapters/part-3-reference-architecture/ch13-schema-migration-evolution.md | 1→5 lines | ~792 |
+| 13:52 | Session end: 44 writes across 12 files (ch05-literary-board-2026-04-30.md, ch05-enterprise-lens.md, ch06-literary-board-2026-04-30.md, ch06-distributed-systems-lens.md, ch07-literary-board-2026-04-30.md) | 12 reads | ~83589 tok |
+| 13:52 | Edited chapters/part-3-reference-architecture/ch13-schema-migration-evolution.md | 15→15 lines | ~650 |
+| 13:52 | Edited chapters/part-3-reference-architecture/ch13-schema-migration-evolution.md | 3→7 lines | ~711 |
+| 13:53 | Edited chapters/part-3-reference-architecture/ch11-node-architecture.md | inline fix | ~63 |
+| 13:53 | Edited chapters/part-3-reference-architecture/ch13-schema-migration-evolution.md | 1→3 lines | ~74 |
+| 13:54 | Session end: 48 writes across 13 files (ch05-literary-board-2026-04-30.md, ch05-enterprise-lens.md, ch06-literary-board-2026-04-30.md, ch06-distributed-systems-lens.md, ch07-literary-board-2026-04-30.md) | 13 reads | ~98455 tok |
+| 14:01 | Created .pao-inbox/_editorial-reviews/ch14-literary-board-2026-04-30.md | — | ~2109 |
+| 14:02 | Session end: 49 writes across 14 files (ch05-literary-board-2026-04-30.md, ch05-enterprise-lens.md, ch06-literary-board-2026-04-30.md, ch06-distributed-systems-lens.md, ch07-literary-board-2026-04-30.md) | 14 reads | ~108791 tok |
+| 14:02 | Edited chapters/part-3-reference-architecture/ch14-sync-daemon-protocol.md | 3→5 lines | ~586 |
+| 14:02 | Edited chapters/part-3-reference-architecture/ch14-sync-daemon-protocol.md | 1→3 lines | ~718 |
+| 14:03 | Edited chapters/part-3-reference-architecture/ch14-sync-daemon-protocol.md | Sunfish() → implementation() | ~207 |
+| 14:03 | Edited chapters/part-3-reference-architecture/ch14-sync-daemon-protocol.md | inline fix | ~319 |
+| 14:03 | Edited chapters/part-3-reference-architecture/ch14-sync-daemon-protocol.md | inline fix | ~167 |
+| 14:03 | Edited chapters/part-3-reference-architecture/ch14-sync-daemon-protocol.md | inline fix | ~166 |
+| 14:05 | Session end: 55 writes across 15 files (ch05-literary-board-2026-04-30.md, ch05-enterprise-lens.md, ch06-literary-board-2026-04-30.md, ch06-distributed-systems-lens.md, ch07-literary-board-2026-04-30.md) | 14 reads | ~111108 tok |
+| 14:11 | Created .pao-inbox/_editorial-reviews/ch15-literary-board-2026-04-30.md | — | ~2390 |
+| 14:11 | Session end: 56 writes across 16 files (ch05-literary-board-2026-04-30.md, ch05-enterprise-lens.md, ch06-literary-board-2026-04-30.md, ch06-distributed-systems-lens.md, ch07-literary-board-2026-04-30.md) | 15 reads | ~125829 tok |
+| 14:11 | Edited chapters/part-3-reference-architecture/ch15-security-architecture.md | removed 31 lines | ~7 |
+| 14:11 | Edited chapters/part-3-reference-architecture/ch15-security-architecture.md | removed 7 lines | ~7 |
+| 14:11 | Edited chapters/part-3-reference-architecture/ch15-security-architecture.md | reduced (-6 lines) | ~21 |
+| 14:11 | Edited chapters/part-3-reference-architecture/ch15-security-architecture.md | removed 7 lines | ~6 |
+| 14:11 | Edited chapters/part-3-reference-architecture/ch15-security-architecture.md | removed 3 lines | ~9 |
+| 14:12 | Edited chapters/part-3-reference-architecture/ch15-security-architecture.md | 1→5 lines | ~646 |
+| 14:12 | Edited chapters/part-3-reference-architecture/ch15-security-architecture.md | 1→3 lines | ~343 |
+| 14:12 | Edited chapters/part-3-reference-architecture/ch15-security-architecture.md | expanded (+6 lines) | ~283 |
+| 14:14 | Session end: 64 writes across 17 files (ch05-literary-board-2026-04-30.md, ch05-enterprise-lens.md, ch06-literary-board-2026-04-30.md, ch06-distributed-systems-lens.md, ch07-literary-board-2026-04-30.md) | 15 reads | ~127099 tok |
+| 14:20 | Created .pao-inbox/_editorial-reviews/ch11-literary-board-2026-04-30.md | — | ~2022 |
+| 14:20 | Edited chapters/part-3-reference-architecture/ch11-node-architecture.md | inline fix | ~313 |
+| 14:20 | Session end: 66 writes across 18 files (ch05-literary-board-2026-04-30.md, ch05-enterprise-lens.md, ch06-literary-board-2026-04-30.md, ch06-distributed-systems-lens.md, ch07-literary-board-2026-04-30.md) | 16 reads | ~129615 tok |
+| 14:21 | Edited chapters/part-3-reference-architecture/ch11-node-architecture.md | 1→5 lines | ~889 |
+| 14:22 | Session end: 67 writes across 18 files (ch05-literary-board-2026-04-30.md, ch05-enterprise-lens.md, ch06-literary-board-2026-04-30.md, ch06-distributed-systems-lens.md, ch07-literary-board-2026-04-30.md) | 16 reads | ~130518 tok |
+| 14:23 | Created .pao-inbox/_decisions/co-seat-deferred-structural-decisions-2026-04-30.md | — | ~2150 |
+| 14:24 | Session end: 68 writes across 19 files (ch05-literary-board-2026-04-30.md, ch05-enterprise-lens.md, ch06-literary-board-2026-04-30.md, ch06-distributed-systems-lens.md, ch07-literary-board-2026-04-30.md) | 16 reads | ~132821 tok |
+| 14:24 | Session end: 68 writes across 19 files (ch05-literary-board-2026-04-30.md, ch05-enterprise-lens.md, ch06-literary-board-2026-04-30.md, ch06-distributed-systems-lens.md, ch07-literary-board-2026-04-30.md) | 16 reads | ~132821 tok |
+| 14:31 | Created .pao-inbox/_editorial-reviews/ch12-literary-board-2026-04-30.md | — | ~2007 |
+| 14:31 | Session end: 69 writes across 20 files (ch05-literary-board-2026-04-30.md, ch05-enterprise-lens.md, ch06-literary-board-2026-04-30.md, ch06-distributed-systems-lens.md, ch07-literary-board-2026-04-30.md) | 18 reads | ~144553 tok |
+| 14:32 | Session end: 69 writes across 20 files (ch05-literary-board-2026-04-30.md, ch05-enterprise-lens.md, ch06-literary-board-2026-04-30.md, ch06-distributed-systems-lens.md, ch07-literary-board-2026-04-30.md) | 18 reads | ~144553 tok |
+| 14:41 | Session end: 69 writes across 20 files (ch05-literary-board-2026-04-30.md, ch05-enterprise-lens.md, ch06-literary-board-2026-04-30.md, ch06-distributed-systems-lens.md, ch07-literary-board-2026-04-30.md) | 18 reads | ~144553 tok |
+| 14:48 | Session end: 69 writes across 20 files (ch05-literary-board-2026-04-30.md, ch05-enterprise-lens.md, ch06-literary-board-2026-04-30.md, ch06-distributed-systems-lens.md, ch07-literary-board-2026-04-30.md) | 19 reads | ~157933 tok |
+| 14:50 | Session end: 69 writes across 20 files (ch05-literary-board-2026-04-30.md, ch05-enterprise-lens.md, ch06-literary-board-2026-04-30.md, ch06-distributed-systems-lens.md, ch07-literary-board-2026-04-30.md) | 19 reads | ~157933 tok |
+| 14:56 | Session end: 69 writes across 20 files (ch05-literary-board-2026-04-30.md, ch05-enterprise-lens.md, ch06-literary-board-2026-04-30.md, ch06-distributed-systems-lens.md, ch07-literary-board-2026-04-30.md) | 19 reads | ~157933 tok |
+| 14:57 | Session end: 69 writes across 20 files (ch05-literary-board-2026-04-30.md, ch05-enterprise-lens.md, ch06-literary-board-2026-04-30.md, ch06-distributed-systems-lens.md, ch07-literary-board-2026-04-30.md) | 19 reads | ~157933 tok |
+| 15:03 | Session end: 69 writes across 20 files (ch05-literary-board-2026-04-30.md, ch05-enterprise-lens.md, ch06-literary-board-2026-04-30.md, ch06-distributed-systems-lens.md, ch07-literary-board-2026-04-30.md) | 19 reads | ~157933 tok |
+| 15:10 | Session end: 69 writes across 20 files (ch05-literary-board-2026-04-30.md, ch05-enterprise-lens.md, ch06-literary-board-2026-04-30.md, ch06-distributed-systems-lens.md, ch07-literary-board-2026-04-30.md) | 19 reads | ~157933 tok |
+| 15:12 | Session end: 69 writes across 20 files (ch05-literary-board-2026-04-30.md, ch05-enterprise-lens.md, ch06-literary-board-2026-04-30.md, ch06-distributed-systems-lens.md, ch07-literary-board-2026-04-30.md) | 19 reads | ~157933 tok |
+| 15:23 | Session end: 69 writes across 20 files (ch05-literary-board-2026-04-30.md, ch05-enterprise-lens.md, ch06-literary-board-2026-04-30.md, ch06-distributed-systems-lens.md, ch07-literary-board-2026-04-30.md) | 19 reads | ~157933 tok |
+| 15:23 | Session end: 69 writes across 20 files (ch05-literary-board-2026-04-30.md, ch05-enterprise-lens.md, ch06-literary-board-2026-04-30.md, ch06-distributed-systems-lens.md, ch07-literary-board-2026-04-30.md) | 19 reads | ~157933 tok |
+| 15:30 | Session end: 69 writes across 20 files (ch05-literary-board-2026-04-30.md, ch05-enterprise-lens.md, ch06-literary-board-2026-04-30.md, ch06-distributed-systems-lens.md, ch07-literary-board-2026-04-30.md) | 19 reads | ~157933 tok |
+| 15:41 | Created .pao-inbox/_decisions/antarctic-vision-chapter-concept-2026-04-30.md | — | ~5558 |
+| 15:41 | Session end: 70 writes across 21 files (ch05-literary-board-2026-04-30.md, ch05-enterprise-lens.md, ch06-literary-board-2026-04-30.md, ch06-distributed-systems-lens.md, ch07-literary-board-2026-04-30.md) | 19 reads | ~163887 tok |
+| 15:42 | Session end: 70 writes across 21 files (ch05-literary-board-2026-04-30.md, ch05-enterprise-lens.md, ch06-literary-board-2026-04-30.md, ch06-distributed-systems-lens.md, ch07-literary-board-2026-04-30.md) | 19 reads | ~163887 tok |
+| 15:42 | Session end: 70 writes across 21 files (ch05-literary-board-2026-04-30.md, ch05-enterprise-lens.md, ch06-literary-board-2026-04-30.md, ch06-distributed-systems-lens.md, ch07-literary-board-2026-04-30.md) | 19 reads | ~163887 tok |
+| 15:56 | Created .pao-inbox/_creative/the-crossing-concept-note-2026-04-30.md | — | ~4659 |
+| 15:57 | Session end: 71 writes across 22 files (ch05-literary-board-2026-04-30.md, ch05-enterprise-lens.md, ch06-literary-board-2026-04-30.md, ch06-distributed-systems-lens.md, ch07-literary-board-2026-04-30.md) | 22 reads | ~183325 tok |
+| 15:57 | Created .pao-inbox/_creative/character-sheets/dr-leader-mission-director.md | — | ~2090 |
+| 15:58 | Session end: 72 writes across 23 files (ch05-literary-board-2026-04-30.md, ch05-enterprise-lens.md, ch06-literary-board-2026-04-30.md, ch06-distributed-systems-lens.md, ch07-literary-board-2026-04-30.md) | 22 reads | ~185564 tok |
+| 15:58 | Created .pao-inbox/_creative/character-sheets/maria-santos.md | — | ~1631 |
+| 15:59 | Session end: 73 writes across 24 files (ch05-literary-board-2026-04-30.md, ch05-enterprise-lens.md, ch06-literary-board-2026-04-30.md, ch06-distributed-systems-lens.md, ch07-literary-board-2026-04-30.md) | 22 reads | ~187311 tok |
+| 15:59 | Created .pao-inbox/_creative/character-sheets/senior-technical-specialist.md | — | ~2201 |
+| 16:00 | Session end: 74 writes across 25 files (ch05-literary-board-2026-04-30.md, ch05-enterprise-lens.md, ch06-literary-board-2026-04-30.md, ch06-distributed-systems-lens.md, ch07-literary-board-2026-04-30.md) | 22 reads | ~189669 tok |
+| 16:00 | Created .pao-inbox/_creative/character-sheets/_minor-characters.md | — | ~2245 |
+| 16:00 | Session end: 75 writes across 26 files (ch05-literary-board-2026-04-30.md, ch05-enterprise-lens.md, ch06-literary-board-2026-04-30.md, ch06-distributed-systems-lens.md, ch07-literary-board-2026-04-30.md) | 22 reads | ~192075 tok |
+| 16:00 | Edited book-structure.md | expanded (+38 lines) | ~852 |
+| 16:00 | Edited book-structure.md | 11→12 lines | ~132 |
+| 16:01 | Edited ASSEMBLY.md | 2→3 lines | ~155 |
+| 16:01 | Edited ASSEMBLY.md | 7→8 lines | ~292 |
+| 16:02 | Session end: 79 writes across 28 files (ch05-literary-board-2026-04-30.md, ch05-enterprise-lens.md, ch06-literary-board-2026-04-30.md, ch06-distributed-systems-lens.md, ch07-literary-board-2026-04-30.md) | 22 reads | ~193609 tok |
+| 16:02 | Session end: 79 writes across 28 files (ch05-literary-board-2026-04-30.md, ch05-enterprise-lens.md, ch06-literary-board-2026-04-30.md, ch06-distributed-systems-lens.md, ch07-literary-board-2026-04-30.md) | 22 reads | ~193609 tok |
+| 16:06 | Session end: 79 writes across 28 files (ch05-literary-board-2026-04-30.md, ch05-enterprise-lens.md, ch06-literary-board-2026-04-30.md, ch06-distributed-systems-lens.md, ch07-literary-board-2026-04-30.md) | 22 reads | ~193609 tok |
+| 16:06 | Edited .pao-inbox/_creative/character-sheets/dr-leader-mission-director.md | "[LEADER]" → "Dr. Jane Smith" | ~189 |
+| 16:06 | Edited .pao-inbox/_creative/the-crossing-concept-note-2026-04-30.md | inline fix | ~98 |
+| 16:07 | Session end: 81 writes across 28 files (ch05-literary-board-2026-04-30.md, ch05-enterprise-lens.md, ch06-literary-board-2026-04-30.md, ch06-distributed-systems-lens.md, ch07-literary-board-2026-04-30.md) | 24 reads | ~200242 tok |
