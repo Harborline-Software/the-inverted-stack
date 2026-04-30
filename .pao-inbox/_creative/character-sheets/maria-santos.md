@@ -1,7 +1,7 @@
 ---
 type: character-sheet
 character: Maria Santos
-status: returning character (Ch1 → The Crossing)
+status: TO BE INTRODUCED — Ch1 hospital ransomware scenario currently abstract (no named character); King-style revision PR pending to introduce Maria Santos as the hospital admin in that scene
 sheet-depth: full
 chapter: The Crossing (Closing Chapter)
 arc: cross-part (Part I victim → Closing Chapter authority, with King-required residual scarring)
@@ -9,9 +9,11 @@ arc: cross-part (Part I victim → Closing Chapter authority, with King-required
 
 # Character Sheet — Maria Santos, Mission Medical Officer
 
+> **CORRECTION 2026-04-30:** PAO erroneously described Maria Santos as "established in Ch1" in earlier session. She is NOT currently in the manuscript. Ch1's hospital ransomware scenario is currently abstract (references HBO's *The Pitt* TV show, no named character). Maria Santos will be introduced in a follow-up King-style revision PR that adds her as the named character in that scene — analogous to how Aanya Iyer was introduced in `chore/pao-king-style-ch01-aanya` for the construction PM scenario. The character sheet below is the design target; the chapter introduction is pending.
+
 ## Identity
 
-- **Name:** Maria Santos. Established in Ch1 (hospital data-loss scenario). Name retained for The Crossing.
+- **Name:** Maria Santos. **TO BE INTRODUCED** in Ch1 hospital ransomware passage during follow-up King-style revision.
 - **Title in narrative:** Dr. Maria Santos. Role: Mission Medical Officer.
 - **Age at The Crossing:** 42–48. Roughly 5–7 years after the Ch1 incident.
 - **Nationality:** Latina (Brazilian or Mexican — established in Ch1 with regional positioning; lock specific country during chapter draft).

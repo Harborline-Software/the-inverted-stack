@@ -11,17 +11,17 @@ Full sheets exist for Dr. Aisha Al Mansoori, Maria Santos, and the Senior Techni
 
 ---
 
-## Lead Instrumentation Engineer
+## Aanya Iyer — Lead Instrumentation Engineer
 
-**Provenance:** Renamed from Ch1's construction project manager. Returning character, full arc.
+**Provenance:** Returning character. Introduced in Ch1 (King-style revision; see `chore/pao-king-style-ch01-aanya`) as the construction PM who lost the Pune hospital bid at 4:47 PM when her SaaS platform and its single-sign-on dependency went down simultaneously with thirteen minutes left to submit. **Name LOCKED:** Aanya Iyer.
 
-**Identity:** Female. Indian (Mumbai or Bangalore origin) or Egyptian/GCC (Dubai or Cairo origin). PAO recommendation: Indian — closes Krishnamurthy market positioning and reflects actual UAE-India tech-talent flow. Name candidates: Aanya Iyer, Priya Menon, Nisha Krishnan. Age 38–44.
+**Identity:** Female. Indian (Tamil Brahmin family name; Pune-based at time of Ch1 incident). Age at Ch1: ~32–36; age at Sunfish-1 mission: ~38–44.
 
-**Backstory:** In Ch1 she was a construction PM whose project failed because the SaaS-based PM tool's data became inaccessible during a critical window. Between Ch1 and The Crossing, she pivoted from construction project management to designing modular field instrumentation for environments where cloud connectivity cannot be assumed. She designed the Sunfish-1 ice-shelf monitoring instruments — the modular sensor packages that get deployed at the Antarctic destination. Recruited because the instrumentation she designed will be installed by the crew during the dive.
+**Backstory:** In Ch1 her hospital expansion bid (243 line items, six weeks of work) was lost when the SaaS construction-management platform stopped responding at 4:47 PM. The bid was won by a competitor whose platform happened to run on a different vendor whose dependencies had not failed that afternoon. Between Ch1 and The Crossing, she pivoted from construction project management to designing modular field instrumentation for environments where cloud connectivity cannot be assumed. She designed the Sunfish-1 ice-shelf monitoring instruments. Recruited because the instrumentation she designed will be installed by the crew during the dive.
 
-**Tic / King-required scarring:** She over-tests instrument calibration. Runs the calibration suite three times when procedure requires once. The Director observes it; does not comment.
+**Tic / King-required residual scarring:** She still keeps three browser tabs open as a working habit (established in Ch1's revised passage). On the boat this manifests as over-testing instrument calibration — running the calibration suite three times when procedure requires once. The Director observes the tic; does not comment in dialogue but writes about it in the staff history. The tic does not heal in the chapter. Her competence still costs her.
 
-**Role in chapter:** Brief presence in Act I (introduced), Act II (instrument calibration during transit), Act V (deployment of instruments at destination). Does not feature in Act III death scene or Act IV silent-window scene.
+**Role in chapter:** Brief presence in Act I (introduced), Act II (instrument calibration during transit, where the three-times tic manifests), Act V (deployment of instruments at destination). Does not feature in Act III death scene or Act IV silent-window scene.
 
 ---
 
