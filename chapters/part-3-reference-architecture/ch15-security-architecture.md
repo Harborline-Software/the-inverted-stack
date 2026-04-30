@@ -17,6 +17,8 @@ The system treats the relay as an untrusted intermediary. The relay routes ciphe
 
 Administrative events — key distribution, role attestations, revocation broadcasts — travel through the same encrypted log as application data. The administrator's device is the highest-value target in the system. Compromising it enables fraudulent key generation and the distribution of rogue role bundles. `Sunfish.Kernel.Security` provides hardware-backed key storage where the platform supports it; organizations with elevated threat models require administrator operations only on managed devices with hardware security modules.
 
+A distinct threat model operates in parallel across multiple jurisdictions: *state-mandated infrastructure access*. A vendor compelled by its home jurisdiction to suspend service, hand over plaintext, or modify behavior is no longer a technical question — it is a governance question that lives outside the contract. End-to-end encryption with local key management addresses it architecturally — the relay cannot produce decryptable content under legal compulsion because the relay does not possess decryptable content. This is a deployment consideration relevant across CIS, the EU post-Schrems II, and parts of Asia, not a political judgment about any specific government's policy. The compliance argument is articulated below in §Relay Trust Model.
+
 ---
 
 ## Four Defensive Layers
@@ -96,36 +98,6 @@ Key rotation on membership change follows the same flow. The administrator gener
 
 ---
 
-## Key Compromise Incident Response
-
-Operational flows specified in Chapter 22 §Key Compromise Incident Response.
-
----
-
-## Key-Loss Recovery
-
-Operational flows specified in Chapter 22 §Key-Loss Recovery.
-
----
-
-## Offline Node Revocation and Reconnection
-
-Operational flows specified in Chapter 23 §Offline Node Revocation and Reconnection.
-
----
-
-## Collaborator Revocation and Post-Departure Partition
-
-Operational flows specified in Chapter 23 §Collaborator Revocation and Post-Departure Partition.
-
----
-
-## Forward Secrecy and Post-Compromise Security
-
-Operational flows specified in Chapter 22 §Forward Secrecy and Post-Compromise Security.
-
----
-
 ## In-Memory Key Handling
 
 Keys in memory are exposed to cold boot attacks, hypervisor memory inspection, and process memory dumps. The system applies three controls to minimize this exposure.
@@ -142,12 +114,6 @@ The four-hour default is configurable. Deployments with lower sensitivity requir
 
 <!-- code-check: extension #47 endpoint-compromise. Sub-patterns 47a–47f. Sunfish.Kernel.Security only — no new namespace. Forward-looking attestation handshake at Ch14 §Sync Daemon Protocol flagged with CLAIM marker. -->
 
-## Endpoint Compromise: What Stays Protected
-
-Operational flows specified in Chapter 23 §Endpoint Compromise: What Stays Protected.
-
----
-
 ## Supply Chain Security
 
 A local-first system that distributes application updates through a CDN inherits an update-pipeline attack surface. A compromised CDN can serve modified binaries. The architecture closes this gap through content addressing, signing, and transparency logging.
@@ -159,12 +125,6 @@ A local-first system that distributes application updates through a CDN inherits
 **Sigstore transparency log.** All signing events are logged to Rekor, Sigstore's public transparency log [2]. A client that encounters a signed package whose signing event is absent from the transparency log rejects the package. Absence indicates either a very recent signing event that has not yet propagated — acceptable with a short hold period — or a signing event that was deliberately withheld, indicating a rogue signing operation.
 
 **Reproducible builds.** Independent parties can reproduce the published binary from the published source and verify that the computed CID matches. Reproducible builds transform the signing key from the sole trust anchor into one of two independent verification paths. A compromise that modifies the binary but cannot also modify the published source is detectable by any party that performs the reproducibility check.
-
----
-
-## Chain-of-Custody for Multi-Party Transfers
-
-Operational flows specified in Chapter 23 §Chain-of-Custody for Multi-Party Transfers.
 
 ---
 
@@ -182,12 +142,6 @@ Organizations subject to Article 17 must obtain legal review before relying on c
 
 ---
 
-## Event-Triggered Re-classification
-
-Operational flows specified in Chapter 23 §Event-Triggered Re-classification.
-
----
-
 ## Relay Trust Model
 
 The relay is a ciphertext router. It receives encrypted event payloads from source nodes, validates destination subscriptions, and forwards to subscribing nodes. The relay operator cannot read payload content — the encryption layer is applied at the originating node before the event enters the relay.
@@ -198,11 +152,13 @@ The relay is a ciphertext router. It receives encrypted event payloads from sour
 
 **Relay and legal process.** A relay operator served with legal process can produce connection logs and message metadata. Content is not producible — the operator does not hold decryption keys. Organizations whose threat model includes legal process directed at the relay operator deploy a self-hosted relay and ensure that connection logs are subject to their own retention policies.
 
-**Compelled-access threat model as a compliance argument.** The relay cannot produce decryptable content under legal compulsion because the relay does not possess decryptable content. This is the structural answer to compelled-access threat models across jurisdictions that Customer-Managed Key (CMK) patterns in major cloud platforms cannot match — CMK keeps the customer's key outside the cloud provider's direct custody, but the data itself still traverses third-party infrastructure, which makes the provider legally compellable to facilitate access through other means. Local-first keys on local hardware that never cross a third-party network defeat the attack surface CMK leaves exposed. The architecture answers the EU's 2020 Schrems II ruling (Data Protection Commissioner v. Facebook Ireland Limited), which constrains cross-border transfer of EU personal data to US-hosted infrastructure. It answers Russia's Federal Law 242-FZ (enacted 2015, predating GDPR by two years), which mandates Russian-citizen personal data reside on Russia-resident servers. It answers the UAE's DIFC Data Protection Law 2020, which prohibits foreign cloud retention for DIFC-licensed financial entities holding regulated data. It answers the parallel localization regimes named in Appendix F (DPDP + RBI (Reserve Bank of India), PIPL (Personal Information Protection Law) + MLPS (Multi-Level Protection Scheme) 2.0, APPI, PIPA + ISMS-P (Information Security Management System – Personal), LGPD, LFPDPPP, NDPR, POPIA, Kenya DPA). In each jurisdiction, the technical claim is the same: authoritative data and its keys reside on infrastructure the operator controls.
+**Compelled-access threat model as a compliance argument.** The relay cannot produce decryptable content under legal compulsion because the relay does not possess decryptable content. This is the structural answer to compelled-access threat models that Customer-Managed Key (CMK) patterns in major cloud platforms cannot match — CMK keeps the customer's key outside the cloud provider's direct custody, but the data still traverses third-party infrastructure under that provider's jurisdictional control, which makes the provider legally compellable to facilitate access through other means. Local-first keys on local hardware that never cross a third-party network defeat the attack surface CMK leaves exposed.
+
+The architecture answers four anchor regimes that bind procurement decisions across distinct jurisdictional clusters. It answers the EU's 2020 Schrems II ruling (*Data Protection Commissioner v. Facebook Ireland Limited*, CJEU Case C-311/18) plus the EU's NIS2 Directive (Article 21 risk-management measures, in force October 2024) and Germany's BSI cloud-security catalogue. It answers India's DPDP Act 2023 with the RBI 2018 BFSI data localization circular requiring payments-related personal data to remain on India-resident servers. It answers the UAE's DIFC DPL 2020 and the parallel ADGM (Abu Dhabi Global Market) Data Protection Regulations 2021 — distinct free-zone jurisdictions with different relay-residency requirements. It answers Russia's Federal Law 242-FZ (enacted 2015, predating GDPR by two years), with parallel localization regimes in Kazakhstan and Belarus, supporting deployments under import substitution (импортозамещение) constraints.
+
+The same architectural property answers parallel regimes across the global compliance envelope: Japan APPI (2022 revision), South Korea PIPA distinct from Japan APPI plus ISMS-P certification, China PIPL and MLPS 2.0 (a cybersecurity classification regime parallel to NIS2, not a data-localization equivalent of PIPL), Brazil LGPD, Mexico LFPDPPP, Colombia Ley 1581, Argentina Ley 25.326, Nigeria NDPR (re-enacted 2023), South Africa POPIA, Kenya Data Protection Act 2019, Ghana DPA 2012, ECOWAS Supplementary Act on Personal Data Protection, Saudi Arabia PDPL 2021. The full coverage matrix sits in Appendix F. In each jurisdiction, the technical claim is identical: authoritative data and its keys reside on infrastructure the operator controls.
 
 **The 2022 demonstration.** The compelled-access threat model is not theoretical. In 2022, Adobe, Autodesk, Microsoft, Figma ([figma.com](https://www.figma.com/), the design tool), and dozens of other Western SaaS (Software as a Service) vendors suspended or terminated service for users across Russia and the CIS (Commonwealth of Independent States) region under sanctions enforcement. Hundreds of thousands of organizations lost access to data they had created — in some cases over a decade of operational workflows, with days of notice. The architectural property that prevents this — local authoritative data, keys under user custody, relay holds only ciphertext — converts a vendor-dependency risk into a structural property. Organizations replacing Western SaaS under import substitution mandates find the architecture directly aligned with their adoption driver.
-
-**Break-glass corrupt-sequence recovery.** When a CRDT sequence arrives in a structurally invalid state — cryptographic signature mismatch, reference to an unknown operation, schema-version violation the upcaster chain cannot resolve — the sync daemon quarantines the full sequence rather than applying any portion. Partial application is never safe for CP-class records and rarely safe for AP-class records. The break-glass procedure is explicit administrator action: the administrator inspects the quarantined sequence through the admin console's quarantine viewer, determines whether the sequence originated from a compromised client (reject with logged reason), a legitimate-but-buggy client (promote after domain-layer manual correction), or a transport corruption (request resend from source peer). No automatic reconciliation attempts to interpret a corrupt sequence. The audit log captures the sequence, the administrator's determination, and the disposition — the same audit trail that supports GDPR Article 30 records of processing activities.
 
 **Traffic analysis resistance.** The current architecture does not implement constant-rate padding between nodes. Organizations whose threat model includes traffic analysis by a well-resourced adversary replace the relay with application-layer obfuscation or route it behind a mixnet. The architecture documents the limitation; the mitigation is an operator deployment choice outside the scope of `Sunfish.Kernel.Security`.
 
@@ -267,6 +223,12 @@ The privacy-aggregation primitive fails when any of the conditions below holds. 
 - **Recovery-event partition statistics are published without the operator holding explicit audit rights declared in the deployment manifest.** Carve-out failure. The §12b exception exists precisely because routine inclusion of recovery counts exposes per-user compromise signals; bypassing the audit-rights gate defeats the carve-out's purpose.
 
 The kill trigger for this primitive is a published DP-labeled statistic computed over a cohort below the k-anonymity floor. A primitive that labels noise-dominated output as differential privacy is not privacy preservation — it is a confidence trick performed on the operator and on the people whose behavior the data describes.
+
+---
+
+## Operational Lifecycle Map
+
+This chapter specifies the security architecture's structural commitments — the threat model, the defensive layers, the key hierarchy, the in-memory key handling, the supply-chain controls, the crypto-shredding mechanism, the relay trust model, and the privacy-preserving aggregation primitive. The operational lifecycle of those commitments lives in Part V. Chapter 22 specifies key compromise incident response, key-loss recovery, and forward secrecy / post-compromise security as runbook-grade procedures. Chapter 23 specifies offline-node revocation and reconnection, collaborator revocation and post-departure partition, endpoint compromise (what stays protected), chain-of-custody for multi-party transfers, and event-triggered re-classification. Readers building a deployment runbook should pair this chapter's architectural specifications with the operational flows in Chapters 22 and 23.
 
 ---
 
