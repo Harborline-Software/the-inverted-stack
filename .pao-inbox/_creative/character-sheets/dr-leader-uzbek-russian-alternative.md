@@ -139,31 +139,31 @@ If the CO chooses Anna Yusupova over Aisha Al Mansoori:
 6. **Charlie / Ch22 boundary unchanged.** No cross-reference. Reader carries the connection.
 7. **Voss flashback cameo unchanged.**
 
-## Parallel plot material (optional — may not make chapter draft)
+## Parallel plot material — Telegram bracket (LOCKED placement)
 
-**CO directive (background, uncertain inclusion):** A former Tashkent gymnasium classmate, now a Russian Federation military officer (Captain rank — Army most plausible), has stayed in irregular touch with Anna across the decades. They were close enough as students that the friendship survived emigration, divergent careers, and the geopolitical shifts of the 2010s and 2020s. He ribs her about her civilian-scientific "Captain" / "Mission Director" title every time they speak — calling her a "fake captain" in deliberately old-classmate teasing register. He is not cruel. He is the kind of friend who teases because the friendship is established enough that teasing reads as affection.
+**CO directive:** Tashkent classmate **Rustam Karimov**, Russian Army captain by actual commission, has ribbed Anna about her civilian "Captain" / "Mission Director" title since their thirties. The dynamic is incorporated into The Crossing as a **two-message Telegram bracket**, ~105 words total across Acts I and V. Single-sentence-each-side compression. The reader never hears Rustam speak. He exists in Anna's interiority and in two quoted text messages.
 
-The structural point of the relationship: two paths from the same Tashkent gymnasium. Anna took civilian science / international consortium / Mission Director. He took military service / domestic chain of command / actual Captain. Both leadership roles. Both carry institutional responsibility. The difference is the institution they serve, not the size of the responsibility — a point the technical maritime hierarchy actually supports (in civilian research vessels, "Captain" refers to the vessel master, not the mission lead; the military classmate's ribbing has technical cover for the joke he is making).
+**Why Telegram:** Russian-CIS friends live on Telegram; a pre-departure ribbing message arrives in text the way it would in real life. The medium is itself a character beat — the friendship runs on Telegram and has run on Telegram for years. Both quoted messages are in English; the joke runs in English specifically because the title is the joke and the title is in English. (Russian/Uzbek code-switching surfaces elsewhere in Anna's interiority — calls to her mother, internal phrases — not in the Rustam exchanges.)
 
-**Working name for classmate:** Rustam (common Uzbek/Tajik male name; widespread; surname unlocked — could lock later if the scene is included). Alternatives: Bobur, Sherzod, Jasur (Uzbek register); Sergei, Andrei, Mikhail, Aleksei (pure-Russian register, plausible for ethnic Russian Tashkent classmate).
+**Why a bracket (Act I + Act V):** Open with banter, close with banter that has been transformed by what happened in between. The transformation does not require explanation. The reader feels it. The compression mirrors Anna's bluntness register — she would not write a paragraph about her classmate when one sentence does the work.
 
-**Anna's standing response (placeholder, in her bluntness register):**
+**Why two messages, not a phone call:** Phone calls require dramatized dialogue, which adds screen time. Telegram messages are quoted text inside Anna's narration — interiority compresses where scene cannot. Anna does not reply to either message in the chapter prose; the reader fills in her response. King move: the relationship is so established that the reply is implied.
 
-> *"You command a hundred men. I command twelve scientists, three engineers, a vessel master, and a quarter of a research consortium's budget. We both have responsibilities. The titles describe different practices. The work is similar enough that you understand exactly what I am doing, which is why you give me a hard time about it."*
+### Act I — Telegram before departure (~68 words)
 
-She has used this line, or some version of it, since they were in their thirties. He has stopped trying new versions of the joke. The friendship persists because they both find the recurring exchange amusing.
+> Rustam Karimov, my classmate from the Tashkent gymnasium and now a Russian Army captain by actual commission rather than civilian courtesy, sent his Telegram at 04:17 the morning of departure. *Don't lose the boat, fake captain.* He has sent some version of that message before every research voyage since I was thirty-two. I read it and put my phone down. He is not entirely wrong, and we both know it.
 
-**Where this could land in the chapter (PAO recommendations, ranked):**
+The sentence does the structural work in one breath: who Rustam is, the technical-legitimacy hook (his commission is real; hers is civilian-courtesy), the duration (two decades of the joke), Anna's bearing (she reads it and puts her phone down — no reply needed), and the line that lands (*we both know it*).
 
-1. **Pre-mission flashback in Act I (one paragraph, ~150 words).** Anna remembers the classmate's most recent ribbing — perhaps from a phone call the previous week — as she prepares to depart. The scene establishes her awareness of the title-legitimacy question, lets her dry humor and bluntness register through dialogue, and grounds her in a specific Tashkent friendship that survived everything. Lowest narrative cost; highest character-revelation per word. **PAO recommendation if any version of this is included.**
+### Act V — Telegram after return (~35 words)
 
-2. **Late Act V scene (post-mission, brief).** Anna returns home. The classmate calls. The recurring joke arrives. This time Anna's reply is shorter: she has just commanded a vessel that lost a man on watch, kept the crew alive, delivered the climate data, and returned the body home. She does not say any of this. She lets him land the joke. He lands it differently than he ever has before — the affectionate ribbing has acquired a quietness. The friendship persists. The work has settled the question without anyone having to settle it aloud. Higher narrative payoff but more chapter real estate; risk of competing with the staff-history closing register.
+> Rustam's Telegram arrived the morning after I got home. *Welcome back, fake captain.* He has not changed the joke. The work has not changed it for him. I would not want it to.
 
-3. **Cut material.** Informs character interiority but never appears in the chapter prose. The reader feels Anna's awareness of the title-legitimacy question through her bearing in command, without ever seeing the classmate. Most economical; preserves chapter focus. The classmate becomes one of those off-stage characters that exists in the writer's head but not on the page — Stephen King uses these all the time; the reader senses the depth without ever being shown it.
+Three short sentences, mirroring the Act I structure. The transformation is implicit. *The work has not changed it for him* carries the weight of everything that happened on the boat without naming it. Anna does not reply to Rustam, does not tell him about the freezer, does not tell him about the silent relay window. The work settled the question for her; Rustam doesn't need to know the question was settled. The friendship persists exactly as it was, which is the point.
 
-**PAO recommendation:** Option 1 OR Option 3. Pick one. Both work. Option 2 risks the chapter's emotional register at the end. Option 1 (one Act I paragraph) gives the bluntness register a natural showcase early in the chapter; Option 3 (cut material) trusts the reader to feel the depth. CO call.
+**Total chapter cost: ~103 words.** Two locations, both within Anna's existing interiority register, no new scenes required, no new on-page characters, no expansion of the cast.
 
-**Author-boundary note:** Whether or not this scene appears in the chapter, the classmate is fictional. He is not a stand-in for any real person in CO's life. The Tashkent-classmate-into-military-service pattern is a real and common post-Soviet trajectory; this character draws on the pattern, not on a particular person.
+**Author-boundary note:** Rustam Karimov is fictional. The Tashkent-classmate-into-Russian-military-service pattern is a real and common post-Soviet trajectory; this character draws on the pattern, not on a particular person. Karimov surname is widespread (defensible at "Smith" level of commonness; the Karimov-ruling-family resonance is real but a Russian Army officer career separates Rustam from the political association). Easy to swap if advisor flags it.
 
 ---
 
