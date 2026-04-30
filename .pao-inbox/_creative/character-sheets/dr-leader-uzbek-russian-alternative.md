@@ -139,6 +139,34 @@ If the CO chooses Anna Yusupova over Aisha Al Mansoori:
 6. **Charlie / Ch22 boundary unchanged.** No cross-reference. Reader carries the connection.
 7. **Voss flashback cameo unchanged.**
 
+## Parallel plot material (optional — may not make chapter draft)
+
+**CO directive (background, uncertain inclusion):** A former Tashkent gymnasium classmate, now a Russian Federation military officer (Captain rank — Army most plausible), has stayed in irregular touch with Anna across the decades. They were close enough as students that the friendship survived emigration, divergent careers, and the geopolitical shifts of the 2010s and 2020s. He ribs her about her civilian-scientific "Captain" / "Mission Director" title every time they speak — calling her a "fake captain" in deliberately old-classmate teasing register. He is not cruel. He is the kind of friend who teases because the friendship is established enough that teasing reads as affection.
+
+The structural point of the relationship: two paths from the same Tashkent gymnasium. Anna took civilian science / international consortium / Mission Director. He took military service / domestic chain of command / actual Captain. Both leadership roles. Both carry institutional responsibility. The difference is the institution they serve, not the size of the responsibility — a point the technical maritime hierarchy actually supports (in civilian research vessels, "Captain" refers to the vessel master, not the mission lead; the military classmate's ribbing has technical cover for the joke he is making).
+
+**Working name for classmate:** Rustam (common Uzbek/Tajik male name; widespread; surname unlocked — could lock later if the scene is included). Alternatives: Bobur, Sherzod, Jasur (Uzbek register); Sergei, Andrei, Mikhail, Aleksei (pure-Russian register, plausible for ethnic Russian Tashkent classmate).
+
+**Anna's standing response (placeholder, in her bluntness register):**
+
+> *"You command a hundred men. I command twelve scientists, three engineers, a vessel master, and a quarter of a research consortium's budget. We both have responsibilities. The titles describe different practices. The work is similar enough that you understand exactly what I am doing, which is why you give me a hard time about it."*
+
+She has used this line, or some version of it, since they were in their thirties. He has stopped trying new versions of the joke. The friendship persists because they both find the recurring exchange amusing.
+
+**Where this could land in the chapter (PAO recommendations, ranked):**
+
+1. **Pre-mission flashback in Act I (one paragraph, ~150 words).** Anna remembers the classmate's most recent ribbing — perhaps from a phone call the previous week — as she prepares to depart. The scene establishes her awareness of the title-legitimacy question, lets her dry humor and bluntness register through dialogue, and grounds her in a specific Tashkent friendship that survived everything. Lowest narrative cost; highest character-revelation per word. **PAO recommendation if any version of this is included.**
+
+2. **Late Act V scene (post-mission, brief).** Anna returns home. The classmate calls. The recurring joke arrives. This time Anna's reply is shorter: she has just commanded a vessel that lost a man on watch, kept the crew alive, delivered the climate data, and returned the body home. She does not say any of this. She lets him land the joke. He lands it differently than he ever has before — the affectionate ribbing has acquired a quietness. The friendship persists. The work has settled the question without anyone having to settle it aloud. Higher narrative payoff but more chapter real estate; risk of competing with the staff-history closing register.
+
+3. **Cut material.** Informs character interiority but never appears in the chapter prose. The reader feels Anna's awareness of the title-legitimacy question through her bearing in command, without ever seeing the classmate. Most economical; preserves chapter focus. The classmate becomes one of those off-stage characters that exists in the writer's head but not on the page — Stephen King uses these all the time; the reader senses the depth without ever being shown it.
+
+**PAO recommendation:** Option 1 OR Option 3. Pick one. Both work. Option 2 risks the chapter's emotional register at the end. Option 1 (one Act I paragraph) gives the bluntness register a natural showcase early in the chapter; Option 3 (cut material) trusts the reader to feel the depth. CO call.
+
+**Author-boundary note:** Whether or not this scene appears in the chapter, the classmate is fictional. He is not a stand-in for any real person in CO's life. The Tashkent-classmate-into-military-service pattern is a real and common post-Soviet trajectory; this character draws on the pattern, not on a particular person.
+
+---
+
 ## Decision the CO needs to make
 
 Pick one direction before chapter draft begins:
