@@ -34,7 +34,7 @@ Last refreshed: 2026-04-30 post-Ch15-split. Word counts from `build/word-count.p
 | Ch 21 | `chapters/part-5-operational-concerns/ch21-operating-a-fleet.md` | icm/awaiting-voice-check (#11) | 6,309 | ~6,500 | ✓ |
 | Ch 22 | `chapters/part-5-operational-concerns/ch22-security-operations.md` | icm/awaiting-voice-check (post-split; #46 §Forward Secrecy + #48 §Key-Loss Recovery sections) | 7,194 | ~7,400 | ✓ |
 | Ch 23 | `chapters/part-5-operational-concerns/ch23-endpoint-collaborator-ops.md` | icm/awaiting-voice-check (post-split; #45 §Collaborator Revocation, #47 §Endpoint Compromise, #9 §Chain-of-Custody, #10 §Event-Triggered) | 8,581 | ~9,000 | ✓ |
-| Closing Chapter | `chapters/closing/the-crossing.md` *(planned)* | **icm/concept** *(concept note + character sheets in `.pao-inbox/_creative/`; chapter draft pending UAE friend outreach)* | 0 | ~5,000 | pending draft |
+| Closing Chapter | `chapters/closing/the-crossing.md` *(planned)* | **icm/concept** *(concept note + character sheets locked in `.pao-inbox/_creative/`; Mission Director Dr. Anna Yusupova LOCKED; chapter draft pending CO advisor calibration on Anna's biographical details)* | 0 | ~5,000 | pending draft |
 | Epilogue | `chapters/epilogue/epilogue-what-the-stack-owes-you.md` | icm/voice-passed | 3,070 | ~2,500 | ✓ |
 | Appendix A | `chapters/appendices/appendix-a-sync-daemon-wire-protocol.md` | icm/voice-passed | 3,570 | ~2,000 | ✓ over (178%) |
 | Appendix B | `chapters/appendices/appendix-b-threat-model-worksheets.md` | icm/voice-passed | 4,330 | ~2,000 | ✓ over (216%) |
@@ -75,7 +75,7 @@ Phase 4 prune deferred until #45 voice-pass unlocks Ch23 §Collaborator Revocati
 2. **Phase 4 prune** (PAO directs, Yeoman executes): post-voice-pass cuts to Ch22+Ch23 (~-3k); cuts on Ch11+Ch20 §Performance Contracts/Budgets (~-400); cuts on Ch16 §Per-Data-Class (~-300).
 3. **Foreword**: external contributor needed.
 4. **Phase 7 reference-list split**: split Ch15's combined reference list into Ch15/Ch22/Ch23 per the Phase 5 inventory addendum (`.pao-inbox/_decisions/2026-04-30-upf-ch15-split-phase5-ch23-addendum.md`).
-5. **Closing Chapter — The Crossing** (vision-of-solution narrative chapter): concept note + character sheets in place at `.pao-inbox/_creative/`; chapter draft awaits CO outreach to UAE professional associate(s) for cultural authenticity on Dr. Aisha Al Mansoori; full plan in `.pao-inbox/_decisions/antarctic-vision-chapter-concept-2026-04-30.md`.
+5. **Closing Chapter — The Crossing** (vision-of-solution narrative chapter): concept note + character sheets locked at `.pao-inbox/_creative/`; Mission Director Dr. Anna Yusupova (Uzbek-Russian) LOCKED per CO directive 2026-04-30; chapter draft begins after CO advisor calibration on Anna's biographical details; full concept at `.pao-inbox/_creative/the-crossing-concept-note-2026-04-30.md`.
 6. **Final assembly**: set all chapters to `icm/assembled` after voice-pass + Phase 4 prune + The Crossing chapter draft; run `make draft-pdf`.
 
 ## Build

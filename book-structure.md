@@ -386,7 +386,7 @@ because it queues against silence, holds work through windows that don't come, a
 delivery becomes possible.
 
 - Mission codename Sunfish-1 (closes the project name loop)
-- Mission Director: Dr. Aisha Al Mansoori, a fictional UAE oceanographer (placeholder name pending CO outreach)
+- Mission Director: Dr. Anna Yusupova, a fictional Uzbek-Russian climate oceanographer at the Arctic and Antarctic Research Institute (AARI) in St. Petersburg, born in Tashkent (LOCKED per CO directive 2026-04-30; surname is working placeholder pending CO advisor calibration)
 - Connected cast: Part I victims (Maria Santos, the construction PM, the BFSI loan officer, the GCC
   field engineer) return as mission crew — their Part I failures became the credentials that put
   them on this boat
@@ -401,8 +401,8 @@ delivery becomes possible.
 - Charlie stays in Ch22 only — no cross-reference; reader carries the connection
 - Concept note: `.pao-inbox/_creative/the-crossing-concept-note-2026-04-30.md`
 - Character sheets: `.pao-inbox/_creative/character-sheets/`
-- Status: PRE-DRAFT — awaiting CO outreach to UAE professional associate(s) for cultural authenticity
-  on Dr. Aisha Al Mansoori; chapter draft begins after that input lands
+- Status: PRE-DRAFT — Mission Director locked as Dr. Anna Yusupova; chapter draft pending CO advisor
+  calibration on Anna's biographical details (CO has built-in advisor; no formal outreach plan needed)
 
 ---
 

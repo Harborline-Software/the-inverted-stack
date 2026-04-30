@@ -1,11 +1,19 @@
 ---
-type: creative-planning / chapter-concept-state
+type: creative-planning / chapter-concept-state (SUPERSEDED in part)
 date: 2026-04-30
 audience: CO, future PAO sessions resuming this work
-status: PRE-DRAFT — awaiting CO outreach to UAE professional associates; concept note draft pending
-working-title: SUNFISH-1 (Antarctic vision chapter)
-intended-placement: Epilogue / new closing chapter at end of manuscript
+status: PARTIALLY SUPERSEDED — Mission Director direction LOCKED as Dr. Anna Yusupova (Uzbek-Russian), NOT the UAE direction this doc describes. Canonical state: `.pao-inbox/_creative/the-crossing-concept-note-2026-04-30.md` and `.pao-inbox/_creative/character-sheets/dr-leader-mission-director.md`. The Aisha (UAE) sheet has been archived to `_archive/dr-leader-mission-director-uae-not-chosen.md`. This doc is preserved for design-process record.
+working-title: SUNFISH-1 (Antarctic vision chapter) — title still in play, working "The Crossing"
+intended-placement: Closing Chapter (between Part V and Epilogue)
 ---
+
+> **SUPERSEDED-BY NOTICE:** This document was written when the Mission Director direction was Dr. Aisha Al Mansoori (UAE oceanographer), with a planned UAE-friend cultural-authenticity outreach. Per CO directive 2026-04-30, the Mission Director is now LOCKED as **Dr. Anna Yusupova** (Uzbek-Russian climate oceanographer at AARI St. Petersburg, born in Tashkent). The UAE direction is archived. The Aisha-related content below — outreach plan, UAE friend questions, cultural pitfalls flagged for Emirati context — is preserved for design-process record but is NOT the live plan. For current canonical state see:
+>
+> - `.pao-inbox/_creative/the-crossing-concept-note-2026-04-30.md` (concept note, updated for Anna)
+> - `.pao-inbox/_creative/character-sheets/dr-leader-mission-director.md` (Anna Yusupova full sheet)
+> - `.pao-inbox/_creative/character-sheets/_archive/dr-leader-mission-director-uae-not-chosen.md` (archived Aisha sheet)
+>
+> The non-Director portions of this doc (placement, voice register, connected cast, King critique items, Charlie/Ch22 boundary, council member cameos) remain valid.
 
 # Antarctic Vision Chapter — Concept State and Resume Instructions
 
