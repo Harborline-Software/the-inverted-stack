@@ -161,32 +161,17 @@ The scene does several things at once:
 - Renders the leaving as a sequence of physical actions (typed, left, disappeared, put down, did not look) — King move, the action carries the meaning
 - Does not show Rustam's reaction or any other classmate's reaction; the reader fills in the social aftermath
 
-### Act V — pending decision
+### Act V — LOCKED: Anna does not return
 
-The original symmetric bracket plan had a brief Act V beat (Rustam's "welcome back, fake captain" message after Anna returns). With the new Act I (leaving the group entirely), Act V has three plausible paths. **CO needs to choose:**
+CO directive: **"She does not return to the group. Her time is too valuable to waste."**
 
-**Option V-A: No Act V beat. The leaving is the only beat.**
-- The chapter does not return to the Telegram group, to Rustam, to the classmates.
-- Anna comes home, completes mission paperwork, sits with the staff history. The reader doesn't see whether Rustam reaches out, whether she rejoins the group, whether the friendship survives.
-- Pros: Maximum compression; trusts the reader; lets the leaving carry full weight.
-- Cons: Leaves the dynamic unresolved (which may be the point, or may feel incomplete depending on chapter register).
+The chapter does not return to the Telegram group, to Rustam, to the classmates. Anna comes home, completes mission paperwork, sits with the staff history. The reader does not see whether Rustam reaches out, whether the friendship survives in any form, whether the group misses her. That space is left open. The reader fills it.
 
-**Option V-B: Brief private message from Rustam (~35 words).** A private Telegram from Rustam, not the group, arrives after Anna returns. Not an apology — Rustam doesn't apologize. An acknowledgment that he saw her leave and is reaching across the absence.
-> *I saw you left. Welcome back, Captain. The boat needed you more than the group did. Davay.*
-- Pros: Restores the bracket symmetry. Lets the friendship persist in altered form (group → individual; ribbing dropped to recognition). Rustam acknowledges what the leaving meant without sentimentalizing.
-- Cons: Risks neat resolution. The dropped "fake" might feel engineered.
+The CO's framing — *her time is too valuable to waste* — is itself in Anna's character voice. The reasoning that severs the group at 04:17 on departure morning is the same reasoning that does not return to it after the boat docks. There is more important work. There is always more important work. The pattern she left is not worth re-entering, and the question of whether to re-enter is not a question Anna would spend an hour considering.
 
-**Option V-C: Anna initiates a private message to one classmate (not Rustam).** Anna reaches out to a different gymnasium classmate (one of the forty-seven, not the one who triggered the departure) to ask after a specific person — perhaps the classmate who had a sick child mentioned in the group, perhaps the classmate she was actually closest to before Rustam dominated the dynamic. The message reframes the leaving — Anna stepped away from the *pattern*, not from the *people*; her loyalty to specific friendships persists; she just no longer participates in the venue where Rustam's pattern operated.
-- Pros: Adds texture to Anna's loyalty. Shows that the leaving was about the venue, not the relationships. Allows the chapter to honor friendship without restoring the joke.
-- Cons: Adds a new minor character. Requires more words (~50–80). Risks complicating an already-loaded character beat.
+This is the King move: some severances do not get bracketed. A goodbye written at 04:17 the morning of departure has the weight it has. The chapter trusts the reader to know it.
 
-**PAO recommendation: V-A.** The leaving is heavy enough. Acts II–V have plenty of other material to carry. Coming back to Rustam or the classmates risks competing with the chapter's emotional close (the Senior Technical Specialist's death, the silent relay window, the staff history's resolution). The reader carrying the absence of resolution is exactly what King would want — the chapter trusts the reader to know that some severances do not get bracketed, that a goodbye written at 04:17 the morning of departure has the weight it has.
-
-If you pick V-B or V-C, I'll execute. If you pick V-A or stay silent, that's the lock.
-
-**Total chapter cost (Act I only): ~130 words.** One location, within Anna's existing interiority register. Single concrete scene rather than two interiority-bracketed beats.
-
-**If V-B or V-C is chosen, total chapter cost: ~165–210 words.**
+**Total chapter cost: ~130 words.** Single Act I scene. No Act V counterpart. Parallel plot fully LOCKED.
 
 **Author-boundary note:** Rustam Karimov is fictional. The Tashkent-classmate-into-Russian-military-service pattern is a real and common post-Soviet trajectory; this character draws on the pattern, not on a particular person. Karimov surname is widespread (defensible at "Smith" level of commonness; the Karimov-ruling-family resonance is real but a Russian Army officer career separates Rustam from the political association). Easy to swap if advisor flags it.
 
