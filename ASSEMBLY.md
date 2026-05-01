@@ -44,10 +44,9 @@ Last refreshed: 2026-05-01 post-cast-swap (PR #64) + Phase 7 reference-list spli
 | Appendix F | `chapters/appendices/appendix-f-regulatory-coverage.md` | icm/voice-passed (added 2026-04 + Phase 5 R-F update) | 2,223 | ~2,000 | ✓ |
 | Appendix G | `chapters/appendices/appendix-g-glossary.md` | icm/voice-passed (added 2026-04) | 3,349 | ~3,000 | ✓ |
 
-**Running total (excluding foreword placeholder):** ~154,337 words (was 144,664 on 2026-04-30; +9,673 from cast-swap King-style scening on Ch1+Ch3, Phase 7 reference split duplication tax across Ch15/Ch22/Ch23, the closing chapter landing at 4,396 words, and small literary-board polish increases on Ch5–10 / Ch13–14)
-**Original target:** 85,000 words (predates Volume-1 extensions + Part V + Appendices F+G)
-**Revised target proposal:** ~135,000 words (PAO recommendation, awaiting CO ratification — see `.pao-inbox/_decisions/2026-04-30-word-count-target-revision-proposal.md`)
-**Vs revised target:** 154,337 / 135,000 = 114% — **14% over revised target**, achievable via Phase 4 prune (post-voice-pass cuts) ~3.5k + post-cast-swap Ch1 audit cuts. Net delivery target ~145k post-prune.
+**Running total (excluding foreword placeholder):** ~154,337 words (was 144,664 on 2026-04-30; +9,673 from cast-swap King-style scening on Ch1+Ch3, Phase 7 reference split duplication tax across Ch15/Ch22/Ch23, the closing chapter landing at 4,396 words, and small literary-board polish increases on Ch5–10 / Ch13–14).
+
+**On length targets:** the chapter targets in `book-structure.md` and the % columns in this manifest are industry-standard recommendations and sanity checks for visibility — not hard drivers (CO directive 2026-05-01). Phase 4 prune is a quality-driven editorial pass (cut what doesn't earn its place); the post-prune total is downstream of editorial judgment, not an input to it. See `.pao-inbox/_decisions/2026-05-01-phase4-prune-scope.md` for the scope of where to look during the pass.
 
 ## Voice-Pass Queue (gating event for assembly)
 
@@ -77,7 +76,7 @@ Phase 5 cross-reference cleanup substantially complete (verified 2026-05-01: all
 ## Next Steps
 
 1. **`icm/voice-check`** (author, 9 extensions): Tier 1 first per priority queue. Highest leverage: #45 Collaborator Revocation (closes Ch15 split UPF).
-2. **Phase 4 prune** (PAO directs, Yeoman executes): post-voice-pass cuts to Ch22+Ch23 (~-3k); cuts on Ch11+Ch20 §Performance Contracts/Budgets (~-400); cuts on Ch16 §Per-Data-Class (~-300). Plus post-cast-swap Ch1 audit cuts (~-1k target — Ch1 at 170% is highest over-target outside Ch20).
+2. **Phase 4 prune** (PAO directs, Yeoman executes): quality-driven editorial pass — cut what doesn't earn its place across voice-pass-unlocked chapters (Phase 4a, single pass) and incrementally per-extension as each voice-pass clears (Phase 4b). Scope at `.pao-inbox/_decisions/2026-05-01-phase4-prune-scope.md`. No target percentage; length lands where editorial judgment lands it.
 3. **Foreword**: external contributor needed.
 4. **Closing Chapter audit** (Yeoman directive queued): five-pass King-style audit of The Crossing on main; Spanish-letter beat verification; Diego-thread continuity; granddaughter Sofía consistency.
 5. **Audiobook regen** (Yeoman directive queued): 8 chapter alignment artifacts stale after cast-swap + Phase 7; pronunciation-flag pass on cast-swap names.
