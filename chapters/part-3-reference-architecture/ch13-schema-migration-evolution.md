@@ -11,7 +11,7 @@ Schema migration in a local-node architecture has no central authority. No coord
 
 The natural objection is that modern microservice deployment solves schema migration through coordinated rolling upgrades with central enforcement — schedule the upgrade window, drain the old version, deploy the new version, fail closed. The local-first constraint forecloses that path. There is no operator who controls every node. Field tablets in rural deployments may not connect for weeks; air-gapped workstations may not connect for months. A node that cannot complete the upgrade window must continue to operate correctly against peers that have moved past it. This is not a deployment-process choice. It is a structural property of the architecture.
 
-Three mechanisms compose to solve this: the expand-contract pattern for safe additive migration, bidirectional schema lenses for structural transformation, and schema epoch coordination for the moments when a breaking change cannot be avoided. Each handles a different class of schema change. The architecture requires all three because no single mechanism covers the full range.
+Three mechanisms compose to solve this: the expand-contract pattern for safe additive migration, bidirectional schema lenses for structural transformation, and schema epoch coordination for the moments when a breaking change cannot be avoided. Each handles a different class of schema change; no single mechanism covers the full range.
 
 A note on terminology before the mechanisms arrive. The chapter uses two distinct evolution primitives that do different jobs. *Upcasters* are forward-only transformations applied on read of the local event log: an old operation in storage is read through an upcaster chain that lifts it to the current schema before the application sees it. Upcasters never run on the wire. *Lenses* are bidirectional transformations applied between peers running different schema versions: a v2 operation arriving at a v3 node is run forward through the lens to v3 semantics; a v3 operation written for transmission to a v2 peer is run backward through the same lens to v2 semantics. Lenses must satisfy a round-trip invariant up to information loss; upcasters need not. The two mechanisms compose: upcasters maintain the local read path, lenses maintain the wire path, and the chapter specifies how each handles its own range of schema changes.
 
@@ -35,7 +35,7 @@ The expand-contract pattern — sometimes called parallel change — divides eve
 
 In the expand phase, the new version adds fields while keeping the old ones. The application dual-writes: when creating or updating a record, it writes to both the old field and the new field simultaneously. Nodes running the old schema see only the old field and ignore the new one as an unknown key — CRDT maps are designed to tolerate unknown keys. Nodes running the new schema prefer the new field and fall back to the old field when the new one is absent, which happens when the record was last written by an old-schema node.
 
-No coordination is required to begin the expand phase. Any node can upgrade. The expand-phase behavior is immediately correct for mixed-version operation.
+No coordination is required to begin the expand phase: any node can upgrade and the expand-phase behavior is immediately correct for mixed-version operation.
 
 The expand phase has one hard constraint: it must remain active for at least one full major version release cycle. The compatibility window must be long enough that all nodes in any realistic deployment have had the opportunity to upgrade. Teams with nodes that are infrequently connected — a laptop that travels, an air-gapped workstation, a device that a team member left on a shelf — dictate how long the compatibility window must stay open. The kernel tracks the oldest schema version seen from each peer in the current sync session. The epoch coordinator uses this tracking data to determine when the contract phase is safe to initiate.
 
@@ -45,7 +45,7 @@ The contract phase removes the old field. It is a breaking change. A node runnin
 
 This is why the contract phase requires a schema epoch bump. The epoch bump is a version gate: the sync daemon on a v3 node rejects synchronization with any peer still running a schema below the minimum supported epoch. The peer receives a clear error — it cannot sync until it upgrades — rather than silently receiving partial data.
 
-The contract phase does not begin automatically when the compatibility window expires. It requires explicit initiation by the epoch coordinator, covered below. Entering the contract phase is a deliberate operational act, not a timer.
+The contract phase does not begin automatically when the compatibility window expires. It requires explicit initiation by the epoch coordinator, covered below.
 
 ### Dual-Write Safety
 
