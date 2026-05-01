@@ -9,7 +9,7 @@ arc: cross-part (Part I victim → Closing Chapter authority, with King-required
 
 # Character Sheet — Maria Santos, Mission Medical Officer
 
-> **CORRECTION 2026-04-30:** PAO erroneously described Maria Santos as "established in Ch1" in earlier session. She is NOT currently in the manuscript. Ch1's hospital ransomware scenario is currently abstract (references HBO's *The Pitt* TV show, no named character). Maria Santos will be introduced in a follow-up King-style revision PR that adds her as the named character in that scene — analogous to how Aanya Iyer was introduced in `chore/pao-king-style-ch01-aanya` for the construction PM scenario. The character sheet below is the design target; the chapter introduction is pending.
+> **CORRECTION 2026-04-30:** PAO erroneously described Maria Santos as "established in Ch1" in earlier session. She is NOT currently in the manuscript. Ch1's hospital ransomware scenario is currently abstract (references HBO's *The Pitt* TV show, no named character). Maria Santos will be introduced in a follow-up King-style revision PR that adds her as the named character in that scene — analogous to how Priya Iyer was introduced in `chore/pao-king-style-ch01-aanya` for the construction PM scenario. The character sheet below is the design target; the chapter introduction is pending.
 
 ## Identity
 

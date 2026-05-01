@@ -11,9 +11,9 @@ Full sheets exist for Dr. Anna Yusupova, Maria Santos, and the Senior Technical 
 
 ---
 
-## Aanya Iyer — Lead Instrumentation Engineer
+## Priya Iyer — Lead Instrumentation Engineer
 
-**Provenance:** Returning character. Introduced in Ch1 (King-style revision; see `chore/pao-king-style-ch01-aanya`) as the construction PM who lost the Pune hospital bid at 4:47 PM when her SaaS platform and its single-sign-on dependency went down simultaneously with thirteen minutes left to submit. **Name LOCKED:** Aanya Iyer.
+**Provenance:** Returning character. Introduced in Ch1 (King-style revision; see `chore/pao-king-style-ch01-aanya`) as the construction PM who lost the Pune hospital bid at 4:47 PM when her SaaS platform and its single-sign-on dependency went down simultaneously with thirteen minutes left to submit. **Name LOCKED:** Priya Iyer.
 
 **Identity:** Female. Indian (Tamil Brahmin family name; Pune-based at time of Ch1 incident). Age at Ch1: ~32–36; age at Sunfish-1 mission: ~38–44.
 
