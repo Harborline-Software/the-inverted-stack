@@ -1,7 +1,7 @@
 # anatomy.md
 
-> Auto-maintained by OpenWolf. Last scanned: 2026-04-30T20:06:39.490Z
-> Files: 267 tracked | Anatomy hits: 0 | Misses: 0
+> Auto-maintained by OpenWolf. Last scanned: 2026-05-01T05:44:45.381Z
+> Files: 268 tracked | Anatomy hits: 0 | Misses: 0
 
 ## ../../../../tmp/
 
@@ -101,6 +101,10 @@
 ## .claude/skills/local-first-properties/references/
 
 - `verification-recipes.md` — Verification Recipes for Local-First Property Conformance (~2088 tok)
+
+## .git/gitbutler/
+
+- `virtual_branches.toml` (~60 tok)
 
 ## .github/ISSUE_TEMPLATE/
 
