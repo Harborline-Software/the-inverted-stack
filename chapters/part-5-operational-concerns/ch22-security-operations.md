@@ -108,9 +108,9 @@ The consumer combination composes sub-patterns 48a (multi-sig social) and 48c (p
 
 #### Multi-sig social recovery
 
-Multi-sig social recovery — sub-pattern 48a — distributes the recovery authority across a set of trusted individuals the user designates before any loss occurs. The construction derives from Shamir secret sharing [6]: the user's root recovery key is split into *n* shares, each share held by a separate trustee, and any *t* of the *n* shares suffices to reconstruct the key. Each trustee holds a share, not the full key; no single trustee can unilaterally reconstruct the recovery key or access the user's data.
+Multi-sig social recovery — sub-pattern 48a — distributes the recovery authority across a set of trusted individuals the user designates before any loss occurs. The construction derives from Shamir secret sharing [1]: the user's root recovery key is split into *n* shares, each share held by a separate trustee, and any *t* of the *n* shares suffices to reconstruct the key. Each trustee holds a share, not the full key; no single trustee can unilaterally reconstruct the recovery key or access the user's data.
 
-A threshold of 3-of-5 tolerates the simultaneous unavailability of two trustees; a threshold of 2-of-3 is appropriate for smaller trust networks. The Argent smart wallet specification [5] and Vitalik Buterin's 2021 case for social recovery wallets [4] establish the pattern's practical architecture.
+A threshold of 3-of-5 tolerates the simultaneous unavailability of two trustees; a threshold of 2-of-3 is appropriate for smaller trust networks. The Argent smart wallet specification [2] and Vitalik Buterin's 2021 case for social recovery wallets [3] establish the pattern's practical architecture.
 
 The dealer protocol matters as much as the threshold. The user's device runs the Shamir dealer locally over GF(2^256), seeded by the OS CSRNG, and produces *n* shares from the recovery key. Each share is wrapped under the trustee's enrolled public key before it leaves the device — shares never traverse the network or the relay in plaintext. After the dealer emits all shares, the device zeros the dealer's working state and the in-memory copy of the recovery key. The protocol is local-first: no third party — including the relay — ever sees the unwrapped shares.
 
@@ -149,7 +149,7 @@ Paper keys defeat cold-boot and hibernation attacks during an offline key-recove
 
 Sub-pattern 48d derives a recovery key from a biometric template held in the device's hardware secure enclave — Apple Secure Enclave, Pixel Titan M, or Windows Pluton, as documented at the time of writing. The biometric template never leaves the enclave; the enclave derives a keying material value only on a positive biometric match and passes that value to `Sunfish.Kernel.Security` for the recovery unwrap operation. The biometric itself is never extracted, transmitted, or stored outside the hardware boundary.
 
-<!-- technical-review: template non-exportability verified. Apple Secure Enclave: documented in Apple Platform Security [7] — the Secure Enclave processes biometric data and outputs match results and derived keys; raw templates are never exposed to the application processor. Pixel Titan M: consistent with Google's Titan M security architecture documentation — biometric matching executes in the secure environment; derived keys, not templates, cross the trust boundary. Windows Pluton: Windows Hello biometric templates reside in the Windows Hello container backed by the TPM or Pluton processor; template extraction is not available through any documented software API. All three platforms conform to the architectural claim. -->
+<!-- technical-review: template non-exportability verified. Apple Secure Enclave: documented in Apple Platform Security [4] — the Secure Enclave processes biometric data and outputs match results and derived keys; raw templates are never exposed to the application processor. Pixel Titan M: consistent with Google's Titan M security architecture documentation — biometric matching executes in the secure environment; derived keys, not templates, cross the trust boundary. Windows Pluton: Windows Hello biometric templates reside in the Windows Hello container backed by the TPM or Pluton processor; template extraction is not available through any documented software API. All three platforms conform to the architectural claim. -->
 
 The threat model includes coerced biometric presentation — the user asleep or physically compelled — and, for some sensor implementations, template extraction through hardware attacks. Biometric-derived secondary keys are not the default recovery mechanism in regulated-tier deployments. They are an appropriate secondary factor when combined with another mechanism — the combination of biometric plus paper-key plus grace period means no single coerced action completes recovery alone.
 
@@ -252,15 +252,15 @@ The honest boundary: per-message ephemeral derivation protects the transport. It
 
 ### Sub-pattern 46b — Sender and receiver ratchet (Double Ratchet)
 
-Per-message ephemeral keys prevent retrospective decryption. The Double Ratchet pattern (Marlinspike and Perrin, Signal Foundation, 2016) [14] adds healing — the property that the session recovers confidentiality after a compromise without operator intervention.
+Per-message ephemeral keys prevent retrospective decryption. The Double Ratchet pattern (Marlinspike and Perrin, Signal Foundation, 2016) [5] adds healing — the property that the session recovers confidentiality after a compromise without operator intervention.
 
 The Double Ratchet combines two ratchets. The symmetric ratchet advances on every message: each outbound message derives its key from the ratchet state and advances that state forward. The Diffie-Hellman ratchet advances whenever a new DH public key from the other party arrives: the prior ratchet state combines with the new public key to produce a fresh shared secret, resetting the symmetric ratchet from a new entropy source the attacker who held the prior state cannot predict.
 
 Forward secrecy comes from the symmetric ratchet's one-directionality. An attacker who recovers the ratchet state at time T decrypts messages from T forward but cannot reverse the ratchet to decrypt messages from before T. Post-compromise security comes from the Diffie-Hellman ratchet. Once both parties exchange a new ephemeral keypair — which happens naturally as they communicate — the session advances to a value the attacker who captured the old state cannot compute. The session heals automatically.
 
-Session establishment uses an asynchronous key agreement protocol. The Signal X3DH (Extended Triple Diffie-Hellman) construction [15] establishes the initial shared secret from prekeys published in advance, allowing one party to initiate a session while the other party is offline. The Double Ratchet then runs over the X3DH output. The Inverted Stack adopts X3DH or an equivalent asynchronous key agreement so that a node coming online can begin a session with a currently offline peer.
+Session establishment uses an asynchronous key agreement protocol. The Signal X3DH (Extended Triple Diffie-Hellman) construction [6] establishes the initial shared secret from prekeys published in advance, allowing one party to initiate a session while the other party is offline. The Double Ratchet then runs over the X3DH output. The Inverted Stack adopts X3DH or an equivalent asynchronous key agreement so that a node coming online can begin a session with a currently offline peer.
 
-The Noise framework [16] provides a composable substrate for handshake construction. The KK pattern (both parties have known static keypairs) is the closer fit to the Inverted Stack's enrolled-device model, where each node holds a registered device keypair. The architecture does not mandate one specific construction; it mandates that whatever construction is used satisfies the two properties named above. MLS (Messaging Layer Security, RFC 9420) [17] extends ratcheting to group messaging through a TreeKEM construction; deployments with large role groups may adopt MLS in place of pairwise Double Ratchet. The WhatsApp end-to-end encryption specification [18] documents the Double Ratchet at billion-user scale.
+The Noise framework [7] provides a composable substrate for handshake construction. The KK pattern (both parties have known static keypairs) is the closer fit to the Inverted Stack's enrolled-device model, where each node holds a registered device keypair. The architecture does not mandate one specific construction; it mandates that whatever construction is used satisfies the two properties named above. MLS (Messaging Layer Security, RFC 9420) [8] extends ratcheting to group messaging through a TreeKEM construction; deployments with large role groups may adopt MLS in place of pairwise Double Ratchet. The WhatsApp end-to-end encryption specification [9] documents the Double Ratchet at billion-user scale.
 
 `Sunfish.Kernel.Sync` extends its session layer to implement the Double Ratchet, an MLS group session, or a Noise-pattern equivalent. The architectural commitment is the two properties — forward secrecy and post-compromise security — not the specific construction. Cross-reference to Ch14 §Sync Daemon Protocol for the handshake that carries the ratchet state; Ch15 §Relay Trust Model for the relay's role as ciphertext forwarder that observes ratchet messages without decrypting them.
 
@@ -286,7 +286,7 @@ Sealed sender is opt-in. `Sunfish.Kernel.Sync` exposes a sealed-sender policy fl
 
 ### Sub-pattern 46e — Protocol-level forward secrecy commitment
 
-The preceding sub-patterns are implementation choices. Sub-pattern 46e is a declaration: the protocol specification names forward secrecy and post-compromise security as required properties, not as implementation details. Off-The-Record Messaging (Borisov, Goldberg, and Brewer, 2004) [19] established the precedent for forward secrecy as a named protocol property rather than an implementation note. Post-compromise security as a separately named property post-dates OTR — the term and its formal treatment derive from Cohn-Gordon, Cremers, and Garratt's 2016 work, which Signal, MLS, and Noise have since absorbed. The discipline of naming both properties at the protocol-spec layer is the inheritance line this sub-pattern joins. <!-- CLAIM: 2026-04-30 — Cohn-Gordon, Cremers, Garratt 2016 PCS paper cited inline by name; numbered IEEE reference to be added during Phase 7 reference-list work when Ch22's references are split from Ch15's combined list. -->
+The preceding sub-patterns are implementation choices. Sub-pattern 46e is a declaration: the protocol specification names forward secrecy and post-compromise security as required properties, not as implementation details. Off-The-Record Messaging (Borisov, Goldberg, and Brewer, 2004) [10] established the precedent for forward secrecy as a named protocol property rather than an implementation note. Post-compromise security as a separately named property post-dates OTR — the term and its formal treatment derive from Cohn-Gordon, Cremers, and Garratt's 2016 work, which Signal, MLS, and Noise have since absorbed. The discipline of naming both properties at the protocol-spec layer is the inheritance line this sub-pattern joins. <!-- CLAIM: 2026-04-30 — Cohn-Gordon, Cremers, Garratt 2016 PCS paper cited inline by name; numbered IEEE reference to be added during Phase 7 reference-list work when Ch22's references are split from Ch15's combined list. -->
 
 
 Naming the commitment makes it testable. A conformance test for forward secrecy: given a recorded session state at time T, no key material derivable from that state decrypts a message sent at time T-1. A conformance test for post-compromise security: given a captured ratchet state at time T, after one DH ratchet advance, no key material derivable from the captured state decrypts a message sent at time T+2. These tests live in `Sunfish.Kernel.Security`'s test suite alongside the existing key-zeroing and memory-locking validations. They are cryptographic property assertions, not integration tests; any conforming implementation passes them. Cross-reference to §Key-Loss Recovery for the recovery interaction: recovery reconstitutes KEK custody but does not reconstitute ratchet state, so forward secrecy for the pre-recovery period is not retroactively recovered.
@@ -305,4 +305,38 @@ The kill trigger for this primitive is a FAILED condition that recurs across thr
 
 ## References
 
-<!-- Phase 3 placeholder: Ch22's share of the Ch15 reference list (~470 words). Citations split per-section between Ch15 (architecture share) and Ch22 (operations share); Ch22 keeps cites referenced from O sections. Per UPF Phase 1 triage: Shamir [6] (key-loss recovery), Buterin [4] (social recovery), Argent [5] (multi-sig wallet patterns), Sigstore [2] (supply chain — though cross-referenced from Ch15), the SGX/TEE family [22]–[24] (endpoint compromise), Pegasus + Hermit [26]–[27] (endpoint compromise), TSP RFC 3161 [28] (chain-of-custody timestamp), and the DP family [32]–[36] if Privacy-Aggregation is reclassified to O in a later round (currently A per Phase 1 triage footnote ¹). Final assignment confirmed during Phase 5 cross-reference work. -->
+[1] A. Shamir, "How to share a secret," *Communications of the ACM*, vol. 22, no. 11, pp. 612–613, Nov. 1979.
+
+[2] Argent, "Argent Smart Wallet Specification," *github.com/argentlabs*, 2020. [Online]. Available: https://github.com/argentlabs/argent-contracts/blob/develop/specifications/specifications.pdf
+
+[3] V. Buterin, "Why we need wide adoption of social recovery wallets," *vitalik.ca*, Jan. 2021. [Online]. Available: https://vitalik.ca/general/2021/01/11/recovery.html
+
+[4] Apple Inc., "Apple Platform Security," May 2024. [Online]. Available: https://support.apple.com/guide/security/welcome/web
+
+[5] M. Marlinspike and T. Perrin, "The Double Ratchet Algorithm," Signal Foundation, Nov. 2016. [Online]. Available: https://signal.org/docs/specifications/doubleratchet/
+
+[6] M. Marlinspike and T. Perrin, "The X3DH Key Agreement Protocol," Signal Foundation, Nov. 2016. [Online]. Available: https://signal.org/docs/specifications/x3dh/
+
+[7] T. Perrin, "The Noise Protocol Framework," rev. 34, Jul. 2018. [Online]. Available: https://noiseprotocol.org/noise.html
+
+[8] R. Barnes, B. Beurdouche, R. Robert, J. Millican, E. Omara, and K. Cohn-Gordon, "The Messaging Layer Security (MLS) Protocol," Internet Engineering Task Force, RFC 9420, Jul. 2023. [Online]. Available: https://www.rfc-editor.org/rfc/rfc9420
+
+[9] WhatsApp Inc., "WhatsApp Encryption Overview — Technical White Paper," Nov. 2021. [Online]. Available: https://www.whatsapp.com/security/WhatsApp-Security-Whitepaper.pdf
+
+[10] N. Borisov, I. Goldberg, and E. Brewer, "Off-the-Record Communication, or, Why Not To Use PGP," in *Proc. ACM Workshop on Privacy in the Electronic Society (WPES)*, Washington, DC, USA, Oct. 2004, pp. 77–84.
+
+[11] Sigstore Project, "Rekor: Transparency Log for Software Supply Chains," Linux Foundation, 2023. [Online]. Available: https://docs.sigstore.dev/logging/overview/
+
+[12] J. Van Bulck *et al.*, "Foreshadow: Extracting the Keys to the Intel SGX Kingdom with Transient Out-of-Order Execution," in *Proc. 27th USENIX Security Symposium*, 2018, pp. 991–1008.
+
+[13] S. van Schaik *et al.*, "SGAxe: How SGX Fails in Practice," 2020. [Online]. Available: https://sgaxe.com/
+
+[14] Amnesty International Security Lab, "Forensic Methodology Report: How to catch NSO Group's Pegasus," Jul. 2021. [Online]. Available: https://www.amnesty.org/en/latest/research/2021/07/forensic-methodology-report-how-to-catch-nso-groups-pegasus/ (cross-confirmed by Citizen Lab peer review).
+
+[15] Lookout Threat Intelligence, "Lookout Discovers Hermit Spyware," Apr. 2022 (with subsequent Citizen Lab confirmation of Kazakhstan use Jun. 2022). [Online]. Available: https://www.lookout.com/threat-intelligence/article/hermit-spyware-discovery — supplement with Google Threat Analysis Group analysis of Predator/Cytrox at https://blog.google/threat-analysis-group/.
+
+[16] Internet Engineering Task Force (IETF), "Internet X.509 Public Key Infrastructure Time-Stamp Protocol (TSP)," RFC 3161, Aug. 2001. [Online]. Available: https://www.rfc-editor.org/rfc/rfc3161
+
+[17] C. Dwork and A. Roth, "The Algorithmic Foundations of Differential Privacy," *Foundations and Trends in Theoretical Computer Science*, vol. 9, nos. 3–4, pp. 211–487, 2014. [Online]. Available: https://www.cis.upenn.edu/~aaroth/Papers/privacybook.pdf
+
+[18] A. Machanavajjhala, D. Kifer, J. Gehrke, and M. Venkitasubramaniam, "l-Diversity: Privacy Beyond k-Anonymity," *ACM Transactions on Knowledge Discovery from Data*, vol. 1, no. 1, Mar. 2007. [Online]. Available: https://dl.acm.org/doi/10.1145/1217299.1217302

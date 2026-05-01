@@ -180,11 +180,11 @@ The section specifies three sub-patterns: differential-privacy noise injection o
 
 ### Sub-pattern 12a — Differential-privacy noise injection
 
-The relay holds plaintext metadata even in an encrypted-payload architecture: per-window operation counts, sync-latency bucket counts, error-event counts per code, connection-duration histograms. These are additive aggregates with sensitivity 1 — one node's participation can change a count by at most 1. The Laplace mechanism (Dwork and Roth [32]) adds noise with scale λ = 1/ε to satisfy ε-differential privacy. The Gaussian mechanism is the analogous construction for (ε, δ)-DP where the relay batches correlated counts.
+The relay holds plaintext metadata even in an encrypted-payload architecture: per-window operation counts, sync-latency bucket counts, error-event counts per code, connection-duration histograms. These are additive aggregates with sensitivity 1 — one node's participation can change a count by at most 1. The Laplace mechanism (Dwork and Roth [4]) adds noise with scale λ = 1/ε to satisfy ε-differential privacy. The Gaussian mechanism is the analogous construction for (ε, δ)-DP where the relay batches correlated counts.
 
 Two ε settings cover most deployments. Standard operational telemetry uses ε = 1.0 per query (λ = 1) — a defensible baseline that preserves utility for fleet-health dashboards while keeping any single node's contribution recoverable only with low confidence. Regulated deployments — healthcare nodes, financial-services nodes, or any deployment where connection frequency itself is regulated — use ε = 0.1 per query (λ = 10), adding ten times the noise for ten times stronger privacy at the cost of degraded utility on small cohorts.
 
-**Central DP at the relay tier — an architectural decision.** This architecture applies *central* differential privacy at the relay, not *local* differential privacy at each node. Each node reports raw sync events for delivery; the relay applies the noise once, when it publishes an aggregate to a dashboard, monitoring system, or export feed. RAPPOR (Erlingsson, Pihur, and Korolova [33]) and Apple's at-scale telemetry deployment [34] are the canonical local-DP precedents — each contributing node randomizes its own report before transmission, eliminating the need to trust the aggregator. The Inverted Stack chooses central DP. §Relay Trust Model already prescribes a self-hosted relay for metadata-sensitive deployments, and a self-hosted relay operated by the same organization whose nodes generate the statistics satisfies the "trusted curator" assumption central DP requires — by organizational identity rather than cryptographic construction. Central DP produces lower noise for equivalent guarantees because the noise is added once to the aggregate rather than once per contributor — a substantial utility advantage on the small-cohort statistics typical of enterprise sync deployments.
+**Central DP at the relay tier — an architectural decision.** This architecture applies *central* differential privacy at the relay, not *local* differential privacy at each node. Each node reports raw sync events for delivery; the relay applies the noise once, when it publishes an aggregate to a dashboard, monitoring system, or export feed. RAPPOR (Erlingsson, Pihur, and Korolova [5]) and Apple's at-scale telemetry deployment [6] are the canonical local-DP precedents — each contributing node randomizes its own report before transmission, eliminating the need to trust the aggregator. The Inverted Stack chooses central DP. §Relay Trust Model already prescribes a self-hosted relay for metadata-sensitive deployments, and a self-hosted relay operated by the same organization whose nodes generate the statistics satisfies the "trusted curator" assumption central DP requires — by organizational identity rather than cryptographic construction. Central DP produces lower noise for equivalent guarantees because the noise is added once to the aggregate rather than once per contributor — a substantial utility advantage on the small-cohort statistics typical of enterprise sync deployments.
 
 The trade-off is honest. Central DP requires the relay to apply the noise faithfully. For self-hosted deployments, that fidelity is under organizational control. Managed-relay deployments without operator audit rights either accept that operational telemetry is unavailable, contract for explicit audit rights, or layer local-DP randomization at the node tier as defense in depth. The relay exposes the choice — central, local, or hybrid — as a deployment-time configuration and refuses to default to a setting the deployment posture does not earn.
 
@@ -194,9 +194,9 @@ The trade-off is honest. Central DP requires the relay to apply the noise faithf
 
 Some relay-side statistics partition by role: error rate for Finance-role nodes, sync latency for Compliance-role nodes, connection-success rate for Field-Operations nodes. If the Finance role has three members and one exhibits a persistent error pattern, the partition leaks that member's identity even after DP noise — Laplace noise with sensitivity 1 cannot mask a signal structurally unique to a partition of three.
 
-The k-anonymity floor (Sweeney [35]) closes the gap. The relay suppresses any per-partition aggregate computed over fewer than k contributing nodes. Three suppression options compose with the policy: withhold the result entirely, merge the partition into a coarser parent (Finance-EMEA into Finance), or return a `below-cohort-minimum` indicator to the consuming dashboard. Withhold is the default; merge requires the operator to declare the parent partition explicitly.
+The k-anonymity floor (Sweeney [7]) closes the gap. The relay suppresses any per-partition aggregate computed over fewer than k contributing nodes. Three suppression options compose with the policy: withhold the result entirely, merge the partition into a coarser parent (Finance-EMEA into Finance), or return a `below-cohort-minimum` indicator to the consuming dashboard. Withhold is the default; merge requires the operator to declare the parent partition explicitly.
 
-k = 10 is a commonly applied minimum in operational-telemetry deployments and the practical floor recommended for this architecture; Sweeney's k-anonymity model [35] does not prescribe a specific value, and applied-privacy practice spans a k = 5 to k = 25 range depending on attribute sensitivity. Regulated deployments — healthcare, financial services, deployments invoking GDPR Article 25 data minimization — adopt k = 50 as a defensible high-water mark consistent with healthcare-privacy norms. l-diversity (Machanavajjhala et al. [36]) extends the model when a per-role partition has k members but a single sensitive-attribute value dominates; deployments that require l-diversity declare the parameter alongside k in the relay configuration.
+k = 10 is a commonly applied minimum in operational-telemetry deployments and the practical floor recommended for this architecture; Sweeney's k-anonymity model [7] does not prescribe a specific value, and applied-privacy practice spans a k = 5 to k = 25 range depending on attribute sensitivity. Regulated deployments — healthcare, financial services, deployments invoking GDPR Article 25 data minimization — adopt k = 50 as a defensible high-water mark consistent with healthcare-privacy norms. l-diversity (Machanavajjhala et al. [8]) extends the model when a per-role partition has k members but a single sensitive-attribute value dominates; deployments that require l-diversity declare the parameter alongside k in the relay configuration.
 
 **Carve-out for recovery-event partition statistics.** Recovery events are unusually sensitive relay-side statistics. A per-user recovery event — the metric defined by §Key-Loss Recovery sub-pattern 48f — may signal a compromised device before the user has detected the compromise. The k-anonymity floor applies to recovery-event partitions with a named exception: even when the cohort exceeds k, the relay suppresses the recovery-event partition statistic unless the operator holds explicit audit rights declared in the deployment manifest. This is an operator-policy decision, not a general suppression rule. The carve-out exists because the cost of exposing a single recovery event to an operator who lacks the authority to act on it exceeds the operational value of including recovery counts in routine fleet-health summaries.
 
@@ -204,11 +204,11 @@ The k-floor evaluator is a relay-internal policy component within `Sunfish.Kerne
 
 ### Sub-pattern 12c — Rolling-window privacy budget tracker
 
-Sync telemetry is time-series by construction: the operator runs the same latency-histogram query every hour, the same error-count query every fifteen minutes. Sequential composition is additive — n queries at ε per query consume nε of cumulative budget (Dwork and Roth [32], §3.5). An operator running hourly latency histograms at ε = 0.1 accumulates ε = 72 over thirty days. At that cumulative budget the formal DP guarantee has degraded to a value no privacy practitioner would defend in print.
+Sync telemetry is time-series by construction: the operator runs the same latency-histogram query every hour, the same error-count query every fifteen minutes. Sequential composition is additive — n queries at ε per query consume nε of cumulative budget (Dwork and Roth [4], §3.5). An operator running hourly latency histograms at ε = 0.1 accumulates ε = 72 over thirty days. At that cumulative budget the formal DP guarantee has degraded to a value no privacy practitioner would defend in print.
 
 The rolling-window budget tracker makes the degradation explicit and enforceable. The relay maintains a per-query-type, per-window allocation — default Σε = 10.0 over 30 days for standard operational telemetry. Each query consumes its ε from the active window. At 80% consumption the relay surfaces a `BudgetWarningRaised` event into the operator audit log. At 100% the relay queues subsequent queries of that type until the window advances and freed budget becomes available.
 
-**Honest scoping.** The rolling-window budget is a practical engineering heuristic, not a formal solution to temporal differential privacy. Time-series DP composition under temporal correlation is an open research problem; the architecture does not claim to solve it. The tracker's value is operational: it forces the operator to confront the cumulative budget cost at deployment time rather than discover it after the formal guarantee has silently collapsed. Deployments requiring tighter bounds adopt advanced composition accounting (Dwork and Roth [32], §3.5) — the relay exposes simple-versus-advanced composition as a configuration knob, with simple as the conservative default.
+**Honest scoping.** The rolling-window budget is a practical engineering heuristic, not a formal solution to temporal differential privacy. Time-series DP composition under temporal correlation is an open research problem; the architecture does not claim to solve it. The tracker's value is operational: it forces the operator to confront the cumulative budget cost at deployment time rather than discover it after the formal guarantee has silently collapsed. Deployments requiring tighter bounds adopt advanced composition accounting (Dwork and Roth [4], §3.5) — the relay exposes simple-versus-advanced composition as a configuration knob, with simple as the conservative default.
 
 **Tension with §Endpoint Compromise.** An endpoint-compromise incident produces a forensic burst — rapid reconnection attempts, anomalous operation counts, atypical latency profiles on the affected node. DP noise on these counts may mask the signal the operator needs to detect and scope the incident. The architecture's answer is a named incident-response mode that suspends DP aggregation for the affected node's metrics, recording raw events into a separate operator-controlled audit log for the incident's duration and resuming DP on closure. The suspension itself emits a signed event into `Sunfish.Kernel.Audit`, preserving the audit trail across the suspension period. The suspension event is encrypted to the operator role only — visible to the operator and to auditors holding the operator-role key, not to the broader node fleet — so the existence of the suspension does not itself leak the fact of an unconfirmed incident before the operator has scoped it.
 
@@ -256,78 +256,12 @@ These properties hold under the threat model stated at the opening of this chapt
 
 [3] European Parliament, "Regulation (EU) 2016/679 (General Data Protection Regulation)," Official Journal of the European Union, Apr. 2016, Art. 17.
 
-[4] V. Buterin, "Why we need wide adoption of social recovery wallets," *vitalik.ca*, Jan. 2021. [Online]. Available: https://vitalik.ca/general/2021/01/11/recovery.html
+[4] C. Dwork and A. Roth, "The Algorithmic Foundations of Differential Privacy," *Foundations and Trends in Theoretical Computer Science*, vol. 9, nos. 3–4, pp. 211–487, 2014. [Online]. Available: https://www.cis.upenn.edu/~aaroth/Papers/privacybook.pdf
 
-[5] Argent, "Argent Smart Wallet Specification," *github.com/argentlabs*, 2020. [Online]. Available: https://github.com/argentlabs/argent-contracts/blob/develop/specifications/specifications.pdf
+[5] Ú. Erlingsson, V. Pihur, and A. Korolova, "RAPPOR: Randomized Aggregatable Privacy-Preserving Ordinal Response," in *Proc. ACM Conference on Computer and Communications Security (CCS)*, Scottsdale, AZ, Nov. 2014. [Online]. Available: https://dl.acm.org/doi/10.1145/2660267.2660348
 
-[6] A. Shamir, "How to share a secret," *Communications of the ACM*, vol. 22, no. 11, pp. 612–613, Nov. 1979.
+[6] Apple Inc. Differential Privacy Team, "Learning with Privacy at Scale," *Apple Machine Learning Journal*, vol. 1, no. 8, Dec. 2017. [Online]. Available: https://docs-assets.developer.apple.com/ml-research/papers/learning-with-privacy-at-scale.pdf
 
-[7] Apple Inc., "Apple Platform Security," May 2024. [Online]. Available: https://support.apple.com/guide/security/welcome/web
+[7] L. Sweeney, "k-Anonymity: A Model for Protecting Privacy," *International Journal on Uncertainty, Fuzziness and Knowledge-Based Systems*, vol. 10, no. 5, pp. 557–570, 2002. [Online]. Available: https://dl.acm.org/doi/10.1142/S0218488502001648
 
-[8] Internet Engineering Task Force (IETF), "OAuth 2.0 Token Revocation," RFC 7009, Aug. 2013. [Online]. Available: https://www.rfc-editor.org/rfc/rfc7009
-
-[9] Internet Engineering Task Force (IETF), "X.509 Internet Public Key Infrastructure Online Certificate Status Protocol — OCSP," RFC 6960, Jun. 2013. [Online]. Available: https://www.rfc-editor.org/rfc/rfc6960
-
-[10] Internet Engineering Task Force (IETF), "Internet X.509 Public Key Infrastructure Certificate and Certificate Revocation List (CRL) Profile," RFC 5280, May 2008. [Online]. Available: https://www.rfc-editor.org/rfc/rfc5280
-
-[11] National Institute of Standards and Technology (NIST), "An Introduction to Computer Security: The NIST Handbook," SP 800-12 Rev. 1, Oct. 1995 (rev. 2017). [Online]. Available: https://csrc.nist.gov/publications/detail/sp/800-12/rev-1/final
-
-[12] K. Jahns, "Yjs Internals — Document Structure and Item Identifiers," *yjs/yjs* repository, 2024. [Online]. Available: https://github.com/yjs/yjs/blob/main/INTERNALS.md
-
-[13] Loro Project, "Loro Common — Operation ID Type Definitions," *loro-dev/loro* repository, 2024. [Online]. Available: https://github.com/loro-dev/loro/blob/main/crates/loro-common/src/lib.rs
-
-[14] M. Marlinspike and T. Perrin, "The Double Ratchet Algorithm," Signal Foundation, Nov. 2016. [Online]. Available: https://signal.org/docs/specifications/doubleratchet/
-
-[15] M. Marlinspike and T. Perrin, "The X3DH Key Agreement Protocol," Signal Foundation, Nov. 2016. [Online]. Available: https://signal.org/docs/specifications/x3dh/
-
-[16] T. Perrin, "The Noise Protocol Framework," rev. 34, Jul. 2018. [Online]. Available: https://noiseprotocol.org/noise.html
-
-[17] R. Barnes, B. Beurdouche, R. Robert, J. Millican, E. Omara, and K. Cohn-Gordon, "The Messaging Layer Security (MLS) Protocol," Internet Engineering Task Force, RFC 9420, Jul. 2023. [Online]. Available: https://www.rfc-editor.org/rfc/rfc9420
-
-[18] WhatsApp Inc., "WhatsApp Encryption Overview — Technical White Paper," Nov. 2021. [Online]. Available: https://www.whatsapp.com/security/WhatsApp-Security-Whitepaper.pdf
-
-[19] N. Borisov, I. Goldberg, and E. Brewer, "Off-the-Record Communication, or, Why Not To Use PGP," in *Proc. ACM Workshop on Privacy in the Electronic Society (WPES)*, Washington, DC, USA, Oct. 2004, pp. 77–84.
-
-[20] Google, "Pixel Titan M and Android Hardware-Backed Keystore," Android Developers documentation, 2024. [Online]. Available: https://source.android.com/docs/security/features/keystore and https://developer.android.com/privacy-and-security/keystore
-
-[21] Microsoft, "Microsoft Pluton security processor," Microsoft Security Blog, Nov. 17, 2020. [Online]. Available: https://www.microsoft.com/en-us/security/blog/2020/11/17/meet-the-microsoft-pluton-processor-the-security-chip-designed-for-the-future-of-windows-pcs/
-
-[22] J. Van Bulck *et al.*, "Foreshadow: Extracting the Keys to the Intel SGX Kingdom with Transient Out-of-Order Execution," in *Proc. 27th USENIX Security Symposium*, 2018, pp. 991–1008.
-
-[23] K. Murdock *et al.*, "Plundervolt: Software-based Fault Injection Attacks against Intel SGX," in *Proc. IEEE Symposium on Security and Privacy (S&P)*, 2020, pp. 1466–1482.
-
-[24] S. van Schaik *et al.*, "SGAxe: How SGX Fails in Practice," 2020. [Online]. Available: https://sgaxe.com/
-
-[25] Arm Ltd., "Arm Security Technology — Building a Secure System using TrustZone Technology," white paper, Apr. 2009 (rev. 2022). [Online]. Available: https://developer.arm.com/documentation/prd29-genc-009492/
-
-[26] Amnesty International Security Lab, "Forensic Methodology Report: How to catch NSO Group's Pegasus," Jul. 2021. [Online]. Available: https://www.amnesty.org/en/latest/research/2021/07/forensic-methodology-report-how-to-catch-nso-groups-pegasus/ (cross-confirmed by Citizen Lab peer review).
-
-[27] Lookout Threat Intelligence, "Lookout Discovers Hermit Spyware," Apr. 2022 (with subsequent Citizen Lab confirmation of Kazakhstan use Jun. 2022). [Online]. Available: https://www.lookout.com/threat-intelligence/article/hermit-spyware-discovery — supplement with Google Threat Analysis Group analysis of Predator/Cytrox at https://blog.google/threat-analysis-group/.
-
-[28] Internet Engineering Task Force (IETF), "Internet X.509 Public Key Infrastructure Time-Stamp Protocol (TSP)," RFC 3161, Aug. 2001. [Online]. Available: https://www.rfc-editor.org/rfc/rfc3161
-
-[29] European Parliament and Council, "Regulation (EU) No 910/2014 on electronic identification and trust services for electronic transactions in the internal market (eIDAS)," Official Journal of the European Union, Jul. 2014, Art. 41. [Online]. Available: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0910
-
-[30] S. A. Crosby and D. S. Wallach, "Efficient Data Structures for Tamper-Evident Logging," in *Proc. 18th USENIX Security Symposium*, Montreal, Aug. 2009, pp. 317–334. [Online]. Available: https://www.usenix.org/legacy/event/sec09/tech/full_papers/crosby.pdf
-
-[31] Internet Engineering Task Force (IETF), "Certificate Transparency Version 2.0," RFC 9162, Dec. 2021. [Online]. Available: https://www.rfc-editor.org/rfc/rfc9162
-
-[32] C. Dwork and A. Roth, "The Algorithmic Foundations of Differential Privacy," *Foundations and Trends in Theoretical Computer Science*, vol. 9, nos. 3–4, pp. 211–487, 2014. [Online]. Available: https://www.cis.upenn.edu/~aaroth/Papers/privacybook.pdf
-
-[33] Ú. Erlingsson, V. Pihur, and A. Korolova, "RAPPOR: Randomized Aggregatable Privacy-Preserving Ordinal Response," in *Proc. ACM Conference on Computer and Communications Security (CCS)*, Scottsdale, AZ, Nov. 2014. [Online]. Available: https://dl.acm.org/doi/10.1145/2660267.2660348
-
-[34] Apple Inc. Differential Privacy Team, "Learning with Privacy at Scale," *Apple Machine Learning Journal*, vol. 1, no. 8, Dec. 2017. [Online]. Available: https://docs-assets.developer.apple.com/ml-research/papers/learning-with-privacy-at-scale.pdf
-
-[35] L. Sweeney, "k-Anonymity: A Model for Protecting Privacy," *International Journal on Uncertainty, Fuzziness and Knowledge-Based Systems*, vol. 10, no. 5, pp. 557–570, 2002. [Online]. Available: https://dl.acm.org/doi/10.1142/S0218488502001648
-
-[36] A. Machanavajjhala, D. Kifer, J. Gehrke, and M. Venkitasubramaniam, "l-Diversity: Privacy Beyond k-Anonymity," *ACM Transactions on Knowledge Discovery from Data*, vol. 1, no. 1, Mar. 2007. [Online]. Available: https://dl.acm.org/doi/10.1145/1217299.1217302
-
-[37] National Institute of Standards and Technology (NIST), "Guide for Mapping Types of Information and Information Systems to Security Categories," SP 800-60 Vol. 1 Rev. 1, Aug. 2008. [Online]. Available: https://csrc.nist.gov/pubs/sp/800/60/v1/r1/final
-
-[38] National Institute of Standards and Technology (NIST), "Guide for Mapping Types of Information and Information Systems to Security Categories," SP 800-60 Rev. 2 (Initial Working Draft), 2024. [Online]. Available: https://csrc.nist.gov/pubs/sp/800/60/r2/iwd
-
-[39] International Organization for Standardization, "Information security, cybersecurity and privacy protection — Information security management systems — Requirements," ISO/IEC 27001:2022, Annex A 5.12 — Classification of information.
-
-[40] European Parliament, "Regulation (EU) 2016/679 (General Data Protection Regulation)," Official Journal of the European Union, Apr. 2016, Art. 9. [Online]. Available: https://gdpr-info.eu/art-9-gdpr/
-
-[41] Microsoft, "Learn about sensitivity labels — Microsoft Purview," Microsoft Learn documentation, 2024. [Online]. Available: https://learn.microsoft.com/en-us/purview/sensitivity-labels
+[8] A. Machanavajjhala, D. Kifer, J. Gehrke, and M. Venkitasubramaniam, "l-Diversity: Privacy Beyond k-Anonymity," *ACM Transactions on Knowledge Discovery from Data*, vol. 1, no. 1, Mar. 2007. [Online]. Available: https://dl.acm.org/doi/10.1145/1217299.1217302
