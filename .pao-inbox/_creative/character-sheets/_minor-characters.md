@@ -25,17 +25,19 @@ Full sheets exist for Dr. Anna Yusupova, Maria Santos, and the Senior Technical 
 
 ---
 
-## Logistics & Procurement Officer
+## Sabina Rahman — Logistics & Procurement Officer
 
-**Provenance:** Renamed from Ch1's rural BFSI loan officer. Returning character, full arc.
+**Provenance:** Renamed from Ch1's rural BFSI loan officer (formerly Lakshmi Reddy; CO-directive swap to close South Asian-beyond-India gap and add Grameen / BRAC microfinance lineage). Returning character, full arc.
 
-**Identity:** Female. South Asian (Indian or Pakistani). PAO recommendation: Indian (preserves regional positioning from Ch1). Name candidates: Lakshmi Reddy, Sushmita Patel, Anjali Bhatt. Age 35–42.
+**Identity:** Female. **Bangladeshi** (rural northern Bangladesh, possibly Rangpur or Mymensingh region; later based in Dhaka after professional shift). Age 35–42. **LOCKED:** Sabina Rahman.
 
-**Backstory:** In Ch1 she was a rural BFSI loan officer whose offline-capable workflow exposed gaps in cloud-dependent banking infrastructure. Between Ch1 and The Crossing, her offline-first credentials transferred — first to UN field operations, then to multinational science-mission procurement. Manages Sunfish-1's consortium funding under jurisdictional pressure (UAE-led with Indian, Brazilian, French, Norwegian co-funders).
+**Backstory:** In Ch1 she was a rural BFSI loan officer in Bangladesh — Grameen Bank-affiliated branch, then later BRAC microfinance — whose offline-capable workflow exposed gaps in cloud-dependent banking infrastructure. The Grameen / BRAC microfinance lineage gives her architectural depth: Bangladesh pioneered offline-first financial inclusion at population scale starting in 1976; Sabina inherited that institutional discipline. Between Ch1 and The Crossing, her offline-first credentials transferred — first to UN field operations (Cox's Bazar Rohingya response), then to multinational science-mission procurement. Manages Sunfish-1's consortium funding under jurisdictional pressure (UAE-led with Indian, Brazilian, French, Norwegian co-funders).
+
+**Regulatory regime:** Bangladesh Data Protection Act + Bangladesh Bank Information Security Guidelines + Bangladesh's Microfinance Regulatory Authority oversight.
 
 **Role in chapter:** Mid-Act II — handles the SaaS jurisdictional termination event. Redirects the relay endpoints to in-region infrastructure within forty-five minutes. The Director's voice: "She handled it like she had been waiting for it her whole career, and in a way I think she had been." Brief presence elsewhere.
 
-**Tic:** Maintains paper backups of every consortium signoff. The Director comments once: "I asked her why. She said: rural BFSI taught her not to trust networks she could not see."
+**Tic:** Maintains paper backups of every consortium signoff. The Director comments once: "I asked her why. She said: Grameen taught her not to trust networks she could not see."
 
 ---
 
@@ -51,15 +53,21 @@ Full sheets exist for Dr. Anna Yusupova, Maria Santos, and the Senior Technical 
 
 ---
 
-## Chief Scientist
+## Dr. Hiroshi Nakamura — Chief Scientist
 
-**Provenance:** New character. No Part I origin.
+**Provenance:** New character (CO-directive swap from previous French Étienne Marchand placeholder, to close East Asian senior-scientist gap with real institutional anchor). No Part I origin.
 
-**Identity:** Male. French or Norwegian. PAO recommendation: French (closes Barker market on the EU side; Norwegian slot already filled by Senior Technical Specialist). Name candidate: Dr. Étienne Marchand or Dr. Jean-Pierre Bouchard. Age 50–57.
+**Identity:** Male. **Japanese** (Tokyo; NIPR-affiliated). Age 50–57. **LOCKED:** Dr. Hiroshi Nakamura. Senior glaciologist with thirty years of Antarctic research going back to graduate years at Showa Station in the 1990s.
 
-**Backstory:** Sorbonne PhD in glaciology. Thirty years of Antarctic research. Co-PI on Sunfish-1's scientific program. Reports to Dr. Anna Yusupova for command questions, leads scientific decision-making for the mission.
+**Affiliation:** **NIPR (National Institute of Polar Research, Tokyo)** — the real Japanese national polar research body, founded 1973, operates Showa Station and a network of Antarctic field sites under the Japanese Antarctic Research Expedition (JARE) program (running continuously since 1956).
 
-**Role in chapter:** Background presence; one or two scenes. Provides scientific framing in the Director's narration when the mission's instrumentation deployment proceeds in Act V. Does not feature heavily in Acts III or IV.
+**Backstory:** University of Tokyo or Hokkaido University PhD in glaciology. Thirty years of Antarctic research. Multiple JARE deployments to Showa Station. Co-PI on Sunfish-1's scientific program. Reports to Dr. Anna Yusupova for command questions, leads scientific decision-making for the mission. Bilingual Japanese / English (fluent technical English from decades of international polar collaboration; Japanese senior scientists at NIPR are routinely English-fluent).
+
+**Regulatory regime:** Japan APPI 2022 (Act on the Protection of Personal Information) + cabinet office guidelines + MEXT (Ministry of Education, Culture, Sports, Science and Technology) research integrity framework.
+
+**Personality:** Calm. Deliberate. The kind of senior researcher whose quiet presence shapes a watch. The "calmest man on the manifest" framing transfers cleanly from the previous French version — Japanese senior-scientist register supports it as well as French does.
+
+**Role in chapter:** Background presence; one or two scenes. Provides scientific framing in the Director's narration when the mission's instrumentation deployment proceeds in Act V. Takes operational command of the boat in Act III when the Director is called to the bridge for the death scene — *"because that is what the chief scientist does when the Mission Director needs to be elsewhere."* Does not feature heavily in Act IV.
 
 ---
 
