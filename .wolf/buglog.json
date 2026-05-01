@@ -2497,6 +2497,22 @@
       "related_bugs": [],
       "occurrences": 1,
       "last_seen": "2026-04-30T20:06:24.604Z"
+    },
+    {
+      "id": "bug-156",
+      "timestamp": "2026-05-01T05:44:45.403Z",
+      "error_message": "Incorrect value in code",
+      "file": ".git/gitbutler/virtual_branches.toml",
+      "root_cause": "Had \"b1533b2ccb70e07d8dae3b8bf722977143743721\"",
+      "fix": "Changed to \"d8aed02437cfce7f2c32584260510bf4ceb72fa4\"",
+      "tags": [
+        "auto-detected",
+        "wrong-value",
+        "toml"
+      ],
+      "related_bugs": [],
+      "occurrences": 1,
+      "last_seen": "2026-05-01T05:44:45.403Z"
     }
   ]
 }
