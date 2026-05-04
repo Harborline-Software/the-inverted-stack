@@ -2042,3 +2042,19 @@
 | 08:13 | Edited chapters/front-matter/preface.md | inline fix | ~4 |
 | 08:13 | Session end: 27 writes across 18 files (pao-directive-2026-05-04T10-30Z-stt-qc-spike-phase1.md, audiobook.py, m4b.py, yeoman-resumed-2026-05-04T13-00Z-audiobook-regen-complete.md, snapshot-2026-05-04-monday-morning.md) | 39 reads | ~141956 tok |
 | 08:13 | Edited ASSEMBLY.md | inline fix | ~42 |
+| 08:44 | Session end: 29 writes across 19 files (pao-directive-2026-05-04T10-30Z-stt-qc-spike-phase1.md, audiobook.py, m4b.py, yeoman-resumed-2026-05-04T13-00Z-audiobook-regen-complete.md, snapshot-2026-05-04-monday-morning.md) | 39 reads | ~142820 tok |
+| 08:49 | Session end: 29 writes across 19 files (pao-directive-2026-05-04T10-30Z-stt-qc-spike-phase1.md, audiobook.py, m4b.py, yeoman-resumed-2026-05-04T13-00Z-audiobook-regen-complete.md, snapshot-2026-05-04-monday-morning.md) | 39 reads | ~142820 tok |
+| 08:54 | Session end: 29 writes across 19 files (pao-directive-2026-05-04T10-30Z-stt-qc-spike-phase1.md, audiobook.py, m4b.py, yeoman-resumed-2026-05-04T13-00Z-audiobook-regen-complete.md, snapshot-2026-05-04-monday-morning.md) | 39 reads | ~142820 tok |
+
+## Session: 2026-05-04 09:00
+
+| Time | Action | File(s) | Outcome | ~Tokens |
+|------|--------|---------|---------|--------|
+| 09:12 | Edited build/stt_spike.py | 2→2 lines | ~19 |
+| 09:12 | Session end: 1 writes across 1 files (stt_spike.py) | 1 reads | ~19 tok |
+| 09:13 | Session end: 1 writes across 1 files (stt_spike.py) | 1 reads | ~19 tok |
+| 09:17 | ch01 whisper-base spike complete (exit 0, 273s, RTF=0.08, 265 diff regions) | build/output/stt_spike/ch01*_diff.md | success | ~200 |
+| 09:18 | Applied classifications to ch01 diff report: REAL=53 VARIANT=200 NOISE=10 FOREIGN=2 STALE=0 | ch01_diff.md | complete | ~100 |
+| 09:20 | Launched ch15 whisper-base spike (PID 34458, 48MB) | build/output/stt_spike/ | running | ~30 |
+| 09:21 | Session end: 1 writes across 1 files (stt_spike.py) | 2 reads | ~19 tok |
+| 09:31 | Created .pao-inbox/yeoman-resumed-2026-05-04T13-30Z-stt-spike-phase1-complete.md | — | ~936 |
