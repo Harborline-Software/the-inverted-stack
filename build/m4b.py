@@ -160,6 +160,7 @@ def main() -> None:
             "-metadata:s:v:0", "comment=Cover (front)",
         ]
     cmd += [
+        "-af", "silenceremove=stop_periods=-1:stop_duration=1.5:stop_threshold=-50dB",
         "-c:a", "aac", "-b:a", args.bitrate, "-ac", "1",
         "-movflags", "+faststart",
         str(args.out),

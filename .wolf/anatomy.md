@@ -1,7 +1,7 @@
 # anatomy.md
 
-> Auto-maintained by OpenWolf. Last scanned: 2026-05-01T23:05:49.920Z
-> Files: 275 tracked | Anatomy hits: 0 | Misses: 0
+> Auto-maintained by OpenWolf. Last scanned: 2026-05-04T10:33:53.723Z
+> Files: 278 tracked | Anatomy hits: 0 | Misses: 0
 
 ## ../../../../tmp/
 
@@ -124,6 +124,8 @@
 - `yeoman-resumed-2026-04-29T23-19Z-recovery-ack-phase3-start.md` (~542 tok)
 - `yeoman-resumed-2026-04-30T01-30Z-recovery-after-pao-reset.md` (~815 tok)
 - `yeoman-resumed-2026-05-01T18-47Z-audiobook-regen-launched.md` — What was launched (~992 tok)
+- `yeoman-resumed-2026-05-04T13-00Z-audiobook-regen-complete.md` — Results (~450 tok)
+- `yeoman-resumed-2026-05-04T13-05Z-silence-trim-listen-test.md` — Build script change applied (~663 tok)
 
 ## .pao-inbox/_creative/
 
@@ -168,6 +170,7 @@
 
 - `snapshot-2026-04-30.md` — Book State Snapshot — 2026-04-30 (post Ch15 split) (~1832 tok)
 - `snapshot-2026-05-01-friday-windown.md` — State Snapshot — Friday 2026-05-01 windown (~954 tok)
+- `snapshot-2026-05-04-monday-morning.md` — State Snapshot — Monday 2026-05-04 morning (~1155 tok)
 
 ## build/
 
@@ -187,7 +190,7 @@
 - `generate_implementation_spec.py` — Generate the human-readable implementation-specification.md from the (~3052 tok)
 - `librivox_browse.py` — Browse LibriVox for usable narrator reference clips. (~3880 tok)
 - `lint.py` — Structural integrity checks for The Inverted Stack manuscript. (~2352 tok)
-- `m4b.py` — Build a single .m4b audiobook file from the per-chapter MP3s. (~2027 tok)
+- `m4b.py` — Build a single .m4b audiobook file from the per-chapter MP3s. (~2052 tok)
 - `Makefile` — The Inverted Stack — Build Targets (~3970 tok)
 - `normalize.py` — EBU R128 loudness normalization for the audiobook MP3s. (~2557 tok)
 - `promote.py` — Phase 4 promotion script. (~2233 tok)
