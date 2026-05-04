@@ -1,7 +1,7 @@
 # anatomy.md
 
-> Auto-maintained by OpenWolf. Last scanned: 2026-05-04T13:43:41.845Z
-> Files: 287 tracked | Anatomy hits: 0 | Misses: 0
+> Auto-maintained by OpenWolf. Last scanned: 2026-05-04T15:35:05.042Z
+> Files: 288 tracked | Anatomy hits: 0 | Misses: 0
 
 ## ../../../../tmp/
 
@@ -199,7 +199,7 @@
 - `librivox_browse.py` — Browse LibriVox for usable narrator reference clips. (~3880 tok)
 - `lint.py` — Structural integrity checks for The Inverted Stack manuscript. (~2352 tok)
 - `m4b.py` — Build a single .m4b audiobook file from the per-chapter MP3s. (~2052 tok)
-- `Makefile` — The Inverted Stack — Build Targets (~3970 tok)
+- `Makefile` — The Inverted Stack — Build Targets (~4065 tok)
 - `normalize.py` — EBU R128 loudness normalization for the audiobook MP3s. (~2557 tok)
 - `promote.py` — Phase 4 promotion script. (~2233 tok)
 - `remediate_first_use.py` — Remediate first-use rule violations across all chapter sources. (~3156 tok)
@@ -209,6 +209,10 @@
 - `voice_upload.py` — Mac-side client for the Chatterbox voice-upload API. (~2974 tok)
 - `voice-pass.py` — Voice-agent orchestrator: rewrite chapters through guest voice agents (~5068 tok)
 - `word-count.py` — Word count per chapter vs. target. (~688 tok)
+
+## build/filters/
+
+- `kroki-mermaid.lua` — sha256, ensure_cache_dir, fetch_svg, CodeBlock (~1356 tok)
 
 ## chapters/
 
