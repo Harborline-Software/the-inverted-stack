@@ -1954,3 +1954,54 @@
 | 01:44 | Session end: 29 writes across 10 files (senior-technical-specialist.md, ch01-when-saas-fights-reality.md, ch03-inverted-stack-one-diagram.md, the-crossing.md, ch22-security-operations.md) | 10 reads | ~90702 tok |
 | 01:44 | Edited .git/gitbutler/virtual_branches.toml | "b1533b2ccb70e07d8dae3b8bf" → "d8aed02437cfce7f2c3258426" | ~13 |
 | 01:45 | Session end: 30 writes across 11 files (senior-technical-specialist.md, ch01-when-saas-fights-reality.md, ch03-inverted-stack-one-diagram.md, the-crossing.md, ch22-security-operations.md) | 10 reads | ~90716 tok |
+| 15:22 | Created .pao-inbox/yeoman-question-2026-05-01T15-22Z-audiobook-regen-needs-tts-api-key.md | — | ~503 |
+| 15:23 | Session end: 37 writes across 19 files (feedback_word_count_targets_are_recommendations.md, MEMORY.md, 2026-05-01-phase4-prune-scope.md, ASSEMBLY.md, pao-directive-2026-05-01T05-15Z-phase4a-prune-pass.md) | 14 reads | ~101155 tok |
+| 15:48 | Session end: 37 writes across 19 files (feedback_word_count_targets_are_recommendations.md, MEMORY.md, 2026-05-01-phase4-prune-scope.md, ASSEMBLY.md, pao-directive-2026-05-01T05-15Z-phase4a-prune-pass.md) | 14 reads | ~101155 tok |
+| 16:14 | Session end: 37 writes across 19 files (feedback_word_count_targets_are_recommendations.md, MEMORY.md, 2026-05-01-phase4-prune-scope.md, ASSEMBLY.md, pao-directive-2026-05-01T05-15Z-phase4a-prune-pass.md) | 14 reads | ~101155 tok |
+| 16:40 | Session end: 37 writes across 19 files (feedback_word_count_targets_are_recommendations.md, MEMORY.md, 2026-05-01-phase4-prune-scope.md, ASSEMBLY.md, pao-directive-2026-05-01T05-15Z-phase4a-prune-pass.md) | 14 reads | ~101155 tok |
+| 17:06 | Session end: 37 writes across 19 files (feedback_word_count_targets_are_recommendations.md, MEMORY.md, 2026-05-01-phase4-prune-scope.md, ASSEMBLY.md, pao-directive-2026-05-01T05-15Z-phase4a-prune-pass.md) | 14 reads | ~101155 tok |
+| 17:32 | Session end: 37 writes across 19 files (feedback_word_count_targets_are_recommendations.md, MEMORY.md, 2026-05-01-phase4-prune-scope.md, ASSEMBLY.md, pao-directive-2026-05-01T05-15Z-phase4a-prune-pass.md) | 14 reads | ~101155 tok |
+| 17:58 | Session end: 37 writes across 19 files (feedback_word_count_targets_are_recommendations.md, MEMORY.md, 2026-05-01-phase4-prune-scope.md, ASSEMBLY.md, pao-directive-2026-05-01T05-15Z-phase4a-prune-pass.md) | 14 reads | ~101155 tok |
+| 18:24 | Session end: 37 writes across 19 files (feedback_word_count_targets_are_recommendations.md, MEMORY.md, 2026-05-01-phase4-prune-scope.md, ASSEMBLY.md, pao-directive-2026-05-01T05-15Z-phase4a-prune-pass.md) | 14 reads | ~101155 tok |
+| 18:25 | Session end: 37 writes across 19 files (feedback_word_count_targets_are_recommendations.md, MEMORY.md, 2026-05-01-phase4-prune-scope.md, ASSEMBLY.md, pao-directive-2026-05-01T05-15Z-phase4a-prune-pass.md) | 14 reads | ~101155 tok |
+| 18:30 | Session end: 37 writes across 19 files (feedback_word_count_targets_are_recommendations.md, MEMORY.md, 2026-05-01-phase4-prune-scope.md, ASSEMBLY.md, pao-directive-2026-05-01T05-15Z-phase4a-prune-pass.md) | 14 reads | ~101155 tok |
+| 18:30 | Created .pao-inbox/_decisions/2026-05-01-stt-qc-spike-plan.md | — | ~1876 |
+| 18:30 | Session end: 38 writes across 20 files (feedback_word_count_targets_are_recommendations.md, MEMORY.md, 2026-05-01-phase4-prune-scope.md, ASSEMBLY.md, pao-directive-2026-05-01T05-15Z-phase4a-prune-pass.md) | 15 reads | ~104924 tok |
+| 18:31 | Session end: 38 writes across 20 files (feedback_word_count_targets_are_recommendations.md, MEMORY.md, 2026-05-01-phase4-prune-scope.md, ASSEMBLY.md, pao-directive-2026-05-01T05-15Z-phase4a-prune-pass.md) | 15 reads | ~104924 tok |
+| 18:37 | Created .pao-inbox/_state-snapshots/snapshot-2026-05-01-friday-windown.md | — | ~1018 |
+| 18:37 | Session end: 39 writes across 21 files (feedback_word_count_targets_are_recommendations.md, MEMORY.md, 2026-05-01-phase4-prune-scope.md, ASSEMBLY.md, pao-directive-2026-05-01T05-15Z-phase4a-prune-pass.md) | 15 reads | ~106014 tok |
+| 18:41 | Session end: 39 writes across 21 files (feedback_word_count_targets_are_recommendations.md, MEMORY.md, 2026-05-01-phase4-prune-scope.md, ASSEMBLY.md, pao-directive-2026-05-01T05-15Z-phase4a-prune-pass.md) | 15 reads | ~106014 tok |
+| 18:46 | Edited build/audiobook.py | 2→3 lines | ~40 |
+| 18:47 | Created ../../../../tmp/audiobook-regen-7chapters.sh | — | ~273 |
+| 18:48 | Created .pao-inbox/yeoman-resumed-2026-05-01T18-47Z-audiobook-regen-launched.md | — | ~1058 |
+| 18:48 | Session end: 42 writes across 24 files (feedback_word_count_targets_are_recommendations.md, MEMORY.md, 2026-05-01-phase4-prune-scope.md, ASSEMBLY.md, pao-directive-2026-05-01T05-15Z-phase4a-prune-pass.md) | 15 reads | ~107481 tok |
+| 18:50 | Session end: 42 writes across 24 files (feedback_word_count_targets_are_recommendations.md, MEMORY.md, 2026-05-01-phase4-prune-scope.md, ASSEMBLY.md, pao-directive-2026-05-01T05-15Z-phase4a-prune-pass.md) | 15 reads | ~107481 tok |
+| 19:05 | Created .pao-inbox/_decisions/2026-05-01-audiobook-silence-trim-recommendation.md | — | ~952 |
+| 19:05 | Session end: 43 writes across 25 files (feedback_word_count_targets_are_recommendations.md, MEMORY.md, 2026-05-01-phase4-prune-scope.md, ASSEMBLY.md, pao-directive-2026-05-01T05-15Z-phase4a-prune-pass.md) | 15 reads | ~108501 tok |
+| 19:05 | Created .pao-inbox/pao-directive-2026-05-01T22-45Z-audiobook-silence-trim-option-a.md | — | ~866 |
+| 19:06 | Session end: 44 writes across 26 files (feedback_word_count_targets_are_recommendations.md, MEMORY.md, 2026-05-01-phase4-prune-scope.md, ASSEMBLY.md, pao-directive-2026-05-01T05-15Z-phase4a-prune-pass.md) | 15 reads | ~109429 tok |
+
+## Session: 2026-05-04 06:11
+
+| Time | Action | File(s) | Outcome | ~Tokens |
+|------|--------|---------|---------|--------|
+
+## Session: 2026-05-04 06:12
+
+| Time | Action | File(s) | Outcome | ~Tokens |
+|------|--------|---------|---------|--------|
+
+## Session: 2026-05-04 06:13
+
+| Time | Action | File(s) | Outcome | ~Tokens |
+|------|--------|---------|---------|--------|
+
+## Session: 2026-05-04 06:14
+
+| Time | Action | File(s) | Outcome | ~Tokens |
+|------|--------|---------|---------|--------|
+
+## Session: 2026-05-04 06:15
+
+| Time | Action | File(s) | Outcome | ~Tokens |
+|------|--------|---------|---------|--------|
