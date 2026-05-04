@@ -11,7 +11,7 @@ Last refreshed: 2026-05-01 post-cast-swap (PR #64) + Phase 7 reference-list spli
 |---|---|---|---:|---:|---|
 | Foreword | `chapters/front-matter/foreword-placeholder.md` | placeholder | 86 | — | pending contributor |
 | Preface | `chapters/front-matter/preface.md` | icm/prose-review | 1,728 | ~1,000 | ✓ over (173%) — load-bearing authorship disclaimer 2026-05-04 (+294) |
-| Ch 1 | `chapters/part-1-thesis-and-pain/ch01-when-saas-fights-reality.md` | icm/voice-passed (R1+R2 council, literary board) + King-style victims (PRs #53, #54) + cast-swap Lakshmi→Sabina (PR #64) | 7,668 | ~4,500 | ⚠ over (170%); audit pending (Yeoman directive) |
+| Ch 1 | `chapters/part-1-thesis-and-pain/ch01-when-saas-fights-reality.md` | icm/voice-passed (R1+R2 council, literary board) + King-style victims (PRs #53, #54) + cast-swap Lakshmi→Sabina (PR #64) + Phase 4a Block 2 prune (2026-05-04, -63 words) | 7,605 | ~4,500 | ⚠ over (169%); narrative scenes preserved at full altitude |
 | Ch 2 | `chapters/part-1-thesis-and-pain/ch02-local-first-serious-stack.md` | icm/voice-passed (R1+R2 council, literary board) | 5,270 | ~4,000 | ✓ over (132%) |
 | Ch 3 | `chapters/part-1-thesis-and-pain/ch03-inverted-stack-one-diagram.md` | icm/voice-passed (R1+R2 council, literary board) + cast-swap Petra→Hayoon (PR #64) | 4,418 | ~3,000 | ✓ over (147%); audit pending (Yeoman directive) |
 | Ch 4 | `chapters/part-1-thesis-and-pain/ch04-choosing-your-architecture.md` | icm/voice-passed (R1+R2 council, literary board) | 4,909 | ~3,500 | ✓ over (140%) |
