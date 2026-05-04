@@ -1,6 +1,6 @@
 # anatomy.md
 
-> Auto-maintained by OpenWolf. Last scanned: 2026-05-04T11:51:03.757Z
+> Auto-maintained by OpenWolf. Last scanned: 2026-05-04T12:13:29.738Z
 > Files: 284 tracked | Anatomy hits: 0 | Misses: 0
 
 ## ../../../../tmp/
@@ -53,7 +53,7 @@
 ## ./
 
 - `.gitignore` — Git ignore rules (~130 tok)
-- `ASSEMBLY.md` — Assembly Manifest (~2270 tok)
+- `ASSEMBLY.md` — Assembly Manifest (~2821 tok)
 - `book-structure.md` — BOOK-STRUCTURE (~8079 tok)
 - `LICENSE` (~204 tok)
 - `pytest.ini` (~34 tok)
@@ -272,7 +272,7 @@
 
 ## chapters/front-matter/
 
-- `preface.md` — Preface (~2239 tok)
+- `preface.md` — Preface (~2978 tok)
 
 ## chapters/part-1-thesis-and-pain/
 
