@@ -1,10 +1,11 @@
 # anatomy.md
 
-> Auto-maintained by OpenWolf. Last scanned: 2026-05-01T05:44:45.381Z
-> Files: 268 tracked | Anatomy hits: 0 | Misses: 0
+> Auto-maintained by OpenWolf. Last scanned: 2026-05-01T23:05:49.920Z
+> Files: 275 tracked | Anatomy hits: 0 | Misses: 0
 
 ## ../../../../tmp/
 
+- `audiobook-regen-7chapters.sh` — Sequential audiobook regen for 7 chapters per pao-directive-2026-05-01T04-31Z. (~273 tok)
 - `ch15_phase3_split.py` — UPF Ch15 split — Phase 3 batch executor. (~1225 tok)
 - `ch23_split.py` — parse_sections, main, wc (~2210 tok)
 - `phase5_redirects.py` — should_skip, redirect_in_text, process_file, main (~1374 tok)
@@ -111,6 +112,7 @@
 
 ## .pao-inbox/
 
+- `pao-directive-2026-05-01T22-45Z-audiobook-silence-trim-option-a.md` — PAO directive — audiobook silence-trim option A (ffmpeg silenceremove) (~812 tok)
 - `yeoman-question-2026-04-29T23-22Z-phase3-complete.md` — <Section Name> (~952 tok)
 - `yeoman-question-2026-04-30T07-27Z-ch15-forward-pointers-routed.md` — Declares work (~499 tok)
 - `yeoman-question-2026-04-30T07-32Z-phase5-spot-check-stragglers.md` — Declares table (~876 tok)
@@ -118,8 +120,10 @@
 - `yeoman-question-2026-04-30T07-41Z-broader-xref-spotcheck-clean.md` — task: routing (~712 tok)
 - `yeoman-question-2026-04-30T07-46Z-ch19-review-ack-shipasis.md` (~419 tok)
 - `yeoman-question-2026-04-30T07-47Z-audiobook-extended-ch22-ch23.md` (~446 tok)
+- `yeoman-question-2026-05-01T15-22Z-audiobook-regen-needs-tts-api-key.md` (~471 tok)
 - `yeoman-resumed-2026-04-29T23-19Z-recovery-ack-phase3-start.md` (~542 tok)
 - `yeoman-resumed-2026-04-30T01-30Z-recovery-after-pao-reset.md` (~815 tok)
+- `yeoman-resumed-2026-05-01T18-47Z-audiobook-regen-launched.md` — What was launched (~992 tok)
 
 ## .pao-inbox/_creative/
 
@@ -128,7 +132,7 @@
 ## .pao-inbox/_creative/character-sheets/
 
 - `_minor-characters.md` — Minor Characters — Brief Sheets (~2105 tok)
-- `dr-leader-mission-director.md` — Character Sheet — Dr. Aisha Al Mansoori, Mission Director (~2091 tok)
+- `dr-leader-mission-director.md` — Character Sheet — Anna Yusupova, Mission Director (Russian; renamed from Aisha Al Mansoori in PRs #57+#61) (~2091 tok)
 - `maria-santos.md` — Character Sheet — Maria Santos, Mission Medical Officer (~1529 tok)
 - `senior-technical-specialist.md` — Character Sheet — Senior Technical Specialist (~2063 tok)
 
@@ -137,6 +141,8 @@
 - `2026-04-30-upf-ch15-split-phase5-ch23-addendum.md` — UPF Ch15 Split — Phase 5 Cross-Reference Inventory Addendum (Ch22/Ch23 routing) (~1512 tok)
 - `2026-04-30-voice-pass-priority-queue.md` — Voice-Pass Priority Queue (~1640 tok)
 - `2026-04-30-word-count-target-revision-proposal.md` — Word-Count Target Revision — PAO Recommendation (~1522 tok)
+- `2026-05-01-audiobook-silence-trim-recommendation.md` — Audiobook Silence-Trim Recommendation (~892 tok)
+- `2026-05-01-stt-qc-spike-plan.md` — STT QC Spike — Phased Plan (~1759 tok)
 - `antarctic-vision-chapter-concept-2026-04-30.md` — Antarctic Vision Chapter — Concept State and Resume Instructions (~5210 tok)
 - `co-seat-deferred-structural-decisions-2026-04-30.md` — CO-Seat Deferred Structural Decisions — Ch11 + Ch15 (~2015 tok)
 
@@ -161,13 +167,14 @@
 ## .pao-inbox/_state-snapshots/
 
 - `snapshot-2026-04-30.md` — Book State Snapshot — 2026-04-30 (post Ch15 split) (~1832 tok)
+- `snapshot-2026-05-01-friday-windown.md` — State Snapshot — Friday 2026-05-01 windown (~954 tok)
 
 ## build/
 
 - `__init__.py` — build/__init__.py (~6 tok)
 - `apply_phase0a.py` — One-shot Phase 0a HIGH-tier compressor. (~15490 tok)
 - `AUDIO-DOCKER.md` — Audiobook Generation — Docker Setup (~4120 tok)
-- `audiobook.py` — Generate audiobook MP3s from chapter markdown using a local Kokoro TTS server. (~19434 tok)
+- `audiobook.py` — Generate audiobook MP3s from chapter markdown using a local Kokoro TTS server. (~19443 tok)
 - `build_overlays.py` — Whispersync-capable EPUB build (Phases B-E). (~6341 tok)
 - `check_audit.py` — Reference-integrity check: every jurisdiction in inline prose appears in Appendix F. (~581 tok)
 - `check_first_use.py` — First-use rule checker. (~3348 tok)
