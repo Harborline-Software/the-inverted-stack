@@ -2061,3 +2061,5 @@
 | 09:42 | Edited build/stt_spike.py | modified _strip_inline_code() | ~190 |
 | 09:43 | Created .pao-inbox/_decisions/2026-05-04-stt-qc-spike-phase1-outcome.md | — | ~2006 |
 | 09:43 | Created .pao-inbox/pao-directive-2026-05-04T16-30Z-stt-qc-spike-phase2-medium-on-ch15.md | — | ~1352 |
+| 09:44 | Session end: 13 writes across 7 files (stt_spike.py, yeoman-resumed-2026-05-04T13-30Z-stt-spike-phase1-complete.md, ch01-when-saas-fights-reality.md, yeoman-resumed-2026-05-04T14-00Z-phase4a-ch01-complete.md, ASSEMBLY.md) | 7 reads | ~18432 tok |
+| 10:12 | Created ../../../../tmp/pao-status-2026-05-04T14-11Z-mermaid-ebook-rendering-investigation.md | — | ~2297 |
