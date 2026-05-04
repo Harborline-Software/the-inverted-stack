@@ -2063,3 +2063,9 @@
 | 09:43 | Created .pao-inbox/pao-directive-2026-05-04T16-30Z-stt-qc-spike-phase2-medium-on-ch15.md | — | ~1352 |
 | 09:44 | Session end: 13 writes across 7 files (stt_spike.py, yeoman-resumed-2026-05-04T13-30Z-stt-spike-phase1-complete.md, ch01-when-saas-fights-reality.md, yeoman-resumed-2026-05-04T14-00Z-phase4a-ch01-complete.md, ASSEMBLY.md) | 7 reads | ~18432 tok |
 | 10:12 | Created ../../../../tmp/pao-status-2026-05-04T14-11Z-mermaid-ebook-rendering-investigation.md | — | ~2297 |
+| 10:14 | Session end: 14 writes across 8 files (stt_spike.py, yeoman-resumed-2026-05-04T13-30Z-stt-spike-phase1-complete.md, ch01-when-saas-fights-reality.md, yeoman-resumed-2026-05-04T14-00Z-phase4a-ch01-complete.md, ASSEMBLY.md) | 8 reads | ~20893 tok |
+| 10:39 | Session end: 14 writes across 8 files (stt_spike.py, yeoman-resumed-2026-05-04T13-30Z-stt-spike-phase1-complete.md, ch01-when-saas-fights-reality.md, yeoman-resumed-2026-05-04T14-00Z-phase4a-ch01-complete.md, ASSEMBLY.md) | 8 reads | ~20893 tok |
+| 11:05 | Session end: 14 writes across 8 files (stt_spike.py, yeoman-resumed-2026-05-04T13-30Z-stt-spike-phase1-complete.md, ch01-when-saas-fights-reality.md, yeoman-resumed-2026-05-04T14-00Z-phase4a-ch01-complete.md, ASSEMBLY.md) | 8 reads | ~20893 tok |
+| 11:34 | Created build/filters/kroki-mermaid.lua | — | ~1250 |
+| 11:34 | Edited build/Makefile | expanded (+7 lines) | ~404 |
+| 11:35 | Edited build/filters/kroki-mermaid.lua | modified sha256() | ~207 |

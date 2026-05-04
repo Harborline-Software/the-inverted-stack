@@ -43,12 +43,18 @@ CHAPTER_FILES := \
 $(OUT_DIR):
 	mkdir -p $(OUT_DIR)
 
+# build/filters/kroki-mermaid.lua renders ```mermaid blocks via kroki.io HTTP API.
+# Adds curl + network dep at build time; outputs cached at build/output/.kroki-cache/.
+# See the filter file for halt-conditions and the XO directive 2026-05-04T18-50Z.
+KROKI_FILTER := --lua-filter build/filters/kroki-mermaid.lua
+
 .PHONY: draft-pdf
 draft-pdf: $(OUT_DIR)
 	$(PANDOC) $(CHAPTER_FILES) \
 		--from markdown \
 		--to pdf \
 		--pdf-engine=xelatex \
+		$(KROKI_FILTER) \
 		--metadata title="The Inverted Stack: Local-First Nodes in a SaaS World" \
 		--metadata author="Christopher Wood" \
 		--output $(OUT_DIR)/draft.pdf
@@ -61,6 +67,7 @@ epub: $(OUT_DIR)
 		--to epub3 \
 		--toc --toc-depth=2 \
 		--split-level=1 \
+		$(KROKI_FILTER) \
 		--epub-cover-image=assets/cover-large.jpg \
 		--metadata title="The Inverted Stack: Local-First Nodes in a SaaS World" \
 		--metadata subtitle="A Practitioner's Guide to Building for the Offline-First Era" \
