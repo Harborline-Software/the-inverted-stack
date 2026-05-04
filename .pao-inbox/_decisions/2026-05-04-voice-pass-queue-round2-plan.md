@@ -18,6 +18,8 @@ Round 1 was **BLOCKED** by the Kleppmann Council (Shevchenko + Klett blocking). 
 
 The honest revised plan: **6 voice-passes, not 9**, with 3 of them pre-seeded by `voice-brown` + `voice-lencioni` agents before CO sits down, on a triage-first ordering (#45 first, #11 second, #43 third — the minimum-viable-ship subset). Tier 3 either skipped (#12) or made conditional on CO having lived material (#9, #10).
 
+**Framing acknowledgment (Voss reservation, R1 action item 9):** This queue is optimized for downstream pipeline throughput — what unblocks PAO's next Phase 4b prune work, what closes the editorial-state machine, what gets the manuscript assembly-ready. That is not the same metric as reader value. CO should read this plan with that lens and reorder if the reader-experience optimization differs from PAO's pipeline-throughput optimization. The Tier-1 #45 → #11 → #43 ordering uses reader-impact at the top tier specifically to surface this distinction; CO retains override on which tier and which order.
+
 ## Round 1 BLOCK — what changed
 
 Round 1's queue ordered 9 extensions across 3 tiers by word-count-unlock magnitude — a deprecated framing CO rejected on 2026-05-01 ("there are no hard drivers for length, only recommendations and industry standards"). Council found three BLOCK-class issues:
@@ -156,16 +158,16 @@ The only context-dependent step is "PAO collates output + writes a `voice-pack-<
 - Voss's reader-impact reframe → action item 5 (Tier 1 reorder)
 - Okonkwo's risk critique → action items 6 (triage tiers) + 7 (kill trigger) + 10 (state.yaml decouple)
 - Kleppmann's word-unlock critique → action item 8 (numbers stripped)
-- Voss's framing critique → action item 9 (PAO-convenience optimization acknowledged in TL;DR — see this doc's TL;DR which says "10 hours total")
+- Voss's framing critique → action item 9 (PAO-convenience optimization explicitly acknowledged — see TL;DR "Framing acknowledgment" paragraph; CO retains override on tier ordering and reordering)
 
-## UPF quality grade
+## UPF self-assessment (council to grade)
 
 Per the rubric:
-- **C (Viable):** All 5 CORE + ≥1 CONDITIONAL. No critical anti-patterns. ✓
-- **B (Solid):** C + Stage 0 completed + FAILED conditions + Confidence Level + Cold Start Test. ✓
-- **A (Excellent):** B + sparring executed + Review Checkpoints + Reference Library (coding) + Knowledge Capture + Replanning triggers defined. ✓ (council review = sparring; review checkpoints = per-tier gates; replanning trigger = 4-week kill)
+- **C (Viable):** All 5 CORE + ≥1 CONDITIONAL. No critical anti-patterns.
+- **B (Solid):** C + Stage 0 completed + FAILED conditions + Confidence Level + Cold Start Test.
+- **A (Excellent):** B + sparring executed + Review Checkpoints + Reference Library (coding) + Knowledge Capture + Replanning triggers defined.
 
-**Grade: A.** Round 2 is UPF-Excellent.
+**PAO self-assesses: A, pending Round 2 council review.** The grade is the council's to assign, not the author's. The structural lesson from Round 1 (PAO grading PAO is conflicted) carries here — the council Round 2 pass is the authoritative grade. PAO's self-assessment serves only to make the candidate evaluation legible.
 
 ## Recommended next actions
 

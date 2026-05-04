@@ -64,9 +64,11 @@ Two from Friday late-night, archived in PR #74:
   main via PR #59.
 - **9 voice-pass extensions** at `awaiting-voice-check` (Stage 6, human
   only). Priority queue at
-  `.pao-inbox/_decisions/2026-04-30-voice-pass-priority-queue.md`. Tier 1
-  first: #45 Collaborator Revocation, #43 Performance Contracts,
-  #11 Fleet Management.
+  `.pao-inbox/_decisions/2026-05-04-voice-pass-queue-round2-plan.md`
+  (Round 2 PROCEED-WITH-RESERVATIONS, council 2026-05-04). Tier 1 reordered
+  by reader-impact: #45 Collaborator Revocation → #11 Fleet Management →
+  #43 Performance Contracts. The 2026-04-30 Round 1 queue is superseded;
+  #12 cut; #9 + #10 conditional on CO lived material.
 - **Restart Chatterbox/Higgs service on desktop-umt08rn** to unblock
   audiobook regen + silence-trim listen test. P2 unblocker.
 - **Phase 4b sequencing** — when a voice-pass clears, drop a one-line
