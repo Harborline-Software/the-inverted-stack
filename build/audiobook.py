@@ -435,6 +435,7 @@ CHAPTER_FILES = [
     "part-5-operational-concerns/ch22-security-operations.md",
     "part-5-operational-concerns/ch23-endpoint-collaborator-ops.md",
     "epilogue/epilogue-what-the-stack-owes-you.md",
+    "closing/the-crossing.md",
     "appendices/appendix-a-sync-daemon-wire-protocol.md",
     "appendices/appendix-b-threat-model-worksheets.md",
     "appendices/appendix-c-further-reading.md",
