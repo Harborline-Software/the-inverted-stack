@@ -188,7 +188,7 @@ flowchart TD
 
 The GC policy, the stale peer recovery protocol, and the Flease split-write resolution are all instances of the same underlying demand. Correctness requires specifying what happens at the boundary conditions that the happy-path design never exercises. In a distributed system, those boundaries arrive on their own schedule, at production scale, in a deployment that real users depend on.
 
-The split-write window arrives the first time a lease holder loses connectivity mid-write. The GC horizon arrives twelve months into the first long-lived deployment. The corrupt operation sequence arrives the first time a client-side bug ships to production. All three arrive on their own schedule. The architecture's job is to specify what happens in each case before the case arrives.
+The split-write window arrives the first time a lease holder loses connectivity mid-write. The GC horizon arrives twelve months into the first long-lived deployment. The corrupt operation sequence arrives the first time a client-side bug ships to production. The architecture's job is to specify what happens in each case before the case arrives.
 
 Convergence is a property of data structures. Correctness is a property of applications.
 
