@@ -60,7 +60,7 @@ The theoretical basis for understanding quorum flexibility in distributed consen
 
 [10] D. Ongaro and J. Ousterhout, "In Search of an Understandable Consensus Algorithm," in *Proc. USENIX Annual Technical Conference (USENIX ATC '14)*, Philadelphia, PA, Jun. 2014, pp. 305–319.
 
-The Raft paper. More widely implemented and more widely taught than Paxos variants. The consensus algorithm most practitioners encounter in production — etcd, Consul, CockroachDB, and TiKV all build on it. Read this alongside Flexible Paxos [9]. Raft gives you the understandable baseline. Flexible Paxos gives you the quorum flexibility to reason about weakened consistency models.
+The Raft paper — more widely implemented and taught than Paxos variants; the consensus algorithm most practitioners encounter in production (etcd, Consul, CockroachDB, and TiKV all build on it). Read this alongside Flexible Paxos [9]: Raft gives the understandable baseline; Flexible Paxos gives the quorum flexibility to reason about weakened consistency models.
 
 [11] E. Brewer, "Towards robust distributed systems," in *Proc. 19th Annual ACM SIGACT-SIGOPS Symposium on Principles of Distributed Computing (PODC 2000)*, Portland, OR, Jul. 2000, keynote.
 
@@ -88,7 +88,7 @@ The specification for the Noise Protocol Framework, which the sync daemon (Appen
 
 [16] Zetetic LLC, "SQLCipher Documentation," Zetetic. [Online]. Available: https://www.zetetic.net/sqlcipher/documentation/
 
-SQLCipher is the encryption-at-rest layer for the local document store. The documentation covers key derivation (PBKDF2-HMAC-SHA512, 256,000 iterations by default), page-level encryption, and integrity verification. Read the "SQLCipher Design" section before evaluating at-rest security claims. The key derivation parameters are the first thing a security reviewer will audit.
+SQLCipher is the encryption-at-rest layer for the local document store. Read the "SQLCipher Design" section before evaluating at-rest security claims — the key derivation parameters (PBKDF2-HMAC-SHA512, 256,000 iterations by default) are the first thing a security reviewer audits.
 
 [17] F. Denis et al., "libsodium Documentation," libsodium. [Online]. Available: https://doc.libsodium.org/
 
@@ -158,7 +158,7 @@ Linear's architecture is the closest public analogue to the AP-first data model 
 
 [31] Actual Budget Contributors, "Actual: A local-first personal finance app," GitHub. [Online]. Available: https://github.com/actualbudget/actual
 
-The closest commercial analogue to Zone A — the pure local-first node. Actual stores all financial data locally, syncs peer-to-peer, and supports a self-hosted server for optional backup. Its architecture makes the trade-offs explicit. No server-side features. No analytics. No SaaS (Software as a Service) onboarding funnel. No per-seat billing. Study the Actual architecture before you finalize your Zone A monetization model.
+The closest commercial analogue to Zone A — the pure local-first node. Actual stores all financial data locally, syncs peer-to-peer, and supports a self-hosted server for optional backup. No server-side features. No analytics. No SaaS (Software as a Service) onboarding funnel. No per-seat billing. Study the Actual architecture before you finalize your Zone A monetization model.
 
 [32] Safaricom PLC and collaborators, "M-PESA System Architecture Documentation," Safaricom and GSMA Mobile Money programme resources; see also "M-PESA: The mobile payments revolution," Deutsche Gesellschaft für Internationale Zusammenarbeit (GIZ) case study, 2021.
 
@@ -174,7 +174,7 @@ The largest LATAM (Latin America) digital bank, serving over 100 million custome
 
 [35] Apache Software Foundation, "Apache CouchDB Documentation," and PouchDB Contributors, "PouchDB: The Database That Syncs," [Online]. Available: https://docs.couchdb.org/ and https://pouchdb.com/
 
-CouchDB and PouchDB are the longest-running production-grade offline-first database ecosystem. Deployment case studies span regulated healthcare (Medic Mobile's SMS-based health worker platform), education, and field operations. The replication protocol documentation is required reading for anyone evaluating bucket-based sync at scale. CouchDB's replication semantics predate CRDTs (Conflict-free Replicated Data Types) and resolve conflicts through multi-version concurrency control with application-level resolution. The architectural choice is different from CRDTs. The comparison illuminates the CRDT decision.
+CouchDB and PouchDB are the longest-running production-grade offline-first database ecosystem. Deployment case studies span regulated healthcare (Medic Mobile's SMS-based health worker platform), education, and field operations. The replication protocol documentation is required reading for anyone evaluating bucket-based sync at scale. CouchDB's replication semantics predate CRDTs (Conflict-free Replicated Data Types) and resolve conflicts through multi-version concurrency control with application-level resolution. The comparison with CRDTs illuminates the CRDT decision.
 
 ---
 
