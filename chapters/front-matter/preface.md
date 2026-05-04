@@ -48,7 +48,7 @@ Part I convinces. It establishes the failure modes of centralized SaaS — not a
 
 Part II stress-tests. Five domain experts challenged the architecture across two rounds of adversarial review. Each chapter presents one lens, one set of objections, one verdict. You need not agree with every council member's conclusion. Understand what each raised — because the same objections will come from your own enterprise customers, security auditors, and commercial partners.
 
-We invented the people. We did not invent the objections. Five composite characters — each a faithful stand-in for a domain that had every reason to dismantle this architecture — read the paper twice. What broke, broke for real reasons. What changed, changed because the reasons were good.
+Five composite characters — each a faithful stand-in for a domain that had every reason to dismantle this architecture — read the paper twice. The people are invented. The objections are not. What broke, broke for real reasons. What changed, changed because the reasons were good.
 
 Parts III and IV are reference material. Part III specifies the architecture component by component — read it when you are ready to build, or when you need to understand why a design choice was made. Part IV provides the minimal path to a working implementation — read it when you are ready to run something.
 
