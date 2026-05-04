@@ -97,26 +97,63 @@
 
 **Phase 1 scope unchanged:** tune all six voice agents (sinek + 5 guests). Polish/normalize tier system as planned.
 
-## GitButler state — 2026-04-25
+## GitButler state — 2026-04-25 (SUPERSEDED 2026-05-04)
 
-GitButler was set up earlier in the session and torn down via `but teardown`
-after a workspace-conflict error during `but setup` retry. Current state:
+Earlier teardown left `.git/gitbutler` residual + stale workspace/target
+refs. **Resolved 2026-05-04** — GitButler.app is running and working;
+refs and toml resynced via the synthetic-workspace-commit pattern (see
+`bug-160` in buglog and the 2026-05-04 entry below).
 
-- `.git/gitbutler` directory still exists (residual)
-- `gitbutler/target` and `gitbutler/workspace` branches still exist locally
-  with leftover commits (b244d05, adef29e, db4a0a1)
-- Working in plain git mode on `main`; no GitButler hooks active
-- All work since teardown has been clean linear commits on `main`
+## GitButler ref-resync — 2026-05-04
 
-**Implication for future sessions:** the user's global GitButler detection
-(`test -d .git/gitbutler`) will return "GitButler-managed" and trigger the
-`use-gitbutler.md` workflow. But `but` commands will fail until either:
-(a) the leftover gitbutler/* branches are cleaned and `but setup` re-run,
-or (b) the .git/gitbutler directory is removed to make the repo look like
-plain git again.
+GitButler refs drift over time as origin/main advances. Symptoms:
+- `gitbutler/target` ref pointing at unrelated old commit
+- `gitbutler/workspace` ref behind main
+- `default_target.sha` in `virtual_branches.toml` stale
+- `but status` either fails ("Not currently on a gitbutler/* branch")
+  or shows wrong base SHA
 
-User has not asked for cleanup — leaving as-is. If a future session
-hits `but` errors, surface this state immediately rather than retrying.
+**Resync recipe** (works with GitButler.app running concurrently):
+
+```bash
+git fetch origin main
+# Push & PR-merge any unpushed work first; then on local main:
+git reset --hard origin/main
+
+# Update toml (sed-style or Edit):
+#   default_target.sha = $(git rev-parse origin/main)
+
+# Recreate synthetic workspace commit:
+WS=$(GIT_AUTHOR_NAME=GitButler \
+     GIT_AUTHOR_EMAIL=gitbutler@gitbutler.com \
+     GIT_AUTHOR_DATE="$(date +%s) -0400" \
+     GIT_COMMITTER_NAME=GitButler \
+     GIT_COMMITTER_EMAIL=gitbutler@gitbutler.com \
+     GIT_COMMITTER_DATE="$(date +%s) -0400" \
+     git commit-tree $(git rev-parse origin/main^{tree}) \
+       -p $(git rev-parse origin/main) \
+       -m 'GitButler Workspace Commit
+
+This is placeholder commit and will be replaced by a merge of your virtual branches.
+
+Due to GitButler managing multiple virtual branches, you cannot switch back and')
+
+git update-ref refs/heads/gitbutler/workspace $WS
+git update-ref refs/heads/gitbutler/target $(git rev-parse origin/main)
+
+# Verify:
+git checkout gitbutler/workspace && but status
+# Expect: workspace base shows '[origin/main]' at the current main SHA
+```
+
+**Why:** The synthetic "GitButler Workspace Commit" pattern matches Sunfish.
+GitButler treats it as the placeholder for virtual-branch merge; with no
+active branches, it sits directly on top of origin/main. The toml's
+`default_target.sha` and the `gitbutler/target` ref both must equal current
+origin/main for the GUI to consider the workspace "up to date".
+
+**Recurring:** This drift happens whenever main advances and the GitButler
+GUI hasn't been used to sync. Expect to repeat this fix periodically.
 
 ## Phase 1 → Phase 2 transition — 2026-04-25
 
