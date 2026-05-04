@@ -200,3 +200,112 @@ PAO recommendation: pick one. Both directions are strong; the choice is a creati
 ---
 
 **End of Uzbek-Russian alternative character sheet.** Sits parallel to `dr-leader-mission-director.md` (Aisha direction). CO chooses one before chapter draft.
+
+---
+
+# Vol 2+ Series-Arc Layer (CO direction 2026-05-04 — XO hand-off)
+
+This section extends the existing Anna sheet (which was written for the Vol 1 closing chapter *The Crossing*) with the multi-book series-arc framing locked in the 2026-05-04 creative session. The existing identity, backstory, voice, family, and Telegram-departure beats are preserved verbatim; this layer adds what Vol 2 onward requires.
+
+**Authoritative companion docs:**
+- `.pao-inbox/_creative/vol-2-concept-locked-elements-2026-05-04.md`
+- `.pao-inbox/_creative/vol-2-series-arc-wot-bobiverse-2026-05-04.md`
+- `.pao-inbox/_creative/vol-2-long-now-memory-thread-2026-05-04.md`
+
+## Reframing — Anna did NOT build the architecture
+
+The existing sheet's voice samples and family-stake passages occasionally read as "I helped build this architecture" (e.g., the opening-line placeholder, the second-fear paragraph). **Under the Vol 2 frame, Anna is the operator who read Joel's paper and bet her crew on it — she is not the architect.** Her relationship to Sunfish:
+
+- **Read** Joel's paper (~late 2024 in series time, two years after the SaaS-cutoff prior failure)
+- **Recognized** it answered her operational requirements after experiencing the limitations of other architectures across multiple prior missions
+- **Championed** Sunfish to the multinational consortium when they were assembling the Sunfish-1 mission
+- **Vetted Joel personally** before recruiting him — including reading the council review and observing how he handled the R1 BLOCK
+- **Picked** Priya, Wanjiru, and Sabina herself based on their contributions to specific architectural areas she most needed verified under the ice
+- **Did NOT contribute code, design, or paper** — her authority is operational, not architectural
+
+The existing sheet's "I helped build this architecture" voice samples need a one-line revision pass before the Vol 2 concept-note draft (and a parallel revision pass on the existing The Crossing chapter). Candidate revisions: *I have read this architecture's paper. I have spent six months learning what Joel built before I would let it carry my crew under the ice. I have been afraid since the briefing.*
+
+## WoT role: Anna ≈ Moiraine Damodred
+
+**The Knower.** Recognized what Sunfish was before anyone else did. Assembled the team. Bet the mission on the architecture. The series' civilizational stakes are not legible to most of the consortium; they are legible to Anna.
+
+**Second-attempt polar lead = Moiraine after the Aiel Waste.** She has lost a mission already. The hardening that follows is the same hardening Moiraine carried out of Rhuidean — clearer about what matters, less patient with politics that don't serve the work, harder to deceive. The prior-failure mission (cut-short, colleague's non-disclosure of schema-migration limitation) is her Aiel-Waste equivalent: the experience that taught her the cost of trusting wrong.
+
+**First-person narrator — more self-aware than Moiraine.** The books are Anna's retrospective reconstruction of events she survived. She knows how each story ends as she tells it. The dramatic irony is structural: she is writing for the next mission director, the way she wishes someone had written for her.
+
+## The "One Power" — Anna cannot channel either
+
+In the series' Saidin/Saidar mapping (protocol-layer = Saidin, channeled by Joel; policy-layer = Saidar, channeled by Wanjiru), **Anna cannot channel either.** She sees what the architecture does to real missions but cannot build it. That is both her limitation and her power.
+
+She is **the operator's avatar.** What Anna gets from reading Joel's paper is what every operationally-minded reader of the actual book gets from reading the existing 154k ms. Her position in the cast — competent senior person who chose this architecture without being able to write it — is the position the book wants its reader to inhabit. The fact that she cannot channel is the reason her narration works at audiobook tempo.
+
+## Long Now thread — "What will happen to these memories when I die"
+
+Per `vol-2-long-now-memory-thread-2026-05-04.md`. Anna's specific carriage of this series throughline:
+
+- **Her retrospective narration IS the answer in Book 1** — she is alive, she remembers, she is telling it. The mesh works because she is the one telling the story.
+- **Day-20 partition realization scene (Book 1 structural requirement).** First time Anna accesses the local store during partition — approximately day 20 under the ice. She realizes everything she is recording is *only here.* No backup, no external verification, no institutional memory unless this boat surfaces. She is either the archive or she is nothing. **This scene must land before the theme becomes structural in later books.** It is the moment Anna fully understands what Joel built and why it matters.
+- **Mortality-architect fear** (already in the existing sheet's #2 fear) is the human anchor for the Long Now question. Anna's fear is exactly the question the architecture exists to answer; her experience of the fear inside the architecture's first real deployment is what convinces her of what Joel built.
+- **The mother in St. Petersburg** carries this thread at the family scale. The aging-parent-obligation pattern in Anna's existing sheet is also the Long Now in miniature: the question of what passes from her mother's generation to hers, and from hers to whatever comes next, is the same question the mesh is built around.
+- **The 2022 SaaS cutoff** (in Anna's existing 2022-relationship paragraph) is the *political-scale* version of memory loss: a postdoctoral colleague's three years of climate work became inaccessible when the platform died. Cloud death = memory death. Anna's career has been shaped by watching this happen.
+
+## The Bobiverse mechanic — Anna's role across replications
+
+In the series' Bobiverse layer (each Sunfish deployment is a Bob replication; divergence under local pressure is the recurring conflict), Anna is the **selector** and the **steward**.
+
+- Book 1: Sunfish-1 is the first replication. Anna selected the architecture, picked the crew that knows it, and surfaces with proof that the maiden voyage worked.
+- Books 2-5: Anna's cross-institutional relationships make her the senior figure other operators bring their replications to. She is the one who tells you, after looking at your deployment, *whether your Bob is still Sunfish.* That role becomes more politically charged as the series progresses.
+- Book 4 (Shadow Rising / Aiel Waste analog): Anna's prior-failure mission gets fully dramatized. The reader sees the colleague who didn't disclose; the moment Anna realized; the hardening that followed.
+- Book 5 (Fires of Heaven analog): **Moiraine falls.** A possible Anna departure beat — withdrawal, capture, or apparent death — that's later resolved. The series' emotional peak. Anna's narration becomes structurally complicated at this point (other narrators may share the load).
+
+## What the day-20 scene needs (PAO drafting note)
+
+The day-20 partition-realization is a Book 1 structural requirement. Notes for the eventual draft:
+
+- Setting: the boat is roughly four days into sustained partition (mesh signal lost ~day 16; partition stable by day 20). Anna has been accessing the local store routinely for 96 hours; this is the first time she *realizes* what she is doing.
+- Anchor moment: she queries something — a colleague's prior write, a council-review condition, a piece of provenance — and the system answers locally without ambiguity, because it cannot do otherwise. The local store is authoritative because there is nothing else.
+- Realization: *Everything I am recording right now is only here. If we do not surface, the entire mission's data history exists only on this hull.*
+- Compounding realization: *This is what Joel built. This is the architecture answering the question my whole life has been asking.*
+- Emotional landing: not triumph — recognition. The architecture is doing exactly what she chose it for. The fact that it is doing it under three hundred meters of ice with twelve lives on the boat is what makes the recognition land.
+- Length target: ~600-900 words. Long enough to earn the realization; tight enough not to lecture.
+
+## Anna's recruitment of Joel — flashback chapter notes
+
+The recruitment scene is a high-leverage flashback (per locked-elements doc). Notes for drafting:
+
+- Setting: probably a video call across timezones. Anna in St. Petersburg or wherever the consortium prep happened; Joel wherever Joel lives.
+- Anna's vetting questions are calibrated by the prior failure. She has read the council review; she has read Joel's R1 → R2 rewrite of the lease protocol; she has questions specifically designed to surface whether Joel will tell her the truth when it matters.
+- Joel's answers include admitting the R1 BLOCK and explaining what he learned. He does not minimize. He does not defend the original mistake. He explains what his original assumption was, what he discovered after Klett's verdict, and what the rewrite actually does differently.
+- The moment Anna decides to recruit him: a specific exchange where Joel says something the prior-failure colleague would never have said. *I missed it. The original protocol assumed condition X that doesn't hold under sustained partition. Klett was right. I rewrote it.* No softening, no excuse, no deflection. The directness Anna recognizes — the inverse of what failed her last time — is what convinces her.
+- The recruitment offer: Anna explains the mission, the consortium's logic, the maiden-voyage stakes. Joel's response: *The architecture has not been deployed. You're asking me to be on board the first time it is.* Anna: *Yes.* Joel: *Yes.*
+- Length target: ~1200-1800 words.
+
+## Arc summary across the series
+
+| Book | Anna's arc beat |
+|---|---|
+| 1 *The Filchner Dark* | Selected the architecture; ran the mission; survived; Day-20 realization; surfaces with proof. The civilizational stakes become legible to her on the boat; nobody else in the cast yet sees them. |
+| 2 | The Forsaken move while she sleeps. First regulatory subpoena for a Sunfish-deployment dataset. Anna becomes the senior operator vouching for the architecture in policy fora. |
+| 3 | Joel reborn — second-generation architecture; Anna's role shifts from selector-of-the-original to steward-of-the-canonical. She has to answer "is *this* still Sunfish?" for the first time. |
+| 4 | Anna's prior-failure mission fully dramatized. Aiel Waste equivalent. The reader sees what hardened her. Anna confronts the colleague (or, if XO answers item #3 differently, the colleague stays off-frame and Anna confronts the absence). |
+| 5 | Moiraine falls. Possible Anna departure beat. Series emotional peak. |
+| 6-8 | Anna's return (if applicable); standards-body arcs alongside Wanjiru; consortium-level work. |
+| Final | The Wheel turns. Anna's narration ends; the mesh continues. |
+
+## Aging across the series
+
+Anna is 47-52 at the time of Sunfish-1 (per existing sheet). If the series spans 6-10 years of in-universe time across 7-8 books, Anna is mid-50s to early-60s by the final book. The aging matters for the Long Now thread — she gets older as the mesh she championed becomes the thing that survives her. Her mother's mortality is also a recurring thread; the mother's death (sometime in books 2-5) is one of the series' Long Now anchors.
+
+## What this expansion does NOT change
+
+- The existing identity, biography, voice register, family, religious/cultural practice, and Telegram-departure beat are preserved verbatim.
+- The existing physics-teacher firewall and university-and-after fictional-divergence directive remain in force.
+- The cultural-authenticity advisor relationship (CO has built-in advisor) remains as before.
+- The existing fears framework (#1 architecture failing on her watch, #2 becoming the locked phone, #3 the historical pattern winning) carries forward; the Vol 2 frame deepens fear #1 (now it's *Joel's* architecture failing on her watch, which she chose) without replacing it.
+- The "I helped build this architecture" voice samples remain in the sheet but are flagged for revision before Vol 2 concept-note draft.
+
+## PAO action
+
+- This expansion captures the Vol 2 series-arc layer without disturbing the Vol 1 / The Crossing material
+- Next character sheets to expand: Joel (Rand analog; Navy-nuclear; R1 BLOCK night), Priya (Nynaeve; schema migration as Healing), Wanjiru (Egwene; Long Now / standards body)
+- Three CO confirmations still gate the full concept-note draft (boat power, prior-failure framing, unnamed-colleague on/off-frame)

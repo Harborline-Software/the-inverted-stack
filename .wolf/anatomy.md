@@ -1,6 +1,6 @@
 # anatomy.md
 
-> Auto-maintained by OpenWolf. Last scanned: 2026-05-04T15:35:05.042Z
+> Auto-maintained by OpenWolf. Last scanned: 2026-05-04T23:05:09.598Z
 > Files: 288 tracked | Anatomy hits: 0 | Misses: 0
 
 ## ../../../../tmp/
@@ -137,7 +137,7 @@
 ## .pao-inbox/_creative/character-sheets/
 
 - `_minor-characters.md` — Minor Characters — Brief Sheets (~2105 tok)
-- `dr-leader-mission-director.md` — Character Sheet — Anna Yusupova, Mission Director (Russian; renamed from Aisha Al Mansoori in PRs #57+#61) (~2091 tok)
+- `dr-leader-mission-director.md` — Character Sheet — Dr. Anna Yusupova, Mission Director (~13750 tok)
 - `maria-santos.md` — Character Sheet — Maria Santos, Mission Medical Officer (~1529 tok)
 - `senior-technical-specialist.md` — Character Sheet — Senior Technical Specialist (~2063 tok)
 
