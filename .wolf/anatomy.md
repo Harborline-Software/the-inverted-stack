@@ -1,6 +1,6 @@
 # anatomy.md
 
-> Auto-maintained by OpenWolf. Last scanned: 2026-05-04T11:48:28.526Z
+> Auto-maintained by OpenWolf. Last scanned: 2026-05-04T11:51:03.757Z
 > Files: 284 tracked | Anatomy hits: 0 | Misses: 0
 
 ## ../../../../tmp/
@@ -318,7 +318,7 @@
 
 ## docs/book-update-plan/
 
-- `state.yaml` — Declares first (~26070 tok)
+- `state.yaml` — Declares first (~26320 tok)
 
 ## docs/book-update-plan/working/10-data-class-escalation/
 

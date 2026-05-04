@@ -6,16 +6,23 @@ last-commit: null  # filled by commit step
 # Priority order — loop processes these in order; can be re-ordered between
 # iterations if priorities shift. Higher impact first.
 priority-order:
-  - 48-key-loss-recovery       # Most common P7 failure mode; highest user value
-  - 43-performance-contracts   # Most common P1 critique; bar to clear
-  - 45-collaborator-revocation # Departing-employee scenario; common
-  - 11-fleet-management        # Required for Sunfish at scale
-  - 47-endpoint-compromise     # Honest threat model for Volume 1
-  - 46-forward-secrecy         # Currently assumed; should be explicit
-  - 9-chain-of-custody         # Multi-party signed transfer
-  - 12-privacy-aggregation     # DP at relay
-  - 10-data-class-escalation   # Event-triggered re-classification
-  - 44-per-data-class-device-distribution  # Smaller scope; can be quick
+  # 2026-05-04 Round-2 plan ordering (supersedes Round 1 word-unlock ordering).
+  # See .pao-inbox/_decisions/2026-05-04-voice-pass-queue-round2-plan.md.
+  # Tier 1 (minimum-viable-ship; reader-impact ordering):
+  - 45-collaborator-revocation # Tier 1.1 — Ch23 reader weight; first hybrid-path dispatch
+  - 11-fleet-management        # Tier 1.2 — entire Ch21 = first impression of Part V
+  - 43-performance-contracts   # Tier 1.3 — Ch11 + Ch20 cross-chapter; 2 unresolved CLAIMs
+  # Tier 2 (full manuscript; remaining required voice-passes):
+  - 44-per-data-class-device-distribution  # Tier 2 — Ch16
+  - 46-forward-secrecy         # Tier 2 — Ch22
+  - 47-endpoint-compromise     # Tier 2 — Ch23
+  # Conditional (gated on CO lived material; skip if CO answers no):
+  - 9-chain-of-custody         # Conditional — needs lived dashcam/fleet-evidence story
+  - 10-data-class-escalation   # Conditional — needs lived restaurant-fleet/collision story
+  # Cut from required queue (voice-pass-optional; ship as prose-reviewer left it):
+  - 12-privacy-aggregation     # Cut — queue's own admission "voice-pass is light"; earn-its-place fails
+  # Already approved:
+  - 48-key-loss-recovery       # APPROVED 2026-04-28 (the only completed voice-pass; #48 hybrid path proven flow)
 
 extensions:
   48-key-loss-recovery:
@@ -128,7 +135,7 @@ extensions:
       - {stage: prose-review, completed: 2026-04-28T03:00:00Z, output: "docs/book-update-plan/working/46-forward-secrecy/prose-review-report.md. @prose-reviewer verdict PASS, 5 surgical edits applied within scope. (1) line 415 synonym cycling: 'captures a session key under the long-lived envelope' → 'captures a long-lived session key' — drops un-anchored 'envelope' terminology. (2) line 433 passive tighten: 'a peer that is currently offline' → 'a currently offline peer'. (3) line 443 three issues in one paragraph — removed '#47,' internal extension-number leak from parenthetical cross-reference, recast 'Peers receiving the new public key advance their own DH ratchet on receipt' into active SVO form, replaced 'is one trigger ... ensuring [X]' (third-trigger superficial -ing tail per anti-ai-tells §3) with 'behaves the same way ... so [X]'. (4) line 455 agent attribution: 'that variant is deferred to a future volume' → 'this book defers that variant to a future volume'. (5) line 464 removed '#48' internal extension-number leak, rewrote 'interaction with #48 — recovery reconstitutes...' as 'recovery interaction: recovery reconstitutes...' while keeping §Key-Loss Recovery section name. PRESERVED per scope: CLAIM marker at line 461 (OTR/PCS attribution) verbatim, refs [14]-[19] untouched, §Endpoint Compromise + §Collaborator Revocation untouched. Voice register confirmed: Part III specification voice. No tutorial intrusion, no academic scaffolding, no there-is constructions, no copula avoidance, no AI-vocabulary cluster, no signposting. Em-dashes, boldface, hyphenated technical terms preserved per house style. No paragraph >6 sentences. Quality gate prose-review → voice-check PASSES."}
 
   9-chain-of-custody:
-    status: awaiting-voice-check     # prose-review PASS — loop stops at human-only voice-check
+    status: pending-co-gating-question     # 2026-05-04 Round-2 plan: gated on CO confirming lived dashcam/fleet-evidence material; if no, ship as prose-reviewer left it (skip voice-pass)
     current-stage: voice-check
     parallel-with: 47-endpoint-compromise
     target-chapter: ch15-security-architecture
@@ -145,7 +152,7 @@ extensions:
       - {stage: prose-review, completed: 2026-04-28T04:18:00Z, output: "docs/book-update-plan/working/9-chain-of-custody/prose-review-report.md. @prose-reviewer verdict PASS, 3 surgical edits. (1) Ch15:621 paragraph split (was 7 sentences over 6-cap). Split between TSA-as-service / EU-QTSP framing and protocol mechanics. eIDAS Article 41/42 content preserved verbatim; design-decisions annotation moved with protocol-mechanics paragraph. (2) Ch15:633 active voice + strong verbs in Merkle-tree paragraph: 'its hash incorporates into a running Merkle root' → 'the export pipeline folds its hash into a running Merkle root'; 'The root signs and exports alongside' → 'The pipeline signs the root and emits it alongside'; 'is detectable on the regulator's side' → 'the regulator detects the gap.' Citations [30]+[31] untouched. (3) App B:280 active voice: 'so a substituted endpoint is detectable' → 'so the verifier detects a substituted endpoint.' PRESERVATION FLAGS HONORED: Ch15:645 honesty-bound (TSA-absence) verbatim untouched; Ch15:621 eIDAS Article 41/Article 42 framing verbatim only paragraph break introduced; design-decisions annotation verbatim; sub-pattern labels §9a/§9b/§9c not relabeled; Ch15:585 HTML annotation header out-of-scope untouched (pending #25 sweep); refs [1]–[27] + §Forward Secrecy + §Endpoint Compromise untouched; App B worksheet/checklist register preserved. EDITS CONSIDERED BUT NOT APPLIED: AdES inline phrase tightening at Ch15:623 (3 rewrite candidates evaluated, none sharpened, tech-reviewer flagged non-blocking, skipped); Ch15:587 opening narrative scenario (at 6-sentence cap not over, earns its length); App B worksheet checklist items (register-correct as enumerated guidance). Quality gate prose-review → voice-check PASSES."}
 
   12-privacy-aggregation:
-    status: awaiting-voice-check     # prose-review PASS — loop stops at human-only voice-check
+    status: voice-pass-optional     # 2026-05-04 Round-2 plan: queue itself called voice-pass "light" — earn-its-place fails; ship as prose-reviewer left it unless CO opts in
     current-stage: voice-check
     target-chapter: ch15-security-architecture
     target-sections:
@@ -160,7 +167,7 @@ extensions:
       - {stage: prose-review, completed: 2026-04-28T04:48:00Z, output: "docs/book-update-plan/working/12-privacy-aggregation/prose-review-report.md. @prose-reviewer verdict PASS, 2 surgical edits. (1) §12b paragraph split — tech-review's k=10 architecture-floor qualification pushed a 6-sentence paragraph to 7 over cap; split at natural seam, sentences 1-4 stay together as operational-mechanism paragraph (floor definition / suppression options / default policy), sentences 5-7 break out as parameter-value paragraph (k=10 / k=50 regulated / l-diversity); now 4+3 sentences. (2) §Security Properties Summary metadata-minimization row — new row used semicolons to chain three Guarantee clauses; adjacent rows (Confidentiality/Integrity/Availability/Non-repudiation) all use period-separated sentences; converted semicolons to periods for parallel structure with pre-existing rows; em-dash apposition preserved (house style); zero word delta. PRESERVATION FLAGS HONORED (4): §12c 'Honest scoping' engineering-heuristic disclaimer verbatim; paragraph-3 load-bearing scope clarification (DP applies to metadata aggregates not content) untouched; recovery-event carve-out structure (cross-ref to §Key-Loss Recovery 48f) untouched; k=10 'practical floor for this architecture' qualification preserved (not tightened back to primary-source claim). EDITS CONSIDERED BUT NOT APPLIED (10) — pre-existing passive constructions at L720/L730/L734/L754 left because they predate this iteration and rewording would break adjacent rhetorical pairs; 'noise'/'Laplace mechanism'/'Gaussian mechanism'/'noise injector'/'central DP' are distinct named concepts not synonym cycling; H2 Title Case heading matches chapter convention; §Relay Trust Model close-out forward-pointer L708 already natural and active. Voice register Part III specification voice maintained throughout. Anti-AI tells spot-check zero matches across §1/§7/§8/§9/§16/§25/§27/§29. Internal extension-number leaks zero (§12a/§12b/§12c/§48f are spec vocabulary not editorial extension numbers). Quality gate prose-review → voice-check PASSES."}
 
   10-data-class-escalation:
-    status: awaiting-voice-check     # prose-review PASS — loop stops at human-only voice-check
+    status: pending-co-gating-question     # 2026-05-04 Round-2 plan: gated on CO confirming lived restaurant-fleet/collision-footage material; if no, ship as prose-reviewer left it (skip voice-pass)
     current-stage: voice-check
     target-chapter: ch20-ux-sync-conflict
     target-sections:

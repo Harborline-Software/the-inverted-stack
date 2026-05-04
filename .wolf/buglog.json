@@ -2614,6 +2614,22 @@
       "related_bugs": [],
       "occurrences": 1,
       "last_seen": "2026-05-04T11:48:28.557Z"
+    },
+    {
+      "id": "bug-163",
+      "timestamp": "2026-05-04T11:51:03.824Z",
+      "error_message": "Significant refactor of ",
+      "file": "docs/book-update-plan/state.yaml",
+      "root_cause": "10 lines replaced/restructured",
+      "fix": "Rewrote 11→18 lines (10 removed)",
+      "tags": [
+        "auto-detected",
+        "refactor",
+        "yaml"
+      ],
+      "related_bugs": [],
+      "occurrences": 1,
+      "last_seen": "2026-05-04T11:51:03.824Z"
     }
   ]
 }
