@@ -25,7 +25,7 @@ Most real products contain both. A project management tool's core value is user-
 
 ---
 
-The five filters apply in order. Three of them (F1, F2, F4) can produce hard-stop verdicts; the order matters because any hard stop ends the evaluation. The order also reflects how decisively each filter rules: F1 is a property of the domain (independent of business model and team), F2 is a property of who owns the data (independent of how the team monetizes it), F3 is a property of the operational environment, F4 is a property of the business model, and F5 is a property of the team's capacity. Apply them top-down. If F1 stops the evaluation, F2 through F5 do not run. If F1 and F2 pass but F4 produces a hard stop (revenue requires data custody), the architecture cannot be reconciled with the business — F4 wins, even if F2 and F3 cleared. The five-filter sequence is therefore a precedence chain, not five independent tests.
+The five filters apply in order. Three of them (F1, F2, F4) can produce hard-stop verdicts; the order matters because any hard stop ends the evaluation. The order also reflects how decisively each filter rules: F1 is a property of the domain (independent of business model and team), F2 is a property of who owns the data (independent of how the team monetizes it), F3 is a property of the operational environment, F4 is a property of the business model, and F5 is a property of the team's capacity. Apply them top-down. If F1 stops the evaluation, F2 through F5 do not run. If F1 and F2 pass but F4 produces a hard stop (revenue requires data custody), the architecture cannot be reconciled with the business — F4 wins, even if F2 and F3 cleared.
 
 ## Filter 1: Consistency Requirements (Hard Stop)
 
@@ -56,8 +56,6 @@ Who is the natural owner of the primary records?
 | Vendor aggregates anonymous user behavior as the product itself | Centralized |
 | User owns their data but wants optional sharing and sync with peers | Local-first + relay |
 | Data has value only when pooled: market prices, rankings, recommendations | Centralized |
-
-(Regulatory-custodian-mandated authoritative copy — SEC, FINRA, FDA, certain healthcare and export-controlled workflows — is treated as an F1-class hard stop and is covered in Filter 1's eventual-consistency-not-acceptable cases. If a regulator, not the user or vendor, must hold the system of record, the architecture cannot make that guarantee structurally and the evaluation should have ended at F1.)
 
 The distinction is not who *stores* the data. It is who *creates* it, who *uses* it, and who loses something meaningful if it becomes inaccessible. A construction PM's project files belong to the PM and their firm. The records describe their work, their bids, their subcontractor relationships. No other firm's data makes them more or less useful. The natural owner is obvious.
 
@@ -153,7 +151,7 @@ Engineering capability is necessary but not sufficient. A team that clears all f
 
 ## The Three Outcome Zones
 
-Running the five filters produces one of three conclusions. The three Zones are presented as discrete categories because most projects land cleanly in one — but they are anchor points on a spectrum, not a strict partition. Some projects sit between Zone A and Zone C (a small team starting Anchor-style on the Anchor accelerator and adding a hosted relay later), and one valid migration path moves a Zone C deployment toward Zone A over years as engineering capacity grows. Read the Zones as the three positions most teams settle at, not as the only positions the architecture supports.
+Running the five filters produces one of three conclusions. The three Zones are anchor points on a spectrum, not a strict partition — most projects land cleanly in one, but some sit between Zone A and Zone C (a small team starting Anchor-style on the Anchor accelerator and adding a hosted relay later), and one valid migration path moves a Zone C deployment toward Zone A over years as engineering capacity grows.
 
 ```mermaid
 flowchart TD
@@ -220,7 +218,7 @@ Each Zone enables a different default compliance posture for the major regulator
 | **Russia 242-FZ** | Personal-data storage on Russian-territory user-controlled hardware satisfies the requirement structurally | Relay must be in-territory for the personal-data flow; or storage component must remain in-jurisdiction with transfer restrictions | Requires in-territory cloud infrastructure for any personal-data-handling subsystem |
 | **SOC 2** | Vendor's own SOC 2 covers software-supply-chain controls; customer's IT covers endpoint operation | Vendor's SOC 2 covers software + relay; customer's IT covers endpoints | Vendor's SOC 2 covers everything end-to-end |
 
-The table inverts a common assumption. Local-first does not skip compliance; it shifts where compliance burden sits. Zone A moves operational compliance toward the customer's IT (which is often what regulated customers want, because they already have the controls). Zone B keeps compliance with the vendor (which is often what customers without strong IT want). Zone C splits the burden along the same line as the data plane.
+Local-first does not skip compliance; it shifts where compliance burden sits. Zone A moves operational compliance toward the customer's IT (which is often what regulated customers want, because they already have the controls). Zone B keeps compliance with the vendor (which is often what customers without strong IT want). Zone C splits the burden along the same line as the data plane.
 
 ### A Worked Example: The Construction-Industry SaaS Migration
 
