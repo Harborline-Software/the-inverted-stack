@@ -4,6 +4,22 @@
 <!-- Target: ~1,300 words -->
 <!-- Source: source/local_node_saas_v13.md preface, source/inverted-stack-v5.md §1 -->
 
+## A Note from the Authors
+
+This book and the Sunfish platform that accompanies it (`github.com/ctwoodwa/Sunfish`) were built as a human-guided AI project. The architecture, the council reviews, the prose, the test scaffolding, the production pipeline, and the audiobook were developed in partnership between Chris Wood and Claude (Anthropic). Chris holds the load-bearing decisions and bears responsibility for the architectural claims, the conclusions, and any errors that remain. Claude did the structured work of drafting, reviewing, revising, and stress-testing — across hundreds of sessions in which the human guided and the AI executed.
+
+**Sunfish itself is real, working software** — not a fictional reference implementation. The packages exist, the code runs, the test suites pass, the audiobook pipeline produces actual audio files. The repository at `github.com/ctwoodwa/Sunfish` carries its own authorship disclaimer mirroring this one. What this book illustrates is what Sunfish actually does.
+
+What is fictional is the **narrator**. The first-person "I" voice you will encounter in the rest of this preface, in the closing chapter "The Crossing," and in the connective passages between sections belongs to **Anna Yusupova** — Mission Director on the Antarctic research voyage that frames the closing chapter. Anna is a literary device in the tradition of H.G. Wells's unnamed first-person narrator in *The War of the Worlds* (1897): Wells wrote the book; the narrator let the reader inhabit the events. The same convention applies here.
+
+The events Anna narrates are fiction. The architecture they illustrate is real, and Sunfish is its working reference implementation. The failure-mode taxonomy is grounded in production systems. The council members in Part II are composites — invented people, not invented objections; every objection traces back to real enterprise IT, distributed systems, security, product, and local-first practitioner concerns. The production pipeline that built this book — the Kokoro (the local TTS engine) text-to-speech, the EBU R128 mastering, the Kleppmann Council adversarial review cycle, the literary board, the audiobook bundling — is real and observable in the repository.
+
+This note is the only place in the book where the frame breaks. Everything that follows is told in Anna's voice.
+
+— Chris Wood, with Claude (Anthropic), May 2026
+
+---
+
 The gap this book addresses is not a gap in research. The local-first ideals — offline operation, real-time collaboration without a central authority, data portability, user ownership — date to Kleppmann et al.'s 2019 essay [1]. The distributed systems components that make those ideals technically achievable — CRDTs (Conflict-free Replicated Data Types), gossip protocols, envelope encryption, distributed leases — are production-proven in individual systems. The gap is a blueprint. A single resource that specifies how to compose those components into production software. Software that survives contact with enterprise IT, adversarial security review, and the commercial reality of building a business on top of it.
 
 Offline is not an ideal in that list. It is the daily operating condition for enterprise workers across Sub-Saharan Africa, rural India, tier-3 Latin American cities, and much of Southeast Asia — markets where intermittent connectivity is the baseline, not the exception. In 2022, offline briefly became the condition for entire regions of Western enterprise workers. Adobe, Autodesk, Microsoft, and Figma ([figma.com](https://www.figma.com/), the design tool) suspended or restricted service across Russia and the CIS (Commonwealth of Independent States), leaving organizations locked out of their own data on infrastructure they had paid for. That event — documented at continental scale — is the clearest evidence the architectural thesis needs. SaaS (Software as a Service) tenancy is a dependency. Dependencies can be withdrawn. This book is the blueprint for the architecture that survives that withdrawal.
@@ -40,14 +56,8 @@ Parts III and IV are reference material. Part III specifies the architecture com
 
 Sunfish (`github.com/ctwoodwa/Sunfish`) is the open-source reference implementation developed alongside this book. The patterns in this book are stack-agnostic. Sunfish is the .NET realization — **Anchor (the Zone A local-first desktop accelerator)**, a Zone A local-first desktop built on .NET MAUI (.NET Multi-platform App UI) Blazor Hybrid, and **Bridge (the Zone C hybrid SaaS accelerator)**, a Zone C hybrid multi-tenant SaaS built on .NET Aspire and Blazor Server — but the architectural contracts translate directly to Java, Rust, or Go implementations. This book references Sunfish by package name (`Sunfish.Kernel.Sync`, `Sunfish.Foundation.LocalFirst`) rather than by class API (Application Programming Interface). The package contracts are stable; the method signatures in pre-1.0 software are not. The CRDT engine is pluggable through `ICrdtEngine`; Chapter 12 specifies both the current YDotNet (the .NET CRDT engine port of Yjs ([github.com/yjs/yjs](https://github.com/yjs/yjs), the JavaScript CRDT library) via Rust FFI (Foreign Function Interface)) (the .NET CRDT engine port of Yjs ([github.com/yjs/yjs](https://github.com/yjs/yjs), the JavaScript CRDT library) via Rust FFI (Foreign Function Interface)) implementation and the Loro ([github.com/loro-dev/loro](https://github.com/loro-dev/loro), a Rust-core CRDT library) aspirational target, and treats the choice as reversible by design.
 
-## A Note on Production
-
-This book was researched, drafted, technically reviewed, and edited with Claude (Anthropic) and Claude Code as collaborators. The Kleppmann Council reviews in Part II, the literary-board review cycle that brought every chapter to publication standard, and the audiobook production pipeline (Kokoro (the local TTS engine) TTS, EBU R128 mastering, m4b bundling) were all developed in partnership with Claude Code. The author bears full responsibility for the architectural arguments, the conclusions, and any errors that remain. The AI served as a thinking partner and tool, not a co-author.
-
----
-
 At the end of this book you will have four things you do not have now. One: a production-calibrated specification for an architecture that has been stress-tested against five adversarial reviews and cleared fifteen documented conditions. Two: a credibility framework — named objections, named responses — for defending the architectural choice to your enterprise customers, your security auditors, and your own engineering leadership. Three: a commercial model that does not depend on community adoption as economic substrate. Four: a compliance posture that speaks to sovereignty requirements across GDPR (General Data Protection Regulation), Schrems II, UAE DPL, DPDP, POPIA (Protection of Personal Information Act), NDPR (Nigeria Data Protection Regulation), PIPL (Personal Information Protection Law), Japan PIPA (Personal Information Protection Act), and the jurisdictions the book's body names explicitly.
 
 The reader who finishes Chapter 20 will be able to do something practical that the reader who opens Chapter 1 cannot: build a local-first application that an enterprise procurement committee will buy, that a European data protection authority will clear, that a practitioner in Lagos or Mumbai or Santiago can actually run on the connectivity they have, and that will still serve its users if the vendor disappears.
 
-*C.W., April 2026*
+— Anna Yusupova

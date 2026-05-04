@@ -2034,3 +2034,11 @@
 | 07:50 | Edited docs/book-update-plan/state.yaml | 2→2 lines | ~65 |
 | 07:50 | Session end: 23 writes across 17 files (pao-directive-2026-05-04T10-30Z-stt-qc-spike-phase1.md, audiobook.py, m4b.py, yeoman-resumed-2026-05-04T13-00Z-audiobook-regen-complete.md, snapshot-2026-05-04-monday-morning.md) | 38 reads | ~138333 tok |
 | 07:51 | Edited docs/book-update-plan/state.yaml | modified 1() | ~367 |
+| 07:52 | Session end: 24 writes across 17 files (pao-directive-2026-05-04T10-30Z-stt-qc-spike-phase1.md, audiobook.py, m4b.py, yeoman-resumed-2026-05-04T13-00Z-audiobook-regen-complete.md, snapshot-2026-05-04-monday-morning.md) | 38 reads | ~138778 tok |
+| 08:01 | Session end: 24 writes across 17 files (pao-directive-2026-05-04T10-30Z-stt-qc-spike-phase1.md, audiobook.py, m4b.py, yeoman-resumed-2026-05-04T13-00Z-audiobook-regen-complete.md, snapshot-2026-05-04-monday-morning.md) | 38 reads | ~138778 tok |
+| 08:09 | Session end: 24 writes across 17 files (pao-directive-2026-05-04T10-30Z-stt-qc-spike-phase1.md, audiobook.py, m4b.py, yeoman-resumed-2026-05-04T13-00Z-audiobook-regen-complete.md, snapshot-2026-05-04-monday-morning.md) | 39 reads | ~141017 tok |
+| 08:12 | Edited chapters/front-matter/preface.md | expanded (+16 lines) | ~871 |
+| 08:12 | Edited chapters/front-matter/preface.md | — | ~0 |
+| 08:13 | Edited chapters/front-matter/preface.md | inline fix | ~4 |
+| 08:13 | Session end: 27 writes across 18 files (pao-directive-2026-05-04T10-30Z-stt-qc-spike-phase1.md, audiobook.py, m4b.py, yeoman-resumed-2026-05-04T13-00Z-audiobook-regen-complete.md, snapshot-2026-05-04-monday-morning.md) | 39 reads | ~141956 tok |
+| 08:13 | Edited ASSEMBLY.md | inline fix | ~42 |
