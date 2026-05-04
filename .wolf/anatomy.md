@@ -1,7 +1,7 @@
 # anatomy.md
 
-> Auto-maintained by OpenWolf. Last scanned: 2026-05-04T10:33:53.723Z
-> Files: 278 tracked | Anatomy hits: 0 | Misses: 0
+> Auto-maintained by OpenWolf. Last scanned: 2026-05-04T10:47:35.587Z
+> Files: 280 tracked | Anatomy hits: 0 | Misses: 0
 
 ## ../../../../tmp/
 
@@ -17,8 +17,9 @@
 ## ../../.claude/projects/-Users-christopherwood-Projects-the-inverted-stack/memory/
 
 - `feedback_no_reset_hard_without_audit.md` (~701 tok)
-- `MEMORY.md` — Memory Index — The Inverted Stack Book Project (~1367 tok)
+- `MEMORY.md` — Memory Index — The Inverted Stack Book Project (~1755 tok)
 - `project_audiobook_topology.md` — Topology (~3242 tok)
+- `reference_gitbutler_ref_resync.md` — GitButler ref-resync recipe (~1012 tok)
 - `reference_migration_memory_path.md` — What happened (~808 tok)
 
 ## ../../Library/CloudStorage/Dropbox/the-inverted-stack/voice-samples-2026-04-28/
@@ -105,7 +106,7 @@
 
 ## .git/gitbutler/
 
-- `virtual_branches.toml` (~60 tok)
+- `virtual_branches.toml` (~208 tok)
 
 ## .github/ISSUE_TEMPLATE/
 
@@ -145,6 +146,7 @@
 - `2026-04-30-word-count-target-revision-proposal.md` — Word-Count Target Revision — PAO Recommendation (~1522 tok)
 - `2026-05-01-audiobook-silence-trim-recommendation.md` — Audiobook Silence-Trim Recommendation (~892 tok)
 - `2026-05-01-stt-qc-spike-plan.md` — STT QC Spike — Phased Plan (~1759 tok)
+- `2026-05-04-phase4a-block1-closure.md` — Phase 4a Block 1 — Closure (~894 tok)
 - `antarctic-vision-chapter-concept-2026-04-30.md` — Antarctic Vision Chapter — Concept State and Resume Instructions (~5210 tok)
 - `co-seat-deferred-structural-decisions-2026-04-30.md` — CO-Seat Deferred Structural Decisions — Ch11 + Ch15 (~2015 tok)
 

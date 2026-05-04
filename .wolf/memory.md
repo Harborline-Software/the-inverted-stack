@@ -2010,3 +2010,7 @@
 | 06:33 | Created .pao-inbox/yeoman-resumed-2026-05-04T13-00Z-audiobook-regen-complete.md | — | ~480 |
 | 06:33 | Created .pao-inbox/_state-snapshots/snapshot-2026-05-04-monday-morning.md | — | ~1232 |
 | 06:33 | Created .pao-inbox/yeoman-resumed-2026-05-04T13-05Z-silence-trim-listen-test.md | — | ~707 |
+| 06:44 | Edited .git/gitbutler/virtual_branches.toml | "d8aed02437cfce7f2c3258426" → "16792aaa20d66facdadb51e52" | ~13 |
+| 06:46 | Created ../../.claude/projects/-Users-christopherwood-Projects-the-inverted-stack/memory/reference_gitbutler_ref_resync.md | — | ~1066 |
+| 06:46 | Edited ../../.claude/projects/-Users-christopherwood-Projects-the-inverted-stack/memory/MEMORY.md | 1→2 lines | ~107 |
+| 06:47 | Created .pao-inbox/_decisions/2026-05-04-phase4a-block1-closure.md | — | ~954 |
