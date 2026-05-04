@@ -84,7 +84,7 @@ sequenceDiagram
 
 ## Gossip Anti-Entropy
 
-The DELTA_STREAM handles real-time operation propagation. The protocol specifies that receiving nodes apply inbound operations to their local CRDT document store and update their vector clock accordingly. Gossip anti-entropy handles convergence — operations missed during a partition propagate on reconnect.
+The DELTA_STREAM handles real-time operation propagation. Gossip anti-entropy handles convergence — operations missed during a partition propagate on reconnect.
 
 *Reference implementation status.* In the current Sunfish reference implementation ([github.com/ctwoodwa/Sunfish](https://github.com/ctwoodwa/Sunfish)), delta receipt and vector-clock exchange are wired, but delta apply-back into `ICrdtDocument` is the Wave 2.6 integration work that completes end-to-end convergence. The specification above is the target; the integration gap is named here so readers distinguish protocol behavior from present implementation state.
 
@@ -190,7 +190,7 @@ sequenceDiagram
     D->>Q: Lease released
 ```
 
-If quorum is unreachable — because peers are offline, partitioned, or slow — the daemon blocks the write. The daemon does not fall back to a best-effort write. The application layer receives a clear signal: the write cannot proceed, and the UI must reflect this with a definitive indicator. A blocked write is never silently queued as though it will eventually succeed.
+If quorum is unreachable — because peers are offline, partitioned, or slow — the daemon blocks the write. The application layer receives a clear signal: the write cannot proceed, and the UI must reflect this with a definitive indicator. A blocked write is never silently queued as though it will eventually succeed, and the daemon does not fall back to a best-effort write.
 
 Leases expire automatically at the configured duration. A node that goes offline without explicitly releasing its lease loses the lease at expiry. Other nodes detect the expiry through the absence of a lease renewal GOSSIP_PING. After expiry, the next node to request the lease acquires it through quorum acknowledgement.
 
