@@ -1,7 +1,7 @@
 # anatomy.md
 
-> Auto-maintained by OpenWolf. Last scanned: 2026-05-04T12:13:29.738Z
-> Files: 284 tracked | Anatomy hits: 0 | Misses: 0
+> Auto-maintained by OpenWolf. Last scanned: 2026-05-04T13:43:41.845Z
+> Files: 287 tracked | Anatomy hits: 0 | Misses: 0
 
 ## ../../../../tmp/
 
@@ -114,6 +114,7 @@
 ## .pao-inbox/
 
 - `pao-directive-2026-05-01T22-45Z-audiobook-silence-trim-option-a.md` — PAO directive — audiobook silence-trim option A (ffmpeg silenceremove) (~812 tok)
+- `pao-directive-2026-05-04T16-30Z-stt-qc-spike-phase2-medium-on-ch15.md` — PAO directive — STT QC Spike Phase 2: medium model on ch15 only (~1267 tok)
 - `yeoman-question-2026-04-29T23-22Z-phase3-complete.md` — <Section Name> (~952 tok)
 - `yeoman-question-2026-04-30T07-27Z-ch15-forward-pointers-routed.md` — Declares work (~499 tok)
 - `yeoman-question-2026-04-30T07-32Z-phase5-spot-check-stragglers.md` — Declares table (~876 tok)
@@ -148,6 +149,7 @@
 - `2026-05-01-audiobook-silence-trim-recommendation.md` — Audiobook Silence-Trim Recommendation (~892 tok)
 - `2026-05-01-stt-qc-spike-plan.md` — STT QC Spike — Phased Plan (~1759 tok)
 - `2026-05-04-phase4a-block1-closure.md` — Phase 4a Block 1 — Closure (~894 tok)
+- `2026-05-04-stt-qc-spike-phase1-outcome.md` — STT QC Spike — Phase 1 Outcome + Phase 2 Decision (~1880 tok)
 - `2026-05-04-voice-pass-queue-round2-plan.md` — Voice-Pass Queue — Round 2 Plan + UPF Meta-Validation (~3396 tok)
 - `antarctic-vision-chapter-concept-2026-04-30.md` — Antarctic Vision Chapter — Concept State and Resume Instructions (~5210 tok)
 - `co-seat-deferred-structural-decisions-2026-04-30.md` — CO-Seat Deferred Structural Decisions — Ch11 + Ch15 (~2015 tok)
@@ -201,6 +203,7 @@
 - `normalize.py` — EBU R128 loudness normalization for the audiobook MP3s. (~2557 tok)
 - `promote.py` — Phase 4 promotion script. (~2233 tok)
 - `remediate_first_use.py` — Remediate first-use rule violations across all chapter sources. (~3156 tok)
+- `stt_spike.py` — STT QC spike — Phase 1 word-level diff between source markdown and Whisper transcript. (~3045 tok)
 - `update_kleppmann_citation.py` — One-shot updater: standardize all Kleppmann et al. 2019 citations (~1568 tok)
 - `verify_loudness.py` — Verify normalized chapter MP3s land within their target loudness spec. (~2823 tok)
 - `voice_upload.py` — Mac-side client for the Chatterbox voice-upload API. (~2974 tok)

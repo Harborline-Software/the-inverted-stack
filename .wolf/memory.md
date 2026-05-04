@@ -2058,3 +2058,6 @@
 | 09:20 | Launched ch15 whisper-base spike (PID 34458, 48MB) | build/output/stt_spike/ | running | ~30 |
 | 09:21 | Session end: 1 writes across 1 files (stt_spike.py) | 2 reads | ~19 tok |
 | 09:31 | Created .pao-inbox/yeoman-resumed-2026-05-04T13-30Z-stt-spike-phase1-complete.md | — | ~936 |
+| 09:42 | Edited build/stt_spike.py | modified _strip_inline_code() | ~190 |
+| 09:43 | Created .pao-inbox/_decisions/2026-05-04-stt-qc-spike-phase1-outcome.md | — | ~2006 |
+| 09:43 | Created .pao-inbox/pao-directive-2026-05-04T16-30Z-stt-qc-spike-phase2-medium-on-ch15.md | — | ~1352 |

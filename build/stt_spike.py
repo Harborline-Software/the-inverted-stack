@@ -43,8 +43,17 @@ def _strip_code_fences(text: str) -> str:
 
 
 def _strip_inline_code(text: str) -> str:
-    """Remove inline code spans (`...`)."""
-    return re.sub(r"`[^`]+`", " ", text)
+    """Strip backticks but PRESERVE content as words.
+
+    TTS reads code refs (`Sunfish.Kernel.Security`) and STT transcribes the
+    spoken form ('sunfish kernel security'). If we removed the content
+    entirely, the transcript words would appear as REAL insertions in the
+    diff — that was the false-positive cluster Phase 1 surfaced (8 sites in
+    ch15). Preserving content lets the downstream punctuation-strip
+    normalization align 'Sunfish.Kernel.Security' source with 'sunfish
+    kernel security' transcript (dots become whitespace; lowercase matches).
+    """
+    return re.sub(r"`([^`]+)`", r" \1 ", text)
 
 
 def _strip_markdown(text: str) -> str:
