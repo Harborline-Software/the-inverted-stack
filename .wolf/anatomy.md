@@ -1,7 +1,7 @@
 # anatomy.md
 
-> Auto-maintained by OpenWolf. Last scanned: 2026-05-04T10:47:35.587Z
-> Files: 280 tracked | Anatomy hits: 0 | Misses: 0
+> Auto-maintained by OpenWolf. Last scanned: 2026-05-04T11:20:55.603Z
+> Files: 283 tracked | Anatomy hits: 0 | Misses: 0
 
 ## ../../../../tmp/
 
@@ -127,6 +127,7 @@
 - `yeoman-resumed-2026-05-01T18-47Z-audiobook-regen-launched.md` — What was launched (~992 tok)
 - `yeoman-resumed-2026-05-04T13-00Z-audiobook-regen-complete.md` — Results (~450 tok)
 - `yeoman-resumed-2026-05-04T13-05Z-silence-trim-listen-test.md` — Build script change applied (~663 tok)
+- `yeoman-resumed-2026-05-04T14-05Z-audiobook-regen-crossing-complete.md` (~364 tok)
 
 ## .pao-inbox/_creative/
 
@@ -147,6 +148,7 @@
 - `2026-05-01-audiobook-silence-trim-recommendation.md` — Audiobook Silence-Trim Recommendation (~892 tok)
 - `2026-05-01-stt-qc-spike-plan.md` — STT QC Spike — Phased Plan (~1759 tok)
 - `2026-05-04-phase4a-block1-closure.md` — Phase 4a Block 1 — Closure (~894 tok)
+- `2026-05-04-voice-pass-queue-round2-plan.md` — Voice-Pass Queue — Round 2 Plan + UPF Meta-Validation (~3181 tok)
 - `antarctic-vision-chapter-concept-2026-04-30.md` — Antarctic Vision Chapter — Concept State and Resume Instructions (~5210 tok)
 - `co-seat-deferred-structural-decisions-2026-04-30.md` — CO-Seat Deferred Structural Decisions — Ch11 + Ch15 (~2015 tok)
 
@@ -167,6 +169,7 @@
 - `ch22-ch23-diagram-proposals-2026-04-30.md` — Ch22 + Ch23 Diagram Proposals (~2068 tok)
 - `ch22-literary-board-2026-04-30.md` — Literary Board Review — Ch22 (Key Lifecycle Operations) (~1710 tok)
 - `ch23-literary-board-2026-04-30.md` — Literary Board Review — Ch23 (Endpoint, Collaborator, and Custody Operations) (~1979 tok)
+- `voice-pass-queue-council-2026-05-04.md` — Kleppmann Council Review — Voice-Pass Priority Queue (~5139 tok)
 
 ## .pao-inbox/_state-snapshots/
 

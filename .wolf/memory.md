@@ -2014,3 +2014,11 @@
 | 06:46 | Created ../../.claude/projects/-Users-christopherwood-Projects-the-inverted-stack/memory/reference_gitbutler_ref_resync.md | — | ~1066 |
 | 06:46 | Edited ../../.claude/projects/-Users-christopherwood-Projects-the-inverted-stack/memory/MEMORY.md | 1→2 lines | ~107 |
 | 06:47 | Created .pao-inbox/_decisions/2026-05-04-phase4a-block1-closure.md | — | ~954 |
+| 06:52 | Session end: 13 writes across 12 files (pao-directive-2026-05-04T10-30Z-stt-qc-spike-phase1.md, audiobook.py, m4b.py, yeoman-resumed-2026-05-04T13-00Z-audiobook-regen-complete.md, snapshot-2026-05-04-monday-morning.md) | 19 reads | ~55811 tok |
+| 06:54 | Session end: 13 writes across 12 files (pao-directive-2026-05-04T10-30Z-stt-qc-spike-phase1.md, audiobook.py, m4b.py, yeoman-resumed-2026-05-04T13-00Z-audiobook-regen-complete.md, snapshot-2026-05-04-monday-morning.md) | 20 reads | ~57451 tok |
+| 06:57 | Session end: 13 writes across 12 files (pao-directive-2026-05-04T10-30Z-stt-qc-spike-phase1.md, audiobook.py, m4b.py, yeoman-resumed-2026-05-04T13-00Z-audiobook-regen-complete.md, snapshot-2026-05-04-monday-morning.md) | 20 reads | ~57451 tok |
+| 07:03 | Created .pao-inbox/yeoman-resumed-2026-05-04T14-05Z-audiobook-regen-crossing-complete.md | — | ~388 |
+| 07:03 | Session end: 14 writes across 13 files (pao-directive-2026-05-04T10-30Z-stt-qc-spike-phase1.md, audiobook.py, m4b.py, yeoman-resumed-2026-05-04T13-00Z-audiobook-regen-complete.md, snapshot-2026-05-04-monday-morning.md) | 25 reads | ~60283 tok |
+| 07:06 | Created .pao-inbox/_editorial-reviews/voice-pass-queue-council-2026-05-04.md | — | ~5482 |
+| 07:07 | Session end: 15 writes across 14 files (pao-directive-2026-05-04T10-30Z-stt-qc-spike-phase1.md, audiobook.py, m4b.py, yeoman-resumed-2026-05-04T13-00Z-audiobook-regen-complete.md, snapshot-2026-05-04-monday-morning.md) | 30 reads | ~99565 tok |
+| 07:20 | Created .pao-inbox/_decisions/2026-05-04-voice-pass-queue-round2-plan.md | — | ~3393 |
