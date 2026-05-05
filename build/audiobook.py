@@ -1394,6 +1394,44 @@ def out_name_for(src_rel: str) -> str:
     return f"{stem}.mp3"
 
 
+# Dropbox auto-sync — copy each rendered MP3 to the matching vol-N/ folder
+# under the user's Dropbox path. Disabled if the Dropbox path doesn't exist
+# (e.g., running in CI / on a different machine) or if --no-dropbox-sync
+# is passed. Override the base via DROPBOX_AUDIOBOOK_BASE env var.
+DROPBOX_AUDIOBOOK_BASE_DEFAULT = (
+    Path.home() / "Library" / "CloudStorage" / "Dropbox"
+    / "the-inverted-stack"
+)
+
+
+def _sync_to_dropbox(out_path: Path, rel_md_path: str, *, verbose: bool = True) -> bool:
+    """Copy a rendered MP3 to ~/Dropbox/the-inverted-stack/vol-N/.
+
+    Returns True on success, False on skip/failure. Volume is computed
+    via volume_for_chapter(). If the Dropbox path doesn't exist (no
+    Dropbox client; different machine), silently skips. Errors during
+    copy are logged but do not raise — render success is independent.
+    """
+    base = Path(os.environ.get("DROPBOX_AUDIOBOOK_BASE", str(DROPBOX_AUDIOBOOK_BASE_DEFAULT)))
+    if not base.exists():
+        return False  # no Dropbox available; not an error
+    volume_slug = volume_for_chapter(rel_md_path)
+    dest_dir = base / volume_slug
+    try:
+        dest_dir.mkdir(parents=True, exist_ok=True)
+        dest = dest_dir / out_path.name
+        import shutil
+        shutil.copy2(out_path, dest)
+        if verbose:
+            size_mb = out_path.stat().st_size / (1024 * 1024)
+            print(f"  → Dropbox: {dest_dir.name}/{out_path.name}  ({size_mb:.1f} MB)")
+        return True
+    except Exception as e:
+        if verbose:
+            print(f"  → Dropbox sync skipped ({type(e).__name__}: {e})", file=sys.stderr)
+        return False
+
+
 def main() -> None:
     # Build the help epilog from whichever engine the user is asking about,
     # falling back to Kokoro for the no-args case.
@@ -1423,6 +1461,11 @@ def main() -> None:
                          "the actual voice ID resolves through the engine's preset catalog.")
     ap.add_argument("--no-chapter-map", action="store_true",
                     help="disable per-chapter preset overrides (use --preset for all)")
+    ap.add_argument("--no-dropbox-sync", action="store_true",
+                    help="disable auto-copy of rendered MP3s to "
+                         f"{DROPBOX_AUDIOBOOK_BASE_DEFAULT}/vol-N/. Default: enabled "
+                         "if the Dropbox path exists on this machine; silently skipped otherwise. "
+                         "Override base via DROPBOX_AUDIOBOOK_BASE env var.")
     ap.add_argument("--voice", default=None,
                     help="explicit voice ID (engine-native; Kokoro supports + blends). Overrides --preset.")
     ap.add_argument("--speed", type=float, default=None,
@@ -1634,6 +1677,11 @@ def main() -> None:
                 seen.add(c["source"])
         manifest["chapters"] = dedup
         manifest_path.write_text(json.dumps(manifest, indent=2), encoding="utf-8")
+
+        # Auto-copy to Dropbox vol-N/ folder. Silent skip if Dropbox not
+        # available on this machine; CLI flag disables explicitly.
+        if not args.no_dropbox_sync:
+            _sync_to_dropbox(out_path, rel)
 
     if not args.dry_run:
         print(f"\nTotal wall time: {time.time() - t_all:.1f}s")
