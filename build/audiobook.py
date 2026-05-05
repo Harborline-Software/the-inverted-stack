@@ -443,6 +443,12 @@ CHAPTER_FILES = [
     "appendices/appendix-e-citation-style.md",
     "appendices/appendix-f-regulatory-coverage.md",
     "appendices/appendix-g-glossary.md",
+    # Vol 2 — listen-test pair (activated 2026-05-04 when both reached icm/draft).
+    # See chapters/book-2/CHAPTER-OUTLINE.md for the full 18-chapter spec; the
+    # remaining 16 paths are staged in VOL2_CHAPTER_FILES below and activate
+    # individually as each chapter reaches icm/draft.
+    "book-2/act-1/ch02-recruitment-interview.md",
+    "book-2/act-1/ch05-day-twenty-realization.md",
 ]
 
 # Vol 2 (Book 1 of the Sunfish series) — story-first restructure narrated by
@@ -459,10 +465,10 @@ CHAPTER_FILES = [
 VOL2_CHAPTER_FILES = [
     # Act I — Departure and the first under-ice realization (Days 1-21)
     "book-2/act-1/ch01-departure.md",
-    "book-2/act-1/ch02-recruitment-interview.md",
+    # ch02-recruitment-interview.md — ACTIVATED in CHAPTER_FILES (2026-05-04)
     "book-2/act-1/ch03-drake-passage-ice-edge.md",
     "book-2/act-1/ch04-first-submersion.md",
-    "book-2/act-1/ch05-day-twenty-realization.md",
+    # ch05-day-twenty-realization.md — ACTIVATED in CHAPTER_FILES (2026-05-04)
     "book-2/act-1/ch06-first-surface-first-forsaken-reveal.md",
     # Act II — Subsystems hold; the contest sharpens (Days 22-42)
     "book-2/act-2/ch07-joels-sunfish.md",
