@@ -3,7 +3,7 @@ type: in-universe-document
 document-type: minority opinion appended to a regulatory filing
 authors-in-universe: signed by twelve OSS distributed-systems architects, including Wanjiru Kamau, Joel Reyes, Priya Iyer, and nine others; principal drafter Wanjiru Kamau
 publication-in-universe: filed as Annex A to the Working Group on Compliance-Friendly Distributed Architectures' Recommendation (the document at `forsaken-position-papers/03-regulatory-filing.md`); published in the European Commission's public consultation register
-publication-date-in-universe: February 2027 (post-Sunfish-1; concurrent with the Working Group recommendation it dissents from)
+publication-date-in-universe: February 2027 (post-the Nansen; concurrent with the Working Group recommendation it dissents from)
 title-in-universe: "Annex A: Minority Opinion — Why Federated Trust Is Not the Reference Architecture for Compliance-Friendly Distributed Systems"
 length: ~730 words
 voice-reference: institutional-formal; matches the regulatory filing's register; engages the Working Group's argument on its own terms
@@ -62,4 +62,4 @@ We thank the Working Group for the opportunity to respond.
 *Priya Iyer (Sunfish OSS schema-migration co-author)*
 *[Nine additional signatories from the OSS distributed-systems community.]*
 
-*Anna Yusupova, Mission Director of the Sunfish-1 maiden voyage, was invited to sign and declined; her position is that the architectural argument is appropriately the architects' to make. The Working Group has been so informed.*
+*Anna Yusupova, Mission Director of the Nansen's maiden voyage on MERIDIAN-7, was invited to sign and declined; her position is that the architectural argument is appropriately the architects' to make. The Working Group has been so informed.*

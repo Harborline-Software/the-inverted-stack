@@ -1,10 +1,10 @@
 ---
 type: character-sheet
-character: Joel Reyes — Principal Architect of Sunfish; senior crew engineer on Sunfish-1
+character: Joel Reyes — Principal Architect of Sunfish; senior crew engineer on the Nansen
 status: working — promoted from minor character to full sheet 2026-05-04 per Vol 2 frame
 sheet-depth: full
 chapter: Vol 1 (The Crossing — minor presence) + Vol 2 (principal protagonist)
-supersedes: `_minor-characters.md` § "GCC Offshore Platform Engineer (Ch1 → Sunfish-1 life support)" — that entry remains as historical record; this sheet is the canonical home for Joel
+supersedes: `_minor-characters.md` § "GCC Offshore Platform Engineer (Ch1 → the Nansen life support)" — that entry remains as historical record; this sheet is the canonical home for Joel
 co-identification: CO has identified personally with Joel and is the source of truth on Navy-nuclear biographical detail
 firewall-note: Joel's Navy biography draws on CO's lived experience (USS Sunfish SSN-649, US Navy nuclear engineer, Sturgeon-class boat 1990s service). Specific details about the boat and the operational discipline are CO-sourced and authoritative. Character is informed-by but not based-on; Joel is fictional. PAO defers to CO on all Navy-nuclear specifics; PAO writes the post-Navy distributed-systems trajectory and architectural authorship as fiction. CO directive 2026-05-05: framing changed from "Nuclear Machinist's Mate PO2/E-5" to "US Navy nuclear engineer" — preserves the boat, the operational discipline, and the silver dolphins; drops enlisted-rate-specific language for accessibility.
 ---
@@ -43,7 +43,7 @@ The existing `_minor-characters.md` entry remains as historical record of the or
 
 - **Name:** Joel Reyes
 - **Title in narrative:** "Joel" in Anna's voice (informal, peer-respect register); "Mr. Reyes" formal; no naval rank or title in mission scenes (Joel left the Navy a long time ago)
-- **Age at Sunfish-1 mission:** mid-50s (Navy enlistment ~early 1990s, USS Sunfish SSN-649 service through decommissioning 1998, ~25 years post-Navy career arc)
+- **Age at MERIDIAN-7:** mid-50s (Navy enlistment ~early 1990s, USS Sunfish SSN-649 service through decommissioning 1998, ~25 years post-Navy career arc)
 - **Citizenship:** United States (Navy service); Filipino heritage
 - **Languages:**
   - English native
@@ -80,7 +80,7 @@ Mid-career arc (~early 2000s through ~2020):
 - Open-source distributed-systems contribution — first as a heavy contributor to other projects, then increasingly as a maintainer in his own right
 - The Sunfish paper, published as a research-grade architecture spec, ~late 2020s
 
-By the time of Sunfish-1 (mission-time 2026 in series-time), Joel has been the lead author and principal maintainer of the Sunfish OSS project for several years. The project is small in headcount (3-5 senior contributors plus a wider community), tested rigorously, vetted by the Kleppmann Council, and pre-1.0. He turns down opportunities to commercialize it — partly Navy-residual distrust of corporate ownership of safety-critical infrastructure, partly the stewardship instinct that keeps him in the maintainer role.
+By the time of the Nansen (mission-time 2026 in series-time), Joel has been the lead author and principal maintainer of the Sunfish OSS project for several years. The project is small in headcount (3-5 senior contributors plus a wider community), tested rigorously, vetted by the Kleppmann Council, and pre-1.0. He turns down opportunities to commercialize it — partly Navy-residual distrust of corporate ownership of safety-critical infrastructure, partly the stewardship instinct that keeps him in the maintainer role.
 
 **Why "Sunfish":** he named the OSS project after his first submarine. USS Sunfish SSN-649 was decommissioned in 1998; Joel left the Navy around then; the paper went up under that name two decades later because the boat had been the place where the operational discipline that runs through the architecture got formed. It is a private gesture in a public project. Anna recognizes the name's weight when she reads the paper for the first time, but does not bring it up in their early conversations; that's the kind of thing you let the person tell you.
 
@@ -178,7 +178,7 @@ His answer (eventually): he builds something that doesn't need him. The Long Now
 
 In the series' Bobiverse layer, Joel is the **founding contributor**. Every Sunfish deployment is a Bob replication; divergence under local pressure is the recurring conflict.
 
-- Book 1: Sunfish-1 is the first replication. Joel is on the boat; the architecture is canonical because he is its author, channeling Saidin under his own discipline.
+- Book 1: the Nansen is the first replication. Joel is on the boat; the architecture is canonical because he is its author, channeling Saidin under his own discipline.
 - Books 2-3: deployments multiply. Joel becomes the maintainer who's asked to weigh in on whether each is "still Sunfish." His role is increasingly governance, increasingly political, increasingly uncomfortable.
 - Book 4 (Aiel Waste analog): Joel may not be the protagonist of this book — the prior-failure flashback is Anna's. Joel could be in the book but supporting; this is Anna's interior arc.
 - Book 5 (Fires of Heaven analog): if Anna falls (Moiraine analog), Joel is one of the people most affected. He recruited himself to her mission; she recruited him to hers; her loss (or apparent loss) is structurally large for him.
@@ -227,7 +227,7 @@ The voice register: short sentences. Technical vocabulary muscle-memoried. Filip
 
 # Joel + Anna — Love Arc Layer (CO direction 2026-05-04)
 
-This section adds an emotional through-line to Joel's Vol 2+ arc per CO direction: **Joel falls in love with Anna; Anna is slow to return his feelings.** The layer is series-spanning — initiated during the Sunfish-1 mission's preparation or early voyage; unspoken across most of Book 1; gradually reciprocated across Books 2-4; established partnership by Book 5+; aged across the final books.
+This section adds an emotional through-line to Joel's Vol 2+ arc per CO direction: **Joel falls in love with Anna; Anna is slow to return his feelings.** The layer is series-spanning — initiated during the MERIDIAN-7 mission's preparation or early voyage; unspoken across most of Book 1; gradually reciprocated across Books 2-4; established partnership by Book 5+; aged across the final books.
 
 The love arc is NOT a Vol 1 *Crossing* chapter beat — that chapter retains its existing focus on Anna's command-decision arc and the leak event. The romantic arc lives entirely in Vol 2+ as a layer over the captain-architect dynamic.
 
@@ -282,9 +282,9 @@ Anna is a careful observer; her vetting standard is built on reading people accu
 
 | Phase | Anna's interior |
 |---|---|
-| Sunfish-1 mission (Book 1) | Registers Joel's feelings during the second segment; disciplines herself not to act; the discipline is operational; the feelings, if they exist on her side, are not yet legible to her. |
+| MERIDIAN-7 (Book 1) | Registers Joel's feelings during the second segment; disciplines herself not to act; the discipline is operational; the feelings, if they exist on her side, are not yet legible to her. |
 | Post-mission (Book 1 / Book 2) | First weeks back in port. Mission paperwork. The command boundary dissolves. Anna registers what she felt during the mission as something other than command-protection. She does not act yet. |
-| Book 2 | Joel and Anna work together in the post-mission rebuild — consortium debriefs, scientific publications, the public rollout of the Sunfish-1 results. They see each other regularly. Neither initiates. Anna's hardness gradually softens against Joel's continued not-pressing. |
+| Book 2 | Joel and Anna work together in the post-mission rebuild — consortium debriefs, scientific publications, the public rollout of the Nansen results. They see each other regularly. Neither initiates. Anna's hardness gradually softens against Joel's continued not-pressing. |
 | Book 3 | The disclosure happens. PAO drafting note: it is small; it is undramatic; it is between Anna and Joel only; it is not a Hollywood moment. Anna probably initiates — she has had longer to consider, and Joel's discipline has held longer than her hardness. The disclosure is mutual recognition, not declaration. |
 | Books 4-5 | Established partnership in the early phase. The Aiel Waste flashback book (Book 4) lands the prior-failure-with-Stefan in a context where Joel is a present partner; the contrast is structural. Book 5's Moiraine-fall convergence carries the love arc's unfinished business if Anna is apparently lost. |
 | Books 6-8 | Aged partnership. Both have careers; both have public-architectural roles (Anna in consortium / advocacy; Joel in maintainership / standards body alongside Wanjiru). The partnership is one of the things that has lasted across the series' long arc. |

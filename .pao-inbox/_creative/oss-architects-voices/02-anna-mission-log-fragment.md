@@ -1,16 +1,16 @@
 ---
 type: in-universe-document
 document-type: mission-log entry (fragment)
-author-in-universe: Anna Yusupova, Mission Director, Sunfish-1
+author-in-universe: Anna Yusupova, Mission Director, the Nansen
 publication-in-universe: Anna's mission log; the entries were edited and excerpted in *The Filchner Dark* (the staff history; this volume); the fragment below is one such entry preserved in the published account
-publication-date-in-universe: written during Sunfish-1, mission Day 28 (mid-Segment 2); the fragment is reproduced here as Anna later edited it for the staff history
+publication-date-in-universe: written during the Nansen, mission Day 28 (mid-Segment 2); the fragment is reproduced here as Anna later edited it for the staff history
 length: ~430 words
 voice-reference: Anna's first-person retrospective register; matches the existing voice samples in `character-sheets/dr-leader-mission-director.md`; suitable for chapter epigraphs drawn from her mission log
 purpose: voice reference + epigraph source; establishes Anna's first-person voice register for series chapter epigraphs
 ---
 
 # Mission Log — Day 28
-## Sunfish-1, Mid-Segment 2
+## the Nansen, Mid-Segment 2
 
 ---
 
@@ -28,4 +28,4 @@ Mid-Segment 2. Eleven days to mission Day 39. We dive again at dawn.
 
 ---
 
-*— A. Y., Day 28, Sunfish-1*
+*— A. Y., Day 28, the Nansen*

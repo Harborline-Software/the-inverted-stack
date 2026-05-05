@@ -74,6 +74,17 @@ def volume_for_chapter(rel_path: str) -> str:
 # Capitalized common acronyms (CRDT, JWT, OAuth, HTTP, JSON, etc.) spell out
 # correctly in Kokoro by default — leave them alone to avoid over-correction.
 ACRONYM_FIXES = {
+    # Vol 2 mission designations — hyphen-number forms that TTS otherwise
+    # reads as "minus N" (subtraction). Force the spoken form. (Boat name
+    # "Nansen" is a clean single word; no fix needed for it.)
+    r"\bMERIDIAN-7\b": "MERIDIAN seven",
+    r"\bHELVETICA-2\b": "Helvetica two",
+    # Defensive fallback for any legacy "Sunfish-1" string surviving the
+    # 2026-05-05 rename to Nansen / MERIDIAN-7. Should never trigger in
+    # canon-current text; included so any accidentally-reintroduced
+    # occurrence renders correctly rather than as "Sunfish minus one".
+    r"\bSunfish-1\b": "Sunfish One",
+
     r"\bSaaS\b": "SASS",
     r"\bYDotNet\b": "Y-dot-Net",
     r"\bSQLCipher\b": "SQL Cipher",

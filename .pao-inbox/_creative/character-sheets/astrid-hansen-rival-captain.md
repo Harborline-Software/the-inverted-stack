@@ -1,6 +1,6 @@
 ---
 type: character-sheet
-character: Captain Astrid Hansen — Mission Director, [Rival Mission name TBD] (Arctic counterpart to Sunfish-1)
+character: Captain Astrid Hansen — Mission Director, [Rival Mission name TBD] (Arctic counterpart to the Nansen)
 status: working — initial draft 2026-05-04 per CO direction (rival cast in case)
 sheet-depth: medium (lighter than Anna's sheet; Astrid is operational counterpart, not series-arc protagonist)
 chapter: Vol 2+ (rival mission captain; appears in surface-window reveals + occasional cross-mission scenes)
@@ -55,13 +55,13 @@ The consortium agreed. Astrid runs the mission as a polar-science operator who h
 
 **The crew (mostly off-page, lightly named):**
 
-The rival mission has a multinational crew similar in shape to Sunfish-1 but with different individuals. Most are off-page in Vol 2; one or two get named for surface-window-mention purposes. Likely candidates the series can name lightly:
+The rival mission has a multinational crew similar in shape to the Nansen but with different individuals. Most are off-page in Vol 2; one or two get named for surface-window-mention purposes. Likely candidates the series can name lightly:
 - A senior engineer from Stefan's organization who serves as the rival mission's "Joel" — but is not Stefan himself; this engineer represents the architecture on-board but does not have Stefan's stature. PAO sketch: a German or Swiss engineer, possibly named in passing
 - A second-in-command with Norwegian Navy reserve credentials (operational backup to Astrid)
 - Norwegian and possibly Canadian / Greenlandic scientific officers (Arctic expertise)
 - A junior architect who later switches sides (the series hook for Books 3+ — this character could become important if the rival mission's specific compromises become legible to a young engineer who eventually defects to Sunfish's standards-body work)
 
-The rival crew exists as institutional shorthand in Books 1-2; some of them get developed across the series as the rival mission's results become matters of public dispute.
+The rival crew exists as institutional shorthand in Books 1-2; some of them get developed across the series as HELVETICA-2's results become matters of public dispute.
 
 ## Personality / voice
 
@@ -107,7 +107,7 @@ Her trajectory across the series:
 
 | Book | Astrid's beat |
 |---|---|
-| 1 (*The Filchner Dark*) | Rival mission referenced; Astrid named in surface-window contexts as the operational counterpart; preliminary results of her mission land during Sunfish-1's middle segments |
+| 1 (*The Filchner Dark*) | Rival mission referenced; Astrid named in surface-window contexts as the operational counterpart; preliminary results of her mission land during the Nansen's middle segments |
 | 2 | The full results of Astrid's Arctic mission land. Stefan PR-spins them; Astrid does not. The contrast is visible to insiders. |
 | 3 | Astrid completes a second polar mission — possibly returning to the Arctic, possibly Antarctica — using a refined version of TrustMesh. The architectural questions surface during this mission. |
 | 4 (*Aiel Waste*) | Mostly off-page during the prior-failure flashback (which is about Anna and Stefan in 2022-2023). Astrid was not involved. |

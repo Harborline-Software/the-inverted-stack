@@ -30,7 +30,7 @@ This is not stated in Vol 2 prose. It is the destination Vol 2 plants toward.
 
 | Era | Books | UI form | Architectural state |
 |---|---|---|---|
-| **2026 (Sunfish-1 maiden voyage)** | Book 1 (Vol 2) | Anchor app: voice-augmented but screen-primary. Wake-word triggered. Local LLM transcribes, translates, indexes, monitors. Crew speaks when they want the system to act. | Local-first, partition-tolerant, hash-chained, KEK/DEK-encrypted, replicated to consortium ports |
+| **2026 (the Nansen's maiden voyage on MERIDIAN-7)** | Book 1 (Vol 2) | Anchor app: voice-augmented but screen-primary. Wake-word triggered. Local LLM transcribes, translates, indexes, monitors. Crew speaks when they want the system to act. | Local-first, partition-tolerant, hash-chained, KEK/DEK-encrypted, replicated to consortium ports |
 | **Late 2020s — 2040s** | Books 2-3 | Voice-primary in dedicated environments (research stations, hospitals, ports, ships). Ambient awareness limited. Still a screen + voice hybrid in offices. | Same protocol family; standards body governs federation + interop; Wanjiru chairs |
 | **2040s — 2080s** | Books 4-5 | Always-aware ambient voice in shipboard contexts. Conversation, not commands. Multiple Sunfish replicas distributed across continents/orbits diverge and re-merge (Bobiverse mechanic). | Same; the Pattern (Saidin/Saidar split between protocol and policy) becomes institutional doctrine |
 | **22XX** | Books 6-7 | Voice fully primary. The system answers natively in any language to anyone authorized. Holodeck-equivalent: archive replay (synthesizing past moments from sensor + voice + video archive). The architecture's *name* may be forgotten in popular usage; the discipline persists. | Same protocol family, ten generations forward |

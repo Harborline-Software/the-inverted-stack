@@ -81,7 +81,7 @@ How the architecture appears: as the **literal answer** to what happens to memor
 
 **Core question:** *What happens when someone you once trusted builds the rival platform?*
 
-Anna and Stefan's past and present in short, loaded encounters: conferences, hearings, media commentary. Astrid and rival crew hearing about Sunfish-1, treating it as competition, rescue hook, or cautionary tale. Internal arguments at the consortium: *Do we hedge by adopting some of Helvetia's model?*
+Anna and Stefan's past and present in short, loaded encounters: conferences, hearings, media commentary. Astrid and rival crew hearing about the Nansen, treating it as competition, rescue hook, or cautionary tale. Internal arguments at the consortium: *Do we hedge by adopting some of Helvetia's model?*
 
 How the architecture appears: in terms of **who can shut you off**. *Federated trust vs pure local-first* expressed in money, audits, regulatory capture, job security, public narrative — never in diagrams.
 

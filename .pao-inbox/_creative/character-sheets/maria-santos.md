@@ -23,7 +23,7 @@ arc: cross-part (Part I victim → Closing Chapter authority, with King-required
 
 In Ch1, Maria was a hospital administrator who lived through a catastrophic data-loss event — patient records inaccessible, the SaaS vendor unreachable, patients facing real consequences. The Ch1 scenario established her as a victim of cloud-architecture failure.
 
-Between Ch1 and The Crossing — over five to seven fictional years — she pivoted careers. She returned to clinical medicine, completed a maritime / polar medicine fellowship, and built a parallel career as a data architect for medical-records systems in resource-constrained environments. The Sunfish-1 mission's offline-first medical records system was designed by her. The consortium recruited her as Medical Officer specifically because she designed it.
+Between Ch1 and The Crossing — over five to seven fictional years — she pivoted careers. She returned to clinical medicine, completed a maritime / polar medicine fellowship, and built a parallel career as a data architect for medical-records systems in resource-constrained environments. The MERIDIAN-7's offline-first medical records system was designed by her. The consortium recruited her as Medical Officer specifically because she designed it.
 
 Her arc from Ch1 victim to mission authority is the chapter's strongest connected-cast move. The reader meets her as the hospital admin who couldn't access records when it mattered; in The Crossing she is the architect of records that cannot be inaccessible. Full arc, earned, no contrivance.
 

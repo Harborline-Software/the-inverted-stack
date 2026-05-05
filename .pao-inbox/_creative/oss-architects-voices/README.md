@@ -28,14 +28,14 @@ The constraint:
 
 1. `01-annex-a-minority-opinion.md` — Annex A: Minority Opinion appended to the Working Group regulatory filing (`forsaken-position-papers/03-regulatory-filing.md`). Multi-signatory; OSS architects rebutting the Working Group's recommendation. ~720 words; institutional-formal voice; February 2027.
 
-2. `02-anna-mission-log-fragment.md` — A single mission-log entry from Anna Yusupova during the Sunfish-1 voyage. Establishes Anna's first-person voice register for chapter epigraphs drawn from her mission logs. ~400 words; narrative-personal register; mission-time during Segment 2.
+2. `02-anna-mission-log-fragment.md` — A single mission-log entry from Anna Yusupova during the Nansen voyage. Establishes Anna's first-person voice register for chapter epigraphs drawn from her mission logs. ~400 words; narrative-personal register; mission-time during Segment 2.
 
 ## Future additions
 
 As the series progresses, this directory should grow. Candidates for later additions:
 - A Wanjiru standards-body chair address (Books 6-7 timing)
 - A Priya schema-migration technical white paper excerpt
-- A Joel reflective interview (post-Sunfish-1; Stefan publicly defends federated trust; Joel responds)
+- A Joel reflective interview (post-the Nansen; Stefan publicly defends federated trust; Joel responds)
 - A council-review dissenting opinion from one of the Kleppmann Council members (e.g., Klett's R2 conditional opinion)
 - A Sabina case study from Bangladeshi BFSI deployment
 

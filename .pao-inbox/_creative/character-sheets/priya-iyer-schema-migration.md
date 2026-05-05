@@ -1,6 +1,6 @@
 ---
 type: character-sheet
-character: Priya Iyer — Lead Instrumentation Engineer (Sunfish-1) + Sunfish OSS schema-migration + sync-protocol contributor
+character: Priya Iyer — Lead Instrumentation Engineer (the Nansen) + Sunfish OSS schema-migration + sync-protocol contributor
 status: working — promoted from minor character to full sheet 2026-05-04 per Vol 2 frame
 sheet-depth: full
 chapter: Vol 1 (Ch1 victim — Pune SaaS bid disaster; The Crossing — minor presence) + Vol 2 (principal technical crew member)
@@ -57,7 +57,7 @@ Her conflict in Ch 13 (the impossible migration) is the textbook instantiation: 
 
 Priya is a returning Ch1 victim — the Pune-based construction PM who lost the hospital bid at 4:47 PM when her SaaS platform and its single-sign-on dependency went down simultaneously with thirteen minutes left to submit. The Ch1 King-style revision gave her specific scarring (243 line items, six weeks of work, the time-stamped failure). Between Ch1 and The Crossing, she pivoted from construction project management to designing modular field instrumentation for environments where cloud connectivity cannot be assumed.
 
-Under the Vol 2 frame, that pivot is **deeper than instrumentation engineering alone**. Priya's field-instrumentation work required deep engagement with Sunfish's sync layer — her instruments needed the architecture's offline-first guarantees to function. That engagement turned her into a **Sunfish OSS contributor**, specifically on the schema migration mechanism and the sync protocol — the parts of the architecture most directly relevant to instrument data handling under partition. By the time of Sunfish-1 she is one of the senior contributors Anna picked specifically because her work is on the boat.
+Under the Vol 2 frame, that pivot is **deeper than instrumentation engineering alone**. Priya's field-instrumentation work required deep engagement with Sunfish's sync layer — her instruments needed the architecture's offline-first guarantees to function. That engagement turned her into a **Sunfish OSS contributor**, specifically on the schema migration mechanism and the sync protocol — the parts of the architecture most directly relevant to instrument data handling under partition. By the time of the Nansen she is one of the senior contributors Anna picked specifically because her work is on the boat.
 
 She is the **Nynaeve al'Meara** of the series. Schema migration is Healing — the hardest discipline in the architecture. Her arc: from "the person who says no to schema changes" to "the person who makes the impossible migration work under the ice."
 
@@ -68,13 +68,13 @@ The existing minor-character entry remains as historical record of the Vol 1 fra
 - **Name:** Priya Iyer (LOCKED, prior name Aanya replaced via PR #63 cast-swap batch)
 - **Title in narrative:** "Priya" in Anna's voice (peer-respect register); "Ms. Iyer" formal
 - **Age at Ch1 (~2018-2020):** 32-36 — early-mid-career construction PM at the bid disaster
-- **Age at Sunfish-1 mission (2026-2030 series time):** ~38-44 — established field-instrumentation engineer + senior Sunfish contributor
+- **Age at MERIDIAN-7 (2026-2030 series time):** ~38-44 — established field-instrumentation engineer + senior Sunfish contributor
 - **Citizenship:** India
 - **Origin / domicile:**
   - Tamil family heritage (Iyer is a Tamil Brahmin surname)
   - Likely born in Tamil Nadu (Chennai or coastal Tamil Nadu); family migrated to Maharashtra for the father's engineering / IT career — a common Tamil-engineering-family pattern in Indian metros
   - Grew up in Pune; education in Pune; at time of Ch1 incident she was Pune-based at the construction firm
-  - At Sunfish-1 mission time: Bengaluru likely (the Indian tech-corridor center for OSS distributed-systems contributors), though could be Pune or Hyderabad — CO can pin
+  - At MERIDIAN-7 time: Bengaluru likely (the Indian tech-corridor center for OSS distributed-systems contributors), though could be Pune or Hyderabad — CO can pin
 - **Languages:**
   - English (working language of Indian tech / international science)
   - Tamil (heritage / family register)
@@ -92,9 +92,9 @@ The bid was won by a competitor whose platform ran on a different vendor whose d
 
 The three-tabs tic dates to that afternoon. So does the career pivot.
 
-**Career pivot (Ch1 → Sunfish-1):**
+**Career pivot (Ch1 → the Nansen):**
 
-Priya spent the next year studying. She read the academic literature on offline-first systems. She read the operational reports of Indian banks that had built around connectivity gaps. She read what was available about the Grameen-Bank lineage of offline-first financial inclusion (this is also part of why Sabina, when they meet during Sunfish-1 prep, recognizes a kindred temperament — both came to offline-first through institutional collapse, not academic interest).
+Priya spent the next year studying. She read the academic literature on offline-first systems. She read the operational reports of Indian banks that had built around connectivity gaps. She read what was available about the Grameen-Bank lineage of offline-first financial inclusion (this is also part of why Sabina, when they meet during the Nansen prep, recognizes a kindred temperament — both came to offline-first through institutional collapse, not academic interest).
 
 She left construction project management. She joined a small engineering firm building modular field instrumentation — environmental sensors, monitoring stations, data-collection rigs for remote agricultural research, mining operations, and (eventually) polar science. The instrumentation needed to function in environments where cloud connectivity could not be assumed; the firm needed engineers who *understood* what that meant operationally, not just technically. Priya's PM-instinct for "what fails when this doesn't work" was the differentiator.
 
@@ -104,9 +104,9 @@ The R1 council found two BLOCKs: lease protocol partition recovery (Joel's), and
 
 The R2 resolution was Priya's. She rewrote the contraction-phase to require explicit schema-version handshake with read-confirmation across at least two participating nodes before contracting. The rewrite cleared with conditions; the conditions are now in the spec.
 
-**Sunfish-1 selection:**
+**the Nansen selection:**
 
-Anna picked Priya specifically. The instrumentation Priya's firm builds is what's deploying on Sunfish-1; the schema-migration mechanism Priya wrote is what will run when conditions force a mid-mission data-class change. Anna wanted both expertise on the boat, in the same person. The two halves of Priya's career meet during the mission — the field instrumentation runs on the architecture she helped build.
+Anna picked Priya specifically. The instrumentation Priya's firm builds is what's deploying on the Nansen; the schema-migration mechanism Priya wrote is what will run when conditions force a mid-mission data-class change. Anna wanted both expertise on the boat, in the same person. The two halves of Priya's career meet during the mission — the field instrumentation runs on the architecture she helped build.
 
 ## Personality / voice
 
@@ -153,7 +153,7 @@ Anna picked Priya specifically. The instrumentation Priya's firm builds is what'
 
 **The most powerful Healer / migrator of her generation.** The architecture's schema-migration mechanism is hers. Future deployments will run her code through their own structural changes. By the final book, the canonical migration is the one Priya wrote.
 
-**Arc:** from "the person who says no to schema changes" to "the person who makes the impossible migration work under the ice." The Sunfish-1 maiden voyage is the first deployment that asks her to say yes to a migration she would have refused in lab conditions. The decision moment — when conditions force a schema change mid-mission and Priya has to authorize it — is her chapter.
+**Arc:** from "the person who says no to schema changes" to "the person who makes the impossible migration work under the ice." The the Nansen's maiden voyage on MERIDIAN-7 is the first deployment that asks her to say yes to a migration she would have refused in lab conditions. The decision moment — when conditions force a schema change mid-mission and Priya has to authorize it — is her chapter.
 
 **Late-series move:** Nynaeve lifts the taint on Saidin in *A Memory of Light*. Priya's parallel: in the final book, she closes the final epoch incompatibility that would have forked the mesh permanently. The migration that proves the architecture's resilience at civilizational scale. That is her climactic series event.
 
@@ -238,7 +238,7 @@ The voice register: precise. Slow to commit. Direct without warmth in mission sc
 ## What this expansion does NOT change
 
 - The existing minor-character entry in `_minor-characters.md` is preserved as historical record of the original Vol 1 framing
-- Priya's existing voice in *The Crossing* (lead instrumentation engineer; three-tabs tic; designed Sunfish-1 monitoring instruments) carries forward verbatim — the new sheet adds the schema-migration / Sunfish-OSS-contributor layer without contradicting Vol 1 material
+- Priya's existing voice in *The Crossing* (lead instrumentation engineer; three-tabs tic; designed the Nansen monitoring instruments) carries forward verbatim — the new sheet adds the schema-migration / Sunfish-OSS-contributor layer without contradicting Vol 1 material
 - Her Ch1 King-style residual scarring (the 4:47 PM bid disaster; the three-tabs tic) carries forward unchanged
 
 ## PAO action

@@ -31,7 +31,7 @@ Series direction: WoT + Bobiverse hybrid.
 | The Breaking | The centralized-SaaS era: user data fully corporate-controlled; the world fractured into dependent fragments |
 | The Third Age | Now. The contest is live but not yet decided. |
 | The Last Battle | Achieving legislative or architectural lock-in for local-first data sovereignty — whichever side gets there first wins the age. |
-| Ta'veren | Deployments (and people) so architecturally significant that the Pattern bends around them. Sunfish-1 is a ta'veren event. |
+| Ta'veren | Deployments (and people) so architecturally significant that the Pattern bends around them. the Nansen is a ta'veren event. |
 | The Wheel itself | Time + entropy: every closed architecture eventually fails from within; the mesh is the Wheel's natural expression because only distributed systems actually survive. |
 
 The Forsaken are named in-universe as institutional roles only — never cartoonish villains. Each was, once, on the right side.
@@ -79,7 +79,7 @@ She sees what others miss. Medical officer as moral register. Her "viewings" are
 
 Every Sunfish deployment is a "Bob replication." The architecture clones itself into a new context; each instance faces different pressures; some diverge from founding principles. The series question: **what makes a deployment still Sunfish?**
 
-Book 1 introduces this obliquely: the submarine partition (56-day radio blackout under ice) forces local operation. When Sunfish-1 surfaces, it must reconcile 56 days of diverged state with the global mesh. The reconciliation scene is both technical and narrative — Anna's first external contact reveals the Forsaken moved while the boat was under the ice.
+Book 1 introduces this obliquely: the submarine partition (56-day radio blackout under ice) forces local operation. When the Nansen surfaces, it must reconcile 56 days of diverged state with the global mesh. The reconciliation scene is both technical and narrative — Anna's first external contact reveals the Forsaken moved while the boat was under the ice.
 
 Later books: specific deployments go rogue through local optimization under extreme constraint. The "Bob who becomes Raimund" analog is a field deployment that ran in isolation so long it evolved incompatible governance primitives. Priya decides whether to merge it or fork it. This is the series' most technically and ethically loaded recurring conflict.
 
@@ -127,7 +127,7 @@ Architectural-class names only (no real product names — per CO direction in lo
 
 Each maps to a specific architectural decision Joel made in his paper. Anna's prior losses are the proof-by-failure that Sunfish was designed correctly.
 
-The centralized SaaS failure: if Sunfish-1 is 2026, this was ~2022. The API went dark six days in. Anna doesn't name the vendor. Readers who were alive know exactly what she means.
+The centralized SaaS failure: if the Nansen is 2026, this was ~2022. The API went dark six days in. Anna doesn't name the vendor. Readers who were alive know exactly what she means.
 
 ---
 
@@ -136,7 +136,7 @@ The centralized SaaS failure: if Sunfish-1 is 2026, this was ~2022. The API went
 1. CO confirmation on boat power (working assumption: ex-Russian nuclear; fits Anna + Rustam + consortium)
 2. CO confirmation on prior-failure framing (Path B locked? — cut-short mission + colleague's failure of judgment)
 3. Whether the unnamed colleague appears anywhere in the series or stays permanently off-frame
-4. Prior-failure mission name / location / year (~2022-2023 if Sunfish-1 is 2026)
+4. Prior-failure mission name / location / year (~2022-2023 if the Nansen is 2026)
 
 ---
 

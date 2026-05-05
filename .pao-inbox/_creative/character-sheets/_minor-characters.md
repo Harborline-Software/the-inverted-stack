@@ -15,9 +15,9 @@ Full sheets exist for Dr. Anna Yusupova, Maria Santos, and the Senior Technical 
 
 **Provenance:** Returning character. Introduced in Ch1 (King-style revision; see `chore/pao-king-style-ch01-aanya`) as the construction PM who lost the Pune hospital bid at 4:47 PM when her SaaS platform and its single-sign-on dependency went down simultaneously with thirteen minutes left to submit. **Name LOCKED:** Priya Iyer.
 
-**Identity:** Female. Indian (Tamil Brahmin family name; Pune-based at time of Ch1 incident). Age at Ch1: ~32–36; age at Sunfish-1 mission: ~38–44.
+**Identity:** Female. Indian (Tamil Brahmin family name; Pune-based at time of Ch1 incident). Age at Ch1: ~32–36; age at MERIDIAN-7: ~38–44.
 
-**Backstory:** In Ch1 her hospital expansion bid (243 line items, six weeks of work) was lost when the SaaS construction-management platform stopped responding at 4:47 PM. The bid was won by a competitor whose platform happened to run on a different vendor whose dependencies had not failed that afternoon. Between Ch1 and The Crossing, she pivoted from construction project management to designing modular field instrumentation for environments where cloud connectivity cannot be assumed. She designed the Sunfish-1 ice-shelf monitoring instruments. Recruited because the instrumentation she designed will be installed by the crew during the dive.
+**Backstory:** In Ch1 her hospital expansion bid (243 line items, six weeks of work) was lost when the SaaS construction-management platform stopped responding at 4:47 PM. The bid was won by a competitor whose platform happened to run on a different vendor whose dependencies had not failed that afternoon. Between Ch1 and The Crossing, she pivoted from construction project management to designing modular field instrumentation for environments where cloud connectivity cannot be assumed. She designed the Nansen ice-shelf monitoring instruments. Recruited because the instrumentation she designed will be installed by the crew during the dive.
 
 **Tic / King-required residual scarring:** She still keeps three browser tabs open as a working habit (established in Ch1's revised passage). On the boat this manifests as over-testing instrument calibration — running the calibration suite three times when procedure requires once. The Director observes the tic; does not comment in dialogue but writes about it in the staff history. The tic does not heal in the chapter. Her competence still costs her.
 
@@ -31,7 +31,7 @@ Full sheets exist for Dr. Anna Yusupova, Maria Santos, and the Senior Technical 
 
 **Identity:** Female. **Bangladeshi** (rural northern Bangladesh, possibly Rangpur or Mymensingh region; later based in Dhaka after professional shift). Age 35–42. **LOCKED:** Sabina Rahman.
 
-**Backstory:** In Ch1 she was a rural BFSI loan officer in Bangladesh — Grameen Bank-affiliated branch, then later BRAC microfinance — whose offline-capable workflow exposed gaps in cloud-dependent banking infrastructure. The Grameen / BRAC microfinance lineage gives her architectural depth: Bangladesh pioneered offline-first financial inclusion at population scale starting in 1976; Sabina inherited that institutional discipline. Between Ch1 and The Crossing, her offline-first credentials transferred — first to UN field operations (Cox's Bazar Rohingya response), then to multinational science-mission procurement. Manages Sunfish-1's consortium funding under jurisdictional pressure (UAE-led with Indian, Brazilian, French, Norwegian co-funders).
+**Backstory:** In Ch1 she was a rural BFSI loan officer in Bangladesh — Grameen Bank-affiliated branch, then later BRAC microfinance — whose offline-capable workflow exposed gaps in cloud-dependent banking infrastructure. The Grameen / BRAC microfinance lineage gives her architectural depth: Bangladesh pioneered offline-first financial inclusion at population scale starting in 1976; Sabina inherited that institutional discipline. Between Ch1 and The Crossing, her offline-first credentials transferred — first to UN field operations (Cox's Bazar Rohingya response), then to multinational science-mission procurement. Manages the Nansen's consortium funding under jurisdictional pressure (UAE-led with Indian, Brazilian, French, Norwegian co-funders).
 
 **Regulatory regime:** Bangladesh Data Protection Act + Bangladesh Bank Information Security Guidelines + Bangladesh's Microfinance Regulatory Authority oversight.
 
@@ -47,7 +47,7 @@ Full sheets exist for Dr. Anna Yusupova, Maria Santos, and the Senior Technical 
 
 **Identity:** Male. Gulf-region (Emirati, Kuwaiti, or Filipino-Gulf — the actual demographic of Gulf offshore-platform crews is heavily Filipino, Indian, Bangladeshi). PAO recommendation: Filipino, given the demographic accuracy. Name candidates: Joel Reyes, Marco Castillo, Alfonso Cruz. Age 40–47.
 
-**Backstory:** In Ch1 he was a GCC offshore-platform field engineer dealing with intermittent cloud connectivity and SaaS data-loss exposure. Between Ch1 and The Crossing, he transitioned from offshore-platform engineering to sealed-environment ops — credentials transferred cleanly. Manages life-support systems on Sunfish-1.
+**Backstory:** In Ch1 he was a GCC offshore-platform field engineer dealing with intermittent cloud connectivity and SaaS data-loss exposure. Between Ch1 and The Crossing, he transitioned from offshore-platform engineering to sealed-environment ops — credentials transferred cleanly. Manages life-support systems on the Nansen.
 
 **Role in chapter:** Background presence throughout. Two specific moments: (1) Act II calibration check on life support during the SaaS termination event — the Director's voice: "Joel ran life-support diagnostics independently, on local sensors only, while the rest of us were redirecting endpoints. He never trusted cloud telemetry on the platforms either." (2) Act III: he is the watch officer who calls medical when the Senior Technical Specialist collapses. He is the first person to register that something is wrong.
 
@@ -61,7 +61,7 @@ Full sheets exist for Dr. Anna Yusupova, Maria Santos, and the Senior Technical 
 
 **Affiliation:** **NIPR (National Institute of Polar Research, Tokyo)** — the real Japanese national polar research body, founded 1973, operates Showa Station and a network of Antarctic field sites under the Japanese Antarctic Research Expedition (JARE) program (running continuously since 1956).
 
-**Backstory:** University of Tokyo or Hokkaido University PhD in glaciology. Thirty years of Antarctic research. Multiple JARE deployments to Showa Station. Co-PI on Sunfish-1's scientific program. Reports to Dr. Anna Yusupova for command questions, leads scientific decision-making for the mission. Bilingual Japanese / English (fluent technical English from decades of international polar collaboration; Japanese senior scientists at NIPR are routinely English-fluent).
+**Backstory:** University of Tokyo or Hokkaido University PhD in glaciology. Thirty years of Antarctic research. Multiple JARE deployments to Showa Station. Co-PI on the Nansen's scientific program. Reports to Dr. Anna Yusupova for command questions, leads scientific decision-making for the mission. Bilingual Japanese / English (fluent technical English from decades of international polar collaboration; Japanese senior scientists at NIPR are routinely English-fluent).
 
 **Regulatory regime:** Japan APPI 2022 (Act on the Protection of Personal Information) + cabinet office guidelines + MEXT (Ministry of Education, Culture, Sports, Science and Technology) research integrity framework.
 
@@ -91,7 +91,7 @@ These characters are already established in Ch5–Ch9. The Crossing references t
 
 ### Dr. Marguerite Voss (Ch5 — Enterprise Lens)
 
-**Cameo:** Brief flashback or citation in Act I. Three years before the mission, Voss was the procurement officer who cleared the Sunfish-1 architecture for the consortium's procurement review. The Director's voice: "I sat across from Voss in 2027 with the architecture document. She read it for two weeks. She came back with seven conditions. We addressed five before procurement and committed to the last two as ongoing audit. Sunfish-1 is one of those audits."
+**Cameo:** Brief flashback or citation in Act I. Three years before the mission, Voss was the procurement officer who cleared the Nansen architecture for the consortium's procurement review. The Director's voice: "I sat across from Voss in 2027 with the architecture document. She read it for two weeks. She came back with seven conditions. We addressed five before procurement and committed to the last two as ongoing audit. the Nansen is one of those audits."
 
 ### Dr. Dmitri Shevchenko (Ch6 — Distributed Systems Lens)
 
