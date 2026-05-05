@@ -44,7 +44,7 @@ The mission is the **maiden voyage** of Sunfish — real OSS, version 0.x, no pr
 ### Joel (principal architect)
 
 - **Principal author** of Joel's paper (Vol 1); named the architecture after his first submarine
-- **Former U.S. Navy** Nuclear Machinist's Mate, Petty Officer Second Class (PO2 / E-5)
+- **Former US Navy nuclear engineer** (per CO directive 2026-05-05)
 - Served aboard **USS Sunfish SSN-649** (Sturgeon-class fast attack, decommissioned 1998); 1990s service
 - Post-Navy: civilian distributed-systems engineering; eventually authored the Sunfish paper
 - Mid-50s; same generation as Anna
@@ -148,7 +148,7 @@ Optional drafting placeholders accepted:
 Sunfish-1 crew (Anna picks the technical contributors; consortium picks mission-fulfillment crew):
 
 - **Anna Yusupova — Mission Director (Moiraine).** Full sheet at `character-sheets/dr-leader-mission-director.md` + Vol 2 series-arc layer + Anna-Joel love-arc layer.
-- **Joel Reyes — Principal Architect (Rand).** Full sheet at `character-sheets/joel-reyes-principal-architect.md` + Anna-Joel love-arc layer. USS Sunfish SSN-649 NPO PO2/E-5; named the architecture after his first submarine.
+- **Joel Reyes — Principal Architect (Rand).** Full sheet at `character-sheets/joel-reyes-principal-architect.md` + Anna-Joel love-arc layer. USS Sunfish SSN-649 nuclear engineer; named the architecture after his first submarine.
 - **Priya Iyer — Schema Migration / Lead Instrumentation (Nynaeve).** Full sheet at `character-sheets/priya-iyer-schema-migration.md`.
 - **Wanjiru Kamau — Security / Key Management / Long Now anchor (Egwene).** Full sheet at `character-sheets/wanjiru-kamau-security-policy.md`.
 - **Sabina Rahman — Connectivity-gradient practitioner (Mat).** Sheet at `_minor-characters.md`; deeper sheet deferred to concept-note-driven need.

@@ -36,7 +36,7 @@ XO delegated the Mermaid → ebook rendering issue; PAO investigated; cross-repo
 
 ### Character sheets (full, in `.pao-inbox/_creative/character-sheets/`)
 - `dr-leader-mission-director.md` — Anna Yusupova; Mission Director; Moiraine analog; existing CO-locked Vol 1 sheet + Vol 2 series-arc layer + Anna-Joel love-arc layer
-- `joel-reyes-principal-architect.md` — Joel Reyes; Principal Architect; Rand al'Thor analog; former U.S. Navy Nuclear MM2 PO2/E-5 USS Sunfish SSN-649; named the architecture after his first submarine; promoted from minor character; love-arc layer included
+- `joel-reyes-principal-architect.md` — Joel Reyes; Principal Architect; Rand al'Thor analog; former US Navy nuclear engineer USS Sunfish SSN-649; named the architecture after his first submarine; promoted from minor character; love-arc layer included
 - `priya-iyer-schema-migration.md` — Priya Iyer; Lead Instrumentation Engineer + Sunfish OSS schema-migration co-author; Nynaeve al'Meara analog; Healing-channeler
 - `wanjiru-kamau-security-policy.md` — Wanjiru Kamau; Relay Operations + Sunfish OSS security-architecture co-author; Egwene al'Vere analog; Saidar-channeler; *the* Long Now character
 - `stefan-reinhardt-rival-architect.md` — Stefan Reinhardt; Principal Architect of TrustMesh / HelveSync (rival platform); German; Anna's former AWI postdoctoral colleague; emerging Forsaken; the engineer who didn't disclose
