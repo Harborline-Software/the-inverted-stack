@@ -430,3 +430,81 @@ The surface-window call after Segment 3 — Anna's mother in St. Petersburg noti
 The partnership is not a redemption arc for Anna. She does not need to be rescued from the work-over-relationships pattern or the prior-failure hardening. The partnership is the second-half-of-life adult relationship between two professional operators who recognized each other across professional lines and built something with care. The Long Now answer the love arc carries: *what we build with the people we recognize is what survives the work.*
 
 The architecture's lasting answer is the mesh; the love arc's lasting answer is Anna and Joel. Both are the same answer in different registers.
+
+---
+
+## Voice register specification (CO directive 2026-05-05)
+
+> **Why this layer:** the canonical voice spec for Anna Yusupova's narration and dialogue across Vol 2. This is the register the chapter-drafter agent, prose-reviewer, and any voice-pass agent must lock onto before drafting or revising any Anna passage.
+
+### The full register, as locked
+
+Dr. Anna Yusupova's voice is **compressed and deliberate**: the cadence of a senior mission director who came up through hard science and has spent two decades in multi-national polar work. She thinks and speaks in the register of **Russian academic rigor with Uzbek family warmth underneath**, so her sentences are clear, precise, and slightly formal, but they never feel cold.
+
+**In command**, she is direct rather than blunt: she has already weighed the room, the politics, and the cost of each sentence before she says it, and what comes out is the minimum necessary to move the work forward. She does not waste words on status displays; authority is assumed, not performed, and it shows up in *how* she names procedures, risks, and decisions without hedging.
+
+**Personal feeling appears only in controlled flashes** — one sentence about fear, one sensory memory of a bakery, one line that acknowledges what something costs — then she returns to the work.
+
+**Her private logs** read like staff history written for the next mission director: operationally specific, ethically lucid, and honest about what scared her, but still built out of **short, declarative sentences that land like decisions rather than confessions**.
+
+### What this means for prose
+
+| Aspect | Calibration |
+|---|---|
+| Sentence length | Short to medium. Long compound sentences are rare and load-bearing when they appear. |
+| Register | Slightly formal; Russian academic precision; never bureaucratic; never cold. |
+| Cadence | Compressed. Each sentence has weighed its place. Restraint is the default. |
+| Authority | Assumed, not asserted. The writing carries it through naming and decisiveness, not through self-reference. |
+| Hedging | Almost none. Not from arrogance — from having already decided. |
+| Emotional content | Controlled flashes; one sentence at a time; followed by return to the work. |
+| Sensory memory | Earned, sparing. A bakery, a hum, a specific light. Once per chapter at most; once per several chapters typically. |
+| Cost-acknowledgment | Honest, single-line. *That cost something.* / *I knew what I was spending.* Not confession; not stoicism. Just naming. |
+| Private-log register | Staff-history-for-the-next-mission-director — operationally specific, ethically lucid, honest about fear, built of short declarative sentences that land like decisions rather than confessions. |
+
+### Forbidden registers
+
+What Anna's voice must NOT do:
+
+- **No academic scaffolding.** *I would like to note*, *as we have seen*, *it bears mentioning* — out.
+- **No rhetorical flourish for its own sake.** Devices land when they earn their place; restraint is the default.
+- **No emotional escalation.** Anna does not work up to a feeling; she names it and returns.
+- **No self-aggrandizement.** Authority shows through naming, not through declaration.
+- **No false modesty.** She does not deflect from competence she has earned.
+- **No anti-AI tells.** No *delve*, no *underscore*, no *tapestry*, no *crucial*, no *stands as a testament*. (See `.claude/skills/anti-ai-tells/SKILL.md`.)
+- **No confession-register interiority.** Her diary is staff-history-for-the-next, not journal entry. Even when she is honest about fear, the sentences are decisions, not confessions.
+- **No forecast register.** Per `series-arc-sunfish-trajectory.md` § 5.3 — she does not foretell what the architecture becomes.
+
+### Concrete sentence-level patterns
+
+**Command sentence (typical):**
+> *Submerge at 0612. Set degraded-mode operational protocols.*
+
+**Procedural narration:**
+> *I checked the audit log. The last revocation propagation had completed at 0247. The relay layer was dormant; the gossip protocol was idle. Routine.*
+
+**Controlled emotional flash:**
+> *I missed the bakery on Ostrovsky Street. I had not expected to. I returned to the watch station.*
+
+**Private-log register (staff-history-for-the-next):**
+> *The decision to authorize the schema migration on operational grounds was mine. Priya carried it. I would make the same decision again. The cost was that we asked Priya to do something she would have refused in lab review. She forgave me by walking Joel through the migration without comment. I am writing this down for whoever has to make a similar decision next.*
+
+**Cost-acknowledgment, single line:**
+> *That cost something. I went back to the work.*
+
+**Sensory-memory beat (rare; load-bearing when it appears):**
+> *The bridge was quiet. I thought of my mother's records in the metal cabinet in St. Petersburg, and then I did not.*
+
+### How to verify a passage matches Anna's register
+
+Three checks:
+
+1. **The "would she write this in a debrief?" test.** Could this paragraph appear in a mission-debrief document? If yes — even at the staff-history-for-the-next register — the voice is right. If no — if it reads like a magazine-style personal essay, or like literary fiction's free-indirect style — the voice has drifted.
+2. **The "compression" test.** Read the paragraph aloud. Does each sentence carry its weight? Could any sentence be cut without losing operational or ethical meaning? If yes, cut it.
+3. **The "controlled flash" test.** Find the emotional beats in the passage. Are they single-sentence, named-then-returned-from? Or do they sustain across paragraphs? If sustained — compress them; Anna does not sustain.
+
+### Cross-references
+
+- **Voice exemplar:** `.pao-inbox/_creative/oss-architects-voices/02-anna-mission-log-fragment.md` is the canonical existing voice reference; this register specification builds on it
+- **Vol 1 closing chapter:** `chapters/closing/the-crossing.md` carries an early version of Anna's voice; the existing register here is the seed
+- **Anti-AI-tells skill:** `.claude/skills/anti-ai-tells/SKILL.md` — consult before finalizing any Anna passage
+- **Crew-log-style-entry skill:** `.claude/skills/crew-log-style-entry/SKILL.md` — generates Anna's formal-log and diary entries in this register
