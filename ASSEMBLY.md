@@ -73,6 +73,34 @@ Phase 5 cross-reference cleanup substantially complete (verified 2026-05-01: all
 
 **The Crossing** (vision-of-solution narrative chapter) merged 2026-05-01. First-person staff history, Anna Yusupova POV, five-act structure (Departure, Submerged Transit, Death, Window That Doesn't Come, Return). 4,396 words. Cast: Anna Yusupova (Uzbek, AARI/St. Petersburg-affiliated), Dr. Diego Vargas (Argentine, IAA, the senior technical specialist who dies), Dr. Hiroshi Nakamura (Japanese, NIPR), Maria Santos (Brazilian, medical officer), Priya Iyer (Indian, instrumentation), Sabina Rahman (Bangladeshi, logistics — Grameen lineage), Joel Reyes (Filipino, life-support), Wanjiru Kamau (Kenyan, comms — M-PESA lineage). Concept note + character sheets at `.pao-inbox/_creative/`. Yeoman self-review directive queued in `.pao-inbox/`.
 
+**Vol-2 reframing pending revision pass:** the locked Vol 2 design (concept note 2026-05-04) replaces Diego's death with Diego's survival + the leak-and-fire-cascade landing in Segment 3 of a multi-segment under-ice mission. The existing Vol 1 closing chapter (`chapters/closing/the-crossing.md`) requires a separate revision pass to align with the multi-segment design + Anna-read-paper-not-built-it framing + leak-event-as-Diego-survival rather than death-scene; ~3-5 hour pass; CO-gated. Until that pass, the Vol 1 chapter remains the canonical Vol 1 closing as drafted.
+
+## Vol 2 status (Book 1 of the Sunfish series — story-first restructure)
+
+**Architectural foundation complete (2026-05-04 evening; 31 PRs landed #74→#104).** Vol 2 is a story-first restructure narrated by Anna Yusupova in first person; Vol 1 (the existing 154,337-word manuscript) is canonically Joel Reyes's research paper in-universe, with Chris Wood as real-world author (H.G. Wells convention).
+
+**Outline drafted (2026-05-04):** 18 chapters across three acts; ~90,000-100,000 words target / ~9-10 hours audiobook. See `chapters/book-2/CHAPTER-OUTLINE.md` for the working blueprint and `chapters/book-2/README.md` for orientation.
+
+| Phase | Days | Chapters | Words target | Status |
+|---|---|---:|---:|---|
+| Act I — Departure and the first under-ice realization | 1-21 | Ch 1-6 | ~30,000 | all `icm/outline` |
+| Act II — Subsystems hold; the contest sharpens | 22-42 | Ch 7-12 | ~30,000 | all `icm/outline` |
+| Act III — Cascade, ascent, and the cumulative reveal | 43-56 | Ch 13-18 | ~33,000 | all `icm/outline` |
+| **Total** | 1-56 | 18 | **~93,000** | outline-stage |
+
+Pipeline plumbing: `build/audiobook.py` carries `VOL2_CHAPTER_FILES` (placeholder paths matching the directory structure); paths activate (move into `CHAPTER_FILES` or render via `--only chXX`) once each chapter reaches `icm/draft`.
+
+**Concept artifacts** (read-order for any drafter):
+1. `.pao-inbox/_creative/vol-2-concept-note-2026-05-04.md` — 12-section synthesis (~7,500 words)
+2. `.pao-inbox/_creative/vol-2-concept-locked-elements-2026-05-04.md` — running locks index
+3. `.pao-inbox/_creative/character-sheets/` — Anna, Joel, Priya, Wanjiru, Stefan, Astrid, Helvetia
+4. `.pao-inbox/_creative/forsaken-position-papers/` + `oss-architects-voices/` — voice references
+5. `.pao-inbox/_decisions/2026-05-04-vol2-boat-power-option-c-locked.md` — multi-segment mission timeline
+
+**CO-gated:** listen-test pair drafting (Ch 5 *The Day-Twenty Realization* + Ch 2 *The Recruitment Interview*; concept note §9). Cheapest validation: ~15,000 words → Kokoro render → ~100-minute audiobook listen-test → verdict drives full Book 1 commit-or-revise.
+
+**No blockers from PAO side** as of 2026-05-04 evening.
+
 ## Next Steps
 
 1. **`icm/voice-check`** (author, 9 extensions): Tier 1 first per priority queue. Highest leverage: #45 Collaborator Revocation (closes Ch15 split UPF).
@@ -93,6 +121,6 @@ make lint        # Check broken cross-references
 
 `build/Makefile` includes Ch21–23 + Appendix F+G in `draft-pdf` (added 2026-04-30 PR #26).
 `build/lint.py` recognises Ch21–23 + Appendix F+G (added 2026-04-30 PR #23).
-`build/audiobook.py` includes Ch22+Ch23 in `CHAPTER_FILES` (added 2026-04-30 PR #26).
+`build/audiobook.py` includes Ch22+Ch23 in `CHAPTER_FILES` (added 2026-04-30 PR #26). Vol 2 paths staged in `VOL2_CHAPTER_FILES` (added 2026-05-04, this PR); inert until each Vol 2 chapter reaches `icm/draft`.
 
 Lint status: 0 errors, 2 warnings (Ch16 mid-stream forward-secrecy boundary architectural Q + Ch22 Cohn-Gordon 2016 PCS deferred citation; both legitimate deferred-work trackers).

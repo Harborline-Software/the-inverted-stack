@@ -445,6 +445,41 @@ CHAPTER_FILES = [
     "appendices/appendix-g-glossary.md",
 ]
 
+# Vol 2 (Book 1 of the Sunfish series) — story-first restructure narrated by
+# Anna Yusupova. Outline at chapters/book-2/CHAPTER-OUTLINE.md; concept
+# artifact at .pao-inbox/_creative/vol-2-concept-note-2026-05-04.md.
+#
+# Paths below are PLACEHOLDERS matching the planned 18-chapter structure
+# (Act I Ch 1-6 / Act II Ch 7-12 / Act III Ch 13-18). They are NOT yet wired
+# into CHAPTER_FILES — the rendering pipeline would error on missing files.
+# The activation pattern: when a Vol 2 chapter reaches icm/draft, append its
+# entry from VOL2_CHAPTER_FILES into CHAPTER_FILES (or render selectively via
+# `--only chXX` once the file exists). The listen-test pair (Ch 5 + Ch 2)
+# will be the first two activations per concept note §9.
+VOL2_CHAPTER_FILES = [
+    # Act I — Departure and the first under-ice realization (Days 1-21)
+    "book-2/act-1/ch01-departure.md",
+    "book-2/act-1/ch02-recruitment-interview.md",
+    "book-2/act-1/ch03-drake-passage-ice-edge.md",
+    "book-2/act-1/ch04-first-submersion.md",
+    "book-2/act-1/ch05-day-twenty-realization.md",
+    "book-2/act-1/ch06-first-surface-first-forsaken-reveal.md",
+    # Act II — Subsystems hold; the contest sharpens (Days 22-42)
+    "book-2/act-2/ch07-joels-sunfish.md",
+    "book-2/act-2/ch08-second-submersion.md",
+    "book-2/act-2/ch09-sync-daemon-under-drift.md",
+    "book-2/act-2/ch10-aftermath-of-a-mission-that-once-was.md",
+    "book-2/act-2/ch11-second-surface-second-forsaken-reveal.md",
+    "book-2/act-2/ch12-beginning-of-the-end.md",
+    # Act III — Cascade, ascent, and the cumulative reveal (Days 43-56)
+    "book-2/act-3/ch13-schema-that-should-not-migrate.md",
+    "book-2/act-3/ch14-the-crossing.md",
+    "book-2/act-3/ch15-compromised-relay-holds.md",
+    "book-2/act-3/ch16-final-ascent.md",
+    "book-2/act-3/ch17-transit-north.md",
+    "book-2/act-3/ch18-punta-arenas-surfacing.md",
+]
+
 CHUNK_CHAR_BUDGET = 700  # target per-request size in characters (Kokoro default)
 
 # Engine-aware chunk budget. Chatterbox caps each request at ~100 sec /
