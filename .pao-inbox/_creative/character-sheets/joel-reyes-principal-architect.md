@@ -286,6 +286,38 @@ Anna is a careful observer; her vetting standard is built on reading people accu
 - His "what he fears" list now also includes: that the feelings are situational and will not survive the mission; that disclosure would damage what he has built with Anna professionally; that the architecture's failure could foreclose any future relationship before it has a chance to begin
 - His voice samples are unchanged; the love arc is interior; the existing voice samples are appropriate for both the architectural and the romantic interior
 
+## The leak event — Joel's protective action (CO direction 2026-05-05)
+
+During the leak-with-fire-cascade in Segment 3, **Joel does something to try to protect Anna. He would give his life to save her.** This is the moment the discipline cracks — not by Joel's choice but by his instinct.
+
+**Specific scenario** (PAO recommendation; CO can pin):
+
+During the compartment isolation following the 0342 isolation order, procedure requires a final-check of the bulkhead seal *from the unsealed side* before lockdown. Standard practice: the senior officer present (Anna, as Mission Director) performs the final check. The check is operationally safe under normal conditions but carries residual risk if water ingress accelerates during the ~90-second window — the person on the unsealed side would be trapped, lockdown cannot abort mid-cycle, the trapped person would be left until the larger casualty was contained.
+
+Anna prepares to do the check herself, per procedure.
+
+Joel — without consultation, without a word — moves between her and the bulkhead and does the check himself.
+
+The check completes. The seal is verified. The lockdown proceeds. The act takes ~90 seconds. Watch log notes that *Reyes performed the bulkhead-check.* No one comments because nothing went wrong. Anna registers it. Joel does not explain. Anna does not ask.
+
+**Why Joel acts:**
+
+The Navy-nuclear discipline says: follow procedure; protect the boat; protect the crew. Procedure does not say *protect the Mission Director specifically.* The procedure-following-engineer who has held the discipline for thirty years would, in any other casualty, have stood at his assigned post and let the senior officer perform her assigned duty. He has done exactly that across multiple Navy casualties in the 1990s and a dozen civilian distributed-systems incidents since. The discipline has held without exception.
+
+It does not hold here. Joel acts before the procedural part of his mind can stop him. The action is small, specific, ninety seconds long, and entirely outside what his training would have authorized him to do without consulting the bridge. He chose Anna over procedure for one decision in thirty years. He does not yet have a name for why.
+
+**What Joel doesn't say to himself afterward:**
+
+That he would have stayed on the unsealed side if water ingress had accelerated and the seal had to close on him. He didn't say this to himself before the act either; he didn't have time. He says it to himself, exactly once, three days later, in his bunk during a watch he was not standing. He does not say it again until the Book 3 disclosure.
+
+**What this changes about Joel's interior across the rest of Book 1:**
+
+The act exists in him. He cannot un-do it. He cannot un-know that he would have stayed. The naval-nuclear discipline that has organized his life is no longer the only thing organizing him — Anna is. He registers this; he does not know what to do with it; he does what he has always done in the absence of a known procedure, which is *the work in front of him,* until he has time to think.
+
+He does not disclose. The Book 3 disclosure timeline holds. The act compounds privately until then.
+
+**What Anna does with the recognition** — see the mirror layer in `dr-leader-mission-director.md`.
+
 ## Series-end note
 
 The partnership is not a redemption arc for Joel. He does not need to be rescued from the Navy past or the failed marriage. The partnership is the second-half-of-life adult relationship between two professional operators who recognized each other across professional lines and built something with care. The Long Now answer the love arc carries: *what we build with the people we recognize is what survives the work.*

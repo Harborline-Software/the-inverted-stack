@@ -365,6 +365,35 @@ Five reasons, layered:
 - **Does not displace the architectural / Forsaken / Long Now arcs.** The love arc is a layer; the architectural arc is the spine.
 - **Does not become a Hollywood moment.** Both Anna and Joel are mid-50s senior operators. The romantic register is mature, quiet, and disciplined. The disclosure is a conversation, not a scene.
 
+## The leak event — what Anna registers (CO direction 2026-05-05)
+
+During the leak-with-fire-cascade in Segment 3, **Joel does something to try to protect Anna.** Anna registers it. The companion layer in `joel-reyes-principal-architect.md` describes the specific act (the bulkhead-check on the unsealed side; Joel taking the position Anna would have stood; ~90 seconds of bounded but real risk). This section is what *Anna* does with the recognition.
+
+**Anna's interior in the moment:**
+
+She sees Joel move before she sees what he is doing. The recognition is post-hoc — she had already initiated the check-step that Joel intercepted; her body had already shifted toward the bulkhead. Joel's intercept is faster than her reasoning. Her command-authority response is to allow the substitution rather than to abort and re-initiate, because aborting mid-procedure would compound the casualty. The choice is operational. The recognition is personal.
+
+She knows what Joel just did. She knows it broke procedure for him in a way thirty years of nuclear-Navy discipline had not previously broken. She knows the only thing in the room that could have caused the discipline to crack was her. The recognition lands during the ~90 seconds of the check while she is standing, watching the watch-log mark *Reyes performed the bulkhead-check,* without the authority or the inclination to override.
+
+She does not say anything. The lockdown completes. The mission continues. Anna's command authority remains unsentimental for the rest of the cascade because it has to. Her interior carries the recognition as quietly as Joel's does.
+
+**What changes for Anna because of this:**
+
+Her existing love-arc registration (during Segment 2) was: *Joel has feelings for me; I am disciplining myself not to act on the recognition.* After the bulkhead-check, the registration is: *Joel would have stayed on the unsealed side; he chose me over procedure; he would have given his life.* The interior content shifts from feelings-recognition to debt-recognition. The discipline still holds for the rest of the mission — command-protection requires it — but the discipline now has to hold against something heavier.
+
+The disclosure timeline (Book 3; Anna initiates) doesn't change. What changes is what the disclosure is *about.* Anna doesn't initiate by declaring feelings; she initiates by acknowledging *what happened in Compartment 4 on Day 47.* The conversation in Book 3 is a mutual recognition of an event neither has spoken aloud since.
+
+**What Anna does NOT do during the rest of Book 1:**
+
+- Does NOT thank Joel. The act doesn't admit thanks; thanks would diminish what happened by treating it as a service.
+- Does NOT discipline Joel. The act broke procedure but produced no harm; disciplining him would acknowledge what disciplining him would mean, which she cannot do during operations.
+- Does NOT reassign Joel. Removing him from positions where the act might recur would be the operational move; she does not make it; the choice not to is itself information.
+- Does NOT speak of the act to anyone — not to Wanjiru, not to Diego, not to her mother during the surface-window calls. The act is hers and Joel's; the rest of the crew sees the watch-log entry; only the two of them know what the entry was actually about.
+
+**The mother registers the change before Anna admits it.**
+
+The surface-window call after Segment 3 (the recovery letter to María Elena beat happens in this same window per the existing locked structure) — Anna's mother in St. Petersburg notices that Anna's voice is different. The mother does not name what she has registered. She tells Anna to come home safely. *I am coming home, Mama.* The mother knows. Anna doesn't know yet that she knows. The Book 2 conversation between them is the one that surfaces what the mother already heard.
+
 ## Series-end note
 
 The partnership is not a redemption arc for Anna. She does not need to be rescued from the work-over-relationships pattern or the prior-failure hardening. The partnership is the second-half-of-life adult relationship between two professional operators who recognized each other across professional lines and built something with care. The Long Now answer the love arc carries: *what we build with the people we recognize is what survives the work.*

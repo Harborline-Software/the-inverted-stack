@@ -263,10 +263,13 @@ The arcs below are working candidates; specific ordering, emphasis, and titling 
 **Setting:** Segment 3, during and after the leak-and-fire cascade. Comm node damage threatens the gossip layer that propagates revocations. Sensor compartment loss threatens the audit trail. The cascading damage tests whether key-management decisions made during stable conditions can survive the boat's worst hour. They do. The architecture Wanjiru built for revocation-under-coercion gives the system enough redundancy to operate in the degraded mode. The retrospective recognition: *the security model that defended against political coercion turned out to defend against environmental degradation. The two threat models had a deeper structural similarity than either of us had named.*
 **Length target:** ~8,500 words.
 
-### Arc 6 — *The Crossing* (the leak event; Diego's competence; Anna's command)
+### Arc 6 — *The Crossing* (the leak event; Diego's competence; Joel's protective act; Anna's command)
 **Architectural claim:** the architecture is adequate, not heroic; the procedure is the heroic act.
 **Setting:** Segment 3, the leak-and-fire-cascade. 0317 leak alarm; 0319 cabin-to-bridge transit; 0321 assessment; 0342 compartment isolation order. Diego's polar-operational experience. Joel's nuclear-Navy training firing against his own architecture. Anna's command authority unsentimental. The 4,017 photographs. The Spanish letter to María Elena (recovery, not death notification). Diego retiring to San Martín de los Andes earned through what he did. *This chapter inherits beats from the existing Vol 1 closing chapter `The Crossing` — substantial revision pass required.*
-**Length target:** ~12,000 words (the climax; Vol 1's existing closing chapter is the source material).
+
+**The bulkhead-check beat (CO direction 2026-05-05; love-arc layer externalized):** During the compartment isolation, procedure requires a final-check of the bulkhead seal from the unsealed side; Anna prepares to do the check herself; Joel intercepts and does it himself. The act takes ~90 seconds. The watch log notes that *Reyes performed the bulkhead-check.* No one comments because nothing went wrong. Anna registers it. Joel does not explain. Anna does not ask. The discipline-crack is the moment Anna can read; the recognition compounds privately for the rest of Book 1; the Book 3 disclosure is not about feelings but about *what happened in Compartment 4 on Day 47.* See the love-arc layers in `joel-reyes-principal-architect.md` and `dr-leader-mission-director.md` for full treatment.
+
+**Length target:** ~12,000-13,000 words (the climax; Vol 1's existing closing chapter is the source material; the bulkhead-check beat adds ~600-1000 words within the chapter).
 
 ### Arc 7 — *The Aftermath of a Mission That Once Was* (Anna's prior-failure interior; flashback)
 **Architectural claim:** trust hardens in specific shapes; the inverse of betrayal is disclosure-without-compulsion.
