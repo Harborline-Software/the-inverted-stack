@@ -58,6 +58,18 @@ CHAPTERS_DIR = REPO / "chapters"
 OUT_DIR = REPO / "build" / "output" / "audiobook"
 SCRIPTS_DIR = OUT_DIR / "scripts"
 
+
+def volume_for_chapter(rel_path: str) -> str:
+    """Map a chapter's repo-relative source path to its audiobook volume slug.
+
+    Vol 2 chapters live under chapters/book-2/; everything else (Vol 1) lands
+    in vol-1/. Output paths follow build/output/audiobook/<volume>/<stem>.mp3.
+    """
+    p = rel_path.replace("\\", "/")
+    if p.startswith("book-2/") or "/book-2/" in p:
+        return "vol-2"
+    return "vol-1"
+
 # Conservative: only acronyms/proper nouns that espeak demonstrably mangles.
 # Capitalized common acronyms (CRDT, JWT, OAuth, HTTP, JSON, etc.) spell out
 # correctly in Kokoro by default — leave them alone to avoid over-correction.
@@ -358,11 +370,32 @@ PRESETS_HIGGS = PRESETS_CHATTERBOX
 # on the Windows box requires it.
 ENGINES: dict[str, dict] = {
     "kokoro": {
+        # Default direct-to-Mac path. Known unreliable for sustained renders
+        # >5 min on CPU container (worker hard-crashes; see .wolf/buglog.json
+        # bug-097). Mitigated by the chunk cache in synth_chunk + the 8-retry
+        # backoff which rides out the auto-restart cycle.
         "presets": PRESETS_KOKORO,
         "default_base_url": "http://localhost:8880/v1",
         "model_name": "kokoro",
         "requires_auth": False,
-        "description": "Kokoro-82M FastAPI on the local Mac (default daily-driver)",
+        "description": "Kokoro-82M FastAPI on the local Mac (default daily-driver; CPU; chunk-cached against worker crashes)",
+    },
+    "kokoro-remote": {
+        # Future-state path: Kokoro proxied via higgs-audio on the Windows
+        # GPU box (model="kokoro" routes to its local :8880). The routing
+        # spec lands on COB's plate — when deployed, the higgs-audio service
+        # at desktop-umt08rn:8881 will short-circuit the voice catalog check
+        # for kokoro-class models and proxy through. As of 2026-05-05 the
+        # production server still runs the older code; kokoro voices return
+        # 404 "unknown voice" until the deploy lands. Verify with a probe:
+        #   curl -X POST .../v1/audio/speech -H "Authorization: Bearer ..." \
+        #     -d '{"model":"kokoro","voice":"af_bella",...}'
+        # Expect: 200 + audio bytes after deploy. Until then: stays unused.
+        "presets": PRESETS_KOKORO,
+        "default_base_url": "http://desktop-umt08rn:8881/v1",
+        "model_name": "kokoro",
+        "requires_auth": True,
+        "description": "Kokoro routed via higgs-audio proxy on Windows GPU box (port 8881; gated on COB deploy)",
     },
     "chatterbox": {
         "presets": PRESETS_CHATTERBOX,
@@ -370,10 +403,13 @@ ENGINES: dict[str, dict] = {
         # hostname for the Windows GPU box. Override examples:
         #   CHATTERBOX_URL=http://192.168.1.50:8881/v1 python build/audiobook.py --engine chatterbox
         #   --base-url http://desktop-umt08rn.taildefd38.ts.net:8881/v1
+        # Server-side model name is "higgs" per the unified TTS API spec
+        # (2026-05-05); update the model_name field if the server-side
+        # alias changes.
         "default_base_url": "http://desktop-umt08rn:8881/v1",
-        "model_name": "chatterbox",
+        "model_name": "higgs",
         "requires_auth": True,
-        "description": "Chatterbox (Resemble AI) on the Windows GPU box — voice-cloning, high-quality path",
+        "description": "Chatterbox/higgs (Resemble AI) on the Windows GPU box — voice-cloning, high-quality path",
     },
 }
 
@@ -1084,8 +1120,30 @@ SYNTH_HARD_CAP = 1200  # Kokoro prosody degrades past ~900 chars per call;
                        # 1400 soft target for paragraph grouping.
 
 
+CHUNK_CACHE_DIR = REPO / "build" / "output" / "audiobook" / "_chunk_cache"
+
+
+def _chunk_cache_key(voice: str, speed: float, text: str,
+                     model_name: str,
+                     exaggeration: float | None,
+                     cfg_weight: float | None,
+                     temperature: float | None) -> str:
+    import hashlib
+    h = hashlib.sha256()
+    h.update(model_name.encode("utf-8"))
+    h.update(b"|")
+    h.update(voice.encode("utf-8"))
+    h.update(b"|")
+    h.update(f"{speed:.4f}".encode("utf-8"))
+    h.update(b"|")
+    h.update(f"{exaggeration!r}|{cfg_weight!r}|{temperature!r}".encode("utf-8"))
+    h.update(b"|")
+    h.update(text.encode("utf-8"))
+    return h.hexdigest()[:24]
+
+
 def synth_chunk(client: OpenAI, voice: str, text: str, speed: float,
-                model_name: str = "kokoro", retries: int = 3,
+                model_name: str = "kokoro", retries: int = 8,
                 exaggeration: float | None = None,
                 cfg_weight: float | None = None,
                 temperature: float | None = None) -> bytes:
@@ -1104,6 +1162,21 @@ def synth_chunk(client: OpenAI, voice: str, text: str, speed: float,
     if temperature is not None:
         extra["temperature"] = temperature
     extra_body = extra or None
+
+    # Per-chunk disk cache. Kokoro CPU container hard-crashes after
+    # ~14 chunks of sustained 500-700 char synth (logged 2026-05-05;
+    # bug-097 progressive worker degradation). Without resume, every
+    # crash forces re-render from chunk 1. The cache lets a restarted
+    # render skip already-completed chunks. Cache key = sha(voice +
+    # speed + extras + text); identical inputs always produce identical
+    # synth, so the cache is safe to keep across runs.
+    CHUNK_CACHE_DIR.mkdir(parents=True, exist_ok=True)
+    cache_key = _chunk_cache_key(voice, speed, text, model_name,
+                                  exaggeration, cfg_weight, temperature)
+    cache_path = CHUNK_CACHE_DIR / f"{cache_key}.mp3"
+    if cache_path.exists():
+        return cache_path.read_bytes()
+
     for attempt in range(1, retries + 1):
         try:
             kwargs = dict(
@@ -1114,11 +1187,25 @@ def synth_chunk(client: OpenAI, voice: str, text: str, speed: float,
             )
             if extra_body is not None:
                 kwargs["extra_body"] = extra_body
-            with client.audio.speech.with_streaming_response.create(**kwargs) as r:
-                return r.read()
+            # Use non-streaming create(). Streaming responses against the
+            # local Kokoro container exhibit consistent mid-stream connection
+            # drops; non-streaming POSTs are reliable when the server is
+            # alive (verified 2026-05-05 at 840-char synth in 25.6s).
+            r = client.audio.speech.create(**kwargs)
+            mp3 = r.content
+            # Atomic write to disk cache (write-then-rename).
+            tmp_path = cache_path.with_suffix(".mp3.tmp")
+            tmp_path.write_bytes(mp3)
+            tmp_path.rename(cache_path)
+            return mp3
         except Exception as e:
             last_err = e
-            wait = 2 ** (attempt - 1)
+            # Long backoff ladder: Kokoro container takes ~10-15s to
+            # recover from a hard crash + restart, so we need windows
+            # longer than the SDK's default exponential. Cap individual
+            # waits at 30s; total max wait across 8 retries is ~120s,
+            # which covers two crash-restart cycles.
+            wait = min(30, 2 ** attempt)
             print(f"      retry {attempt}/{retries} after error: {e!r} (sleep {wait}s)", file=sys.stderr)
             time.sleep(wait)
     raise RuntimeError(f"{model_name} synth failed after {retries} retries: {last_err!r}")
@@ -1430,7 +1517,20 @@ def main() -> None:
     else:
         api_key = "not-needed"
 
-    client = OpenAI(base_url=base_url, api_key=api_key)
+    # Explicit long timeout + disable HTTP keep-alive on the underlying
+    # httpx client. Long-running renders against the local Kokoro container
+    # exhibit a ~5-min connection-lifetime cap (Docker Desktop's vpnkit
+    # silently drops streamed connections that span much over 5 minutes
+    # of total TCP lifetime, even when actively streaming bytes). Forcing
+    # `Connection: close` on every request makes each chunk synth a fresh
+    # TCP connection, so total connection age never accumulates.
+    import httpx
+    http_client = httpx.Client(
+        timeout=httpx.Timeout(300.0, connect=10.0),
+        headers={"Connection": "close"},
+        limits=httpx.Limits(max_keepalive_connections=0, max_connections=10),
+    )
+    client = OpenAI(base_url=base_url, api_key=api_key, http_client=http_client, max_retries=0)
 
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     SCRIPTS_DIR.mkdir(parents=True, exist_ok=True)
@@ -1462,9 +1562,12 @@ def main() -> None:
             continue
         suffix = args.output_suffix
         out_stem = Path(rel).stem + suffix
-        out_path = OUT_DIR / f"{out_stem}.mp3"
+        # Volume-organized output: build/output/audiobook/vol-1/...mp3
+        # vs build/output/audiobook/vol-2/...mp3. CO directive 2026-05-05.
+        volume_slug = volume_for_chapter(rel)
+        out_path = OUT_DIR / volume_slug / f"{out_stem}.mp3"
 
-        script_path = SCRIPTS_DIR / (out_stem + ".txt")
+        script_path = SCRIPTS_DIR / volume_slug / (out_stem + ".txt")
 
         if args.dry_run:
             script = build_script(md_path, engine=args.engine)
