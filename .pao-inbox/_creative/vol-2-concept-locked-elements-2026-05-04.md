@@ -182,3 +182,65 @@ Rival cast:
   - Three Forsaken position papers + voice-library README
 - **Awaiting:** CO review of concept note v1; direction on next step (Arc 1 chapter draft as audiobook listen-test proof-of-concept, per concept note §9).
 - **Deferred items** (per concept note §10): Vol 1 preface signature change to Joel + body framing reconciliation (substantive editorial decision; needs CO direction); The Crossing chapter revision pass for multi-segment design; supporting character sheet expansions (Sabina, Diego, Hiroshi, Maria) driven by concept-note-surface need rather than speculatively.
+
+---
+
+## 2026-05-05 — Locks added Tuesday (8 PRs merged)
+
+Substantial canon update across structural + lexical layers. The session validated the Vol 2 listen-test pair and authorized Act I drafting against the new canon.
+
+### Structural canon (LOCKED 2026-05-05)
+
+- **`vol-2-software-as-gravity.md`** — software-as-gravity-not-character framing. Six rails (Trust + prior betrayal / Career-cost + aging out / Class-region-institutional politics / Mission as survival / Grief-family-memory / Rival mission + institutional capture). Per-chapter rail assignments locked for all 18 chapters. **Captain-asks-engineer demoted from default to install-engine for Ch 4 only + selective elsewhere.** Validated by listen-test verdict.
+- **`vol-2-archive-and-capture-convention.md`** — Anchor stack (2026-grounded local-LLM); two-register voice (formal log + personal diary); KEK/DEK access controls; graceful degradation under hardware loss; forensic substrate; OSS-funding-asymmetry as known weakness.
+- **`vol-2-anchor-bridge-sync-mechanic.md`** — bandwidth-bounded surface windows; Wanjiru's active sync-triage; conditional preservation (boat must surface for archive to reach durability); convergence at docking.
+- **`series-arc-sunfish-trajectory.md`** — series-canon-only; never referenced from Vol 2 prose. Sunfish → Trek-Computer trajectory across 8 books; recurring OSS-funding-asymmetry failure-mode; institutional response; forbidden-registers list.
+
+### Craft refinements (LOCKED 2026-05-05)
+
+- **Three signature-discipline scenes** in early chapters: Joel bunk-laptop (Ch 1) / Priya fourth-pass (Ch 3) / Wanjiru exception-refusal (Ch 6). Reader meets each character through what they do, not what is described.
+- **Book 1 plot-binding metadata** on Joel + Priya + Wanjiru + Stefan character sheets. Distinguishes load-bearing-for-Vol-2 from future-arcs-only.
+- **Physical-texture + fear-axis differentiation** for Priya (visibly tense precision; technical wrongness) vs. Wanjiru (visibly relaxed rigor; political/user-impact wrongness).
+- **Anna voice register specification** (CO directive 2026-05-05) added at depth to her character sheet — compressed-deliberate; Russian academic rigor with Uzbek family warmth; authority assumed not performed; controlled emotional flashes; private-log register staff-history-for-the-next-mission-director.
+- **Ch 18 unavoidable Stefan exchange** — only on-page Anna-Stefan moment in Vol 2; thirty seconds of formal courtesy at Punta Arenas reception; what is NOT said carries the load.
+
+### Lexical canon (LOCKED 2026-05-05)
+
+- **Boat:** *RV Nansen* / *the Nansen* (after Fridtjof Nansen)
+- **Mission designation:** **MERIDIAN-7** (institutional naming pattern)
+- **Architecture:** *Sunfish* (unchanged; the platform/OSS project — gravity, not subject)
+- **Stefan's rival mission:** **HELVETICA-2** (matches Helvetia Trust SA)
+- **Joel's submarine:** *USS Sunfish SSN-649* (unchanged)
+
+### Chapters at icm/draft (post-listen-test approval)
+
+- **Ch 2 v4** — *The Recruitment Interview* — gravity rail (trust + prior betrayal); 5,445 words / 31.9 min audio. **Listen-test APPROVED 2026-05-05.**
+- **Ch 5 prose-pass** — *The Day-Twenty Realization* — grief-family-memory rail; 5,971 words / 36.5 min audio. **Listen-test APPROVED 2026-05-05.**
+- **Ch 1 — Departure** — dispatch in flight 2026-05-05 evening (chapter-drafter agent); first chapter drafted from-scratch under the validated gravity canon; trust + prior betrayal rail.
+
+### Tooling
+
+- **`crew-log-style-entry`** skill (PR #112) — formal-log + diary entry generator
+- **`vol2-chapter-reviewer`** subagent (PRs #116 + #117) — line + structural editor; seven-dimension framework; iterative pass calibration; refactored after Pass-2 validation
+- **`build/audiobook.py`** — defensive TTS mappings for hyphen-number forms (MERIDIAN-7 → MERIDIAN seven; HELVETICA-2 → Helvetica two; defensive fallback for legacy Sunfish-1)
+
+### Yeoman-side (gated on bandwidth + verdict-positive)
+
+Now-unblocked supporting-Vol-2 work:
+- Vol 1 *The Crossing* revision pass (multi-segment design + Anna-read-paper-not-built-it framing + leak-event-as-Diego-survival + Nansen/MERIDIAN-7 names)
+- Vol 1 preface dual-narrator framing reconciliation
+- Vol 1 Ch 1 + Ch 3 cast-swap audit
+
+Backlogged (Vol 1 audiobook tasks per Vol 2-only directive):
+- Audiobook silence-trim implementation
+- Alignment regen post-cast-swap
+- Phase 4 prune (Vol 1)
+
+## Status as of 2026-05-05 evening
+
+- **Vol 2 architectural foundation:** locked
+- **Vol 2 structural canon:** locked + listen-test-validated
+- **Vol 2 lexical canon:** locked
+- **Vol 2 listen-test pair:** APPROVED
+- **Act I drafting:** AUTHORIZED; Ch 1 in flight
+- **No blockers from PAO side**; canon is sufficient for chapter-drafter agent to produce remaining Vol 2 chapters

@@ -73,31 +73,61 @@ Phase 5 cross-reference cleanup substantially complete (verified 2026-05-01: all
 
 **The Crossing** (vision-of-solution narrative chapter) merged 2026-05-01. First-person staff history, Anna Yusupova POV, five-act structure (Departure, Submerged Transit, Death, Window That Doesn't Come, Return). 4,396 words. Cast: Anna Yusupova (Uzbek, AARI/St. Petersburg-affiliated), Dr. Diego Vargas (Argentine, IAA, the senior technical specialist who dies), Dr. Hiroshi Nakamura (Japanese, NIPR), Maria Santos (Brazilian, medical officer), Priya Iyer (Indian, instrumentation), Sabina Rahman (Bangladeshi, logistics — Grameen lineage), Joel Reyes (Filipino, life-support), Wanjiru Kamau (Kenyan, comms — M-PESA lineage). Concept note + character sheets at `.pao-inbox/_creative/`. Yeoman self-review directive queued in `.pao-inbox/`.
 
-**Vol-2 reframing pending revision pass:** the locked Vol 2 design (concept note 2026-05-04) replaces Diego's death with Diego's survival + the leak-and-fire-cascade landing in Segment 3 of a multi-segment under-ice mission. The existing Vol 1 closing chapter (`chapters/closing/the-crossing.md`) requires a separate revision pass to align with the multi-segment design + Anna-read-paper-not-built-it framing + leak-event-as-Diego-survival rather than death-scene; ~3-5 hour pass; CO-gated. Until that pass, the Vol 1 chapter remains the canonical Vol 1 closing as drafted.
+**Vol-2 reframing pending revision pass:** the locked Vol 2 design (concept note 2026-05-04) replaces Diego's death with Diego's survival + the leak-and-fire-cascade landing in Segment 3 of a multi-segment under-ice mission. The existing Vol 1 closing chapter (`chapters/closing/the-crossing.md`) requires a separate revision pass to align with the multi-segment design + Anna-read-paper-not-built-it framing + leak-event-as-Diego-survival rather than death-scene + the **Nansen / MERIDIAN-7 rename**; ~3-5 hour pass; gated on listen-test verdict (now positive). Until that pass, the Vol 1 chapter remains the canonical Vol 1 closing as drafted.
 
 ## Vol 2 status (Book 1 of the Sunfish series — story-first restructure)
 
-**Architectural foundation complete (2026-05-04 evening; 31 PRs landed #74→#104).** Vol 2 is a story-first restructure narrated by Anna Yusupova in first person; Vol 1 (the existing 154,337-word manuscript) is canonically Joel Reyes's research paper in-universe, with Chris Wood as real-world author (H.G. Wells convention).
+**Listen-test verdict: APPROVED 2026-05-05.** The Vol 2 listen-test pair (Ch 2 v4 + Ch 5 prose-pass) was rendered, listened to by CO, and approved. Authorization to proceed with Act I remaining chapters (Ch 1, 3, 4, 6) under the validated gravity canon. Story-first restructure, narrated by Anna Yusupova in first person; Vol 1 (the existing 154,337-word manuscript) is canonically Joel Reyes's research paper in-universe, with Chris Wood as real-world author (H.G. Wells convention).
 
-**Outline drafted (2026-05-04):** 18 chapters across three acts; ~90,000-100,000 words target / ~9-10 hours audiobook. See `chapters/book-2/CHAPTER-OUTLINE.md` for the working blueprint and `chapters/book-2/README.md` for orientation.
+### Locked names (CO directive 2026-05-05)
 
-| Phase | Days | Chapters | Words target | Status |
-|---|---|---:|---:|---|
-| Act I — Departure and the first under-ice realization | 1-21 | Ch 1-6 | ~30,000 | all `icm/outline` |
-| Act II — Subsystems hold; the contest sharpens | 22-42 | Ch 7-12 | ~30,000 | all `icm/outline` |
-| Act III — Cascade, ascent, and the cumulative reveal | 43-56 | Ch 13-18 | ~33,000 | all `icm/outline` |
-| **Total** | 1-56 | 18 | **~93,000** | outline-stage |
+- **Boat:** *RV Nansen* / *the Nansen* (after Fridtjof Nansen — Norwegian polar explorer + Nansen-Passport architect)
+- **Mission designation:** **MERIDIAN-7** (institutional naming pattern; consortium's 7th MERIDIAN-class expedition)
+- **Stefan's rival mission:** **HELVETICA-2** (matches corporate sponsor Helvetia Trust SA)
+- **Architecture:** *Sunfish* (the platform / OSS project — gravity, not subject)
+- **Joel's submarine:** *USS Sunfish SSN-649* (unchanged)
 
-Pipeline plumbing: `build/audiobook.py` carries `VOL2_CHAPTER_FILES` (placeholder paths matching the directory structure); paths activate (move into `CHAPTER_FILES` or render via `--only chXX`) once each chapter reaches `icm/draft`.
+### Chapter status (post-listen-test verdict)
 
-**Concept artifacts** (read-order for any drafter):
-1. `.pao-inbox/_creative/vol-2-concept-note-2026-05-04.md` — 12-section synthesis (~7,500 words)
-2. `.pao-inbox/_creative/vol-2-concept-locked-elements-2026-05-04.md` — running locks index
-3. `.pao-inbox/_creative/character-sheets/` — Anna, Joel, Priya, Wanjiru, Stefan, Astrid, Helvetia
-4. `.pao-inbox/_creative/forsaken-position-papers/` + `oss-architects-voices/` — voice references
-5. `.pao-inbox/_decisions/2026-05-04-vol2-boat-power-option-c-locked.md` — multi-segment mission timeline
+| Chapter | File | Status | Words | Audio |
+|---|---|---|---:|---:|
+| Ch 1 — Departure | `chapters/book-2/act-1/ch01-departure.md` | **icm/draft** (in flight 2026-05-05) | TBD | TBD |
+| Ch 2 — Recruitment Interview | `chapters/book-2/act-1/ch02-recruitment-interview.md` | **icm/draft (v4 — gravity rail; listen-test APPROVED)** | 5,445 | 31.9 min |
+| Ch 3 — Drake Passage | `chapters/book-2/act-1/ch03-drake-passage-ice-edge.md` | icm/outline (Act I dispatch authorized) | — | — |
+| Ch 4 — First Submersion | `chapters/book-2/act-1/ch04-first-submersion.md` | icm/outline (Act I dispatch authorized) | — | — |
+| Ch 5 — Day-Twenty Realization | `chapters/book-2/act-1/ch05-day-twenty-realization.md` | **icm/draft (prose-pass; listen-test APPROVED)** | 5,971 | 36.5 min |
+| Ch 6 — First Surface, First Forsaken Reveal | `chapters/book-2/act-1/ch06-first-surface-first-forsaken-reveal.md` | icm/outline (Act I dispatch authorized) | — | — |
+| Ch 7-12 (Act II) | `chapters/book-2/act-2/` | icm/outline | — | — |
+| Ch 13-18 (Act III) | `chapters/book-2/act-3/` | icm/outline | — | — |
 
-**CO-gated:** listen-test pair drafting (Ch 5 *The Day-Twenty Realization* + Ch 2 *The Recruitment Interview*; concept note §9). Cheapest validation: ~15,000 words → Kokoro render → ~100-minute audiobook listen-test → verdict drives full Book 1 commit-or-revise.
+**Total drafted: 11,416 words / 68.4 min audiobook** across the listen-test pair. Per the validated gravity canon, remaining Act I chapters dispatch sequentially against the canon docs.
+
+### Outline + targets
+
+18 chapters across three acts; ~90,000-100,000 words target / ~9-10 hours audiobook. See `chapters/book-2/CHAPTER-OUTLINE.md` for the working blueprint and `chapters/book-2/README.md` for orientation.
+
+| Phase | Days | Chapters | Words target |
+|---|---|---:|---:|
+| Act I — Departure and the first under-ice realization | 1-21 | Ch 1-6 | ~30,000 |
+| Act II — Subsystems hold; the contest sharpens | 22-42 | Ch 7-12 | ~30,000 |
+| Act III — Cascade, ascent, and the cumulative reveal | 43-56 | Ch 13-18 | ~33,000 |
+| **Total** | 1-56 | 18 | **~93,000** |
+
+Pipeline plumbing: `build/audiobook.py` `CHAPTER_FILES` carries Ch 2 + Ch 5 active paths; `VOL2_CHAPTER_FILES` carries the remaining paths (activate as each chapter reaches `icm/draft`). GPU-proxied Kokoro engine via higgs-audio at `desktop-umt08rn:8881` is the default since 2026-05-05; ~8× faster than legacy Mac CPU path.
+
+### Canon docs (read-order for any drafter)
+
+1. **`vol-2-software-as-gravity.md`** — software-as-gravity canon; six rails; per-chapter rail assignments; captain-asks-engineer demoted (LOCKED 2026-05-05; validated by listen-test verdict)
+2. `vol-2-archive-and-capture-convention.md` — Anchor stack + voice-register split + forensic substrate + OSS-funding-asymmetry (LOCKED 2026-05-05)
+3. `vol-2-anchor-bridge-sync-mechanic.md` — bandwidth-bounded surface windows + Wanjiru's sync-triage (LOCKED 2026-05-05)
+4. `series-arc-sunfish-trajectory.md` — series-canon-only; never referenced from Vol 2 prose (LOCKED 2026-05-05)
+5. `vol-2-concept-note-2026-05-04.md` — 12-section synthesis (concept-note §6.2 captain-asks-engineer superseded by gravity canon)
+6. `vol-2-concept-locked-elements-2026-05-04.md` — running locks index
+7. `chapters/book-2/CHAPTER-OUTLINE.md` — working blueprint with rail assignments + log-opener patterns + signature scenes
+8. `character-sheets/` — Anna, Joel, Priya, Wanjiru, Stefan, Astrid + minor characters (Joel/Priya/Wanjiru/Stefan all carry Book 1 plot-binding metadata + Vol 2 archive-and-capture canon layers)
+9. `forsaken-position-papers/` + `oss-architects-voices/` — voice references
+10. `.pao-inbox/_decisions/2026-05-04-vol2-boat-power-option-c-locked.md` — multi-segment mission timeline
+11. `.claude/skills/crew-log-style-entry/SKILL.md` + `.claude/agents/vol2-chapter-reviewer.md` + `.claude/skills/anti-ai-tells/SKILL.md` + `.claude/skills/literary-devices/SKILL.md`
 
 **No blockers from PAO side** as of 2026-05-04 evening.
 
