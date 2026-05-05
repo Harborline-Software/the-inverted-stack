@@ -129,26 +129,56 @@ Each prior limitation becomes a problem Sunfish was designed to solve. Each maps
 
 If the boat is **not** nuclear, the equipment-failure surface is different (battery/diesel sub couldn't credibly stay submerged for 56 days under the Filchner-Ronne ice shelf without a surface refresh, which is hard to do under ice). Working assumption holds unless CO has a reason to override.
 
-## What's still needed before full concept-note draft
+## Status of open items (closures recorded 2026-05-04)
 
-1. CO confirmation on the boat-power working assumption (or override)
-2. CO confirmation on the prior-failure framing — currently locked as path B (cut-short mission + colleague's failure of judgment)
-3. Optional: any specific real-named or fictional-named prior-systems CO wants to anchor
-4. Optional: Anna's prior-failure mission name / location / year — could be ~2-4 years before Sunfish-1 (e.g., 2022-2024 if Sunfish-1 is 2026)
+Original three open items, all now resolved:
 
-Once those are settled (or accepted as drafting placeholders), the full **concept note** draft begins:
+1. ✅ **Boat power source** — locked as **option C: diesel/AIP multinational research sub with multi-segment under-ice mission redesign**. See `.pao-inbox/_decisions/2026-05-04-vol2-boat-power-option-c-locked.md`. Three under-ice segments + two intermediate surface windows + transit windows; total 56-day mission length preserved; existing The Crossing chapter needs revision pass for multi-segment design (deferred, separate PR).
 
-- Premise (long form)
-- Diegetic mechanic (paper-as-artifact in Vol 2's universe)
-- Cast (expanded character sheets for Anna, Joel, plus existing crew)
-- Mission timeline (departure → 56 days → return; major beats placed)
-- Story shape (mission-frame-vs-flashback ratio per chapter)
-- Six to eight sample story arcs each carrying one architectural claim
-- Length target (~80-100k word audiobook target; ~9-10 hour listening time)
-- Audiobook listen-test plan (which two chapters to write first as proof of concept)
+2. ✅ **Prior-failure framing** — confirmed as **path B: cut-short mission + colleague's failure of judgment (undisclosed schema-migration limitation)**. With shadows of D (institutional pressure the colleague did not fully name).
+
+3. ✅ **Unnamed colleague disposition** — locked as **competitive parallel mission framework**. The colleague is **Dr. Stefan Reinhardt**, German; AWI Bremerhaven postdoctoral colleague of Anna's ~2008-2012; principal architect of TrustMesh / HelveSync (the rival platform); backed by Helvetia Trust SA (Swiss federated-identity firm; corporate-sponsor structural force). The rival mission targets the Arctic, staggered-with-overlap timing vs. Sunfish-1. Stefan is dramatized in flashback in Book 4; present off-page across the series; mostly-off-page rival crew with Captain Astrid Hansen as named operational counterpart.
+
+Optional drafting placeholders accepted:
+- Prior-failure mission anchored ~2022-2023 (one year before Stefan's corporate pivot completed; the schema-migration limitation manifested mid-mission)
+- Prior-architecture systems treated as architectural-class-named only (centralized SaaS sync; research-grade local-first toolkit; enterprise-vendor system) — no real-product anchoring
+
+## Cast (with character-sheet anchors)
+
+Sunfish-1 crew (Anna picks the technical contributors; consortium picks mission-fulfillment crew):
+
+- **Anna Yusupova — Mission Director (Moiraine).** Full sheet at `character-sheets/dr-leader-mission-director.md` + Vol 2 series-arc layer + Anna-Joel love-arc layer.
+- **Joel Reyes — Principal Architect (Rand).** Full sheet at `character-sheets/joel-reyes-principal-architect.md` + Anna-Joel love-arc layer. USS Sunfish SSN-649 NPO PO2/E-5; named the architecture after his first submarine.
+- **Priya Iyer — Schema Migration / Lead Instrumentation (Nynaeve).** Full sheet at `character-sheets/priya-iyer-schema-migration.md`.
+- **Wanjiru Kamau — Security / Key Management / Long Now anchor (Egwene).** Full sheet at `character-sheets/wanjiru-kamau-security-policy.md`.
+- **Sabina Rahman — Connectivity-gradient practitioner (Mat).** Sheet at `_minor-characters.md`; deeper sheet deferred to concept-note-driven need.
+- **Diego Vargas — Polar institutional memory (Perrin).** Sheet at `senior-technical-specialist.md`; Vol 2 series-arc layer deferred.
+- **Hiroshi Nakamura — Chief Scientist (Loial).** Sheet at `_minor-characters.md`; deeper sheet deferred.
+- **Maria Santos — Medical Officer (Min).** Sheet at `maria-santos.md`; Vol 2 series-arc layer deferred.
+
+Rival cast:
+
+- **Dr. Stefan Reinhardt — emerging Forsaken / fallen ally.** Full sheet at `character-sheets/stefan-reinhardt-rival-architect.md`.
+- **Captain Astrid Hansen — rival mission captain.** Full sheet at `character-sheets/astrid-hansen-rival-captain.md`.
+- **Helvetia Trust SA + Dr. Lukas Brandt — corporate sponsor + senior representative.** Full sheet at `character-sheets/helvetia-trust-corporate-sponsor.md`.
+
+## Voice reference library
+
+- `forsaken-position-papers/` — three sincere in-universe documents establishing the voice register for series chapter epigraphs from the centralizing direction:
+  - Stefan Reinhardt op-ed (Heise Online, October 2025)
+  - Helvetia Trust SA public position paper (April 2026)
+  - Working Group regulatory filing (February 2027, post-Sunfish-1)
 
 ## Status
 
-- Concept locks: this doc captures them
-- Concept note: pending CO confirmation on the open question + path B framing
-- Drafting begins after CO sign-off on the open items
+- **Concept note v1: drafted and committed** at `.pao-inbox/_creative/vol-2-concept-note-2026-05-04.md` (PR #101, 2026-05-04).
+- **All locked elements captured** across the multiple companion docs:
+  - This doc (`vol-2-concept-locked-elements-2026-05-04.md`) — running locks index
+  - `vol-2-concept-note-2026-05-04.md` — synthesized full plan (12 sections)
+  - `vol-2-series-arc-wot-bobiverse-2026-05-04.md` — XO series-arc research
+  - `vol-2-long-now-memory-thread-2026-05-04.md` — Long Now thread
+  - `2026-05-04-vol2-boat-power-option-c-locked.md` — boat-power decision
+  - Eight character sheets (four Sunfish + three rival cast + one love-arc layer mirrored)
+  - Three Forsaken position papers + voice-library README
+- **Awaiting:** CO review of concept note v1; direction on next step (Arc 1 chapter draft as audiobook listen-test proof-of-concept, per concept note §9).
+- **Deferred items** (per concept note §10): Vol 1 preface signature change to Joel + body framing reconciliation (substantive editorial decision; needs CO direction); The Crossing chapter revision pass for multi-segment design; supporting character sheet expansions (Sabina, Diego, Hiroshi, Maria) driven by concept-note-surface need rather than speculatively.
