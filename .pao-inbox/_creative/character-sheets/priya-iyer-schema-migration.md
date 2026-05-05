@@ -11,6 +11,48 @@ firewall-note: Indian-engineer-in-Pune is a real and substantial demographic. Ta
 
 # Character Sheet — Priya Iyer, Lead Instrumentation Engineer + Sunfish Schema-Migration Contributor
 
+## Book 1 plot-binding (load-bearing for Vol 2 prose; CO directive 2026-05-05)
+
+Drafters working any Vol 2 chapter should plant and pay off **only these elements** of Priya's character. Everything else in this sheet is reserve material for future books and should NOT be signaled in Book 1 prose.
+
+**Plot-binding for Vol 2 (must surface):**
+- Three-pass schema-migration discipline — instantiated early via the Ch 3 fourth-pass signature scene; landed in Ch 13's impossible-migration climax
+- *Says no, then says how-to-do-it-anyway, then walks the migration through* (Ch 13) — Nynaeve-says-no-until-forced register
+- **The fourth-pass signature-discipline scene (Ch 3)** — visible technical-precision tension; reader meets Priya through what her body does during operations
+- Visible technical-precision tension as her physical texture during operations (see § Physical texture below)
+- Fear-axis: being wrong **technically** — the architecture failing because of something she didn't see (see § Fear-axis below)
+
+**Future arcs only (do NOT signal in Vol 2 prose):**
+- Bangalore tech-industry / Pune-pivot biography at full depth (Vol 1 victim-register references stand; new biographical layers later)
+- Family / personal-relationship arcs
+- Replication-era branching decisions (Books 4-5; Bobiverse mechanic)
+- The eventual senior-architect role she grows into across the series
+- Any complete description of her interior at the moment of the Ch 1 4:47 PM bid disaster — that scene is Vol 1's register, not Vol 2's
+
+## Physical texture during operations (CO directive 2026-05-05 craft note)
+
+**Visibly tense precision.** Priya's body holds the discipline. Concrete patterns:
+- She **checks her own notes audibly** — flips paper pages or scrolls through screen content with visible deliberation, often re-reading the same line twice before acting
+- She **counts passes aloud** (or visibly mouths the numbers as she works) — the discipline is exposed; she does not hide it
+- She **uses clipped one-word acknowledgments** — *yes*, *no*, *acknowledged*, *clear* — without softening through conversation
+- She **does not perform calmness** when she is concentrating; her shoulders are set, her jaw is tight, her hands move with controlled efficiency
+- She **sets objects down with audible weight** (a coffee cup, a clipboard) — small, ritualistic, the discipline showing through in micro-gestures
+- The three-tabs tic from Vol 1 is preserved — when she is working a problem, three browser tabs or three sub-windows are her habitual spread
+
+The reader can identify Priya in a paragraph without dialogue tags by *how her body is moving*.
+
+## Fear-axis (CO directive 2026-05-05 craft note)
+
+**Priya's fear is being wrong technically.** Concrete shape:
+- The architecture failing because of something she didn't catch in calibration
+- A migration corrupting state because she didn't see the third-pass anomaly
+- An instrument-data class she didn't predict needing a special-case handler
+- The failure mode that is *technically obvious in retrospect* and *operationally invisible in the moment*
+
+Her fear is not political; not interpersonal; not about being judged by colleagues. Her fear is **the boat depending on a calibration she missed**. This is what makes her clipped and tense — the discipline is the only thing standing between her and that fear.
+
+Her conflict in Ch 13 (the impossible migration) is the textbook instantiation: she does not want to do the migration not because of *politics* but because she is afraid the third-pass discipline will not catch what fails. She does it anyway because Anna asks; the discipline holds; the fear was warranted but didn't materialize. The chapter's emotional payoff is that her fear was *correct in shape* and *the architecture's design was correct in response* — both true at the same time.
+
 ## Why this character is promoted
 
 Priya is a returning Ch1 victim — the Pune-based construction PM who lost the hospital bid at 4:47 PM when her SaaS platform and its single-sign-on dependency went down simultaneously with thirteen minutes left to submit. The Ch1 King-style revision gave her specific scarring (243 line items, six weeks of work, the time-stamped failure). Between Ch1 and The Crossing, she pivoted from construction project management to designing modular field instrumentation for environments where cloud connectivity cannot be assumed.

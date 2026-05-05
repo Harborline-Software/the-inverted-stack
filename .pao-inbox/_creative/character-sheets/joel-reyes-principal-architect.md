@@ -11,6 +11,24 @@ firewall-note: Joel's Navy biography draws on CO's lived experience (USS Sunfish
 
 # Character Sheet — Joel Reyes, Principal Architect of Sunfish
 
+## Book 1 plot-binding (load-bearing for Vol 2 prose; CO directive 2026-05-05)
+
+Drafters working any Vol 2 chapter should plant and pay off **only these elements** of Joel's character. Everything else in this sheet is reserve material for future books and should NOT be signaled in Book 1 prose.
+
+**Plot-binding for Vol 2 (must surface):**
+- US Navy nuclear engineering background (USS Sunfish SSN-649) — referenced in Ch 7 as the architecture's naming origin; quietly informs Joel's discipline elsewhere
+- The R1-BLOCK-rewrite admission as foundational trust event — load-bearing for Ch 2; the structural property Anna selected him for
+- **The bunk-laptop signature-discipline scene (Ch 1)** — disclosure-without-compulsion instantiated in personal practice; reader meets Joel through what he does
+- The leak-event protective beat (push-past, locked door, look through glass; Ch 14) — the chapter's emotional center
+- Honest-engineering register on Ch 17 supply-chain finding — *we cannot prevent, we can document; that is enough*
+
+**Future arcs only (do NOT signal in Vol 2 prose):**
+- Anna-Joel disclosure conversation (Book 3 — explicitly deferred per concept-note §6.4)
+- Joel's prior marriage history at depth (occasional reference acceptable; depth is later)
+- Joel's eventual standards-body work alongside Wanjiru (Books 2-3)
+- Joel's role in the Sunfish-replication branching decisions (Books 4-5)
+- Any forecast register about what the architecture becomes — see `series-arc-sunfish-trajectory.md` § 8 for the forbidden-registers list
+
 ## Why this character is promoted
 
 Joel was originally a minor character in The Crossing — a Filipino engineer with GCC offshore-platform credentials who ran independent life-support diagnostics and didn't trust cloud telemetry. Those traits read as competent-skeptical-engineer in Vol 1.

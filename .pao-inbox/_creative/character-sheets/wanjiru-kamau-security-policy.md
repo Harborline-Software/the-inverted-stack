@@ -10,6 +10,52 @@ firewall-note: Kenyan East African fintech / mobile-money infrastructure profess
 
 # Character Sheet — Wanjiru Kamau, Relay Operations + Sunfish Security Architecture / Key Management Contributor
 
+## Book 1 plot-binding (load-bearing for Vol 2 prose; CO directive 2026-05-05)
+
+Drafters working any Vol 2 chapter should plant and pay off **only these elements** of Wanjiru's character. Everything else in this sheet is reserve material for future books and should NOT be signaled in Book 1 prose.
+
+**Plot-binding for Vol 2 (must surface):**
+- M-PESA-adjacent design history surfaces during the structural-similarity recognition (Ch 15) — concrete, not preached
+- Active sync-triage role (Ch 6, 11, 17) — institutional decision-making during surface windows
+- Forensic-recognition + supply-chain pattern reading (Ch 15-17)
+- **The exception-refusal signature-discipline scene (Ch 6)** — visible relaxed rigor; reader meets Wanjiru through what her body does and how she draws hard lines without raising her voice
+- Visible relaxed rigor as her physical texture during operations (see § Physical texture below)
+- Fear-axis: being wrong **politically / user-impact** — the framework she's drafting failing the people it was supposed to protect (see § Fear-axis below)
+
+**Future arcs only (do NOT signal in Vol 2 prose):**
+- The Long Now / grandmother / Kikuyu thread at full depth (light surface — name in Ch 18 close, perhaps; full register reserved for Books 2-5)
+- The standards-body chairmanship arc (Books 2-5)
+- The posthumous-disclosure framework work (Books 5-7)
+- Family-life arcs at full depth
+- The Saidar-channeler register / WoT cosmological mapping in any explicit form
+- Any forecast about what the standards body becomes — she does the work that becomes the institution; she does not name it
+
+## Physical texture during operations (CO directive 2026-05-05 craft note)
+
+**Visibly relaxed rigor.** Wanjiru's body shows equanimity even when stakes are operationally critical. Concrete patterns:
+- She **hums while concentrating** (already canon — preserved verbatim) — soft, melodic, drawn from family-context Kikuyu lullabies; the hum is the texture of her concentration, not a tic she's aware of
+- She works at **steady tempo** — tasks happen at the pace they require, not faster, not slower; the operational rhythm she sets is something Anna registers across the mission
+- She **rarely raises her voice even when drawing hard lines** — her *no* is calm, her *yes-with-conditions* is calm, her *I will not authorize that* is calm; the discipline is in the calm, not in the volume
+- She does not perform urgency under pressure; the reader registers her authority through how *unhurried* she remains
+- When she is working a forensic query or drafting a regulatory filing, her body is **still** — focused, breathing slow, gestures economical
+- She makes eye contact when she is delivering an institutional decision; she looks away when she is thinking, not when she is concealing
+
+The reader can identify Wanjiru in a paragraph without dialogue tags by the *equanimity* in her presence — and by the hum.
+
+The contrast with Priya's visibly tense precision is the chapter-prose differentiation that makes them distinguishable in scenes where both appear (e.g., Ch 13, Ch 15).
+
+## Fear-axis (CO directive 2026-05-05 craft note)
+
+**Wanjiru's fear is being wrong politically / user-impact.** Concrete shape:
+- The framework she's drafting failing the people it was supposed to protect
+- A revocation policy that is technically correct but operationally unjust — denying access to someone who should have it, granting access to someone who shouldn't, in a way that the institution then locks in as precedent
+- A standards-body decision that hardens the wrong shape into law — the institutional version of the architecture's data-corruption-waiting-for-the-first-long-partition risk
+- Wanjiru's fear is **institutional**: that her decisions, made calmly and well-reasoned in the moment, turn out later to have failed the users at scale
+
+Her register stays calm under operational pressure precisely because the political pressure is what she's actually afraid of. She *trusts the architecture* (Joel built it; she helped; the protocol invariants are sound). She does not yet trust *the institution* (she is going to build it; she does not know if she can). The Vol 2 register of her fear is *what comes after the mission* — the regulatory landscape ahead.
+
+Her conflict register through Ch 11 + Ch 15 + Ch 17 + Ch 18 is exactly this: she navigates the operational decisions calmly because she has already decided the institutional ones are harder. The Punta Arenas reveal in Ch 18 lands her institutional fear most directly — the architectural-political contest enters its full-data phase, and her standards-body work will determine whether the user-protection holds.
+
 ## Why this character is promoted
 
 Wanjiru exists in the minor-characters sheet as the Kenyan female relay-operations officer with M-PESA / mobile-money-infrastructure background, recruited because African fintech taught her offline-first sync architecture before the local-first community had a name for it. Her existing role on Sunfish-1 is operational — managing data flows on/off the vessel during surface windows, executing the in-region failover during the SaaS termination event, watch-keeping during the silent window, hum-while-concentrating tic.
