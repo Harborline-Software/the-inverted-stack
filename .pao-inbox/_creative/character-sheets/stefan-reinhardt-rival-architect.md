@@ -188,3 +188,48 @@ The voice register: precise; English-as-second-language formality; measured. The
 - This sheet captures the rival architect "in case" the disposition lock holds. Adjustments welcome.
 - Companion sheets: Captain Astrid Hansen (rival mission captain) + Helvetia Trust SA / Dr. Lukas Brandt (corporate sponsor representative) — drafting in same PR
 - Concept-note draft is now unblocked once CO confirms the rival cast frames
+
+---
+
+## Vol 2 archive-and-capture canon layer (added 2026-05-05)
+
+> **Why this layer:** Vol 2's archive-and-capture canon (`vol-2-archive-and-capture-convention.md` § 7) extends Stefan's adversarial position with a specific architectural-strategy layer — **vendor-supply-chain capture as the Helvetia mechanism**. Stefan is not personally accused in Vol 2; the suspicion hangs across the rest of the mission and into Books 2-3. He is fully dramatized in Book 4.
+
+### The Helvetia supply-chain mechanism
+
+Helvetia Trust SA's strategic reach extends through **co-development partnerships** with sensor-head and instrumentation vendors. Vendors that take Helvetia's investment ship products with subtle firmware behaviors — patterns that don't quite add up under scrutiny but that fall within nominal operating ranges. The compromise vector is the OSS world's hardest structural vulnerability: small projects cannot vertically integrate; they source off-the-shelf; the vendors are exactly the entities well-funded centralizing actors capture.
+
+In Vol 2, this mechanism manifests as: **the Sunfish-1 sensor head whose failure produced the leak in Ch 14 was sourced from a vendor whose recent firmware updates trace through a Helvetia-aligned co-development partnership.** Wanjiru and Joel surface this on transit-north (Ch 17) via forensic analysis of the Anchor archive's full pre-failure timestream. The finding is **inconclusive but suggestive**; the consortium's regulatory filing carries it present-but-unresolved.
+
+### What Stefan's role is in Vol 2 — and what it isn't
+
+**What it is:** Stefan's adversarial architectural-philosophical position is now operationally specific. He is not generically corrupt. He is the engineer who:
+1. Failed to disclose the schema-migration limitation on Anna's prior mission (existing canon)
+2. Then chose centralization (TrustMesh / HelveSync; existing canon)
+3. Then chose vendor-capture as a structural strategy (this layer)
+
+The third element is the architecturally specific dimension that makes Stefan a coherent multi-era adversary. His position recurs across the series because *capital concentrates and OSS depends on vendors*; he is its first specific instance.
+
+**What it is NOT:** Stefan is *not* personally accused in Vol 2. He is not dramatized. The Vol 2 chapters keep him at distance per the existing concept-note convention (Stefan fully dramatized in Book 4; Vol 2 keeps him at distance). The Helvetia supply-chain mechanism is documented institutionally; whether Stefan personally ordered the sabotage of the Sunfish-1 sensor head is a question Vol 2 does *not* answer. **That answer lands in Book 4.**
+
+The drafter writing Vol 2 prose treats Stefan as an absent figure whose strategy is visible but whose person is not.
+
+### What this changes about Stefan's eventual Book 4 dramatization
+
+Book 4 inherits a Stefan whose architectural-strategic position has been operationally established across Vol 2-3:
+
+- The schema-migration non-disclosure (Anna's prior mission)
+- The centralization choice (TrustMesh / HelveSync)
+- The vendor-capture mechanism (Helvetia co-development partnerships → firmware-level access on OSS-deployed instrumentation)
+- (Book 2-3 will surface his subsequent moves: regulatory capture, standards-body capture, alliance fragmentation)
+
+Book 4 dramatizes the *human* Stefan against this backdrop — the engineer who once was, the architect who chose what he chose, the man who can no longer write the response he would have written in 2012. The audience tracks the loss across the series.
+
+The Vol 2 layer's contribution: by the time Book 4 dramatizes Stefan, the reader has accumulated specific institutional evidence of the strategic position. Book 4's character study has architectural ground to stand on.
+
+### Drafter discipline rules — Stefan in Vol 2
+
+1. **Never on-page in Vol 2 prose.** All references are mediated through Anna's interior, Wanjiru's institutional reading, or news-cycle artifacts (PR statements, regulatory filings).
+2. **The strategic position is visible; the person is not.** Wanjiru can name the supply-chain pattern; she does not name Stefan as ordering it.
+3. **No accusation; only documentation.** The regulatory filing in Ch 17-18 documents the finding; the consortium pursues; Helvetia neither admits nor denies. The matter goes to institutions.
+4. **Preserve the Book 4 dramatization runway.** Don't pre-spend the human Stefan in Vol 2. The architectural evidence is what Vol 2 plants; the character study is what Book 4 delivers.
