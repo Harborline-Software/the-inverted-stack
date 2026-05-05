@@ -345,3 +345,50 @@ He does not disclose. The Book 3 disclosure timeline holds. The act compounds pr
 The partnership is not a redemption arc for Joel. He does not need to be rescued from the Navy past or the failed marriage. The partnership is the second-half-of-life adult relationship between two professional operators who recognized each other across professional lines and built something with care. The Long Now answer the love arc carries: *what we build with the people we recognize is what survives the work.*
 
 The architecture's lasting answer is the mesh; the love arc's lasting answer is Joel and Anna. Both are the same answer in different registers.
+
+---
+
+## Vol 2 architecture-and-capture canon layer (added 2026-05-05)
+
+> **Why this layer:** Vol 2's archive-and-capture canon (`vol-2-archive-and-capture-convention.md`) and the supply-chain compromise thread (Ch 14 sensor head; Ch 17 forensic conversation with Wanjiru) compound Joel's character-load with three new registers. **None of these change Joel's existing voice or arc**; they refine *what kind of engineering posture* his existing voice carries.
+
+### The honest-engineering register
+
+Across Books 1-2, Joel's response to the architecture being compromised by an off-the-shelf vendor's firmware-update is **not defense, not regret, not promise**. It is honest engineering, in his characteristic restraint:
+
+> *We couldn't afford to fork the firmware. We integrated their patch because their patch was what was available. The architecture's job is what it is doing right now — surfacing the analysis that is possible because we held the full pre-failure timestream. We could not have prevented this compromise. We can document it. That is enough for now.*
+
+Joel does NOT say:
+- *We should have spotted it.* (No — they couldn't have; that's the point.)
+- *We need to build our own sensor heads.* (No — the consortium can't afford to.)
+- *I am sorry.* (No — there is nothing to apologize for that he caused.)
+
+He says what is true: the architecture's job is *detect*, not *prevent*; and the architecture did its job. The character's discipline carries the OSS-funding-asymmetry as a structural reality, not as a moral failure.
+
+### The transit-north partnership with Wanjiru (Ch 17)
+
+The chapter's structural anchor is a slow forensic conversation between Joel and Wanjiru. They establish:
+
+- The sensor head's firmware-update history
+- The vendor's recent ownership / partnership pattern
+- Helvetia Trust SA's co-development investments
+- The pattern of Helvetia-aligned vendors developing subtle firmware behaviors
+- Inconclusive but suggestive
+
+Joel's role: he understands the firmware mechanics; he reads the technical evidence; he frames the question. Wanjiru's role: she understands the institutional mechanics; she reads the political evidence; she drafts the regulatory filing. **Together they triangulate.** Their partnership in Ch 17 is the seed of a working relationship that runs through the rest of the series — Joel as the technical conscience; Wanjiru as the institutional architect; the Saidin/Saidar discipline split made operational at the highest professional level.
+
+Joel does not name what they are seeding. Neither does Wanjiru. The reader, in time, will register the institution.
+
+### The no-forecast discipline
+
+Per series-canon (`series-arc-sunfish-trajectory.md` § 5.1 and § 8): Joel is *never* written as forecasting the trajectory. He does not anticipate that what he built becomes starship-class infrastructure centuries later. He does not say *what we are building outlasts us*. He does not register prophecy weight. He builds quietly, with discipline beyond what the situation requires, without grandiosity.
+
+The drafter writing Joel knows the destination. The character does not. The reader who eventually has the cosmology registers the weight retroactively. The Vol 2 reader gets a competent senior engineer who keeps the boat alive and writes the kind of paper that gets read carefully.
+
+### Compute-hub loss in Ch 14 — the quiet acceptance
+
+When the leak takes out the boat's central workstation alongside the sensor head, Joel registers the loss in his characteristic register: *the architecture is designed to degrade gracefully; we will operate on laptop-class until we surface*. He does NOT lament; does NOT catastrophize; does NOT promise to rebuild.
+
+Across Ch 15-17 he operates in the degraded mode without commentary. His running architectural analysis happens slowly on laptop-class compute; his forensic work with Wanjiru happens slowly on laptop-class compute; his contribution to the staff history happens through Anna's notes and conversations rather than through automated indexing of his own logs. The reduced capability is operational reality. He does what comes next.
+
+This is the same discipline that shows up in the leak event protective beat: *do the work in front of you; the discipline does not need to be discussed.*

@@ -6,13 +6,14 @@ chapter: 2
 mission-day: pre-departure (flashback)
 icm-stage: icm/draft
 word-count-target: 9000
+log-opener-pattern: A
 ---
 
-It is Day 14. The boat has been under the ice for seven days. I am writing this in my cabin during the back end of a watch I am not standing, with a cup of tea I have not finished, because the part of the day I trust to think with is now this one — the late hour after handoff, before the next instrument cycle, when the air system breathes in its usual register and the people I command are mostly asleep. I have been writing this chapter in my head since the surfacing in Punta Arenas, which is to say since I got back to the desk. Tonight I am writing it down.
+*Pre-departure record, dated 2026-04-02T14:42Z. Yusupova, Mission Director-designate. Sunfish-1.*
 
-The architecture has been holding. I will not record more than that here, because the staff history convention says you do not write hosannas while the work is still running. What I will record is what I was thinking about three nights ago when I queried the local store for a colleague's old write and the system answered me locally, without ambiguity, because there was nothing else to answer with. The thing I was thinking about was a video call I took six months before departure. I was thinking about how I knew, on that call, that I was going to bet a crew on Joel Reyes.
+*Selection of Principal Architect closed this date. Joel Reyes accepted the offer at 16:47 local on the closing call. Vetting interview conducted that afternoon by secured channel; recording filed to selection-archive per consortium convention. Technical questions and protocol-layer responses summarized in Annex C of the selection file. The exchange that determined the offer turned on Reyes's account of his Round-1-BLOCK rewrite of the lease protocol; the exchange is reproduced below from my recollection. The verbatim recording is on file. The version that follows is what I remember.*
 
-That is what I want to write down tonight. The earlier thing. Why it was him.
+*— Filed to selection-archive; hash f3a4...90c2*
 
 ---
 
@@ -32,7 +33,13 @@ I needed to ask him.
 
 ---
 
-The video call was scheduled for a Tuesday afternoon St. Petersburg time, which made it five in the morning where Joel was, which I had not known until he sent me a calendar acceptance with a note: *I will be on. Coffee will already be made.* The note arrived at 02:18 his time. I read it the next morning and registered, without being sure I was registering it, that Joel had answered the calendar request the same night I had sent it and that he had answered without negotiating the time. I had sent a 5am-his-time slot deliberately. I wanted to see whether he would push back. He did not push back. He confirmed.
+I spent the morning of the call reading. I had asked the system, the night before, to pull the Round One verdict, the Round Two submission, and the diff between the two lease protocols, and to set them where I would find them on the screen at the desk in the morning. I had also asked it to pull every public note Joel had attached to a Sunfish commit during the week between the verdict and the rewrite. There were three notes. One of them was the message he had sent back to Klett with the corrected protocol. The other two were operational — a build-system fix, a documentation update — and were not relevant to the interview. I read them anyway.
+
+I asked the system to pull my own selection file next. I had been adding to the file for four months. The system pulled it without asking which version I wanted, because there was only one version on my node and the version on my node was the one I had been writing. I read what I had written about Joel. I had written the same thing in three different ways across the four months. The third way was the one closest to what I actually thought, which was that he was the candidate the prior failure made me pick.
+
+I closed the file. I asked the system to start the call at fourteen-thirty local. The call would route through the consortium's secured channel and the recording would land in the selection-archive automatically, signed at capture, hash-chained to the rest of the file. I did not have to do anything to make the recording happen. The architecture I was about to interview Joel about was the architecture that was going to record the interview. I noticed the symmetry. I did not name it aloud. I made tea.
+
+The video call was scheduled for a Tuesday afternoon St. Petersburg time, which made it five in the morning where Joel was, which I had not known until he sent me a calendar acceptance with a note: *I will be on. Coffee will already be made.* The note had arrived at 02:18 his time. I had read it the next morning and registered, without being sure I was registering it, that Joel had answered the calendar request the same night I had sent it and that he had answered without negotiating the time. I had sent a 5am-his-time slot deliberately. I wanted to see whether he would push back. He did not push back. He confirmed.
 
 That was the first piece of evidence, before the call had even started.
 
@@ -206,7 +213,7 @@ I asked him whether he had questions for me.
 
 He said yes. He had three questions.
 
-His first question was about the consortium. He wanted to know which co-funder's regulatory framework the mission's data sovereignty would be assessed under, given that the consortium was multinational and the data we would generate would be subject to overlapping jurisdictional claims. The question was technically a procurement question and operationally a sovereignty question and architecturally the question that determined what fence the architecture would have to live under. I told him the answer. The answer was layered — the primary framework was the consortium-of-record's, with a fall-through to each co-funder's domestic framework for data originating from instruments that co-funder had supplied, with a meta-framework specified in the consortium charter that handled jurisdictional conflicts. He asked me to send him the charter. I told him I would.
+His first question was about the consortium. He wanted to know which co-funder's regulatory framework the mission's data sovereignty would be assessed under, given that the consortium was multinational and the data we would generate would be subject to overlapping jurisdictional claims. The question was technically a procurement question and operationally a sovereignty question and architecturally the question that determined what fence the architecture would have to live under. I told him the answer. The answer was layered — the primary framework was the consortium-of-record's, with a fall-through to each co-funder's domestic framework for data originating from instruments that co-funder had supplied, with a meta-framework specified in the consortium charter that handled jurisdictional conflicts. He asked me to send him the charter. I told him I would. I asked the system to set a reminder on my own file to push the charter to him after the call closed. The system acknowledged. I returned my attention to Joel.
 
 His second question was about the crew. He wanted to know how many of the senior officers had served with me before. He did not ask the question to assess my command authority. He asked it to assess the operational tempo I was likely to run; senior officers who have served with a mission director before learn the director's rhythms, and the rhythms inform what the architecture would have to absorb. I gave him the answer. Four of the senior officers were people I had commanded at least once before. Two more were people I had not commanded but had worked alongside in cross-institutional contexts. The remaining six were people I had selected after reading their work or interviewing them. He asked for the names. I gave him the names. He said two of them out loud as though tasting them — Priya Iyer's name, and Wanjiru Kamau's. I asked him whether he had read their work. He said he had read all of Priya's published work on schema migration in offline-first systems and had been a reader of Wanjiru's standards-body filings on key revocation since 2023. He said it without performance. I made another note, which was that he had read the team I had picked before I had told him who was on it.
 

@@ -191,3 +191,50 @@ The voice register: measured. User-impact-grounded. East African English in miss
 - This sheet completes the four priority-one character expansions per XO hand-off (Anna → Joel → Priya → Wanjiru — all done)
 - Remaining character sheets that may need expansion as the concept-note draft surfaces specific needs: Sabina (use-case-author / Mat analog), Diego (polar-institutional-memory / Perrin analog), Hiroshi (NIPR / Loial analog), Maria (medical / Min analog)
 - Concept-note draft is gated on two remaining open items: prior-failure framing path B confirmation; unnamed-colleague disposition
+
+---
+
+## Vol 2 archive-and-capture canon layer (added 2026-05-05)
+
+> **Why this layer:** Vol 2's archive-and-capture canon (`vol-2-archive-and-capture-convention.md`) and the bandwidth-bounded sync mechanic (`vol-2-anchor-bridge-sync-mechanic.md`) compound Wanjiru's chapter-load with three new registers. **None of these change Wanjiru's existing voice or arc**; they ground her institutional thinking in operational mission decisions across Vol 2's chapters.
+
+### Active sync-triage as institutional decision-making
+
+Through Vol 2, Wanjiru is not just running comms — she is **deciding what becomes record**. During each surface window (Day 21-23, Day 37-39) she has 48 hours and a bounded pipe (5-50 Mbps) to push as much of the boat-accumulated archive (several TB) to the Bridge as bandwidth allows. The choices she makes are political (what reaches the consortium first), institutional (what becomes the official record), and personal (what needs to land before the rival mission's narrative gels).
+
+Her priority hierarchy (per `vol-2-anchor-bridge-sync-mechanic.md` § 4.1):
+- **P0:** mission-record voice + decisions; safety-critical incident records; signed audit-log entries
+- **P1:** sensor streams critical to ongoing mission state; surface-window observations of any rival mission; regulatory-relevant cross-check evidence
+- **P2:** bulk operational logs; routine watch entries; non-critical sensor streams
+- **P3:** personal capture (per author consent); diary entries (encrypted; lower priority by author choice); compartment-camera video
+- **P4:** bulk multimedia; documentation indices; LLM-derived analytical artifacts
+
+She is making these decisions in real time. Anna's narration registers her choosing — the chapter-load beat in Ch 11 (Stefan-cross-check race) is exactly this: which truths reach durability when. The reader registers her institutional weight as it forms on the page.
+
+### Supply-chain forensic recognition (Ch 15-17)
+
+When the leak event in Ch 14 takes out a sensor head, Wanjiru begins forensic queries against the sensor-head's pre-failure timestream. The Anchor archive is hash-chained, signed at capture, replicated across crew nodes — the forensic substrate is intact even after the compute hub is offline. She runs narrow targeted queries on laptop-class compute (Ch 15) and continues the analysis with Joel on transit-north (Ch 17).
+
+What she finds:
+- The sensor head's firmware-update history shows an unusual pattern
+- The patch came through a vendor whose ownership/co-development partnership traces toward Helvetia Trust SA
+- The post-patch behavior includes a low-frequency anomaly that the boat's anomaly detection didn't flag because it was within nominal range
+- Inconclusive — could be benign coincidence, could be deliberately subtle compromise
+
+Her draft for the consortium's regulatory filing includes the finding present-but-unresolved. **No accusation. No public framing.** The institution is what investigates further.
+
+### Institutional-mission-seeding (Day 22 onward)
+
+Per series-canon (`series-arc-sunfish-trajectory.md` § 5.2): Wanjiru's standards-body trajectory does not begin in Book 2. **It begins on Day 22 of Vol 2.** Her surface-window prioritization decisions are already institutional thinking. By Ch 11 (Day 37) she is reading the regulatory landscape. By Ch 17 (Day 52-56) she is articulating the mission of what becomes her standards body:
+
+> *The consortium will need a standards body. Vendor-attestation requirements. Firmware-transparency rules. Supply-chain audit requirements that small OSS projects can comply with at scale. None of that exists. It will need to.*
+
+Her register is *what survives the next regulatory cycle*, not *what works on this mission*. The chapter-drafter writes her as already thinking institutionally before the mission ends. The standards-body chairmanship of Books 2-5 is sown in Ch 17.
+
+She does NOT name the trajectory. She does the work that becomes the institution.
+
+### Wanjiru-as-reading-engine for the political dimension
+
+Across Ch 6, Ch 11, Ch 17, Ch 18: Wanjiru is the **reading-engine for the political dimension** as Joel is for the architectural dimension. When the rival mission's PR cycle lands at Surface 1, Wanjiru reads it; when Stefan's PR lands at Surface 2, Wanjiru cross-checks it; when Helvetia's regulatory positions land at Punta Arenas, Wanjiru parses them. The captain-asks-engineer dialogue engine has a parallel: the captain-asks-Wanjiru pattern carries the political exposition the way Joel carries the technical.
+
+The two patterns operate together in chapters where both registers matter (Ch 11, Ch 18). Wanjiru and Joel side-by-side, answering the same question from different angles.
