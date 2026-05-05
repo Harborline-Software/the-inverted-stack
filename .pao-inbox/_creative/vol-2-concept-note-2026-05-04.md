@@ -136,7 +136,7 @@ Uzbek-Russian; 47-52; AARI St. Petersburg; second-attempt polar lead after the S
 
 **Joel Reyes — Principal Architect, Sunfish-1 senior crew engineer (Rand al'Thor analog).**
 [Full sheet: `joel-reyes-principal-architect.md`]
-Filipino-American; mid-50s; former U.S. Navy Nuclear Machinist's Mate PO2 (E-5) on USS Sunfish SSN-649 (decommissioned 1998); paper author; named the architecture after his first submarine. The Dragon-who-hates-it. Saidin channeler — naval-nuclear discipline is the Three Oaths analog. R1 BLOCK night = founding act of grace. Anna's recruit; in love with Anna across the series.
+Filipino-American; mid-50s; former US Navy nuclear engineer on USS Sunfish SSN-649 (decommissioned 1998); paper author; named the architecture after his first submarine. The Dragon-who-hates-it. Saidin channeler — naval-nuclear discipline is the Three Oaths analog. R1 BLOCK night = founding act of grace. Anna's recruit; in love with Anna across the series.
 
 **Priya Iyer — Lead Instrumentation Engineer + Sunfish OSS schema-migration co-author (Nynaeve al'Meara analog).**
 [Full sheet: `priya-iyer-schema-migration.md`]

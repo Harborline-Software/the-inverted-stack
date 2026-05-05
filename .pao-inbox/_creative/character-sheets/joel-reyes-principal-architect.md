@@ -6,7 +6,7 @@ sheet-depth: full
 chapter: Vol 1 (The Crossing — minor presence) + Vol 2 (principal protagonist)
 supersedes: `_minor-characters.md` § "GCC Offshore Platform Engineer (Ch1 → Sunfish-1 life support)" — that entry remains as historical record; this sheet is the canonical home for Joel
 co-identification: CO has identified personally with Joel and is the source of truth on Navy-nuclear biographical detail
-firewall-note: Joel's Navy biography draws on CO's lived experience (USS Sunfish SSN-649, Nuclear Machinist's Mate PO2/E-5, Sturgeon-class boat 1990s service). Specific details about the boat, the rate, and the operational discipline are CO-sourced and authoritative. Character is informed-by but not based-on; Joel is fictional. PAO defers to CO on all Navy-nuclear specifics; PAO writes the post-Navy distributed-systems trajectory and architectural authorship as fiction.
+firewall-note: Joel's Navy biography draws on CO's lived experience (USS Sunfish SSN-649, US Navy nuclear engineer, Sturgeon-class boat 1990s service). Specific details about the boat and the operational discipline are CO-sourced and authoritative. Character is informed-by but not based-on; Joel is fictional. PAO defers to CO on all Navy-nuclear specifics; PAO writes the post-Navy distributed-systems trajectory and architectural authorship as fiction. CO directive 2026-05-05: framing changed from "Nuclear Machinist's Mate PO2/E-5" to "US Navy nuclear engineer" — preserves the boat, the operational discipline, and the silver dolphins; drops enlisted-rate-specific language for accessibility.
 ---
 
 # Character Sheet — Joel Reyes, Principal Architect of Sunfish
@@ -17,14 +17,14 @@ Joel was originally a minor character in The Crossing — a Filipino engineer wi
 
 Under the Vol 2 frame, Joel is the **principal architect of Sunfish** — the author of the paper that became the architecture, the namer of the project (after his first submarine), and the senior implementer Anna recruited specifically because of authorship. Every existing trait that read as competent-skeptical now reads as **naval-nuclear operational discipline carried into civilian distributed-systems work** — which is much sharper, more specific, and more credible to readers who recognize the discipline.
 
-CO has identified personally with Joel and provided the Navy biography (USS Sunfish SSN-649, Nuclear Machinist's Mate PO2/E-5, 1990s Sturgeon-class boat service). The character is informed-by but not based-on; the post-Navy fiction is PAO's to write.
+CO has identified personally with Joel and provided the Navy biography (USS Sunfish SSN-649, US Navy nuclear engineer, 1990s Sturgeon-class boat service). The character is informed-by but not based-on; the post-Navy fiction is PAO's to write.
 
 The existing `_minor-characters.md` entry remains as historical record of the original Vol 1 framing; this sheet is the new canonical home.
 
 ## Identity
 
 - **Name:** Joel Reyes
-- **Title in narrative:** "Joel" in Anna's voice (informal, peer-respect register); "Mr. Reyes" formal; never "Petty Officer" in mission scenes (Joel left that rank a long time ago)
+- **Title in narrative:** "Joel" in Anna's voice (informal, peer-respect register); "Mr. Reyes" formal; no naval rank or title in mission scenes (Joel left the Navy a long time ago)
 - **Age at Sunfish-1 mission:** mid-50s (Navy enlistment ~early 1990s, USS Sunfish SSN-649 service through decommissioning 1998, ~25 years post-Navy career arc)
 - **Citizenship:** United States (Navy service); Filipino heritage
 - **Languages:**
@@ -40,11 +40,10 @@ The existing `_minor-characters.md` entry remains as historical record of the or
 
 CO has identified personally with Joel and provided these specifics:
 - Service in the U.S. Navy Nuclear Program, 1990s
-- Rate: Machinist's Mate Nuclear (MMN)
-- Rank: Petty Officer Second Class (PO2 / E-5) by the time of separation
+- Role: **US Navy nuclear engineer** (per CO directive 2026-05-05; framing prefers the engineer descriptor over enlisted-rate-specific language for accessibility)
 - Boat: **USS Sunfish SSN-649**, Sturgeon-class fast attack submarine, decommissioned 1998 (public record)
-- Working role: engine room watchstations; reactor coolant systems; steam plant secondary loop; auxiliary machinery
-- Earned the silver dolphins (Submarine Warfare qualification — standard pipeline for PO2 nuclear-trained submariners)
+- Working domain: reactor plant operations; engine room watchstations; reactor coolant systems; steam plant secondary loop; auxiliary machinery
+- Earned the silver dolphins (Submarine Warfare qualification)
 
 Cold War-era Sturgeon-class operations included deterrent patrols, anti-submarine warfare exercises, and intelligence-collection missions; CO can place Joel's specific patrols if needed for backstory beats. Public history of USS Sunfish SSN-649 provides the operational-record anchor.
 
@@ -54,7 +53,7 @@ The Navy left a stamp: trust-but-verify discipline, conservative-operations inst
 
 Joel separated from the Navy ~late 1990s, around the same time USS Sunfish was decommissioned. The boat's decommissioning is one of those professional-turning-point moments that plays out in the lives of the sailors who served on her — when the Navy shrinks the fleet by one specific hull, the crew of that hull is among the first to feel it.
 
-GI Bill → undergraduate computer science at a state university (San Diego State, University of Maryland, or similar — somewhere that takes Navy veterans seriously). The transition from reactor-plant operator to distributed-systems engineer was less of a leap than non-veterans would expect: the same discipline of "treat the system as adversarial, build for what fails, never assume the dashboard is telling the truth" that runs a nuclear plant runs a distributed system. The engineering vocabulary changed; the operational temperament did not.
+Computer-science transition (post-Navy, late 1990s into early 2000s — exact path open: could be undergraduate CS via veterans' education benefits if Joel commissioned via an enlisted-to-officer route, or graduate-level CS specialization if Joel commissioned via NROTC / Naval Academy / NUPOC with an existing engineering degree — CO can pin). The transition from reactor-plant engineering to distributed-systems engineering was less of a leap than non-veterans would expect: the same discipline of "treat the system as adversarial, build for what fails, never assume the dashboard is telling the truth" that runs a nuclear plant runs a distributed system. The engineering vocabulary changed; the operational temperament did not.
 
 Mid-career arc (~early 2000s through ~2020):
 - Defense contractor stint, probably ~5-8 years (the natural pipeline for nuclear-trained Navy veterans with new CS degrees) — distributed-systems infrastructure for tactical networks, secure communications, sensor fusion
