@@ -205,3 +205,90 @@ The voice register: short sentences. Technical vocabulary muscle-memoried. Filip
 - This sheet captures Joel's full character for both Vol 1 (existing minor presence) and Vol 2 (principal architect)
 - Next character sheets per XO hand-off priority: **Priya** (Nynaeve / schema migration as Healing) → **Wanjiru** (Egwene / Long Now / standards body)
 - CO can pin the open biographical placeholders (domicile; specific patrol history; family configuration; spouse/partner) at any time; PAO sheet is structured to accept them as in-line edits
+
+---
+
+# Joel + Anna — Love Arc Layer (CO direction 2026-05-04)
+
+This section adds an emotional through-line to Joel's Vol 2+ arc per CO direction: **Joel falls in love with Anna; Anna is slow to return his feelings.** The layer is series-spanning — initiated during the Sunfish-1 mission's preparation or early voyage; unspoken across most of Book 1; gradually reciprocated across Books 2-4; established partnership by Book 5+; aged across the final books.
+
+The love arc is NOT a Vol 1 *Crossing* chapter beat — that chapter retains its existing focus on Anna's command-decision arc and the leak event. The romantic arc lives entirely in Vol 2+ as a layer over the captain-architect dynamic.
+
+## Joel's interior — when, why, how
+
+**When does Joel start feeling it?**
+
+PAO recommendation: during the **vetting interview** Anna conducts to recruit him for the mission (the recruitment flashback already in this sheet). The interview is competence-recognition first; the recognition becomes something more before Joel realizes it has. Anna's specific way of calibrating questions to what she actually needs to know — *"the inverse of what failed her last time,"* per her sheet — registers for Joel as the mark of an operator he could trust at three in the morning under the ice. The love grows out of that recognition, not against it. The two are the same recognition.
+
+By the time Joel is on the boat, the feelings are settled. He has not disclosed; he has not acted on them.
+
+**Why doesn't he disclose?**
+
+Several reasons, layered:
+
+- **Command boundary.** Anna is his Mission Director. Disclosure would put her in the position of either accepting (compromising command-impartiality) or refusing (creating professional friction Joel does not want to impose). His Navy training has muscle-memory for command boundaries; he is not going to violate one.
+- **Self-doubt about timing.** He recognizes the recognition pattern: he was recruited by a senior operator he had read about for years, who had read his work for years, and the meeting-in-person hit harder than he expected. He suspects the feelings are partly the situation. He wants to know how much is the situation and how much is Anna before he says anything.
+- **Her hardness.** He has read her — the second-attempt narrator; the prior-failure pattern; the careful trust. She is not a person who would respond well to a romantic disclosure from someone she just recruited. The disclosure would feel to her like another colleague proving untrustworthy. He understands this; he holds his peace.
+- **The first marriage's residue.** His Navy years and post-Navy career arc were hard on the marriage that ended ~10 years ago; he has rebuilt his life around work since; he is not certain he is the right person to be a partner to someone who has chosen the work-over-relationships path. He is also not certain he is wrong. The uncertainty is an additional reason to wait.
+
+**How does the feeling manifest in his behavior?**
+
+Quiet. Joel is the man who reformatted his bunk laptop and disclosed it bluntly in first watch handoff — that's professional. The romantic interior is private. Specific tells:
+
+- He takes Anna's directives with a precision slightly above professional baseline — not visible to most observers; visible if you know the man
+- In shared spaces (mess; bridge during quiet watch; the engineering compartment when she is checking on his work) he is more present-than-required without being intrusive — staying a half-minute longer in conversation; offering a second technical insight when one was sufficient
+- He notices what she eats; he notices when she has slept; he does not act on the noticing in any way she would register as overstepping
+- When she calls her mother on surface windows (the existing established beat in her sheet — she switches to Russian then partly to Uzbek), Joel finds reasons to be in adjacent compartments. Not eavesdropping; just present in case the call lands hard for her.
+- He writes longer log entries on watches when she is bridge-of-the-watch the next shift. He tells himself this is because she reads carefully and the architecture's edges should be documented carefully; that's true; that's also not the whole reason.
+
+**What he would say if he disclosed (he doesn't):**
+
+Internal voice, never spoken in Book 1:
+> *I respect the command boundary. I am not asking anything of you. I want you to know that the reason I have stayed late in the mess, the reason I have read your watch logs more carefully than the architecture requires, the reason I sat the second hour of your watch on day forty-two when the schedule did not require it — is that I have felt this since the recruitment interview. I do not need an answer. I do not require a different relationship. I wanted you to know what is true.*
+
+He never says this. The audience eventually does. PAO drafting note: this is a candidate Book 2 or 3 internal monologue, possibly during a moment when Anna is unaware (a watch, a transit on a different deployment) and Joel reflects on the unsaid.
+
+## Anna's interior — why slow
+
+**Anna registers Joel's feelings before he discloses.**
+
+Anna is a careful observer; her vetting standard is built on reading people accurately under stress. She registers Joel's feelings during the mission, probably by the second under-ice segment. She does not bring it up. She does not act on her own response (which is itself complex — recognition, registered carefulness, professional discipline, eventually her own quiet feelings).
+
+**Why slow:**
+
+- **Command-protection.** She cannot afford to develop feelings for a crew member she might have to give a fatal order. The leak event in Segment 3 specifically tests this — Joel is in the engineering compartment during the cascade; Anna's authorization for compartment isolation could trap him on the wrong side of a sealed bulkhead. Her command authority has to be unsentimental during operations; the sentiment cannot exist during the time the authority is exercised.
+- **The hardened-vetting pattern.** Anna was burned by trusting a colleague (Stefan). The hardening makes her slow to read romantic interest as opportunity; she reads it first as risk-of-being-wrong-again. Joel is structurally the inverse of Stefan, but the inverse-pattern recognition takes time to translate from professional trust into personal trust.
+- **The work-over-relationships pattern.** Anna's existing biographical thread — career took her abroad too often during her thirties; not unusual for her cohort — is a pattern she has arrived at by choice as much as by circumstance. Reconsidering the choice requires reconsidering the life. She does not do this quickly.
+- **Joel's discipline as evidence.** Joel does not disclose. The discipline is part of what Anna respects about him; if he disclosed, it would compromise the discipline; she registers the not-disclosing as evidence of his trustworthiness; the trustworthiness is what eventually opens her to reconsidering.
+
+**The progression:**
+
+| Phase | Anna's interior |
+|---|---|
+| Sunfish-1 mission (Book 1) | Registers Joel's feelings during the second segment; disciplines herself not to act; the discipline is operational; the feelings, if they exist on her side, are not yet legible to her. |
+| Post-mission (Book 1 / Book 2) | First weeks back in port. Mission paperwork. The command boundary dissolves. Anna registers what she felt during the mission as something other than command-protection. She does not act yet. |
+| Book 2 | Joel and Anna work together in the post-mission rebuild — consortium debriefs, scientific publications, the public rollout of the Sunfish-1 results. They see each other regularly. Neither initiates. Anna's hardness gradually softens against Joel's continued not-pressing. |
+| Book 3 | The disclosure happens. PAO drafting note: it is small; it is undramatic; it is between Anna and Joel only; it is not a Hollywood moment. Anna probably initiates — she has had longer to consider, and Joel's discipline has held longer than her hardness. The disclosure is mutual recognition, not declaration. |
+| Books 4-5 | Established partnership in the early phase. The Aiel Waste flashback book (Book 4) lands the prior-failure-with-Stefan in a context where Joel is a present partner; the contrast is structural. Book 5's Moiraine-fall convergence carries the love arc's unfinished business if Anna is apparently lost. |
+| Books 6-8 | Aged partnership. Both have careers; both have public-architectural roles (Anna in consortium / advocacy; Joel in maintainership / standards body alongside Wanjiru). The partnership is one of the things that has lasted across the series' long arc. |
+| Final | Still together; aged; the mesh has aged with them. The Long Now answer at human scale: we built something that lasts. |
+
+## What the love arc does NOT do
+
+- **Does not appear in The Crossing chapter** (Vol 1 closing). The existing chapter retains its focus on Anna's command-decision arc and the leak event. Joel appears as senior crew engineer + (Vol 2-frame) principal architect; the romantic interior is not on the page in The Crossing.
+- **Does not become Book 1's primary emotional spine.** Book 1's primary emotional spine is the captain-architect-trust dynamic — the architectural maiden voyage and Anna's command authority over the platform's first deployment. The love arc is a secondary register that becomes legible to the audience over the book without being foregrounded.
+- **Does not resolve in Book 1.** The disclosure happens later (Book 3 in PAO recommendation). Book 1's love-arc beat is "Joel is in love; Anna registers it; neither acts; the discipline holds."
+- **Does not displace the architectural / Forsaken / Long Now arcs.** The love arc is a layer; the architectural arc is the spine. The series' weight remains on the architectural-civilizational stakes.
+- **Does not become a Hollywood moment.** Both Joel and Anna are mid-50s professional senior operators. The romantic register is mature, quiet, and disciplined. The disclosure is not a kiss in a snowstorm; it is a conversation over coffee at a kitchen table.
+
+## What this layer adds to Joel's existing sheet (no replacement; only addition)
+
+- His "what he wants" list now also implicitly includes: not to compromise the command relationship; to be the kind of partner Anna might eventually want
+- His "what he fears" list now also includes: that the feelings are situational and will not survive the mission; that disclosure would damage what he has built with Anna professionally; that the architecture's failure could foreclose any future relationship before it has a chance to begin
+- His voice samples are unchanged; the love arc is interior; the existing voice samples are appropriate for both the architectural and the romantic interior
+
+## Series-end note
+
+The partnership is not a redemption arc for Joel. He does not need to be rescued from the Navy past or the failed marriage. The partnership is the second-half-of-life adult relationship between two professional operators who recognized each other across professional lines and built something with care. The Long Now answer the love arc carries: *what we build with the people we recognize is what survives the work.*
+
+The architecture's lasting answer is the mesh; the love arc's lasting answer is Joel and Anna. Both are the same answer in different registers.

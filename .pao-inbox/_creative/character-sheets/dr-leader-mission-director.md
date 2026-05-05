@@ -309,3 +309,64 @@ Anna is 47-52 at the time of Sunfish-1 (per existing sheet). If the series spans
 - This expansion captures the Vol 2 series-arc layer without disturbing the Vol 1 / The Crossing material
 - Next character sheets to expand: Joel (Rand analog; Navy-nuclear; R1 BLOCK night), Priya (Nynaeve; schema migration as Healing), Wanjiru (Egwene; Long Now / standards body)
 - Three CO confirmations still gate the full concept-note draft (boat power, prior-failure framing, unnamed-colleague on/off-frame)
+
+---
+
+# Anna + Joel — Love Arc Layer (CO direction 2026-05-04)
+
+This section adds an emotional through-line to Anna's Vol 2+ arc per CO direction: **Joel falls in love with Anna; Anna is slow to return his feelings.** Companion to the same layer in Joel's sheet (`joel-reyes-principal-architect.md`).
+
+The love arc is NOT a Vol 1 *Crossing* chapter beat — that chapter retains its focus on Anna's command-decision arc and the leak event. The romantic arc lives entirely in Vol 2+ as a layer over the captain-architect dynamic.
+
+## Anna's interior — registering before reciprocating
+
+Anna's vetting standard is built on reading people accurately under stress. **She registers Joel's feelings before he discloses** — probably during the second under-ice segment (Book 1, Days 23-37). She does not bring it up. She does not act on her own response.
+
+Her own response is layered:
+- **Recognition.** That Joel has feelings; that the feelings are real; that they are not the kind of thing that makes him less competent or less trustworthy on the boat
+- **Registered carefulness.** That her professional-trust assessment of him is not contaminated by her registering his feelings — she is careful to verify this; the verification matters; the verification holds
+- **Professional discipline.** That whatever she might feel cannot be permitted during operations. The leak event in Segment 3 specifically tests this — Joel is in the engineering compartment during the cascade; her authorization for compartment isolation could trap him on the wrong side of a sealed bulkhead. The command authority cannot be sentimental during the time the authority is exercised.
+- **Quiet feelings of her own** — eventually. Not legible to her during the mission. Slow to surface even after.
+
+## Why slow
+
+Five reasons, layered:
+
+1. **Command-protection.** As above. She cannot afford to develop feelings for someone she might have to give a fatal order. The discipline is operational; the discipline is also habit.
+2. **The hardened-vetting pattern.** The Stefan failure made her slow to trust romantic interest as opportunity; she reads it first as risk-of-being-wrong-again. Joel is structurally the inverse of Stefan — disclosed bluntly when Stefan minimized; held command boundary when Stefan blurred professional lines — but the inverse-pattern recognition takes time to translate from professional trust into personal trust.
+3. **The work-over-relationships pattern.** Her existing biographical thread (career took her abroad too often during her thirties) is a pattern she arrived at by choice as much as by circumstance. The over-achieving response to a pattern is to work harder; to accept partnership later in life is to surrender the part of the pattern that says *if I work harder, the silence will not arrive.* Same psychological move she has to make about mortality (her existing #2 fear: *becoming the locked phone*). The two surrenders rhyme; the surrender is real.
+4. **Joel's discipline as evidence.** Joel does not disclose. The not-disclosing is part of what Anna respects about him; if he disclosed during the mission it would compromise the command boundary; she registers the not-disclosing as evidence of his trustworthiness; the trustworthiness is what eventually opens her.
+5. **The mother thread.** Her aging mother in St. Petersburg is the family stake that has carried her interior since The Crossing's existing material. The mother represents partnership-as-Long-Now (the family's Tashkent-to-Russia choice that "worked" because Anna's career succeeded). Anna reconsidering partnership in her own life means reconsidering what the mother's late-career years could look like with another person in Anna's house — not abstractly, specifically. The reconsideration takes time. The mother registers Joel before Anna admits she has registered him; the conversation between Anna and the mother that surfaces this is a candidate Book 2 or 3 scene.
+
+## The progression — Anna's perspective
+
+| Phase | Anna's interior |
+|---|---|
+| Sunfish-1 mission (Book 1) | Registers Joel's feelings during second under-ice segment; disciplines herself not to act; treats the discipline as operational; the feelings, if they exist on her side, are not yet legible to her. The leak event in Segment 3 tests the discipline; the discipline holds. |
+| Post-mission (Book 1 / 2) | Surfacing in Punta Arenas, mission paperwork, debrief weeks. The command boundary dissolves. Anna registers what she felt during the mission as something other than command-protection — but does not yet act. The mother in St. Petersburg surfaces it in conversation; Anna does not deny; she does not move yet. |
+| Book 2 | Anna and Joel work together in the post-mission consortium debriefs, scientific publications, public rollout of Sunfish-1 results. They see each other regularly. Anna's hardness softens against Joel's continued not-pressing. She does not initiate yet. The Book 2 regulatory testimony arc (where Stefan testifies for the federated-trust direction; Wanjiru testifies for sovereignty) brings the architectural-political weight back; Anna's interior is partly displaced by the work. |
+| Book 3 | The disclosure happens. **Anna probably initiates** — Joel's discipline has held longer than her hardness; the imbalance corrects when she names what they both already know. PAO recommendation: small, undramatic, between them only. Possibly at her kitchen table in St. Petersburg, after a visit with her mother; possibly at his (wherever Joel lives by Book 3); possibly somewhere neutral. The setting matters less than the conversation; the conversation is mutual recognition, not declaration. |
+| Books 4-5 | Established partnership in early phase. Book 4's flashback of the prior failure with Stefan lands in a context where Joel is a present partner; the contrast is structural and earned. Book 5's Moiraine-fall convergence carries the love arc's unfinished business if Anna is apparently lost. |
+| Books 6-8 | Aged partnership. Both have careers; both have public-architectural roles (Anna in consortium and advocacy; Joel in maintainership and standards-body alongside Wanjiru). The partnership is one of the things that has lasted across the series' long arc. |
+| Final | Still together; aged; the mesh has aged with them. The Long Now answer at human scale: we built something that lasts. |
+
+## What this layer adds to Anna's existing sheet (no replacement; only addition)
+
+- Her existing #2 fear (*becoming the locked phone*) acquires a sharper anchor — Joel is one of the people the call would reach if she does not return from a mission. The mortality fear is no longer abstract; it has a specific person.
+- Her existing #3 fear (*the historical pattern winning*) gets a partial counter-answer the love arc carries — partnership is itself a Long Now act; the "next family" pattern includes choosing to make a family in your fifties when you previously didn't. Anna's surrender of the over-achieving "if I prepared enough" pattern is the same surrender on both fronts.
+- Her existing voice samples are unchanged; the love arc is interior; existing samples (the King-style opening line; the mid-Act-IV interior; the Act V resolution) are appropriate for both the architectural and the romantic interior, with the romantic register submerged.
+- The mother in St. Petersburg becomes load-bearing not just for the Long Now thread but for the love arc — she is the person who recognizes what Anna is doing before Anna does, and the conversation between them that surfaces it is a series-strong candidate scene.
+
+## What the love arc does NOT do (mirrors Joel's sheet)
+
+- **Does not appear in The Crossing chapter.** Vol 1's closing chapter retains its focus on Anna's command-decision arc and the leak event.
+- **Does not become Book 1's primary emotional spine.** Book 1's primary emotional spine is the architectural maiden voyage + Anna's command authority + the prior-failure trust hardening. The love arc is a secondary register, legible to the audience over the book without being foregrounded.
+- **Does not resolve in Book 1.** The disclosure happens later (Book 3 in PAO recommendation). Book 1's love-arc beat is "Anna registers Joel's feelings during the second segment; disciplines herself not to act; the discipline holds through the leak event."
+- **Does not displace the architectural / Forsaken / Long Now arcs.** The love arc is a layer; the architectural arc is the spine.
+- **Does not become a Hollywood moment.** Both Anna and Joel are mid-50s senior operators. The romantic register is mature, quiet, and disciplined. The disclosure is a conversation, not a scene.
+
+## Series-end note
+
+The partnership is not a redemption arc for Anna. She does not need to be rescued from the work-over-relationships pattern or the prior-failure hardening. The partnership is the second-half-of-life adult relationship between two professional operators who recognized each other across professional lines and built something with care. The Long Now answer the love arc carries: *what we build with the people we recognize is what survives the work.*
+
+The architecture's lasting answer is the mesh; the love arc's lasting answer is Anna and Joel. Both are the same answer in different registers.
