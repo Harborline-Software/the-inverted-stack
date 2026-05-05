@@ -93,7 +93,11 @@ Suggest small structural edits:
 - Where to move or collapse paragraphs
 - Where to **end the chapter for maximum impact** — this is often the highest-leverage structural recommendation; many chapters end one paragraph too late
 
-### 5. Concrete, line-level suggestions
+### 5. Concrete, line-level suggestions — three layers
+
+This dimension covers three layers of prose work. Run all three; weight depends on the chapter's revision history.
+
+#### 5a. Passage-level before/after rewrites
 
 Choose 1-2 of the densest or most important technical passages (e.g., a GC/lease discussion, a forensic-finding walkthrough, a character's signature-discipline scene) and provide a **before/after** rewrite that:
 
@@ -114,11 +118,38 @@ AFTER (NN words; -X% / -Y words):
 Why: [1-2 sentences on what the revision preserves and what it cuts]
 ```
 
-Highlight any **repeated phrases or constructions** and propose alternatives or removals:
-- *I made a note* (count instances; if >3, suggest variation or trimming)
+#### 5b. Sentence-level rhythm and micro-edits
+
+Most chapter improvements live at the sentence level. Run a systematic sentence-rhythm pass and flag:
+
+- **Subordinate-clause prune candidates.** Where a sentence carries one subordinate clause too many. Example: *The lease holder lost connectivity mid-write; the lease expired; a new lease holder accepted writes; on reconnect, the architecture had no fence to prevent the second write from landing on top of the first.* — the *on reconnect* clause can compress to *when they rejoined, nothing in the protocol stopped the second truth from landing on top of the first.* Same image; one fewer subordinate construction; tighter rhythm.
+- **Sentence-linking opportunities.** Two short consecutive sentences sharing a common subject or temporal frame can sometimes link with *and* / *but* / *though* / em-dash. Example: *The light behind him was full now. He did not reach for the coffee.* → *The light behind him was full now, and he did not reach for the coffee.* The link earns itself when it connects observation-cause-and-effect; do NOT link when each sentence is doing distinct work.
+- **Catalog-trim opportunities.** Anaphoric enumerations earn their place through 2-3 instances; the fourth instance is usually the one that becomes formula. Example: *He did not name the constraints / he did not point out / he did not mention / he did not deflect* — three of those is anaphora; four is exposition. Trim 1-2 examples from any catalog over three items unless the load is intentional.
+- **Repeated-phrase redundancy.** Where two consecutive sentences carry the same emotional content. Example: *He said it in four sentences. He did not soften any of the four sentences.* → *He said it in four sentences. He did not soften any of them.* — the second sentence's word *the four sentences* repeats the first sentence's *four sentences*; *any of them* compresses without losing meaning.
+- **Adverb-doubling and intensifier-stacking.** Anna's voice spec is compressed; intensifiers (*really*, *very*, *quite*, *deeply*) and doubled adverbs (*calmly and deliberately*) almost never earn their place.
+
+#### 5c. Typographic and paragraph-break sensitivity
+
+Audiobook-aware prose work happens at the paragraph-break and white-space layer:
+
+- **Paragraph breaks for breath.** A paragraph that ends on a payoff line — a "star hit" beat, a one-sentence revelation, a single image — often benefits from being its own paragraph. Example: *He hit the star without looking at the page.* deserves to land as a single-line paragraph isolating the beat. Identify these.
+- **Motto-line typographic emphasis.** A short, almost aphoristic line that distills the chapter's load — *Snapshot when history is gone, that was the move.* / *The case wasn't handled by a clause; it was eliminated by the fence.* — earns visual emphasis as its own line. Recommend pulling such lines out of dense paragraphs.
+- **Whitespace around climactic beats.** When a chapter has a multi-sentence climax (e.g., the four-sentences-plus-fifth in Ch 2), check that each sentence carries its own visual weight. Sometimes this means line-break-each-sentence, sometimes it means a paragraph break between the body and the after-beat. **Audiobook listening is the test:** if a beat depends on Kokoro's silence between paragraphs to land, the prose must structure that silence into the markdown.
+- **Dense-paragraph identification.** Paragraphs over 8 sentences in a chapter that's not deliberately running long form usually have a natural break point that compresses the cognitive load.
+
+#### 5d. Cross-paragraph craft (rare; high-leverage when it lands)
+
+Occasionally a phrase or construction in one paragraph could **rhyme later** in the chapter — repetition that earns its place by structural symmetry. Example: *To be fair* in a Joel-defends-prior-protocol moment + *To be fair* in Anna's recollection of the prior-failure architect's evasions — the same phrase used twice across the chapter creates a structural rhyme that reinforces *this kind of language is banned in command moments.* Flag where the chapter could benefit from such structural rhyming, but only when the symmetry is doing real work; do not invent rhymes for their own sake.
+
+#### Repetition / phrase audit
+
+Highlight any **repeated phrases or constructions** with instance counts and earn-their-place verdicts:
+
+- *I made a note* (count instances; if >3, identify which earn their place and which read as formula)
 - *He did the X layer* / *she did the Y layer* — naming patterns that, repeated, become formula
 - *Technically true / operationally a lie* — load-bearing on first instance; diluted on third
 - Any phrase used more than four times in the chapter unless intentional anaphora
+- **Important:** distinguish *intentional anaphora* (e.g., *fence* repeated 8 times because it is the named mechanism the chapter is recruiting on) from *formula tic* (e.g., *I made another note, which was that* — a syntactic frame that became habitual). Anaphora of named mechanisms is canon-protected; formula tics are revision targets.
 
 ### 6. Tone and style check
 
@@ -187,6 +218,25 @@ After writing the review document, run a `wc -w` on the review file and report:
 6. **Do not propose changes that violate the canon docs.** If the canon mandates Pattern A formal-log opener and the current opener works, don't propose changing it. The canon is the structural floor; you operate above it.
 7. **Iterative review is expected.** A chapter may go through 2-4 review passes. Each pass should be tighter and more focused than the last; later passes catch what earlier passes missed or what new revisions introduced.
 8. **Be honest about strong sections.** Not every section needs critique. If a passage is working well, name it and move on. The author needs to know what to preserve as much as what to revise.
+
+### 8a. Preservation discipline — what is canon-protected vs. open to revision
+
+A common failure mode is **over-protective preservation**. The agent flags a working character beat as "do not revise" when in fact the beat could compress further. To avoid this:
+
+- **Canon-protected (do NOT propose revising):**
+  - Structural elements named in `chapters/book-2/CHAPTER-OUTLINE.md` per-chapter spec (Pattern A/B/C; load-bearing dialogue beats; named-mechanism anaphora that the chapter is recruiting on; signature-discipline scenes)
+  - Verbatim passages explicitly protected by the chapter's drafting brief (e.g., the R1-BLOCK admission)
+  - Voice-spec patterns (controlled emotional flashes; staff-history-for-the-next register; mature-narrator restraint)
+  - The chapter's central architectural claim's named mechanisms (the fence; the snapshot-when-history-is-gone; the three-pass discipline; the closed-interval acknowledgment)
+- **Open to revision (default-revisable):**
+  - Repeated character beats that read as anaphora-becoming-formula. *Three of the same gesture is character; four is rhythmic overkill.* Compress.
+  - Body-language tells that work but could compress without losing the tell. *Twice his hand moved toward the printout and stopped before it landed* is tighter than *each time / each time / each time.*
+  - Procedural-context paragraphs that add detail to a scene's emotional altitude without payoff (e.g., consortium-ranking asides; institutional-timing notes that don't bear on the scene's stakes)
+  - Re-summarization in chapter codas that recapitulate body content
+  - Forecast-register intrusions of any kind (per § 8 of `series-arc-sunfish-trajectory.md`)
+  - Doubled morals (a load-bearing line landed twice)
+
+When in doubt, ask: *is the line doing work the chapter cannot do without?* If yes, preserve. If no, propose revision. Default toward revision; over-protection is a more common failure mode than over-cutting.
 
 ## Calibration for iteration
 
