@@ -370,32 +370,31 @@ PRESETS_HIGGS = PRESETS_CHATTERBOX
 # on the Windows box requires it.
 ENGINES: dict[str, dict] = {
     "kokoro": {
-        # Default direct-to-Mac path. Known unreliable for sustained renders
-        # >5 min on CPU container (worker hard-crashes; see .wolf/buglog.json
-        # bug-097). Mitigated by the chunk cache in synth_chunk + the 8-retry
-        # backoff which rides out the auto-restart cycle.
-        "presets": PRESETS_KOKORO,
-        "default_base_url": "http://localhost:8880/v1",
-        "model_name": "kokoro",
-        "requires_auth": False,
-        "description": "Kokoro-82M FastAPI on the local Mac (default daily-driver; CPU; chunk-cached against worker crashes)",
-    },
-    "kokoro-remote": {
-        # Future-state path: Kokoro proxied via higgs-audio on the Windows
-        # GPU box (model="kokoro" routes to its local :8880). The routing
-        # spec lands on COB's plate — when deployed, the higgs-audio service
-        # at desktop-umt08rn:8881 will short-circuit the voice catalog check
-        # for kokoro-class models and proxy through. As of 2026-05-05 the
-        # production server still runs the older code; kokoro voices return
-        # 404 "unknown voice" until the deploy lands. Verify with a probe:
-        #   curl -X POST .../v1/audio/speech -H "Authorization: Bearer ..." \
-        #     -d '{"model":"kokoro","voice":"af_bella",...}'
-        # Expect: 200 + audio bytes after deploy. Until then: stays unused.
+        # Default. Kokoro proxied via higgs-audio on the Windows GPU box
+        # (model="kokoro" routes the request to that box's local :8880).
+        # Live as of 2026-05-05 12:40 PT — the unified TTS API spec
+        # documents the routing; verified via probe: 745-char chunks
+        # synth in ~3.3s consistently (vs. 25-30s on the Mac CPU
+        # container, plus crash-restart cycles). Bearer auth required;
+        # set TTS_API_KEY env or pass --api-key.
         "presets": PRESETS_KOKORO,
         "default_base_url": "http://desktop-umt08rn:8881/v1",
         "model_name": "kokoro",
         "requires_auth": True,
-        "description": "Kokoro routed via higgs-audio proxy on Windows GPU box (port 8881; gated on COB deploy)",
+        "description": "Kokoro routed via higgs-audio proxy on Windows GPU box (port 8881; ~8× faster than Mac CPU; default as of 2026-05-05)",
+    },
+    "kokoro-local": {
+        # Legacy direct-to-Mac path. Preserved for offline development
+        # and for cases where the Tailscale link to the GPU box is down.
+        # Known unreliable for sustained renders >5 min (CPU container
+        # hard-crashes; see .wolf/buglog.json bug-097). Mitigated by the
+        # chunk cache in synth_chunk + the 8-retry backoff which rides
+        # out the auto-restart cycle. Use only when GPU path is unreachable.
+        "presets": PRESETS_KOKORO,
+        "default_base_url": "http://localhost:8880/v1",
+        "model_name": "kokoro",
+        "requires_auth": False,
+        "description": "Kokoro-82M FastAPI on the local Mac (legacy direct path; chunk-cached against worker crashes)",
     },
     "chatterbox": {
         "presets": PRESETS_CHATTERBOX,
