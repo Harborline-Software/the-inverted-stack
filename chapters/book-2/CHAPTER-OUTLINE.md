@@ -3,15 +3,16 @@
 > **Working title:** TBD. Concept artifacts use *Book 1 of the Sunfish series* / *Vol 2*.
 > **Status:** outline drafted 2026-05-04 (PAO). All chapters at `icm/outline`. Pipeline plumbing in `build/audiobook.py` is staged but inert until Arc 1 reaches `icm/draft`.
 > **Source artifacts:** read in this order before drafting any chapter:
-> 1. `.pao-inbox/_creative/vol-2-concept-note-2026-05-04.md` — the 12-section synthesis
-> 2. `.pao-inbox/_creative/vol-2-concept-locked-elements-2026-05-04.md` — running locks index
-> 3. `.pao-inbox/_creative/vol-2-archive-and-capture-convention.md` — **canonical** Anchor stack + voice-register split + graceful degradation + forensic substrate + OSS-funding-asymmetry (LOCKED 2026-05-05)
-> 4. `.pao-inbox/_creative/vol-2-anchor-bridge-sync-mechanic.md` — **canonical** bandwidth-bounded surface windows + Wanjiru's sync-triage + conditional preservation (LOCKED 2026-05-05)
-> 5. `.pao-inbox/_creative/series-arc-sunfish-trajectory.md` — series-canon-only; **never referenced from Vol 2 prose**; chapter-drafter awareness tool only (LOCKED 2026-05-05)
-> 6. `.pao-inbox/_creative/character-sheets/` — Anna, Joel, Priya, Wanjiru, Stefan as a minimum for Book 1
-> 7. `.pao-inbox/_creative/forsaken-position-papers/` + `oss-architects-voices/` — voice references
-> 8. `.pao-inbox/_decisions/2026-05-04-vol2-boat-power-option-c-locked.md` — mission timeline
-> 9. `.claude/skills/crew-log-style-entry/SKILL.md` — generator skill for formal-log + diary entries
+> 1. `.pao-inbox/_creative/vol-2-software-as-gravity.md` — **CANONICAL** structural framing (LOCKED 2026-05-05; Ch 2 v3 listen-test verdict forced this canon). Software is gravity, not character. Six rails; per-chapter rail assignments below; captain-asks-engineer demoted from default to install-engine + selective. **Read this BEFORE the chapter outline entries.**
+> 2. `.pao-inbox/_creative/vol-2-concept-note-2026-05-04.md` — the 12-section synthesis (note: §6.2 captain-asks-engineer is superseded by software-as-gravity canon above)
+> 3. `.pao-inbox/_creative/vol-2-concept-locked-elements-2026-05-04.md` — running locks index
+> 4. `.pao-inbox/_creative/vol-2-archive-and-capture-convention.md` — **canonical** Anchor stack + voice-register split + graceful degradation + forensic substrate + OSS-funding-asymmetry (LOCKED 2026-05-05)
+> 5. `.pao-inbox/_creative/vol-2-anchor-bridge-sync-mechanic.md` — **canonical** bandwidth-bounded surface windows + Wanjiru's sync-triage + conditional preservation (LOCKED 2026-05-05)
+> 6. `.pao-inbox/_creative/series-arc-sunfish-trajectory.md` — series-canon-only; **never referenced from Vol 2 prose**; chapter-drafter awareness tool only (LOCKED 2026-05-05)
+> 7. `.pao-inbox/_creative/character-sheets/` — Anna, Joel, Priya, Wanjiru, Stefan as a minimum for Book 1
+> 8. `.pao-inbox/_creative/forsaken-position-papers/` + `oss-architects-voices/` — voice references
+> 9. `.pao-inbox/_decisions/2026-05-04-vol2-boat-power-option-c-locked.md` — mission timeline
+> 10. `.claude/skills/crew-log-style-entry/SKILL.md` — generator skill for formal-log + diary entries
 >
 > **What this document is:** the working blueprint. Each chapter entry carries everything a drafter (inline PAO at xhigh, technical-book-writer agent, or human) needs to produce a first draft *without re-deriving structure from the concept note each time*. The 8 sample story arcs from concept note §7 form the spine; the supporting/connective chapters fill the act structure to ~18 chapters / ~85,000-90,000 words / ~9-10 hours audiobook.
 
@@ -33,7 +34,9 @@
 Every chapter entry below carries the same fields:
 
 - **Days / setting:** mission-day window + physical location
-- **Architectural claim:** the single load-bearing claim from Joel's paper this chapter exercises (one chapter, one claim — never two)
+- **Primary rail:** one of the six rails from `vol-2-software-as-gravity.md` § 2 — Trust + prior betrayal / Career-cost + aging out / Class/region/institutional politics / Mission as survival / Grief, family, memory / Rival mission + institutional capture. **The chapter is about the rail. Sunfish is gravity — substrate, consequence, evidence. Not subject.**
+- **Secondary rail:** optional; may carry minor weight; primary rail determines voice and scene structure
+- **Architectural claim:** the single load-bearing claim from Joel's paper this chapter exercises (one chapter, one claim — never two). **Appears as evidence/consequence under the primary rail; not as the chapter's subject.**
 - **Frame ratio:** % mission-present narration vs. % flashback; default 60/40 per concept note §6.1
 - **Log-opener pattern:** A (formal-log opener only), B (formal-log frame), C (formal log + diary inset), or none. Used **only where it earns its place** — never as formula. See § Structural devices below.
 - **Key character beats:** what each present character does or registers in this chapter
@@ -78,6 +81,39 @@ Five chapters carry beats from the forensic-substrate property (`vol-2-archive-a
 - **Ch 17** — Joel + Wanjiru complete the forensic analysis on laptop-class compute; surface the supply-chain pattern
 - **Ch 18** — regulatory filing reaches consortium; architectural-political contest enters institutional phase
 
+### Per-chapter primary-rail assignments (LOCKED 2026-05-05; canon: `vol-2-software-as-gravity.md`)
+
+Each chapter leads with one of six rails. The architecture appears as substrate, consequence, or evidence — not as subject. **Drafters write to the rail.**
+
+| Chapter | Primary rail | Secondary rail |
+|---|---|---|
+| Ch 1 — Departure | Trust + prior betrayal | Mission as survival (atmosphere) |
+| Ch 2 — Recruitment Interview | **Trust + prior betrayal** | — |
+| Ch 3 — Drake Passage | Mission as survival | Class/region politics (Sabina + Diego) |
+| Ch 4 — First Submersion | Mission as survival | (captain-asks-engineer install-chapter; see § Captain-asks-engineer demoted below) |
+| Ch 5 — Day-Twenty Realization | Grief, family, memory | — |
+| Ch 6 — First Surface | Trust + prior betrayal (Wanjiru's exception-refusal) | Rival mission (Stefan name surfaces) |
+| Ch 7 — Joel's Sunfish | Career-cost + aging out | Grief/Long Now (boat-that-no-longer-exists) |
+| Ch 8 — Second Submersion | Class/region/institutional politics (Sabina) | Mission as survival |
+| Ch 9 — Sync Daemon Under Drift | Career-cost + aging out (Priya's question Joel hadn't asked himself) | — |
+| Ch 10 — Aftermath of a Mission That Once Was | Trust + prior betrayal | — |
+| Ch 11 — Second Surface | Rival mission + institutional capture (cross-check race) | — |
+| Ch 12 — Beginning of the End | Mission as survival | — |
+| Ch 13 — Schema That Should Not Migrate | Class/region/institutional politics (Priya as decider) | Career-cost (Joel walking her direction) |
+| Ch 14 — The Crossing | Mission as survival (binary tech) | Trust + prior betrayal (Joel's protective beat) |
+| Ch 15 — Compromised Relay Holds | Class/region/institutional politics | Career-cost (Wanjiru's institutional thinking) |
+| Ch 16 — Final Ascent | Mission as survival (post-climax adaptation) | — |
+| Ch 17 — Transit North | Rival mission + institutional capture + Career-cost (joint anchor) | Trust + prior betrayal (staff-history conversation) |
+| Ch 18 — Punta Arenas Surfacing | Rival mission + institutional capture | Trust + prior betrayal (Stefan exchange) |
+
+### Captain-asks-engineer demoted (LOCKED 2026-05-05)
+
+Per `vol-2-software-as-gravity.md` § 5, the captain-asks-engineer dialogue engine is **no longer the default**. It is:
+- **The install-engine for Ch 4** (First Submersion). The architecture's operational reality lands on the page through Anna asking and Joel explaining; the reader installs partition-mode behavior here.
+- **Selectively elsewhere** (1-2 technical exchanges per technically-load-bearing chapter) when the chapter is genuinely about the architecture.
+
+Most chapters lead with a different engine — the rail's engine. **Where Anna and Joel are in a scene together, the default is *what is the human stakes question between them right now* — not *what is the next architectural detail to surface.*** See `vol-2-software-as-gravity.md` § 5 for the four-question scene checklist drafters apply before any scene.
+
 ### Capability-degradation threads
 
 The leak event in Ch 14 damages the boat's central compute hub (workstation; RTX-class GPU). Subsequent chapters register reduced capability through *what the crew does and doesn't do*, not through technical lament:
@@ -116,9 +152,28 @@ Drafters see `vol-2-archive-and-capture-convention.md` § 6 for the discipline r
 ## Ch 2 — *The Recruitment Interview* (Arc 2 — flashback)
 
 - **Days / setting:** flashback to ~6 months before departure; Anna's office, video call to Joel.
-- **Architectural claim:** *the architect's response to being told he was wrong is what makes the architecture trustworthy.* The R1-BLOCK-rewrite admission as foundational trust event.
-- **Frame ratio:** 10% mission-present (frame anchor at start + end) / 90% flashback. **Note: the Pattern A formal-log opener replaces the existing Day-14 mission-frame opener; the chapter's existing Day-14 close (~580 words) stays as the back-frame anchor.**
+- **Primary rail (LOCKED 2026-05-05):** **Trust + prior betrayal.** The chapter is *what kind of man wakes up the morning after Klett tells him he's wrong* — Anna's recruitment-as-character-test, where the architecture is the **arena** in which honesty vs self-protection plays out. The chapter is NOT about the lease protocol; the chapter is about Anna's reading of Joel as he answers questions. Architectural claim below appears as **evidence** in the test, not as the chapter's subject.
+- **Architectural claim:** *the architect's response to being told he was wrong is what makes the architecture trustworthy.* The R1-BLOCK-rewrite admission as foundational trust event. **Surfaces in the chapter as the load-bearing trust beat (the four sentences and the fifth) but is NOT walked through at protocol-detail depth — the chapter is about Joel's answer, not about the protocol the answer is about.**
+- **Frame ratio:** 10% mission-present (frame anchor at start + end) / 90% flashback. **Note: the Pattern A formal-log opener replaces the existing Day-14 mission-frame opener; the chapter's existing Day-14 close (~245 words after Pass-2 review) stays as the back-frame anchor.**
 - **Log-opener pattern:** A — formal-log opener as a `Pre-departure record` / `Selection file entry` from Anna's selection-decision file (~95 words); reproduces the in-universe artifact that produced the offer. Per-chapter generator: crew-log-style-entry skill, tone_bias = `formal_duty_log`. Sample header: *Pre-departure record, dated 2026-04-02. Yusupova, Mission Director-designate. Sunfish-1.*
+
+- **VERSION HISTORY (CO directive 2026-05-05):**
+  - **v1** (chapter-drafter, pre-canon; PR #110) — first draft; 8,010 words; 50.6 min audio
+  - **v2** (chapter-drafter, post-canon-PR-#113) — canon-aware redraft with Pattern A opener + Anchor-grounding; 8,216 words / 50.6 min
+  - **v3** (prose-reviewer, post-craft-feedback-PR-#115) — surgical compression of technical Q&A; 7,256 words / 43.5 min
+  - **v3 listen-test verdict:** "still too technical" — forced the software-as-gravity canon (`vol-2-software-as-gravity.md`)
+  - **v4** (chapter-drafter, post-software-as-gravity-canon — IN PROGRESS) — full redraft leading with **trust + prior betrayal** rail; technical Q&A compressed to single representative beats with Anna's interior reading of Joel as dominant register. **Word count target: ~5,500-6,200; audiobook target: ~33-37 min.**
+
+- **v4 redraft directives (per `vol-2-software-as-gravity.md` § 6):**
+  - Compress all four technical Q&A exchanges (GC, lease, Byzantine ops, ops layer) to **single representative beats each** with Anna's interior reading of Joel as the dominant register. *He answered the question. He did not soften the answer. I made a note of how he had not softened it.* The technical content is *that he gave a correct, undefensive answer*, not *what the answer was*.
+  - Foreground Anna's interior throughout the technical sections. Where v3 has Joel explain the fence, v4 has Anna register *that he answered without reaching for the printout, that his voice did not change between technical clauses, that he had not looked at his notes since minute six*. The architecture is gravity; **Anna's reading of Joel is the chapter**.
+  - **R1-BLOCK admission stays verbatim.** That is the chapter's load-bearing trust event; the four sentences and the fifth are protected.
+  - **Yes/yes recruitment exchange stays.** The chapter ends on the exchange Anna selected him on.
+  - **Day-14 close stays at v3 length** (~245 words). The coda's job is to land present-tense weight, not to recapitulate.
+  - Technical content collapses to ~30% of v3's load.
+  - **Cut the forecast-register intrusion** in Joel's not-naming-the-Navy passage (per Pass-2 review). *I would learn months later / in a conversation I did not yet know was coming* violates `series-arc-sunfish-trajectory.md` § 8 and pre-spends Ch 7. Replace with one present-call-register sentence.
+  - **Cut the consortium-ranking procedural aside** in the notebook-line passage (per Pass-2 review).
+  - **Apply Anna's voice register spec rigorously** — compressed-deliberate; controlled emotional flashes; authority assumed not performed; no hedging.
 - **Key character beats:**
   - **Anna:** has read the paper + the council Round 1 review + the Round 2 review; her questions are designed to surface whether Joel will tell the truth when it matters; structural inverse of what failed her with Stefan.
   - **Joel:** the admission. *I missed it. The original protocol assumed condition X that doesn't hold under sustained partition. Klett was right. I rewrote it.* No softening, no defense, no deflection.
