@@ -10,7 +10,7 @@ relates-to:
   - chapters/closing/the-crossing.md (existing Vol 1 closing chapter; Vol 2 inherits its mission frame)
 ---
 
-# Vol 2 — *The Inverted Stack: The Sunfish-1 Mission* (working title)
+# Vol 2 — *The Inverted Stack: The the Nansen Mission* (working title)
 
 ## What this is
 
@@ -20,7 +20,7 @@ This doc accumulates locks from a long creative discussion. It is **not** the co
 
 ## Premise
 
-Vol 2 is **Anna Yusupova's first-person mission narrative** of the Sunfish-1 maiden voyage of the Sunfish architecture. The existing book (*Vol 1*) is canonically Joel Reyes's research paper that authorized the mission's tech bet — referenced by Vol 2's narrator but never reproduced. The relationship between the two volumes is the H.G. Wells convention: the prior monograph exists in the world; the narrator quotes from it where it earns its place; the narrator does not deliver the monograph in full. Same trick Wells used in *The War of the Worlds*.
+Vol 2 is **Anna Yusupova's first-person mission narrative** of the Nansen's maiden voyage on MERIDIAN-7 of the Sunfish architecture. The existing book (*Vol 1*) is canonically Joel Reyes's research paper that authorized the mission's tech bet — referenced by Vol 2's narrator but never reproduced. The relationship between the two volumes is the H.G. Wells convention: the prior monograph exists in the world; the narrator quotes from it where it earns its place; the narrator does not deliver the monograph in full. Same trick Wells used in *The War of the Worlds*.
 
 The mission is the **maiden voyage** of Sunfish — real OSS, version 0.x, no prior deployments. Sunfish was named by Joel after his first U.S. Navy submarine, USS Sunfish SSN-649 (decommissioned 1998). The architecture has been built, tested, vetted, and reviewed (Vol 1 documents this); the mission is its first real-world deployment. Audience-facing tagline could be: *the architect built it, the council vetted it, the captain bet her crew on it, the mission tested it.*
 
@@ -38,7 +38,7 @@ The mission is the **maiden voyage** of Sunfish — real OSS, version 0.x, no pr
 - Picked by the multinational consortium for **command excellence** — polar credentials (eighteen years at AAR Institute St. Petersburg, postdocs at AWI Bremerhaven and the Norwegian Polar Institute), cross-institutional relationships (kept alive after 2022 when other CIS scientists' Western relationships went silent)
 - **Not** a Sunfish author and not a co-author. Read Joel's paper, recognized it answered her operational requirements, championed it within the consortium.
 - **Second-attempt narrator.** A prior mission used a different architecture and **failed her**. The prior failure had a trust dimension: a colleague Anna had trusted recommended a research-grade local-first toolkit with a known schema-migration limitation that the colleague had quietly worked around but didn't disclose. The mission was cut short; crew came home alive; science objective lost; budget consequences; her professional reputation took a hit she's still rebuilding. Anna's loss of trust isn't just in the system — it's in *the engineer who recommended it.* That colleague is now off her professional radar.
-- **Hardened vetting standard** for Sunfish-1: even more critical of who she lets in and who she trusts. Joel's blunt-and-unprompted disclosure pattern is the exact opposite of what failed her last time, which is why it earns her trust so precisely.
+- **Hardened vetting standard** for the Nansen: even more critical of who she lets in and who she trusts. Joel's blunt-and-unprompted disclosure pattern is the exact opposite of what failed her last time, which is why it earns her trust so precisely.
 - Polar-exploration literary inheritance: Shackleton on *Endurance* after *Nimrod* — the second-time-around polar lead returning to the ice with everything she learned from the loss
 
 ### Joel (principal architect)
@@ -70,12 +70,12 @@ Anna had to **argue for her technical picks** because the consortium initially p
 
 ### Council review (Vol 1 Part II)
 
-- **The vetting that authorized first deployment.** Without the council review's R2 verdict + 15 conditions, the consortium wouldn't have signed off on Sunfish-1.
+- **The vetting that authorized first deployment.** Without the council review's R2 verdict + 15 conditions, the consortium wouldn't have signed off on the Nansen.
 - R1 produced two BLOCK verdicts (per Vol 1 Ch5-10). The lease protocol BLOCK was Joel's. He rewrote it; R2 cleared with conditions.
 - Anna's vetting of Joel included reading the council review and observing **how Joel handled the R1 BLOCK** — did he defend? did he listen? did he rewrite? His response is what convinced Anna he could be trusted at three in the morning under the ice.
 - Vol 2 chapters: each is a verification-gap meeting reality, with the relevant contributor present to defend / debug / explain
 
-### The boat (Sunfish-1)
+### The boat (the Nansen)
 
 - Multi-week submerged operation under the Filchner-Ronne ice shelf — realistically requires **nuclear propulsion**
 - Working assumption (open question; CO override welcome): a **repurposed ex-Russian Navy nuclear research submarine**. Fits Anna's St. Petersburg biography, the multinational consortium with strong CIS-region scientific contribution, and Rustam's *kapitan 1-go ranga* commission (he's the Russian Navy peer who could have signed off on the asset's repurposing).
@@ -137,7 +137,7 @@ Original three open items, all now resolved:
 
 2. ✅ **Prior-failure framing** — confirmed as **path B: cut-short mission + colleague's failure of judgment (undisclosed schema-migration limitation)**. With shadows of D (institutional pressure the colleague did not fully name).
 
-3. ✅ **Unnamed colleague disposition** — locked as **competitive parallel mission framework**. The colleague is **Dr. Stefan Reinhardt**, German; AWI Bremerhaven postdoctoral colleague of Anna's ~2008-2012; principal architect of TrustMesh / HelveSync (the rival platform); backed by Helvetia Trust SA (Swiss federated-identity firm; corporate-sponsor structural force). The rival mission targets the Arctic, staggered-with-overlap timing vs. Sunfish-1. Stefan is dramatized in flashback in Book 4; present off-page across the series; mostly-off-page rival crew with Captain Astrid Hansen as named operational counterpart.
+3. ✅ **Unnamed colleague disposition** — locked as **competitive parallel mission framework**. The colleague is **Dr. Stefan Reinhardt**, German; AWI Bremerhaven postdoctoral colleague of Anna's ~2008-2012; principal architect of TrustMesh / HelveSync (the rival platform); backed by Helvetia Trust SA (Swiss federated-identity firm; corporate-sponsor structural force). The rival mission targets the Arctic, staggered-with-overlap timing vs. the Nansen. Stefan is dramatized in flashback in Book 4; present off-page across the series; mostly-off-page rival crew with Captain Astrid Hansen as named operational counterpart.
 
 Optional drafting placeholders accepted:
 - Prior-failure mission anchored ~2022-2023 (one year before Stefan's corporate pivot completed; the schema-migration limitation manifested mid-mission)
@@ -145,7 +145,7 @@ Optional drafting placeholders accepted:
 
 ## Cast (with character-sheet anchors)
 
-Sunfish-1 crew (Anna picks the technical contributors; consortium picks mission-fulfillment crew):
+the Nansen crew (Anna picks the technical contributors; consortium picks mission-fulfillment crew):
 
 - **Anna Yusupova — Mission Director (Moiraine).** Full sheet at `character-sheets/dr-leader-mission-director.md` + Vol 2 series-arc layer + Anna-Joel love-arc layer.
 - **Joel Reyes — Principal Architect (Rand).** Full sheet at `character-sheets/joel-reyes-principal-architect.md` + Anna-Joel love-arc layer. USS Sunfish SSN-649 nuclear engineer; named the architecture after his first submarine.
@@ -167,7 +167,7 @@ Rival cast:
 - `forsaken-position-papers/` — three sincere in-universe documents establishing the voice register for series chapter epigraphs from the centralizing direction:
   - Stefan Reinhardt op-ed (Heise Online, October 2025)
   - Helvetia Trust SA public position paper (April 2026)
-  - Working Group regulatory filing (February 2027, post-Sunfish-1)
+  - Working Group regulatory filing (February 2027, post-the Nansen)
 
 ## Status
 

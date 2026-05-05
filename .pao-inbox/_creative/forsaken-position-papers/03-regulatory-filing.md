@@ -3,7 +3,7 @@ type: in-universe-document
 document-type: regulatory-body filing / standards-organization submission
 author-in-universe: Working Group on Compliance-Friendly Distributed Architectures (a multi-stakeholder body convened by the European Commission's Directorate-General for Communications Networks; signatory organizations include Helvetia Trust SA, four European banks, two healthcare consortia, the German Federal Office for Information Security observer-status, and several smaller federated-identity firms)
 publication-in-universe: filed with the European Commission DG-CNECT and copied to ENISA; published in the Commission's public consultation register
-publication-date-in-universe: February 2027 (post-Sunfish-1; positioning for the Book 2 regulatory-assault arc)
+publication-date-in-universe: February 2027 (post-the Nansen; positioning for the Book 2 regulatory-assault arc)
 title-in-universe: "Reference Architecture for Compliance-Friendly Distributed Systems — Working Group Recommendation"
 length: ~720 words
 voice-reference: formal institutional; carefully bounded claims; legal-adjacent register

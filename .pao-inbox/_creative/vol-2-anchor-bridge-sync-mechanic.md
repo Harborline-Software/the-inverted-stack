@@ -54,7 +54,7 @@ This is the **disconnected-signal artifact** — bandwidth scarcity as a structu
 
 ## 4. Wanjiru's chapter-load: active sync-triage
 
-In a traditional submarine, the comms officer manages the link. In Sunfish-1, **Wanjiru triages what reaches durability.** This is an upgrade in agency from passive comms-management to active institutional decision-making, and it's a chapter-load mechanism.
+In a traditional submarine, the comms officer manages the link. In the Nansen, **Wanjiru triages what reaches durability.** This is an upgrade in agency from passive comms-management to active institutional decision-making, and it's a chapter-load mechanism.
 
 ### 4.1 Her priority hierarchy during a 48-hour surface window
 
@@ -72,7 +72,7 @@ Within a 600 GB window, P0+P1 typically fits with bandwidth to spare. P2 partial
 
 Wanjiru's prioritization is not neutral. Specific operational beats:
 
-- **Surface 1:** Stefan's mission is still under way; cross-check observations are partial; Wanjiru holds them for Surface 2 when the rival mission has concluded and Sunfish-1's full surface-window-1 observation is available. Mission record + safety-critical lands.
+- **Surface 1:** Stefan's mission is still under way; cross-check observations are partial; Wanjiru holds them for Surface 2 when the rival mission has concluded and the Nansen's full surface-window-1 observation is available. Mission record + safety-critical lands.
 - **Surface 2:** Stefan's PR cycle is fresh; his official report is days old; the consortium's institutional response window is narrow. Wanjiru pushes the cross-check evidence — even at the cost of deferring some bulk operational records to Surface 3 (which doesn't come). **The political contest's clock is the bandwidth window's clock.**
 - **Final docking:** the bulk catches up. The Bridge accumulates the rest. Wanjiru's final consortium filing draws on the full archive — including the Stefan cross-check and the sensor-head forensic finding.
 

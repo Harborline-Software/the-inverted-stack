@@ -26,7 +26,7 @@ Drafters working any Vol 2 chapter should plant and pay off **only these element
 - Full Stefan dramatization (Book 4) — the human Stefan, his interior, the loss the audience tracks
 - Reconciliation possibility (late series; PAO-recommended partial reconciliation, CO override available)
 - Stefan's pre-AWI biography (Hamburg-vs-Munich-raised; education path)
-- Whether Stefan personally ordered the sensor-head sabotage of Sunfish-1 — this question is *deliberately unanswered* in Vol 2; Book 4 lands the answer
+- Whether Stefan personally ordered the sensor-head sabotage of the Nansen — this question is *deliberately unanswered* in Vol 2; Book 4 lands the answer
 
 **Drafter discipline rule:** if a Vol 2 chapter is reaching toward Stefan beyond the items above, that's a sign the chapter is over-spending him. Pull back. Stefan in Vol 2 is a *strategic position visible*, not a *person on-page*.
 
@@ -40,7 +40,7 @@ Per locked CO direction (Path B + competitive-mission framing):
 - They have since formed a competitive antagonistic team running a parallel demonstration mission with the rival platform
 - The rival platform's core architectural difference vs. Sunfish: **federated identity / centralized key-rotation authority** — looks local-first; centralization is in the trust layer
 - Backed by a corporate sponsor whose commercial interest is being the indispensable trusted-neutral-party for federated identity at scale (working name: **Helvetia Trust SA**, Swiss-domiciled; see separate sheet)
-- Mission target: **Arctic** (geographical mirror of Sunfish-1 going south); staggered-with-overlap timing
+- Mission target: **Arctic** (geographical mirror of the Nansen going south); staggered-with-overlap timing
 - Mostly-off-page rival crew with one named captain (Astrid Hansen — see separate sheet)
 
 The corporate-sponsor-vs-OSS axis is the architectural-philosophical split externalized into business-model split. This is the series spine.
@@ -49,7 +49,7 @@ The corporate-sponsor-vs-OSS axis is the architectural-philosophical split exter
 
 - **Name:** Dr. Stefan Reinhardt (working — common Germanic name; not iconic; PAO can adjust if it collides with anything)
 - **Title in narrative:** "Stefan" in Anna's voice (peer-aged former colleague register, with strain); "Dr. Reinhardt" formal; "Reinhardt" in third-party reference
-- **Age at Sunfish-1 mission:** 54-58 — peer-aged with Anna; came up through the same academic generation
+- **Age at MERIDIAN-7:** 54-58 — peer-aged with Anna; came up through the same academic generation
 - **Citizenship:** Germany
 - **Origin / domicile:**
   - Hamburg-raised (alternative: Munich, Frankfurt, Berlin — CO can pin)
@@ -100,11 +100,11 @@ She ended the working relationship. Not dramatically; not publicly. She stopped 
 
 **The rival mission (current):**
 
-Stefan's TrustMesh / HelveSync platform now has commercial momentum and regulatory backing. To prove the platform at scale on the same kind of demonstration Anna has chosen for Sunfish-1, his consortium is sponsoring an Arctic mission targeting under-ice deployment in the Svalbard / Fram Strait region. The mission is operationally similar in profile to Sunfish-1 (multi-segment under-ice operations with a multinational research crew); architecturally it tests the federated-trust local-first platform under maiden-voyage conditions.
+Stefan's TrustMesh / HelveSync platform now has commercial momentum and regulatory backing. To prove the platform at scale on the same kind of demonstration Anna has chosen for the Nansen, his consortium is sponsoring an Arctic mission targeting under-ice deployment in the Svalbard / Fram Strait region. The mission is operationally similar in profile to the Nansen (multi-segment under-ice operations with a multinational research crew); architecturally it tests the federated-trust local-first platform under maiden-voyage conditions.
 
-Stefan is on the rival mission's planning committee but is **not himself on the rival sub.** His role is principal architect (paper author, OSS maintainer, public face of the platform); his rival-mission counterpart is Captain Astrid Hansen (Norwegian; see separate sheet) who runs the operational mission. This parallels Anna-Joel exactly except inverted: Stefan is the architect off-board; Astrid is the operator on-board. Where Sunfish-1 has Joel (architect) on the boat, the rival mission has only Astrid (operator). The mismatch matters.
+Stefan is on the rival mission's planning committee but is **not himself on the rival sub.** His role is principal architect (paper author, OSS maintainer, public face of the platform); his rival-mission counterpart is Captain Astrid Hansen (Norwegian; see separate sheet) who runs the operational mission. This parallels Anna-Joel exactly except inverted: Stefan is the architect off-board; Astrid is the operator on-board. Where the Nansen has Joel (architect) on the boat, the rival mission has only Astrid (operator). The mismatch matters.
 
-The rival mission launched 2-4 months before Sunfish-1. By the time Sunfish-1 surfaces from Segment 1, Stefan's mission has had its first surfacing event and the preliminary results are public. By Sunfish-1's Segment 2 surfacing, the rival mission has concluded; Stefan is publicly framing the results as a success. The cumulative comparative reveal — what each mission actually demonstrated, what each architecture actually held — lands across Sunfish-1's three surface windows + final Punta Arenas arrival.
+The rival mission launched 2-4 months before the Nansen. By the time the Nansen surfaces from Segment 1, Stefan's mission has had its first surfacing event and the preliminary results are public. By the Nansen's Segment 2 surfacing, the rival mission has concluded; Stefan is publicly framing the results as a success. The cumulative comparative reveal — what each mission actually demonstrated, what each architecture actually held — lands across the Nansen's three surface windows + final Punta Arenas arrival.
 
 ## Personality / voice
 
@@ -121,7 +121,7 @@ The rival mission launched 2-4 months before Sunfish-1. By the time Sunfish-1 su
 ## What he wants
 
 - TrustMesh / HelveSync to become the standard for compliance-friendly local-first architecture
-- The rival mission to succeed visibly — proving the platform at scale, in the Arctic, in conditions that mirror Sunfish-1 enough to make the architectural comparison legible
+- The rival mission to succeed visibly — proving the platform at scale, in the Arctic, in conditions that mirror the Nansen enough to make the architectural comparison legible
 - Helvetia Trust's federated-identity product to become the indispensable identity layer for distributed systems — and his own organization to become the canonical local-first wrapper around it
 - His architectural philosophy ratified: that operational maturity requires federated trust; that pure-OSS local-first is correct in principle and unworkable in practice; that he was right to make the trade-off
 
@@ -159,7 +159,7 @@ He is the **fallen ally archetype.** Once on the right side; chose centralizatio
 
 | Book | Stefan's beat |
 |---|---|
-| 1 (*The Filchner Dark*) | Off-page during Sunfish-1's voyage. Rival mission referenced; preliminary results land in surface windows. Anna's evolving assessment of him is one strand of her interior arc. |
+| 1 (*The Filchner Dark*) | Off-page during the Nansen's voyage. Rival mission referenced; preliminary results land in surface windows. Anna's evolving assessment of him is one strand of her interior arc. |
 | 2 | First public confrontation. Stefan defends his platform in regulatory testimony. Anna or Wanjiru sees the testimony from outside and registers what it costs to take the position publicly. |
 | 3 | TrustMesh acquires regulatory blessing in a major jurisdiction. Stefan is on TV as the architect of compliance-friendly local-first. The public face is his. |
 | 4 (*Aiel Waste*) | Flashback book. The prior failure dramatized. Stefan rendered as a real person for these scenes. The audience sees him before the corporate pivot — younger, working with Anna, building the AWI prototype. The collapse of the friendship is the book's emotional center. |
@@ -201,7 +201,7 @@ The voice register: precise; English-as-second-language formality; measured. The
 - The exact rival platform name (TrustMesh / HelveSync are placeholders — CO can override)
 - The exact Helvetia Trust institutional details (see separate sheet)
 - The specific sequence of Stefan's pre-AWI biography (Hamburg-vs-Munich-raised; education path)
-- The exact dates of the prior-failure mission (sometime ~2022-2023 if Sunfish-1 is 2026; CO can pin)
+- The exact dates of the prior-failure mission (sometime ~2022-2023 if the Nansen is 2026; CO can pin)
 - Whether Stefan eventually reconciles in the series (PAO recommends partial reconciliation; CO can override)
 
 ## PAO action
@@ -220,7 +220,7 @@ The voice register: precise; English-as-second-language formality; measured. The
 
 Helvetia Trust SA's strategic reach extends through **co-development partnerships** with sensor-head and instrumentation vendors. Vendors that take Helvetia's investment ship products with subtle firmware behaviors — patterns that don't quite add up under scrutiny but that fall within nominal operating ranges. The compromise vector is the OSS world's hardest structural vulnerability: small projects cannot vertically integrate; they source off-the-shelf; the vendors are exactly the entities well-funded centralizing actors capture.
 
-In Vol 2, this mechanism manifests as: **the Sunfish-1 sensor head whose failure produced the leak in Ch 14 was sourced from a vendor whose recent firmware updates trace through a Helvetia-aligned co-development partnership.** Wanjiru and Joel surface this on transit-north (Ch 17) via forensic analysis of the Anchor archive's full pre-failure timestream. The finding is **inconclusive but suggestive**; the consortium's regulatory filing carries it present-but-unresolved.
+In Vol 2, this mechanism manifests as: **the Nansen sensor head whose failure produced the leak in Ch 14 was sourced from a vendor whose recent firmware updates trace through a Helvetia-aligned co-development partnership.** Wanjiru and Joel surface this on transit-north (Ch 17) via forensic analysis of the Anchor archive's full pre-failure timestream. The finding is **inconclusive but suggestive**; the consortium's regulatory filing carries it present-but-unresolved.
 
 ### What Stefan's role is in Vol 2 — and what it isn't
 
@@ -231,7 +231,7 @@ In Vol 2, this mechanism manifests as: **the Sunfish-1 sensor head whose failure
 
 The third element is the architecturally specific dimension that makes Stefan a coherent multi-era adversary. His position recurs across the series because *capital concentrates and OSS depends on vendors*; he is its first specific instance.
 
-**What it is NOT:** Stefan is *not* personally accused in Vol 2. He is not dramatized. The Vol 2 chapters keep him at distance per the existing concept-note convention (Stefan fully dramatized in Book 4; Vol 2 keeps him at distance). The Helvetia supply-chain mechanism is documented institutionally; whether Stefan personally ordered the sabotage of the Sunfish-1 sensor head is a question Vol 2 does *not* answer. **That answer lands in Book 4.**
+**What it is NOT:** Stefan is *not* personally accused in Vol 2. He is not dramatized. The Vol 2 chapters keep him at distance per the existing concept-note convention (Stefan fully dramatized in Book 4; Vol 2 keeps him at distance). The Helvetia supply-chain mechanism is documented institutionally; whether Stefan personally ordered the sabotage of the Nansen sensor head is a question Vol 2 does *not* answer. **That answer lands in Book 4.**
 
 The drafter writing Vol 2 prose treats Stefan as an absent figure whose strategy is visible but whose person is not.
 
@@ -263,7 +263,7 @@ The Vol 2 layer's contribution: by the time Book 4 dramatizes Stefan, the reader
 
 ### Setting
 
-Day 56, Punta Arenas. The consortium reception following Sunfish-1's docking. Stefan is present because institutional convention requires both architects to attend the joint mission debrief; his own mission concluded earlier; he was at port for that and stayed for the consortium's institutional cadence.
+Day 56, Punta Arenas. The consortium reception following the Nansen's docking. Stefan is present because institutional convention requires both architects to attend the joint mission debrief; his own mission concluded earlier; he was at port for that and stayed for the consortium's institutional cadence.
 
 The reception is held in a consortium-affiliated venue (a meeting hall, a research-station mess, a hotel function room — drafter's choice; commit to one). Multiple consortium members and observers are present. Anna is fresh from the boat — disembarked within the last 24 hours — and is wearing whatever she was issued for shore presentation. Stefan is the figure who has been ashore for several weeks; clothes, posture, register all calibrated for the institutional setting.
 
@@ -273,7 +273,7 @@ The exchange runs approximately thirty seconds. Specific beats:
 
 1. **Stefan approaches Anna** at a moment that is socially unavoidable — a transition between consortium speakers; a buffet line; an arrival at the same conversational cluster. He does not corner her; he does not avoid her; he is professionally present.
 2. **Anna does not flinch.** Her body register is the canon: compressed, deliberate, authority assumed not performed. She does not pretend the moment has weight; she does not pretend the moment has no weight.
-3. **Stefan offers institutional congratulations** on Sunfish-1's mission conclusion. The sentences are formal-courteous. *Congratulations on a successful conclusion. The mission's results will be of substantial interest to the consortium.* (Drafter: actual sentences should match Stefan's English-as-second-language formality — precise; slightly stiff; correct.)
+3. **Stefan offers institutional congratulations** on the MERIDIAN-7 mission conclusion. The sentences are formal-courteous. *Congratulations on a successful conclusion. The mission's results will be of substantial interest to the consortium.* (Drafter: actual sentences should match Stefan's English-as-second-language formality — precise; slightly stiff; correct.)
 4. **Anna offers institutional acknowledgment** in return. *Thank you. The mission's record will be of interest to the consortium also.* (Drafter: Anna's word *record* lands — she is referring to the architectural record, not the political narrative; Stefan registers the distinction; says nothing.)
 5. **A brief reference to logistics or scheduling** — when the joint debrief is scheduled, a routine institutional note. The exchange is given visible institutional purpose so the surrounding witnesses register it as professional contact, not personal contact.
 6. **The exchange closes.** Stefan moves on; Anna moves on. No backward glance. No body-language cue from either party that the moment was anything other than what it appeared to be.

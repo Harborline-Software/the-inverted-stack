@@ -11,7 +11,7 @@ primary-rail: trust-and-prior-betrayal
 chapter-version: v4
 ---
 
-*Pre-departure record, dated 2026-04-02T14:42Z. Yusupova, Mission Director-designate. Sunfish-1.*
+*Pre-departure record, dated 2026-04-02T14:42Z. Yusupova, Mission Director-designate. RV Nansen, MERIDIAN-7.*
 
 *Selection of Principal Architect closed this date. Joel Reyes accepted the offer at 16:47 local on the closing call. Vetting interview conducted that afternoon by secured channel; recording filed to selection-archive per consortium convention. Technical questions and protocol-layer responses summarized in Annex C of the selection file. The exchange that determined the offer turned on Reyes's account of his Round-1-BLOCK rewrite of the lease protocol; the exchange is reproduced below from my recollection. The verbatim recording is on file. The version that follows is what I remember.*
 
@@ -203,7 +203,7 @@ That was the recruitment. There was paperwork after, and a follow-up call to for
 
 I closed the laptop. I sat in my office for a while. I was not thinking, exactly. I was registering that the trust I had been waiting five years to extend had a person attached to it now. The registration took the rest of the afternoon.
 
-I called my mother that evening. I did not tell her what I had decided. I told her about the bakery near the office that had changed its hours. She told me about the building across from her flat that the city had finally repainted. We talked about nothing of consequence for forty-five minutes. The Sunfish-1 mission was twelve months from departure. I had time to tell her later. I have told her since.
+I called my mother that evening. I did not tell her what I had decided. I told her about the bakery near the office that had changed its hours. She told me about the building across from her flat that the city had finally repainted. We talked about nothing of consequence for forty-five minutes. The MERIDIAN-7 was twelve months from departure. I had time to tell her later. I have told her since.
 
 ---
 
@@ -223,4 +223,4 @@ That is the property. He spoke into the record anyway. The architecture is the s
 
 I am going to bed.
 
-— A. Y., Day 14, Sunfish-1
+— A. Y., Day 14, the Nansen

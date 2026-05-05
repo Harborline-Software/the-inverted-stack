@@ -58,9 +58,9 @@ Her conflict register through Ch 11 + Ch 15 + Ch 17 + Ch 18 is exactly this: she
 
 ## Why this character is promoted
 
-Wanjiru exists in the minor-characters sheet as the Kenyan female relay-operations officer with M-PESA / mobile-money-infrastructure background, recruited because African fintech taught her offline-first sync architecture before the local-first community had a name for it. Her existing role on Sunfish-1 is operational — managing data flows on/off the vessel during surface windows, executing the in-region failover during the SaaS termination event, watch-keeping during the silent window, hum-while-concentrating tic.
+Wanjiru exists in the minor-characters sheet as the Kenyan female relay-operations officer with M-PESA / mobile-money-infrastructure background, recruited because African fintech taught her offline-first sync architecture before the local-first community had a name for it. Her existing role on the Nansen is operational — managing data flows on/off the vessel during surface windows, executing the in-region failover during the SaaS termination event, watch-keeping during the silent window, hum-while-concentrating tic.
 
-Under the Vol 2 frame, that operational role is **a thin slice of a much larger professional identity.** Wanjiru is a senior Sunfish OSS contributor whose specific area of authorship is **security architecture + key management** — the policy layer of the system, the part that translates "data sovereignty" from abstract principle into specific access-control and key-rotation mechanisms. The Sunfish-1 mission's relay operations are a working deployment of *her* security architecture; she is on the boat to verify her work under maiden-voyage conditions.
+Under the Vol 2 frame, that operational role is **a thin slice of a much larger professional identity.** Wanjiru is a senior Sunfish OSS contributor whose specific area of authorship is **security architecture + key management** — the policy layer of the system, the part that translates "data sovereignty" from abstract principle into specific access-control and key-rotation mechanisms. The MERIDIAN-7's relay operations are a working deployment of *her* security architecture; she is on the boat to verify her work under maiden-voyage conditions.
 
 She is the **Egwene al'Vere** of the series. Saidar — policy layer, data sovereignty governance, role architecture, key management — is what she channels. Her arc spans the entire series: from senior contributor on the boat → standards body chair → architectural authority who shepherds the legislative + architectural lock-in of local-first sovereignty in the final book.
 
@@ -70,7 +70,7 @@ The existing minor-character entry remains as historical record of the Vol 1 fra
 
 - **Name:** Wanjiru Kamau (LOCKED — Kikuyu given name + Kikuyu surname; broadly recognizable Kenyan combination)
 - **Title in narrative:** "Wanjiru" in Anna's voice (peer-respect register); "Ms. Kamau" formal
-- **Age at Sunfish-1 mission:** 35-42 (early-to-mid career senior; established in OSS community for ~5+ years; positioned for late-career standards-body work)
+- **Age at MERIDIAN-7:** 35-42 (early-to-mid career senior; established in OSS community for ~5+ years; positioned for late-career standards-body work)
 - **Citizenship:** Kenya
 - **Origin / domicile:**
   - Kenyan (Kikuyu heritage); Nairobi-raised or Central-Kenya-raised with Nairobi professional life
@@ -98,9 +98,9 @@ The R1 council found a BLOCK on key compromise. Specifically: under the original
 
 Wanjiru's R2 rewrite resolved this. The mechanism became more complex; the rewrite required the receiver-side decryption to validate against a current revocation horizon held in the local store before completing the decrypt operation, and the revocation horizon to be propagated through the gossip layer with explicit acknowledgment from a quorum of receivers before a revocation could be considered effective. The clearance with conditions is the canonical key-compromise spec.
 
-**Sunfish-1 selection:**
+**the Nansen selection:**
 
-Anna picked Wanjiru specifically. The relay operations on Sunfish-1 use *Wanjiru's* key-management architecture; the access-control decisions during the mission run on *Wanjiru's* role architecture; the security model that holds during the leak event is the model *Wanjiru* designed for political fragility under coercion-threat conditions. The fact that her assumptions for political fragility happen to be exactly right for fire-and-flood on a submarine is one of the architectural surprises of Sunfish-1 — security models written to defend against governance threats turn out to defend equally well against environmental ones. The structural insight: *the kind of failures that destroy data are similar at the architectural layer regardless of whether the cause is political or physical.*
+Anna picked Wanjiru specifically. The relay operations on the Nansen use *Wanjiru's* key-management architecture; the access-control decisions during the mission run on *Wanjiru's* role architecture; the security model that holds during the leak event is the model *Wanjiru* designed for political fragility under coercion-threat conditions. The fact that her assumptions for political fragility happen to be exactly right for fire-and-flood on a submarine is one of the architectural surprises of the Nansen — security models written to defend against governance threats turn out to defend equally well against environmental ones. The structural insight: *the kind of failures that destroy data are similar at the architectural layer regardless of whether the cause is political or physical.*
 
 ## Personality / voice
 
@@ -281,6 +281,6 @@ She does NOT name the trajectory. She does the work that becomes the institution
 
 ### Wanjiru-as-reading-engine for the political dimension
 
-Across Ch 6, Ch 11, Ch 17, Ch 18: Wanjiru is the **reading-engine for the political dimension** as Joel is for the architectural dimension. When the rival mission's PR cycle lands at Surface 1, Wanjiru reads it; when Stefan's PR lands at Surface 2, Wanjiru cross-checks it; when Helvetia's regulatory positions land at Punta Arenas, Wanjiru parses them. The captain-asks-engineer dialogue engine has a parallel: the captain-asks-Wanjiru pattern carries the political exposition the way Joel carries the technical.
+Across Ch 6, Ch 11, Ch 17, Ch 18: Wanjiru is the **reading-engine for the political dimension** as Joel is for the architectural dimension. When HELVETICA-2's PR cycle lands at Surface 1, Wanjiru reads it; when Stefan's PR lands at Surface 2, Wanjiru cross-checks it; when Helvetia's regulatory positions land at Punta Arenas, Wanjiru parses them. The captain-asks-engineer dialogue engine has a parallel: the captain-asks-Wanjiru pattern carries the political exposition the way Joel carries the technical.
 
 The two patterns operate together in chapters where both registers matter (Ch 11, Ch 18). Wanjiru and Joel side-by-side, answering the same question from different angles.

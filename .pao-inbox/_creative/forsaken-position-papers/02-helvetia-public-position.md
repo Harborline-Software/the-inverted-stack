@@ -3,7 +3,7 @@ type: in-universe-document
 document-type: corporate position paper
 author-in-universe: Helvetia Trust SA Communications & Strategy office (no individual byline)
 publication-in-universe: Helvetia Trust SA corporate website; distributed at industry conferences; printed for procurement-officer audiences
-publication-date-in-universe: April 2026 (six months before Sunfish-1 mission departure)
+publication-date-in-universe: April 2026 (six months before MERIDIAN-7 departure)
 title-in-universe: "Sovereignty At Scale: Helvetia Trust And The Architecture Of Compliance-Friendly Local-First"
 length: ~640 words
 voice-reference: corporate-PR-polished; Swiss-neutrality-of-data branding; carefully crafted

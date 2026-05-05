@@ -13,7 +13,7 @@ related:
 
 # Vol 2 — Archive and Capture Convention
 
-> **What this is:** the canonical reference for how Sunfish operates *as a platform* on the Sunfish-1 mission, what the prose can and cannot claim about it, and how the archive-as-mechanism shapes Vol 2's voice and structural devices. Read this before drafting any Vol 2 chapter that touches the architecture in operation.
+> **What this is:** the canonical reference for how Sunfish operates *as a platform* on the MERIDIAN-7 mission, what the prose can and cannot claim about it, and how the archive-as-mechanism shapes Vol 2's voice and structural devices. Read this before drafting any Vol 2 chapter that touches the architecture in operation.
 
 > **What this is not:** a Vol 1 specification. Vol 1 is the architectural paper; this doc is the operational deployment. Where the two disagree, Vol 1's protocol invariants win and Vol 2's prose stays consistent with them.
 
@@ -23,7 +23,7 @@ related:
 
 In a traditional submarine, communication and capture are bolted onto the boat: 1MC wire intercom (ephemeral), per-console sensor logging (local), formal-log narratives written from memory by the watch officer. The official record is whatever the captain remembers and chooses to write down. Most of what happened on the boat is gone the moment it stops happening.
 
-In Sunfish-1, **the boat is the archive.** The Anchor application is not "an app the crew uses for some things." It is the operational substrate. Every voice exchange (per opt-in), every sensor reading, every video frame from compartment cameras (per consent), every Anchor-routed message between crew, every command-and-response between control plane and instrument — all routed through Anchor, captured locally on each crew node, hash-chained, signed at capture, KEK-encrypted where appropriate, replicated to Bridge on surface windows.
+In the Nansen, **the boat is the archive.** The Anchor application is not "an app the crew uses for some things." It is the operational substrate. Every voice exchange (per opt-in), every sensor reading, every video frame from compartment cameras (per consent), every Anchor-routed message between crew, every command-and-response between control plane and instrument — all routed through Anchor, captured locally on each crew node, hash-chained, signed at capture, KEK-encrypted where appropriate, replicated to Bridge on surface windows.
 
 This is the architectural altitude shift Vol 2 is built on. The book is about **what it means to operate inside an architecture that records itself completely.**
 
@@ -185,7 +185,7 @@ When Wanjiru and Joel investigate the sensor head's pre-failure behavior in Ch 1
 TrustMesh missions cannot do this. Their selective-sync, corporate-retention model doesn't preserve the full pre-failure timestream of every edge device. Stefan's mission, if compromised in a similar way, **would not even know.**
 
 The forensic substrate is therefore a load-bearing architectural property that lands in Vol 2's plot:
-- Ch 11 (Second Forsaken Reveal): Wanjiru cross-checks Stefan's PR against Sunfish-1's surface-window observations of his mission; the architecture supplies the cross-check evidence.
+- Ch 11 (Second Forsaken Reveal): Wanjiru cross-checks Stefan's PR against the Nansen's surface-window observations of his mission; the architecture supplies the cross-check evidence.
 - Ch 14 (The Crossing): the leak event captures fully on Anchor; the operational record is intact; the cause of failure remains queryable for post-mission analysis.
 - Ch 15 (Compromised Relay Holds): Wanjiru begins forensic queries against the sensor head's pre-failure timestream during the chapter, before the post-leak compute degradation makes the analysis slow.
 - Ch 17 (Transit North): Joel + Wanjiru complete the forensic analysis on laptop-class compute, surface the supply-chain pattern, draft the regulatory filing for the consortium.
@@ -200,7 +200,7 @@ Concrete patterns the chapter-drafter uses to render formal-log and diary entrie
 Recommended forms (rotate across chapters; never identical twice):
 
 ```
-Crew log, 2026-04-02T14:42Z. Yusupova, Mission Director-designate. Sunfish-1.
+Crew log, 2026-04-02T14:42Z. Yusupova, Mission Director-designate. RV Nansen, MERIDIAN-7.
 
 [body — 80-200 words per crew-log-style-entry skill]
 
@@ -211,7 +211,7 @@ Variants:
 - `Mission log, Mission Day 14, 0617 local.` — mission-day form
 - `Selection file entry, dated 2026-04-02.` — pre-departure record
 - `Daily duty log — Reyes, J., Principal Architect — Mission Day 30.` — engineer's log
-- `Recovered log — Sunfish-1 archive; Anna Yusupova, Mission Director.` — retrospective recovery (used rarely)
+- `Recovered log — the Nansen archive; Anna Yusupova, Mission Director.` — retrospective recovery (used rarely)
 - `Staff history annotation, drafted 2026-12-XX.` — Anna's staff-history-era annotations on prior records
 
 The closing hash signature is **optional** — appears once or twice across Book 1 to install the diegetic-artifact convention; dropped on later chapters once the reader has the pattern. Include for chapters that turn on the artifact's authoritativeness (Ch 14 operational damage report; Ch 17 forensic-finding filing; Ch 18 regulatory filing).

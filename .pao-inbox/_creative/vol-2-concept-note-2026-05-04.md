@@ -47,7 +47,7 @@ The relationship between Vol 1 (the existing 154k ms) and Vol 2+ (the narrative 
 
 2. **In Vol 2's universe Joel's paper exists** as a real published artifact at github.com/ctwoodwa/Sunfish (as the preface already states), reviewed by the Kleppmann Council, cleared with conditions for first deployment. The paper is referenced where it earns its place — Anna quotes from it; council-review excerpts appear as chapter epigraphs; specific architectural beats reference paper sections by chapter — but is not reproduced in full. The reader is trusted to know the paper exists and to take Anna's references as authoritative.
 
-3. **Sunfish-the-software is real working software**, not fictional. The repository at github.com/ctwoodwa/Sunfish is the actual reference implementation. The pre-1.0 disclaimer in the existing preface becomes literally diegetic: *the architecture is real, tested, vetted, version 0.x, and the Sunfish-1 mission is its production trial.*
+3. **Sunfish-the-software is real working software**, not fictional. The repository at github.com/ctwoodwa/Sunfish is the actual reference implementation. The pre-1.0 disclaimer in the existing preface becomes literally diegetic: *the architecture is real, tested, vetted, version 0.x, and the MERIDIAN-7 mission is its production trial.*
 
 4. **What is fictional is the narrator + the events**. Anna Yusupova narrates; the Antarctic mission and its three under-ice segments are fiction; the leak-with-fire-cascade is fiction; the Forsaken's institutional analogs (Helvetia Trust SA + Stefan Reinhardt's rival mission) are fiction; the council-review-as-vetting-that-authorized-deployment is fictional in its specifics but real in its body of work (the existing Vol 1 Part II chapters).
 
@@ -71,7 +71,7 @@ The series follows WoT's structural inheritance. The cosmological layer is alway
 | The Breaking | The centralized-SaaS era: user data fully corporate-controlled; the world fractured into dependent fragments |
 | The Third Age | Now. The contest is live but not yet decided. |
 | The Last Battle | Achieving legislative or architectural lock-in for local-first data sovereignty — whichever side gets there first wins the age |
-| Ta'veren | Deployments (and people) so architecturally significant that the Pattern bends around them. Sunfish-1 is a ta'veren event. |
+| Ta'veren | Deployments (and people) so architecturally significant that the Pattern bends around them. the Nansen is a ta'veren event. |
 | The Wheel itself | Time + entropy: every closed architecture eventually fails from within; the mesh is the Wheel's natural expression because only distributed systems actually survive |
 
 **The Forsaken** are named in-universe as institutional roles only — never cartoonish villains. Each was once on the right side. Stefan Reinhardt is the series' first Forsaken and its first dramatized fallen ally; Helvetia Trust SA is the institutional vehicle.
@@ -86,7 +86,7 @@ The series follows WoT's structural inheritance. The cosmological layer is alway
 
 Every Sunfish deployment is a **Bob replication**. The architecture clones itself into a new context; each instance faces different pressures; some diverge from founding principles. The series question: *what makes a deployment still Sunfish?*
 
-Book 1 introduces this obliquely. The submarine partition (3 under-ice segments + reconciliation events) forces local operation. When Sunfish-1 surfaces between segments, it must reconcile diverged state with the global mesh. The reconciliation scenes are both technical and narrative — Anna's first external contact at each surfacing reveals the Forsaken moved while the boat was under, and the cumulative reveal lands at final surfacing in Punta Arenas.
+Book 1 introduces this obliquely. The submarine partition (3 under-ice segments + reconciliation events) forces local operation. When the Nansen surfaces between segments, it must reconcile diverged state with the global mesh. The reconciliation scenes are both technical and narrative — Anna's first external contact at each surfacing reveals the Forsaken moved while the boat was under, and the cumulative reveal lands at final surfacing in Punta Arenas.
 
 Later books: specific deployments go rogue through local optimization under extreme constraint. Priya's domain (schema migration: *can these schemas merge?*) and Wanjiru's domain (governance recognition: *should they merge?*) become the recurring conflicts.
 
@@ -113,7 +113,7 @@ The series asks the reader to do the work of recognizing the difference, the way
 
 | Book | WoT analog | Core move |
 |---|---|---|
-| **1: *The Filchner Dark*** | *Eye of the World* | Architecture proved; Forsaken notice; Anna's day-20 realization; the rival mission's preliminary results land during Sunfish-1's surface windows |
+| **1: *The Filchner Dark*** | *Eye of the World* | Architecture proved; Forsaken notice; Anna's day-20 realization; HELVETICA-2's preliminary results land during the Nansen's surface windows |
 | 2 | *The Great Hunt* | First formal regulatory assault; Stefan testifies for federated-trust; a deployment compromised; who controls the proving artifact? |
 | 3 | *The Dragon Reborn* | Joel's architecture reborn in second-generation form; Forsaken try to control the spec process; TrustMesh wins a major standards-body endorsement; **Anna-Joel love arc disclosure** |
 | 4 | *The Shadow Rising* | Flashback / deep-lore: the Breaking fully revealed; **Anna's prior failure with Stefan fully dramatized**; the audience sees pre-pivot Stefan; the partnership collapse is the book's emotional center |
@@ -126,15 +126,15 @@ Bobiverse threading happens in Books 3-6 when deployments begin spinning off. By
 
 ## 4. Cast (with character-sheet anchors)
 
-The Sunfish-1 crew of twelve, plus the rival cast, plus mission-fulfillment crew the consortium provided. Each named character has a full or minor sheet; this section gives one-paragraph summaries with WoT roles and the key beats Vol 2+ asks of each character.
+The the Nansen crew of twelve, plus the rival cast, plus mission-fulfillment crew the consortium provided. Each named character has a full or minor sheet; this section gives one-paragraph summaries with WoT roles and the key beats Vol 2+ asks of each character.
 
-### 4.1 Sunfish-1 crew — Anna picked the technical contributors
+### 4.1 the Nansen crew — Anna picked the technical contributors
 
 **Anna Yusupova — Mission Director (Moiraine Damodred analog).**
 [Full sheet: `dr-leader-mission-director.md`]
 Uzbek-Russian; 47-52; AARI St. Petersburg; second-attempt polar lead after the Stefan-mission failed her. *Operator's avatar* — she chose the architecture by reading the paper, not by building it. First-person narrator throughout the series; her retrospective narration is itself the Long Now answer at the human scale (*she's alive, she remembers, she's telling it*). Day-20 anchor scene is hers. Joel-love-arc subject (slow to return).
 
-**Joel Reyes — Principal Architect, Sunfish-1 senior crew engineer (Rand al'Thor analog).**
+**Joel Reyes — Principal Architect, the Nansen senior crew engineer (Rand al'Thor analog).**
 [Full sheet: `joel-reyes-principal-architect.md`]
 Filipino-American; mid-50s; former US Navy nuclear engineer on USS Sunfish SSN-649 (decommissioned 1998); paper author; named the architecture after his first submarine. The Dragon-who-hates-it. Saidin channeler — naval-nuclear discipline is the Three Oaths analog. R1 BLOCK night = founding act of grace. Anna's recruit; in love with Anna across the series.
 
@@ -180,7 +180,7 @@ Norwegian; 48-54; NPI / Norwegian Navy Reserve; *not Stefan's architectural ally
 [Full sheet: `helvetia-trust-corporate-sponsor.md`]
 Zurich-domiciled mid-cap European tech firm; product is operationally excellent + architecturally centralizing. Lukas Brandt (SVP Strategy and Government Relations; Swiss-German; Swiss legal background; not an engineer; not a true believer; sees Stefan's partnership asymmetry clearly) is the human face for institutional scenes. The Forsaken's institutional vehicle.
 
-## 5. Mission timeline — Sunfish-1 multi-segment design
+## 5. Mission timeline — the Nansen multi-segment design
 
 Per the locked boat-power decision (`2026-05-04-vol2-boat-power-option-c-locked.md`): diesel/AIP multinational research submarine, mission redesigned with multiple under-ice segments instead of one continuous 56-day partition. Real-world precedent: IODP for surface drillships, Antarctic Treaty research stations, CERN — adapted to a research submarine in 2026-2030 fiction with mild normalization.
 
@@ -195,7 +195,7 @@ Per the locked boat-power decision (`2026-05-04-vol2-boat-power-option-c-locked.
 | Transit north | 49-56 | Surface transit back to Punta Arenas; cumulative architectural reveal |
 | Final surfacing | Day 56, 04:41 local | Punta Arenas. **Cumulative Forsaken reveal lands here** (full scope of what the centralizing direction did during the mission becomes legible) |
 
-The rival mission (Stefan + Astrid + Helvetia) launches 2-4 months before Sunfish-1. By the time Sunfish-1 surfaces from Segment 1, the rival mission has had its first surfacing event and the preliminary results are public. By Sunfish-1's Segment 2 surfacing, the rival mission has concluded; Stefan is publicly framing the results as a success. Cumulative comparative reveal — what each mission actually demonstrated, what each architecture actually held — lands across Sunfish-1's three surface windows + final Punta Arenas arrival.
+The rival mission (Stefan + Astrid + Helvetia) launches 2-4 months before the Nansen. By the time the Nansen surfaces from Segment 1, the rival mission has had its first surfacing event and the preliminary results are public. By the Nansen's Segment 2 surfacing, the rival mission has concluded; Stefan is publicly framing the results as a success. Cumulative comparative reveal — what each mission actually demonstrated, what each architecture actually held — lands across the Nansen's three surface windows + final Punta Arenas arrival.
 
 **Existing The Crossing chapter (Vol 1 closing) needs a revision pass** to reflect the multi-segment design; this is a separate PR when CO is ready, not gated on Vol 2 concept-note draft.
 

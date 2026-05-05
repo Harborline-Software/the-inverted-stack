@@ -3,7 +3,7 @@ type: in-universe-document
 document-type: op-ed
 author-in-universe: Dr. Stefan Reinhardt
 publication-in-universe: Heise Online (German tech publication; one of Europe's most respected industry venues); reprinted in English by The Register and IEEE Spectrum's online edition
-publication-date-in-universe: October 2025 (one year before Sunfish-1 mission)
+publication-date-in-universe: October 2025 (one year before MERIDIAN-7)
 title-in-universe: "What Local-First Costs To Ship: Why Federated Trust Is The Architecture Of Adoption"
 length: ~520 words
 voice-reference: see character sheet `stefan-reinhardt-rival-architect.md` § Personality / voice; pre-pivot Stefan voice was warmer; this is post-pivot register
