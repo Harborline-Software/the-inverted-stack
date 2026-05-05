@@ -407,6 +407,13 @@ CHAPTER_PRESET_MAP: dict[str, str] = {
     "ch09-local-first-practitioner-lens":  "practitioner", # Ferreira — M, am_michael at 0.95 (warm, faster than narrator)
     "ch10-synthesis":                      "sinek",        # main narrator returns
     "epilogue":                            "sinek",        # closing, deliberate
+    # Vol 2 — Anna Yusupova first-person narration (mid-50s, Uzbek-Russian).
+    # female-solo (af_bella @ 0.92) matches the professional-authoritative
+    # register Voss carries in Ch5; Anna's narration register is similar.
+    # Apply to the Vol 2 listen-test pair; will extend to remaining Vol 2
+    # chapters as they activate.
+    "book-2/act-1/ch02-recruitment-interview": "female-solo",
+    "book-2/act-1/ch05-day-twenty-realization": "female-solo",
 }
 
 CHAPTER_FILES = [
