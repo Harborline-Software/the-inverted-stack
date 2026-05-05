@@ -9,6 +9,27 @@ firewall-note: The colleague is informed-by-pattern, not based-on. German academ
 
 # Character Sheet — Dr. Stefan Reinhardt, Principal Architect (Rival Platform)
 
+## Book 1 plot-binding (load-bearing for Vol 2 prose; CO directive 2026-05-05)
+
+Drafters working any Vol 2 chapter should plant and pay off **only these elements** of Stefan's character. Everything else in this sheet is reserve material for Books 2-5 dramatization and should NOT be signaled in Book 1 prose. Stefan is **almost entirely off-page in Vol 2** by deliberate craft choice — preserving ambiguity and protecting the Book 4 dramatization runway.
+
+**Plot-binding for Vol 2 (must surface, but minimally):**
+- The schema-migration non-disclosure on Anna's prior mission — referenced through Anna's interior in Ch 10, light reference in Ch 2; never dramatized on-page
+- The Helvetia supply-chain mechanism — referenced through Wanjiru's forensic finding in Ch 17; the regulatory filing documents the pattern; Stefan is not personally accused
+- Stefan's voice as **press-quote / regulatory-filing register only** — his current-day voice surfaces through Wanjiru's reading of the rival's PR cycle (Ch 6, Ch 11), institutional documents, and the like; never in conversational form
+- **The one unavoidable current-day exchange (Ch 18, Punta Arenas reception)** — thirty seconds of formal courtesy in front of consortium witnesses; nothing dramatic; what Anna registers is what is NOT said. **This is the only on-page Anna-Stefan moment in all of Vol 2; everywhere else, Stefan is remembered, quoted, or reported.**
+- Bremerhaven memory beats — distributed lightly across Anna's flashback fragments (Ch 10 substantial chunk; Ch 2 lighter); Stefan as remembered figure, not present figure
+
+**Future arcs only (do NOT signal in Vol 2 prose):**
+- The full Bremerhaven postdoctoral relationship at depth (Anna's Ch 10 fragment is enough for Vol 2)
+- Stefan-as-emerging-Forsaken arc (Books 2-3)
+- Full Stefan dramatization (Book 4) — the human Stefan, his interior, the loss the audience tracks
+- Reconciliation possibility (late series; PAO-recommended partial reconciliation, CO override available)
+- Stefan's pre-AWI biography (Hamburg-vs-Munich-raised; education path)
+- Whether Stefan personally ordered the sensor-head sabotage of Sunfish-1 — this question is *deliberately unanswered* in Vol 2; Book 4 lands the answer
+
+**Drafter discipline rule:** if a Vol 2 chapter is reaching toward Stefan beyond the items above, that's a sign the chapter is over-spending him. Pull back. Stefan in Vol 2 is a *strategic position visible*, not a *person on-page*.
+
 ## Why this character exists
 
 Stefan Reinhardt is the **emerging Forsaken** of the Vol 2+ series — Anna's former AWI Bremerhaven postdoctoral colleague, now the principal architect of a corporate-backed federated-trust local-first platform that is Sunfish's structural rival. The architectural philosophy is sincere; the centralization compromise is real; the colleague genuinely believes their platform is the operationally-viable path that Sunfish's OSS purism cannot achieve.
@@ -233,3 +254,53 @@ The Vol 2 layer's contribution: by the time Book 4 dramatizes Stefan, the reader
 2. **The strategic position is visible; the person is not.** Wanjiru can name the supply-chain pattern; she does not name Stefan as ordering it.
 3. **No accusation; only documentation.** The regulatory filing in Ch 17-18 documents the finding; the consortium pursues; Helvetia neither admits nor denies. The matter goes to institutions.
 4. **Preserve the Book 4 dramatization runway.** Don't pre-spend the human Stefan in Vol 2. The architectural evidence is what Vol 2 plants; the character study is what Book 4 delivers.
+
+---
+
+## The Ch 18 unavoidable-exchange scene specs (CO directive 2026-05-05)
+
+> **Why this layer:** the only on-page Anna-Stefan moment in Vol 2 needs concrete drafter guidance to land at the correct calibration — minimally, formally, with what is NOT said carrying the weight.
+
+### Setting
+
+Day 56, Punta Arenas. The consortium reception following Sunfish-1's docking. Stefan is present because institutional convention requires both architects to attend the joint mission debrief; his own mission concluded earlier; he was at port for that and stayed for the consortium's institutional cadence.
+
+The reception is held in a consortium-affiliated venue (a meeting hall, a research-station mess, a hotel function room — drafter's choice; commit to one). Multiple consortium members and observers are present. Anna is fresh from the boat — disembarked within the last 24 hours — and is wearing whatever she was issued for shore presentation. Stefan is the figure who has been ashore for several weeks; clothes, posture, register all calibrated for the institutional setting.
+
+### What happens
+
+The exchange runs approximately thirty seconds. Specific beats:
+
+1. **Stefan approaches Anna** at a moment that is socially unavoidable — a transition between consortium speakers; a buffet line; an arrival at the same conversational cluster. He does not corner her; he does not avoid her; he is professionally present.
+2. **Anna does not flinch.** Her body register is the canon: compressed, deliberate, authority assumed not performed. She does not pretend the moment has weight; she does not pretend the moment has no weight.
+3. **Stefan offers institutional congratulations** on Sunfish-1's mission conclusion. The sentences are formal-courteous. *Congratulations on a successful conclusion. The mission's results will be of substantial interest to the consortium.* (Drafter: actual sentences should match Stefan's English-as-second-language formality — precise; slightly stiff; correct.)
+4. **Anna offers institutional acknowledgment** in return. *Thank you. The mission's record will be of interest to the consortium also.* (Drafter: Anna's word *record* lands — she is referring to the architectural record, not the political narrative; Stefan registers the distinction; says nothing.)
+5. **A brief reference to logistics or scheduling** — when the joint debrief is scheduled, a routine institutional note. The exchange is given visible institutional purpose so the surrounding witnesses register it as professional contact, not personal contact.
+6. **The exchange closes.** Stefan moves on; Anna moves on. No backward glance. No body-language cue from either party that the moment was anything other than what it appeared to be.
+
+### What does NOT happen
+
+- **No apology** from Stefan. Not implied; not gestured-at; not earned-by-the-moment. The absence is the load.
+- **No offer of one** from Anna. She does not invite, prompt, or signal the question.
+- **No reference to the prior mission.** The schema-migration non-disclosure is not named, not alluded to, not hinted at. The Bremerhaven era is also unmentioned.
+- **No personal warmth.** Neither party performs friendliness; neither performs coldness. The exchange is professional; that's the register.
+- **No private aside.** Witnesses are present throughout; the exchange has institutional context the entire time.
+
+### What Anna records in the staff history
+
+The chapter's prose register on this beat is restrained. Anna writes the exchange into the staff history as an institutional note — date, venue, attendees, the substance of the formal courtesy. She does not narrate her interior at length about it. **One sentence, single-line, naming the gap:** *He did not say what he might have said. I did not invite him to.* Then return to the work.
+
+The reader registers the same gap. The chapter moves on to the regulatory filing, the cumulative reveal, Anna's authoring of the staff history.
+
+### Why this calibration
+
+Per the CO directive 2026-05-05 craft note: *delay any direct current-day Anna-Stefan conversation until a moment when she can't avoid him; preserve ambiguity; keep him from flattening into "the guy who hurt Anna" too early.*
+
+This Ch 18 beat is the unavoidable moment. Its brevity — its institutional framing — its restraint — protect Stefan's ambiguity and the Book 4 dramatization runway. The reader does not yet know what to do with Stefan. That's correct for Vol 2. The full character study lands later.
+
+### Cross-references
+
+- **Anna's voice register specification:** `.pao-inbox/_creative/character-sheets/dr-leader-mission-director.md` § Voice register specification — the compressed-deliberate / controlled-emotional-flash register applies here at maximum restraint
+- **Bremerhaven flashback fragments:** Ch 10 (substantial chunk) + Ch 2 (lighter reference) per `chapters/book-2/CHAPTER-OUTLINE.md`
+- **Press-quote register:** Ch 6 + Ch 11 surface Stefan's voice through Wanjiru's reading of the rival's PR cycle; never in conversational form
+- **The supply-chain pattern Wanjiru documents:** Ch 17 forensic conversation + Ch 18 regulatory filing; the institutional context that makes Stefan's Ch 18 presence non-trivial without dramatizing him
