@@ -286,33 +286,55 @@ Anna is a careful observer; her vetting standard is built on reading people accu
 - His "what he fears" list now also includes: that the feelings are situational and will not survive the mission; that disclosure would damage what he has built with Anna professionally; that the architecture's failure could foreclose any future relationship before it has a chance to begin
 - His voice samples are unchanged; the love arc is interior; the existing voice samples are appropriate for both the architectural and the romantic interior
 
-## The leak event — Joel's protective action (CO direction 2026-05-05)
+## The leak event — Joel's protective action (CO direction 2026-05-05; refined 2026-05-05)
 
-During the leak-with-fire-cascade in Segment 3, **Joel does something to try to protect Anna. He would give his life to save her.** This is the moment the discipline cracks — not by Joel's choice but by his instinct.
+During the leak-with-fire-cascade in Segment 3, **Joel does something to try to protect Anna. He would give his life to save her.** This is the moment the discipline cracks — not by Joel's choice but by his instinct. Thirty years of military training fires before any cognitive part of his mind has caught up.
 
-**Specific scenario** (PAO recommendation; CO can pin):
+**The scenario:**
 
-During the compartment isolation following the 0342 isolation order, procedure requires a final-check of the bulkhead seal *from the unsealed side* before lockdown. Standard practice: the senior officer present (Anna, as Mission Director) performs the final check. The check is operationally safe under normal conditions but carries residual risk if water ingress accelerates during the ~90-second window — the person on the unsealed side would be trapped, lockdown cannot abort mid-cycle, the trapped person would be left until the larger casualty was contained.
+The leak originates from a malfunctioning instrument — a sensor package, a hydraulic fitting, a sample-collection rig. Small leak; high pressure; high stakes. The failure point is in a confined access compartment behind equipment, hard to reach. Submarine leaks do not last long: either the source is contained in minutes, or the boat is lost. The dramatic window is short. What sustains the suspense is not duration; it is what happens at the door.
 
-Anna prepares to do the check herself, per procedure.
+The sequence:
 
-Joel — without consultation, without a word — moves between her and the bulkhead and does the check himself.
+1. **0317 — leak alarm.** Bridge registers the alarm. Joel is near the bridge or in an adjacent passageway. Anna is at the bridge or moving toward the source.
 
-The check completes. The seal is verified. The lockdown proceeds. The act takes ~90 seconds. Watch log notes that *Reyes performed the bulkhead-check.* No one comments because nothing went wrong. Anna registers it. Joel does not explain. Anna does not ask.
+2. **Joel moves.** Not after deliberation. Not after dispatch. The alarm fires and his body moves toward the leak before any procedural part of his mind has caught up. Years of nuclear-Navy casualty drills have made this reflex deeper than choice. He goes.
 
-**Why Joel acts:**
+3. **The push-past.** Anna is in his path — either moving toward the leak herself or simply standing where he needs to be. Joel pushes her aside as he passes. The contact is physical, brief, instinctive. Their bodies make contact for the first time in the months they have worked together. Neither registers it consciously in the moment.
 
-The Navy-nuclear discipline says: follow procedure; protect the boat; protect the crew. Procedure does not say *protect the Mission Director specifically.* The procedure-following-engineer who has held the discipline for thirty years would, in any other casualty, have stood at his assigned post and let the senior officer perform her assigned duty. He has done exactly that across multiple Navy casualties in the 1990s and a dozen civilian distributed-systems incidents since. The discipline has held without exception.
+4. **The door.** Joel reaches the access compartment. He goes in. He shuts the bulkhead door behind himself. He locks it. The lock engaging is procedurally correct — you do not leave a door open with active leakage — and Joel did not do it because procedure required it; he did it because his hand was already on the door before procedure occurred to him.
 
-It does not hold here. Joel acts before the procedural part of his mind can stop him. The action is small, specific, ninety seconds long, and entirely outside what his training would have authorized him to do without consulting the bridge. He chose Anna over procedure for one decision in thirty years. He does not yet have a name for why.
+5. **The look through the glass.** Joel turns to face Anna through the porthole window of the bulkhead door. The look says, without a word, everything that his discipline has prevented him from saying since the recruitment interview:
+
+   - *I am where you would have been.*
+   - *I am not coming out until this is fixed.*
+   - *Trust me.*
+   - *Don't open the door no matter what.*
+   - *I love you and you know it now.*
+
+   Then he turns and goes to work.
+
+6. **Minutes pass.** Eight, ten, fifteen. Joel works the leak — gets his body into the confined space behind the equipment, identifies the failure point on the malfunctioning instrument, isolates the feed, drains the residual water, secures the failure. The submarine engineer who came up through reactor casualty drills is doing the work the casualty drills were for.
+
+7. **The bridge holds.** Anna stands at the bridge with the rest of the crew watching her. She has a face for this moment that says *the casualty is contained; my engineer is working it; I am not concerned.* The face costs her. She does not look back at the door.
+
+8. **Joel reports clear.** Comms light up: *leak contained; instrument secured; ready to open.* Anna gives the order. The lock disengages. Joel emerges. The boat is fine.
+
+9. **No one comments because nothing went wrong.** The watch log notes that Reyes responded to the alarm, contained the leak at the source, and reported clear. The crew sees a senior engineer who acted on instinct and competence. Only Anna and Joel know what the door meant.
+
+**Why Joel acts the way he does:**
+
+The Navy-nuclear discipline says: respond to the alarm; protect the boat; close the door behind yourself. Joel has done all three. The discipline did not crack on procedure. The discipline cracked on *who he pushed past.* He didn't have to push Anna aside to reach the leak; the layout would have allowed him to go around her. The reflex chose contact. The reflex chose specifically — and ineffably — to put his hand on her and move her out of his path. That's the part neither of them can un-know afterward.
+
+The discipline also did not crack on closing the door. He had to close it. The discipline cracked on *the look.* He did not have to turn back. He could have gone straight to the leak source. He chose, in the moment of having locked himself in, to look at her through the glass first. That look was not procedure. That look was choice.
 
 **What Joel doesn't say to himself afterward:**
 
-That he would have stayed on the unsealed side if water ingress had accelerated and the seal had to close on him. He didn't say this to himself before the act either; he didn't have time. He says it to himself, exactly once, three days later, in his bunk during a watch he was not standing. He does not say it again until the Book 3 disclosure.
+That he would have stayed behind the door if the leak had not been containable. He didn't say this to himself before the act either; he didn't have time. He says it to himself, exactly once, three days later, in his bunk during a watch he was not standing. He does not say it again until the Book 3 disclosure.
 
 **What this changes about Joel's interior across the rest of Book 1:**
 
-The act exists in him. He cannot un-do it. He cannot un-know that he would have stayed. The naval-nuclear discipline that has organized his life is no longer the only thing organizing him — Anna is. He registers this; he does not know what to do with it; he does what he has always done in the absence of a known procedure, which is *the work in front of him,* until he has time to think.
+The act exists in him. The push-past was a touch. The look was a confession. Both are now part of him; neither was undoable. The naval-nuclear discipline that has organized his life is no longer the only thing organizing him — Anna is. He registers this; he does not know what to do with it; he does what he has always done in the absence of a known procedure, which is *the work in front of him,* until he has time to think.
 
 He does not disclose. The Book 3 disclosure timeline holds. The act compounds privately until then.
 

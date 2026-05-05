@@ -365,34 +365,65 @@ Five reasons, layered:
 - **Does not displace the architectural / Forsaken / Long Now arcs.** The love arc is a layer; the architectural arc is the spine.
 - **Does not become a Hollywood moment.** Both Anna and Joel are mid-50s senior operators. The romantic register is mature, quiet, and disciplined. The disclosure is a conversation, not a scene.
 
-## The leak event — what Anna registers (CO direction 2026-05-05)
+## The leak event — what Anna registers (CO direction 2026-05-05; refined 2026-05-05)
 
-During the leak-with-fire-cascade in Segment 3, **Joel does something to try to protect Anna.** Anna registers it. The companion layer in `joel-reyes-principal-architect.md` describes the specific act (the bulkhead-check on the unsealed side; Joel taking the position Anna would have stood; ~90 seconds of bounded but real risk). This section is what *Anna* does with the recognition.
+During the leak-with-fire-cascade in Segment 3, **Joel does something to try to protect Anna.** Anna registers it. The companion layer in `joel-reyes-principal-architect.md` describes the specific act (the malfunctioning instrument leak; the push-past; the locked door; the look through the glass; minutes of work behind the bulkhead). This section is what *Anna* does with the recognition.
 
-**Anna's interior in the moment:**
+**Anna's interior at the alarm:**
 
-She sees Joel move before she sees what he is doing. The recognition is post-hoc — she had already initiated the check-step that Joel intercepted; her body had already shifted toward the bulkhead. Joel's intercept is faster than her reasoning. Her command-authority response is to allow the substitution rather than to abort and re-initiate, because aborting mid-procedure would compound the casualty. The choice is operational. The recognition is personal.
+The alarm fires and Anna's first instinct is operational — get to the bridge, assess, dispatch. Her second instinct is personal — she registers the failure-point location and is moving toward it because the leak source involves an instrument she helped specify in pre-mission planning. Her body is in the path before her command-mind catches up.
 
-She knows what Joel just did. She knows it broke procedure for him in a way thirty years of nuclear-Navy discipline had not previously broken. She knows the only thing in the room that could have caused the discipline to crack was her. The recognition lands during the ~90 seconds of the check while she is standing, watching the watch-log mark *Reyes performed the bulkhead-check,* without the authority or the inclination to override.
+Joel is faster.
 
-She does not say anything. The lockdown completes. The mission continues. Anna's command authority remains unsentimental for the rest of the cascade because it has to. Her interior carries the recognition as quietly as Joel's does.
+**The push-past:**
+
+She feels his hand before she registers his decision. He pushes her aside on his way to the leak. The contact is brief, instinctive, firm — the kind of physical contact that happens in casualty drills and is forgotten the moment the drill ends. This contact is not forgotten. Her body knows what touched it. Her mind catches up four seconds later, by which time Joel is already at the door.
+
+She does not stop him. She could have — *Reyes, halt; the watch officer is the dispatched investigator* — and the boat would have continued operating per procedure. She does not. Her command authority makes a choice in the half-second window before Joel reaches the door, and the choice is to let him go.
+
+**The door closing:**
+
+She watches him shut the bulkhead door. She watches him lock it from his side. She watches the lock indicator turn red. The act of him locking himself in registers as procedural correctness; the bridge crew sees a senior engineer responding to an alarm with appropriate door-discipline. Anna sees what closing the door cost him.
+
+**The look through the glass:**
+
+She has nowhere to look away. He turns to face her through the porthole window. The look arrives. She receives it. Her command authority and her face hold; the bridge is watching her.
+
+She does not look away. She does not look back. The look exists between them across about two seconds of clock time and across the rest of her life.
+
+Then he turns away and goes to work.
+
+**The minutes:**
+
+Joel is behind the locked door working an active leak in a confined space. Submarine leaks resolve in minutes either way — he fixes it, or he doesn't. Anna stands at the bridge and gives the routine damage-control orders in a voice the bridge cannot fault. She does not look at the door indicator. She does not check the comms log. She watches the casualty-board.
+
+These are the worst minutes of her mission. She has just registered, definitively, what Joel feels for her — through a physical touch and through a look she cannot rationalize away. She has just registered, definitively, what she feels for him — because the look made denial impossible and because the touch made the discipline impossible to maintain. And he is in a sealed compartment with active water ingress.
+
+If something goes wrong — if the instrument fails harder, if the leak accelerates beyond his containment, if the sealed compartment becomes a place from which he doesn't come out — she has to live with the fact that the recognition arrived at the moment he might die.
+
+Joel doesn't die. The comms light up at minute eleven: *leak contained; instrument secured; ready to open.* She gives the order. The lock disengages. He emerges. He nods to her. He says *Mission Director, casualty contained.* He goes back to his post.
+
+The crew sees a senior engineer doing his job. Anna sees what just happened.
 
 **What changes for Anna because of this:**
 
-Her existing love-arc registration (during Segment 2) was: *Joel has feelings for me; I am disciplining myself not to act on the recognition.* After the bulkhead-check, the registration is: *Joel would have stayed on the unsealed side; he chose me over procedure; he would have given his life.* The interior content shifts from feelings-recognition to debt-recognition. The discipline still holds for the rest of the mission — command-protection requires it — but the discipline now has to hold against something heavier.
+Her existing love-arc registration (during Segment 2) was: *Joel has feelings for me; I am disciplining myself not to act on the recognition.* After the leak event, the registration is: *Joel locked himself in. He pushed me out of the way. He gave me that look. He would have stayed if it had not been containable. The discipline does not hold anymore.*
 
-The disclosure timeline (Book 3; Anna initiates) doesn't change. What changes is what the disclosure is *about.* Anna doesn't initiate by declaring feelings; she initiates by acknowledging *what happened in Compartment 4 on Day 47.* The conversation in Book 3 is a mutual recognition of an event neither has spoken aloud since.
+The interior content shifts from feelings-recognition to mutual-recognition-without-words. The discipline still holds for the rest of the mission — command-protection requires it; the bridge is watching; she has eight more days of mission to run — but the discipline now has to hold against something heavier than itself.
+
+The disclosure timeline (Book 3; Anna initiates) doesn't change. What changes is what the disclosure is *about.* Anna doesn't initiate by declaring feelings; she initiates by acknowledging *what happened on Day 47.* The conversation in Book 3 is a mutual recognition of two specific things neither has spoken aloud since: the touch in the passageway, and the look through the glass.
 
 **What Anna does NOT do during the rest of Book 1:**
 
 - Does NOT thank Joel. The act doesn't admit thanks; thanks would diminish what happened by treating it as a service.
-- Does NOT discipline Joel. The act broke procedure but produced no harm; disciplining him would acknowledge what disciplining him would mean, which she cannot do during operations.
+- Does NOT discipline Joel for the push-past. The push was instinctive; she did not formally outrank Joel in the corridor in the half-second the contact happened; disciplining him would acknowledge what disciplining him would mean, which she cannot do during operations.
 - Does NOT reassign Joel. Removing him from positions where the act might recur would be the operational move; she does not make it; the choice not to is itself information.
 - Does NOT speak of the act to anyone — not to Wanjiru, not to Diego, not to her mother during the surface-window calls. The act is hers and Joel's; the rest of the crew sees the watch-log entry; only the two of them know what the entry was actually about.
+- Does NOT touch Joel again during the rest of the mission. The next time their bodies make contact is in the Book 3 disclosure scene, by Anna's choice.
 
 **The mother registers the change before Anna admits it.**
 
-The surface-window call after Segment 3 (the recovery letter to María Elena beat happens in this same window per the existing locked structure) — Anna's mother in St. Petersburg notices that Anna's voice is different. The mother does not name what she has registered. She tells Anna to come home safely. *I am coming home, Mama.* The mother knows. Anna doesn't know yet that she knows. The Book 2 conversation between them is the one that surfaces what the mother already heard.
+The surface-window call after Segment 3 — Anna's mother in St. Petersburg notices that Anna's voice is different. The mother does not name what she has registered. She tells Anna to come home safely. *I am coming home, Mama.* The mother knows. Anna doesn't know yet that she knows. The Book 2 conversation between them is the one that surfaces what the mother already heard.
 
 ## Series-end note
 
