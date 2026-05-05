@@ -2,6 +2,11 @@
 
 > Chronological action log. Hooks and AI append to this file automatically.
 > Old sessions are consolidated by the daemon weekly.
+
+| 2026-05-05 19:30 | Vol 2 listen-test APPROVED by CO; full structural + lexical canon locked; Act I drafting authorized; Ch 1 dispatched. 8 PRs landed Tuesday (#112-#119) | vol-2-software-as-gravity.md (NEW; canon doc — software is gravity not character), vol-2-archive-and-capture-convention.md + vol-2-anchor-bridge-sync-mechanic.md + series-arc-sunfish-trajectory.md (NEW canon docs), .claude/agents/vol2-chapter-reviewer.md (NEW; line + structural editor agent), .claude/skills/crew-log-style-entry/SKILL.md (NEW), all character sheets updated (Anna voice-register spec; Joel/Priya/Wanjiru/Stefan plot-binding metadata + canon layers), three signature-discipline scenes locked (Joel bunk-laptop / Priya fourth-pass / Wanjiru exception-refusal), Ch 2 v4 redrafted under gravity rail (5,445 words / 31.9 min audio), Ch 5 prose-pass (5,971 words / 36.5 min audio), boat→RV Nansen / mission→MERIDIAN-7 / rival→HELVETICA-2 (140+ substitutions across 27 files), TTS defensive mappings, ASSEMBLY.md updated with post-verdict status, snapshot at .pao-inbox/_state-snapshots/snapshot-2026-05-05-tuesday-evening-vol2-listen-test-approved.md | listen-test pair (Ch 2 + Ch 5) audio total 68.4 min; CO listened uninterrupted; verdict "approved" lands gravity canon as validated. Act I remaining = Ch 1 (in flight) / Ch 3 / Ch 4 / Ch 6. ~140000 |
+
+| 2026-05-04 23:50 | Vol 2 scaffold + 18-chapter outline + audiobook pipeline plumbing landed (PR #109) | chapters/book-2/CHAPTER-OUTLINE.md (NEW; 18 chapters across 3 acts; per-chapter architectural-claim/frame-ratio/length/drafting-notes), chapters/book-2/README.md (NEW; orientation), chapters/book-2/{act-1,act-2,act-3}/.gitkeep, build/audiobook.py (added VOL2_CHAPTER_FILES inert placeholder list), ASSEMBLY.md (Vol 2 status section + Crossing-revision-pending flag) | PR #109 merged 2026-05-04 23:50; CO-gated next move = listen-test pair drafting (Ch 5 Day-Twenty Realization + Ch 2 Recruitment Interview) per concept-note §9; estimated ~15k words → Kokoro render → ~100min audiobook listen-test → verdict drives full Book 1 commit-or-revise | ~14000 |
+
 | 2026-04-28 | Wired Chatterbox engine (Resemble AI on Windows GPU box, replacing planned Higgs Audio v2.5) into audiobook pipeline + scaffolded Mac-side voice-cloning workflow | build/audiobook.py (rename higgs→chatterbox, add TTS_API_KEY auth via OpenAI client api_key, requires_auth flag per engine, --api-key CLI arg, PRESETS_CHATTERBOX with stock fallbacks for male/female/british/british-male/fry slots and TODO=None for sinek/practitioner/fenrir persona slots), build/voice_upload.py (NEW — list/get/put/delete client for /v1/audio/voices CRUD with multipart upload, auth via TTS_API_KEY env or --api-key, slug + audio + transcript validation), build/librivox_browse.py (NEW — search/sections/preview/extract subcommands; ffmpeg HTTP-range streaming so 30s clip pulls ~250KB instead of full ~14MB chapter; default 24kHz mono WAV output for Chatterbox upload), build/Makefile (rename audiobook-{higgs→chatterbox} targets, HIGGS_URL→CHATTERBOX_URL, add audiobook-voice-{upload,delete}, librivox-{search,sections,preview,extract} targets), memory/project_audiobook_topology.md (engine correction note + new workflow section) | live smoke tests: GET /v1/audio/voices auth via Bearer succeeds (16 stock voices listed); POST /v1/audio/speech with voice=en_man returns 156KB 24kHz mono MP3 in ~3s; voice_upload.py list parses + tabulates; librivox_browse.py preview pulls 15s of Bleak House ch1 in ~1s (118KB MP3). Server-side voice upload endpoints (PUT/DELETE /v1/audio/voices/{id}) NOT YET DEPLOYED — spec sent to user for Windows-side implementation; Mac-side helper is ready to call when server lands. Stock Chatterbox catalog has 4 narrator-fit voices (en_man, en_woman, broom_salesman, mabel); persona slots for Voss/Shevchenko/Okonkwo/Ferreira/Sinek-author voice need custom uploads via librivox_browse.py extract → voice_upload.py put. | ~22000 |
 
 | 2026-04-28 | Code-check of #44 Per-Data-Class Device-Distribution — Ch16 §Per-Data-Class Device-Distribution (lines 132-190) post iter-0032 draft | chapters/part-3-reference-architecture/ch16-persistence-beyond-the-node.md (read-only), docs/book-update-plan/working/44-per-data-class-device-distribution/code-check-report.md (created) | PASS-with-claim-markers. 4 namespaces declared in HTML annotation header (Buckets/Sync/Audit verified in-canon by directory listing of Sunfish/packages/; Foundation.Fleet flagged as inconsistent with Ch21:8 forward-looking declaration — queued for tech-review correction); 0 new top-level namespaces; 0 code fences in new section; 0 invented APIs; 0 TBD markers; 1 new CLAIM marker line 188 (within ≤1 budget). 7 of 8 cross-refs resolve cleanly; **1 fails** — Ch16:170 says "Ch11 §Fleet Management" but Ch11 has no such section (correct target is Ch21 — Operating a Fleet); flagged for tech-review correction. Parallel-draft dependency for Ch15 §Event-Triggered Re-classification resolved positively (#10 already landed in Ch15:690). All 5 sub-patterns 44a-44e covered to outline §B spec. All 6 IEEE refs [1]-[6] resolve both directions; Ch16-local numbering accepted per Appendix E final-assembly renumbering rule (consistent with Ch12/Ch13/Ch14 chapter-local convention; Ch15 cumulative is the exception). Word count 1,754 body words = 6.3% over ±10% (1,650), 2.6% below ±20% (1,800) — accepted per loop-plan §QC-1 ±20% policy. build/code-check.py exits 1 (1 CLAIM marker — the deliberately-preserved one); human override accepted. 11 items queued for technical-review (1 CLAIM resolution + 4 drafter-forwarded flags + 6 code-check additions, including the Ch11→Ch21 cross-reference correction and Foundation.Fleet annotation header alignment). Gate: code-check → technical-review PASSES. | ~10000 |
@@ -2075,3 +2080,174 @@
 | 18:17 | Session end: 19 writes across 12 files (stt_spike.py, yeoman-resumed-2026-05-04T13-30Z-stt-spike-phase1-complete.md, ch01-when-saas-fights-reality.md, yeoman-resumed-2026-05-04T14-00Z-phase4a-ch01-complete.md, ASSEMBLY.md) | 11 reads | ~52352 tok |
 | 18:44 | Session end: 19 writes across 12 files (stt_spike.py, yeoman-resumed-2026-05-04T13-30Z-stt-spike-phase1-complete.md, ch01-when-saas-fights-reality.md, yeoman-resumed-2026-05-04T14-00Z-phase4a-ch01-complete.md, ASSEMBLY.md) | 12 reads | ~52352 tok |
 | 19:05 | Edited .pao-inbox/_creative/character-sheets/dr-leader-mission-director.md | modified 4() | ~3412 |
+| 05:37 | Session end: 54 writes across 28 files (stt_spike.py, yeoman-resumed-2026-05-04T13-30Z-stt-spike-phase1-complete.md, ch01-when-saas-fights-reality.md, yeoman-resumed-2026-05-04T14-00Z-phase4a-ch01-complete.md, ASSEMBLY.md) | 18 reads | ~153858 tok |
+| 05:41 | Session end: 54 writes across 28 files (stt_spike.py, yeoman-resumed-2026-05-04T13-30Z-stt-spike-phase1-complete.md, ch01-when-saas-fights-reality.md, yeoman-resumed-2026-05-04T14-00Z-phase4a-ch01-complete.md, ASSEMBLY.md) | 18 reads | ~153858 tok |
+| 05:43 | Session end: 54 writes across 28 files (stt_spike.py, yeoman-resumed-2026-05-04T13-30Z-stt-spike-phase1-complete.md, ch01-when-saas-fights-reality.md, yeoman-resumed-2026-05-04T14-00Z-phase4a-ch01-complete.md, ASSEMBLY.md) | 18 reads | ~153858 tok |
+
+## Session: 2026-05-05 05:55
+
+| Time | Action | File(s) | Outcome | ~Tokens |
+|------|--------|---------|---------|--------|
+| 06:01 | Created chapters/book-2/CHAPTER-OUTLINE.md | — | ~11634 |
+| 06:01 | Created chapters/book-2/README.md | — | ~508 |
+| 06:02 | Edited build/audiobook.py | expanded (+35 lines) | ~586 |
+| 06:02 | Edited ASSEMBLY.md | modified drafted() | ~943 |
+| 06:03 | Edited ASSEMBLY.md | inline fix | ~56 |
+| 06:05 | Session end: 5 writes across 4 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md) | 3 reads | ~36929 tok |
+| 06:07 | Session end: 5 writes across 4 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md) | 3 reads | ~36929 tok |
+| 06:59 | Session end: 5 writes across 4 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md) | 3 reads | ~36929 tok |
+| 07:08 | Session end: 5 writes across 4 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md) | 3 reads | ~36929 tok |
+| 07:15 | Session end: 5 writes across 4 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md) | 13 reads | ~71155 tok |
+| 07:18 | Created chapters/book-2/act-1/ch05-day-twenty-realization.md | — | ~9630 |
+| 07:19 | Session end: 6 writes across 5 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 14 reads | ~88921 tok |
+| 07:19 | Created chapters/book-2/act-1/ch02-recruitment-interview.md | — | ~8523 |
+| 11:22 | drafted Vol 2 Ch 2 — Recruitment Interview | chapters/book-2/act-1/ch02-recruitment-interview.md | 8010 words; dialogue engine on the page; R1 BLOCK admission landed in 4+1 sentences; Stefan implicit only | ~28000 |
+| 07:24 | Edited build/audiobook.py | expanded (+6 lines) | ~162 |
+| 07:24 | Edited build/audiobook.py | 8→8 lines | ~129 |
+| 07:25 | Edited build/audiobook.py | expanded (+7 lines) | ~178 |
+| 07:27 | Session end: 10 writes across 6 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 15 reads | ~107307 tok |
+| 07:33 | Session end: 10 writes across 6 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 15 reads | ~107307 tok |
+| 07:38 | Edited build/audiobook.py | 1→5 lines | ~105 |
+| 07:39 | Session end: 11 writes across 6 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 15 reads | ~107412 tok |
+| 07:39 | Session end: 11 writes across 6 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 15 reads | ~107412 tok |
+| 07:46 | Edited build/audiobook.py | expanded (+9 lines) | ~236 |
+| 07:47 | Session end: 12 writes across 6 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 15 reads | ~107736 tok |
+| 07:53 | Edited build/audiobook.py | read() → POSTs() | ~151 |
+| 07:53 | Session end: 13 writes across 6 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 15 reads | ~107887 tok |
+| 07:53 | Session end: 13 writes across 6 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 15 reads | ~107887 tok |
+| 07:58 | Edited build/audiobook.py | modified _chunk_cache_key() | ~1130 |
+| 07:59 | Session end: 14 writes across 6 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 15 reads | ~109017 tok |
+| 08:19 | Session end: 14 writes across 6 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 15 reads | ~109017 tok |
+| 08:23 | Edited build/audiobook.py | modified 05() | ~574 |
+| 08:25 | Edited build/audiobook.py | min() → container() | ~702 |
+| 08:25 | Edited build/audiobook.py | modified volume_for_chapter() | ~167 |
+| 08:25 | Edited build/audiobook.py | 5→8 lines | ~115 |
+| 08:28 | Session end: 18 writes across 6 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 15 reads | ~111370 tok |
+| 08:40 | Session end: 18 writes across 6 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 15 reads | ~111370 tok |
+| 08:44 | Session end: 18 writes across 6 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 15 reads | ~111370 tok |
+| 09:01 | Session end: 18 writes across 6 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 15 reads | ~111370 tok |
+| 09:19 | Session end: 18 writes across 6 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 15 reads | ~111370 tok |
+| 09:28 | Session end: 18 writes across 6 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 15 reads | ~111370 tok |
+| 09:41 | Edited build/audiobook.py | 29→28 lines | ~447 |
+| 09:42 | Session end: 19 writes across 6 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 15 reads | ~111817 tok |
+| 09:51 | Session end: 19 writes across 6 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 15 reads | ~111817 tok |
+| 09:56 | Session end: 19 writes across 6 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 15 reads | ~111817 tok |
+| 10:04 | Created .claude/skills/crew-log-style-entry/SKILL.md | — | ~3304 |
+| 10:05 | Session end: 20 writes across 7 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 15 reads | ~115357 tok |
+| 10:09 | Session end: 20 writes across 7 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 15 reads | ~115357 tok |
+| 10:13 | Session end: 20 writes across 7 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 15 reads | ~115357 tok |
+| 10:17 | Session end: 20 writes across 7 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 15 reads | ~115357 tok |
+| 10:29 | Session end: 20 writes across 7 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 15 reads | ~115357 tok |
+| 10:42 | Session end: 20 writes across 7 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 15 reads | ~115357 tok |
+| 10:56 | Session end: 20 writes across 7 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 15 reads | ~115357 tok |
+| 11:09 | Session end: 20 writes across 7 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 15 reads | ~115357 tok |
+| 11:17 | Session end: 20 writes across 7 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 15 reads | ~115357 tok |
+| 11:30 | Session end: 20 writes across 7 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 15 reads | ~115357 tok |
+| 11:39 | Created .pao-inbox/_creative/vol-2-archive-and-capture-convention.md | — | ~5731 |
+| 11:41 | Created .pao-inbox/_creative/vol-2-anchor-bridge-sync-mechanic.md | — | ~3771 |
+| 11:41 | Session end: 22 writes across 9 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 15 reads | ~125537 tok |
+| 11:42 | Created .pao-inbox/_creative/series-arc-sunfish-trajectory.md | — | ~3872 |
+| 11:43 | Edited chapters/book-2/CHAPTER-OUTLINE.md | 8→12 lines | ~445 |
+| 11:43 | Edited chapters/book-2/CHAPTER-OUTLINE.md | modified mechanic() | ~1264 |
+| 11:44 | Session end: 25 writes across 10 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 15 reads | ~131517 tok |
+| 11:44 | Edited chapters/book-2/CHAPTER-OUTLINE.md | 14→15 lines | ~650 |
+| 11:45 | Edited chapters/book-2/CHAPTER-OUTLINE.md | 5→6 lines | ~267 |
+| 11:45 | Edited chapters/book-2/CHAPTER-OUTLINE.md | 2→3 lines | ~124 |
+| 11:45 | Edited chapters/book-2/CHAPTER-OUTLINE.md | 2→3 lines | ~141 |
+| 11:45 | Edited chapters/book-2/CHAPTER-OUTLINE.md | 3→4 lines | ~150 |
+| 11:46 | Edited chapters/book-2/CHAPTER-OUTLINE.md | 13→14 lines | ~700 |
+| 11:46 | Edited chapters/book-2/CHAPTER-OUTLINE.md | 5→6 lines | ~128 |
+| 11:46 | Edited chapters/book-2/CHAPTER-OUTLINE.md | 2→3 lines | ~82 |
+| 11:46 | Edited chapters/book-2/CHAPTER-OUTLINE.md | 6→7 lines | ~352 |
+| 11:46 | Edited chapters/book-2/CHAPTER-OUTLINE.md | 2→3 lines | ~145 |
+| 11:47 | Edited chapters/book-2/CHAPTER-OUTLINE.md | work() → evidence() | ~819 |
+| 11:47 | Edited chapters/book-2/CHAPTER-OUTLINE.md | 13→14 lines | ~522 |
+| 11:47 | Edited chapters/book-2/CHAPTER-OUTLINE.md | 5→6 lines | ~286 |
+| 11:49 | Edited chapters/book-2/CHAPTER-OUTLINE.md | modified at() | ~685 |
+| 11:49 | Edited chapters/book-2/CHAPTER-OUTLINE.md | 3→3 lines | ~317 |
+| 11:50 | Edited chapters/book-2/CHAPTER-OUTLINE.md | 2→2 lines | ~465 |
+| 11:50 | Edited chapters/book-2/CHAPTER-OUTLINE.md | 12→13 lines | ~889 |
+| 11:51 | Edited chapters/book-2/CHAPTER-OUTLINE.md | 14→15 lines | ~596 |
+| 11:51 | Edited chapters/book-2/CHAPTER-OUTLINE.md | added error handling | ~1328 |
+| 11:52 | Edited chapters/book-2/CHAPTER-OUTLINE.md | 15→17 lines | ~1368 |
+| 11:57 | Created .pao-inbox/pao-directive-2026-05-05T14-15Z-yeoman-focus-vol2-only.md | — | ~1558 |
+| 11:59 | Session end: 46 writes across 11 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 19 reads | ~164916 tok |
+| 12:03 | Created chapters/book-2/act-1/ch02-recruitment-interview.md | — | ~12665 |
+| 16:03 | redraft Vol2 Ch2 per archive-and-capture canon (Pattern A opener; 2026-grounded Anchor; Joel no-forecast) | chapters/book-2/act-1/ch02-recruitment-interview.md | 8,216 words | ~28k |
+| 12:05 | Session end: 47 writes across 11 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 19 reads | ~182368 tok |
+| 12:07 | Session end: 47 writes across 11 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 19 reads | ~182368 tok |
+| 12:10 | Session end: 47 writes across 11 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 19 reads | ~182368 tok |
+| 12:20 | Edited chapters/book-2/CHAPTER-OUTLINE.md | 4→4 lines | ~436 |
+| 12:20 | Edited chapters/book-2/CHAPTER-OUTLINE.md | 8→9 lines | ~566 |
+| 12:21 | Edited chapters/book-2/CHAPTER-OUTLINE.md | 3→3 lines | ~468 |
+| 12:21 | Edited chapters/book-2/CHAPTER-OUTLINE.md | 4→5 lines | ~663 |
+| 12:22 | Edited .pao-inbox/_creative/character-sheets/joel-reyes-principal-architect.md | modified 2() | ~439 |
+| 12:23 | Edited .pao-inbox/_creative/character-sheets/priya-iyer-schema-migration.md | added error handling | ~1060 |
+| 12:24 | Edited .pao-inbox/_creative/character-sheets/wanjiru-kamau-security-policy.md | modified 2() | ~1286 |
+| 12:24 | Edited .pao-inbox/_creative/character-sheets/stefan-reinhardt-rival-architect.md | modified 2() | ~684 |
+| 12:27 | Session end: 55 writes across 15 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 22 reads | ~188368 tok |
+| 12:46 | Session end: 55 writes across 15 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 22 reads | ~188368 tok |
+| 12:47 | Edited chapters/book-2/act-1/ch02-recruitment-interview.md | 9→11 lines | ~541 |
+| 12:48 | Edited chapters/book-2/act-1/ch02-recruitment-interview.md | reduced (-10 lines) | ~465 |
+| 12:49 | Edited chapters/book-2/act-1/ch02-recruitment-interview.md | reduced (-6 lines) | ~978 |
+| 12:49 | Edited chapters/book-2/act-1/ch02-recruitment-interview.md | inline fix | ~193 |
+| 12:49 | Edited chapters/book-2/act-1/ch02-recruitment-interview.md | 7→7 lines | ~232 |
+| 12:49 | Edited chapters/book-2/act-1/ch02-recruitment-interview.md | inline fix | ~203 |
+| 12:49 | Edited chapters/book-2/act-1/ch02-recruitment-interview.md | 7→11 lines | ~158 |
+| 12:50 | Edited chapters/book-2/act-1/ch02-recruitment-interview.md | 17→17 lines | ~471 |
+| 12:51 | Edited chapters/book-2/act-1/ch02-recruitment-interview.md | reduced (-12 lines) | ~587 |
+| 12:51 | Edited chapters/book-2/act-1/ch02-recruitment-interview.md | 15→17 lines | ~495 |
+| 12:51 | Edited chapters/book-2/act-1/ch02-recruitment-interview.md | 9→9 lines | ~270 |
+| 12:52 | Edited chapters/book-2/act-1/ch02-recruitment-interview.md | 3→5 lines | ~219 |
+| 12:52 | Edited chapters/book-2/act-1/ch02-recruitment-interview.md | 3→3 lines | ~211 |
+| 12:52 | Edited chapters/book-2/act-1/ch02-recruitment-interview.md | 3→7 lines | ~321 |
+| 12:52 | Edited chapters/book-2/act-1/ch02-recruitment-interview.md | 1→3 lines | ~284 |
+| 12:53 | Edited chapters/book-2/act-1/ch02-recruitment-interview.md | 1→3 lines | ~402 |
+| 12:53 | Edited chapters/book-2/act-1/ch02-recruitment-interview.md | 1→3 lines | ~310 |
+| 12:53 | Edited chapters/book-2/act-1/ch02-recruitment-interview.md | 11→11 lines | ~447 |
+| 12:54 | Edited chapters/book-2/act-1/ch02-recruitment-interview.md | 1→3 lines | ~336 |
+| 12:54 | Edited chapters/book-2/act-1/ch02-recruitment-interview.md | 3→5 lines | ~136 |
+| 12:54 | Edited chapters/book-2/act-1/ch02-recruitment-interview.md | inline fix | ~55 |
+| 12:55 | Edited chapters/book-2/act-1/ch02-recruitment-interview.md | inline fix | ~125 |
+| 12:56 | Session end: 77 writes across 15 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 22 reads | ~207397 tok |
+| 13:00 | Session end: 77 writes across 15 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 22 reads | ~207397 tok |
+| 14:18 | Created .claude/agents/vol2-chapter-reviewer.md | — | ~4607 |
+| 14:19 | Session end: 78 writes across 16 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 22 reads | ~212333 tok |
+| 14:21 | Session end: 78 writes across 16 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 23 reads | ~216713 tok |
+| 14:26 | Created chapters/book-2/_reviews/ch02-recruitment-interview-review-2026-05-05T18-30Z.md | — | ~8689 |
+| 14:28 | Session end: 79 writes across 17 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 25 reads | ~234168 tok |
+| 14:31 | Edited .claude/agents/vol2-chapter-reviewer.md | modified BEFORE() | ~1590 |
+| 14:31 | Edited .claude/agents/vol2-chapter-reviewer.md | modified protected() | ~875 |
+| 14:34 | Session end: 81 writes across 17 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 25 reads | ~236810 tok |
+| 14:47 | Created .pao-inbox/_creative/vol-2-software-as-gravity.md | — | ~5095 |
+| 14:48 | Edited chapters/book-2/CHAPTER-OUTLINE.md | 10→11 lines | ~448 |
+| 14:48 | Edited chapters/book-2/CHAPTER-OUTLINE.md | 12→14 lines | ~402 |
+| 14:49 | Edited chapters/book-2/CHAPTER-OUTLINE.md | expanded (+33 lines) | ~809 |
+| 14:50 | Edited chapters/book-2/CHAPTER-OUTLINE.md | modified rail() | ~1166 |
+| 14:52 | Session end: 86 writes across 18 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 27 reads | ~260945 tok |
+| 14:53 | Edited chapters/book-2/act-1/ch05-day-twenty-realization.md | 5→3 lines | ~249 |
+| 14:53 | Edited chapters/book-2/act-1/ch05-day-twenty-realization.md | 3→3 lines | ~203 |
+| 14:53 | Edited chapters/book-2/act-1/ch05-day-twenty-realization.md | 3→3 lines | ~185 |
+| 14:53 | Edited chapters/book-2/act-1/ch05-day-twenty-realization.md | inline fix | ~167 |
+| 14:53 | Edited chapters/book-2/act-1/ch05-day-twenty-realization.md | 1→3 lines | ~19 |
+| 14:54 | Edited chapters/book-2/act-1/ch05-day-twenty-realization.md | inline fix | ~31 |
+| 14:54 | Edited chapters/book-2/act-1/ch05-day-twenty-realization.md | inline fix | ~98 |
+| 14:54 | Edited chapters/book-2/act-1/ch05-day-twenty-realization.md | inline fix | ~168 |
+| 14:54 | Edited chapters/book-2/act-1/ch05-day-twenty-realization.md | inline fix | ~100 |
+| 14:55 | Created chapters/book-2/act-1/ch02-recruitment-interview.md | — | ~7208 |
+| 14:56 | Session end: 96 writes across 18 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 27 reads | ~265951 tok |
+| 14:59 | Created chapters/book-2/act-1/ch02-recruitment-interview.md | — | ~8028 |
+| 15:00 | Session end: 97 writes across 18 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 27 reads | ~274553 tok |
+| 15:02 | Session end: 97 writes across 18 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 27 reads | ~274553 tok |
+| 15:06 | Session end: 97 writes across 18 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 27 reads | ~274553 tok |
+| 15:46 | Session end: 97 writes across 18 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 27 reads | ~274553 tok |
+| 15:56 | Session end: 97 writes across 18 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 27 reads | ~274553 tok |
+| 16:06 | Created ../../../../tmp/rename-vol2.py | — | ~1564 |
+| 16:07 | Edited chapters/book-2/act-1/ch05-day-twenty-realization.md | inline fix | ~27 |
+| 16:07 | Edited build/audiobook.py | expanded (+11 lines) | ~188 |
+| 16:08 | Session end: 100 writes across 19 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 27 reads | ~276929 tok |
+| 16:10 | Session end: 100 writes across 19 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 27 reads | ~276929 tok |
+| 16:23 | Session end: 100 writes across 19 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 27 reads | ~276929 tok |
+| 16:28 | Edited ASSEMBLY.md | expanded (+30 lines) | ~1452 |
+| 16:29 | Created .pao-inbox/_state-snapshots/snapshot-2026-05-05-tuesday-evening-vol2-listen-test-approved.md | — | ~2442 |
+| 16:32 | Session end: 102 writes across 20 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 29 reads | ~303399 tok |

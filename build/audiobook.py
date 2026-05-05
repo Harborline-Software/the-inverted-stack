@@ -458,6 +458,7 @@ CHAPTER_PRESET_MAP: dict[str, str] = {
     # register Voss carries in Ch5; Anna's narration register is similar.
     # Apply to the Vol 2 listen-test pair; will extend to remaining Vol 2
     # chapters as they activate.
+    "book-2/act-1/ch01-departure": "female-solo",
     "book-2/act-1/ch02-recruitment-interview": "female-solo",
     "book-2/act-1/ch05-day-twenty-realization": "female-solo",
 }
@@ -496,10 +497,12 @@ CHAPTER_FILES = [
     "appendices/appendix-e-citation-style.md",
     "appendices/appendix-f-regulatory-coverage.md",
     "appendices/appendix-g-glossary.md",
-    # Vol 2 — listen-test pair (activated 2026-05-04 when both reached icm/draft).
-    # See chapters/book-2/CHAPTER-OUTLINE.md for the full 18-chapter spec; the
-    # remaining 16 paths are staged in VOL2_CHAPTER_FILES below and activate
-    # individually as each chapter reaches icm/draft.
+    # Vol 2 — chapters activated as each reaches icm/draft. See
+    # chapters/book-2/CHAPTER-OUTLINE.md for the full 18-chapter spec;
+    # remaining inactive paths are staged in VOL2_CHAPTER_FILES below.
+    # 2026-05-04: Ch 02 + Ch 05 (listen-test pair)
+    # 2026-05-05: Ch 01 (Departure; Act I install chapter; post-listen-test verdict)
+    "book-2/act-1/ch01-departure.md",
     "book-2/act-1/ch02-recruitment-interview.md",
     "book-2/act-1/ch05-day-twenty-realization.md",
 ]
@@ -517,7 +520,7 @@ CHAPTER_FILES = [
 # will be the first two activations per concept note §9.
 VOL2_CHAPTER_FILES = [
     # Act I — Departure and the first under-ice realization (Days 1-21)
-    "book-2/act-1/ch01-departure.md",
+    # ch01-departure.md — ACTIVATED in CHAPTER_FILES (2026-05-05)
     # ch02-recruitment-interview.md — ACTIVATED in CHAPTER_FILES (2026-05-04)
     "book-2/act-1/ch03-drake-passage-ice-edge.md",
     "book-2/act-1/ch04-first-submersion.md",
