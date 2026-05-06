@@ -112,6 +112,8 @@ Every chapter leads with one rail. Secondary rail noted where useful.
 
 Five of the six rails get substantial chapter ownership. **Grief/family/memory** is anchored by Ch 5 plus light distribution across surface windows + the Spanish-letter beat in Ch 17. The captain-asks-engineer dialogue engine is the install-chapter for Ch 4 and selective elsewhere; it is no longer a rail.
 
+**Ch 5 dual-recognition canon (locked 2026-05-06):** Ch 5's central recognition is dual — *data-frailty* (the records exist only here; conditional on the boat surfacing) AND *crew-frailty* (the people exist only here in the same way; conditional on the same boat surviving). Both register through the same architectural property: the architecture is honest about what it has and what it does not have, including itself. Ch 5 also seeds the **religion-as-prior-tradition** thread: the architecture is one tradition's answer (technical, secular, recent) to a persistence-concern that religion has been answering (spiritual, liturgical) for millennia. The two are not opposed; they are different shapes of answer to the same family of question. **Drafter discipline rule:** the religion parallel lands once in Ch 5 (anchored in Anna's mother murmuring a phrase from her tradition over the metal cabinet of family papers) and recedes. Subsequent Vol 2 chapters do not revisit it. The thread surfaces explicitly in Books 6-8 when Wanjiru's institutional framework matures into the secular descendant of those traditions.
+
 ## 4. Scene-types that are not about software
 
 Concrete templates that drafters can reach for. Sunfish appears as context only.
