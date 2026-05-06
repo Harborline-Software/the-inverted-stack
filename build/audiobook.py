@@ -468,6 +468,7 @@ CHAPTER_PRESET_MAP: dict[str, str] = {
     "book-2/act-2/ch08-second-submersion": "female-solo",
     "book-2/act-2/ch09-sync-daemon-under-drift": "female-solo",
     "book-2/act-2/ch10-aftermath-mission-that-once-was": "female-solo",
+    "book-2/act-2/ch11-second-surface-second-forsaken-reveal": "female-solo",
 }
 
 CHAPTER_FILES = [
@@ -521,6 +522,7 @@ CHAPTER_FILES = [
     "book-2/act-2/ch08-second-submersion.md",
     "book-2/act-2/ch09-sync-daemon-under-drift.md",
     "book-2/act-2/ch10-aftermath-mission-that-once-was.md",
+    "book-2/act-2/ch11-second-surface-second-forsaken-reveal.md",
 ]
 
 # Vol 2 (Book 1 of the Sunfish series) — story-first restructure narrated by
@@ -547,7 +549,7 @@ VOL2_CHAPTER_FILES = [
     # ch08-second-submersion.md — ACTIVATED in CHAPTER_FILES (2026-05-06)
     # ch09-sync-daemon-under-drift.md — ACTIVATED in CHAPTER_FILES (2026-05-06)
     # ch10-aftermath-mission-that-once-was.md — ACTIVATED in CHAPTER_FILES (2026-05-06)
-    "book-2/act-2/ch11-second-surface-second-forsaken-reveal.md",
+    # ch11-second-surface-second-forsaken-reveal.md — ACTIVATED in CHAPTER_FILES (2026-05-06)
     "book-2/act-2/ch12-beginning-of-the-end.md",
     # Act III — Cascade, ascent, and the cumulative reveal (Days 43-56)
     "book-2/act-3/ch13-schema-that-should-not-migrate.md",
