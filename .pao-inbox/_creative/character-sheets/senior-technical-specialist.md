@@ -70,3 +70,15 @@ He dies on bridge watch at 0317 local time, three hundred meters under the Filch
 
 **Director on him in Act V (placeholder):**
 > *His daughter received four thousand and seventeen photographs. His granddaughter Sofía is six. She will not remember him in the way the photographs will let her see him. María Elena read the letter at her kitchen table in Belgrano at 1442 local time. The architecture did not save him. The architecture delivered what he saw. That is the difference the architecture is for.*
+
+---
+
+## Vol 2 cast-swap canon (added 2026-05-04; baked through Ch 14)
+
+Diego **survives** the leak event in the Vol 2 telling. The protective beat (Ch 14) is Joel's, not Diego's; Diego's role across Ch 14 is procedural-competence-at-full-altitude on the bridge during the cascade. The Spanish-letter-to-María-Elena beat (Ch 14) is a recovery letter, not a death notification. Diego retires to **San Martín de los Andes** after Punta Arenas surfacing (Ch 16 register; final retirement decision communicated in Ch 18 reception or shortly after). The voice-sample placeholders above (death-as-aneurysm + the Act V "architecture did not save him" register) belong to an older draft of the closing chapter and are SUPERSEDED by the cast-swap canon. The texture they capture (María Elena, Belgrano kitchen, granddaughter Sofía, the Filchner-Ronne photographs, IAA Argentine institutional gravity) IS preserved — only the death is removed.
+
+## Texture detail (CO directive 2026-05-06)
+
+Same discipline as Anna's bakery / Tashkent-melon / Perkins-paperback beats: one specific concrete item, geography- or career-anchored, "what-he-carries-against-cold," surfaces once per chapter at most, never sentimentalized.
+
+- **A small leather mate-cup with a tarnished silver bombilla.** Diego's grandfather's. Made in a San Martín de los Andes workshop sometime in the 1960s. The leather is patinated dark; the silver is unpolished — Diego does not polish it; the patina is what is his. He keeps it in his console drawer on the bridge. He drinks mate during overnight watches; the steady-hot-water from the wardroom kettle, the pre-cured *yerba* he brought in his personal cargo allocation. The cup is not displayed; the cup is for using; the cup is what he has. Surfaces best in Ch 16 (Anna registers the cup during one of Diego's last bridge watches before Punta Arenas) or in a brief Ch 17 transit-north scene. Pairs structurally with the María Elena letter (Ch 14) and the San Martín retirement (Ch 16/18) — all three are concrete-Argentine-anchors that resist the pull toward generic "Latin America" register. ONE mention per surfacing chapter; do not turn into recurring motif.

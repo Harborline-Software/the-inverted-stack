@@ -403,6 +403,13 @@ Per series-canon (`series-arc-sunfish-trajectory.md` § 5.1 and § 8): Joel is *
 
 The drafter writing Joel knows the destination. The character does not. The reader who eventually has the cosmology registers the weight retroactively. The Vol 2 reader gets a competent senior engineer who keeps the boat alive and writes the kind of paper that gets read carefully.
 
+### Texture details (CO directive 2026-05-06)
+
+Same discipline as Anna's bakery / Tashkent-melon / Perkins-paperback beats: one specific concrete item, geography- or career-anchored, "what-he-carries-against-cold," surfaces once per chapter at most, never sentimentalized.
+
+- **Pilot G-2 0.5mm pen — black ink.** Joel has used the same model since his first patrol on USS Sunfish (SSN-649). The cheap-reliable one; he buys them by the dozen; loses them; replaces them; carries three at all times in his inner jacket pocket. Architectural attestations get signed with one. The hash-chain signature on Ch 14's damage report was applied with a Pilot G-2 — Anna registers it as a fact about him without naming the brand. Surfaces best as a textural detail in scenes where Joel signs something or hands a pen across a console. Pairs structurally with the Edison paperback (Ch 12 canon, line 79) — both are cheap-specific-personal-from-Navy-years.
+- **His mother's handwritten recipe for arroz con pollo** (Filipino-American family register; per § Family + § 97 mother-on-surface-window canon). Index card; her handwriting; coffee-ring stain; folded in his wallet for fifteen years; he never makes the dish himself. Surfaces ONCE in Vol 2 — Ch 16 surfacing-toward-Punta-Arenas is the highest-fit moment, when the wardroom has the last pot of mission coffee and Joel pulls his wallet out for some other reason. Anna registers the card without comment. The card says nothing about him in dialogue; it says everything about him as object. Per the bakery-discipline: ONE mention; do not turn into recurring motif.
+
 ### Compute-hub loss in Ch 14 — the quiet acceptance
 
 When the leak takes out the boat's central workstation alongside the sensor head, Joel registers the loss in his characteristic register: *the architecture is designed to degrade gracefully; we will operate on laptop-class until we surface*. He does NOT lament; does NOT catastrophize; does NOT promise to rebuild.
