@@ -461,6 +461,7 @@ CHAPTER_PRESET_MAP: dict[str, str] = {
     "book-2/act-1/ch01-departure": "female-solo",
     "book-2/act-1/ch02-recruitment-interview": "female-solo",
     "book-2/act-1/ch03-drake-passage-ice-edge": "female-solo",
+    "book-2/act-1/ch04-first-submersion": "female-solo",
     "book-2/act-1/ch05-day-twenty-realization": "female-solo",
 }
 
@@ -503,10 +504,11 @@ CHAPTER_FILES = [
     # remaining inactive paths are staged in VOL2_CHAPTER_FILES below.
     # 2026-05-04: Ch 02 + Ch 05 (listen-test pair)
     # 2026-05-05: Ch 01 (Departure; Act I install chapter; post-listen-test verdict)
-    # 2026-05-06: Ch 03 (Drake Passage; loop iteration 1)
+    # 2026-05-06: Ch 03 (Drake Passage; loop iteration 1) + Ch 04 (First Submersion; loop iteration 2)
     "book-2/act-1/ch01-departure.md",
     "book-2/act-1/ch02-recruitment-interview.md",
     "book-2/act-1/ch03-drake-passage-ice-edge.md",
+    "book-2/act-1/ch04-first-submersion.md",
     "book-2/act-1/ch05-day-twenty-realization.md",
 ]
 
@@ -526,7 +528,7 @@ VOL2_CHAPTER_FILES = [
     # ch01-departure.md — ACTIVATED in CHAPTER_FILES (2026-05-05)
     # ch02-recruitment-interview.md — ACTIVATED in CHAPTER_FILES (2026-05-04)
     # ch03-drake-passage-ice-edge.md — ACTIVATED in CHAPTER_FILES (2026-05-06)
-    "book-2/act-1/ch04-first-submersion.md",
+    # ch04-first-submersion.md — ACTIVATED in CHAPTER_FILES (2026-05-06)
     # ch05-day-twenty-realization.md — ACTIVATED in CHAPTER_FILES (2026-05-04)
     "book-2/act-1/ch06-first-surface-first-forsaken-reveal.md",
     # Act II — Subsystems hold; the contest sharpens (Days 22-42)
