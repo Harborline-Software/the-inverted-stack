@@ -475,6 +475,7 @@ CHAPTER_PRESET_MAP: dict[str, str] = {
     "book-2/act-3/ch15-compromised-relay-holds": "female-solo",
     "book-2/act-3/ch16-final-ascent": "female-solo",
     "book-2/act-3/ch17-transit-north": "female-solo",
+    "book-2/act-3/ch18-punta-arenas-surfacing": "female-solo",
 }
 
 CHAPTER_FILES = [
@@ -535,6 +536,7 @@ CHAPTER_FILES = [
     "book-2/act-3/ch15-compromised-relay-holds.md",
     "book-2/act-3/ch16-final-ascent.md",
     "book-2/act-3/ch17-transit-north.md",
+    "book-2/act-3/ch18-punta-arenas-surfacing.md",
 ]
 
 # Vol 2 (Book 1 of the Sunfish series) — story-first restructure narrated by
@@ -569,7 +571,7 @@ VOL2_CHAPTER_FILES = [
     # ch15-compromised-relay-holds.md — ACTIVATED in CHAPTER_FILES (2026-05-06)
     # ch16-final-ascent.md — ACTIVATED in CHAPTER_FILES (2026-05-06)
     # ch17-transit-north.md — ACTIVATED in CHAPTER_FILES (2026-05-06)
-    "book-2/act-3/ch18-punta-arenas-surfacing.md",
+    # ch18-punta-arenas-surfacing.md — ACTIVATED in CHAPTER_FILES (2026-05-06)
 ]
 
 CHUNK_CHAR_BUDGET = 700  # target per-request size in characters (Kokoro default)
