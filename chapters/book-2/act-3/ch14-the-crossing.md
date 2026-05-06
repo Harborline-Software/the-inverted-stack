@@ -384,7 +384,7 @@ Diego stood the polar-operations console. The polar-operations console did not r
 
 I read the operational damage report against the consortium-port mirror's reference at the per-laptop register. The reference was at the laptop. The reference was at the standing register. The reference was the reference. The damage report was filed.
 
-I started a paper list at my cabin desk. The list was *queries to run when we surface*. The list at the start of Day 48 had three items. The list at the end of Day 48 had nine items. The list would grow.
+I formalized a paper list at my cabin desk. The list was *queries to run when we surface*. The list at the end of Day 47 had three items. The list at 1647 on Day 48 had nine items. The list would grow.
 
 The crew adapted at the operational tempo. The crew did not narrate the adaptation. The adaptation was at the standing register. The standing register was the standing register.
 
@@ -450,7 +450,7 @@ In his parallel English:
 
 The letter was at the canonical authored-content archive at the standing replication register. The letter was signed at capture under Diego's KEK. The letter would reach María Elena Vargas at Buenos Aires when the boat surfaced at Punta Arenas. The letter did not require relay window. The letter required surfacing. The boat would surface. The letter would deliver.
 
-The autumn light at the lake at San Martín de los Andes is in March and April in the southern hemisphere. The boat would surface on Mission Day 56 — the second week of June. The autumn would have ended by the time Diego got home. The autumn would be back in eight months. Diego would be there for the autumn after the autumn.
+The autumn light at the lake at San Martín de los Andes is in March and April in the southern hemisphere. The boat would surface on Mission Day 56 — the second week of November. The autumn had ended six months before he would get home. The autumn would be back in four months. Diego would be there for the autumn after the autumn.
 
 I added an item to the list: *transmit the letter from Diego to María Elena at the first surface window at Punta Arenas; carry the letter at the priority register; verify delivery at the IAA's communications office; close the loop*. The item went on the list.
 
@@ -476,7 +476,7 @@ The mission continued.
 
 ---
 
-*Personal file, 2026-06-09. Encrypted under author's key. Access: self only.*
+*Personal file, 2026-11-03. Encrypted under author's key. Access: self only.*
 
 *I am writing this on Mission Day 49 at 2347 local in my cabin. I have not written in this file since Mission Day 22. The two-day gap between the cascade and the writing is not the cycle that comes naturally; the cycle that comes naturally would have been the same night. The same night I sat at the standing position at the rail. The same night I filed the damage report. The same night I went back to my cabin and did not sleep. I did not write that night because the writing would have been at a register I did not yet have a vocabulary for. I have a vocabulary for it now. I am writing.*
 
