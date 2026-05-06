@@ -192,7 +192,7 @@ The hum had been on through the morning's review. The hum had stopped during the
 
 ---
 
-Cucu used to say *muthumia ndamenagia ngoro yake* when she meant *the steward does not chase her own heart*. I had read the proverb in Kikuyu in a notebook of hers I had carried to the boat and had not opened on the boat until the morning before I sailed. The proverb had been in the notebook in Kikuyu and below it in a translation she had written in Swahili for the cousin who had not read Kikuyu, and below that in English for the great-grand-niece who had not read Swahili. The notebook had carried the proverb in three languages because the proverb was the kind of proverb that carried.
+Cucu used to say *the steward does not chase her own heart*. The saying was hers — written in her own hand in the lined notebook I had carried to the boat and had not opened on the boat until the morning before I sailed. The notebook had carried the saying in the English cucu had written in by the back years of her life, the language she had used with the great-grand-nieces and great-grand-nephews who had not learned the older languages of the household. The saying had not needed any other language to carry.
 
 Cucu had used the proverb when she had been the steward of the family's matters across the back of her sixty years. The steward did not chase her own heart against the institution she carried. The steward held the institution at the rate the institution required. The institution required restraint. The restraint was the work.
 
