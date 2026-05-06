@@ -472,6 +472,7 @@ CHAPTER_PRESET_MAP: dict[str, str] = {
     "book-2/act-2/ch12-beginning-of-the-end": "female-solo",
     "book-2/act-3/ch13-schema-that-should-not-migrate": "female-solo",
     "book-2/act-3/ch14-the-crossing": "female-solo",
+    "book-2/act-3/ch15-compromised-relay-holds": "female-solo",
 }
 
 CHAPTER_FILES = [
@@ -529,6 +530,7 @@ CHAPTER_FILES = [
     "book-2/act-2/ch12-beginning-of-the-end.md",
     "book-2/act-3/ch13-schema-that-should-not-migrate.md",
     "book-2/act-3/ch14-the-crossing.md",
+    "book-2/act-3/ch15-compromised-relay-holds.md",
 ]
 
 # Vol 2 (Book 1 of the Sunfish series) — story-first restructure narrated by
@@ -560,7 +562,7 @@ VOL2_CHAPTER_FILES = [
     # Act III — Cascade, ascent, and the cumulative reveal (Days 43-56)
     # ch13-schema-that-should-not-migrate.md — ACTIVATED in CHAPTER_FILES (2026-05-06)
     # ch14-the-crossing.md — ACTIVATED in CHAPTER_FILES (2026-05-06)
-    "book-2/act-3/ch15-compromised-relay-holds.md",
+    # ch15-compromised-relay-holds.md — ACTIVATED in CHAPTER_FILES (2026-05-06)
     "book-2/act-3/ch16-final-ascent.md",
     "book-2/act-3/ch17-transit-north.md",
     "book-2/act-3/ch18-punta-arenas-surfacing.md",
