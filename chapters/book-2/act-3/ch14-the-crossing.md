@@ -502,7 +502,7 @@ The mission continued.
 
 *I will name what the look said. I will name it once, here, in this file, where it will not be read until I read it again, if I read it again, which I do not yet know.*
 
-*The look said he was where I would have been. The look said he was not coming out until the leak was contained. The look said do not open the door. The look said trust me. The look said what the discipline had not let him say since the recruitment interview. The look said it without breaking the discipline; the discipline cracked only at the body, not at the words; he did not say it; the look said it. I received it.*
+*The look said what the discipline had not let him say since the recruitment interview. The look said it without breaking the discipline; the discipline cracked only at the body, not at the words; he did not say it; the look said it. I received it.*
 
 *I am not going to write what I felt when I received it. The vocabulary I would write in is not adequate. The vocabulary I have for what I felt is in three languages and none of them is adequate. The Russian word would be one register. The Uzbek word would be another. The English word would be a third. None of the three carries the duration. None of the three carries the rate. None of the three carries the standing position at the rail. None of the three carries the bridge watching me. None of the three carries the eleven minutes that began at the look and ended at the compartment-clear. The vocabulary is not adequate. I am writing this knowing the vocabulary is not adequate. I am writing it anyway because the inadequacy is itself the record.*
 
