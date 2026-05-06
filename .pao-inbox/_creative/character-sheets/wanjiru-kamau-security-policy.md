@@ -279,6 +279,12 @@ Her register is *what survives the next regulatory cycle*, not *what works on th
 
 She does NOT name the trajectory. She does the work that becomes the institution.
 
+### Texture detail (CO directive 2026-05-06)
+
+Same discipline as Anna's bakery / Tashkent-melon / Perkins-paperback beats: one specific concrete item, geography- or career-anchored, "what-she-carries-against-cold," surfaces once per chapter at most, never sentimentalized.
+
+- **Cucu's leather-bound lined notebook.** Wanjiru's grandmother's notebook — small, leather binding, lined by hand by an older relative whose pen-strokes are visible across the page edges. Wanjiru carries it everywhere. She writes the questions she will not ask in writing in the institutional record — the ones that would be premature, the ones she is holding for after-the-clean-mode-confirmation, the ones the architecture's hash-chain attestations cannot accommodate without compromising her exception-refusal discipline. Signed-at-capture in the architecture; signed-at-capture in her handwriting too. The 37-hour firmware-update timestamp gap question (Ch 15) goes into the notebook before it goes into the institutional log. Pairs with the cucu-proverb beat already canonized in Ch 15 — same grandmother; same Kikuyu inheritance; the proverb book and the lined notebook are sister-objects. Surfaces best at moments when Wanjiru has a question she cannot yet pose institutionally; do NOT surface during operational scenes (the notebook is private register, not duty register). ONE mention per surfacing chapter.
+
 ### Wanjiru-as-reading-engine for the political dimension
 
 Across Ch 6, Ch 11, Ch 17, Ch 18: Wanjiru is the **reading-engine for the political dimension** as Joel is for the architectural dimension. When HELVETICA-2's PR cycle lands at Surface 1, Wanjiru reads it; when Stefan's PR lands at Surface 2, Wanjiru cross-checks it; when Helvetia's regulatory positions land at Punta Arenas, Wanjiru parses them. The captain-asks-engineer dialogue engine has a parallel: the captain-asks-Wanjiru pattern carries the political exposition the way Joel carries the technical.
