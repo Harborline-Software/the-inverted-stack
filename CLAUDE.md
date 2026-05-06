@@ -45,7 +45,7 @@ All source files live in `source/` at the repo root (gitignored — not committe
 | **R1** | `source/kleppmann_council_review.md` | Round 1 adversarial review (6 blocks) |
 | **R2** | `source/kleppmann_council_review2.md` | Round 2 review (all blocks cleared, 15 conditions) |
 
-**Reference implementation:** `C:\Projects\Sunfish\`
+**Reference implementation:** `/Users/christopherwood/Projects/SunfishSoftware/Sunfish/` (sibling directory under shared `SunfishSoftware/` parent)
 - `accelerators/anchor/` — Zone A local-first desktop
 - `accelerators/bridge/` — Zone C hybrid SaaS
 
@@ -109,7 +109,7 @@ of each writing session — never leave an uncommitted draft.
 
 ### Code Check (Stage 3)
 Every code snippet must compile or be explicitly marked `// illustrative — not runnable`.
-Validate Sunfish package names against `C:\Projects\Sunfish\` (no invented APIs).
+Validate Sunfish package names against `/Users/christopherwood/Projects/SunfishSoftware/Sunfish/` (no invented APIs).
 Run: `make code-check CHAPTER=ch01`
 
 ### Technical Review (Stage 4)
@@ -172,7 +172,7 @@ Apply before every chapter PR merge. All items must pass.
 
 ## Org chart + coordination
 
-Naval-org: **CO** (Chris, BDFL) → **XO** (research session in `/Users/christopherwood/Projects/Sunfish`) → {**COB** (sunfish-PM, code), **PAO** (book editor/publisher, this repo) → **Yeoman** (technical writer, this repo)}.
+Naval-org: **CO** (Chris, BDFL) → **XO** (research session in `/Users/christopherwood/Projects/SunfishSoftware/Sunfish`) → {**COB** (sunfish-PM, code), **PAO** (book editor/publisher, this repo) → **Yeoman** (technical writer, this repo)}.
 
 **Yeoman** drafts and revises chapters; runs the audiobook pipeline. Reports to PAO.
 
@@ -186,27 +186,34 @@ Filesystem inbox at `.pao-inbox/` in the book repo root. Yeoman writes `yeoman-q
 
 **File naming:** `yeoman-{question|resumed}-YYYY-MM-DDTHH-MMZ-{slug}.md`. **Body:** 3-line YAML frontmatter (`type`, `chapter`, `last-pr`) + ≤2 lines context + ≤2 lines "what would unblock me." Tight; signal, not narrative.
 
-### Tier 2 — cross-repo escalation (PAO → XO): Sunfish's `research-inbox/`
+### Tier 2 — cross-repo (any session ↔ any session): `SunfishSoftware/coordination/inbox/`
 
-When chapter progress is gated on a Sunfish-side question (ADR status, workstream timing, foundational-paper alignment) PAO can't resolve from the book + Sunfish docs alone, **PAO writes** `pao-question-*.md` to Sunfish's `icm/_state/research-inbox/`. PAO is the cross-repo funnel for the book side. **Yeoman does NOT write directly to Sunfish** unless PAO is offline AND the question is critical (PAO-bypass fallback; flag in body).
+When chapter progress is gated on a Sunfish-side question (ADR status, workstream timing, foundational-paper alignment) PAO can't resolve from the book + Sunfish docs alone, **PAO writes** `pao-question-*.md` directly into the parent-folder coordination inbox. PAO is the cross-repo funnel for the book side. **Yeoman does NOT write directly to Sunfish** unless PAO is offline AND the question is critical (PAO-bypass fallback; flag in body).
 
-**Cross-repo write recipe (PAO):**
+The parent `SunfishSoftware/` folder houses both `Sunfish/` and `the-inverted-stack/` and is **not a git repo** — it is a neutral coordination surface. No worktree, no PR, no commit needed. Just write the file:
 
 ```bash
-cd /Users/christopherwood/Projects/Sunfish
-git fetch origin main
-git worktree add /tmp/sunfish-pao-beacon-wt origin/main -b chore/pao-beacon-<slug>
-# author /tmp/sunfish-pao-beacon-wt/icm/_state/research-inbox/pao-question-<ts>-<slug>.md
-cd /tmp/sunfish-pao-beacon-wt
-git add icm/_state/research-inbox/ && git -c commit.gpgsign=false commit -m "chore(inbox): pao question — <slug>"
-git push -u origin HEAD && gh pr create --title "chore(inbox): pao question — <slug>" --body "<context>"
-gh pr merge --auto --squash
-cd - && git worktree remove /tmp/sunfish-pao-beacon-wt
+cat > /Users/christopherwood/Projects/SunfishSoftware/coordination/inbox/pao-question-$(date -u +%Y-%m-%dT%H-%MZ)-<slug>.md <<'EOF'
+---
+type: question
+chapter: ch15
+last-pr: book#127
+---
+<≤2 lines of context>
+<≤2 lines of "what would unblock me">
+EOF
 ```
 
-When XO answers (hand-off / ledger update / ADR amendment in Sunfish), the beacon gets `git mv`-ed to `_archive/` in the resolving PR.
+Resolution: when XO (or whichever session) answers, the resolving session moves the beacon to `_archive/`:
 
-Canonical protocol spec: Sunfish `CLAUDE.md` § "Live signaling to XO — `research-inbox/`".
+```bash
+mv /Users/christopherwood/Projects/SunfishSoftware/coordination/inbox/<beacon>.md \
+   /Users/christopherwood/Projects/SunfishSoftware/coordination/_archive/
+```
+
+Plain `mv` (not `git mv`) since the parent folder isn't tracked by git. If audit trail is wanted, the resolving session can also commit a copy into the relevant child repo as part of the resolving PR (not required).
+
+Canonical protocol spec: `SunfishSoftware/coordination/README.md` and Sunfish `CLAUDE.md` § "Live signaling to XO".
 
 ---
 
