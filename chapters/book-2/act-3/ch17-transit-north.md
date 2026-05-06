@@ -182,7 +182,7 @@ Diego sealed the letter at 2147 on Mission Day 55.
 
 He brought it to the wardroom. The pages were folded against the standing IAA institutional-stationery Diego had brought from Buenos Aires in his personal cargo allocation. The envelope was addressed in his hand to *María Elena Vargas, calle 11 de Septiembre, Belgrano, Buenos Aires, Argentina*. The address was the address he had written on letters home from research stations across the back thirty-four years. The hand was the hand. The seal was a routine paper seal.
 
-He set the envelope on the wardroom table beside the leather mate-cup. The cup was at the standing position. The bombilla was unpolished. The kettle was off the warmer.
+He set the envelope on the wardroom table. The kettle was off the warmer.
 
 He said: *Director. The letter is ready. The letter is for posting at the Punta Arenas surface window through the consortium's communications channel against the priority queue. The letter is the recovery letter. The letter is what María Elena will read at the kitchen table at Belgrano when the consortium's office delivers it at the IAA institutional handshake.*
 

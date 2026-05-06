@@ -168,7 +168,7 @@ The reviewer who had signed the R2 conditions was the council's principal review
 
 The reviewer had recommended Priya, at the close of the R2 session, as the most reliable schema-migration contributor on the project — *not because her code is the cleanest, but because her temperament is the temperament the architecture's hardest discipline requires*. The recommendation had entered the council's session record. The session record had been one of the documents I had read when I was selecting senior contributors for the Nansen.
 
-I had read the recommendation. I had read the temperament-line specifically. I had registered the line at the level a Mission Director registers a recommendation about a senior crew member from a council reviewer — at the level that says, *this is the sort of recommendation that gets people on boats; this is not the sort of recommendation that gets people taken off them*. I had not held the line in active memory afterwards. The line had landed in the substrate. It was now coming back to the surface — at twenty-two-forty-three on Mission Day 43, ninety hours from Punta Arenas surfacing, with the migration scheduled for 0600 of Day 44 — at the level the substrate brings things back up when the substrate has decided the things are now operationally relevant.
+I had read the recommendation. I had read the temperament-line specifically. I had registered the line at the level a Mission Director registers a recommendation about a senior crew member from a council reviewer — at the level that says, *this is the sort of recommendation that gets people on boats; this is not the sort of recommendation that gets people taken off them*. I had not held the line in active memory afterwards. The line had landed in the substrate. It was now coming back to the surface — at twenty-two-forty-three on Mission Day 43, two hundred and ninety hours from Punta Arenas surfacing, with the migration scheduled for 0600 of Day 44 — at the level the substrate brings things back up when the substrate has decided the things are now operationally relevant.
 
 The reviewer's recommendation had been correct. The temperament-line had been the correct line. The architecture I was about to run a migration against was the architecture Priya's temperament had built the constraint into. The constraint was the constraint that the boat would now operate under. The constraint existed because of who Priya was. The case the boat was now in — single-party migration, no third party available — was a case the spec did not contemplate; Priya was extending the spec; she was extending it correctly because the temperament that had filed the original constraint was the temperament that was now filing the four-pass extension.
 
@@ -238,7 +238,7 @@ Pass two cleared field one — timestamp-of-record — and registered the read-b
 
 The deviation plot showed a one-millisecond difference.
 
-Pass-one's apply had read the timestamp-of-record at *2026-09-14T14:32:18.441Z*. Pass-two's read-confirmation read the same field at *2026-09-14T14:32:18.442Z*.
+Pass-one's apply had read the timestamp-of-record at *2026-10-15T14:32:18.441Z*. Pass-two's read-confirmation read the same field at *2026-10-15T14:32:18.442Z*.
 
 Priya said: *stop.*
 
@@ -266,7 +266,7 @@ He ran the read.
 
 The pass log registered the tighter-window read.
 
-Pass-one's apply had read the timestamp at *2026-09-14T14:32:18.441Z*. Pass-two's tighter-window read read it at *2026-09-14T14:32:18.4416Z* — a six-hundred-microsecond drift against pass one, on the tighter window.
+Pass-one's apply had read the timestamp at *2026-10-15T14:32:18.441Z*. Pass-two's tighter-window read read it at *2026-10-15T14:32:18.4416Z* — a six-hundred-microsecond drift against pass one, on the tighter window.
 
 Priya read the result.
 
