@@ -341,7 +341,7 @@ I sat at the wardroom desk for a few seconds after the entry filed.
 
 The chain was the chain. The boat was at depth. The architecture was operating. The crew was where the crew should be. The drift event had been a drift event the architecture had been built to absorb and had absorbed. The calibration-cycle change had been a constraint Priya had carried and had named at the moment the constraint had become operational. Joel had registered the constraint without defending the omission. The post-event log captured the architectural record. The note in the file I kept captured the rest.
 
-I had thirteen days ahead of me in Segment 2. The day's first event had given me Joel at the console and Priya at the bench and the cycle change drafted between them and the architecture continuing to do what the architecture had been built to do. The boat had not asked me to intervene. The boat had asked me to register what had happened.
+I had nine days ahead of me in Segment 2. The day's first event had given me Joel at the console and Priya at the bench and the cycle change drafted between them and the architecture continuing to do what the architecture had been built to do. The boat had not asked me to intervene. The boat had asked me to register what had happened.
 
 I had registered it.
 

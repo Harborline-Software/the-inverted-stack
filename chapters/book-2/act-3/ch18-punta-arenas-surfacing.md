@@ -248,7 +248,7 @@ I went to the gangway.
 
 Diego was at the gangway at 0728.
 
-He had his sea-bag at his side. The bag was the bag he had brought aboard at Bremerhaven on Mission Day minus one; the bag was at the standing register. The leather mate-cup with the unpolished bombilla was at the inner pocket where he kept it when he was not on the bridge; the cup was at the standing register. The IAA institutional-stationery envelope addressed in his hand to *María Elena Vargas, calle 11 de Septiembre, Belgrano, Buenos Aires, Argentina* was at the breast pocket of his parka where he had been carrying it since Mission Day 55.
+He had his sea-bag at his side. The bag was the bag he had brought aboard at Bremerhaven on Mission Day minus one; the bag was at the standing register. The IAA institutional-stationery envelope addressed in his hand to *María Elena Vargas, calle 11 de Septiembre, Belgrano, Buenos Aires, Argentina* was at the breast pocket of his parka where he had been carrying it since Mission Day 55.
 
 He saw me at the gangway. He came over.
 

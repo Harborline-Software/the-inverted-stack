@@ -14,7 +14,7 @@ chapter-version: v1
 
 *Mission log, Mission Day 21, 0617 local. Yusupova, Mission Director. RV Nansen, MERIDIAN-7.*
 
-*The boat surfaced at 0612 local at the planned coordinates of the first surface window. Trim corrected; sail clear; the relay layer transitioned from dormant to active at 0614 with a propagation delay of forty-one seconds against the consortium's Punta Arenas port. Wanjiru reports the gossip protocol's reconciliation cycle running clean against the consortium ports; the audit log accepted the pre-departure-to-Day-20 batch with no reordering and no rejected counter-signatures. Provenance through the partition transition is intact. Sync-replication-to-Bridge has begun, prioritized per the standing surface-window plan: mission-record voice and decisions first; safety-critical and cross-check streams second; bulk archive last. Surface window scheduled to close at 0530 local, Day 23. Notable in the relay queue's first inbound batch: HELVETICA-2 has filed preliminary results from its concluded segment ahead of the Bremerhaven surfacing, picked up across the consortium and adjacent press cycles.*
+*The boat surfaced at 0612 local at the planned coordinates of the first surface window. Trim corrected; sail clear; the relay layer transitioned from dormant to active at 0614 with a propagation delay of forty-one seconds against the consortium's Punta Arenas port. Wanjiru reports the gossip protocol's reconciliation cycle running clean against the consortium ports; the audit log accepted the pre-departure-to-Day-20 batch with no reordering and no rejected counter-signatures. Provenance through the partition transition is intact. Sync-replication-to-Bridge has begun, prioritized per the standing surface-window plan: mission-record voice and decisions first; safety-critical and cross-check streams second; bulk archive last. Surface window scheduled to close at 0530 local, Day 23. Notable in the relay queue's first inbound batch: HELVETICA-2 has filed preliminary results from its first operational segment, ahead of its scheduled Bremerhaven surfacing, picked up across the consortium and adjacent press cycles.*
 
 *— Filed to mission-archive; hash 4d92...c1f7*
 
@@ -106,7 +106,7 @@ The second slice of the inbound queue was the press cycle. The packet for Day 21
 
 Three paragraphs in, the packet pivoted.
 
-*HELVETICA-2 has concluded its operational segment ahead of schedule and is filing preliminary results from its Bremerhaven surfacing. The rival mission's principal investigator, Dr. Stefan Reinhardt, has provided the consortium with an advance summary of findings; the consortium's institutional response is forthcoming; consortium-affiliated media partners are running the rival's preliminary results across this morning's cycle.*
+*HELVETICA-2 is filing preliminary results from its first operational segment, ahead of its scheduled Bremerhaven surfacing. The rival mission's principal investigator, Dr. Stefan Reinhardt, has provided the consortium with an advance summary of findings; the consortium's institutional response is forthcoming; consortium-affiliated media partners are running the rival's preliminary results across this morning's cycle.*
 
 I read the paragraph. I read it a second time. I did not register a third.
 
