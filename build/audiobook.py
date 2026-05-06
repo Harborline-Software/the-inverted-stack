@@ -463,6 +463,7 @@ CHAPTER_PRESET_MAP: dict[str, str] = {
     "book-2/act-1/ch03-drake-passage-ice-edge": "female-solo",
     "book-2/act-1/ch04-first-submersion": "female-solo",
     "book-2/act-1/ch05-day-twenty-realization": "female-solo",
+    "book-2/act-1/ch06-first-surface-first-forsaken-reveal": "female-solo",
 }
 
 CHAPTER_FILES = [
@@ -504,12 +505,13 @@ CHAPTER_FILES = [
     # remaining inactive paths are staged in VOL2_CHAPTER_FILES below.
     # 2026-05-04: Ch 02 + Ch 05 (listen-test pair)
     # 2026-05-05: Ch 01 (Departure; Act I install chapter; post-listen-test verdict)
-    # 2026-05-06: Ch 03 (Drake Passage; loop iteration 1) + Ch 04 (First Submersion; loop iteration 2)
+    # 2026-05-06: Ch 03 (Drake Passage; loop 1) + Ch 04 (First Submersion; loop 2) + Ch 06 (First Surface; loop 3)
     "book-2/act-1/ch01-departure.md",
     "book-2/act-1/ch02-recruitment-interview.md",
     "book-2/act-1/ch03-drake-passage-ice-edge.md",
     "book-2/act-1/ch04-first-submersion.md",
     "book-2/act-1/ch05-day-twenty-realization.md",
+    "book-2/act-1/ch06-first-surface-first-forsaken-reveal.md",
 ]
 
 # Vol 2 (Book 1 of the Sunfish series) — story-first restructure narrated by
@@ -530,7 +532,7 @@ VOL2_CHAPTER_FILES = [
     # ch03-drake-passage-ice-edge.md — ACTIVATED in CHAPTER_FILES (2026-05-06)
     # ch04-first-submersion.md — ACTIVATED in CHAPTER_FILES (2026-05-06)
     # ch05-day-twenty-realization.md — ACTIVATED in CHAPTER_FILES (2026-05-04)
-    "book-2/act-1/ch06-first-surface-first-forsaken-reveal.md",
+    # ch06-first-surface-first-forsaken-reveal.md — ACTIVATED in CHAPTER_FILES (2026-05-06)
     # Act II — Subsystems hold; the contest sharpens (Days 22-42)
     "book-2/act-2/ch07-joels-sunfish.md",
     "book-2/act-2/ch08-second-submersion.md",
