@@ -464,6 +464,7 @@ CHAPTER_PRESET_MAP: dict[str, str] = {
     "book-2/act-1/ch04-first-submersion": "female-solo",
     "book-2/act-1/ch05-day-twenty-realization": "female-solo",
     "book-2/act-1/ch06-first-surface-first-forsaken-reveal": "female-solo",
+    "book-2/act-2/ch07-joels-sunfish": "female-solo",
 }
 
 CHAPTER_FILES = [
@@ -512,6 +513,8 @@ CHAPTER_FILES = [
     "book-2/act-1/ch04-first-submersion.md",
     "book-2/act-1/ch05-day-twenty-realization.md",
     "book-2/act-1/ch06-first-surface-first-forsaken-reveal.md",
+    # Act II
+    "book-2/act-2/ch07-joels-sunfish.md",
 ]
 
 # Vol 2 (Book 1 of the Sunfish series) — story-first restructure narrated by
@@ -534,7 +537,7 @@ VOL2_CHAPTER_FILES = [
     # ch05-day-twenty-realization.md — ACTIVATED in CHAPTER_FILES (2026-05-04)
     # ch06-first-surface-first-forsaken-reveal.md — ACTIVATED in CHAPTER_FILES (2026-05-06)
     # Act II — Subsystems hold; the contest sharpens (Days 22-42)
-    "book-2/act-2/ch07-joels-sunfish.md",
+    # ch07-joels-sunfish.md — ACTIVATED in CHAPTER_FILES (2026-05-06)
     "book-2/act-2/ch08-second-submersion.md",
     "book-2/act-2/ch09-sync-daemon-under-drift.md",
     "book-2/act-2/ch10-aftermath-of-a-mission-that-once-was.md",
