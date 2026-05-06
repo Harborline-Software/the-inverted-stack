@@ -329,6 +329,24 @@ PRESETS_KOKORO: dict[str, dict] = {
     # Fenrir — am_fenrir solo. Higher pitch (144 Hz), "velvety texture,
     # tech-savvy." Polished corporate confident register.
     "fenrir":      {"voice": "am_fenrir",            "speed": 0.92},
+
+    # Vol 2 final-render voice (CO directive 2026-05-06): ciufi-galeazzi.
+    # Italian-cadenced cloned voice on the higgs-audio server. Reserved
+    # for the canonical FINAL rendering of Vol 2 audiobook after CO's
+    # editorial pass completes. Draft renders during the loop used
+    # `female-solo` (af_bella) for the listen-test workflow — those
+    # outputs are draft, not final.
+    #
+    # Invocation for final-render pass:
+    #     python build/audiobook.py --preset ciufi-galeazzi --force --only chXX
+    # OR update CHAPTER_PRESET_MAP entries below to point at "ciufi-galeazzi"
+    # before running a full Vol 2 re-render.
+    #
+    # Note: the voice ID is registered on Kokoro's catalog under this
+    # exact slug per CO. If the server returns "voice not found", verify
+    # the voice is registered via `GET /v1/audio/voices` with the bearer
+    # token; CO can re-register if needed.
+    "ciufi-galeazzi": {"voice": "ciufi-galeazzi",    "speed": 0.92},
 }
 
 # Chatterbox preset voices. Chatterbox is voice-cloning native — non-stock
@@ -367,6 +385,13 @@ PRESETS_CHATTERBOX: dict[str, dict] = {
     "fry":         {"voice": "broom_salesman", "speed": 1.0},   # universal narrator (Shevchenko clone available as shevchenko-trial-yakovlev for per-chapter regen)
     "fry-blend":   {"voice": "broom_salesman", "speed": 1.0},   # universal narrator
     "fenrir":      {"voice": "broom_salesman", "speed": 1.0},   # universal narrator (Kelsey clone available as kelsey-trial-smith for per-chapter regen)
+
+    # Vol 2 final-render voice (CO directive 2026-05-06): ciufi-galeazzi.
+    # Mirror of PRESETS_KOKORO entry — keeps the preset key resolvable
+    # if --engine chatterbox is selected at render-time. Voice is
+    # canonically a Kokoro-side cloned voice; chatterbox engine routes
+    # would need server-side equivalent registration.
+    "ciufi-galeazzi": {"voice": "ciufi-galeazzi", "speed": 1.0},
 }
 
 # Backwards-compat alias — old code paths may import PRESETS_HIGGS.

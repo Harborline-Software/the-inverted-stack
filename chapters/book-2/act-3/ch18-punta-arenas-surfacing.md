@@ -16,7 +16,7 @@ chapter-version: v1
 
 *Surface secured at 0441 local against the consortium's standing handshake. Mooring complete at the consortium-port berth at the standing register. Bridge channel fully open at the surface-bandwidth allocation. Post-handshake mirror at the consortium port acknowledged at the standing register; full-bandwidth replication of the back-queue priority list opened at the standing handshake.*
 
-*Mission summary at the close. Mission duration: fifty-six days from departure. Crew complement: ten at departure; ten at return. Crew fatalities: zero. Crew injuries: two. Reyes, J., minor abrasions, Mission Day 47, leak event; cleared at the medical register on Mission Day 49. Vargas, D., second-degree contact burn against bulkhead-three, Mission Day 47, leak event; cleared at the medical register on Mission Day 51. Operational damage: starboard sensor head one, leak source, compartment-isolated and decommissioned per procedure; central workstation one, compute hub, water damage at the rack register, decommissioned per procedure. Both losses recovered at the procedure register; capability degradation absorbed at the per-laptop register through the back nine days; capability restoration scheduled against the Punta Arenas resupply.*
+*Mission summary at the close. Mission duration: fifty-six days from departure. Crew complement: ten at departure; ten at return. Crew fatalities: zero. Crew injuries: one. Reyes, J., minor abrasions, Mission Day 47, leak event; cleared at the medical register on Mission Day 49. Operational damage: starboard sensor head one, leak source, compartment-isolated and decommissioned per procedure; central workstation one, compute hub, water damage at the rack register, decommissioned per procedure. Both losses recovered at the procedure register; capability degradation absorbed at the per-laptop register through the back nine days; capability restoration scheduled against the Punta Arenas resupply.*
 
 *Scientific summary at the close. Instruments deployed at the standing program against the under-ice register through Mission Day 47; surface-instrumentation register through the back nine days. Archive complete at the canonical authored-content register; no data loss across mission duration; full pre-failure timestream of every edge device preserved at the audit-log register. Scientific deliverables filed at the consortium-port mirror at Punta Arenas at the post-handshake handshake.*
 
@@ -257,6 +257,8 @@ He said: *Anna.*
 He said it in the personal register he had used three times across the duration of the mission — once on Day 39 at the comm-node, once on Day 55 at the wardroom table at the moment he had set the letter down, and once now.
 
 I said: *Diego.*
+
+I had known since the cabin at 1647 on Mission Day 48. The institutional filing was the procedural close on the personal moment that had already passed.
 
 He said: *I have registered with the consortium HR officer at the standing register at 0710. The retirement is filed at the institutional register. The IAA's senior-research-fellow retirement protocol is at the post-mission cycle. The flight to Buenos Aires is at 1340 against the consortium-affiliate carrier. The flight to San Martín de los Andes is on Wednesday. The letter is for the morning post.*
 
