@@ -2251,3 +2251,263 @@
 | 16:28 | Edited ASSEMBLY.md | expanded (+30 lines) | ~1452 |
 | 16:29 | Created .pao-inbox/_state-snapshots/snapshot-2026-05-05-tuesday-evening-vol2-listen-test-approved.md | — | ~2442 |
 | 16:32 | Session end: 102 writes across 20 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 29 reads | ~303399 tok |
+| 16:41 | Session end: 102 writes across 20 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 29 reads | ~303399 tok |
+| 16:44 | Created chapters/book-2/act-1/ch01-departure.md | — | ~5642 |
+| 16:25 | drafted Vol 2 Ch 1 *Departure* (4,201 words; Pattern A formal-log opener, Joel bunk-laptop CANON, off-the-shelf sensor plant, Wanjiru key-handover, Stefan/HELVETICA-2 single-paragraph plant, cast-off close) | chapters/book-2/act-1/ch01-departure.md | clean: zero anti-AI tells, zero forecast register, zero academic scaffolding | ~5500 |
+| 16:48 | Edited build/audiobook.py | 3→4 lines | ~51 |
+| 16:48 | Edited build/audiobook.py | 7→9 lines | ~138 |
+| 16:48 | Edited build/audiobook.py | 5→5 lines | ~83 |
+| 16:48 | Session end: 106 writes across 21 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 30 reads | ~315181 tok |
+| 16:52 | Session end: 106 writes across 21 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 30 reads | ~315181 tok |
+| 17:12 | Session end: 106 writes across 21 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 30 reads | ~315181 tok |
+| 17:13 | Session end: 106 writes across 21 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 30 reads | ~315181 tok |
+| 17:14 | Session end: 106 writes across 21 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 30 reads | ~315181 tok |
+| 17:15 | Edited build/audiobook.py | modified out_name_for() | ~493 |
+| 17:15 | Edited build/audiobook.py | 2→7 lines | ~155 |
+| 17:16 | Edited build/audiobook.py | 6→11 lines | ~144 |
+| 17:17 | Session end: 109 writes across 21 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 30 reads | ~316598 tok |
+| 17:34 | Session end: 109 writes across 21 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 30 reads | ~316598 tok |
+| 17:43 | Session end: 109 writes across 21 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 30 reads | ~316598 tok |
+| 17:45 | Session end: 109 writes across 21 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 30 reads | ~316598 tok |
+| 21:05 | Session end: 109 writes across 21 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 30 reads | ~316598 tok |
+| 21:41 | Session end: 109 writes across 21 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 30 reads | ~316598 tok |
+| 21:48 | Created build/imagegen.py | — | ~2569 |
+| 21:48 | Edited build/imagegen.py | 2→2 lines | ~40 |
+| 21:53 | Session end: 111 writes across 22 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 31 reads | ~319207 tok |
+| 21:55 | Session end: 111 writes across 22 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 31 reads | ~319207 tok |
+| 03:38 | Edited chapters/book-2/act-1/ch05-day-twenty-realization.md | 14 → 20 | ~4 |
+| 03:38 | Edited chapters/book-2/act-1/ch05-day-twenty-realization.md | 14 → 20 | ~2 |
+| 03:38 | Edited chapters/book-2/act-1/ch05-day-twenty-realization.md | inline fix | ~26 |
+| 03:38 | Edited chapters/book-2/act-1/ch05-day-twenty-realization.md | 7 → 13 | ~28 |
+| 03:39 | Session end: 115 writes across 22 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 31 reads | ~319272 tok |
+| 03:39 | Edited chapters/book-2/act-1/ch05-day-twenty-realization.md | inline fix | ~28 |
+| 03:39 | Edited chapters/book-2/act-1/ch05-day-twenty-realization.md | inline fix | ~33 |
+| 03:39 | Edited chapters/book-2/act-1/ch05-day-twenty-realization.md | inline fix | ~34 |
+| 03:39 | Edited chapters/book-2/act-1/ch05-day-twenty-realization.md | inline fix | ~35 |
+| 03:39 | Edited chapters/book-2/act-1/ch05-day-twenty-realization.md | inline fix | ~38 |
+| 03:39 | Edited chapters/book-2/act-1/ch05-day-twenty-realization.md | inline fix | ~35 |
+| 03:39 | Edited chapters/book-2/act-1/ch05-day-twenty-realization.md | "s daily, the seven of the" → "s daily, the thirteen of " | ~71 |
+| 03:39 | Edited chapters/book-2/act-1/ch05-day-twenty-realization.md | inline fix | ~18 |
+| 03:39 | Edited chapters/book-2/act-1/ch05-day-twenty-realization.md | inline fix | ~45 |
+| 03:40 | Edited chapters/book-2/act-1/ch05-day-twenty-realization.md | inline fix | ~59 |
+| 03:40 | Edited chapters/book-2/act-1/ch05-day-twenty-realization.md | inline fix | ~71 |
+| 03:40 | Edited chapters/book-2/act-1/ch05-day-twenty-realization.md | inline fix | ~151 |
+| 03:40 | Edited chapters/book-2/act-1/ch05-day-twenty-realization.md | inline fix | ~106 |
+| 03:41 | Edited chapters/book-2/act-1/ch05-day-twenty-realization.md | inline fix | ~111 |
+| 03:41 | Edited chapters/book-2/act-1/ch05-day-twenty-realization.md | inline fix | ~72 |
+| 03:41 | Edited chapters/book-2/act-1/ch05-day-twenty-realization.md | inline fix | ~63 |
+| 03:41 | Edited chapters/book-2/act-1/ch05-day-twenty-realization.md | inline fix | ~306 |
+| 03:42 | Edited chapters/book-2/act-1/ch05-day-twenty-realization.md | 3→5 lines | ~225 |
+| 03:42 | Edited chapters/book-2/act-1/ch05-day-twenty-realization.md | inline fix | ~180 |
+| 03:43 | Edited chapters/book-2/act-1/ch05-day-twenty-realization.md | inline fix | ~172 |
+| 03:43 | Edited chapters/book-2/act-1/ch05-day-twenty-realization.md | inline fix | ~95 |
+| 03:43 | Edited chapters/book-2/act-1/ch05-day-twenty-realization.md | inline fix | ~142 |
+| 03:43 | Session end: 137 writes across 22 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 31 reads | ~321827 tok |
+| 03:43 | Edited chapters/book-2/act-1/ch05-day-twenty-realization.md | inline fix | ~146 |
+| 03:44 | Edited chapters/book-2/act-1/ch05-day-twenty-realization.md | inline fix | ~29 |
+| 03:44 | Edited chapters/book-2/act-1/ch05-day-twenty-realization.md | inline fix | ~78 |
+| 03:44 | Edited chapters/book-2/act-1/ch05-day-twenty-realization.md | inline fix | ~138 |
+| 03:44 | Edited chapters/book-2/act-1/ch05-day-twenty-realization.md | inline fix | ~148 |
+| 03:45 | Edited chapters/book-2/act-1/ch05-day-twenty-realization.md | inline fix | ~43 |
+| 03:45 | Edited chapters/book-2/act-1/ch05-day-twenty-realization.md | inline fix | ~54 |
+| 03:46 | Session end: 144 writes across 22 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 31 reads | ~322437 tok |
+| 03:47 | Edited .pao-inbox/_creative/vol-2-software-as-gravity.md | modified canon() | ~392 |
+| 2026-05-06 03:47 | Vol 2 Ch 5 prose-pass v2 — surgical 12-point revision per CO craft notes 2026-05-05 + 2026-05-06 (Day 14 → Day 20 reconciliation; varied later restatements of local-store-authoritative-under-partition; trimmed data-category enumeration; technically-ordinary clarification; concreteness audit around refused-to-lie-to-me; two-months-after retrospective frame at opener; without-ceremony late echo at close; concrete platform-termination failure mode in mother paragraph; three-scale bridging extension (data + records + people); NEW crew-frailty beat in third recognition; NEW religion-as-prior-tradition beat anchored in mother's murmured phrase). Plus Vol 2 gravity canon doc updated with Ch 5 dual-recognition + religion-parallel canon paragraph (§3). Word count 5,971 → 6,142 (+171; +41 over directive's +130 tolerance — accepted to preserve canonical structural beats). Anti-AI tells lexical-grep verification: zero hits. Forecast-register grep: zero hits. All canonically-protected beats preserved (Pattern C log opener, three-recognition spine, cold-tea throughline, mother / metal-cabinet / St. Petersburg passage, the architecture refused, by design, to lie to me). | chapters/book-2/act-1/ch05-day-twenty-realization.md (12 surgical edits), .pao-inbox/_creative/vol-2-software-as-gravity.md (+1 paragraph in §3 documenting Ch 5 dual-recognition + religion-parallel canon) | ~25000 |
+| 03:49 | Session end: 145 writes across 22 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 31 reads | ~322857 tok |
+| 03:54 | Session end: 145 writes across 22 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 31 reads | ~323137 tok |
+| 03:58 | Created chapters/book-2/act-1/ch03-drake-passage-ice-edge.md | — | ~8679 |
+| 04:01 | Created chapters/book-2/act-1/ch03-drake-passage-ice-edge.md | — | ~7648 |
+| 04:04 | Session end: 147 writes across 23 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 32 reads | ~347800 tok |
+| 04:04 | Edited build/audiobook.py | 6→8 lines | ~110 |
+| 04:04 | Edited build/audiobook.py | 4→5 lines | ~69 |
+| 04:05 | Edited build/audiobook.py | 3→3 lines | ~64 |
+| 04:05 | Session end: 150 writes across 23 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 32 reads | ~348043 tok |
+| 04:10 | Session end: 150 writes across 23 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 32 reads | ~348043 tok |
+| 04:13 | Created chapters/book-2/act-1/ch04-first-submersion.md | — | ~7855 |
+| 04:14 | drafted Vol 2 Ch 4 (First Submersion) v1, 5,208 words; captain-asks-engineer install at full altitude | chapters/book-2/act-1/ch04-first-submersion.md | clean | ~25k |
+| 04:15 | Edited build/audiobook.py | 8→9 lines | ~136 |
+| 04:15 | Edited build/audiobook.py | 5→6 lines | ~85 |
+| 04:15 | Edited build/audiobook.py | 4→4 lines | ~85 |
+| 04:16 | Session end: 154 writes across 24 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 33 reads | ~364129 tok |
+| 04:21 | Session end: 154 writes across 24 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 33 reads | ~364129 tok |
+| 04:25 | Created chapters/book-2/act-1/ch06-first-surface-first-forsaken-reveal.md | — | ~9210 |
+| 04:29 | Created chapters/book-2/act-1/ch06-first-surface-first-forsaken-reveal.md | — | ~7610 |
+| 04:30 | Drafted Vol 2 Ch 6 First Surface First Forsaken Reveal | chapters/book-2/act-1/ch06-first-surface-first-forsaken-reveal.md | 4894 words; pattern A; gravity canon | ~25k |
+| 04:31 | Edited build/audiobook.py | 7→8 lines | ~119 |
+| 04:31 | Edited build/audiobook.py | 2→3 lines | ~40 |
+| 04:32 | Edited build/audiobook.py | 2→2 lines | ~49 |
+| 04:32 | Session end: 159 writes across 25 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 34 reads | ~391206 tok |
+| 04:37 | Session end: 159 writes across 25 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 34 reads | ~391206 tok |
+| 04:40 | Created chapters/book-2/act-2/ch07-joels-sunfish.md | — | ~6964 |
+
+| 2026-05-06 09:15 | Drafted Vol 2 Ch 7 *Joels Sunfish* (Day 22, Surface 1 quiet hours; intimate two-character wardroom conversation; naming-reveal chapter) | chapters/book-2/act-2/ch07-joels-sunfish.md (NEW; 4889 words; primary rail career-cost-and-aging-out; secondary rail grief/Long-Now; log-opener none) | First Act II chapter; 50/50 mission-present/flashback frame; Joel discloses USS Sunfish SSN-649 origin; Annas love-arc registration single controlled paragraph (texture of the man, register I would not name aloud, returns to the work next line); zero forecast register; zero anti-AI tells; architecture is gravity not subject. ~12000 |
+| 04:43 | Edited build/audiobook.py | 2→4 lines | ~35 |
+| 04:43 | Edited build/audiobook.py | 2→3 lines | ~38 |
+| 04:43 | Edited build/audiobook.py | 2→2 lines | ~39 |
+| 04:43 | Session end: 163 writes across 26 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 35 reads | ~403809 tok |
+| 04:48 | Session end: 163 writes across 26 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 35 reads | ~403809 tok |
+| 04:52 | Created chapters/book-2/act-2/ch08-second-submersion.md | — | ~9989 |
+| 04:56 | Created chapters/book-2/act-2/ch08-second-submersion.md | — | ~7550 |
+| 04:57 | Drafted Vol2 Ch8 Second Submersion v1 (Day 23 dive; Sabina validation pass; routine cycle) | chapters/book-2/act-2/ch08-second-submersion.md | v1 draft 4920w in band | ~28k |
+| 04:58 | Edited build/audiobook.py | 3→4 lines | ~30 |
+| 04:58 | Edited build/audiobook.py | 2→3 lines | ~33 |
+| 04:58 | Edited build/audiobook.py | 2→2 lines | ~41 |
+| 04:59 | Session end: 168 writes across 27 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 36 reads | ~432070 tok |
+| 05:04 | Session end: 168 writes across 27 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 36 reads | ~432070 tok |
+| 05:08 | Created chapters/book-2/act-2/ch09-sync-daemon-under-drift.md | — | ~8315 |
+| 05:09 | Session end: 169 writes across 28 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 37 reads | ~446487 tok |
+| 05:12 | Edited build/audiobook.py | 3→4 lines | ~41 |
+| 05:12 | Edited build/audiobook.py | 2→3 lines | ~36 |
+| 05:12 | Edited build/audiobook.py | 2→2 lines | ~44 |
+| 05:13 | Session end: 172 writes across 28 files (CHAPTER-OUTLINE.md, README.md, audiobook.py, ASSEMBLY.md, ch05-day-twenty-realization.md) | 37 reads | ~446608 tok |
+
+## Session: 2026-05-06 05:19
+
+| Time | Action | File(s) | Outcome | ~Tokens |
+|------|--------|---------|---------|--------|
+| 05:25 | Created chapters/book-2/act-2/ch10-aftermath-mission-that-once-was.md | — | ~7968 |
+
+| 2026-05-06 | Vol 2 Ch 10 (*Aftermath of a Mission That Once Was*) — first draft landed (loop iter 7/15); Anna's prior-failure interior at length, load-bearing trust-arc canon for Book 1 | chapters/book-2/act-2/ch10-aftermath-mission-that-once-was.md (NEW; 5,080 words; ~33 min target audio) | rail = Trust + prior betrayal; frame ratio achieved ~25/75 mission-present/flashback (vs 30/70 brief); pattern none (interior at length); Stefan never on-page — fully through Anna's reading; three retroactive legibilization beats present (Joel R1-BLOCK / Priya four-pass / Wanjiru exception-refusal); grandmother gesture (Tashkent, brass jug, *aytib qo'y*) distinct from Ch 5's mother-cabinet; closes unresolved (no lesson-learned beat); zero forecast-register lines; ~6% Sunfish-specific (well under 10-15% ceiling — chapter is about trust); anti-AI-tells grep clean; copula-avoidance grep clean; ready for prose-review hand-off to PAO | ~11000 |
+| 05:28 | Edited build/audiobook.py | 2→3 lines | ~33 |
+| 05:28 | Edited build/audiobook.py | 2→3 lines | ~40 |
+| 05:28 | Edited build/audiobook.py | 2→2 lines | ~48 |
+| 05:28 | Session end: 4 writes across 2 files (ch10-aftermath-mission-that-once-was.md, audiobook.py) | 11 reads | ~103248 tok |
+| 05:38 | Created chapters/book-2/act-2/ch11-second-surface-second-forsaken-reveal.md | — | ~8144 |
+| 09:35 | Drafted Vol 2 Ch 11 Second Surface Second Forsaken Reveal | chapters/book-2/act-2/ch11-second-surface-second-forsaken-reveal.md | 5039 words; Pattern A; forensic-substrate first deployment via Nansen-vs-HELVETICA-2 cross-check; love-arc registration in one para; closes at min altitude | ~28k |
+| 05:39 | Edited build/audiobook.py | 2→3 lines | ~37 |
+| 05:39 | Edited build/audiobook.py | 2→3 lines | ~44 |
+| 05:39 | Edited build/audiobook.py | 2→2 lines | ~52 |
+| 05:40 | Session end: 8 writes across 3 files (ch10-aftermath-mission-that-once-was.md, audiobook.py, ch11-second-surface-second-forsaken-reveal.md) | 17 reads | ~158806 tok |
+| 05:40 | Session end: 8 writes across 3 files (ch10-aftermath-mission-that-once-was.md, audiobook.py, ch11-second-surface-second-forsaken-reveal.md) | 17 reads | ~158806 tok |
+| 05:48 | Created chapters/book-2/act-2/ch12-beginning-of-the-end.md | — | ~7126 |
+| 2026-05-06T09:49Z | drafted Vol 2 Ch 12 — Beginning of the End | chapters/book-2/act-2/ch12-beginning-of-the-end.md | 4,610 words; Pattern A; conditional-preservation plant verbatim; Edison surfaced naturally | ~25k |
+| 05:50 | Edited build/audiobook.py | 2→3 lines | ~34 |
+| 05:50 | Edited build/audiobook.py | 2→3 lines | ~40 |
+| 05:50 | Edited build/audiobook.py | 2→2 lines | ~49 |
+| 05:50 | Session end: 12 writes across 4 files (ch10-aftermath-mission-that-once-was.md, audiobook.py, ch11-second-surface-second-forsaken-reveal.md, ch12-beginning-of-the-end.md) | 21 reads | ~180509 tok |
+| 06:02 | Created chapters/book-2/act-3/ch13-schema-that-should-not-migrate.md | — | ~17255 |
+| 16:30 | Drafted Vol 2 Ch 13 — Schema That Should Not Migrate (Days 43-44; Pattern B log frame; 10,130 words) | chapters/book-2/act-3/ch13-schema-that-should-not-migrate.md | DRAFT-COMPLETE | ~85k |
+| 06:04 | Edited build/audiobook.py | 2→3 lines | ~32 |
+| 06:04 | Edited build/audiobook.py | 2→3 lines | ~38 |
+| 06:04 | Edited build/audiobook.py | 2→2 lines | ~37 |
+| 06:04 | Session end: 16 writes across 5 files (ch10-aftermath-mission-that-once-was.md, audiobook.py, ch11-second-surface-second-forsaken-reveal.md, ch12-beginning-of-the-end.md, ch13-schema-that-should-not-migrate.md) | 22 reads | ~215279 tok |
+| 06:04 | Session end: 16 writes across 5 files (ch10-aftermath-mission-that-once-was.md, audiobook.py, ch11-second-surface-second-forsaken-reveal.md, ch12-beginning-of-the-end.md, ch13-schema-that-should-not-migrate.md) | 22 reads | ~215279 tok |
+| 06:23 | Created chapters/book-2/act-3/ch14-the-crossing.md | — | ~17939 |
+| 06:27 | Edited build/audiobook.py | 2→3 lines | ~29 |
+| 06:27 | Edited build/audiobook.py | 2→3 lines | ~36 |
+| 06:27 | Edited build/audiobook.py | 2→2 lines | ~45 |
+| 06:27 | Session end: 20 writes across 6 files (ch10-aftermath-mission-that-once-was.md, audiobook.py, ch11-second-surface-second-forsaken-reveal.md, ch12-beginning-of-the-end.md, ch13-schema-that-should-not-migrate.md) | 25 reads | ~252957 tok |
+| 06:30 | Session end: 20 writes across 6 files (ch10-aftermath-mission-that-once-was.md, audiobook.py, ch11-second-surface-second-forsaken-reveal.md, ch12-beginning-of-the-end.md, ch13-schema-that-should-not-migrate.md) | 25 reads | ~252957 tok |
+| 06:42 | Created chapters/book-2/act-3/ch15-compromised-relay-holds.md | — | ~13946 |
+| 06:44 | Edited build/audiobook.py | 2→3 lines | ~27 |
+| 06:44 | Edited build/audiobook.py | 2→3 lines | ~34 |
+| 06:44 | Edited build/audiobook.py | 2→2 lines | ~43 |
+| 06:44 | Session end: 24 writes across 7 files (ch10-aftermath-mission-that-once-was.md, audiobook.py, ch11-second-surface-second-forsaken-reveal.md, ch12-beginning-of-the-end.md, ch13-schema-that-should-not-migrate.md) | 25 reads | ~268003 tok |
+| 06:51 | Edited .pao-inbox/_creative/character-sheets/dr-leader-mission-director.md | 3→5 lines | ~719 |
+| 06:51 | Created ../../.claude/projects/-Users-christopherwood-Projects-the-inverted-stack/memory/project_anna_texture_details.md | — | ~726 |
+| 06:52 | Edited ../../.claude/projects/-Users-christopherwood-Projects-the-inverted-stack/memory/MEMORY.md | 1→2 lines | ~124 |
+| 06:53 | Session end: 27 writes across 10 files (ch10-aftermath-mission-that-once-was.md, audiobook.py, ch11-second-surface-second-forsaken-reveal.md, ch12-beginning-of-the-end.md, ch13-schema-that-should-not-migrate.md) | 26 reads | ~269684 tok |
+| 06:56 | Session end: 27 writes across 10 files (ch10-aftermath-mission-that-once-was.md, audiobook.py, ch11-second-surface-second-forsaken-reveal.md, ch12-beginning-of-the-end.md, ch13-schema-that-should-not-migrate.md) | 27 reads | ~271144 tok |
+| 06:56 | Created .pao-inbox/yeoman-resumed-2026-05-05T16-05Z-appendix-b-regen-complete.md | — | ~134 |
+| 06:56 | Created .pao-inbox/yeoman-resumed-2026-05-05T16-06Z-vol2-focus-acknowledged.md | — | ~76 |
+
+## Session: 2026-05-06 07:02
+
+| Time | Action | File(s) | Outcome | ~Tokens |
+|------|--------|---------|---------|--------|
+
+| 2026-05-06 | Vol 2 canon read-pass complete (session continuation after context compaction); STT Phase 2 whisper-medium launched on ch15 | .pao-inbox/_creative/character-sheets/ (Anna/Joel/Wanjiru/Stefan — all May-5 canon layers absorbed), build/stt_spike.py | All 4 character sheets absorbed: Anna=operator-not-architect/Moiraine; Joel=principal-architect/Rand/USS-Sunfish-SSN-649; Wanjiru=security-arch/Egwene/Long-Now; Stefan=emerging-Forsaken/off-page-Vol-2. STT Phase 2 medium model in flight (48MB ch15, est 15-20min) | ~35000 |
+| 07:08 | Edited .pao-inbox/_creative/character-sheets/joel-reyes-principal-architect.md | expanded (+7 lines) | ~442 |
+| 07:09 | Edited .pao-inbox/_creative/character-sheets/wanjiru-kamau-security-policy.md | expanded (+6 lines) | ~387 |
+| 07:09 | Edited .pao-inbox/_creative/character-sheets/senior-technical-specialist.md | modified V() | ~691 |
+| 07:15 | Created chapters/book-2/act-3/ch16-final-ascent.md | — | ~6982 |
+| 07:18 | Created chapters/book-2/act-3/ch16-final-ascent.md | — | ~7834 |
+
+| 07:20 | drafted Vol 2 Ch 16 *Final Ascent* (4,732 words) | chapters/book-2/act-3/ch16-final-ascent.md | denouement chapter; mission/flashback 70/30; Pattern A formal-log opener; canonical *Some questions we asked the system* sentence at single-paragraph altitude; query list lands at 25; four texture details (Diego mate-cup, Joel wallet recipe-card, Wanjiru cucu-notebook, Anna Tashkent melon); zero forecast register; zero Stefan/Helvetia mention | ~28k |
+| 07:21 | Edited build/audiobook.py | 2→3 lines | ~27 |
+| 07:21 | Edited build/audiobook.py | 2→3 lines | ~34 |
+| 07:21 | Edited build/audiobook.py | 2→2 lines | ~43 |
+| 07:22 | Session end: 8 writes across 5 files (joel-reyes-principal-architect.md, wanjiru-kamau-security-policy.md, senior-technical-specialist.md, ch16-final-ascent.md, audiobook.py) | 14 reads | ~134963 tok |
+| 07:22 | Session end: 8 writes across 5 files (joel-reyes-principal-architect.md, wanjiru-kamau-security-policy.md, senior-technical-specialist.md, ch16-final-ascent.md, audiobook.py) | 14 reads | ~134963 tok |
+| 07:25 | Session end: 8 writes across 5 files (joel-reyes-principal-architect.md, wanjiru-kamau-security-policy.md, senior-technical-specialist.md, ch16-final-ascent.md, audiobook.py) | 14 reads | ~134963 tok |
+| 07:25 | Session end: 8 writes across 5 files (joel-reyes-principal-architect.md, wanjiru-kamau-security-policy.md, senior-technical-specialist.md, ch16-final-ascent.md, audiobook.py) | 14 reads | ~134963 tok |
+| 07:30 | Session end: 8 writes across 5 files (joel-reyes-principal-architect.md, wanjiru-kamau-security-policy.md, senior-technical-specialist.md, ch16-final-ascent.md, audiobook.py) | 14 reads | ~134963 tok |
+| 07:35 | Session end: 8 writes across 5 files (joel-reyes-principal-architect.md, wanjiru-kamau-security-policy.md, senior-technical-specialist.md, ch16-final-ascent.md, audiobook.py) | 14 reads | ~134963 tok |
+| 07:40 | Created .pao-inbox/yeoman-resumed-2026-05-06T07-38Z-stt-spike-phase2-medium.md | — | ~983 |
+
+| 2026-05-06 07:38 | STT Phase 2 whisper-medium ch15 complete — FAIL verdict | .pao-inbox/yeoman-resumed-2026-05-06T07-38Z-stt-spike-phase2-medium.md | 1963s wall time (RTF=0.62); 66 REAL errors (29.8% reduction from base 94; below 50% LOWER-PASS threshold). Math notation (Greek letters), large section drops, role→row unchanged. Package-name fix reduced 8→2 REALs. Phase 3 = WhisperX forced alignment. Deferred per P0 directive. Beacon committed + pushed. | ~8000 |
+| 07:41 | Session end: 9 writes across 6 files (joel-reyes-principal-architect.md, wanjiru-kamau-security-policy.md, senior-technical-specialist.md, ch16-final-ascent.md, audiobook.py) | 15 reads | ~136017 tok |
+| 07:41 | Session end: 9 writes across 6 files (joel-reyes-principal-architect.md, wanjiru-kamau-security-policy.md, senior-technical-specialist.md, ch16-final-ascent.md, audiobook.py) | 15 reads | ~136017 tok |
+| 07:58 | Created chapters/book-2/act-3/ch17-transit-north.md | — | ~10934 |
+| 08:01 | Created chapters/book-2/act-3/ch17-transit-north.md | — | ~8766 |
+| 2026-05-06 12:02Z | Drafted Vol 2 Ch 17 *Transit North* (loop iteration 14/15) | chapters/book-2/act-3/ch17-transit-north.md (NEW) | 4986 body words / target 5000 / band 4500-5500 PASS; Pattern B log frame open+close; Anna-Wanjiru staff-history scene with meta-textual recognition + Day-22 flashback (~20
+| 2026-05-06 12:02Z | Drafted Vol 2 Ch 17 Transit North (loop iteration 14/15) | chapters/book-2/act-3/ch17-transit-north.md (NEW) | 4986 body words / target 5000 / band 4500-5500 PASS; Pattern B log frame open+close; Anna-Wanjiru staff-history scene with meta-textual recognition + Day-22 flashback ~20%; Joel-Wanjiru forensic walk all 5 progression points; Joel honest-engineering beat verbatim; Wanjiru standards-body seed beat verbatim; OSS-funding-asymmetry as property not lament; regulatory filing inconclusive-procedural; Diego mate-cup + Wanjiru cucu-notebook each surface ONCE; no Hiroshi texture; no forecast register; closes minimum altitude on Punta Arenas approach hours away. | ~14000 |
+| 08:03 | Edited build/audiobook.py | 2→3 lines | ~24 |
+| 08:03 | Edited build/audiobook.py | 2→3 lines | ~31 |
+| 08:03 | Edited build/audiobook.py | 2→2 lines | ~40 |
+| 08:03 | Session end: 14 writes across 7 files (joel-reyes-principal-architect.md, wanjiru-kamau-security-policy.md, senior-technical-specialist.md, ch16-final-ascent.md, audiobook.py) | 16 reads | ~169190 tok |
+| 08:05 | Edited .pao-inbox/_creative/character-sheets/_minor-characters.md | modified Influences() | ~1210 |
+| 08:05 | Session end: 15 writes across 8 files (joel-reyes-principal-architect.md, wanjiru-kamau-security-policy.md, senior-technical-specialist.md, ch16-final-ascent.md, audiobook.py) | 17 reads | ~172591 tok |
+| 08:06 | Edited .pao-inbox/_creative/character-sheets/_minor-characters.md | expanded (+15 lines) | ~1142 |
+| 08:06 | Session end: 16 writes across 8 files (joel-reyes-principal-architect.md, wanjiru-kamau-security-policy.md, senior-technical-specialist.md, ch16-final-ascent.md, audiobook.py) | 17 reads | ~173814 tok |
+| 08:15 | Created chapters/book-2/act-3/ch18-punta-arenas-surfacing.md | — | ~12462 |
+| 08:18 | Edited build/audiobook.py | 2→3 lines | ~27 |
+| 08:18 | Edited build/audiobook.py | 2→3 lines | ~34 |
+| 08:18 | Edited build/audiobook.py | 2→2 lines | ~43 |
+| 08:18 | Session end: 20 writes across 9 files (joel-reyes-principal-architect.md, wanjiru-kamau-security-policy.md, senior-technical-specialist.md, ch16-final-ascent.md, audiobook.py) | 18 reads | ~196921 tok |
+| 08:24 | Session end: 20 writes across 9 files (joel-reyes-principal-architect.md, wanjiru-kamau-security-policy.md, senior-technical-specialist.md, ch16-final-ascent.md, audiobook.py) | 18 reads | ~196921 tok |
+| 08:27 | Session end: 20 writes across 9 files (joel-reyes-principal-architect.md, wanjiru-kamau-security-policy.md, senior-technical-specialist.md, ch16-final-ascent.md, audiobook.py) | 18 reads | ~196921 tok |
+| 08:36 | Session end: 20 writes across 9 files (joel-reyes-principal-architect.md, wanjiru-kamau-security-policy.md, senior-technical-specialist.md, ch16-final-ascent.md, audiobook.py) | 33 reads | ~316295 tok |
+| 09:27 | Edited chapters/book-2/act-3/ch14-the-crossing.md | inline fix | ~54 |
+| 09:27 | Edited chapters/book-2/act-3/ch14-the-crossing.md | inline fix | ~88 |
+| 09:27 | Edited chapters/book-2/act-3/ch14-the-crossing.md | inline fix | ~21 |
+| 09:27 | Edited chapters/book-2/act-3/ch15-compromised-relay-holds.md | inline fix | ~24 |
+| 09:27 | Edited chapters/book-2/act-3/ch18-punta-arenas-surfacing.md | inline fix | ~75 |
+| 09:27 | Edited chapters/book-2/act-3/ch18-punta-arenas-surfacing.md | 3→5 lines | ~154 |
+| 09:27 | Edited build/audiobook.py | modified voice() | ~335 |
+| 09:27 | Edited build/audiobook.py | modified voice() | ~160 |
+| 09:28 | Session end: 28 writes across 11 files (joel-reyes-principal-architect.md, wanjiru-kamau-security-policy.md, senior-technical-specialist.md, ch16-final-ascent.md, audiobook.py) | 34 reads | ~340457 tok |
+| 09:30 | Created ../../.claude/projects/-Users-christopherwood-Projects-the-inverted-stack/memory/project_anna_voice_ciufi_galeazzi.md | — | ~857 |
+| 09:32 | Edited chapters/book-2/act-3/ch14-the-crossing.md | inline fix | ~67 |
+| 09:32 | Edited chapters/book-2/act-3/ch15-compromised-relay-holds.md | inline fix | ~137 |
+| 09:33 | Session end: 31 writes across 12 files (joel-reyes-principal-architect.md, wanjiru-kamau-security-policy.md, senior-technical-specialist.md, ch16-final-ascent.md, audiobook.py) | 34 reads | ~341582 tok |
+| 09:35 | Session end: 31 writes across 12 files (joel-reyes-principal-architect.md, wanjiru-kamau-security-policy.md, senior-technical-specialist.md, ch16-final-ascent.md, audiobook.py) | 34 reads | ~341582 tok |
+| 09:43 | Created ../../.claude/projects/-Users-christopherwood-Projects-the-inverted-stack/memory/project_audiobook_production_tiers.md | — | ~1384 |
+| 09:44 | Edited ../../.claude/projects/-Users-christopherwood-Projects-the-inverted-stack/memory/MEMORY.md | 1→3 lines | ~230 |
+| 09:44 | Session end: 33 writes across 14 files (joel-reyes-principal-architect.md, wanjiru-kamau-security-policy.md, senior-technical-specialist.md, ch16-final-ascent.md, audiobook.py) | 35 reads | ~343311 tok |
+| 09:55 | Edited ../../.claude/projects/-Users-christopherwood-Projects-the-inverted-stack/memory/project_audiobook_production_tiers.md | modified collections() | ~947 |
+| 09:55 | Session end: 34 writes across 14 files (joel-reyes-principal-architect.md, wanjiru-kamau-security-policy.md, senior-technical-specialist.md, ch16-final-ascent.md, audiobook.py) | 36 reads | ~344325 tok |
+| 09:56 | Edited ../../.claude/projects/-Users-christopherwood-Projects-the-inverted-stack/memory/project_audiobook_production_tiers.md | modified requirements() | ~965 |
+| 09:56 | Session end: 35 writes across 14 files (joel-reyes-principal-architect.md, wanjiru-kamau-security-policy.md, senior-technical-specialist.md, ch16-final-ascent.md, audiobook.py) | 36 reads | ~345359 tok |
+| 09:58 | Edited ../../.claude/projects/-Users-christopherwood-Projects-the-inverted-stack/memory/project_audiobook_production_tiers.md | expanded (+50 lines) | ~1523 |
+| 09:58 | Session end: 36 writes across 14 files (joel-reyes-principal-architect.md, wanjiru-kamau-security-policy.md, senior-technical-specialist.md, ch16-final-ascent.md, audiobook.py) | 36 reads | ~346990 tok |
+| 10:03 | Session end: 36 writes across 14 files (joel-reyes-principal-architect.md, wanjiru-kamau-security-policy.md, senior-technical-specialist.md, ch16-final-ascent.md, audiobook.py) | 36 reads | ~346990 tok |
+| 10:05 | Session end: 36 writes across 14 files (joel-reyes-principal-architect.md, wanjiru-kamau-security-policy.md, senior-technical-specialist.md, ch16-final-ascent.md, audiobook.py) | 36 reads | ~346990 tok |
+| 10:26 | Edited chapters/book-2/act-3/ch18-punta-arenas-surfacing.md | inline fix | ~104 |
+| 10:27 | Edited chapters/book-2/act-1/ch04-first-submersion.md | inline fix | ~54 |
+| 10:27 | Edited chapters/book-2/act-1/ch06-first-surface-first-forsaken-reveal.md | inline fix | ~62 |
+| 10:27 | Edited chapters/book-2/act-1/ch06-first-surface-first-forsaken-reveal.md | inline fix | ~113 |
+| 10:27 | Edited chapters/book-2/act-2/ch09-sync-daemon-under-drift.md | inline fix | ~11 |
+| 10:27 | Edited chapters/book-2/act-3/ch13-schema-that-should-not-migrate.md | inline fix | ~84 |
+| 10:27 | Edited chapters/book-2/act-3/ch13-schema-that-should-not-migrate.md | "s apply had read the time" → "s apply had read the time" | ~43 |
+| 10:27 | Edited chapters/book-2/act-3/ch13-schema-that-should-not-migrate.md | "s apply had read the time" → "s apply had read the time" | ~58 |
+| 10:27 | Edited chapters/book-2/act-3/ch16-final-ascent.md | inline fix | ~60 |
+| 10:27 | Edited chapters/book-2/act-3/ch17-transit-north.md | inline fix | ~20 |
+| 10:28 | Session end: 46 writes across 18 files (joel-reyes-principal-architect.md, wanjiru-kamau-security-policy.md, senior-technical-specialist.md, ch16-final-ascent.md, audiobook.py) | 38 reads | ~350891 tok |
+| 10:30 | Created chapters/closing/the-crossing.md | — | ~10013 |
+
+## Session: 2026-05-06 10:34
+
+| Time | Action | File(s) | Outcome | ~Tokens |
+|------|--------|---------|---------|--------|
+| 10:34 | Created .pao-inbox/yeoman-question-2026-05-06T09-00Z-vol2-complete-whats-next.md | — | ~282 |
+| 09:00 | Wrote + committed yeoman-question re: vol2 complete + next-phase routing | .pao-inbox/yeoman-question-2026-05-06T09-00Z-vol2-complete-whats-next.md | committed f2d6d04 pushed | ~200 |
+| 10:35 | Session end: 1 writes across 1 files (yeoman-question-2026-05-06T09-00Z-vol2-complete-whats-next.md) | 0 reads | ~302 tok |
+| 10:36 | Session end: 1 writes across 1 files (yeoman-question-2026-05-06T09-00Z-vol2-complete-whats-next.md) | 0 reads | ~302 tok |
+| 09:10 | Rewrote all 18 Vol 2 chapter descriptions in anatomy.md, removed duplicate ch02 entry | .wolf/anatomy.md | committed 38983ac pushed | ~600 |
+| 10:58 | Session end: 1 writes across 1 files (yeoman-question-2026-05-06T09-00Z-vol2-complete-whats-next.md) | 0 reads | ~302 tok |
+| 11:19 | Session end: 1 writes across 1 files (yeoman-question-2026-05-06T09-00Z-vol2-complete-whats-next.md) | 0 reads | ~302 tok |
+| 11:40 | Session end: 1 writes across 1 files (yeoman-question-2026-05-06T09-00Z-vol2-complete-whats-next.md) | 0 reads | ~302 tok |
+| 12:11 | Session end: 1 writes across 1 files (yeoman-question-2026-05-06T09-00Z-vol2-complete-whats-next.md) | 0 reads | ~302 tok |
+| 13:29 | Created .pao-inbox/yeoman-question-2026-05-06T12-45Z-ch02-review-implement.md | — | ~123 |
+| 13:29 | Session end: 2 writes across 2 files (yeoman-question-2026-05-06T09-00Z-vol2-complete-whats-next.md, yeoman-question-2026-05-06T12-45Z-ch02-review-implement.md) | 2 reads | ~8580 tok |

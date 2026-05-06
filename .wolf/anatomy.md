@@ -1,6 +1,6 @@
 # anatomy.md
 
-> Auto-maintained by OpenWolf. Last scanned: 2026-05-06T14:34:58.013Z
+> Auto-maintained by OpenWolf. Last scanned: 2026-05-06T17:29:41.982Z
 > Files: 334 tracked | Anatomy hits: 0 | Misses: 0
 
 ## ../../../../tmp/
@@ -134,6 +134,7 @@
 - `yeoman-question-2026-04-30T07-47Z-audiobook-extended-ch22-ch23.md` (~446 tok)
 - `yeoman-question-2026-05-01T15-22Z-audiobook-regen-needs-tts-api-key.md` (~471 tok)
 - `yeoman-question-2026-05-06T09-00Z-vol2-complete-whats-next.md` (~264 tok)
+- `yeoman-question-2026-05-06T12-45Z-ch02-review-implement.md` (~116 tok)
 - `yeoman-resumed-2026-04-29T23-19Z-recovery-ack-phase3-start.md` (~542 tok)
 - `yeoman-resumed-2026-04-30T01-30Z-recovery-after-pao-reset.md` (~815 tok)
 - `yeoman-resumed-2026-05-01T18-47Z-audiobook-regen-launched.md` — What was launched (~992 tok)
