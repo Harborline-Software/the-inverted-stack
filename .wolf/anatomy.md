@@ -1,7 +1,7 @@
 # anatomy.md
 
-> Auto-maintained by OpenWolf. Last scanned: 2026-05-04T23:05:09.598Z
-> Files: 288 tracked | Anatomy hits: 0 | Misses: 0
+> Auto-maintained by OpenWolf. Last scanned: 2026-05-06T14:34:58.013Z
+> Files: 334 tracked | Anatomy hits: 0 | Misses: 0
 
 ## ../../../../tmp/
 
@@ -9,6 +9,7 @@
 - `ch15_phase3_split.py` — UPF Ch15 split — Phase 3 batch executor. (~1225 tok)
 - `ch23_split.py` — parse_sections, main, wc (~2210 tok)
 - `phase5_redirects.py` — should_skip, redirect_in_text, process_file, main (~1374 tok)
+- `rename-vol2.py` — Rename Vol 2 boat (Sunfish-1 → Nansen) and add mission designations (~1564 tok)
 
 ## ../../../../tmp/sunfish-pao-incident-wt/icm/_state/research-inbox/
 
@@ -17,7 +18,10 @@
 ## ../../.claude/projects/-Users-christopherwood-Projects-the-inverted-stack/memory/
 
 - `feedback_no_reset_hard_without_audit.md` (~701 tok)
-- `MEMORY.md` — Memory Index — The Inverted Stack Book Project (~1755 tok)
+- `MEMORY.md` — Memory Index — The Inverted Stack Book Project (~1889 tok)
+- `project_anna_texture_details.md` — Declares of (~694 tok)
+- `project_anna_voice_ciufi_galeazzi.md` — Where it lives in the codebase (~817 tok)
+- `project_audiobook_production_tiers.md` — Tier structure (industry framing) (~4352 tok)
 - `project_audiobook_topology.md` — Topology (~3242 tok)
 - `reference_gitbutler_ref_resync.md` — GitButler ref-resync recipe (~1012 tok)
 - `reference_migration_memory_path.md` — What happened (~808 tok)
@@ -53,7 +57,7 @@
 ## ./
 
 - `.gitignore` — Git ignore rules (~130 tok)
-- `ASSEMBLY.md` — Assembly Manifest (~2821 tok)
+- `ASSEMBLY.md` — Assembly Manifest (~4243 tok)
 - `book-structure.md` — BOOK-STRUCTURE (~8079 tok)
 - `LICENSE` (~204 tok)
 - `pytest.ini` (~34 tok)
@@ -72,6 +76,7 @@
 - `voice-grant.md` — Grant's voice in one sentence (~3553 tok)
 - `voice-lencioni.md` — Lencioni's voice in one sentence (~3758 tok)
 - `voice-sinek.md` — Sinek's voice in one sentence (~3238 tok)
+- `vol2-chapter-reviewer.md` — What Vol 2 is — series context (~6016 tok)
 
 ## .claude/commands/
 
@@ -83,6 +88,10 @@
 ## .claude/skills/anti-ai-tells/
 
 - `SKILL.md` — Anti-AI Tells — Reference for Removing LLM Signatures from Technical Prose (~6509 tok)
+
+## .claude/skills/crew-log-style-entry/
+
+- `SKILL.md` — Crew Log Style Entry — Generator for Mission Log / Staff History Voice (~3098 tok)
 
 ## .claude/skills/inverted-stack-conformance/
 
@@ -115,6 +124,7 @@
 
 - `pao-directive-2026-05-01T22-45Z-audiobook-silence-trim-option-a.md` — PAO directive — audiobook silence-trim option A (ffmpeg silenceremove) (~812 tok)
 - `pao-directive-2026-05-04T16-30Z-stt-qc-spike-phase2-medium-on-ch15.md` — PAO directive — STT QC Spike Phase 2: medium model on ch15 only (~1267 tok)
+- `pao-directive-2026-05-05T14-15Z-yeoman-focus-vol2-only.md` — PAO directive — Yeoman focus shift to Vol 2 (CO directive 2026-05-05) (~1460 tok)
 - `yeoman-question-2026-04-29T23-22Z-phase3-complete.md` — <Section Name> (~952 tok)
 - `yeoman-question-2026-04-30T07-27Z-ch15-forward-pointers-routed.md` — Declares work (~499 tok)
 - `yeoman-question-2026-04-30T07-32Z-phase5-spot-check-stragglers.md` — Declares table (~876 tok)
@@ -123,23 +133,35 @@
 - `yeoman-question-2026-04-30T07-46Z-ch19-review-ack-shipasis.md` (~419 tok)
 - `yeoman-question-2026-04-30T07-47Z-audiobook-extended-ch22-ch23.md` (~446 tok)
 - `yeoman-question-2026-05-01T15-22Z-audiobook-regen-needs-tts-api-key.md` (~471 tok)
+- `yeoman-question-2026-05-06T09-00Z-vol2-complete-whats-next.md` (~264 tok)
 - `yeoman-resumed-2026-04-29T23-19Z-recovery-ack-phase3-start.md` (~542 tok)
 - `yeoman-resumed-2026-04-30T01-30Z-recovery-after-pao-reset.md` (~815 tok)
 - `yeoman-resumed-2026-05-01T18-47Z-audiobook-regen-launched.md` — What was launched (~992 tok)
 - `yeoman-resumed-2026-05-04T13-00Z-audiobook-regen-complete.md` — Results (~450 tok)
 - `yeoman-resumed-2026-05-04T13-05Z-silence-trim-listen-test.md` — Build script change applied (~663 tok)
 - `yeoman-resumed-2026-05-04T14-05Z-audiobook-regen-crossing-complete.md` (~364 tok)
+- `yeoman-resumed-2026-05-05T16-05Z-appendix-b-regen-complete.md` (~126 tok)
+- `yeoman-resumed-2026-05-05T16-06Z-vol2-focus-acknowledged.md` (~71 tok)
+- `yeoman-resumed-2026-05-06T07-38Z-stt-spike-phase2-medium.md` — STT QC Spike Phase 2 — Verdict: FAIL (~922 tok)
 
 ## .pao-inbox/_creative/
 
+- `series-arc-sunfish-trajectory.md` — Series Arc — The Sunfish Trajectory (~3630 tok)
 - `the-crossing-concept-note-2026-04-30.md` — Concept Note — The Crossing (Closing Chapter) (~4423 tok)
+- `vol-2-anchor-bridge-sync-mechanic.md` — Vol 2 — Anchor / Bridge Sync Mechanic (~3535 tok)
+- `vol-2-archive-and-capture-convention.md` — Vol 2 — Archive and Capture Convention (~5372 tok)
+- `vol-2-software-as-gravity.md` — Vol 2 — Software as Gravity, Not Character (~5056 tok)
 
 ## .pao-inbox/_creative/character-sheets/
 
-- `_minor-characters.md` — Minor Characters — Brief Sheets (~2105 tok)
-- `dr-leader-mission-director.md` — Character Sheet — Dr. Anna Yusupova, Mission Director (~13750 tok)
+- `_minor-characters.md` — Minor Characters — Brief Sheets (~4731 tok)
+- `dr-leader-mission-director.md` — Character Sheet — Dr. Anna Yusupova, Mission Director (~19806 tok)
+- `joel-reyes-principal-architect.md` — Character Sheet — Joel Reyes, Principal Architect of Sunfish (~12169 tok)
 - `maria-santos.md` — Character Sheet — Maria Santos, Mission Medical Officer (~1529 tok)
-- `senior-technical-specialist.md` — Character Sheet — Senior Technical Specialist (~2063 tok)
+- `priya-iyer-schema-migration.md` — Character Sheet — Priya Iyer, Lead Instrumentation Engineer + Sunfish Schema-Migration Contributor (~7336 tok)
+- `senior-technical-specialist.md` — Character Sheet — Senior Technical Specialist (~3440 tok)
+- `stefan-reinhardt-rival-architect.md` — Character Sheet — Dr. Stefan Reinhardt, Principal Architect (Rival Platform) (~7768 tok)
+- `wanjiru-kamau-security-policy.md` — Character Sheet — Wanjiru Kamau, Relay Operations + Sunfish Security Architecture / Key Management C (~9632 tok)
 
 ## .pao-inbox/_decisions/
 
@@ -179,13 +201,14 @@
 - `snapshot-2026-04-30.md` — Book State Snapshot — 2026-04-30 (post Ch15 split) (~1832 tok)
 - `snapshot-2026-05-01-friday-windown.md` — State Snapshot — Friday 2026-05-01 windown (~954 tok)
 - `snapshot-2026-05-04-monday-morning.md` — State Snapshot — Monday 2026-05-04 morning (~1201 tok)
+- `snapshot-2026-05-05-tuesday-evening-vol2-listen-test-approved.md` — State Snapshot — Tuesday 2026-05-05 evening (Vol 2 listen-test approved; gravity canon validated) (~2290 tok)
 
 ## build/
 
 - `__init__.py` — build/__init__.py (~6 tok)
 - `apply_phase0a.py` — One-shot Phase 0a HIGH-tier compressor. (~15490 tok)
 - `AUDIO-DOCKER.md` — Audiobook Generation — Docker Setup (~4120 tok)
-- `audiobook.py` — Generate audiobook MP3s from chapter markdown using a local Kokoro TTS server. (~19443 tok)
+- `audiobook.py` — Generate audiobook MP3s from chapter markdown using a local Kokoro TTS server. (~23614 tok)
 - `build_overlays.py` — Whispersync-capable EPUB build (Phases B-E). (~6341 tok)
 - `check_audit.py` — Reference-integrity check: every jurisdiction in inline prose appears in Appendix F. (~581 tok)
 - `check_first_use.py` — First-use rule checker. (~3348 tok)
@@ -196,6 +219,7 @@
 - `embed-cover.py` — Embed cover art as an ID3v2 APIC frame in every chapter MP3. (~2078 tok)
 - `generate_chapter_overview.py` — Generate chapter-overview.md for the inverted-stack-conformance skill. (~874 tok)
 - `generate_implementation_spec.py` — Generate the human-readable implementation-specification.md from the (~3052 tok)
+- `imagegen.py` — Generate cover/character/atmosphere images via the higgs-audio image API. (~2556 tok)
 - `librivox_browse.py` — Browse LibriVox for usable narrator reference clips. (~3880 tok)
 - `lint.py` — Structural integrity checks for The Inverted Stack manuscript. (~2352 tok)
 - `m4b.py` — Build a single .m4b audiobook file from the per-chapter MP3s. (~2052 tok)
@@ -272,6 +296,46 @@
 - `appendix-e-citation-style.md` — Appendix E — Citation Style (~1667 tok)
 - `appendix-f-regulatory-coverage.md` — Appendix F — Regulatory Coverage Map (~4425 tok)
 - `appendix-g-glossary.md` — Appendix G — Glossary (~6224 tok)
+
+## chapters/book-2/
+
+- `CHAPTER-OUTLINE.md` — Book 2 — Chapter-by-Chapter Outline (working blueprint) (~19118 tok)
+- `README.md` — Project documentation (~476 tok)
+
+## chapters/book-2/_reviews/
+
+- `ch02-recruitment-interview-review-2026-05-05T18-30Z.md` — 1. Big-picture assessment (~8146 tok)
+
+## chapters/book-2/act-1/
+
+- `ch01-departure.md` — Vol 2 opener: Anna boards RV Nansen at Punta Arenas pier, September dawn, MERIDIAN-7 departure; sealed-hull transition established (~5289 tok)
+- `ch02-recruitment-interview.md` — Vol 2 Ch 2: Joel–Anna recruitment interview; captain-asks-engineer dialogue engine; R1-BLOCK-rewrite admission as load-bearing trust beat; bunk-laptop canonical first-disclosure (~12000 tok)
+- `ch03-drake-passage-ice-edge.md` — Vol 2 Act 1: Drake Passage crossing, Anna's eleven-crossing history; defines "rough" on Drake's terms; Nansen transitions from Strait to open southern ocean (~7170 tok)
+- `ch04-first-submersion.md` — Vol 2 Act 1: RV Nansen dives below surface Day 7; Anna on bridge for the sealed-hull threshold; gangway metaphor closed; institutional pre-mission file on secondary display (~7355 tok)
+- `ch05-day-twenty-realization.md` — Vol 2 Act 1: Day 20, Anna's quiet desk realization that the Sunfish architecture is doing exactly what it was designed to do; the hinge chapter (~8709 tok)
+- `ch06-first-surface-first-forsaken-reveal.md` — Vol 2 Act 1: Day 21 first surfacing at 0612; southern-ocean green; Stefan Reinhardt (HELVETICA-2) first Forsaken reveal via surface-window comms (~7136 tok)
+
+## chapters/book-2/act-2/
+
+- `ch07-joels-sunfish.md` — Vol 2 Act 2: Day 22 wardroom at 22:30; Joel discloses bunk-laptop Sunfish setup to Anna; canonical disclosure-without-compulsion scene and load-bearing trust beat (~6529 tok)
+- `ch08-second-submersion.md` — Vol 2 Act 2: Day 23 second dive; Segment 2 operational rhythm established; routine submersion that deepens the crew's sealed-hull normality (~7078 tok)
+- `ch09-sync-daemon-under-drift.md` — Vol 2 Act 2: Day 30 mission log; Wanjiru's sync-daemon triage under ice-drift; P0–P4 priority hierarchy in operational practice (~8506 tok)
+- `ch10-aftermath-mission-that-once-was.md` — Vol 2 Act 2: Day 33–36 aftermath of surface-window data haul; crew recalibrates mission scope against what the ice actually returned (~7470 tok)
+- `ch11-second-surface-second-forsaken-reveal.md` — Vol 2 Act 2: Day 37–39 second surfacing; southern-ocean green is now real green; Stefan Reinhardt second Forsaken reveal via surface comms (~7635 tok)
+- `ch12-beginning-of-the-end.md` — Vol 2 Act 2: Day 39, third dive; thermocline at 140m adds 8 min to descent; Segment 3 opens with boat returning to familiar hum (~6680 tok)
+
+## chapters/book-2/act-3/
+
+- `ch13-schema-that-should-not-migrate.md` — Vol 2 Act 3: Day 43–44; Priya and Joel 4h in engineering; schema-migration crisis; Wanjiru's institutional-politics response; class-region rail (~16180 tok)
+- `ch14-the-crossing.md` — Vol 2 Act 3: Day 47; mission-survival crisis under ice; Diego survival (cast-swap canon); Joel push-past → locked bulkhead → porthole look; leak event (~17777 tok)
+- `ch15-compromised-relay-holds.md` — Vol 2 Act 3: Day 47–48; compromised relay aftermath from Anna's POV; Wanjiru forensic supply-chain recognition; relay holds despite compromise (~13043 tok)
+- `ch16-final-ascent.md` — Vol 2 Act 3: Day 49–52; RV Nansen ascends after 48 days at depth; Anna's sealed-hull reckoning before surface; mission-as-survival rail closes (~7315 tok)
+- `ch17-transit-north.md` — Vol 2 Act 3: Day 52–56; transit north at surface; Joel honest-engineering register; rival-mission/institutional-capture rail; Stefan intelligence thread (~8194 tok)
+- `ch18-punta-arenas-surfacing.md` — Vol 2 Act 3: Day 56; docking at Punta Arenas consortium pier; Stefan 30-second formal courtesy exchange; Anna records in staff history: "He did not say what he might have said." (~11405 tok)
+
+## chapters/closing/
+
+- `the-crossing.md` — The Crossing (~9387 tok)
 
 ## chapters/epilogue/
 
@@ -469,6 +533,8 @@
 ## tests/build/
 
 - `__init__.py` — tests/build/__init__.py (~8 tok)
+- `ch12-beginning-of-the-end.md` — Vol 2 Ch 12 *Beginning of the End — Segment 3 Dive* (Day 39; 4,610 words; Pattern A log-opener; conditional-preservation plant; mission-as-survival rail) (~5500 tok)
+- `ch12-beginning-of-the-end.md` — Vol 2 Ch 12 (4,610 words; Day 39 Segment 3 dive; Pattern A; mission-as-survival rail) (~5500 tok)
 - `test_check_audit.py` — Tests for the reference-integrity audit checker. (~234 tok)
 - `test_check_stale.py` — Tests for the stale-draft check. (~1325 tok)
 - `test_promote.py` — Tests for the Phase 4 promotion script. (~2077 tok)
