@@ -3,6 +3,11 @@
 > Chronological action log. Hooks and AI append to this file automatically.
 > Old sessions are consolidated by the daemon weekly.
 
+| 07:43 | Built chapter reader web app (React + Express) | web/ (10 files) | production build passes; 52 chapters/50 with audio served on port 3080 | ~3500 |
+
+| 2026-05-07 14:30 | Web reader: multi-track support + render queue system | web/server.js, web/src/App.jsx, web/src/App.css, web/src/components/AudioPlayer.jsx, web/src/components/ChapterView.jsx, web/src/components/QueuePanel.jsx (NEW) | Build passes clean; 6 server changes + 5 client changes: loadMp3Tags keyed by full filename, buildCatalog scans audio variants, /api/chapters exposes tracks[], queue system with POST/GET/DELETE /api/queue, QueuePanel drawer, track selector in AudioPlayer | ~4000 |
+| 2026-05-07 01:15 | Vol 2 Ch 1 final-render audiobook launch — diagnosed and fixed 3 bugs; render in progress (background, ~2-3h estimated) | build/audiobook.py (YAML front-matter strip added to narratable_text(); ISO 8601 timestamp expansion added; default_base_url for chatterbox changed from 8881/v1 → 8883/api/v1), .wolf/buglog.json (bugs 189-191 appended), .wolf/cerebrum.md (4 new Key Learnings + 3 new Do-Not-Repeat entries) | Bugs: (1) 405 from wrong /v1 base path — proxy routes under /api/v1; (2) 504 cascade from 30s proxy gateway timeout + retry storm; fixed by using port 8883 direct backend + --no-chapter-map; (3) YAML front-matter spoken as TTS text. Render now running at ~33s/chunk avg, 270 chunks, ~2.5h total estimate. MP3 incrementally writing to build/output/audiobook/vol-2/ch01-departure.mp3. ~18000 |
+| 2026-05-07 13:09 | Editorial review feature implemented in web reader | web/server.js (+review session API), web/src/App.jsx (+ReviewPanel + review toggle), web/src/components/ReviewPanel.jsx (NEW), web/src/components/CommentToolbar.jsx (NEW), web/src/App.css (+review styles) | Build passes clean; 4 API endpoints added; submit writes co-review-*.md to .pao-inbox/; smoke test confirmed correct Markdown output | ~3200 |
 | 2026-05-05 19:30 | Vol 2 listen-test APPROVED by CO; full structural + lexical canon locked; Act I drafting authorized; Ch 1 dispatched. 8 PRs landed Tuesday (#112-#119) | vol-2-software-as-gravity.md (NEW; canon doc — software is gravity not character), vol-2-archive-and-capture-convention.md + vol-2-anchor-bridge-sync-mechanic.md + series-arc-sunfish-trajectory.md (NEW canon docs), .claude/agents/vol2-chapter-reviewer.md (NEW; line + structural editor agent), .claude/skills/crew-log-style-entry/SKILL.md (NEW), all character sheets updated (Anna voice-register spec; Joel/Priya/Wanjiru/Stefan plot-binding metadata + canon layers), three signature-discipline scenes locked (Joel bunk-laptop / Priya fourth-pass / Wanjiru exception-refusal), Ch 2 v4 redrafted under gravity rail (5,445 words / 31.9 min audio), Ch 5 prose-pass (5,971 words / 36.5 min audio), boat→RV Nansen / mission→MERIDIAN-7 / rival→HELVETICA-2 (140+ substitutions across 27 files), TTS defensive mappings, ASSEMBLY.md updated with post-verdict status, snapshot at .pao-inbox/_state-snapshots/snapshot-2026-05-05-tuesday-evening-vol2-listen-test-approved.md | listen-test pair (Ch 2 + Ch 5) audio total 68.4 min; CO listened uninterrupted; verdict "approved" lands gravity canon as validated. Act I remaining = Ch 1 (in flight) / Ch 3 / Ch 4 / Ch 6. ~140000 |
 
 | 2026-05-04 23:50 | Vol 2 scaffold + 18-chapter outline + audiobook pipeline plumbing landed (PR #109) | chapters/book-2/CHAPTER-OUTLINE.md (NEW; 18 chapters across 3 acts; per-chapter architectural-claim/frame-ratio/length/drafting-notes), chapters/book-2/README.md (NEW; orientation), chapters/book-2/{act-1,act-2,act-3}/.gitkeep, build/audiobook.py (added VOL2_CHAPTER_FILES inert placeholder list), ASSEMBLY.md (Vol 2 status section + Crossing-revision-pending flag) | PR #109 merged 2026-05-04 23:50; CO-gated next move = listen-test pair drafting (Ch 5 Day-Twenty Realization + Ch 2 Recruitment Interview) per concept-note §9; estimated ~15k words → Kokoro render → ~100min audiobook listen-test → verdict drives full Book 1 commit-or-revise | ~14000 |
@@ -2511,3 +2516,252 @@
 | 12:11 | Session end: 1 writes across 1 files (yeoman-question-2026-05-06T09-00Z-vol2-complete-whats-next.md) | 0 reads | ~302 tok |
 | 13:29 | Created .pao-inbox/yeoman-question-2026-05-06T12-45Z-ch02-review-implement.md | — | ~123 |
 | 13:29 | Session end: 2 writes across 2 files (yeoman-question-2026-05-06T09-00Z-vol2-complete-whats-next.md, yeoman-question-2026-05-06T12-45Z-ch02-review-implement.md) | 2 reads | ~8580 tok |
+| 13:30 | Session end: 2 writes across 2 files (yeoman-question-2026-05-06T09-00Z-vol2-complete-whats-next.md, yeoman-question-2026-05-06T12-45Z-ch02-review-implement.md) | 2 reads | ~8580 tok |
+| 14:01 | Session end: 2 writes across 2 files (yeoman-question-2026-05-06T09-00Z-vol2-complete-whats-next.md, yeoman-question-2026-05-06T12-45Z-ch02-review-implement.md) | 2 reads | ~8580 tok |
+| 14:32 | Session end: 2 writes across 2 files (yeoman-question-2026-05-06T09-00Z-vol2-complete-whats-next.md, yeoman-question-2026-05-06T12-45Z-ch02-review-implement.md) | 2 reads | ~8580 tok |
+| 14:50 | Session end: 2 writes across 2 files (yeoman-question-2026-05-06T09-00Z-vol2-complete-whats-next.md, yeoman-question-2026-05-06T12-45Z-ch02-review-implement.md) | 3 reads | ~17890 tok |
+| 14:51 | Session end: 2 writes across 2 files (yeoman-question-2026-05-06T09-00Z-vol2-complete-whats-next.md, yeoman-question-2026-05-06T12-45Z-ch02-review-implement.md) | 3 reads | ~17890 tok |
+| 14:52 | Created ../../.claude/projects/-Users-christopherwood-Projects-the-inverted-stack/memory/feedback_vol1_out_of_scope.md | — | ~798 |
+| 14:52 | Edited ../../.claude/projects/-Users-christopherwood-Projects-the-inverted-stack/memory/MEMORY.md | 1→2 lines | ~182 |
+| 14:52 | Session end: 4 writes across 4 files (yeoman-question-2026-05-06T09-00Z-vol2-complete-whats-next.md, yeoman-question-2026-05-06T12-45Z-ch02-review-implement.md, feedback_vol1_out_of_scope.md, MEMORY.md) | 4 reads | ~18940 tok |
+
+## Session: 2026-05-06 15:50
+
+| Time | Action | File(s) | Outcome | ~Tokens |
+|------|--------|---------|---------|--------|
+| 19:01 | Created chapters/book-2/_glossary/keys.md | — | ~288 |
+| 19:01 | Created chapters/book-2/_glossary/sync-daemon.md | — | ~323 |
+| 19:02 | Created chapters/book-2/_glossary/schema-migration.md | — | ~382 |
+| 19:02 | Created chapters/book-2/_glossary/README.md | — | ~535 |
+| 19:02 | Session end: 4 writes across 4 files (keys.md, sync-daemon.md, schema-migration.md, README.md) | 2 reads | ~5702 tok |
+| 19:04 | Created chapters/book-2/_glossary/keys.md | — | ~377 |
+| 19:04 | Created chapters/book-2/_glossary/sync-daemon.md | — | ~331 |
+| 19:04 | Created chapters/book-2/_glossary/schema-migration.md | — | ~437 |
+| 19:05 | Created chapters/book-2/_glossary/README.md | — | ~707 |
+| 19:05 | Session end: 8 writes across 4 files (keys.md, sync-daemon.md, schema-migration.md, README.md) | 2 reads | ~7686 tok |
+| 19:09 | Created chapters/book-2/_glossary/_inventory.md | — | ~2903 |
+| 23:09 | seeded vol-2 translation workshop (3 pilots + inventory) | chapters/book-2/_glossary/ | 5 files written, 30+ workshop entries queued | ~5500 |
+| 19:10 | Session end: 9 writes across 5 files (keys.md, sync-daemon.md, schema-migration.md, README.md, _inventory.md) | 2 reads | ~10797 tok |
+| 19:59 | Session end: 9 writes across 5 files (keys.md, sync-daemon.md, schema-migration.md, README.md, _inventory.md) | 2 reads | ~10797 tok |
+| 20:07 | Session end: 9 writes across 5 files (keys.md, sync-daemon.md, schema-migration.md, README.md, _inventory.md) | 2 reads | ~10797 tok |
+| 20:34 | Created chapters/book-2/_glossary/key-envelope.md | — | ~597 |
+| 20:34 | Created chapters/book-2/_glossary/gossip-protocol.md | — | ~543 |
+| 20:35 | Created chapters/book-2/_glossary/clock-drift.md | — | ~632 |
+| 20:35 | Created chapters/book-2/_glossary/README.md | — | ~1619 |
+| 00:36 | drafted 3 high-collision workshop entries (CO-dictated voice template) | chapters/book-2/_glossary/{key-envelope,gossip-protocol,clock-drift}.md | 3 entries + README updated for audio-replacement field | ~3500 |
+| 20:36 | Session end: 13 writes across 8 files (keys.md, sync-daemon.md, schema-migration.md, README.md, _inventory.md) | 2 reads | ~14431 tok |
+| 21:08 | Created chapters/book-2/_glossary/keys.md | — | ~684 |
+| 21:08 | Created chapters/book-2/_glossary/sync-daemon.md | — | ~657 |
+| 21:09 | Created chapters/book-2/_glossary/schema-migration.md | — | ~709 |
+| 21:09 | Edited chapters/book-2/_glossary/README.md | 5→7 lines | ~149 |
+| 01:09 | retro-fit 3 pilots with audio-replacement + Feynman test | chapters/book-2/_glossary/{keys,sync-daemon,schema-migration}.md | 5-field template now uniform across 6 entries | ~2200 |
+| 21:09 | Session end: 17 writes across 8 files (keys.md, sync-daemon.md, schema-migration.md, README.md, _inventory.md) | 2 reads | ~16786 tok |
+| 22:25 | Created chapters/book-2/_glossary/bridge.md | — | ~940 |
+| 22:26 | Created chapters/book-2/_glossary/anchor.md | — | ~827 |
+| 22:26 | Created chapters/book-2/_glossary/relay.md | — | ~819 |
+| 22:27 | Created chapters/book-2/_glossary/forsaken.md | — | ~936 |
+| 22:27 | Edited chapters/book-2/_glossary/README.md | weight() → adjective() | ~180 |
+| 02:27 | drafted Tier-1 audio-collision entries (bridge/anchor/relay/forsaken) | chapters/book-2/_glossary/{bridge,anchor,relay,forsaken}.md | Tier 1 complete; 10 workshop entries total | ~3800 |
+| 22:27 | Session end: 22 writes across 12 files (keys.md, sync-daemon.md, schema-migration.md, README.md, _inventory.md) | 2 reads | ~20752 tok |
+| 22:45 | Session end: 22 writes across 12 files (keys.md, sync-daemon.md, schema-migration.md, README.md, _inventory.md) | 2 reads | ~20752 tok |
+| 22:50 | Created chapters/book-2/_glossary/_audio_substitutions.yaml | — | ~1508 |
+| 22:50 | Edited build/audiobook.py | modified _load_vol2_audio_substitutions() | ~921 |
+| 02:52 | wired Vol 2 audio preprocessor + verified on Ch1 | build/audiobook.py + chapters/book-2/_glossary/_audio_substitutions.yaml | 28 rules; verified Bridge/Anchor compound substitutions fire 3x each; lowercase preserved | ~7000 |
+| 22:53 | Created chapters/book-2/_glossary/handshake.md | — | ~620 |
+| 22:54 | Created chapters/book-2/_glossary/node.md | — | ~597 |
+| 22:54 | Created chapters/book-2/_glossary/quorum.md | — | ~685 |
+| 22:54 | Created chapters/book-2/_glossary/audit-log.md | — | ~695 |
+| 22:55 | Created chapters/book-2/_glossary/data-class.md | — | ~794 |
+| 22:55 | Created chapters/book-2/_glossary/surface-window.md | — | ~750 |
+| 22:55 | Created chapters/book-2/_glossary/manifest.md | — | ~640 |
+| 22:55 | Created chapters/book-2/_glossary/rollback.md | — | ~583 |
+| 22:56 | Created chapters/book-2/_glossary/replication.md | — | ~603 |
+| 22:56 | Created chapters/book-2/_glossary/endpoint.md | — | ~526 |
+| 22:56 | Created chapters/book-2/_glossary/protocol.md | — | ~859 |
+| 22:57 | Created chapters/book-2/_glossary/local-first.md | — | ~778 |
+| 22:57 | Created chapters/book-2/_glossary/compromise.md | — | ~811 |
+| 22:57 | Created chapters/book-2/_glossary/custody.md | — | ~878 |
+| 22:58 | Edited chapters/book-2/_glossary/_audio_substitutions.yaml | expanded (+86 lines) | ~852 |
+| 22:58 | Edited chapters/book-2/_glossary/README.md | expanded (+17 lines) | ~503 |
+| 02:58 | drafted Tier 2 workshop entries (14) + extended audio YAML | chapters/book-2/_glossary/{14 entries} + _audio_substitutions.yaml | 24 entries total; 43 substitution rules | ~5500 |
+| 22:59 | Session end: 40 writes across 28 files (keys.md, sync-daemon.md, schema-migration.md, README.md, _inventory.md) | 3 reads | ~59524 tok |
+| 00:10 | Edited build/audiobook.py | expanded (+6 lines) | ~166 |
+| 00:11 | Edited build/audiobook.py | modified _expand_iso_ts() | ~510 |
+| 00:59 | Edited build/audiobook.py | modified NOTE() | ~255 |
+| 05:03 | render in progress (Sonnet subagent fixed bugs 189/190/191; pipeline validated) | build/audiobook.py + chapters/book-2/_glossary/ | Ch1 MP3 2.96MB+ growing; ~2.5h projected; substitutions confirmed firing (MERIDIAN-7) | ~3000 |
+| 01:05 | Session end: 43 writes across 28 files (keys.md, sync-daemon.md, schema-migration.md, README.md, _inventory.md) | 4 reads | ~66364 tok |
+| 07:25 | Created chapters/book-2/_glossary/mission-log-artifacts.md | — | ~598 |
+| 07:25 | Created chapters/book-2/_glossary/consortium-chain.md | — | ~622 |
+| 07:25 | Created chapters/book-2/_glossary/model-weights.md | — | ~528 |
+| 07:26 | Created chapters/book-2/_glossary/crdt.md | — | ~611 |
+| 07:26 | Created chapters/book-2/_glossary/commit-history.md | — | ~473 |
+| 07:26 | Created chapters/book-2/_glossary/control-plane.md | — | ~476 |
+| 07:26 | Created chapters/book-2/_glossary/telemetry.md | — | ~454 |
+| 07:27 | Created chapters/book-2/_glossary/timestamp.md | — | ~432 |
+| 07:27 | Created chapters/book-2/_glossary/encrypted.md | — | ~574 |
+| 07:27 | Edited chapters/book-2/_glossary/README.md | expanded (+12 lines) | ~370 |
+| 11:27 | drafted Tier 3 workshop entries (9; pass+deviation folded) | chapters/book-2/_glossary/{9 entries} | 33 entries total; workshop complete | ~3500 |
+| 07:28 | Session end: 53 writes across 37 files (keys.md, sync-daemon.md, schema-migration.md, README.md, _inventory.md) | 6 reads | ~75987 tok |
+| 07:28 | Created build/render-chapter.sh | — | ~963 |
+| 07:29 | Edited README.md | modified does() | ~650 |
+| 07:28 | docs(audiobook): added README §"Generating audiobook chapters" + build/render-chapter.sh wrapper (caffeinate -disu, nohup, --no-chapter-map, :8883 endpoint) | README.md, build/render-chapter.sh | new | ~1500 |
+| 11:30 | resume subagent built render-chapter.sh wrapper + updated README | build/render-chapter.sh + README.md | one-arg invocation; render at chunk 42/270 PID 15061 | ~1500 |
+
+## Session: 2026-05-07 07:30
+
+| Time | Action | File(s) | Outcome | ~Tokens |
+|------|--------|---------|---------|--------|
+| 07:38 | Created web/package.json | — | ~122 |
+| 07:38 | Created web/vite.config.js | — | ~87 |
+| 07:38 | Created web/index.html | — | ~174 |
+| 07:39 | Created web/server.js | — | ~3046 |
+| 07:39 | Created web/src/main.jsx | — | ~67 |
+| 07:39 | Created web/src/App.jsx | — | ~757 |
+| 07:39 | Created web/src/components/ChapterList.jsx | — | ~524 |
+| 07:40 | Created web/src/components/AudioPlayer.jsx | — | ~1102 |
+| 07:40 | Edited web/server.js | removed 3 lines | ~9 |
+| 07:40 | Edited web/server.js | inline fix | ~16 |
+| 07:40 | Edited web/vite.config.js | 2→2 lines | ~23 |
+| 07:40 | Created web/src/components/GeneratePanel.jsx | — | ~2359 |
+| 07:41 | Created web/src/components/ChapterView.jsx | — | ~792 |
+| 07:42 | Created web/src/App.css | — | ~3686 |
+| 07:42 | Edited web/package.json | 4→6 lines | ~37 |
+| 07:43 | Session end: 15 writes across 11 files (package.json, vite.config.js, index.html, server.js, main.jsx) | 2 reads | ~38831 tok |
+| 07:45 | Edited web/src/App.jsx | added 2 condition(s) | ~499 |
+| 07:46 | Edited web/src/App.jsx | CSS: width, minWidth | ~36 |
+| 07:46 | Edited web/src/App.jsx | 3→5 lines | ~32 |
+| 07:46 | Edited web/src/App.css | 3→2 lines | ~10 |
+| 07:46 | Edited web/src/App.css | expanded (+17 lines) | ~146 |
+| 07:46 | Session end: 20 writes across 11 files (package.json, vite.config.js, index.html, server.js, main.jsx) | 3 reads | ~39804 tok |
+| 07:48 | Created web/server.js | — | ~3327 |
+| 07:48 | Edited web/package.json | 5→5 lines | ~42 |
+| 07:48 | Edited web/src/App.jsx | added optional chaining | ~218 |
+| 07:48 | Session end: 23 writes across 11 files (package.json, vite.config.js, index.html, server.js, main.jsx) | 4 reads | ~49391 tok |
+| 07:53 | Created web/service/main.swift | — | ~1559 |
+| 07:54 | Created web/service/install.sh | — | ~1628 |
+| 07:54 | Created web/service/uninstall.sh | — | ~182 |
+| 08:10 | Installed macOS background service + menu bar app | web/service/ (4 files) | LaunchAgent auto-starts at login; Swift app in ~/Applications; server live on :3080 | ~1200 |
+| 07:54 | Session end: 26 writes across 14 files (package.json, vite.config.js, index.html, server.js, main.jsx) | 4 reads | ~53002 tok |
+| 07:55 | Session end: 26 writes across 14 files (package.json, vite.config.js, index.html, server.js, main.jsx) | 4 reads | ~53002 tok |
+| 07:59 | Edited web/server.js | added error handling | ~464 |
+| 08:00 | Edited web/server.js | added 2 condition(s) | ~384 |
+| 08:00 | Edited web/server.js | added nullish coalescing | ~390 |
+| 08:00 | Created web/src/components/GeneratePanel.jsx | — | ~2852 |
+| 08:01 | Edited web/src/App.css | expanded (+10 lines) | ~75 |
+| 08:01 | Session end: 31 writes across 14 files (package.json, vite.config.js, index.html, server.js, main.jsx) | 4 reads | ~54494 tok |
+
+## Session: 2026-05-07 08:07
+
+| Time | Action | File(s) | Outcome | ~Tokens |
+|------|--------|---------|---------|--------|
+| 08:07 | Edited web/service/install.sh | expanded (+41 lines) | ~356 |
+| 08:07 | Edited web/service/uninstall.sh | expanded (+8 lines) | ~244 |
+| 08:07 | Edited web/service/install.sh | 7→4 lines | ~57 |
+| 08:07 | Added menubar LaunchAgent to install.sh/uninstall.sh — menu bar app now auto-relaunches at login and after crashes | web/service/install.sh, web/service/uninstall.sh | done | ~800 |
+| 08:08 | Session end: 3 writes across 2 files (install.sh, uninstall.sh) | 1 reads | ~2652 tok |
+| 08:11 | Edited web/server.js | added nullish coalescing | ~242 |
+| 08:11 | Edited web/src/components/ChapterView.jsx | added 1 import(s) | ~60 |
+| 08:11 | Edited web/src/components/ChapterView.jsx | 23→27 lines | ~272 |
+| 08:11 | Created web/src/components/AudioMeta.jsx | — | ~394 |
+| 08:12 | Edited web/src/App.css | expanded (+64 lines) | ~424 |
+| 08:12 | Edited web/src/App.css | CSS: align-items | ~44 |
+| 08:12 | Edited web/src/components/ChapterView.jsx | 12→14 lines | ~147 |
+| 08:12 | Audio metadata strip — AudioMeta.jsx + server audio_info/planned_preset + CSS meta tags | web/server.js, ChapterView.jsx, AudioMeta.jsx, App.css | done | ~1200 |
+| 08:12 | Session end: 10 writes across 6 files (install.sh, uninstall.sh, server.js, ChapterView.jsx, AudioMeta.jsx) | 3 reads | ~8989 tok |
+| 08:14 | Session end: 10 writes across 6 files (install.sh, uninstall.sh, server.js, ChapterView.jsx, AudioMeta.jsx) | 3 reads | ~8989 tok |
+| 08:18 | Session end: 10 writes across 6 files (install.sh, uninstall.sh, server.js, ChapterView.jsx, AudioMeta.jsx) | 3 reads | ~8989 tok |
+| 08:23 | Session end: 10 writes across 6 files (install.sh, uninstall.sh, server.js, ChapterView.jsx, AudioMeta.jsx) | 3 reads | ~8989 tok |
+| 08:28 | Session end: 10 writes across 6 files (install.sh, uninstall.sh, server.js, ChapterView.jsx, AudioMeta.jsx) | 4 reads | ~8989 tok |
+| 08:29 | Edited web/src/components/ChapterList.jsx | added optional chaining | ~157 |
+| 08:29 | Edited web/src/App.css | CSS: opacity | ~118 |
+| 08:29 | Session end: 12 writes across 7 files (install.sh, uninstall.sh, server.js, ChapterView.jsx, AudioMeta.jsx) | 4 reads | ~9264 tok |
+| 08:34 | Session end: 12 writes across 7 files (install.sh, uninstall.sh, server.js, ChapterView.jsx, AudioMeta.jsx) | 4 reads | ~9264 tok |
+| 08:39 | Session end: 12 writes across 7 files (install.sh, uninstall.sh, server.js, ChapterView.jsx, AudioMeta.jsx) | 5 reads | ~34486 tok |
+| 08:39 | Edited web/server.js | added error handling | ~281 |
+| 08:39 | Edited web/server.js | added nullish coalescing | ~243 |
+| 08:39 | Edited web/server.js | 7→8 lines | ~126 |
+| 08:40 | Session end: 15 writes across 7 files (install.sh, uninstall.sh, server.js, ChapterView.jsx, AudioMeta.jsx) | 5 reads | ~35601 tok |
+| 08:40 | Edited web/server.js | added 1 condition(s) | ~113 |
+| 08:40 | Edited web/server.js | added 1 condition(s) | ~124 |
+| 08:40 | Session end: 17 writes across 7 files (install.sh, uninstall.sh, server.js, ChapterView.jsx, AudioMeta.jsx) | 5 reads | ~35894 tok |
+| 08:42 | Edited build/audiobook.py | modified strip_id3v2() | ~576 |
+| 08:42 | Edited build/audiobook.py | expanded (+13 lines) | ~246 |
+| 08:43 | Edited web/server.js | added error handling | ~574 |
+| 08:43 | Edited web/server.js | modified readMp3TtsTags() | ~84 |
+| 08:43 | Edited web/server.js | Sidecar() → readMp3TtsTags() | ~186 |
+| 08:43 | render died chunk 90/270 — chatterbox queue full (503), worker wedged. Logged bug-212. Awaiting server restart on Windows GPU box. | build/audiobook.py, .wolf/buglog.json | failed | ~3000 |
+| 08:44 | Edited web/server.js | added 3 condition(s) | ~744 |
+| 08:44 | Edited web/server.js | 3→4 lines | ~46 |
+| 08:44 | Edited web/server.js | 3→4 lines | ~48 |
+| 08:44 | Edited web/server.js | 5→5 lines | ~75 |
+| 08:44 | Edited web/server.js | 5→3 lines | ~57 |
+| 08:44 | Session end: 27 writes across 8 files (install.sh, uninstall.sh, server.js, ChapterView.jsx, AudioMeta.jsx) | 6 reads | ~40650 tok |
+| 08:44 | Embed TTS metadata in MP3 ID3 TXXX tags via audiobook.py embed_tts_tags(); server reads tags cache as highest priority source | build/audiobook.py, web/server.js | done | ~800 |
+| 08:44 | Session end: 27 writes across 8 files (install.sh, uninstall.sh, server.js, ChapterView.jsx, AudioMeta.jsx) | 6 reads | ~40650 tok |
+| 08:52 | Created web/server.js | — | ~7369 |
+| 08:52 | Created web/src/App.jsx | — | ~1671 |
+| 08:53 | Created web/src/components/QueuePanel.jsx | — | ~3416 |
+| 08:53 | Created web/src/components/AudioPlayer.jsx | — | ~1632 |
+| 08:53 | Created web/src/components/ChapterView.jsx | — | ~1154 |
+| 08:54 | Edited web/src/App.css | expanded (+382 lines) | ~2710 |
+| 08:54 | Edited web/src/App.css | CSS: display, flex-direction, min-height | ~46 |
+| 08:57 | Session end: 34 writes across 11 files (install.sh, uninstall.sh, server.js, ChapterView.jsx, AudioMeta.jsx) | 11 reads | ~62182 tok |
+| 08:58 | Session end: 34 writes across 11 files (install.sh, uninstall.sh, server.js, ChapterView.jsx, AudioMeta.jsx) | 11 reads | ~62182 tok |
+| 09:07 | Edited web/server.js | added error handling | ~1371 |
+| 09:08 | Created web/src/components/ReviewPanel.jsx | — | ~1646 |
+| 09:08 | Created web/src/components/CommentToolbar.jsx | — | ~1690 |
+| 09:08 | Edited web/src/components/ChapterView.jsx | added 1 import(s) | ~74 |
+| 09:08 | Edited web/src/components/ChapterView.jsx | inline fix | ~32 |
+| 09:08 | Edited web/src/components/ChapterView.jsx | expanded (+7 lines) | ~134 |
+| 09:08 | Edited web/src/App.jsx | added 1 import(s) | ~81 |
+| 09:08 | Edited web/src/App.jsx | 2→4 lines | ~86 |
+| 09:08 | Edited web/src/App.jsx | expanded (+6 lines) | ~107 |
+| 09:08 | Edited web/src/App.jsx | expanded (+10 lines) | ~249 |
+| 09:08 | Edited web/src/App.jsx | 6→7 lines | ~69 |
+| 09:09 | Edited web/src/App.jsx | expanded (+11 lines) | ~171 |
+| 09:09 | Edited web/src/App.css | modified not() | ~1821 |
+
+## Session: 2026-05-07 09:13
+
+| Time | Action | File(s) | Outcome | ~Tokens |
+|------|--------|---------|---------|--------|
+| 09:14 | Edited web/server.js | added error handling | ~147 |
+| 09:14 | Edited web/src/components/AudioPlayer.jsx | inline fix | ~21 |
+| 09:15 | Edited web/src/components/AudioPlayer.jsx | added 1 condition(s) | ~48 |
+| 09:15 | Created web/src/components/ChapterView.jsx | — | ~2190 |
+| 09:15 | Edited web/src/App.css | expanded (+16 lines) | ~170 |
+| 13:20 | Implemented Whispersync-style text-audio sync: /api/chapters/:id/alignment endpoint, AudioPlayer onTimeUpdate prop, buildChunkMap fuzzy matching, .tts-active CSS highlight | server.js, AudioPlayer.jsx, ChapterView.jsx, App.css | complete | ~2000 |
+| 09:18 | Session end: 5 writes across 4 files (server.js, AudioPlayer.jsx, ChapterView.jsx, App.css) | 4 reads | ~11942 tok |
+| 09:20 | Edited web/src/components/ChapterView.jsx | CSS: fallback | ~248 |
+| 09:20 | Session end: 6 writes across 4 files (server.js, AudioPlayer.jsx, ChapterView.jsx, App.css) | 4 reads | ~12190 tok |
+| 09:27 | Created web/src/App.jsx | — | ~2490 |
+| 09:28 | Created web/src/components/ChapterView.jsx | — | ~3264 |
+| 09:28 | Edited web/src/components/AudioPlayer.jsx | modified AudioPlayer() | ~130 |
+| 09:28 | Edited web/src/components/AudioPlayer.jsx | 8→9 lines | ~72 |
+| 09:29 | Edited web/src/components/AudioPlayer.jsx | added 1 condition(s) | ~144 |
+| 09:29 | Edited web/src/App.css | CSS: border-radius, padding, transition | ~91 |
+| 08:55 | render died chunk 90 again — same poison chunk in 2nd run, server now unresponsive HTTP 000. Updated bug-212 (deterministic), added cerebrum Do-Not-Repeat. Awaiting human server restart on desktop-umt08rn. | .wolf/buglog.json, .wolf/cerebrum.md | failed | ~5000 |
+| 09:29 | Session end: 12 writes across 5 files (server.js, AudioPlayer.jsx, ChapterView.jsx, App.css, App.jsx) | 5 reads | ~18741 tok |
+| 09:31 | Session end: 12 writes across 5 files (server.js, AudioPlayer.jsx, ChapterView.jsx, App.css, App.jsx) | 5 reads | ~18741 tok |
+| 09:36 | Created web/src/components/AudioPlayer.jsx | — | ~1844 |
+| 09:37 | Created web/src/components/ChapterView.jsx | — | ~4458 |
+| 09:37 | Edited web/src/App.css | expanded (+37 lines) | ~356 |
+| 09:38 | Edited web/src/App.css | CSS: 1, 2, 3 | ~249 |
+| 09:38 | Session end: 16 writes across 5 files (server.js, AudioPlayer.jsx, ChapterView.jsx, App.css, App.jsx) | 5 reads | ~25648 tok |
+| 09:44 | Edited web/src/components/ChapterView.jsx | CSS: start_seconds | ~272 |
+| 09:44 | Edited web/server.js | expanded (+8 lines) | ~244 |
+| 09:44 | Edited web/src/components/ChapterView.jsx | 1→2 lines | ~35 |
+| 09:44 | Edited web/src/components/ChapterView.jsx | 2→3 lines | ~31 |
+| 09:44 | Edited web/src/components/ChapterView.jsx | 3→4 lines | ~48 |
+| 09:44 | Edited web/src/components/ChapterView.jsx | 6→11 lines | ~152 |
+| 09:44 | Edited web/src/App.css | CSS: opacity, letter-spacing | ~96 |
+| 09:45 | Session end: 23 writes across 5 files (server.js, AudioPlayer.jsx, ChapterView.jsx, App.css, App.jsx) | 5 reads | ~26656 tok |
+| 09:51 | Session end: 23 writes across 5 files (server.js, AudioPlayer.jsx, ChapterView.jsx, App.css, App.jsx) | 6 reads | ~31945 tok |
+| 09:55 | Edited build/audiobook.py | modified block() | ~226 |
+| 13:56 | added log-opener strip to narratable_text per CO directive | build/audiobook.py | bug-222 logged; verified Ch1/Ch5/Ch13; Ch1 cache invalidated | ~2200 |
+| 09:57 | Session end: 24 writes across 6 files (server.js, AudioPlayer.jsx, ChapterView.jsx, App.css, App.jsx) | 7 reads | ~57803 tok |
+| 10:16 | Edited chapters/book-2/_glossary/_audio_substitutions.yaml | expanded (+21 lines) | ~331 |
+| 14:17 | added Saint Petersburg / Doctor expansions to audio glossary; launched final render | _audio_substitutions.yaml + Sonnet subagent | 45 rules; bug-212 fix complete; render in flight | ~1500 |
+| 10:17 | Session end: 25 writes across 7 files (server.js, AudioPlayer.jsx, ChapterView.jsx, App.css, App.jsx) | 8 reads | ~59097 tok |
+| 10:27 | Created .pao-inbox/co-session-2026-05-07T14-27Z-web-reader-enhancements.md | — | ~1056 |
+| 14:27 | Session summary submitted to PAO inbox | .pao-inbox/co-session-2026-05-07T14-27Z-web-reader-enhancements.md | Covers: ID3 metadata, multi-track, queue, sticky player, keyboard shortcuts, session persistence, 3-layer TTS sync, editorial review system, alignment staleness detection | ~500 |
