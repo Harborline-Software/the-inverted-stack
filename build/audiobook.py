@@ -58,22 +58,31 @@ def _mp3_duration_seconds(mp3_bytes: bytes) -> float:
 REPO = Path(__file__).resolve().parent.parent
 CHAPTERS_DIR = REPO / "chapters"
 
-# Per architectural decision 2026-05-08, all draft + intermediate audio
-# artifacts live under the galley project (the editor); the book repo only
-# receives finalized epub/m4b on user-approved release.
-# Override paths via env vars when galley lives elsewhere on disk.
+# Per architectural decision 2026-05-08, draft + intermediate audio artifacts
+# live under the galley project (the editor), namespaced per bookId so the
+# user's library can hold many books. The book repo only receives finalized
+# epub/m4b on user-approved release.
+#
+# Path resolution (in priority order):
+#   1. GALLEY_AUDIO_DIR / GALLEY_ALIGNMENT_DIR env vars (full override)
+#   2. GALLEY_BUILD_ROOT / GALLEY_BOOK_ID env vars (per-book derivation)
+#   3. Default: ../galley/build/<book-id>/...  where book-id derives from
+#      this repo's directory name (e.g. "the-inverted-stack").
 import os as _os
-_GALLEY_BUILD_OUT = _os.environ.get(
-    "GALLEY_BUILD_OUT",
-    str((REPO.parent / "galley" / "build" / "output").resolve()),
-)
+_DEFAULT_BOOK_ID = REPO.name
+_GALLEY_BOOK_ID = _os.environ.get("GALLEY_BOOK_ID", _DEFAULT_BOOK_ID)
+_GALLEY_BUILD_ROOT = Path(_os.environ.get(
+    "GALLEY_BUILD_ROOT",
+    str((REPO.parent / "galley" / "build").resolve()),
+))
+_GALLEY_BOOK_DIR = _GALLEY_BUILD_ROOT / _GALLEY_BOOK_ID
 OUT_DIR = Path(_os.environ.get(
     "GALLEY_AUDIO_DIR",
-    str(Path(_GALLEY_BUILD_OUT) / "audiobook"),
+    str(_GALLEY_BOOK_DIR / "output" / "audiobook"),
 ))
 ALIGNMENT_DIR = Path(_os.environ.get(
     "GALLEY_ALIGNMENT_DIR",
-    str((REPO.parent / "galley" / "build" / "alignments").resolve()),
+    str(_GALLEY_BOOK_DIR / "alignments"),
 ))
 # Override the placeholder declared earlier so existing references still work.
 ALIGNMENTS_DIR = ALIGNMENT_DIR
