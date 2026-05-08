@@ -95,8 +95,8 @@ def _to_rel(p) -> str:
     After the galley relocation, output/alignment paths live under
     _GALLEY_BUILD_ROOT (outside REPO). Manifests still need stable strings,
     so try REPO first, then GALLEY_BUILD_ROOT; fall back to absolute posix.
-    Replaces ad-hoc `_to_rel(X)` call sites that
-    crashed when REPO didn't contain X.
+    Replaces older relative_to(REPO) call sites that crashed when REPO
+    didn't contain X (after the galley out-dir relocation).
     """
     p = Path(p).resolve()
     for anchor in (REPO, _GALLEY_BUILD_ROOT):
