@@ -89,6 +89,24 @@ ALIGNMENTS_DIR = ALIGNMENT_DIR
 SCRIPTS_DIR = OUT_DIR / "scripts"
 
 
+def _to_rel(p) -> str:
+    """Stringify a path as posix-relative to whichever well-known root holds it.
+
+    After the galley relocation, output/alignment paths live under
+    _GALLEY_BUILD_ROOT (outside REPO). Manifests still need stable strings,
+    so try REPO first, then GALLEY_BUILD_ROOT; fall back to absolute posix.
+    Replaces ad-hoc `_to_rel(X)` call sites that
+    crashed when REPO didn't contain X.
+    """
+    p = Path(p).resolve()
+    for anchor in (REPO, _GALLEY_BUILD_ROOT):
+        try:
+            return p.relative_to(anchor.resolve()).as_posix()
+        except ValueError:
+            continue
+    return p.as_posix()
+
+
 def volume_for_chapter(rel_path: str) -> str:
     """Map a chapter's repo-relative source path to its audiobook volume slug.
 
@@ -1628,17 +1646,17 @@ def render_chapter(
     alignment_path = ALIGNMENTS_DIR / f"{chapter_stem}.json"
     alignment_path.write_text(json.dumps({
         "chapter_stem": chapter_stem,
-        "source": str(md_path.relative_to(REPO).as_posix()),
-        "audio": str(out_path.relative_to(REPO).as_posix()),
+        "source": _to_rel(md_path),
+        "audio": _to_rel(out_path),
         "total_seconds": round(cumulative_seconds, 3),
         "chunks": alignment,
     }, indent=2, ensure_ascii=False), encoding="utf-8")
 
     return {
-        "source": str(md_path.relative_to(REPO).as_posix()),
-        "output": str(out_path.relative_to(REPO).as_posix()),
-        "script": str(script_path.relative_to(REPO).as_posix()),
-        "alignment": str(alignment_path.relative_to(REPO).as_posix()),
+        "source": _to_rel(md_path),
+        "output": _to_rel(out_path),
+        "script": _to_rel(script_path),
+        "alignment": _to_rel(alignment_path),
         "chunks": len(chunks),
         "chars": total_chars,
         "bytes": out_path.stat().st_size,
@@ -1894,11 +1912,11 @@ def main() -> None:
             script = build_script(md_path, engine=args.engine)
             script_path.parent.mkdir(parents=True, exist_ok=True)
             script_path.write_text(script, encoding="utf-8")
-            print(f"  wrote {script_path.relative_to(REPO).as_posix()} ({len(script):,} chars)")
+            print(f"  wrote {_to_rel(script_path)} ({len(script):,} chars)")
             continue
 
         if out_path.exists() and not args.force:
-            print(f"SKIP existing: {out_path.relative_to(REPO).as_posix()} (use --force to re-render)")
+            print(f"SKIP existing: {_to_rel(out_path)} (use --force to re-render)")
             continue
 
         preset_name, voice, speed = resolve_preset(rel)
@@ -1956,7 +1974,7 @@ def main() -> None:
 
     if not args.dry_run:
         print(f"\nTotal wall time: {time.time() - t_all:.1f}s")
-        print(f"Manifest: {manifest_path.relative_to(REPO).as_posix()}")
+        print(f"Manifest: {_to_rel(manifest_path)}")
 
 
 if __name__ == "__main__":
