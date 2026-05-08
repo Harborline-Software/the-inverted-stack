@@ -21,7 +21,9 @@ from pathlib import Path
 from openai import OpenAI
 
 # Whispersync alignment capture: emit per-chunk timing for EPUB 3 Media Overlays
-ALIGNMENTS_DIR = Path(__file__).resolve().parent.parent / "chapters" / "_voice-drafts" / "_alignments"
+# Alignments now live under galley too (relocated 2026-05-08); the constant
+# below is reassigned after the OUT_DIR / ALIGNMENT_DIR resolution further down.
+ALIGNMENTS_DIR = None  # set after env-var resolution
 
 
 _DURATION_RE = re.compile(r"time=(\d+):(\d+):(\d+(?:\.\d+)?)")
@@ -55,7 +57,26 @@ def _mp3_duration_seconds(mp3_bytes: bytes) -> float:
 
 REPO = Path(__file__).resolve().parent.parent
 CHAPTERS_DIR = REPO / "chapters"
-OUT_DIR = REPO / "build" / "output" / "audiobook"
+
+# Per architectural decision 2026-05-08, all draft + intermediate audio
+# artifacts live under the galley project (the editor); the book repo only
+# receives finalized epub/m4b on user-approved release.
+# Override paths via env vars when galley lives elsewhere on disk.
+import os as _os
+_GALLEY_BUILD_OUT = _os.environ.get(
+    "GALLEY_BUILD_OUT",
+    str((REPO.parent / "galley" / "build" / "output").resolve()),
+)
+OUT_DIR = Path(_os.environ.get(
+    "GALLEY_AUDIO_DIR",
+    str(Path(_GALLEY_BUILD_OUT) / "audiobook"),
+))
+ALIGNMENT_DIR = Path(_os.environ.get(
+    "GALLEY_ALIGNMENT_DIR",
+    str((REPO.parent / "galley" / "build" / "alignments").resolve()),
+))
+# Override the placeholder declared earlier so existing references still work.
+ALIGNMENTS_DIR = ALIGNMENT_DIR
 SCRIPTS_DIR = OUT_DIR / "scripts"
 
 
@@ -406,18 +427,20 @@ PRESETS_HIGGS = PRESETS_CHATTERBOX
 # on the Windows box requires it.
 ENGINES: dict[str, dict] = {
     "kokoro": {
-        # Default. Kokoro proxied via higgs-audio on the Windows GPU box
-        # (model="kokoro" routes the request to that box's local :8880).
-        # Live as of 2026-05-05 12:40 PT — the unified TTS API spec
-        # documents the routing; verified via probe: 745-char chunks
-        # synth in ~3.3s consistently (vs. 25-30s on the Mac CPU
-        # container, plus crash-restart cycles). Bearer auth required;
-        # set TTS_API_KEY env or pass --api-key.
+        # Default. Kokoro-FastAPI direct on the Windows GPU box at port 8880,
+        # same path structure as the Mac Docker (/v1), no auth required.
+        # ~8× faster than the Mac CPU container; voice catalog ~67 voices
+        # (vs. 58 on Mac Docker as of 2026-04-28). The earlier proxy-routed
+        # config (port 8881 with Bearer auth) was correct briefly in early May
+        # but the Inference Studio proxy topology changed (bug-189, 2026-05-07);
+        # the proxy now requires /api/v1/ prefix and adds a 30s timeout that
+        # is fine for Kokoro inference but unnecessary. The direct :8880/v1
+        # path bypasses the proxy entirely. Verified via probe 2026-05-07.
         "presets": PRESETS_KOKORO,
-        "default_base_url": "http://desktop-umt08rn:8881/v1",
+        "default_base_url": "http://desktop-umt08rn:8880/v1",
         "model_name": "kokoro",
-        "requires_auth": True,
-        "description": "Kokoro routed via higgs-audio proxy on Windows GPU box (port 8881; ~8× faster than Mac CPU; default as of 2026-05-05)",
+        "requires_auth": False,
+        "description": "Kokoro-FastAPI direct on Windows GPU box (port 8880; ~8× faster than Mac CPU; default as of 2026-05-07)",
     },
     "kokoro-local": {
         # Legacy direct-to-Mac path. Preserved for offline development
@@ -434,14 +457,19 @@ ENGINES: dict[str, dict] = {
     },
     "chatterbox": {
         "presets": PRESETS_CHATTERBOX,
-        # Override at the CLI with --base-url. Default is the Tailscale
-        # hostname for the Windows GPU box. Override examples:
-        #   CHATTERBOX_URL=http://192.168.1.50:8881/v1 python build/audiobook.py --engine chatterbox
-        #   --base-url http://desktop-umt08rn.taildefd38.ts.net:8881/v1
+        # Override at the CLI with --base-url. Default is the direct backend
+        # port on the Tailscale hostname for the Windows GPU box.
+        # NOTE (2026-05-07 bug-189): The Inference Studio reverse proxy at
+        # port 8881 routes TTS under /api/v1/{path} — NOT /v1/{path}. Use
+        # http://desktop-umt08rn:8881/api/v1 for the proxy path, or
+        # http://desktop-umt08rn:8883/api/v1 to hit the backend directly
+        # (no 30-second proxy gateway timeout on port 8883). For long
+        # ciufi-galeazzi sentences (>100 chars) the proxy timeout causes
+        # 504s that cascade into a retry storm; use port 8883 for final renders.
         # Server-side model name is "higgs" per the unified TTS API spec
         # (2026-05-05); update the model_name field if the server-side
         # alias changes.
-        "default_base_url": "http://desktop-umt08rn:8881/v1",
+        "default_base_url": "http://desktop-umt08rn:8883/api/v1",
         "model_name": "higgs",
         "requires_auth": True,
         "description": "Chatterbox/higgs (Resemble AI) on the Windows GPU box — voice-cloning, high-quality path",
@@ -826,6 +854,21 @@ def narratable_text(md: str, source_only: bool = False,
     is_neural = engine == "chatterbox"
     t = md
 
+    # Strip YAML front-matter (--- delimited block at the very start of the file).
+    # The horizontal-rule strip below only removes the `---` delimiter lines, leaving
+    # the key: value content (title, icm-stage, etc.) as spoken text — which causes
+    # slow inference on cloned TTS voices (pathological for the 30-second proxy timeout).
+    t = re.sub(r"\A---\n.*?\n---\n", "", t, flags=re.DOTALL)
+
+    # Strip Vol 2 log-opener block (Pattern A artifact): italicized "filed log"
+    # paragraphs between the YAML front-matter and the first prose paragraph,
+    # bookended below by a `---` horizontal rule. The print reader experiences
+    # this as a chapter-opening log-entry frame; the audio listener experiences
+    # it as ~90 seconds of bureaucratic boilerplate before the story starts.
+    # Only matches at the very start of the (post-YAML) text, so chapters
+    # without a log-opener pattern are unaffected. (CO directive 2026-05-07.)
+    t = re.sub(r"\A(?:\s*\*[^*]+\*)+\s*---\s*\n", "", t)
+
     # Strip HTML comments (ICM stage markers, target word counts, etc.)
     t = re.sub(r"<!--.*?-->", "", t, flags=re.DOTALL)
 
@@ -961,6 +1004,36 @@ def narratable_text(md: str, source_only: bool = False,
             # standalone forms — see CHATTERBOX_EXPANSIONS docstring.
             for pat, repl in CHATTERBOX_EXPANSIONS:
                 t = re.sub(pat, repl, t)
+
+        # ISO 8601 timestamp normalization for neural engines.
+        # Chatterbox's phonemizer stalls on "2026-09-15T11:18" — the
+        # T-separator and colon-less time cause inference to run >30s,
+        # busting the proxy gateway timeout. Convert to a spoken form:
+        # "2026-09-15T11:18" → "September 15, 2026, at 11:18"
+        # "2026-09-15T11:18:00" → "September 15, 2026, at 11:18"
+        # "2026-09-15" (date-only) → "September 15, 2026"
+        # Applied regardless of source_only since the proxy timeout
+        # affects both TTS and source-script builds.
+        _MONTHS = [
+            "", "January", "February", "March", "April", "May", "June",
+            "July", "August", "September", "October", "November", "December",
+        ]
+
+        def _expand_iso_ts(m: re.Match) -> str:
+            year, month, day = m.group(1), int(m.group(2)), int(m.group(3))
+            time_part = m.group(4)
+            month_name = _MONTHS[month] if 1 <= month <= 12 else m.group(2)
+            date_str = f"{month_name} {day}, {year}"
+            if time_part:
+                # Strip seconds if present ("T11:18:00" → "11:18")
+                hhmm = time_part[:5]
+                return f"{date_str}, at {hhmm}"
+            return date_str
+
+        t = re.sub(
+            r"\b(\d{4})-(\d{2})-(\d{2})(?:T(\d{2}:\d{2}(?::\d{2})?))?(?:Z|[+-]\d{2}:\d{2})?\b",
+            _expand_iso_ts, t
+        )
 
         # Proper-noun pronunciation lexicon. Espeak mispronounces foreign
         # names ("Tomás Ferreira" → "tomas ferrera"); the dashed
@@ -1185,12 +1258,57 @@ def strip_id3v2(mp3: bytes) -> bytes:
     return mp3[10 + size :]
 
 
+def embed_tts_tags(out_path: Path, *, engine: str, preset: str, voice: str,
+                   speed: float, mode: str,
+                   exaggeration=None, cfg_weight=None, temperature=None) -> None:
+    """Write TTS generation parameters as TXXX ID3 frames into the MP3 in-place.
+
+    Uses imageio_ffmpeg (already a project dep) — no extra system ffmpeg needed.
+    Silently skips on any error so a tagging failure never aborts a render.
+    """
+    try:
+        import imageio_ffmpeg
+        ffmpeg = imageio_ffmpeg.get_ffmpeg_exe()
+    except Exception:
+        return
+
+    tmp = out_path.with_name(out_path.stem + ".__tts_tag_tmp__.mp3")
+    cmd = [
+        ffmpeg, "-y", "-hide_banner", "-loglevel", "error",
+        "-i", str(out_path),
+        "-c", "copy",
+        "-id3v2_version", "3",
+        "-metadata", f"TTS-Engine={engine}",
+        "-metadata", f"TTS-Preset={preset}",
+        "-metadata", f"TTS-Voice={voice}",
+        "-metadata", f"TTS-Speed={speed:.4f}",
+        "-metadata", f"TTS-Mode={mode}",
+    ]
+    if exaggeration is not None:
+        cmd += ["-metadata", f"TTS-Exaggeration={exaggeration}"]
+    if cfg_weight is not None:
+        cmd += ["-metadata", f"TTS-CfgWeight={cfg_weight}"]
+    if temperature is not None:
+        cmd += ["-metadata", f"TTS-Temperature={temperature}"]
+    cmd.append(str(tmp))
+
+    try:
+        subprocess.run(cmd, check=True, capture_output=True)
+        import shutil
+        shutil.move(str(tmp), str(out_path))
+        print(f"  [tags] {engine}/{preset}/{voice} → {out_path.name}")
+    except Exception as e:
+        if tmp.exists():
+            tmp.unlink()
+        print(f"  [warn] embed_tts_tags failed: {e}", file=sys.stderr)
+
+
 SYNTH_HARD_CAP = 1200  # Kokoro prosody degrades past ~900 chars per call;
                        # 1200 is the safety net above CHUNK_CHAR_BUDGET's
                        # 1400 soft target for paragraph grouping.
 
 
-CHUNK_CACHE_DIR = REPO / "build" / "output" / "audiobook" / "_chunk_cache"
+CHUNK_CACHE_DIR = OUT_DIR / "_chunk_cache"
 
 
 def _chunk_cache_key(voice: str, speed: float, text: str,
@@ -1281,9 +1399,83 @@ def synth_chunk(client: OpenAI, voice: str, text: str, speed: float,
     raise RuntimeError(f"{model_name} synth failed after {retries} retries: {last_err!r}")
 
 
+_VOL2_AUDIO_SUBS_CACHE: list[tuple] | None = None
+
+
+def _load_vol2_audio_substitutions() -> list[tuple]:
+    """Load the Vol 2 audio-glossary substitutions YAML.
+
+    Returns a list of (compiled_regex, replacement_str, workshop_entry)
+    tuples in the order they appear in the YAML. Cached after first load.
+    Returns an empty list if the YAML is missing or unparseable, so the
+    audio pipeline degrades gracefully (Vol 2 chapters render as if no
+    glossary existed, matching Vol 1 behavior).
+    """
+    global _VOL2_AUDIO_SUBS_CACHE
+    if _VOL2_AUDIO_SUBS_CACHE is not None:
+        return _VOL2_AUDIO_SUBS_CACHE
+
+    yaml_path = REPO / "chapters" / "book-2" / "_glossary" / "_audio_substitutions.yaml"
+    if not yaml_path.exists():
+        _VOL2_AUDIO_SUBS_CACHE = []
+        return _VOL2_AUDIO_SUBS_CACHE
+
+    try:
+        import yaml  # PyYAML; ships with most Python distributions used here
+        data = yaml.safe_load(yaml_path.read_text(encoding="utf-8")) or {}
+    except Exception:
+        _VOL2_AUDIO_SUBS_CACHE = []
+        return _VOL2_AUDIO_SUBS_CACHE
+
+    rules = data.get("substitutions", []) or []
+    compiled: list[tuple] = []
+    for rule in rules:
+        pat = rule.get("pattern", "")
+        repl = rule.get("replacement", "")
+        case_sensitive = rule.get("case_sensitive", True)
+        flags = 0 if case_sensitive else re.IGNORECASE
+        try:
+            compiled.append((re.compile(pat, flags), repl, rule.get("workshop_entry", "")))
+        except re.error:
+            continue
+    _VOL2_AUDIO_SUBS_CACHE = compiled
+    return _VOL2_AUDIO_SUBS_CACHE
+
+
+def apply_vol2_audio_substitutions(text: str, source_path: Path) -> str:
+    """Apply Vol 2 audio-glossary substitutions to chapter text.
+
+    Substitutions are loaded from chapters/book-2/_glossary/_audio_substitutions.yaml
+    and applied sequentially in document order. Each pattern runs once
+    over the text; the YAML is ordered longest-pattern-first so compound
+    technical terms substitute before single-word patterns.
+
+    Vol 1 chapters and missing-YAML cases pass through unchanged.
+
+    Volume detection uses volume_for_chapter() against the path relative
+    to CHAPTERS_DIR. Paths outside CHAPTERS_DIR are treated as Vol 1
+    (pass-through) for safety.
+    """
+    try:
+        rel = source_path.resolve().relative_to(CHAPTERS_DIR.resolve()).as_posix()
+    except (ValueError, OSError):
+        return text
+    if volume_for_chapter(rel) != "vol-2":
+        return text
+
+    compiled = _load_vol2_audio_substitutions()
+    for regex, repl, _ in compiled:
+        text = regex.sub(repl, text)
+    return text
+
+
 def build_script(md_path: Path, engine: str = "kokoro") -> str:
     """Build the narration script from a chapter markdown file."""
     raw = md_path.read_text(encoding="utf-8")
+    # Vol 2 audio-glossary preprocessor — applies before narratable_text()
+    # so engine-aware text normalization runs on the substituted text.
+    # Vol 1 paths pass through unchanged.
+    raw = apply_vol2_audio_substitutions(raw, md_path)
     script = narratable_text(raw, engine=engine)
     # Chapter lead-in pause — gives listener a beat before the chapter title.
     script = "... \n\n" + script
@@ -1723,6 +1915,19 @@ def main() -> None:
             entry["cfg_weight"] = args.cfg_weight
         if args.temperature is not None:
             entry["temperature"] = args.temperature
+
+        embed_tts_tags(
+            out_path,
+            engine=args.engine,
+            preset=preset_name,
+            voice=voice,
+            speed=speed,
+            mode=entry["mode"],
+            exaggeration=args.exaggeration,
+            cfg_weight=args.cfg_weight,
+            temperature=args.temperature,
+        )
+
         by_source[entry["source"]] = entry
         manifest["chapters"] = [by_source[s] for s in [c["source"] for c in manifest.get("chapters", [])] + [entry["source"]] if s in by_source]
         # deduplicate preserving first-seen order
