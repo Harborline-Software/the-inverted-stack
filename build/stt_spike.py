@@ -2,7 +2,7 @@
 
 Usage:
     python3 build/stt_spike.py <chapter.mp3> <chapter.md>
-    python3 build/stt_spike.py --model base build/output/audiobook/ch01-*.mp3 chapters/.../ch01-*.md
+    python3 build/stt_spike.py --model base build/output/audiobook/ch01-*.mp3 vol-1/.../ch01-*.md
 
 Output:
     build/output/stt_spike/<chapter-stem>_diff.md  — word-level diff report

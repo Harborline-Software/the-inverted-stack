@@ -1,0 +1,277 @@
+# Vol 2 audio-pipeline substitutions
+#
+# Driven by chapters/book-2/_glossary/*.md "Audio replacement" rules.
+# Applied by build/audiobook.py:apply_vol2_audio_substitutions() before
+# narratable_text() runs, so engine-aware text normalization happens on
+# the substituted text. Vol 1 chapters are unaffected
+# (volume_for_chapter() gates the call).
+#
+# Pattern ordering: longest / most-specific patterns FIRST. Compound
+# replacements deliberately avoid containing the bare target words
+# (Bridge, Anchor) so subsequent single-word patterns don't double-fire.
+#
+# Substitutions are sequential; each `pattern` runs once over the text
+# in document order. Backreferences (\1, \2, …) are supported in
+# replacements via Python's re.sub.
+
+version: 1
+volume: vol-2
+
+substitutions:
+
+  # ─── Compound technical terms (must run before single-word patterns) ───
+
+  - pattern: '\bsync-replication-to-Bridge\b'
+    replacement: 'catch-up replication to the Sunfish cloud service'
+    case_sensitive: true
+    workshop_entry: bridge.md
+    notes: Drops "Bridge" from replacement so single-word "Bridge" pattern doesn't double-fire
+
+  - pattern: '\bBridge replication credentials\b'
+    replacement: 'cloud-side replication credentials'
+    case_sensitive: true
+    workshop_entry: bridge.md
+
+  - pattern: '\bBridge mirror\b'
+    replacement: 'cloud-side mirror copy'
+    case_sensitive: true
+    workshop_entry: bridge.md
+
+  - pattern: '\bAnchor model weights\b'
+    replacement: 'on-device model weights'
+    case_sensitive: true
+    workshop_entry: anchor.md
+
+  - pattern: '\bAnchor archive\b'
+    replacement: 'on-device archive'
+    case_sensitive: true
+    workshop_entry: anchor.md
+
+  - pattern: "\\bAnchor model's integrity-keys\\b"
+    replacement: "on-device model's integrity keys"
+    case_sensitive: true
+    workshop_entry: anchor.md
+
+  - pattern: '\bschema-version handshake\b'
+    replacement: 'record-version check'
+    case_sensitive: false
+    workshop_entry: schema-migration.md
+
+  - pattern: '\bschema migration\b'
+    replacement: 'records rewrite'
+    case_sensitive: false
+    workshop_entry: schema-migration.md
+
+  - pattern: '\bschema-evolution\b'
+    replacement: 'record-shape changes'
+    case_sensitive: false
+    workshop_entry: schema-migration.md
+
+  - pattern: '\bschema-version\b'
+    replacement: 'record-version'
+    case_sensitive: false
+    workshop_entry: schema-migration.md
+
+  - pattern: '\bmigration window\b'
+    replacement: 'rewrite window'
+    case_sensitive: false
+    workshop_entry: schema-migration.md
+
+  - pattern: '\bsync daemon\b'
+    replacement: 'background sync helper'
+    case_sensitive: false
+    workshop_entry: sync-daemon.md
+
+  - pattern: '\bsync queue\b'
+    replacement: 'catch-up queue'
+    case_sensitive: false
+    workshop_entry: sync-daemon.md
+
+  - pattern: '\bgossip protocol\b'
+    replacement: 'rumor-style protocol'
+    case_sensitive: false
+    workshop_entry: gossip-protocol.md
+
+  - pattern: '\bgossip layer\b'
+    replacement: 'rumor-style protocol layer'
+    case_sensitive: false
+    workshop_entry: gossip-protocol.md
+
+  - pattern: '\bclock-skew\b'
+    replacement: 'clock drift'
+    case_sensitive: false
+    workshop_entry: clock-drift.md
+
+  - pattern: '\bkey envelope\b'
+    replacement: 'two-layer key system'
+    case_sensitive: false
+    workshop_entry: key-envelope.md
+
+  - pattern: '\benvelope encryption\b'
+    replacement: 'two-layer encryption'
+    case_sensitive: false
+    workshop_entry: key-envelope.md
+
+  - pattern: '\binstrumentation-data-class-(\d+)\b'
+    replacement: 'data class \1'
+    case_sensitive: false
+    workshop_entry: data-class.md
+
+  - pattern: '\bcompromised relay\b'
+    replacement: 'compromised message-relay server'
+    case_sensitive: false
+    workshop_entry: relay.md
+
+  - pattern: '\brelay handoff token\b'
+    replacement: 'relay-server handoff key'
+    case_sensitive: false
+    workshop_entry: relay.md
+
+  - pattern: '\brelay layer\b'
+    replacement: 'message-relay layer'
+    case_sensitive: false
+    workshop_entry: relay.md
+
+  - pattern: '\brelay queue\b'
+    replacement: "message-relay's waiting list"
+    case_sensitive: false
+    workshop_entry: relay.md
+
+  - pattern: '\bForsaken Reveal\b'
+    replacement: 'Forsaken-narrative Reveal'
+    case_sensitive: true
+    workshop_entry: forsaken.md
+    notes: Pacing cue for narrator; hyphenation prompts pause-reading of the proper noun
+
+  # ─── Acronyms — full first-name expansion (listener has zero anchor) ───
+
+  - pattern: '\bKEK\b'
+    replacement: 'key encryption key'
+    case_sensitive: true
+    workshop_entry: key-envelope.md
+
+  - pattern: '\bDEK\b'
+    replacement: 'data encryption key'
+    case_sensitive: true
+    workshop_entry: key-envelope.md
+
+  # ─── Single-word proper-noun expansions (case-sensitive — preserve everyday lowercase) ───
+
+  - pattern: '\bBridge\b'
+    replacement: 'Bridge service'
+    case_sensitive: true
+    workshop_entry: bridge.md
+    notes: Capital B = Sunfish accelerator. Lowercase "bridge" (boat command station) is left untouched by case-sensitive match.
+
+  - pattern: '\bAnchor\b'
+    replacement: 'Anchor system'
+    case_sensitive: true
+    workshop_entry: anchor.md
+    notes: Capital A = Sunfish accelerator. Lowercase "anchor" (boat anchor at pier) untouched.
+
+  # ─── Tier 2 — print-confusion priority (added 2026-05-06) ───
+  #
+  # These substitutions handle compound technical terms whose components
+  # are everyday-readable but whose combined sense is jargon. Single-word
+  # substitutions for Tier 2 terms (handshake, node, replication, custody,
+  # etc.) are deliberately omitted in v1 — the bare words appear in too
+  # many non-technical contexts and would over-substitute. Print-side
+  # lightening pass handles those occurrences with explicit modifiers.
+
+  - pattern: '\bsupply-chain compromise\b'
+    replacement: 'supply-chain attack'
+    case_sensitive: false
+    workshop_entry: compromise.md
+
+  - pattern: '\bchain of custody\b'
+    replacement: 'the responsibility chain'
+    case_sensitive: false
+    workshop_entry: custody.md
+
+  - pattern: '\bhash-chain\b'
+    replacement: 'cryptographically linked chain'
+    case_sensitive: false
+    workshop_entry: audit-log.md
+
+  - pattern: '\bhash-chained\b'
+    replacement: 'cryptographically linked'
+    case_sensitive: false
+    workshop_entry: audit-log.md
+
+  - pattern: '\bsigned audit-log entries\b'
+    replacement: 'signed entries in the action record'
+    case_sensitive: false
+    workshop_entry: audit-log.md
+
+  - pattern: '\bfailure-mode flag\b'
+    replacement: 'failure-indicator field'
+    case_sensitive: false
+    workshop_entry: data-class.md
+
+  - pattern: '\bfailure-mode reporting\b'
+    replacement: 'failure-indicator reporting'
+    case_sensitive: false
+    workshop_entry: data-class.md
+
+  - pattern: '\bsurface comms\b'
+    replacement: 'surface communications'
+    case_sensitive: false
+    workshop_entry: surface-window.md
+
+  - pattern: '\bmanifest signature\b'
+    replacement: 'cryptographic stamp on the inventory'
+    case_sensitive: false
+    workshop_entry: manifest.md
+
+  - pattern: '\brollback path verified\b'
+    replacement: 'undoing-procedure verified'
+    case_sensitive: false
+    workshop_entry: rollback.md
+
+  - pattern: '\bautomatic rollback\b'
+    replacement: 'automatic undoing'
+    case_sensitive: false
+    workshop_entry: rollback.md
+
+  - pattern: '\bthird-party read-confirmation\b'
+    replacement: 'three-party check that all three see the same thing'
+    case_sensitive: false
+    workshop_entry: quorum.md
+
+  - pattern: '\bthree-party read-confirmation\b'
+    replacement: 'three-party check that all three see the same thing'
+    case_sensitive: false
+    workshop_entry: quorum.md
+
+  - pattern: '\bread-confirmation\b'
+    replacement: 'read check'
+    case_sensitive: false
+    workshop_entry: quorum.md
+
+  - pattern: '\bendpoint compromise\b'
+    replacement: 'device compromise'
+    case_sensitive: false
+    workshop_entry: endpoint.md
+    notes: Vol 1 cross-reference; security-domain meaning of endpoint
+
+  # ─── Abbreviation hazards (added 2026-05-07; bug-212 root cause) ───
+  #
+  # Period-after-abbreviation creates a poison chunk on Chatterbox: the
+  # per-sentence chunker splits on period+space, producing a fragment
+  # that wedges the inference worker. Source-edit alternative was
+  # rejected (St. Petersburg is canonical Anna prose across 8 chapters);
+  # audio-only expansion preserves print canon and matches Anna's formal
+  # register on the listener side.
+
+  - pattern: '\bSt\. Petersburg\b'
+    replacement: 'Saint Petersburg'
+    case_sensitive: true
+    workshop_entry: __abbreviation-hazard
+    notes: Bug-212 deterministic poison chunk; St.-period split wedges Chatterbox inference worker.
+
+  - pattern: '\bDr\. ([A-Z])'
+    replacement: 'Doctor \1'
+    case_sensitive: true
+    workshop_entry: __abbreviation-hazard
+    notes: Same hazard pattern (Dr. Holm, Dr. Stefan Reinhardt). Backref \1 preserves the capitalized name's first letter.
+

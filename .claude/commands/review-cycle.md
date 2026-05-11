@@ -12,7 +12,7 @@ Run a bounded loop that alternates literary-board review with targeted resolutio
 /review-cycle <chapter-id> [<chapter-id>...] [--max-passes N] [--target S] [--quorum Q] [--plateau D] [--auto-apply]
 ```
 
-- `<chapter-id>` — one or more: `ch01`, `ch03`, `ch11`, etc. Resolves to `chapters/**/<chapter-id>-*.md`
+- `<chapter-id>` — one or more: `ch01`, `ch03`, `ch11`, etc. Resolves to `vol-1/**/<chapter-id>-*.md`
 - `--max-passes N` (default **3**) — hard cap on review+resolve iterations per chapter
 - `--target S` (default **8.5**) — target aggregate board score; stop when met
 - `--quorum Q` (default **9**) — number of individual critics voting PUBLISH needed to exit

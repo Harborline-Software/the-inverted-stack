@@ -192,7 +192,7 @@ All four new entries resolve in both directions (in-text → ref list and ref li
 
 ## 13. Edits applied
 
-**File:** `chapters/part-3-reference-architecture/ch15-security-architecture.md`
+**File:** `vol-1/part-3-reference-architecture/ch15-security-architecture.md`
 
 - Line 621 (single edit): rewrote the RFC 3161 paragraph for two corrections at once:
   1. Converted CLAIM marker to design-decisions reference annotation.
@@ -200,7 +200,7 @@ All four new entries resolve in both directions (in-text → ref list and ref li
   3. Tightened "the SHA-256 hash" to "a hash of the receipt event (SHA-256 by default)" — preserves the architecture's default while honoring RFC 3161's algorithm flexibility.
   4. Tightened "a signed token containing the hash, the TSA identity, and the authority's certified time" to "a signed time-stamp token whose `TSTInfo` structure binds the message imprint, the TSA identity, and the authority's certified time" — names the actual ASN.1 structure and uses RFC 3161's `messageImprint` term.
 
-**File:** `chapters/appendices/appendix-b-threat-model-worksheets.md`
+**File:** `vol-1/appendices/appendix-b-threat-model-worksheets.md`
 
 - No edits required. Section 5 verified clean.
 

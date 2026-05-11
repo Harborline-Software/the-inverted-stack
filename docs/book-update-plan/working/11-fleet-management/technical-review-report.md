@@ -2,7 +2,7 @@
 
 **Stage:** technical-review.
 **Run:** 2026-04-27.
-**Chapter:** `chapters/part-5-operational-concerns/ch21-operating-a-fleet.md` (~6,579 words).
+**Chapter:** `vol-1/part-5-operational-concerns/ch21-operating-a-fleet.md` (~6,579 words).
 **Reviewer:** technical-reviewer subagent.
 **Verdict:** PASS.
 

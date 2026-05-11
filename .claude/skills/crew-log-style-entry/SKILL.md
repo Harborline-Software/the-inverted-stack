@@ -12,7 +12,7 @@ Vol 2 of *The Inverted Stack* is, in-universe, Anna Yusupova's staff history of 
 That register also appears in shorter forms throughout the work:
 
 - The Anna mission-log fragment voice exemplar at `.pao-inbox/_creative/oss-architects-voices/02-anna-mission-log-fragment.md`
-- The Vol 1 closing chapter `chapters/closing/the-crossing.md`
+- The Vol 1 closing chapter `vol-1/closing/the-crossing.md`
 - Inset log-quote artifacts inside other chapters (when a character reads a prior log entry, or when a chapter renders an excerpt of a duty record)
 - Future Book 1 chapters where Joel keeps a Navy-style engineer's log; where the consortium ports record official communications; where Wanjiru maintains relay-operations records
 

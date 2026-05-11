@@ -9,7 +9,7 @@
 
 ## Scope
 
-§Forward Secrecy and Post-Compromise Security in `chapters/part-3-reference-architecture/ch15-security-architecture.md` (lines 403-474, ~1,480 words).
+§Forward Secrecy and Post-Compromise Security in `vol-1/part-3-reference-architecture/ch15-security-architecture.md` (lines 403-474, ~1,480 words).
 
 Out of scope and not touched:
 - §Endpoint Compromise (#47, immediately following)

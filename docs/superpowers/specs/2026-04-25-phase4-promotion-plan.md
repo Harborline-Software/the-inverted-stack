@@ -2,7 +2,7 @@
 
 **Background run ID:** `b1eesq6j1` (Phase 3 full orchestration, ~3–4 hours wall clock)
 
-After Phase 3 completes, every chapter (except those promoted early) will have a fresh draft at `chapters/_voice-drafts/final/<ch>.md` plus a Phase 3 log entry at `chapters/_voice-drafts/_log/<UTC>-<ch>-pass2.json` capturing full provenance. Phase 4 promotes each chapter's draft into the source location with a sidecar manifest.
+After Phase 3 completes, every chapter (except those promoted early) will have a fresh draft at `vol-1/_voice-drafts/final/<ch>.md` plus a Phase 3 log entry at `vol-1/_voice-drafts/_log/<UTC>-<ch>-pass2.json` capturing full provenance. Phase 4 promotes each chapter's draft into the source location with a sidecar manifest.
 
 ---
 
@@ -37,7 +37,7 @@ Phase 4 needs to verify the early promotion is still consistent (source SHA matc
 
 ## 26 chapters to promote
 
-Per `chapters/voice-plan.yaml`, the remaining 26 chapters and their voice mappings. Phase 4 promote/reject decision per chapter.
+Per `vol-1/voice-plan.yaml`, the remaining 26 chapters and their voice mappings. Phase 4 promote/reject decision per chapter.
 
 | # | Chapter | Voice | Decision | Notes |
 |---|---|---|---|---|
@@ -94,7 +94,7 @@ For each chapter:
    ```bash
    python build/promote.py --reject <ch> --reason "<reason>"
    ```
-   (Source unchanged; rejection logged to `chapters/_voice-drafts/_rejections.jsonl`.)
+   (Source unchanged; rejection logged to `vol-1/_voice-drafts/_rejections.jsonl`.)
 
 5. **Update ICM marker** in the chapter's HTML comment:
    - Promoted: `<!-- icm/voice-check -->` → `<!-- icm/approved -->` (or `voice-check` if you want a final read pass)

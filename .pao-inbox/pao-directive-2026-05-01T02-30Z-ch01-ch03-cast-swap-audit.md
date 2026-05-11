@@ -22,7 +22,7 @@ Read Ch1 §The Connectivity Gradient (lines ~85–105) and Ch3 §The Security Br
 
 ## Deliverable
 
-Apply edits directly to `chapters/part-1-thesis-and-pain/ch01-when-saas-fights-reality.md` and `chapters/part-1-thesis-and-pain/ch03-inverted-stack-one-diagram.md`. Do **not** commit — leave the working tree dirty per the 2026-04-29 commit-process directive (PAO commits chapter/manuscript changes; Yeoman edits). If a specific phrasing decision needs PAO judgment (e.g., whether to retain or replace a borrowed Bangla phrase), flag inline with `<!-- PAO: ... -->` and proceed with the rest of the audit.
+Apply edits directly to `vol-1/part-1-thesis-and-pain/ch01-when-saas-fights-reality.md` and `vol-1/part-1-thesis-and-pain/ch03-inverted-stack-one-diagram.md`. Do **not** commit — leave the working tree dirty per the 2026-04-29 commit-process directive (PAO commits chapter/manuscript changes; Yeoman edits). If a specific phrasing decision needs PAO judgment (e.g., whether to retain or replace a borrowed Bangla phrase), flag inline with `<!-- PAO: ... -->` and proceed with the rest of the audit.
 
 Write a `yeoman-resumed-2026-05-01THH-MMZ-cast-swap-audit-complete.md` beacon when done with: (a) what you flagged, (b) what you edited directly, (c) what you left alone and why.
 

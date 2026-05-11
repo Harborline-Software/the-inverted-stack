@@ -26,8 +26,8 @@
 | `agents/voice-grant.md` | Same |
 | `agents/voice-godin.md` | Same |
 | `agents/voice-lencioni.md` | Same |
-| `chapters/appendices/appendix-f-regulatory-coverage.md` | New — full jurisdiction × framework × chapter table |
-| `chapters/_part-2-preamble.md` *(optional, see D1)* | Council-disclosure note alternative location |
+| `vol-1/appendices/appendix-f-regulatory-coverage.md` | New — full jurisdiction × framework × chapter table |
+| `vol-1/_part-2-preamble.md` *(optional, see D1)* | Council-disclosure note alternative location |
 | `build/promote.py` | Phase 4 promotion script; hash verification, manifest writing, ICM marker update |
 | `build/check_audit.py` | Reference-integrity script: every jurisdiction removed from inline prose appears in Appendix F |
 | `build/check_stale.py` | Pre-Phase 4 mtime check: warn if any source is newer than its draft |
@@ -38,17 +38,17 @@
 | `tests/build/test_check_audit.py` | Tests for audit verification |
 | `tests/conftest.py` | Pytest fixtures (tmp repo, sample chapter) |
 | `pytest.ini` | pytest config |
-| `chapters/<part>/<ch>.manifest.json` × 27 | Created during Phase 4 — per-promoted-chapter audit sidecar |
+| `vol-1/<part>/<ch>.manifest.json` × 27 | Created during Phase 4 — per-promoted-chapter audit sidecar |
 
 ### Files modified in this plan
 
 | Path | Why |
 |---|---|
 | `build/voice-pass.py` | Read agents from `agents/` not `~/.claude/agents/`; parse polish/normalize mode; per-invocation logging; mode-aware prompt selection; stale-draft detection |
-| `chapters/voice-plan.yaml` | Add third column (polish/normalize); skip Appendix F |
-| `chapters/<part>/<ch>.md` × 24 | Phase 0a regulatory compression |
-| `chapters/front-matter/preface.md` | Phase 0c composite-character disclosure paragraph |
-| `chapters/part-2-council-reads-the-paper/ch05-enterprise-lens.md` | Phase 0c council-heading note (pending D1) |
+| `vol-1/voice-plan.yaml` | Add third column (polish/normalize); skip Appendix F |
+| `vol-1/<part>/<ch>.md` × 24 | Phase 0a regulatory compression |
+| `vol-1/front-matter/preface.md` | Phase 0c composite-character disclosure paragraph |
+| `vol-1/part-2-council-reads-the-paper/ch05-enterprise-lens.md` | Phase 0c council-heading note (pending D1) |
 | `agents/voice-*.md` × 6 | Phase 1 tuning (after mirror) |
 | `.gitignore` | Add `_voice-drafts/_log/` if not covered by parent rule |
 | `build/Makefile` | Add `promote-chapter`, `check-audit`, `check-stale` targets |
@@ -170,7 +170,7 @@ The single highest-leverage early gate. Compress two chapters, time it, project,
 ### Task 1: Compress Ch01 ¶73 (HIGH severity, 27 jurisdictions)
 
 **Files:**
-- Modify: `chapters/part-1-thesis-and-pain/ch01-when-saas-fights-reality.md`
+- Modify: `vol-1/part-1-thesis-and-pain/ch01-when-saas-fights-reality.md`
 
 - [ ] **Step 1: Note the start time**
 
@@ -178,7 +178,7 @@ Run: `date -u +%FT%TZ` and record in a scratch file (e.g., `.wolf/phase00-timing
 
 - [ ] **Step 2: Read the offending paragraph**
 
-Open `chapters/part-1-thesis-and-pain/ch01-when-saas-fights-reality.md`, locate paragraph 73 ("The jurisdictional scope of this compliance argument..."). The paragraph is named in the spec audit at `docs/superpowers/specs/2026-04-25-voice-pass-orchestration-audit.md`.
+Open `vol-1/part-1-thesis-and-pain/ch01-when-saas-fights-reality.md`, locate paragraph 73 ("The jurisdictional scope of this compliance argument..."). The paragraph is named in the spec audit at `docs/superpowers/specs/2026-04-25-voice-pass-orchestration-audit.md`.
 
 - [ ] **Step 3: Identify chapter-anchor jurisdiction(s)**
 
@@ -218,7 +218,7 @@ git commit -m "edit(ch01): compress jurisdictional enumeration ¶73 (Phase 0.0 t
 ### Task 2: Compress one MED-severity paragraph
 
 **Files:**
-- Modify: one of the MED-tier paragraphs from the audit (recommended: `chapters/part-3-reference-architecture/ch16-persistence-beyond-the-node.md` ¶67, 9 jurisdictions in 319 words)
+- Modify: one of the MED-tier paragraphs from the audit (recommended: `vol-1/part-3-reference-architecture/ch16-persistence-beyond-the-node.md` ¶67, 9 jurisdictions in 319 words)
 
 - [ ] **Step 1: Note start time** as in Task 1.
 
@@ -313,7 +313,7 @@ Same five sub-steps as Task 4 Step 2, but inline allowance is 4 jurisdictions in
 ### Task 6: Create Appendix F — Regulatory Coverage Map
 
 **Files:**
-- Create: `chapters/appendices/appendix-f-regulatory-coverage.md`
+- Create: `vol-1/appendices/appendix-f-regulatory-coverage.md`
 
 - [ ] **Step 1: Draft the appendix structure**
 
@@ -545,7 +545,7 @@ git commit -m "build: reference-integrity script for Phase 0a → Appendix F"
 ### Task 8: Insert composite-character disclosure paragraph in Preface
 
 **Files:**
-- Modify: `chapters/front-matter/preface.md`
+- Modify: `vol-1/front-matter/preface.md`
 
 - [ ] **Step 1: Read the current Preface and find the right insertion point**
 
@@ -571,7 +571,7 @@ git commit -m "edit(preface): composite-character disclosure paragraph (Phase 0c
 ### Task 9: Insert council-heading note at top of Ch05
 
 **Files:**
-- Modify: `chapters/part-2-council-reads-the-paper/ch05-enterprise-lens.md`
+- Modify: `vol-1/part-2-council-reads-the-paper/ch05-enterprise-lens.md`
 
 - [ ] **Step 1: Insert the note immediately after the Part II / Ch05 heading**
 
@@ -626,7 +626,7 @@ The single most consequential one-hour test in the plan. May rescope Phase 1 dra
 ### Task 11: Re-run Gladwell pass-1 on cleaned Ch01
 
 **Files:**
-- Output: `chapters/_voice-drafts/pass1/ch01-when-saas-fights-reality.md`
+- Output: `vol-1/_voice-drafts/pass1/ch01-when-saas-fights-reality.md`
 
 - [ ] **Step 1: Confirm Phase 0 commit landed for Ch01**
 
@@ -647,15 +647,15 @@ Expected: file exists with recent mtime.
 
 - [ ] **Step 1: Read the cleaned source**
 
-Open `chapters/part-1-thesis-and-pain/ch01-when-saas-fights-reality.md`.
+Open `vol-1/part-1-thesis-and-pain/ch01-when-saas-fights-reality.md`.
 
 - [ ] **Step 2: Read the new pass-1 (Gladwell only)**
 
-Open `chapters/_voice-drafts/pass1/ch01-when-saas-fights-reality.md`.
+Open `vol-1/_voice-drafts/pass1/ch01-when-saas-fights-reality.md`.
 
 - [ ] **Step 3: Read the existing pass-2 (Gladwell→Sinek)**
 
-Open `chapters/_voice-drafts/final/ch01-when-saas-fights-reality.md`.
+Open `vol-1/_voice-drafts/final/ch01-when-saas-fights-reality.md`.
 
 - [ ] **Step 4: Decide using the spec's decision matrix**
 
@@ -1208,11 +1208,11 @@ Expected: log files for ch01, ch04, ch05, ch11 across the relevant passes.
 
 - [ ] **Step 1: For each of the four pilots (Ch01, Ch04, Ch05, Ch11), read pass-1 output (skip Ch11 since it's sinek-direct, no pass-1)**
 
-Open each `chapters/_voice-drafts/pass1/<ch>.md` and read end to end.
+Open each `vol-1/_voice-drafts/pass1/<ch>.md` and read end to end.
 
 - [ ] **Step 2: For each, read pass-2 output**
 
-Open each `chapters/_voice-drafts/final/<ch>.md`.
+Open each `vol-1/_voice-drafts/final/<ch>.md`.
 
 - [ ] **Step 3: Grade PASS/FAIL with notes**
 
@@ -1361,7 +1361,7 @@ In `main()`, `plan_summary()`, and the iteration loops, treat `plan[ch]` as a tu
 
 - [ ] **Step 5: Update voice-plan.yaml with mode column**
 
-Open `chapters/voice-plan.yaml`. For each guest-voice entry, append `polish`. For each sinek entry, append `normalize`. Example:
+Open `vol-1/voice-plan.yaml`. For each guest-voice entry, append `polish`. For each sinek entry, append `normalize`. Example:
 
 ```yaml
 ch01-when-saas-fights-reality:    gladwell    polish

@@ -88,7 +88,7 @@ Two ~80-word additions, both in §The Principle: Convergence Is Not Correctness:
 
 ## Voice-pass status
 
-**Confirmed voice-passed (lencioni voice, per `chapters/voice-plan.yaml`).** Shevchenko-as-character is established through specific past action (L12); council deliberation reads as scene rather than catalog. Halvorsen's score of 7 reflects paragraph-architecture and copy-edit issues (item 1, item 4), not voice-pass gaps. **No voice re-pass needed.**
+**Confirmed voice-passed (lencioni voice, per `vol-1/voice-plan.yaml`).** Shevchenko-as-character is established through specific past action (L12); council deliberation reads as scene rather than catalog. Halvorsen's score of 7 reflects paragraph-architecture and copy-edit issues (item 1, item 4), not voice-pass gaps. **No voice re-pass needed.**
 
 ## Other findings (not priority-ordered)
 

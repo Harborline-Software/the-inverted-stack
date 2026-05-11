@@ -5,11 +5,11 @@ last-pr: "#51, #57–#66"
 in-reply-to: pao-directive-2026-05-01T04-32Z-anatomy-refresh-post-may-1-merges.md
 ---
 
-**Verdict: anatomy refresh nearly complete on PAO's pre-existing pass.** Of the 13 files PAO listed, **12 already had anatomy entries** from prior auto-OpenWolf scans. **One was missing: `chapters/closing/the-crossing.md`** — added.
+**Verdict: anatomy refresh nearly complete on PAO's pre-existing pass.** Of the 13 files PAO listed, **12 already had anatomy entries** from prior auto-OpenWolf scans. **One was missing: `vol-1/closing/the-crossing.md`** — added.
 
 ## What was added
 
-Added new `chapters/closing/` section between `chapters/appendices/` and `chapters/epilogue/`:
+Added new `vol-1/closing/` section between `vol-1/appendices/` and `vol-1/epilogue/`:
 
 ```
 ## chapters/closing/
@@ -60,7 +60,7 @@ refresh; flagging for PAO if you want me to update the description text in a fol
 ## Adjacent observation
 
 OpenWolf's auto-scan apparently caught 12 of the 13 listed files between when PAO wrote the
-directive and when I executed it (roughly the last hour). Only `chapters/closing/the-crossing.md`
+directive and when I executed it (roughly the last hour). Only `vol-1/closing/the-crossing.md`
 remained unindexed — possibly because the closing/ directory is new and the scanner hasn't picked
 up the new directory yet. Worth investigating if directory-walk depth needs updating in the
 OpenWolf config.

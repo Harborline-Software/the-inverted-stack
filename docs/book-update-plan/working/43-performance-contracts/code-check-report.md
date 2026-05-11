@@ -10,8 +10,8 @@
 
 Two new sections were drafted and inserted in iter-0011:
 
-- `chapters/part-3-reference-architecture/ch11-node-architecture.md` §"Performance Contracts and Main-Thread Isolation" (~1,490 words, between §Sunfish Package Map and the reference list)
-- `chapters/part-4-implementation-playbooks/ch20-ux-sync-conflict.md` §"Performance Budgets and Progressive Degradation" (~1,005 words, between §The First-Run Experience and §Key-Loss Recovery UX)
+- `vol-1/part-3-reference-architecture/ch11-node-architecture.md` §"Performance Contracts and Main-Thread Isolation" (~1,490 words, between §Sunfish Package Map and the reference list)
+- `vol-1/part-4-implementation-playbooks/ch20-ux-sync-conflict.md` §"Performance Budgets and Progressive Degradation" (~1,005 words, between §The First-Run Experience and §Key-Loss Recovery UX)
 
 Code-check verifies: Sunfish package references against the canonical Sunfish package list, no class APIs / method signatures appear in prose, all code snippets marked illustrative, no `<!-- TBD -->` / placeholder markers remain, all cross-reference targets resolve.
 

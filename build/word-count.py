@@ -39,7 +39,7 @@ TARGETS = {
     "appendix-g": 3000,
 }
 
-CHAPTERS_DIR = os.path.join(os.path.dirname(__file__), "..", "chapters")
+CHAPTERS_DIR = os.path.join(os.path.dirname(__file__), "..", "vol-1")
 
 def count_words(path):
     with open(path, encoding="utf-8") as f:

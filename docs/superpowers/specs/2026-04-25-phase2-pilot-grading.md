@@ -5,10 +5,10 @@
 **Order of execution:** Ch04 → Ch05 → Ch11 → Ch01 (Ch01 last so the chapter with original reader feedback gets the freshest read).
 
 **Files to read per pilot:**
-- Pass 1 (guest voice only): `chapters/_voice-drafts/pass1/<chapter>.md` (skipped for Ch11 — sinek-direct, no pass-1)
-- Pass 2 (after Sinek polish): `chapters/_voice-drafts/final/<chapter>.md`
+- Pass 1 (guest voice only): `vol-1/_voice-drafts/pass1/<chapter>.md` (skipped for Ch11 — sinek-direct, no pass-1)
+- Pass 2 (after Sinek polish): `vol-1/_voice-drafts/final/<chapter>.md`
 
-**Baseline for comparison (Ch01 only):** `chapters/_voice-drafts/_archive/<ts>-pre-phase2/final/ch01-when-saas-fights-reality.md` — the pre-tune output that received "too mechanical, fatiguing" feedback.
+**Baseline for comparison (Ch01 only):** `vol-1/_voice-drafts/_archive/<ts>-pre-phase2/final/ch01-when-saas-fights-reality.md` — the pre-tune output that received "too mechanical, fatiguing" feedback.
 
 ---
 

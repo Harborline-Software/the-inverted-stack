@@ -54,7 +54,7 @@ Read-order for any drafter or fresh session:
 4. `.pao-inbox/_creative/series-arc-sunfish-trajectory.md` — series-canon-only; never referenced from Vol 2 prose (LOCKED 2026-05-05)
 5. `.pao-inbox/_creative/vol-2-concept-note-2026-05-04.md` — 12-section synthesis (§6.2 captain-asks-engineer superseded by gravity canon)
 6. `.pao-inbox/_creative/vol-2-concept-locked-elements-2026-05-04.md` — running locks index
-7. `chapters/book-2/CHAPTER-OUTLINE.md` — working blueprint; rail assignments; log-opener patterns; per-chapter signature scenes; v3 / v4 version histories on Ch 2
+7. `vol-2/CHAPTER-OUTLINE.md` — working blueprint; rail assignments; log-opener patterns; per-chapter signature scenes; v3 / v4 version histories on Ch 2
 8. `.pao-inbox/_creative/character-sheets/` — Anna (with full voice-register spec), Joel/Priya/Wanjiru/Stefan (each with Book 1 plot-binding + Vol 2 archive-and-capture canon layers), Astrid + Helvetia + minor characters
 9. `.pao-inbox/_creative/forsaken-position-papers/` + `oss-architects-voices/` — voice references
 10. `.pao-inbox/_decisions/2026-05-04-vol2-boat-power-option-c-locked.md` — multi-segment mission timeline
@@ -73,8 +73,8 @@ Read-order for any drafter or fresh session:
 
 **Yeoman-side workstreams (gated on Yeoman bandwidth + verdict-positive):**
 
-1. **Vol 1 *The Crossing* revision pass** — `chapters/closing/the-crossing.md`. Align with multi-segment design + Anna-read-paper-not-built-it framing + leak-event-as-Diego-survival + Nansen/MERIDIAN-7 names. ~3-5 hour pass; supports Vol 2 (it's the seed for Ch 14). Gated on listen-test verdict (now positive).
-2. **Vol 1 preface dual-narrator framing reconciliation** — `chapters/front-matter/preface.md` line 13. Substantive editorial decision; supports Vol 2.
+1. **Vol 1 *The Crossing* revision pass** — `vol-1/closing/the-crossing.md`. Align with multi-segment design + Anna-read-paper-not-built-it framing + leak-event-as-Diego-survival + Nansen/MERIDIAN-7 names. ~3-5 hour pass; supports Vol 2 (it's the seed for Ch 14). Gated on listen-test verdict (now positive).
+2. **Vol 1 preface dual-narrator framing reconciliation** — `vol-1/front-matter/preface.md` line 13. Substantive editorial decision; supports Vol 2.
 3. **Vol 1 Ch 1 + Ch 3 cast-swap audit** — supports Vol 2 (cast names appear in Vol 2 prose).
 
 **Deferred (per Vol 2-only directive):**

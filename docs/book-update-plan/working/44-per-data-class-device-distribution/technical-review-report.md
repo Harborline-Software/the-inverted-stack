@@ -1,6 +1,6 @@
 # Technical Review Report — #44 Per-Data-Class Device Distribution
 
-**Chapter:** `chapters/part-3-reference-architecture/ch16-persistence-beyond-the-node.md`
+**Chapter:** `vol-1/part-3-reference-architecture/ch16-persistence-beyond-the-node.md`
 **Stage:** ICM Stage 4 (technical-review)
 **Reviewer:** technical-reviewer agent (resumed after watchdog timeout)
 **Date:** 2026-04-28

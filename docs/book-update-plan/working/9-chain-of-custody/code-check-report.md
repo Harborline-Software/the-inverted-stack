@@ -11,8 +11,8 @@
 
 Code-check pass on the two new sections delivered at iter-0023:
 
-1. **Ch15 §Chain-of-Custody for Multi-Party Transfers** (`chapters/part-3-reference-architecture/ch15-security-architecture.md`, lines 583–670, ~2,394 words). Inserted between §Supply Chain Security and §GDPR Article 17 and Crypto-Shredding.
-2. **App B §Section 5 — Chain-of-Custody Worksheet** (`chapters/appendices/appendix-b-threat-model-worksheets.md`, lines 237–300, ~548 words). Inserted after §Section 4 — Key Compromise Incident Response Template, before the appendix-wide closing italic block.
+1. **Ch15 §Chain-of-Custody for Multi-Party Transfers** (`vol-1/part-3-reference-architecture/ch15-security-architecture.md`, lines 583–670, ~2,394 words). Inserted between §Supply Chain Security and §GDPR Article 17 and Crypto-Shredding.
+2. **App B §Section 5 — Chain-of-Custody Worksheet** (`vol-1/appendices/appendix-b-threat-model-worksheets.md`, lines 237–300, ~548 words). Inserted after §Section 4 — Key Compromise Incident Response Template, before the appendix-wide closing italic block.
 
 ---
 

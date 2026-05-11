@@ -1,7 +1,7 @@
 """Pre-Phase-4 stale-draft detector.
 
-If any chapter source under chapters/<part>/ has mtime newer than its
-corresponding chapters/_voice-drafts/final/<ch>.md, the draft is stale
+If any chapter source under vol-1/ or vol-2/ has mtime newer than its
+corresponding <vol>/_voice-drafts/final/<ch>.md, the draft is stale
 and voice-pass needs to re-run for that chapter (council finding C8).
 
 Sources without a corresponding draft are NOT stale — they simply have
@@ -25,7 +25,7 @@ import sys
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
-CHAPTERS = REPO / "chapters"
+CHAPTER_ROOTS = [REPO / "vol-1", REPO / "vol-2"]
 
 
 def _sha256(path: Path) -> str:
@@ -68,7 +68,9 @@ def find_stale_drafts(chapters_root: Path) -> list[str]:
 
 
 def main() -> int:
-    stale = find_stale_drafts(CHAPTERS)
+    stale: list[str] = []
+    for root in CHAPTER_ROOTS:
+        stale.extend(find_stale_drafts(root))
     if stale:
         print("STALE drafts (source edited after voice-pass):")
         for s in stale:

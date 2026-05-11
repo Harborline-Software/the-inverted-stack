@@ -3,8 +3,8 @@
 **24 paragraphs compressed across 19 files. Total: −514 words.**
 
 Two paragraphs deliberately **skipped** (already-structured bulleted lists by region — TABLE-equivalent per spec; audiobook handles bullets fine):
-- `chapters/appendices/appendix-b-threat-model-worksheets.md` ¶56
-- `chapters/part-3-reference-architecture/ch12-crdt-engine-data-layer.md` ¶61
+- `vol-1/appendices/appendix-b-threat-model-worksheets.md` ¶56
+- `vol-1/part-3-reference-architecture/ch12-crdt-engine-data-layer.md` ¶61
 
 For each diff below: **OLD** (current text being replaced) → **NEW** (proposed compression). Mark each with **ACCEPT**, **REVISE** (with notes), or **REJECT**.
 

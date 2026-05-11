@@ -10,7 +10,7 @@ This project uses OpenWolf for context management. Read and follow .wolf/OPENWOL
 ## What This Repo Is
 
 *The Inverted Stack: Local-First Nodes in a SaaS World* — a ~83,500-word self-published
-practitioner book. Chapters live under `chapters/`. The writing plan is
+practitioner book. Chapters live under `vol-1/`. The writing plan is
 `inverted-stack-book-plan.md`. The approved structure is `book-structure.md`.
 
 **Audience:** Software architects, technical founders, senior engineers, and IT decision-makers
@@ -30,7 +30,7 @@ Key constraints:
 
 **Diagrams:** Mermaid (fenced code blocks with `mermaid` language tag). Pandoc-compatible; renders natively on GitHub. Use for architecture diagrams, flow charts, and sequence diagrams. Do not use ASCII art or external image files for diagrams that can be expressed in Mermaid.
 
-**Citations:** IEEE numeric style. In-text: [1], [2], [3] in order of first appearance. Full reference list compiled at final assembly. Follow all rules in `chapters/appendices/appendix-e-citation-style.md` exactly.
+**Citations:** IEEE numeric style. In-text: [1], [2], [3] in order of first appearance. Full reference list compiled at final assembly. Follow all rules in `vol-1/appendices/appendix-e-citation-style.md` exactly.
 
 ---
 

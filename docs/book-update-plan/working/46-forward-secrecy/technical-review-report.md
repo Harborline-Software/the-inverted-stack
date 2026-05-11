@@ -9,7 +9,7 @@
 
 ## Scope
 
-§Forward Secrecy and Post-Compromise Security in `chapters/part-3-reference-architecture/ch15-security-architecture.md` (lines 403-474, ~1,480 words) and the IEEE numeric references [14]-[19] in the Ch15 reference list (lines 659-669). Out of scope: §Endpoint Compromise (refs [20]-[28]) — owned by extension #47.
+§Forward Secrecy and Post-Compromise Security in `vol-1/part-3-reference-architecture/ch15-security-architecture.md` (lines 403-474, ~1,480 words) and the IEEE numeric references [14]-[19] in the Ch15 reference list (lines 659-669). Out of scope: §Endpoint Compromise (refs [20]-[28]) — owned by extension #47.
 
 Source-paper context note: the v13/v5 architecture papers in `source/` are not present on this machine (gitignored, not transferred during the recent macOS migration). The task brief acknowledges this is expected and that v13/v5 may not directly speak to the cryptographic protocols cited; verification is therefore against (a) chapter-internal architectural consistency, (b) primary-source crypto specifications [14]-[19] verified live, and (c) the Sunfish package canon in `.wolf/cerebrum.md`.
 
@@ -63,7 +63,7 @@ No class names, method signatures, constructor parameters, or invented APIs in t
 
 ### Edit 1 — WhatsApp whitepaper date corrected
 
-**File:** `chapters/part-3-reference-architecture/ch15-security-architecture.md` line 667
+**File:** `vol-1/part-3-reference-architecture/ch15-security-architecture.md` line 667
 
 **Change:** `Sep. 2021` → `Nov. 2021`
 

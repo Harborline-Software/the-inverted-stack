@@ -8,7 +8,7 @@ assignees: ctwoodwa
 
 ## Chapter
 
-**File:** `chapters/<part>/<filename>.md`
+**File:** `vol-1/<part>/<filename>.md`
 **Target word count:** <!-- from book-structure.md -->
 **Part milestone:** <!-- part-i / part-ii / part-iii / part-iv -->
 

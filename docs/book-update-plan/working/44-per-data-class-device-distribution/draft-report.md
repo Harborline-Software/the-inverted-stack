@@ -179,7 +179,7 @@ This is the loop-plan policy maximum (1 CLAIM per draft). Resolves against #46 o
 
 | File | Change |
 |---|---|
-| `chapters/part-3-reference-architecture/ch16-persistence-beyond-the-node.md` | Inserted §Per-Data-Class Device-Distribution between §Lazy Fetch and §Snapshot Format; added §References list at end ([1]–[6]). |
+| `vol-1/part-3-reference-architecture/ch16-persistence-beyond-the-node.md` | Inserted §Per-Data-Class Device-Distribution between §Lazy Fetch and §Snapshot Format; added §References list at end ([1]–[6]). |
 | `docs/book-update-plan/working/44-per-data-class-device-distribution/draft.md` | New file — working draft copy. |
 | `docs/book-update-plan/working/44-per-data-class-device-distribution/draft-report.md` | This file. |
 

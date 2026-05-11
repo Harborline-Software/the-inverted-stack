@@ -382,4 +382,4 @@ Strengths to preserve:
 - `@literary-board Tanaka only full` — East Asian editorial assessment of full manuscript
 - `@literary-board Volkov only ch01` — CIS/Eastern Europe review of the thesis chapter
 
-When given a chapter shorthand (e.g., "ch01"), resolve the full path using Glob on `chapters/**/*ch01*.md`. For `full`, read all chapter files under `chapters/` in manuscript order per `ASSEMBLY.md`.
+When given a chapter shorthand (e.g., "ch01"), resolve the full path using Glob on `vol-1/**/*ch01*.md`. For `full`, read all chapter files under `vol-1/` in manuscript order per `ASSEMBLY.md`.

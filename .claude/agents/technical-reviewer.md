@@ -21,7 +21,7 @@ Your job is to verify that every technical claim in a chapter draft is accurate,
 
 When given a chapter to review:
 
-1. **Read the chapter file** from `chapters/`.
+1. **Read the chapter file** from `vol-1/`.
 2. **Extract every technical claim** — assertions about how the system works, protocol details, package names, security properties, CRDT behavior, etc.
 3. **Verify each claim** against v13 and v5 by searching for the relevant section.
 4. **Flag unverifiable claims** by inserting `<!-- CLAIM: [claim text] — source? -->` inline.

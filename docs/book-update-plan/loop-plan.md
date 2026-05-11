@@ -6,7 +6,7 @@
 
 **Prerequisites:** Reader has access to:
 - This repo (`C:/Projects/the-inverted-stack`) at the root
-- The book chapters (`chapters/`)
+- The book chapters (`vol-1/`)
 - The voice / chapter / technical / prose review subagents (`.claude/agents/`)
 - The skills catalog (`.claude/skills/`)
 - The `state.yaml` file in this directory (for cross-iteration state)
@@ -406,7 +406,7 @@ Partial completion is acceptable — the loop can stop at any time and resume la
 
 ## §8. Coordination with other sessions
 
-This loop session edits BOOK CHAPTERS in `chapters/`. To avoid conflicts:
+This loop session edits BOOK CHAPTERS in `vol-1/`. To avoid conflicts:
 
 - The loop does NOT modify `docs/`, `.claude/`, `build/`, or `source/`
 - The loop does NOT modify other concurrent work (this repo is single-user; risk is low)

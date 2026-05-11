@@ -11,7 +11,7 @@ Usage:
     python build/imagegen.py "RV Nansen at Punta Arenas pier, ice-class research submarine, soft September morning light, photorealistic" \
         --slug nansen-departure-cover --category covers --width 1024 --height 768 --steps 30
 
-    python build/imagegen.py --batch chapters/book-2/_image-prompts.yaml
+    python build/imagegen.py --batch vol-2/_image-prompts.yaml
 
 Each generation:
   1. POSTs the prompt; receives prompt_id

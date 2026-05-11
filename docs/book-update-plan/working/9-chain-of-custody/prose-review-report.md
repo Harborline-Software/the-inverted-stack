@@ -11,8 +11,8 @@
 
 Strict scope per dispatch:
 
-- `chapters/part-3-reference-architecture/ch15-security-architecture.md` — §Chain-of-Custody for Multi-Party Transfers (H2 starting line 583, ending before §GDPR Article 17 and Crypto-Shredding at line 674). ~2,394 words.
-- `chapters/appendices/appendix-b-threat-model-worksheets.md` — §Section 5 — Chain-of-Custody Worksheet (lines 237–300). ~548 words.
+- `vol-1/part-3-reference-architecture/ch15-security-architecture.md` — §Chain-of-Custody for Multi-Party Transfers (H2 starting line 583, ending before §GDPR Article 17 and Crypto-Shredding at line 674). ~2,394 words.
+- `vol-1/appendices/appendix-b-threat-model-worksheets.md` — §Section 5 — Chain-of-Custody Worksheet (lines 237–300). ~548 words.
 
 Out of scope (sealed): §Forward Secrecy (refs [14]–[19]); §Endpoint Compromise (refs [20]–[27]); §Supply Chain Security; refs [1]–[27] in the Ch15 reference list; the HTML annotation header at Ch15:585.
 
@@ -179,8 +179,8 @@ None sharpens the sentence. The current phrasing communicates the load-bearing t
 
 | File | Edits | Categories |
 |---|---|---|
-| `chapters/part-3-reference-architecture/ch15-security-architecture.md` | 2 | Paragraph split (line 621); active voice + strong verbs (line 633). |
-| `chapters/appendices/appendix-b-threat-model-worksheets.md` | 1 | Active voice (line 280). |
+| `vol-1/part-3-reference-architecture/ch15-security-architecture.md` | 2 | Paragraph split (line 621); active voice + strong verbs (line 633). |
+| `vol-1/appendices/appendix-b-threat-model-worksheets.md` | 1 | Active voice (line 280). |
 
 Total: 3 edits across 2 files. No technical content changed. No citations changed. No cross-references changed. No new vocabulary introduced.
 

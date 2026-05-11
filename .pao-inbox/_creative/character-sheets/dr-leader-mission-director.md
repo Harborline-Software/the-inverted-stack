@@ -507,6 +507,6 @@ Three checks:
 ### Cross-references
 
 - **Voice exemplar:** `.pao-inbox/_creative/oss-architects-voices/02-anna-mission-log-fragment.md` is the canonical existing voice reference; this register specification builds on it
-- **Vol 1 closing chapter:** `chapters/closing/the-crossing.md` carries an early version of Anna's voice; the existing register here is the seed
+- **Vol 1 closing chapter:** `vol-1/closing/the-crossing.md` carries an early version of Anna's voice; the existing register here is the seed
 - **Anti-AI-tells skill:** `.claude/skills/anti-ai-tells/SKILL.md` — consult before finalizing any Anna passage
 - **Crew-log-style-entry skill:** `.claude/skills/crew-log-style-entry/SKILL.md` — generates Anna's formal-log and diary entries in this register

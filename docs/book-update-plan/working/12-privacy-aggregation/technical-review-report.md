@@ -10,7 +10,7 @@
 ## Scope
 
 Technical-review pass on the Ch15 §Privacy-Preserving Aggregation at Relay section
-(`chapters/part-3-reference-architecture/ch15-security-architecture.md`, original lines 710–764).
+(`vol-1/part-3-reference-architecture/ch15-security-architecture.md`, original lines 710–764).
 Code-check at iter-0029 returned PASS-with-claim-markers with one preserved CLAIM marker at §12c
 (line 750) and 11 queued items. This pass addresses all 11 items.
 

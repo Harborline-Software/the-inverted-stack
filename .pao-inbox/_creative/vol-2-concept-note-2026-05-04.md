@@ -329,7 +329,7 @@ The locked-elements doc can be updated to reflect closures in a separate small P
 
 ### 10.2 The Crossing revision pass (Vol 1 closing chapter)
 
-The existing `chapters/closing/the-crossing.md` reads as a single-dive 56-day mission with Anna-as-architect framing. Needs revision pass:
+The existing `vol-1/closing/the-crossing.md` reads as a single-dive 56-day mission with Anna-as-architect framing. Needs revision pass:
 - Multi-segment dive structure (3 under-ice segments + 2 intermediate surface windows)
 - Anna's relationship to the architecture: read the paper and bet on it (not built it)
 - Diego survives the leak event (not death scene)

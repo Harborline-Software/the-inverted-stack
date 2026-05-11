@@ -1,7 +1,12 @@
 # anatomy.md
 
-> Auto-maintained by OpenWolf. Last scanned: 2026-05-06T17:29:41.982Z
-> Files: 334 tracked | Anatomy hits: 0 | Misses: 0
+> Auto-maintained by OpenWolf. Last scanned: 2026-05-11T20:50:07.706Z
+> Files: 465 tracked | Anatomy hits: 0 | Misses: 0
+
+## ../../../../../tmp/
+
+- `merge_alignment.py` (~1610 tok)
+- `run_alignment.py` (~2059 tok)
 
 ## ../../../../tmp/
 
@@ -15,10 +20,19 @@
 
 - `pao-incident-2026-04-30T07-35Z-destructive-action-reset-hard.md` — PAO incident report — destructive `git reset --hard` against shared working tree (~1576 tok)
 
+## ../../../.claude/plans/
+
+- `smooth-swimming-moth.md` — Plan: Migrate web reader into galley monorepo (~2349 tok)
+
+## ../../../.claude/skills/janeway_first_person_voice/
+
+- `SKILL.md` — Voice — first-person captain register (Janeway-patterned) (~4501 tok)
+
 ## ../../.claude/projects/-Users-christopherwood-Projects-the-inverted-stack/memory/
 
 - `feedback_no_reset_hard_without_audit.md` (~701 tok)
-- `MEMORY.md` — Memory Index — The Inverted Stack Book Project (~1889 tok)
+- `feedback_vol1_out_of_scope.md` (~761 tok)
+- `MEMORY.md` — Memory Index — The Inverted Stack Book Project (~1971 tok)
 - `project_anna_texture_details.md` — Declares of (~694 tok)
 - `project_anna_voice_ciufi_galeazzi.md` — Where it lives in the codebase (~817 tok)
 - `project_audiobook_production_tiers.md` — Tier structure (industry framing) (~4352 tok)
@@ -54,13 +68,82 @@
 - `build-first-agent-prompt.md` — Build-First Agent Prompt — Sunfish All-Seven Sprint (~3765 tok)
 - `ENGINEERING-PRINCIPLES.md` — Engineering Principles (~1795 tok)
 
+## ../galley/apps/menubar/src/
+
+- `main.swift` — ── Constants ───────────────────────────────────────────────────────────────── (~1649 tok)
+
+## ../galley/apps/web/src/app/layouts/
+
+- `AppLayout.jsx` — SIDEBAR_MIN (~2726 tok)
+
+## ../galley/apps/web/src/app/router/
+
+- `index.jsx` — router (~431 tok)
+
+## ../galley/apps/web/src/features/annotations/
+
+- `CommentToolbar.jsx` — TYPES (~1820 tok)
+
+## ../galley/apps/web/src/features/audio-player/
+
+- `AudioPlayer.jsx` — AudioPlayer (~1851 tok)
+
+## ../galley/apps/web/src/features/build-logs/
+
+- `LogPanel.jsx` — POLL_INTERVAL (~3414 tok)
+
+## ../galley/apps/web/src/features/reader/
+
+- `ChapterView.jsx` — stripFrontmatter (~9178 tok)
+
+## ../galley/apps/web/src/features/review-sessions/
+
+- `ReviewPanel.jsx` — PANEL_MIN (~2105 tok)
+
+## ../galley/apps/web/src/features/tts-voices/
+
+- `GeneratePanel.jsx` — KOKORO_PRESETS (~2863 tok)
+
+## ../galley/apps/web/src/pages/library/
+
+- `LibraryPage.jsx` — LibraryPage — renders form (~1335 tok)
+
+## ../galley/apps/web/src/pages/logs/
+
+- `LogsPage.jsx` — LogsPage (~89 tok)
+
+## ../galley/apps/web/src/pages/queue/
+
+- `QueuePage.jsx` — QueuePage (~112 tok)
+
+## ../galley/apps/web/src/pages/read/
+
+- `ReadPage.jsx` — ReadPage (~395 tok)
+
+## ../galley/apps/web/src/pages/review/
+
+- `ReviewPage.jsx` — ReviewPage (~134 tok)
+
+## ../galley/integrations/
+
+- `library.json` (~496 tok)
+
+## ../galley/ops/mac/scripts/
+
+- `install.sh` — install.sh — set up Galley as a macOS background service (~1937 tok)
+
+## ../galley/services/book-server/
+
+- `server.js` — __dirname: loadLibrary, saveLibrary, readMp3TtsTags + 11 more (~11616 tok)
+
 ## ./
 
-- `.gitignore` — Git ignore rules (~130 tok)
+- `.gitignore` — Git ignore rules (~162 tok)
 - `ASSEMBLY.md` — Assembly Manifest (~4243 tok)
 - `book-structure.md` — BOOK-STRUCTURE (~8079 tok)
 - `LICENSE` (~204 tok)
 - `pytest.ini` (~34 tok)
+- `README.md` — Project documentation (~1112 tok)
 
 ## .claude/
 
@@ -122,9 +205,11 @@
 
 ## .pao-inbox/
 
+- `co-session-2026-05-07T14-27Z-web-reader-enhancements.md` — What was built (~990 tok)
 - `pao-directive-2026-05-01T22-45Z-audiobook-silence-trim-option-a.md` — PAO directive — audiobook silence-trim option A (ffmpeg silenceremove) (~812 tok)
 - `pao-directive-2026-05-04T16-30Z-stt-qc-spike-phase2-medium-on-ch15.md` — PAO directive — STT QC Spike Phase 2: medium model on ch15 only (~1267 tok)
 - `pao-directive-2026-05-05T14-15Z-yeoman-focus-vol2-only.md` — PAO directive — Yeoman focus shift to Vol 2 (CO directive 2026-05-05) (~1460 tok)
+- `pao-directive-2026-05-08T01-54Z-revert-to-sentence-level-highlighting.md` — PAO Directive — Revert web reader highlighting to sentence-level only (~1055 tok)
 - `yeoman-question-2026-04-29T23-22Z-phase3-complete.md` — <Section Name> (~952 tok)
 - `yeoman-question-2026-04-30T07-27Z-ch15-forward-pointers-routed.md` — Declares work (~499 tok)
 - `yeoman-question-2026-04-30T07-32Z-phase5-spot-check-stragglers.md` — Declares table (~876 tok)
@@ -147,7 +232,10 @@
 
 ## .pao-inbox/_creative/
 
+- `joel-teaching-register-canon.md` — Joel Reyes Teaching Register — Canon Note (~4098 tok)
+- `nansen-ingestion-canon.md` — Nansen Ingestion — Public-Domain Source Material Canon (~4036 tok)
 - `series-arc-sunfish-trajectory.md` — Series Arc — The Sunfish Trajectory (~3630 tok)
+- `sunfish-submarine-security-canon.md` — Sunfish Submarine Security & Key Management — Canon (~4574 tok)
 - `the-crossing-concept-note-2026-04-30.md` — Concept Note — The Crossing (Closing Chapter) (~4423 tok)
 - `vol-2-anchor-bridge-sync-mechanic.md` — Vol 2 — Anchor / Bridge Sync Mechanic (~3535 tok)
 - `vol-2-archive-and-capture-convention.md` — Vol 2 — Archive and Capture Convention (~5372 tok)
@@ -162,7 +250,7 @@
 - `priya-iyer-schema-migration.md` — Character Sheet — Priya Iyer, Lead Instrumentation Engineer + Sunfish Schema-Migration Contributor (~7336 tok)
 - `senior-technical-specialist.md` — Character Sheet — Senior Technical Specialist (~3440 tok)
 - `stefan-reinhardt-rival-architect.md` — Character Sheet — Dr. Stefan Reinhardt, Principal Architect (Rival Platform) (~7768 tok)
-- `wanjiru-kamau-security-policy.md` — Character Sheet — Wanjiru Kamau, Relay Operations + Sunfish Security Architecture / Key Management C (~9632 tok)
+- `wanjiru-kamau-security-policy.md` — Character Sheet — Wanjiru Kamau, Relay Operations + Sunfish Security Architecture / Key Management C (~9901 tok)
 
 ## .pao-inbox/_decisions/
 
@@ -174,6 +262,9 @@
 - `2026-05-04-phase4a-block1-closure.md` — Phase 4a Block 1 — Closure (~894 tok)
 - `2026-05-04-stt-qc-spike-phase1-outcome.md` — STT QC Spike — Phase 1 Outcome + Phase 2 Decision (~1880 tok)
 - `2026-05-04-voice-pass-queue-round2-plan.md` — Voice-Pass Queue — Round 2 Plan + UPF Meta-Validation (~3396 tok)
+- `2026-05-07-forced-alignment-evaluation.md` — Forced Alignment for Word-Level Whispersync — Evaluation (~2497 tok)
+- `2026-05-07-web-app-qa-dashboard-shape.md` — Web App QA Dashboard — Architectural Shape (~4125 tok)
+- `2026-05-08-prose-telemetry-platform.md` — Prose Telemetry Platform — "OpenTelemetry for Prose" (~5290 tok)
 - `antarctic-vision-chapter-concept-2026-04-30.md` — Antarctic Vision Chapter — Concept State and Resume Instructions (~5210 tok)
 - `co-seat-deferred-structural-decisions-2026-04-30.md` — CO-Seat Deferred Structural Decisions — Ch11 + Ch15 (~2015 tok)
 
@@ -203,13 +294,14 @@
 - `snapshot-2026-05-01-friday-windown.md` — State Snapshot — Friday 2026-05-01 windown (~954 tok)
 - `snapshot-2026-05-04-monday-morning.md` — State Snapshot — Monday 2026-05-04 morning (~1201 tok)
 - `snapshot-2026-05-05-tuesday-evening-vol2-listen-test-approved.md` — State Snapshot — Tuesday 2026-05-05 evening (Vol 2 listen-test approved; gravity canon validated) (~2290 tok)
+- `snapshot-2026-05-08-friday-windown-prose-telemetry-locked.md` — State Snapshot — Friday 2026-05-08 windown (prose-telemetry topic locked for Monday) (~1858 tok)
 
 ## build/
 
 - `__init__.py` — build/__init__.py (~6 tok)
 - `apply_phase0a.py` — One-shot Phase 0a HIGH-tier compressor. (~15490 tok)
 - `AUDIO-DOCKER.md` — Audiobook Generation — Docker Setup (~4120 tok)
-- `audiobook.py` — Generate audiobook MP3s from chapter markdown using a local Kokoro TTS server. (~23614 tok)
+- `audiobook.py` — Generate audiobook MP3s from chapter markdown using a local Kokoro TTS server. (~26381 tok)
 - `build_overlays.py` — Whispersync-capable EPUB build (Phases B-E). (~6341 tok)
 - `check_audit.py` — Reference-integrity check: every jurisdiction in inline prose appears in Appendix F. (~581 tok)
 - `check_first_use.py` — First-use rule checker. (~3348 tok)
@@ -221,6 +313,7 @@
 - `generate_chapter_overview.py` — Generate chapter-overview.md for the inverted-stack-conformance skill. (~874 tok)
 - `generate_implementation_spec.py` — Generate the human-readable implementation-specification.md from the (~3052 tok)
 - `imagegen.py` — Generate cover/character/atmosphere images via the higgs-audio image API. (~2556 tok)
+- `lexical_fatigue.py` — Lexical-fatigue detector — Phase 0 of the prose-telemetry platform. (~6764 tok)
 - `librivox_browse.py` — Browse LibriVox for usable narrator reference clips. (~3880 tok)
 - `lint.py` — Structural integrity checks for The Inverted Stack manuscript. (~2352 tok)
 - `m4b.py` — Build a single .m4b audiobook file from the per-chapter MP3s. (~2052 tok)
@@ -228,6 +321,7 @@
 - `normalize.py` — EBU R128 loudness normalization for the audiobook MP3s. (~2557 tok)
 - `promote.py` — Phase 4 promotion script. (~2233 tok)
 - `remediate_first_use.py` — Remediate first-use rule violations across all chapter sources. (~3156 tok)
+- `render-chapter.sh` — render-chapter.sh — generate audiobook MP3 for a single chapter. (~963 tok)
 - `stt_spike.py` — STT QC spike — Phase 1 word-level diff between source markdown and Whisper transcript. (~3045 tok)
 - `update_kleppmann_citation.py` — One-shot updater: standardize all Kleppmann et al. 2019 citations (~1568 tok)
 - `verify_loudness.py` — Verify normalized chapter MP3s land within their target loudness spec. (~2823 tok)
@@ -239,9 +333,19 @@
 
 - `kroki-mermaid.lua` — sha256, ensure_cache_dir, fetch_svg, CodeBlock (~1356 tok)
 
+## build/output/qa/
+
+- `ch01-departure.qa.json` (~1697 tok)
+- `SCHEMA.md` — Per-Chapter QA Schema (`*.qa.json`) (~2591 tok)
+
 ## chapters/
 
 - `voice-plan.yaml` — Voice-pass plan: chapter -> primary voice agent (pass 1) (~732 tok)
+
+## chapters/_voice-drafts/_alignments/
+
+- `ch01-departure.chatterbox.json.bak` — Backup of original Chatterbox-era alignment (schema v1, sentence-level only). (~1650 tok)
+- `ch01-departure.json` — Schema v2 alignment: sentence timing from aeneas 1.7.3 (macOS TTS), words[] linearly interpolated intra-sentence. 258 chunks, 257 spoken. (~13200 tok)
 
 ## chapters/_voice-drafts/final/
 
@@ -273,6 +377,22 @@
 - `epilogue-what-the-stack-owes-you.md` — Epilogue — What the Stack Owes You (~4845 tok)
 - `preface.md` — Preface (~2221 tok)
 
+## chapters/_voice-drafts/janeway-pilot/
+
+- `ch09-sync-daemon-under-drift.md` — Janeway-voice rewrite, Ch 9 (4,560 words; 21.6% reduction) (~6826 tok)
+- `ch09-sync-daemon-under-drift.original.md` — Byte-identical backup of canonical Ch 9 source (~8506 tok)
+- `ch10-aftermath-mission-that-once-was.md` — Janeway-voice rewrite, Ch 10 (3,921 words; 22.8% reduction) (~5828 tok)
+- `ch10-aftermath-mission-that-once-was.original.md` — Byte-identical backup of canonical Ch 10 source (~7470 tok)
+- `ch14-the-crossing.md` — Janeway-voice rewrite, Ch 14 (6,451 words; 44.9% reduction) (~9807 tok)
+- `ch14-the-crossing.original.md` — Byte-identical backup of canonical Ch 14 source (~17777 tok)
+- `ch16-final-ascent.md` (~5618 tok)
+
+## chapters/_voice-drafts/nansen-ingestion/
+
+- `ch03-ice-edge-arrival.craft-note.md` — Craft Note — Ch 3 Ice-Edge Arrival (~1990 tok)
+- `ch03-ice-edge-arrival.source.md` — Nansen Source — Ch 3 Ice-Edge Arrival (~965 tok)
+- `ch03-ice-edge-arrival.transformed.md` — Transformed Passage — Ch 3 Ice-Edge Arrival (~697 tok)
+
 ## chapters/_voice-drafts/pass1/
 
 - `ch01-when-saas-fights-reality.md` — Chapter 1 — When SaaS Fights Reality (~8835 tok)
@@ -287,6 +407,10 @@
 - `ch17-building-first-node.md` — Chapter 17 — Building Your First Node (~7425 tok)
 - `ch18-migrating-existing-saas.md` — Chapter 18 — Migrating an Existing SaaS (~7084 tok)
 - `ch20-ux-sync-conflict.md` — Chapter 20 — UX, Sync, and Conflict (~6490 tok)
+
+## chapters/_voice-drafts/towles-pilot/
+
+- `ch16-final-ascent.md` (~7139 tok)
 
 ## chapters/appendices/
 
@@ -303,13 +427,59 @@
 - `CHAPTER-OUTLINE.md` — Book 2 — Chapter-by-Chapter Outline (working blueprint) (~19118 tok)
 - `README.md` — Project documentation (~476 tok)
 
+## chapters/book-2/_glossary/
+
+- `_audio_substitutions.yaml` — Vol 2 audio-pipeline substitutions (~2572 tok)
+- `_inventory.md` — Vol 2 Translation Workshop — Term Inventory (~2722 tok)
+- `_inventory.md` — Vol 2 jargon inventory + triage table + tiered draft queue (~2200 tok)
+- `_lexical_fatigue_families.yaml` — Hand-curated word families for Phase 0 lexical-fatigue detection. (~848 tok)
+- `_observational_lemmas.yaml` — Observational vocabulary curated from Nansen's *Farthest North* (1897) — Project Gutenberg #30197. (~654 tok)
+- `anchor.md` — Anchor (Sunfish accelerator) (~775 tok)
+- `audit-log.md` — Audit log (hash-chain, watch log) (~730 tok)
+- `bridge.md` — Bridge (Sunfish accelerator) (~881 tok)
+- `clock-drift.md` — Clock drift (clock-skew, drift) (~593 tok)
+- `commit-history.md` — Commit history (~444 tok)
+- `compromise.md` — Compromise (compromised, supply-chain compromise) (~760 tok)
+- `consortium-chain.md` — Consortium chain (procurement chain) (~677 tok)
+- `control-plane.md` — Control plane (~447 tok)
+- `crdt.md` — CRDT (Conflict-free Replicated Data Type) (~572 tok)
+- `custody.md` — Custody (chain of custody) (~896 tok)
+- `data-class.md` — Data class (instrumentation-data-class, failure-mode flag, field-map) (~744 tok)
+- `encrypted.md` — Encrypted (encryption, decrypt) (~538 tok)
+- `endpoint.md` — Endpoint (~493 tok)
+- `forsaken.md` — Forsaken (Vol 2 narrative-arc proper noun) (~878 tok)
+- `gossip-protocol.md` — Gossip protocol (~509 tok)
+- `handshake.md` — Handshake (~581 tok)
+- `key-envelope.md` — Key envelope (KEK / DEK / envelope encryption) (~630 tok)
+- `keys.md` — Keys (~1058 tok)
+- `keys.md` — Workshop entry: keys = digital credentials; disambiguates keyboard/house keys (~280 tok)
+- `local-first.md` — Local-first (~729 tok)
+- `manifest.md` — Manifest (manifest signature) (~600 tok)
+- `mission-log-artifacts.md` — Mission log artifacts (pass log, deviation plot) (~560 tok)
+- `model-weights.md` — Model weights (Anchor model) (~495 tok)
+- `node.md` — Node (~560 tok)
+- `protocol.md` — Protocol (procedural vs technical) (~805 tok)
+- `quorum.md` — Quorum (two-party / three-party / read-confirmation) (~642 tok)
+- `README.md` — Project documentation (~2260 tok)
+- `README.md` — Vol 2 Translation Workshop — purpose, format, workflow (~480 tok)
+- `relay.md` — Relay (Sunfish managed relay) (~768 tok)
+- `replication.md` — Replication (replicate, replica) (~565 tok)
+- `rollback.md` — Rollback (roll forward, checkpoint) (~546 tok)
+- `schema-migration.md` — Schema migration (~664 tok)
+- `schema-migration.md` — Workshop entry: rewriting stored records into a new shape (~340 tok)
+- `surface-window.md` — Surface window (surface comms) (~703 tok)
+- `sync-daemon.md` — Sync daemon (~616 tok)
+- `sync-daemon.md` — Workshop entry: background helper for boat/shore catch-up (~260 tok)
+- `telemetry.md` — Telemetry (~426 tok)
+- `timestamp.md` — Timestamp (~405 tok)
+
 ## chapters/book-2/_reviews/
 
 - `ch02-recruitment-interview-review-2026-05-05T18-30Z.md` — 1. Big-picture assessment (~8146 tok)
 
 ## chapters/book-2/act-1/
 
-- `ch01-departure.md` — Vol 2 opener: Anna boards RV Nansen at Punta Arenas pier, September dawn, MERIDIAN-7 departure; sealed-hull transition established (~5289 tok)
+- `ch01-departure.md` (~5882 tok)
 - `ch02-recruitment-interview.md` — Vol 2 Ch 2: Joel–Anna recruitment interview; captain-asks-engineer dialogue engine; R1-BLOCK-rewrite admission as load-bearing trust beat; bunk-laptop canonical first-disclosure (~12000 tok)
 - `ch03-drake-passage-ice-edge.md` — Vol 2 Act 1: Drake Passage crossing, Anna's eleven-crossing history; defines "rough" on Drake's terms; Nansen transitions from Strait to open southern ocean (~7170 tok)
 - `ch04-first-submersion.md` — Vol 2 Act 1: RV Nansen dives below surface Day 7; Anna on bridge for the sealed-hull threshold; gangway metaphor closed; institutional pre-mission file on secondary display (~7355 tok)
@@ -534,9 +704,51 @@
 ## tests/build/
 
 - `__init__.py` — tests/build/__init__.py (~8 tok)
+- `_audio_substitutions.yaml` — Vol 2 audio-pipeline substitution rules (28 rules, sourced from 10 workshop entries) (~860 tok)
+- `anchor.md` — Workshop entry: Sunfish Anchor (on-device) vs boat anchor; audio-modifier pattern (~440 tok)
+- `audit-log.md` — Workshop entry: action record with tamper-evident chain (~440 tok)
+- `bridge.md` — Workshop entry: Sunfish Bridge (cloud connector) vs boat command bridge; audio-modifier pattern (~470 tok)
 - `ch12-beginning-of-the-end.md` — Vol 2 Ch 12 *Beginning of the End — Segment 3 Dive* (Day 39; 4,610 words; Pattern A log-opener; conditional-preservation plant; mission-as-survival rail) (~5500 tok)
 - `ch12-beginning-of-the-end.md` — Vol 2 Ch 12 (4,610 words; Day 39 Segment 3 dive; Pattern A; mission-as-survival rail) (~5500 tok)
+- `clock-drift.md` — Workshop entry: clocks gradually disagree; subsumes clock-skew + drift (~340 tok)
+- `commit-history.md` — Workshop entry: change history; story-edit-diary image (~280 tok)
+- `compromise.md` — Workshop entry: security sense (attacked/infiltrated) (~420 tok)
+- `consortium-chain.md` — Workshop entry: identity-chain disambiguator (~370 tok)
+- `control-plane.md` — Workshop entry: control layer; restaurant-manager image (~260 tok)
+- `crdt.md` — Workshop entry: conflict-free data type; auto-merge notebook image (~390 tok)
+- `custody.md` — Workshop entry: chain of responsibility; flags chain-ambiguity (~470 tok)
+- `data-class.md` — Workshop entry: data category sorting; folds instrumentation-data-class (~450 tok)
+- `encrypted.md` — Workshop entry: scrambled with a key; secret-language image (~290 tok)
+- `endpoint.md` — Workshop entry: connection address; light entry (~310 tok)
+- `forsaken.md` — Workshop entry: Vol 2 narrative-arc proper noun; reader-orientation (~420 tok)
+- `gossip-protocol.md` — Workshop entry: rumor-style server sync (~310 tok)
+- `handshake.md` — Workshop entry: verification exchange; secret-password image (~360 tok)
+- `key-envelope.md` — Workshop entry: master key + data key two-layer encryption; subsumes KEK/DEK (~390 tok)
+- `local-first.md` — Workshop entry: book's title concept; KEEP-as-is (~410 tok)
+- `manifest.md` — Workshop entry: signed inventory; preserves crew-manifest sense (~370 tok)
+- `mission-log-artifacts.md` — Workshop entry: pass-log + deviation-plot folded; chef-batches image (~340 tok)
+- `model-weights.md` — Workshop entry: trained model file of numbers (~290 tok)
+- `node.md` — Workshop entry: device-side instance; knot-in-fishing-net image (~370 tok)
+- `protocol.md` — Workshop entry: disambiguates Sense A (human) vs Sense B (network) (~420 tok)
+- `quorum.md` — Workshop entry: minimum agreement; three-keys image (~410 tok)
+- `relay.md` — Workshop entry: Sunfish managed relay vs baton-relay; audio-modifier pattern (~430 tok)
+- `render-chapter.sh` — Audiobook wrapper: bakes corrected flags + caffeinate -disu + nohup detach + preflight (~600 tok)
+- `replication.md` — Workshop entry: live-copying across devices (~340 tok)
+- `rollback.md` — Workshop entry: undoing operation; LEGO-rearrangement image (~340 tok)
+- `surface-window.md` — Workshop entry: forty-seven-hour communication periods (~410 tok)
+- `telemetry.md` — Workshop entry: system self-reporting; fitness-watch image (~250 tok)
 - `test_check_audit.py` — Tests for the reference-integrity audit checker. (~234 tok)
 - `test_check_stale.py` — Tests for the stale-draft check. (~1325 tok)
 - `test_promote.py` — Tests for the Phase 4 promotion script. (~2077 tok)
 - `test_voice_pass.py` — Tests for build/voice-pass.py. (~714 tok)
+- `timestamp.md` — Workshop entry: light; KEEP everyday meaning (~190 tok)
+
+## web/ — MOVED
+
+- `_observational_lemmas.yaml` — curated action verbs + concrete nouns from Nansen top-30; observational-density baseline (~520 tok)
+- `build/lexical_fatigue.py` — Phase 0 lexical-fatigue detector (NLTK POS-aware lemmatization; curated YAML for tracked families; --rollup / --discover / --top-lemmas / --all / --chapter modes) (~700 tok)
+- `build/output/qa/vol-2-lexical-fatigue-discovery.json` — auto-discovery of non-curated high-density lemmas (~280 tok)
+- `build/output/qa/vol-2-lexical-fatigue-rollup.json` — Vol 2 baseline density per family + per-chapter flags (1.5x baseline threshold) (~1200 tok)
+- `nansen-ingestion-canon.md` — Public-domain source-material ingestion canon: Nansen 1897 (Arctic) + Verne 1897 (Antarctic); content-yes-voice-no discipline; chapter mapping; attribution (~5500 tok)
+- `vol-2-observational-density.json` — per-chapter observational density vs Nansen baseline; 3 chapters flagged (~1700 tok)
+- `vol-2/_glossary/_lexical_fatigue_families.yaml` — hand-curated word families for tracked-fatigue (register, standing, said, etc.) (~600 tok)

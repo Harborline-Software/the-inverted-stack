@@ -40,11 +40,13 @@ INVENTED_API_PATTERNS = [
 ]
 
 def find_chapter(key):
-    chapters_dir = os.path.join(os.path.dirname(__file__), "..", "chapters")
-    for root, dirs, files in os.walk(chapters_dir):
-        for fname in files:
-            if fname.endswith(".md") and key in fname:
-                return os.path.join(root, fname)
+    repo_dir = os.path.join(os.path.dirname(__file__), "..")
+    for vol in ("vol-1", "vol-2"):
+        chapters_dir = os.path.join(repo_dir, vol)
+        for root, dirs, files in os.walk(chapters_dir):
+            for fname in files:
+                if fname.endswith(".md") and key in fname:
+                    return os.path.join(root, fname)
     return None
 
 def check_chapter(key):

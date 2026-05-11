@@ -8,13 +8,13 @@
 
 ## Files modified
 
-1. `chapters/part-3-reference-architecture/ch15-security-architecture.md`
+1. `vol-1/part-3-reference-architecture/ch15-security-architecture.md`
    - Inserted new H2 `## Chain-of-Custody for Multi-Party Transfers` between §Supply Chain Security and §GDPR Article 17 and Crypto-Shredding (line 583).
    - Updated cross-reference at line 228 (formerly "the chain-of-custody mechanism (cross-reference #9)").
    - Updated cross-reference at line 389 (formerly "Cross-reference to the chain-of-custody mechanism (#9)").
    - Appended IEEE refs [28]–[31] to the references list.
 
-2. `chapters/appendices/appendix-b-threat-model-worksheets.md`
+2. `vol-1/appendices/appendix-b-threat-model-worksheets.md`
    - Inserted new H2 `## Section 5 — Chain-of-Custody Worksheet` after §Section 4 — Key Compromise Incident Response Template (line 237), before the appendix-wide closing italic block.
 
 3. `docs/book-update-plan/working/9-chain-of-custody/draft.md`

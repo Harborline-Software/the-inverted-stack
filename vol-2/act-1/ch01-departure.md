@@ -97,15 +97,15 @@ Wanjiru was at her station with the relay-stack laid out for the handoff. The He
 
 She was humming. The hum was the same fragment as on the gangway. The tempo was unchanged.
 
-She turned her chair when I came through the hatch. She had three sets of keys on the bench in front of her — the relay handoff token from Helsinki, signed in by the ground station yesterday afternoon and waiting on the bench with its envelope; the Anchor model weights' integrity-keys, paired and verified; the Bridge replication credentials in their consortium-issue holder.
+She turned her chair when I came through the hatch. She had three credential modules on the bench in front of her — the relay handoff token from Helsinki, signed in by the ground station yesterday afternoon and waiting on the bench with its envelope; the Anchor model weights' integrity-keys, paired and verified; the Bridge replication credentials in their consortium-issue holder.
 
-She said: *Director, I have the keys.*
+She said: *Director, I have the credentials.*
 
 I sat down at the chair beside her station. She walked me through the set. The Helsinki handoff first — what the ground station would expect on the first surface window, what they would accept, what they would refuse, the secondary contact at the consortium's Geneva office if the primary did not respond. The Anchor model weights second — the cryptographic pairing, the verification path, what would happen if the integrity check failed under partition (the model would not load; the architecture would degrade to per-author indices on the crew laptops; she had run the degradation test twice in the last week, and the architecture had degraded the way the architecture had been designed to degrade). The Bridge replication credentials third — the role architecture, the access scope, the revocation horizon she would maintain across the dive, the procedure for surface-window propagation.
 
 She walked me through it without consulting notes. The hum had stopped while she was speaking and resumed when I asked her a clarification on the revocation horizon. The hum was where it belonged.
 
-I took the three sets of keys. I signed for them in the watch log on her primary screen. The signature was attested at capture, hash-chained into the local store, replicated across the relevant nodes on the boat at the moment of signing. I felt the procedural weight of the signature without registering it as procedural weight. The architecture I was about to take under the ice was the architecture that had just attested my signature for the keys it was going to operate under.
+I took the three credential modules. I signed for them in the watch log on her primary screen. The signature was attested at capture, hash-chained into the local store, replicated across the relevant nodes on the boat at the moment of signing. I felt the procedural weight of the signature without registering it as procedural weight. The architecture I was about to take under the ice was the architecture that had just attested my signature for the credentials it was going to operate under.
 
 I noticed the symmetry. I did not name it aloud.
 
@@ -125,7 +125,7 @@ The pier slid past at the speed pier slides past a research vessel in the first 
 
 The wind on the bridge wing was the wind I had registered at the rail at six. The flat low light was the same light. The boat under my feet was a different boat from the one I had walked aboard with the duffel; it had become, between six and eleven, the boat I commanded. The transition was procedural. I noted the procedural quality of the transition. I have served under masters who marked the transition with a sentence to the deck or a thought turned aloud to the bridge wing. I do not. I noted it; I held it; I returned to the work.
 
-I did not look back. I had already noted, in the register of mission directors who keep watch logs, what the boat had done at the pier. I had already logged what each of the senior officers had been doing when I had registered them. I had already received the keys from Wanjiru, the disclosures from Joel, the paper acknowledgment from Sabina, the *the boat is good* from Diego, the calm console from Hiroshi, the pulse-check from Maria, the audible counting from Priya. I had already filed the pre-departure entry. The architecture I was about to take three hundred meters under the ice already held the morning.
+I did not look back. I had already noted, in the register of mission directors who keep watch logs, what the boat had done at the pier. I had already logged what each of the senior officers had been doing when I had registered them. I had already received the credential modules from Wanjiru, the disclosures from Joel, the paper acknowledgment from Sabina, the *the boat is good* from Diego, the calm console from Hiroshi, the pulse-check from Maria, the audible counting from Priya. I had already filed the pre-departure entry. The architecture I was about to take three hundred meters under the ice already held the morning.
 
 I had also, an hour before the cast-off, opened the gymnasium classmates Telegram group on my phone, read the message Rustam had sent at oh-four-seventeen — *don't lose the boat, fake captain* — and left the group. The thread had disappeared from my list. I had put my phone down. The thread had not been part of the cast-off and was not going to be. The sailing was where the work was. The work was what I had come for.
 

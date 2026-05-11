@@ -31,7 +31,7 @@ BLOCKING ISSUES
 CONDITIONS
   C1: Pin Claude CLI version and model name in the spec; record them in each phase commit message.
   C2: Copy or symlink agent files into the manuscript repo (e.g. `agents/voice-*.md`) so the manuscript's git history *is* the agent history. Treat user-scope as a convenience mirror, not the source of truth.
-  C3: For each promoted chapter, write a sidecar file (`chapters/_voice-drafts/manifest.json`) recording: source SHA, agent SHA, CLI version, model name, prompt mode, timestamp.
+  C3: For each promoted chapter, write a sidecar file (`vol-1/_voice-drafts/manifest.json`) recording: source SHA, agent SHA, CLI version, model name, prompt mode, timestamp.
   C4: Add a kill criterion for "Claude safety filter refuses ch07 or ch15" — these chapters discuss attacker behaviour and key compromise; refusal is a realistic failure.
 
 COMMENDATIONS

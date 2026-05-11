@@ -153,7 +153,7 @@ Full-bandwidth catch-up. The bulk reaches the Bridge. The forensic filing reache
 - **Capture model + 2026 stack + degradation:** `vol-2-archive-and-capture-convention.md`
 - **Series trajectory:** `series-arc-sunfish-trajectory.md`
 - **Boat-power decision + multi-segment timeline:** `.pao-inbox/_decisions/2026-05-04-vol2-boat-power-option-c-locked.md`
-- **Per-chapter sync-mechanic beats:** `chapters/book-2/CHAPTER-OUTLINE.md`
+- **Per-chapter sync-mechanic beats:** `vol-2/CHAPTER-OUTLINE.md`
 
 ---
 

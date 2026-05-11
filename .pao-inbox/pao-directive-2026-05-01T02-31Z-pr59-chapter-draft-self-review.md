@@ -14,7 +14,7 @@ PR #59 (`chore/pao-the-crossing-first-draft`) carries the closing chapter "The C
 
 ## What you are reading for
 
-Switch to `chore/pao-the-crossing-first-draft` and read `chapters/closing/the-crossing.md` end-to-end as a hostile reader. Five passes, in this order:
+Switch to `chore/pao-the-crossing-first-draft` and read `vol-1/closing/the-crossing.md` end-to-end as a hostile reader. Five passes, in this order:
 
 1. **Tail-reference scan.** Grep for `Lars`, `Étienne`, `Aino`, `Lakshmi`, `Bergmann`, `Marchand`, `Reddy`, `Norwegian`, `Tromsø`, `Bergen`, `Lofoten`, `Norway` in the chapter file — should return zero hits except for the Norwegian Polar Institute reference at line ~21 (Anna's postdoctoral biography, intentional). Anything else is a bug.
 2. **Diego thread continuity.** Diego Vargas is named ~25 times across five acts. Read each appearance and verify the Argentine institutional anchor (IAA, since 1904, Esperanza/Marambio stations, San Martín de los Andes retirement, Belgrano family home, Sofía at six) reads consistently and without continuity errors. Specifically: does the chapter say his retirement house is in San Martín de los Andes (sheet) or "the small house in San Martín de los Andes" (chapter prose) — are the two phrasings consistent? Does Sofía's name appear before or after she's introduced as "granddaughter" — first-introduction order should be "granddaughter Sofía" then "Sofía".

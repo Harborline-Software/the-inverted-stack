@@ -1,5 +1,5 @@
 # Kleppmann Council Review — Round 1
-**Document:** `chapters/part-1-thesis-and-pain/ch01-when-saas-fights-reality.md`
+**Document:** `vol-1/part-1-thesis-and-pain/ch01-when-saas-fights-reality.md`
 **Date:** 2026-04-29
 **Stage at review:** `icm/prose-review` (per file header)
 **Word target:** ~5,200 (anatomy reports ~9,970 tokens — chapter is roughly on-budget)

@@ -4,8 +4,8 @@
 **Run:** iter-0013, 2026-04-27.
 **Verdict:** PASS-with-edit (gate passes with two CLAIM markers left for follow-up).
 **Scope:** Two new sections drafted in iter-0011 and code-checked in iter-0012:
-- `chapters/part-3-reference-architecture/ch11-node-architecture.md` §"Performance Contracts and Main-Thread Isolation"
-- `chapters/part-4-implementation-playbooks/ch20-ux-sync-conflict.md` §"Performance Budgets and Progressive Degradation"
+- `vol-1/part-3-reference-architecture/ch11-node-architecture.md` §"Performance Contracts and Main-Thread Isolation"
+- `vol-1/part-4-implementation-playbooks/ch20-ux-sync-conflict.md` §"Performance Budgets and Progressive Degradation"
 
 ---
 
@@ -137,7 +137,7 @@ The technical-review → prose-review gate **passes** under the loop-plan §5 ru
 
 ## Files modified by this iteration
 
-- `chapters/part-3-reference-architecture/ch11-node-architecture.md` — five edits (three prose tightenings, two CLAIM markers, four citation URL pins)
+- `vol-1/part-3-reference-architecture/ch11-node-architecture.md` — five edits (three prose tightenings, two CLAIM markers, four citation URL pins)
 - `docs/book-update-plan/working/43-performance-contracts/technical-review-report.md` — this file (new)
 
 No edits to Ch20 in this iteration. The Ch20 new section's only verifiable technical claims are cross-references to Ch11 §Performance Contracts (already verified by code-check) and to Ch19 §The Operational Runbook Minimum (cross-reference fix already applied in iter-0012). No source-paper claims in the Ch20 new section require independent verification.

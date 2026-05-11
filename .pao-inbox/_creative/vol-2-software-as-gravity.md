@@ -204,7 +204,7 @@ For drafters dispatched from this point forward: **read this convention doc befo
 - **Archive + capture model + 2026 stack:** `vol-2-archive-and-capture-convention.md`
 - **Sync mechanic + Wanjiru's triage role:** `vol-2-anchor-bridge-sync-mechanic.md`
 - **Series trajectory:** `series-arc-sunfish-trajectory.md`
-- **Per-chapter pattern + rail assignments:** `chapters/book-2/CHAPTER-OUTLINE.md`
+- **Per-chapter pattern + rail assignments:** `vol-2/CHAPTER-OUTLINE.md`
 - **Anna voice register:** `.pao-inbox/_creative/character-sheets/dr-leader-mission-director.md` § Voice register specification
 - **Generator skill:** `.claude/skills/crew-log-style-entry/SKILL.md`
 

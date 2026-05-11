@@ -1,7 +1,7 @@
 # The Inverted Stack — Build Targets
 # Requires: pandoc, python3 (for word-count)
 
-CHAPTERS_DIR := chapters
+CHAPTERS_DIR := vol-1
 OUT_DIR := build/output
 PANDOC := pandoc
 PYTHON ?= python3
@@ -254,10 +254,10 @@ verify-loudness-acx:
 embed-cover:
 	$(PYTHON) build/embed-cover.py
 
-# voice-pass: rewrite chapters through voice agents per chapters/voice-plan.yaml.
+# voice-pass: rewrite chapters through voice agents per vol-1/voice-plan.yaml.
 # Pass 1 applies the guest voice (Gladwell, Brown, Grant, Godin, Lencioni)
 # per the plan; Pass 2 normalizes everything through Sinek (the house voice).
-# Outputs go to chapters/_voice-drafts/{pass1,final}/<chapter>.md (gitignored).
+# Outputs go to vol-1/_voice-drafts/{pass1,final}/<chapter>.md (gitignored).
 # Review and merge selectively — does not overwrite source chapters.
 .PHONY: voice-pass
 voice-pass:

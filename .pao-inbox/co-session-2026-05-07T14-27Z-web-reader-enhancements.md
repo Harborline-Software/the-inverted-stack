@@ -19,7 +19,7 @@ CO engineering session: web reader tool (web/) rebuilt end-to-end. No book conte
 - **Session persistence** — chapter selection, volume tab, audio position (saved every 5 s), and scroll position (debounced 500 ms) are stored in `localStorage` and restored on page refresh.
 
 ### Text-audio synchronisation (Whispersync-style)
-Three-layer highlighting driven by per-chapter alignment JSON files at `chapters/_voice-drafts/_alignments/{slug}.json`:
+Three-layer highlighting driven by per-chapter alignment JSON files at `vol-1/_voice-drafts/_alignments/{slug}.json`:
 - **Paragraph** — 7% lavender tint + accent left border on the active `<p>`.
 - **Sentence** — 16% tint on the estimated current sentence (only when paragraph has ≥2 sentences; degrades gracefully to paragraph-only for single-sentence paragraphs and mixed-HTML elements).
 - **Word** — 42% fill on the estimated current word via linear interpolation across the chunk duration.

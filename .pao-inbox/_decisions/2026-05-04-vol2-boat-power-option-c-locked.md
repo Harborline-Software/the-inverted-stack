@@ -75,7 +75,7 @@ Three under-ice segments totaling ~38 days under ice. Two intermediate surface w
 
 ### Existing The Crossing chapter — revision pass needed
 
-The existing closing chapter (`chapters/closing/the-crossing.md`) currently reads as a single-dive 56-day mission. Under the new multi-segment design, this needs revision. Specific edits:
+The existing closing chapter (`vol-1/closing/the-crossing.md`) currently reads as a single-dive 56-day mission. Under the new multi-segment design, this needs revision. Specific edits:
 
 1. "We dove at 11:18 the first day" → "We dove at 11:18 on day seven, after a week of surface transit"
 2. The line "We came home with eleven of twelve" → preserved (still true, just under multi-segment ops; though the death scene is being replaced by leak-survival, so this whole sentence may already be in flux)

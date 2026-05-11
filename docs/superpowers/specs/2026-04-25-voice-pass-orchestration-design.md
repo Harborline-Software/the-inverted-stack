@@ -12,7 +12,7 @@
 
 ## 1. Context and Why
 
-The Inverted Stack manuscript has been through technical review, prose review, and multiple literary-board cycles. A reader of the voice-passed Ch01 (`chapters/_voice-drafts/final/ch01-when-saas-fights-reality.md`) reported the prose reads as "too mechanical" and "an aggressive stream of details that becomes fatiguing." A specific paragraph (Ch01 ¶73) enumerates 27 jurisdictions in 285 words — a pattern that repeats in 24 chapters and that fights the reader and the audiobook listener equally hard.
+The Inverted Stack manuscript has been through technical review, prose review, and multiple literary-board cycles. A reader of the voice-passed Ch01 (`vol-1/_voice-drafts/final/ch01-when-saas-fights-reality.md`) reported the prose reads as "too mechanical" and "an aggressive stream of details that becomes fatiguing." A specific paragraph (Ch01 ¶73) enumerates 27 jurisdictions in 285 words — a pattern that repeats in 24 chapters and that fights the reader and the audiobook listener equally hard.
 
 The work has three intertwined problems, not one:
 
@@ -36,7 +36,7 @@ A manuscript on `main` where:
 2. **Composite-character device is named openly in two places** — an expansive Sinek-voice paragraph in the Preface, and a short factual note under the Council framing heading at the start of Part II.
 3. **Voice-sinek is tuned for chapter-scale prose** — calibration test relaxed from per-section to per-chapter; scene-preservation rule added; audiobook-cadence rule added; register variation between scene/exposition allowed; Preface paragraph added as a second canonical example.
 4. **All six voice agents have been audited and tuned where needed** for chapter-scale work.
-5. **All chapters have been voice-passed** with appropriate guest voice (pass-1) and Sinek polish or normalize (pass-2), and promoted from `_voice-drafts/final/` into `chapters/<part>/<ch>.md` on `main`.
+5. **All chapters have been voice-passed** with appropriate guest voice (pass-1) and Sinek polish or normalize (pass-2), and promoted from `_voice-drafts/final/` into `vol-1/<part>/<ch>.md` on `main`.
 6. **Style guide updated with King's influence** (10% revision cut, adverb discipline, trust-the-reader). *(Done in this session.)*
 
 ### Binary FAILED conditions
@@ -95,7 +95,7 @@ Five phases, each with a binary PASS/FAIL gate before the next starts. Each phas
 
 ### Phase 0 — Source cleanup (editorial; no orchestration)
 
-Operates directly on `chapters/<part>/<ch>.md` files on `main`. Five workstreams. **The first is a timing pilot** — do not sweep all 24 chapters before measuring real per-chapter effort.
+Operates directly on `vol-1/<part>/<ch>.md` files on `main`. Five workstreams. **The first is a timing pilot** — do not sweep all 24 chapters before measuring real per-chapter effort.
 
 #### 0.0. Timing pilot (C13/B4)
 
@@ -157,7 +157,7 @@ Already completed in design session: King's influence added to `docs/style/style
 
 1. Re-run Gladwell pass-1 only on the cleaned Ch01: `python build/voice-pass.py --only ch01 --pass 1 --force`. Output lands in `_voice-drafts/pass1/ch01-when-saas-fights-reality.md`.
 2. Read three versions in sequence:
-   - The cleaned source `chapters/part-1-thesis-and-pain/ch01-when-saas-fights-reality.md`
+   - The cleaned source `vol-1/part-1-thesis-and-pain/ch01-when-saas-fights-reality.md`
    - The new pass-1 `_voice-drafts/pass1/ch01-when-saas-fights-reality.md` (Gladwell only, no Sinek)
    - The current pass-2 `_voice-drafts/final/ch01-when-saas-fights-reality.md` (the existing Gladwell→Sinek output that was flagged as mechanical)
 3. Decide: which reads best? Specifically — does pass-1 (raw Gladwell, no Sinek polish) read better than pass-2?
@@ -241,7 +241,7 @@ This re-runs only pass-2 (Sinek) over the existing pass-1 cache. Pass-1 (the gue
 
 **Code changes required first** (these belong inside Phase 3, not deferred):
 
-- Add a third column to `chapters/voice-plan.yaml`: per-chapter pass-2 mode (`polish` or `normalize`). Current parser splits on `:` only — needs extension to parse `chapter: voice mode` or `chapter: voice` (mode defaults to `normalize` if absent for backward compat). **Skipped if Phase 0.5 returned "drop pass-2 for guest-voiced chapters."**
+- Add a third column to `vol-1/voice-plan.yaml`: per-chapter pass-2 mode (`polish` or `normalize`). Current parser splits on `:` only — needs extension to parse `chapter: voice mode` or `chapter: voice` (mode defaults to `normalize` if absent for backward compat). **Skipped if Phase 0.5 returned "drop pass-2 for guest-voiced chapters."**
 - Update `build/voice-pass.py` to read the mode and select the matching prompt variant for pass-2 (`build_prompt_polish` vs. existing `build_prompt`).
 - Update `build/voice-pass.py` to read agent files from `agents/` in this repo, not `~/.claude/agents/` (per Phase 1 pre-step C2).
 - Add `VALID_MODES = {"polish", "normalize"}` and warn on unknown modes.
@@ -250,7 +250,7 @@ This re-runs only pass-2 (Sinek) over the existing pass-1 cache. Pass-1 (the gue
 
 Then run `python build/voice-pass.py --force` over the remaining ~23 chapters (27 total in plan minus 4 pilots already done). Review per-chapter OK/FAIL line; re-run any FAIL individually with `--only`.
 
-**Source-edit ordering rule (C8).** Any edit to a chapter source under `chapters/<part>/` after Phase 3 has begun forces a re-run of voice-pass for that chapter. Detect via mtime comparison: if `chapters/<part>/<ch>.md` has mtime newer than `_voice-drafts/final/<ch>.md`, treat the draft as stale. Add an orchestrator check that warns on stale drafts before Phase 4.
+**Source-edit ordering rule (C8).** Any edit to a chapter source under `vol-1/<part>/` after Phase 3 has begun forces a re-run of voice-pass for that chapter. Detect via mtime comparison: if `vol-1/<part>/<ch>.md` has mtime newer than `_voice-drafts/final/<ch>.md`, treat the draft as stale. Add an orchestrator check that warns on stale drafts before Phase 4.
 
 #### Gate
 
@@ -260,11 +260,11 @@ Then run `python build/voice-pass.py --force` over the remaining ~23 chapters (2
 
 ### Phase 4 — Promotion to `main`
 
-Diff each `_voice-drafts/final/<ch>.md` against `chapters/<part>/<ch>.md`. For each chapter, decide PROMOTE or REJECT (keep source, log why). A small script or Make target automates the file copy + ICM marker update.
+Diff each `_voice-drafts/final/<ch>.md` against `vol-1/<part>/<ch>.md`. For each chapter, decide PROMOTE or REJECT (keep source, log why). A small script or Make target automates the file copy + ICM marker update.
 
 After promotion: run `make word-count`, `make draft-pdf`, `make epub`, and audiobook build to confirm no regressions.
 
-**Sidecar manifest per promoted chapter (C3/B1).** For each PROMOTE, write `chapters/<part>/<ch>.manifest.json` containing the relevant Phase 3 log entry: `input_sha256` (the source at time of voice-pass), `output_sha256` (the voice-passed draft, which must match the bytes being promoted), `agent_path`, `agent_sha256`, `claude_cli_version`, `model_name`, `prompt_mode`, `wall_clock_start_iso`, `promoted_at_iso`, `promoter` (git user). Manifests are checked into the repo. They are the audit trail.
+**Sidecar manifest per promoted chapter (C3/B1).** For each PROMOTE, write `vol-1/<part>/<ch>.manifest.json` containing the relevant Phase 3 log entry: `input_sha256` (the source at time of voice-pass), `output_sha256` (the voice-passed draft, which must match the bytes being promoted), `agent_path`, `agent_sha256`, `claude_cli_version`, `model_name`, `prompt_mode`, `wall_clock_start_iso`, `promoted_at_iso`, `promoter` (git user). Manifests are checked into the repo. They are the audit trail.
 
 **Hash verification (C11).** Promotion script computes SHA-256 of `_voice-drafts/final/<ch>.md` and compares to the recorded `output_sha256` in the Phase 3 log. Mismatch halts that chapter's promotion — indicates the draft was modified post-pass (manual edit, partial overwrite, etc.). Recovery: re-run pass-2 with `--force --only`, or accept the manual edit by recomputing the hash and updating the log entry with `manual_edit: true`.
 
@@ -424,14 +424,14 @@ If model version drifts mid-plan (Anthropic publishes a new Sonnet), pause and d
 |---|---|---|
 | Voice agents (source of truth) | `agents/voice-{sinek,gladwell,brown,grant,godin,lencioni}.md` | The agents being tuned — mirrored into this repo per Phase 1 pre-step |
 | Voice agents (user-scope mirror) | `~/.claude/agents/voice-*.md` | Convenience copy for direct `@voice-X` invocation; not the source of truth |
-| Plan file | `chapters/voice-plan.yaml` | Chapter→voice mapping; gets a third column for polish/normalize mode |
+| Plan file | `vol-1/voice-plan.yaml` | Chapter→voice mapping; gets a third column for polish/normalize mode |
 | Orchestrator | `build/voice-pass.py` | Headless dispatch script |
-| Drafts area | `chapters/_voice-drafts/{pass1,final}/` | Gitignored; voice-pass output lands here |
+| Drafts area | `vol-1/_voice-drafts/{pass1,final}/` | Gitignored; voice-pass output lands here |
 | Style guide | `docs/style/style-guide.md` | Updated in this session with King; agents reference it |
 | Source paper | `source/local_node_saas_v13.md` | For technical accuracy when reviewing voice-passed chapters |
 | Build targets | `build/Makefile` | `make word-count`, `make draft-pdf`, `make epub`, `make code-check` |
 | Audiobook builder | `build/audiobook.py` | TTS pipeline; cadence verification |
-| Existing Ch01 baseline | `chapters/_voice-drafts/final/ch01-when-saas-fights-reality.md` | Diff target for Phase 2 Ch01 pilot — proves whether tune helped |
+| Existing Ch01 baseline | `vol-1/_voice-drafts/final/ch01-when-saas-fights-reality.md` | Diff target for Phase 2 Ch01 pilot — proves whether tune helped |
 | Council reviewer (for spec hardening) | `.claude/agents/council-reviewer` (or `literary-board`) | Adversarial review of this spec or chapters |
 
 ---
@@ -468,7 +468,7 @@ The single largest unowned risk the council found: **the agent that voiced the b
 |---|---|---|
 | Agent files (source of truth) | `agents/voice-*.md` | Phase 1 pre-step; mirrored from `~/.claude/agents/` |
 | Per-invocation log | `_voice-drafts/_log/<UTC>-<chapter>-pass<N>.json` | `build/voice-pass.py` (gitignored — ephemeral) |
-| Per-promotion sidecar manifest | `chapters/<part>/<ch>.manifest.json` | Phase 4 promotion script (committed — permanent) |
+| Per-promotion sidecar manifest | `vol-1/<part>/<ch>.manifest.json` | Phase 4 promotion script (committed — permanent) |
 | Phase commit messages | git history | Each phase's commit; includes CLI version + model name |
 
 ### Manifest schema (the audit trail)
@@ -502,7 +502,7 @@ The manifest is the union of (a) the Phase 3 per-invocation log entry plus (b) t
 To reproduce any promoted chapter from its manifest:
 
 1. `git checkout` the commit that contains the manifest.
-2. Read `chapters/<part>/<ch>.manifest.json`.
+2. Read `vol-1/<part>/<ch>.manifest.json`.
 3. Restore the agent file from `agent_sha256` (`git show <sha>:agents/voice-X.md`).
 4. Restore the source from `input_sha256`.
 5. Install Claude Code CLI at the version recorded.
@@ -512,7 +512,7 @@ To reproduce any promoted chapter from its manifest:
 ### Enforcement
 
 - Promotion script (Phase 4) **refuses to promote** without a valid log entry pointing to the matching `output_sha256`.
-- Pre-commit hook on `chapters/<part>/<ch>.md` warns (does not block) if the file changes without a corresponding manifest update.
+- Pre-commit hook on `vol-1/<part>/<ch>.md` warns (does not block) if the file changes without a corresponding manifest update.
 
 ## 13. Post-Completion Plan
 

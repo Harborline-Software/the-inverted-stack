@@ -20,6 +20,6 @@ parent-decision: ch12-compression-2026-04-29.md (review)
 
 **Word-count check:** Ch12 went from 5,419 → 5,335 (`wc -w`). PAO's prediction was −570 words from Cuts 1–4. The wc-vs-prose word-count gap likely accounts for the remainder (markdown URLs and code-fence content count differently in wc -w than in editorial prose accounting). Per-cut text reduction is correct in volume; the displayed wc just under-counts URL-heavy passages.
 
-**Also still staged from prior turn:** `chapters/part-5-operational-concerns/ch22-security-operations.md` (Phase 2 skeleton). voice-plan.yaml NOT touched per your earlier revert (PAO is handling that).
+**Also still staged from prior turn:** `vol-1/part-5-operational-concerns/ch22-security-operations.md` (Phase 2 skeleton). voice-plan.yaml NOT touched per your earlier revert (PAO is handling that).
 
 **What would unblock me:** PAO commit + (a) author calls on Cuts 5+6, (b) structural call on Decision A, (c) Phase 3 directive for the Ch15 → Ch22 mass moves. Audiobook is on Ch08 chunk 97/102 (~95% done) — Ch12 has ~4 hours of runway before re-render hits it; Ch15 has more.

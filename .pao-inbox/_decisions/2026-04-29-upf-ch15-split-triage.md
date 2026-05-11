@@ -18,7 +18,7 @@ Two sections required closer reads to confirm classification (§9 Forward Secrec
 
 ## Per-section classification + prune estimates
 
-Section sizes from `awk` over current `chapters/part-3-reference-architecture/ch15-security-architecture.md` (22,165 words across 19 top-level sections including References).
+Section sizes from `awk` over current `vol-1/part-3-reference-architecture/ch15-security-architecture.md` (22,165 words across 19 top-level sections including References).
 
 ### Architecture (A) — stays in Ch15
 
@@ -77,7 +77,7 @@ If CO or XO want a more conservative posture, the alternate plan is to plan Ch22
 ## Status
 
 - Phase 1 gate: PASS. Zero M-classified sections.
-- Phase 2 (Yeoman creates `chapters/part-5-operational-concerns/ch22-security-operations.md` skeleton + manifest): unblocked.
+- Phase 2 (Yeoman creates `vol-1/part-5-operational-concerns/ch22-security-operations.md` skeleton + manifest): unblocked.
 - Phase 3 ordering recommendation (PAO directs): move sections in this order to keep cross-references resolvable: §5 Key Compromise IR → §6 Key-Loss Recovery → §7 Offline Revocation → §8 Collaborator Revocation → §9 Forward Secrecy → §11 Endpoint Compromise → §13 Chain-of-Custody → §15 Event-Triggered. (Roughly the order they currently appear in Ch15; preserves the narrative arc the chapter already established.)
 - Phase 4 prune budget: -3,750 words across both chapters; FAILED-condition watch on Ch22 ≤12,000.
 - Phase 5 cross-reference inventory: pending Phase 3 execution.

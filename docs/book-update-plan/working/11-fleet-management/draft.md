@@ -278,7 +278,7 @@ Cross-reference to Chapter 4 §Choosing Your Architecture for the deployment-cla
 
 Creating Chapter 21 in a new Part V "Operational Concerns" requires four updates beyond the chapter file itself. These are notes for the chapter-creation step that follows this draft; the draft itself does not perform them.
 
-**1. Directory creation.** The new directory `chapters/part-5-operational-concerns/` does not yet exist. Create it before placing `ch21-operating-a-fleet.md`. The directory naming follows the existing convention (`part-1-thesis-and-pain/`, `part-2-council-reads-the-paper/`, etc.).
+**1. Directory creation.** The new directory `vol-1/part-5-operational-concerns/` does not yet exist. Create it before placing `ch21-operating-a-fleet.md`. The directory naming follows the existing convention (`part-1-thesis-and-pain/`, `part-2-council-reads-the-paper/`, etc.).
 
 **2. `book-structure.md` update.** Add a new top-level section between Part IV and the Epilogue:
 

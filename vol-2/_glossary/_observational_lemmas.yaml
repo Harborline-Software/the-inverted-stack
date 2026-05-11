@@ -1,0 +1,103 @@
+# Observational vocabulary curated from Nansen's *Farthest North* (1897) — Project Gutenberg #30197.
+# Top action-verbs and concrete-nouns in the canonical first-person polar-explorer reference.
+#
+# This YAML drives the observational-density metric in build/lexical_fatigue.py
+# (added 2026-05-09 per CO directive). Counterpart to _lexical_fatigue_families.yaml:
+# fatigue measures over-deployed procedural-institutional vocabulary; observational
+# measures the SENSORY-AND-ACTION density that the genre canonically depends on.
+#
+# Filtering rules applied to Nansen's top lemmas:
+#   - Excluded Nansen-specific (dog/sled, fram, expedition) — no parallels in Vol 2
+#   - Excluded proper nouns (north as direction-name where ambiguous)
+#   - Excluded too-generic (thing, way, part, work) — no observational specificity
+#   - Kept verbs ≥ 0.4/1k and nouns ≥ 0.5/1k in the Nansen corpus
+#   - Plus a few canonical polar/expedition-domain nouns even at lower Nansen density
+#
+# Phase 0 ships before the prose-telemetry platform; Phase 1
+# (galley/lib/prose_telemetry/) absorbs as the seed for an observational-density
+# detector module.
+
+version: 1
+
+# Action verbs — explorer-narrator's vocabulary of doing-and-perceiving
+action_verbs:
+  - see
+  - take
+  - come
+  - find
+  - give
+  - look
+  - drift
+  - reach
+  - turn
+  - hear
+  - leave
+  - pass
+  - carry
+  - follow
+  - bring
+  - hold
+  - rise
+  - run
+  - break
+  - put
+  - try
+  - lie
+  - lay
+  - sit
+  - stop
+  - keep
+  - set
+  - show
+  - begin
+  - get
+  - make
+  - know
+
+# Concrete nouns — sensory + atmospheric anchoring
+concrete_nouns:
+  - ice
+  - water
+  - wind
+  - sea
+  - ship
+  - day
+  - night
+  - morning
+  - evening
+  - light
+  - sun
+  - land
+  - sky
+  - deck
+  - board
+  - course
+  - side
+  - direction
+  - boat
+  - surface
+  - foot
+  - point
+  - winter
+  - summer
+  - spring
+  - autumn
+  - storm
+  - cloud
+  - air
+  - snow
+  - cold
+  - heat
+  - shadow
+  - sound
+  - voice
+  - hand
+  - face
+  - eye
+  - hour
+  - minute
+
+# Exclude (these would inflate the count but aren't observational-anchoring):
+# Nansen-specific (no parallel in Vol 2): dog, fram, sledge, kayak, expedition
+# Proper / institutional: north, south, east, west (direction-names), home, observation
+# Too generic: thing, way, part, work, life, year, place, nothing

@@ -190,6 +190,6 @@ House style is sentence case for section headings. H1 chapter titles follow `# C
 
 - `@style-enforcer ch05` — apply style pass to ch05
 - `@style-enforcer ch11 ch12 ch13` — apply to multiple chapters
-- `@style-enforcer all` — apply to all chapters under `chapters/`
+- `@style-enforcer all` — apply to all chapters under `vol-1/`
 
-When given a chapter shorthand (e.g., "ch05"), resolve the full path using Glob on `chapters/**/*ch05*.md`.
+When given a chapter shorthand (e.g., "ch05"), resolve the full path using Glob on `vol-1/**/*ch05*.md`.

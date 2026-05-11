@@ -11,7 +11,7 @@ ready for final assembly.
 **Architecture:** 20 chapters + preface + epilogue + 4 appendices, written in dependency
 order (Part I → Part II → Part III → Part IV), with Part II council chapters parallelizable
 and Part III reference chapters largely parallelizable. Each deliverable is a standalone
-markdown file under `chapters/`.
+markdown file under `vol-1/`.
 
 **Source material (all in `source/` at the repo root — gitignored):**
 - `source/local_node_saas_v13.md` — primary architecture paper (referred to as **v13**)

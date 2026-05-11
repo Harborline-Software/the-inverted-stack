@@ -9,8 +9,8 @@
 
 ## 1. Sections reviewed
 
-- `chapters/part-3-reference-architecture/ch15-security-architecture.md` lines ~688–737 (§Event-Triggered Re-classification)
-- `chapters/part-4-implementation-playbooks/ch20-ux-sync-conflict.md` lines ~354–409 (§Data-Class Escalation UX)
+- `vol-1/part-3-reference-architecture/ch15-security-architecture.md` lines ~688–737 (§Event-Triggered Re-classification)
+- `vol-1/part-4-implementation-playbooks/ch20-ux-sync-conflict.md` lines ~354–409 (§Data-Class Escalation UX)
 
 Both sections came in dense and on-voice from the technical-review pass. The edits below are surgical: paragraph-cap fixes and one passive-voice activation. No structural rewriting.
 

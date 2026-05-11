@@ -1,5 +1,5 @@
 # KLEPPMANN COUNCIL REVIEW — Part I, Round 1
-**Document:** `chapters/part-1-thesis-and-pain/ch02-local-first-serious-stack.md`
+**Document:** `vol-1/part-1-thesis-and-pain/ch02-local-first-serious-stack.md`
 **Date:** 2026-04-29
 **Council seats convened (per request):** Theorist · Production Operator · Skeptical Implementer · Pedantic Lawyer · Outside Observer
 **Reviewer:** Kleppmann Council facilitator

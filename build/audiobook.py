@@ -56,7 +56,7 @@ def _mp3_duration_seconds(mp3_bytes: bytes) -> float:
     return len(mp3_bytes) / (16 * 1024)
 
 REPO = Path(__file__).resolve().parent.parent
-CHAPTERS_DIR = REPO / "chapters"
+CHAPTERS_DIR = REPO
 
 # Per architectural decision 2026-05-08, draft + intermediate audio artifacts
 # live under the galley project (the editor), namespaced per bookId so the
@@ -110,11 +110,11 @@ def _to_rel(p) -> str:
 def volume_for_chapter(rel_path: str) -> str:
     """Map a chapter's repo-relative source path to its audiobook volume slug.
 
-    Vol 2 chapters live under chapters/book-2/; everything else (Vol 1) lands
+    Vol 2 chapters live under vol-2/; everything else (Vol 1) lands
     in vol-1/. Output paths follow build/output/audiobook/<volume>/<stem>.mp3.
     """
     p = rel_path.replace("\\", "/")
-    if p.startswith("book-2/") or "/book-2/" in p:
+    if p.startswith("vol-2/") or "/vol-2/" in p:
         return "vol-2"
     return "vol-1"
 
@@ -341,7 +341,7 @@ ABBREVIATION_FIXES = {
 PRESETS_KOKORO: dict[str, dict] = {
     # Female — HH-hour trained voices. Bella = professional core, Nicole = breath texture.
     "female":      {"voice": "af_bella+af_nicole", "speed": 0.92},
-    "female-solo": {"voice": "af_bella",           "speed": 0.92},
+    "female-solo": {"voice": "af_alloy",           "speed": 0.92},   # CO directive 2026-05-09: af_alloy default for fast Kokoro generation (was af_bella)
 
     # Male — all C+ / H-hour. Michael = lower-pitch non-fiction register;
     # Fenrir adds "velvety texture" to counter Michael's known dryness.
@@ -538,89 +538,89 @@ CHAPTER_PRESET_MAP: dict[str, str] = {
     # register Voss carries in Ch5; Anna's narration register is similar.
     # Apply to the Vol 2 listen-test pair; will extend to remaining Vol 2
     # chapters as they activate.
-    "book-2/act-1/ch01-departure": "female-solo",
-    "book-2/act-1/ch02-recruitment-interview": "female-solo",
-    "book-2/act-1/ch03-drake-passage-ice-edge": "female-solo",
-    "book-2/act-1/ch04-first-submersion": "female-solo",
-    "book-2/act-1/ch05-day-twenty-realization": "female-solo",
-    "book-2/act-1/ch06-first-surface-first-forsaken-reveal": "female-solo",
-    "book-2/act-2/ch07-joels-sunfish": "female-solo",
-    "book-2/act-2/ch08-second-submersion": "female-solo",
-    "book-2/act-2/ch09-sync-daemon-under-drift": "female-solo",
-    "book-2/act-2/ch10-aftermath-mission-that-once-was": "female-solo",
-    "book-2/act-2/ch11-second-surface-second-forsaken-reveal": "female-solo",
-    "book-2/act-2/ch12-beginning-of-the-end": "female-solo",
-    "book-2/act-3/ch13-schema-that-should-not-migrate": "female-solo",
-    "book-2/act-3/ch14-the-crossing": "female-solo",
-    "book-2/act-3/ch15-compromised-relay-holds": "female-solo",
-    "book-2/act-3/ch16-final-ascent": "female-solo",
-    "book-2/act-3/ch17-transit-north": "female-solo",
-    "book-2/act-3/ch18-punta-arenas-surfacing": "female-solo",
+    "vol-2/act-1/ch01-departure": "female-solo",
+    "vol-2/act-1/ch02-recruitment-interview": "female-solo",
+    "vol-2/act-1/ch03-drake-passage-ice-edge": "female-solo",
+    "vol-2/act-1/ch04-first-submersion": "female-solo",
+    "vol-2/act-1/ch05-day-twenty-realization": "female-solo",
+    "vol-2/act-1/ch06-first-surface-first-forsaken-reveal": "female-solo",
+    "vol-2/act-2/ch07-joels-sunfish": "female-solo",
+    "vol-2/act-2/ch08-second-submersion": "female-solo",
+    "vol-2/act-2/ch09-sync-daemon-under-drift": "female-solo",
+    "vol-2/act-2/ch10-aftermath-mission-that-once-was": "female-solo",
+    "vol-2/act-2/ch11-second-surface-second-forsaken-reveal": "female-solo",
+    "vol-2/act-2/ch12-beginning-of-the-end": "female-solo",
+    "vol-2/act-3/ch13-schema-that-should-not-migrate": "female-solo",
+    "vol-2/act-3/ch14-the-crossing": "female-solo",
+    "vol-2/act-3/ch15-compromised-relay-holds": "female-solo",
+    "vol-2/act-3/ch16-final-ascent": "female-solo",
+    "vol-2/act-3/ch17-transit-north": "female-solo",
+    "vol-2/act-3/ch18-punta-arenas-surfacing": "female-solo",
 }
 
 CHAPTER_FILES = [
-    "front-matter/preface.md",
-    "part-1-thesis-and-pain/ch01-when-saas-fights-reality.md",
-    "part-1-thesis-and-pain/ch02-local-first-serious-stack.md",
-    "part-1-thesis-and-pain/ch03-inverted-stack-one-diagram.md",
-    "part-1-thesis-and-pain/ch04-choosing-your-architecture.md",
-    "part-2-council-reads-the-paper/ch05-enterprise-lens.md",
-    "part-2-council-reads-the-paper/ch06-distributed-systems-lens.md",
-    "part-2-council-reads-the-paper/ch07-security-lens.md",
-    "part-2-council-reads-the-paper/ch08-product-economic-lens.md",
-    "part-2-council-reads-the-paper/ch09-local-first-practitioner-lens.md",
-    "part-2-council-reads-the-paper/ch10-synthesis.md",
-    "part-3-reference-architecture/ch11-node-architecture.md",
-    "part-3-reference-architecture/ch12-crdt-engine-data-layer.md",
-    "part-3-reference-architecture/ch13-schema-migration-evolution.md",
-    "part-3-reference-architecture/ch14-sync-daemon-protocol.md",
-    "part-3-reference-architecture/ch15-security-architecture.md",
-    "part-3-reference-architecture/ch16-persistence-beyond-the-node.md",
-    "part-4-implementation-playbooks/ch17-building-first-node.md",
-    "part-4-implementation-playbooks/ch18-migrating-existing-saas.md",
-    "part-4-implementation-playbooks/ch19-shipping-to-enterprise.md",
-    "part-4-implementation-playbooks/ch20-ux-sync-conflict.md",
-    "part-5-operational-concerns/ch21-operating-a-fleet.md",
-    "part-5-operational-concerns/ch22-security-operations.md",
-    "part-5-operational-concerns/ch23-endpoint-collaborator-ops.md",
-    "epilogue/epilogue-what-the-stack-owes-you.md",
-    "closing/the-crossing.md",
-    "appendices/appendix-a-sync-daemon-wire-protocol.md",
-    "appendices/appendix-b-threat-model-worksheets.md",
-    "appendices/appendix-c-further-reading.md",
-    "appendices/appendix-d-testing-the-inverted-stack.md",
-    "appendices/appendix-e-citation-style.md",
-    "appendices/appendix-f-regulatory-coverage.md",
-    "appendices/appendix-g-glossary.md",
+    "vol-1/front-matter/preface.md",
+    "vol-1/part-1-thesis-and-pain/ch01-when-saas-fights-reality.md",
+    "vol-1/part-1-thesis-and-pain/ch02-local-first-serious-stack.md",
+    "vol-1/part-1-thesis-and-pain/ch03-inverted-stack-one-diagram.md",
+    "vol-1/part-1-thesis-and-pain/ch04-choosing-your-architecture.md",
+    "vol-1/part-2-council-reads-the-paper/ch05-enterprise-lens.md",
+    "vol-1/part-2-council-reads-the-paper/ch06-distributed-systems-lens.md",
+    "vol-1/part-2-council-reads-the-paper/ch07-security-lens.md",
+    "vol-1/part-2-council-reads-the-paper/ch08-product-economic-lens.md",
+    "vol-1/part-2-council-reads-the-paper/ch09-local-first-practitioner-lens.md",
+    "vol-1/part-2-council-reads-the-paper/ch10-synthesis.md",
+    "vol-1/part-3-reference-architecture/ch11-node-architecture.md",
+    "vol-1/part-3-reference-architecture/ch12-crdt-engine-data-layer.md",
+    "vol-1/part-3-reference-architecture/ch13-schema-migration-evolution.md",
+    "vol-1/part-3-reference-architecture/ch14-sync-daemon-protocol.md",
+    "vol-1/part-3-reference-architecture/ch15-security-architecture.md",
+    "vol-1/part-3-reference-architecture/ch16-persistence-beyond-the-node.md",
+    "vol-1/part-4-implementation-playbooks/ch17-building-first-node.md",
+    "vol-1/part-4-implementation-playbooks/ch18-migrating-existing-saas.md",
+    "vol-1/part-4-implementation-playbooks/ch19-shipping-to-enterprise.md",
+    "vol-1/part-4-implementation-playbooks/ch20-ux-sync-conflict.md",
+    "vol-1/part-5-operational-concerns/ch21-operating-a-fleet.md",
+    "vol-1/part-5-operational-concerns/ch22-security-operations.md",
+    "vol-1/part-5-operational-concerns/ch23-endpoint-collaborator-ops.md",
+    "vol-1/epilogue/epilogue-what-the-stack-owes-you.md",
+    "vol-1/closing/the-crossing.md",
+    "vol-1/appendices/appendix-a-sync-daemon-wire-protocol.md",
+    "vol-1/appendices/appendix-b-threat-model-worksheets.md",
+    "vol-1/appendices/appendix-c-further-reading.md",
+    "vol-1/appendices/appendix-d-testing-the-inverted-stack.md",
+    "vol-1/appendices/appendix-e-citation-style.md",
+    "vol-1/appendices/appendix-f-regulatory-coverage.md",
+    "vol-1/appendices/appendix-g-glossary.md",
     # Vol 2 — chapters activated as each reaches icm/draft. See
-    # chapters/book-2/CHAPTER-OUTLINE.md for the full 18-chapter spec;
+    # vol-2/CHAPTER-OUTLINE.md for the full 18-chapter spec;
     # remaining inactive paths are staged in VOL2_CHAPTER_FILES below.
     # 2026-05-04: Ch 02 + Ch 05 (listen-test pair)
     # 2026-05-05: Ch 01 (Departure; Act I install chapter; post-listen-test verdict)
     # 2026-05-06: Ch 03 (Drake Passage; loop 1) + Ch 04 (First Submersion; loop 2) + Ch 06 (First Surface; loop 3)
-    "book-2/act-1/ch01-departure.md",
-    "book-2/act-1/ch02-recruitment-interview.md",
-    "book-2/act-1/ch03-drake-passage-ice-edge.md",
-    "book-2/act-1/ch04-first-submersion.md",
-    "book-2/act-1/ch05-day-twenty-realization.md",
-    "book-2/act-1/ch06-first-surface-first-forsaken-reveal.md",
+    "vol-2/act-1/ch01-departure.md",
+    "vol-2/act-1/ch02-recruitment-interview.md",
+    "vol-2/act-1/ch03-drake-passage-ice-edge.md",
+    "vol-2/act-1/ch04-first-submersion.md",
+    "vol-2/act-1/ch05-day-twenty-realization.md",
+    "vol-2/act-1/ch06-first-surface-first-forsaken-reveal.md",
     # Act II
-    "book-2/act-2/ch07-joels-sunfish.md",
-    "book-2/act-2/ch08-second-submersion.md",
-    "book-2/act-2/ch09-sync-daemon-under-drift.md",
-    "book-2/act-2/ch10-aftermath-mission-that-once-was.md",
-    "book-2/act-2/ch11-second-surface-second-forsaken-reveal.md",
-    "book-2/act-2/ch12-beginning-of-the-end.md",
-    "book-2/act-3/ch13-schema-that-should-not-migrate.md",
-    "book-2/act-3/ch14-the-crossing.md",
-    "book-2/act-3/ch15-compromised-relay-holds.md",
-    "book-2/act-3/ch16-final-ascent.md",
-    "book-2/act-3/ch17-transit-north.md",
-    "book-2/act-3/ch18-punta-arenas-surfacing.md",
+    "vol-2/act-2/ch07-joels-sunfish.md",
+    "vol-2/act-2/ch08-second-submersion.md",
+    "vol-2/act-2/ch09-sync-daemon-under-drift.md",
+    "vol-2/act-2/ch10-aftermath-mission-that-once-was.md",
+    "vol-2/act-2/ch11-second-surface-second-forsaken-reveal.md",
+    "vol-2/act-2/ch12-beginning-of-the-end.md",
+    "vol-2/act-3/ch13-schema-that-should-not-migrate.md",
+    "vol-2/act-3/ch14-the-crossing.md",
+    "vol-2/act-3/ch15-compromised-relay-holds.md",
+    "vol-2/act-3/ch16-final-ascent.md",
+    "vol-2/act-3/ch17-transit-north.md",
+    "vol-2/act-3/ch18-punta-arenas-surfacing.md",
 ]
 
 # Vol 2 (Book 1 of the Sunfish series) — story-first restructure narrated by
-# Anna Yusupova. Outline at chapters/book-2/CHAPTER-OUTLINE.md; concept
+# Anna Yusupova. Outline at vol-2/CHAPTER-OUTLINE.md; concept
 # artifact at .pao-inbox/_creative/vol-2-concept-note-2026-05-04.md.
 #
 # Paths below are PLACEHOLDERS matching the planned 18-chapter structure
@@ -1442,7 +1442,7 @@ def _load_vol2_audio_substitutions() -> list[tuple]:
     if _VOL2_AUDIO_SUBS_CACHE is not None:
         return _VOL2_AUDIO_SUBS_CACHE
 
-    yaml_path = REPO / "chapters" / "book-2" / "_glossary" / "_audio_substitutions.yaml"
+    yaml_path = REPO / "vol-2" / "_glossary" / "_audio_substitutions.yaml"
     if not yaml_path.exists():
         _VOL2_AUDIO_SUBS_CACHE = []
         return _VOL2_AUDIO_SUBS_CACHE
@@ -1472,7 +1472,7 @@ def _load_vol2_audio_substitutions() -> list[tuple]:
 def apply_vol2_audio_substitutions(text: str, source_path: Path) -> str:
     """Apply Vol 2 audio-glossary substitutions to chapter text.
 
-    Substitutions are loaded from chapters/book-2/_glossary/_audio_substitutions.yaml
+    Substitutions are loaded from vol-2/_glossary/_audio_substitutions.yaml
     and applied sequentially in document order. Each pattern runs once
     over the text; the YAML is ordered longest-pattern-first so compound
     technical terms substitute before single-word patterns.

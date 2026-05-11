@@ -15,7 +15,7 @@ import re
 import sys
 
 REPO_ROOT = os.path.join(os.path.dirname(__file__), "..")
-CHAPTERS_DIR = os.path.join(REPO_ROOT, "chapters")
+CHAPTERS_DIR = os.path.join(REPO_ROOT, "vol-1")
 
 EXPECTED_CHAPTERS = [
     ("front-matter/preface.md", "preface"),
@@ -81,7 +81,7 @@ print("\n[1] Chapter file existence")
 for rel_path, key in EXPECTED_CHAPTERS:
     full_path = os.path.join(CHAPTERS_DIR, rel_path)
     exists = os.path.exists(full_path)
-    check(key, exists, f"Missing: chapters/{rel_path}")
+    check(key, exists, f"Missing: vol-1/{rel_path}")
     if exists:
         print(f"  OK    {rel_path}")
 
@@ -196,7 +196,7 @@ for rel_path, key in EXPECTED_CHAPTERS:
         continue
     if "Draft not started" in content or "Draft not yet started" in content:
         stub_count += 1
-        print(f"  STUB  chapters/{rel_path}")
+        print(f"  STUB  vol-1/{rel_path}")
 
 if stub_count == 0:
     print("  OK    No stubs remaining")

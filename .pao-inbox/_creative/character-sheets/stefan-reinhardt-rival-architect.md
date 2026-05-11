@@ -301,6 +301,6 @@ This Ch 18 beat is the unavoidable moment. Its brevity — its institutional fra
 ### Cross-references
 
 - **Anna's voice register specification:** `.pao-inbox/_creative/character-sheets/dr-leader-mission-director.md` § Voice register specification — the compressed-deliberate / controlled-emotional-flash register applies here at maximum restraint
-- **Bremerhaven flashback fragments:** Ch 10 (substantial chunk) + Ch 2 (lighter reference) per `chapters/book-2/CHAPTER-OUTLINE.md`
+- **Bremerhaven flashback fragments:** Ch 10 (substantial chunk) + Ch 2 (lighter reference) per `vol-2/CHAPTER-OUTLINE.md`
 - **Press-quote register:** Ch 6 + Ch 11 surface Stefan's voice through Wanjiru's reading of the rival's PR cycle; never in conversational form
 - **The supply-chain pattern Wanjiru documents:** Ch 17 forensic conversation + Ch 18 regulatory filing; the institutional context that makes Stefan's Ch 18 presence non-trivial without dramatizing him

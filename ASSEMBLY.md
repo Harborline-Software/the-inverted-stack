@@ -9,40 +9,40 @@ Last refreshed: 2026-05-01 post-cast-swap (PR #64) + Phase 7 reference-list spli
 
 | Chapter | File | ICM Stage | Words | Target | QC-1 |
 |---|---|---|---:|---:|---|
-| Foreword | `chapters/front-matter/foreword-placeholder.md` | placeholder | 86 | — | pending contributor |
-| Preface | `chapters/front-matter/preface.md` | icm/prose-review | 1,728 | ~1,000 | ✓ over (173%) — load-bearing authorship disclaimer 2026-05-04 (+294) |
-| Ch 1 | `chapters/part-1-thesis-and-pain/ch01-when-saas-fights-reality.md` | icm/voice-passed (R1+R2 council, literary board) + King-style victims (PRs #53, #54) + cast-swap Lakshmi→Sabina (PR #64) + Phase 4a Block 2 prune (2026-05-04, -63 words) | 7,605 | ~4,500 | ⚠ over (169%); narrative scenes preserved at full altitude |
-| Ch 2 | `chapters/part-1-thesis-and-pain/ch02-local-first-serious-stack.md` | icm/voice-passed (R1+R2 council, literary board) | 5,270 | ~4,000 | ✓ over (132%) |
-| Ch 3 | `chapters/part-1-thesis-and-pain/ch03-inverted-stack-one-diagram.md` | icm/voice-passed (R1+R2 council, literary board) + cast-swap Petra→Hayoon (PR #64) | 4,418 | ~3,000 | ✓ over (147%); audit pending (Yeoman directive) |
-| Ch 4 | `chapters/part-1-thesis-and-pain/ch04-choosing-your-architecture.md` | icm/voice-passed (R1+R2 council, literary board) | 4,909 | ~3,500 | ✓ over (140%) |
-| Ch 5 | `chapters/part-2-council-reads-the-paper/ch05-enterprise-lens.md` | icm/voice-passed | 4,061 | ~3,500 | ✓ over (116%) |
-| Ch 6 | `chapters/part-2-council-reads-the-paper/ch06-distributed-systems-lens.md` | icm/voice-passed | 4,192 | ~3,500 | ✓ over (120%) |
-| Ch 7 | `chapters/part-2-council-reads-the-paper/ch07-security-lens.md` | icm/voice-passed | 4,349 | ~3,500 | ✓ over (124%) |
-| Ch 8 | `chapters/part-2-council-reads-the-paper/ch08-product-economic-lens.md` | icm/voice-passed | 4,542 | ~3,500 | ✓ over (130%) |
-| Ch 9 | `chapters/part-2-council-reads-the-paper/ch09-local-first-practitioner-lens.md` | icm/voice-passed | 4,774 | ~3,500 | ✓ over (136%) |
-| Ch 10 | `chapters/part-2-council-reads-the-paper/ch10-synthesis.md` | icm/voice-passed | 3,542 | ~2,500 | ✓ over (142%) |
-| Ch 11 | `chapters/part-3-reference-architecture/ch11-node-architecture.md` | icm/awaiting-voice-check (#43 §Performance Contracts) | 6,622 | ~4,000 | ⚠ over (166%); voice-pass-locked |
-| Ch 12 | `chapters/part-3-reference-architecture/ch12-crdt-engine-data-layer.md` | icm/voice-passed (post-cuts) | 4,897 | ~4,000 | ✓ over (122%) |
-| Ch 13 | `chapters/part-3-reference-architecture/ch13-schema-migration-evolution.md` | icm/voice-passed | 4,363 | ~3,500 | ✓ over (125%) |
-| Ch 14 | `chapters/part-3-reference-architecture/ch14-sync-daemon-protocol.md` | icm/voice-passed | 4,240 | ~3,500 | ✓ over (121%) |
-| Ch 15 | `chapters/part-3-reference-architecture/ch15-security-architecture.md` | icm/voice-passed (post Ch15 split UPF + Phase 7 ref split) | 5,722 | ~5,500 (revised post-split) | ✓ over (104%) |
-| Ch 16 | `chapters/part-3-reference-architecture/ch16-persistence-beyond-the-node.md` | icm/awaiting-voice-check (#44 §Per-Data-Class Device-Distribution) | 6,135 | ~3,000 | ⚠ over (204%); voice-pass-locked |
-| Ch 17 | `chapters/part-4-implementation-playbooks/ch17-building-first-node.md` | icm/voice-passed | 3,481 | ~4,000 | ⚠ under (87%); review pending |
-| Ch 18 | `chapters/part-4-implementation-playbooks/ch18-migrating-existing-saas.md` | icm/voice-passed | 3,600 | ~3,500 | ✓ |
-| Ch 19 | `chapters/part-4-implementation-playbooks/ch19-shipping-to-enterprise.md` | icm/voice-passed | 4,322 | ~3,500 | ✓ over (123%) |
-| Ch 20 | `chapters/part-4-implementation-playbooks/ch20-ux-sync-conflict.md` | icm/awaiting-voice-check (#43 §Performance Budgets, #45 §Revocation UX, #10 §Data-Class Escalation UX) | 9,120 | ~3,000 | ⚠ over (304%); multiple voice-pass-locked |
-| Ch 21 | `chapters/part-5-operational-concerns/ch21-operating-a-fleet.md` | icm/awaiting-voice-check (#11) | 6,390 | ~6,500 | ✓ (98%) |
-| Ch 22 | `chapters/part-5-operational-concerns/ch22-security-operations.md` | icm/awaiting-voice-check (post-split; #46 §Forward Secrecy + #48 §Key-Loss Recovery sections) + Phase 7 ref split | 7,694 | ~7,400 | ✓ over (104%) |
-| Ch 23 | `chapters/part-5-operational-concerns/ch23-endpoint-collaborator-ops.md` | icm/awaiting-voice-check (post-split; #45 §Collaborator Revocation, #47 §Endpoint Compromise, #9 §Chain-of-Custody, #10 §Event-Triggered) + Phase 7 ref split | 9,732 | ~9,000 | ✓ over (108%) |
-| Closing Chapter | `chapters/closing/the-crossing.md` | **icm/draft** (PR #59 merged 2026-05-01; first-person staff history, Anna POV, five acts; cast-swap Lars→Diego applied PR #64; Yeoman self-review directive queued) | 4,396 | ~5,000 | ✓ under (88%); audit pending (Yeoman directive) |
-| Epilogue | `chapters/epilogue/epilogue-what-the-stack-owes-you.md` | icm/voice-passed | 3,070 | ~2,500 | ✓ |
-| Appendix A | `chapters/appendices/appendix-a-sync-daemon-wire-protocol.md` | icm/voice-passed | 3,570 | ~2,000 | ✓ over (178%) |
-| Appendix B | `chapters/appendices/appendix-b-threat-model-worksheets.md` | icm/voice-passed | 4,330 | ~2,000 | ✓ over (216%) |
-| Appendix C | `chapters/appendices/appendix-c-further-reading.md` | icm/voice-passed | 3,293 | ~2,000 | ✓ over (165%) |
-| Appendix D | `chapters/appendices/appendix-d-testing-the-inverted-stack.md` | icm/voice-passed | 3,667 | ~2,000 | ✓ over (183%) |
-| Appendix E | `chapters/appendices/appendix-e-citation-style.md` | icm/approved | 962 | ~500 | ✓ over (192%) |
-| Appendix F | `chapters/appendices/appendix-f-regulatory-coverage.md` | icm/voice-passed (added 2026-04 + Phase 5 R-F update) | 2,223 | ~2,000 | ✓ |
-| Appendix G | `chapters/appendices/appendix-g-glossary.md` | icm/voice-passed (added 2026-04) | 3,349 | ~3,000 | ✓ |
+| Foreword | `vol-1/front-matter/foreword-placeholder.md` | placeholder | 86 | — | pending contributor |
+| Preface | `vol-1/front-matter/preface.md` | icm/prose-review | 1,728 | ~1,000 | ✓ over (173%) — load-bearing authorship disclaimer 2026-05-04 (+294) |
+| Ch 1 | `vol-1/part-1-thesis-and-pain/ch01-when-saas-fights-reality.md` | icm/voice-passed (R1+R2 council, literary board) + King-style victims (PRs #53, #54) + cast-swap Lakshmi→Sabina (PR #64) + Phase 4a Block 2 prune (2026-05-04, -63 words) | 7,605 | ~4,500 | ⚠ over (169%); narrative scenes preserved at full altitude |
+| Ch 2 | `vol-1/part-1-thesis-and-pain/ch02-local-first-serious-stack.md` | icm/voice-passed (R1+R2 council, literary board) | 5,270 | ~4,000 | ✓ over (132%) |
+| Ch 3 | `vol-1/part-1-thesis-and-pain/ch03-inverted-stack-one-diagram.md` | icm/voice-passed (R1+R2 council, literary board) + cast-swap Petra→Hayoon (PR #64) | 4,418 | ~3,000 | ✓ over (147%); audit pending (Yeoman directive) |
+| Ch 4 | `vol-1/part-1-thesis-and-pain/ch04-choosing-your-architecture.md` | icm/voice-passed (R1+R2 council, literary board) | 4,909 | ~3,500 | ✓ over (140%) |
+| Ch 5 | `vol-1/part-2-council-reads-the-paper/ch05-enterprise-lens.md` | icm/voice-passed | 4,061 | ~3,500 | ✓ over (116%) |
+| Ch 6 | `vol-1/part-2-council-reads-the-paper/ch06-distributed-systems-lens.md` | icm/voice-passed | 4,192 | ~3,500 | ✓ over (120%) |
+| Ch 7 | `vol-1/part-2-council-reads-the-paper/ch07-security-lens.md` | icm/voice-passed | 4,349 | ~3,500 | ✓ over (124%) |
+| Ch 8 | `vol-1/part-2-council-reads-the-paper/ch08-product-economic-lens.md` | icm/voice-passed | 4,542 | ~3,500 | ✓ over (130%) |
+| Ch 9 | `vol-1/part-2-council-reads-the-paper/ch09-local-first-practitioner-lens.md` | icm/voice-passed | 4,774 | ~3,500 | ✓ over (136%) |
+| Ch 10 | `vol-1/part-2-council-reads-the-paper/ch10-synthesis.md` | icm/voice-passed | 3,542 | ~2,500 | ✓ over (142%) |
+| Ch 11 | `vol-1/part-3-reference-architecture/ch11-node-architecture.md` | icm/awaiting-voice-check (#43 §Performance Contracts) | 6,622 | ~4,000 | ⚠ over (166%); voice-pass-locked |
+| Ch 12 | `vol-1/part-3-reference-architecture/ch12-crdt-engine-data-layer.md` | icm/voice-passed (post-cuts) | 4,897 | ~4,000 | ✓ over (122%) |
+| Ch 13 | `vol-1/part-3-reference-architecture/ch13-schema-migration-evolution.md` | icm/voice-passed | 4,363 | ~3,500 | ✓ over (125%) |
+| Ch 14 | `vol-1/part-3-reference-architecture/ch14-sync-daemon-protocol.md` | icm/voice-passed | 4,240 | ~3,500 | ✓ over (121%) |
+| Ch 15 | `vol-1/part-3-reference-architecture/ch15-security-architecture.md` | icm/voice-passed (post Ch15 split UPF + Phase 7 ref split) | 5,722 | ~5,500 (revised post-split) | ✓ over (104%) |
+| Ch 16 | `vol-1/part-3-reference-architecture/ch16-persistence-beyond-the-node.md` | icm/awaiting-voice-check (#44 §Per-Data-Class Device-Distribution) | 6,135 | ~3,000 | ⚠ over (204%); voice-pass-locked |
+| Ch 17 | `vol-1/part-4-implementation-playbooks/ch17-building-first-node.md` | icm/voice-passed | 3,481 | ~4,000 | ⚠ under (87%); review pending |
+| Ch 18 | `vol-1/part-4-implementation-playbooks/ch18-migrating-existing-saas.md` | icm/voice-passed | 3,600 | ~3,500 | ✓ |
+| Ch 19 | `vol-1/part-4-implementation-playbooks/ch19-shipping-to-enterprise.md` | icm/voice-passed | 4,322 | ~3,500 | ✓ over (123%) |
+| Ch 20 | `vol-1/part-4-implementation-playbooks/ch20-ux-sync-conflict.md` | icm/awaiting-voice-check (#43 §Performance Budgets, #45 §Revocation UX, #10 §Data-Class Escalation UX) | 9,120 | ~3,000 | ⚠ over (304%); multiple voice-pass-locked |
+| Ch 21 | `vol-1/part-5-operational-concerns/ch21-operating-a-fleet.md` | icm/awaiting-voice-check (#11) | 6,390 | ~6,500 | ✓ (98%) |
+| Ch 22 | `vol-1/part-5-operational-concerns/ch22-security-operations.md` | icm/awaiting-voice-check (post-split; #46 §Forward Secrecy + #48 §Key-Loss Recovery sections) + Phase 7 ref split | 7,694 | ~7,400 | ✓ over (104%) |
+| Ch 23 | `vol-1/part-5-operational-concerns/ch23-endpoint-collaborator-ops.md` | icm/awaiting-voice-check (post-split; #45 §Collaborator Revocation, #47 §Endpoint Compromise, #9 §Chain-of-Custody, #10 §Event-Triggered) + Phase 7 ref split | 9,732 | ~9,000 | ✓ over (108%) |
+| Closing Chapter | `vol-1/closing/the-crossing.md` | **icm/draft** (PR #59 merged 2026-05-01; first-person staff history, Anna POV, five acts; cast-swap Lars→Diego applied PR #64; Yeoman self-review directive queued) | 4,396 | ~5,000 | ✓ under (88%); audit pending (Yeoman directive) |
+| Epilogue | `vol-1/epilogue/epilogue-what-the-stack-owes-you.md` | icm/voice-passed | 3,070 | ~2,500 | ✓ |
+| Appendix A | `vol-1/appendices/appendix-a-sync-daemon-wire-protocol.md` | icm/voice-passed | 3,570 | ~2,000 | ✓ over (178%) |
+| Appendix B | `vol-1/appendices/appendix-b-threat-model-worksheets.md` | icm/voice-passed | 4,330 | ~2,000 | ✓ over (216%) |
+| Appendix C | `vol-1/appendices/appendix-c-further-reading.md` | icm/voice-passed | 3,293 | ~2,000 | ✓ over (165%) |
+| Appendix D | `vol-1/appendices/appendix-d-testing-the-inverted-stack.md` | icm/voice-passed | 3,667 | ~2,000 | ✓ over (183%) |
+| Appendix E | `vol-1/appendices/appendix-e-citation-style.md` | icm/approved | 962 | ~500 | ✓ over (192%) |
+| Appendix F | `vol-1/appendices/appendix-f-regulatory-coverage.md` | icm/voice-passed (added 2026-04 + Phase 5 R-F update) | 2,223 | ~2,000 | ✓ |
+| Appendix G | `vol-1/appendices/appendix-g-glossary.md` | icm/voice-passed (added 2026-04) | 3,349 | ~3,000 | ✓ |
 
 **Running total (excluding foreword placeholder):** ~154,337 words (was 144,664 on 2026-04-30; +9,673 from cast-swap King-style scening on Ch1+Ch3, Phase 7 reference split duplication tax across Ch15/Ch22/Ch23, the closing chapter landing at 4,396 words, and small literary-board polish increases on Ch5–10 / Ch13–14).
 
@@ -73,7 +73,7 @@ Phase 5 cross-reference cleanup substantially complete (verified 2026-05-01: all
 
 **The Crossing** (vision-of-solution narrative chapter) merged 2026-05-01. First-person staff history, Anna Yusupova POV, five-act structure (Departure, Submerged Transit, Death, Window That Doesn't Come, Return). 4,396 words. Cast: Anna Yusupova (Uzbek, AARI/St. Petersburg-affiliated), Dr. Diego Vargas (Argentine, IAA, the senior technical specialist who dies), Dr. Hiroshi Nakamura (Japanese, NIPR), Maria Santos (Brazilian, medical officer), Priya Iyer (Indian, instrumentation), Sabina Rahman (Bangladeshi, logistics — Grameen lineage), Joel Reyes (Filipino, life-support), Wanjiru Kamau (Kenyan, comms — M-PESA lineage). Concept note + character sheets at `.pao-inbox/_creative/`. Yeoman self-review directive queued in `.pao-inbox/`.
 
-**Vol-2 reframing pending revision pass:** the locked Vol 2 design (concept note 2026-05-04) replaces Diego's death with Diego's survival + the leak-and-fire-cascade landing in Segment 3 of a multi-segment under-ice mission. The existing Vol 1 closing chapter (`chapters/closing/the-crossing.md`) requires a separate revision pass to align with the multi-segment design + Anna-read-paper-not-built-it framing + leak-event-as-Diego-survival rather than death-scene + the **Nansen / MERIDIAN-7 rename**; ~3-5 hour pass; gated on listen-test verdict (now positive). Until that pass, the Vol 1 chapter remains the canonical Vol 1 closing as drafted.
+**Vol-2 reframing pending revision pass:** the locked Vol 2 design (concept note 2026-05-04) replaces Diego's death with Diego's survival + the leak-and-fire-cascade landing in Segment 3 of a multi-segment under-ice mission. The existing Vol 1 closing chapter (`vol-1/closing/the-crossing.md`) requires a separate revision pass to align with the multi-segment design + Anna-read-paper-not-built-it framing + leak-event-as-Diego-survival rather than death-scene + the **Nansen / MERIDIAN-7 rename**; ~3-5 hour pass; gated on listen-test verdict (now positive). Until that pass, the Vol 1 chapter remains the canonical Vol 1 closing as drafted.
 
 ## Vol 2 status (Book 1 of the Sunfish series — story-first restructure)
 
@@ -91,20 +91,20 @@ Phase 5 cross-reference cleanup substantially complete (verified 2026-05-01: all
 
 | Chapter | File | Status | Words | Audio |
 |---|---|---|---:|---:|
-| Ch 1 — Departure | `chapters/book-2/act-1/ch01-departure.md` | **icm/draft** (in flight 2026-05-05) | TBD | TBD |
-| Ch 2 — Recruitment Interview | `chapters/book-2/act-1/ch02-recruitment-interview.md` | **icm/draft (v4 — gravity rail; listen-test APPROVED)** | 5,445 | 31.9 min |
-| Ch 3 — Drake Passage | `chapters/book-2/act-1/ch03-drake-passage-ice-edge.md` | icm/outline (Act I dispatch authorized) | — | — |
-| Ch 4 — First Submersion | `chapters/book-2/act-1/ch04-first-submersion.md` | icm/outline (Act I dispatch authorized) | — | — |
-| Ch 5 — Day-Twenty Realization | `chapters/book-2/act-1/ch05-day-twenty-realization.md` | **icm/draft (prose-pass; listen-test APPROVED)** | 5,971 | 36.5 min |
-| Ch 6 — First Surface, First Forsaken Reveal | `chapters/book-2/act-1/ch06-first-surface-first-forsaken-reveal.md` | icm/outline (Act I dispatch authorized) | — | — |
-| Ch 7-12 (Act II) | `chapters/book-2/act-2/` | icm/outline | — | — |
-| Ch 13-18 (Act III) | `chapters/book-2/act-3/` | icm/outline | — | — |
+| Ch 1 — Departure | `vol-2/act-1/ch01-departure.md` | **icm/draft** (in flight 2026-05-05) | TBD | TBD |
+| Ch 2 — Recruitment Interview | `vol-2/act-1/ch02-recruitment-interview.md` | **icm/draft (v4 — gravity rail; listen-test APPROVED)** | 5,445 | 31.9 min |
+| Ch 3 — Drake Passage | `vol-2/act-1/ch03-drake-passage-ice-edge.md` | icm/outline (Act I dispatch authorized) | — | — |
+| Ch 4 — First Submersion | `vol-2/act-1/ch04-first-submersion.md` | icm/outline (Act I dispatch authorized) | — | — |
+| Ch 5 — Day-Twenty Realization | `vol-2/act-1/ch05-day-twenty-realization.md` | **icm/draft (prose-pass; listen-test APPROVED)** | 5,971 | 36.5 min |
+| Ch 6 — First Surface, First Forsaken Reveal | `vol-2/act-1/ch06-first-surface-first-forsaken-reveal.md` | icm/outline (Act I dispatch authorized) | — | — |
+| Ch 7-12 (Act II) | `vol-2/act-2/` | icm/outline | — | — |
+| Ch 13-18 (Act III) | `vol-2/act-3/` | icm/outline | — | — |
 
 **Total drafted: 11,416 words / 68.4 min audiobook** across the listen-test pair. Per the validated gravity canon, remaining Act I chapters dispatch sequentially against the canon docs.
 
 ### Outline + targets
 
-18 chapters across three acts; ~90,000-100,000 words target / ~9-10 hours audiobook. See `chapters/book-2/CHAPTER-OUTLINE.md` for the working blueprint and `chapters/book-2/README.md` for orientation.
+18 chapters across three acts; ~90,000-100,000 words target / ~9-10 hours audiobook. See `vol-2/CHAPTER-OUTLINE.md` for the working blueprint and `vol-2/README.md` for orientation.
 
 | Phase | Days | Chapters | Words target |
 |---|---|---:|---:|
@@ -123,7 +123,7 @@ Pipeline plumbing: `build/audiobook.py` `CHAPTER_FILES` carries Ch 2 + Ch 5 acti
 4. `series-arc-sunfish-trajectory.md` — series-canon-only; never referenced from Vol 2 prose (LOCKED 2026-05-05)
 5. `vol-2-concept-note-2026-05-04.md` — 12-section synthesis (concept-note §6.2 captain-asks-engineer superseded by gravity canon)
 6. `vol-2-concept-locked-elements-2026-05-04.md` — running locks index
-7. `chapters/book-2/CHAPTER-OUTLINE.md` — working blueprint with rail assignments + log-opener patterns + signature scenes
+7. `vol-2/CHAPTER-OUTLINE.md` — working blueprint with rail assignments + log-opener patterns + signature scenes
 8. `character-sheets/` — Anna, Joel, Priya, Wanjiru, Stefan, Astrid + minor characters (Joel/Priya/Wanjiru/Stefan all carry Book 1 plot-binding metadata + Vol 2 archive-and-capture canon layers)
 9. `forsaken-position-papers/` + `oss-architects-voices/` — voice references
 10. `.pao-inbox/_decisions/2026-05-04-vol2-boat-power-option-c-locked.md` — multi-segment mission timeline

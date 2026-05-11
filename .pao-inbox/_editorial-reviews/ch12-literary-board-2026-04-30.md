@@ -41,8 +41,8 @@ supersedes: .pao-inbox/_editorial-reviews/ch12-compression-2026-04-29.md (compre
 - **Ch20 L28, L54, L75** forward-reference Ch12 AP/CP classification. Boundary clean.
 
 **DEFECT FOUND:** Same duplicated YDotNet parenthetical artifact (the one fixed today in Ch11 PR #48) appears in:
-- `chapters/front-matter/preface.md` L41
-- `chapters/appendices/appendix-a-sync-daemon-wire-protocol.md` L123
+- `vol-1/front-matter/preface.md` L41
+- `vol-1/appendices/appendix-a-sync-daemon-wire-protocol.md` L123
 
 These need a separate cleanup PR.
 

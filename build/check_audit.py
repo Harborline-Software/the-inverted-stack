@@ -11,8 +11,8 @@ import sys
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
-CHAPTERS = REPO / "chapters"
-APPENDIX_F = CHAPTERS / "appendices" / "appendix-f-regulatory-coverage.md"
+CHAPTER_ROOTS = [REPO / "vol-1", REPO / "vol-2"]
+APPENDIX_F = REPO / "vol-1" / "appendices" / "appendix-f-regulatory-coverage.md"
 
 JURISDICTION_PATTERNS = [
     r"GDPR", r"Schrems", r"DPDP", r"DIFC", r"LGPD",
@@ -39,13 +39,14 @@ def main() -> int:
         return 1
     declared = find_jurisdictions_in_appendix_f(APPENDIX_F)
     failures: list[str] = []
-    for ch in sorted(CHAPTERS.glob("**/*.md")):
-        if "_voice-drafts" in ch.parts or ch == APPENDIX_F:
-            continue
-        used = find_jurisdictions_in_chapter(ch)
-        orphans = used - declared
-        if orphans:
-            failures.append(f"{ch.relative_to(REPO).as_posix()}: {sorted(orphans)}")
+    for root in CHAPTER_ROOTS:
+        for ch in sorted(root.glob("**/*.md")):
+            if "_voice-drafts" in ch.parts or ch == APPENDIX_F:
+                continue
+            used = find_jurisdictions_in_chapter(ch)
+            orphans = used - declared
+            if orphans:
+                failures.append(f"{ch.relative_to(REPO).as_posix()}: {sorted(orphans)}")
     if failures:
         print("FAIL — jurisdictions in chapters not declared in Appendix F:")
         for f in failures:

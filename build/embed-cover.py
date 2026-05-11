@@ -31,7 +31,7 @@ import imageio_ffmpeg
 
 REPO = Path(__file__).resolve().parent.parent
 AUDIO_DIR = REPO / "build" / "output" / "audiobook"
-CHAPTERS_DIR = REPO / "chapters"
+CHAPTERS_DIR = REPO / "vol-1"
 MANIFEST = AUDIO_DIR / "manifest.json"
 DEFAULT_COVER = REPO / "assets" / "cover-square.jpg"
 

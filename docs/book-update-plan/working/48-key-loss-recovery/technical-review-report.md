@@ -20,7 +20,7 @@ The `<!-- CLAIM: ... -->` marker at Ch15 line 167 (biometric-derived secondary k
 
 **Edit made:** The `<!-- CLAIM: ... -->` marker was replaced with a `<!-- technical-review: ... -->` comment documenting the verification result and its basis. The comment is reviewer-visible and reader-invisible. No prose change was required — the claim as written is accurate and the citation [7] is already present in the surrounding prose.
 
-**File:line:** `chapters/part-3-reference-architecture/ch15-security-architecture.md`, line 167.
+**File:line:** `vol-1/part-3-reference-architecture/ch15-security-architecture.md`, line 167.
 
 ---
 

@@ -10,8 +10,8 @@
 
 Two new sections were drafted and inserted in iter-0002:
 
-- `chapters/part-3-reference-architecture/ch15-security-architecture.md` §"Key-Loss Recovery" (~2,050 words)
-- `chapters/part-4-implementation-playbooks/ch20-ux-sync-conflict.md` §"Key-Loss Recovery UX" (~1,040 words)
+- `vol-1/part-3-reference-architecture/ch15-security-architecture.md` §"Key-Loss Recovery" (~2,050 words)
+- `vol-1/part-4-implementation-playbooks/ch20-ux-sync-conflict.md` §"Key-Loss Recovery UX" (~1,040 words)
 
 Code-check verifies: Sunfish package references against the canonical Sunfish package list, no class APIs / method signatures appear in prose, no code snippets need `// illustrative` markers, no `<!-- TBD -->` / placeholder markers remain.
 

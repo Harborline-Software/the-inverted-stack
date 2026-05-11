@@ -1,5 +1,5 @@
 # Kleppmann Council Review — Round 2
-**Document:** `chapters/part-1-thesis-and-pain/ch01-when-saas-fights-reality.md`
+**Document:** `vol-1/part-1-thesis-and-pain/ch01-when-saas-fights-reality.md`
 **Date:** 2026-04-29
 **Stage at review:** `icm/prose-review` (post-revision pass against R1 P0/P1 findings)
 **Round 1 verdict:** BLOCK (Pedantic Lawyer B3 fabricated-incident; Theorist B1 taxonomy not MECE; Skeptical Implementer B2 Linear conflation)

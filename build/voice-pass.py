@@ -2,13 +2,13 @@
 (pass 1) and then through Simon Sinek's voice as a house-voice
 normalization (pass 2).
 
-Reads chapters/voice-plan.yaml to map each chapter to its primary voice
+Reads vol-1/voice-plan.yaml to map each chapter to its primary voice
 agent. Iterates chapters in plan order. Pass 1 invokes the mapped voice
 agent for chapters whose primary voice is not sinek. Pass 2 invokes
 voice-sinek over the pass-1 output (or the original markdown, if pass 1
 was skipped).
 
-Outputs go to chapters/_voice-drafts/{pass1,final}/<chapter>.md and the
+Outputs go to vol-1/_voice-drafts/{pass1,final}/<chapter>.md and the
 whole drafts directory is gitignored. Review and merge selectively.
 
 Requires: Claude Code CLI on PATH (`claude --version` succeeds). The
@@ -39,7 +39,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
-CHAPTERS = REPO / "chapters"
+CHAPTERS = REPO / "vol-1"
 PLAN = CHAPTERS / "voice-plan.yaml"
 DRAFTS = CHAPTERS / "_voice-drafts"
 PASS1_DIR = DRAFTS / "pass1"
@@ -71,8 +71,8 @@ def load_plan() -> dict[str, str]:
 
 
 def find_chapter(chapter_stem: str) -> Path | None:
-    """Return the source markdown path for chapter_stem under chapters/,
-    excluding anything inside chapters/_voice-drafts/."""
+    """Return the source markdown path for chapter_stem under vol-1/,
+    excluding anything inside vol-1/_voice-drafts/."""
     matches = [
         p for p in CHAPTERS.glob(f"**/{chapter_stem}.md")
         if "_voice-drafts" not in p.parts
@@ -196,7 +196,7 @@ def log_invocation(
     start_iso: str,
     end_iso: str,
 ) -> Path:
-    """Write a per-invocation log file in chapters/_voice-drafts/_log/.
+    """Write a per-invocation log file in vol-1/_voice-drafts/_log/.
 
     Returns the path of the written log file."""
     log_dir.mkdir(parents=True, exist_ok=True)
@@ -246,7 +246,7 @@ def run_voice_pass(
     agent itself; the orchestrator verifies the file's mtime is newer
     than the start of this run.
 
-    Writes a per-invocation log entry to chapters/_voice-drafts/_log/
+    Writes a per-invocation log entry to vol-1/_voice-drafts/_log/
     regardless of success or failure (council B3/C9).
 
     When force=True, any existing output file is deleted before invoking
@@ -443,8 +443,8 @@ def main() -> None:
 
     if not args.dry_run:
         print(f"\nDrafts: {DRAFTS.relative_to(REPO).as_posix()}/")
-        print("Review with: git diff --no-index chapters/<part>/<ch>.md "
-              "chapters/_voice-drafts/final/<ch>.md")
+        print("Review with: git diff --no-index vol-1/<part>/<ch>.md "
+              "vol-1/_voice-drafts/final/<ch>.md")
 
 
 if __name__ == "__main__":

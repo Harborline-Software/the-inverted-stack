@@ -9,8 +9,8 @@
 
 ## Files written
 
-- `chapters/part-3-reference-architecture/ch15-security-architecture.md` — new H2 section `## Event-Triggered Re-classification` inserted between `## GDPR Article 17 and Crypto-Shredding` and `## Relay Trust Model` (now at line 690). Five new IEEE references appended to the Ch15 reference list ([37]–[41]).
-- `chapters/part-4-implementation-playbooks/ch20-ux-sync-conflict.md` — new H2 section `## Data-Class Escalation UX` inserted between `## Revocation UX` and `## Accessibility as a Contract` (now at line 354).
+- `vol-1/part-3-reference-architecture/ch15-security-architecture.md` — new H2 section `## Event-Triggered Re-classification` inserted between `## GDPR Article 17 and Crypto-Shredding` and `## Relay Trust Model` (now at line 690). Five new IEEE references appended to the Ch15 reference list ([37]–[41]).
+- `vol-1/part-4-implementation-playbooks/ch20-ux-sync-conflict.md` — new H2 section `## Data-Class Escalation UX` inserted between `## Revocation UX` and `## Accessibility as a Contract` (now at line 354).
 - `docs/book-update-plan/working/10-data-class-escalation/draft-ch15.md` — working copy
 - `docs/book-update-plan/working/10-data-class-escalation/draft-ch20.md` — working copy
 

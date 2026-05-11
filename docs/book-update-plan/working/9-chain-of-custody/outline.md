@@ -238,7 +238,7 @@ The next iteration (`outline → draft`) will invoke `@chapter-drafter` with thi
 >
 > Cross-references: per outline §H — wire all of them. Additionally, in the same edit, update the two existing cross-reference phrases "cross-reference to #9 (chain-of-custody)" in Ch15 §Key-Loss Recovery sub-pattern 48f and in Ch15 §Collaborator Revocation sub-pattern 45f to read "cross-reference to §Chain-of-Custody for Multi-Party Transfers".
 >
-> Insertion mechanics: write the new H2 section directly into `chapters/part-3-reference-architecture/ch15-security-architecture.md` at the specified insertion point; write the new H2 section directly into `chapters/appendices/appendix-b-threat-model-worksheets.md` at the specified insertion point. Preserve existing H2 anchor structure and H1 frontmatter. Update Ch15's reference list with [14]–[17].
+> Insertion mechanics: write the new H2 section directly into `vol-1/part-3-reference-architecture/ch15-security-architecture.md` at the specified insertion point; write the new H2 section directly into `vol-1/appendices/appendix-b-threat-model-worksheets.md` at the specified insertion point. Preserve existing H2 anchor structure and H1 frontmatter. Update Ch15's reference list with [14]–[17].
 
 ---
 

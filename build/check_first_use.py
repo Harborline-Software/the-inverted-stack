@@ -32,7 +32,7 @@ import sys
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
-CHAPTERS = REPO / "chapters"
+CHAPTER_ROOTS = [REPO / "vol-1", REPO / "vol-2"]
 
 # Acronyms and initialisms with their canonical spell-outs.
 # A first use is "defined" if the spell-out appears within ~80 chars before
@@ -241,18 +241,19 @@ def main() -> int:
     args = ap.parse_args()
 
     all_violations: dict[str, list[tuple[str, int]]] = {}
-    for path in sorted(CHAPTERS.glob("**/*.md")):
-        if "_voice-drafts" in path.parts:
-            continue
-        if path.name in SKIP_CHAPTERS:
-            continue
-        if path.name.endswith(".manifest.json"):
-            continue
-        violations = scan_chapter(path)
-        if args.term:
-            violations = [v for v in violations if v[0].lower() == args.term.lower()]
-        if violations:
-            all_violations[str(path.relative_to(REPO))] = violations
+    for root in CHAPTER_ROOTS:
+        for path in sorted(root.glob("**/*.md")):
+            if "_voice-drafts" in path.parts:
+                continue
+            if path.name in SKIP_CHAPTERS:
+                continue
+            if path.name.endswith(".manifest.json"):
+                continue
+            violations = scan_chapter(path)
+            if args.term:
+                violations = [v for v in violations if v[0].lower() == args.term.lower()]
+            if violations:
+                all_violations[str(path.relative_to(REPO))] = violations
 
     if args.counts:
         total = sum(len(v) for v in all_violations.values())

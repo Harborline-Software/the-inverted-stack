@@ -30,7 +30,7 @@ Existing appendices (A–F) are reference artifacts: a wire protocol specificati
 
 **Structural placement:** Ch21 opens a Part V titled "Operational Concerns" rather than appending awkwardly to Part IV. Part V is a single-chapter part — a coda. This is a deliberate structural signal: Part I convinces, Part II stress-tests, Part III specifies, Part IV implements, Part V operates. The word "operates" is important: it separates the first-deployment concerns of Part IV from the ongoing-operations concerns of Ch21. If the loop later adds #47 (endpoint-compromise threat model operational posture) or other primitives with operational-phase concerns, Part V has room for them. If not, it remains a single-chapter coda — no structural damage.
 
-**File path:** `chapters/part-5-operational-concerns/ch21-operating-a-fleet.md`
+**File path:** `vol-1/part-5-operational-concerns/ch21-operating-a-fleet.md`
 
 ---
 
@@ -282,7 +282,7 @@ The next iteration (`outline → draft`) will invoke `@chapter-drafter` with thi
 
 > Draft a new chapter for *The Inverted Stack*: **Chapter 21 — Operating a Fleet of Local-First Nodes** (~6,500 words). This chapter opens a new Part V ("Operational Concerns") that follows Part IV.
 >
-> File path: `chapters/part-5-operational-concerns/ch21-operating-a-fleet.md`. Create the directory `chapters/part-5-operational-concerns/` if it does not exist.
+> File path: `vol-1/part-5-operational-concerns/ch21-operating-a-fleet.md`. Create the directory `vol-1/part-5-operational-concerns/` if it does not exist.
 >
 > Source: outline at `docs/book-update-plan/working/11-fleet-management/outline.md`. Follow the section structure and word targets exactly.
 >

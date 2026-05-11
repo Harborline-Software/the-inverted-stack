@@ -76,6 +76,6 @@ The chapter introduces a NEW Part V "Operational Concerns" that does not yet exi
 
 1. `book-structure.md` — add Part V entry with Ch21 listing.
 2. `ASSEMBLY.md` — deferred until #11 reaches `icm/approved`.
-3. Part-divider file at `chapters/part-5-operational-concerns/README.md` (optional — match other parts' pattern if they have one).
+3. Part-divider file at `vol-1/part-5-operational-concerns/README.md` (optional — match other parts' pattern if they have one).
 
 These are document-structure tasks, not code-check concerns. Recommend handling them in the prose-review or post-prose-review stage when the chapter is closer to publication-ready.

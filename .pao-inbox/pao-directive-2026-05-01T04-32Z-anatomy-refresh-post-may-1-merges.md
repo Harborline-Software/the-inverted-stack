@@ -10,7 +10,7 @@ expected-output: yeoman-resumed-* beacon; anatomy.md updated; PAO commits
 
 ## Context
 
-Per OPENWOLF protocol: "After creating, deleting, or renaming files: update `.wolf/anatomy.md`." Sixteen PRs landed between 2026-04-30 and 2026-05-01 that created or significantly modified files outside the existing anatomy entries. Most of the additions are under `.pao-inbox/_creative/` and `.pao-inbox/_decisions/`, plus one new chapter file (`chapters/closing/the-crossing.md`). The current anatomy.md does not reflect any of this.
+Per OPENWOLF protocol: "After creating, deleting, or renaming files: update `.wolf/anatomy.md`." Sixteen PRs landed between 2026-04-30 and 2026-05-01 that created or significantly modified files outside the existing anatomy entries. Most of the additions are under `.pao-inbox/_creative/` and `.pao-inbox/_decisions/`, plus one new chapter file (`vol-1/closing/the-crossing.md`). The current anatomy.md does not reflect any of this.
 
 ## What you are doing
 
@@ -18,7 +18,7 @@ Read `.wolf/anatomy.md` end-to-end. Run `git diff main HEAD~50 -- '*.md' '.pao-i
 
 Specifically these new files need entries:
 
-- `chapters/closing/the-crossing.md` (4,430 words; the closing chapter; first-person staff history, Anna POV, five acts)
+- `vol-1/closing/the-crossing.md` (4,430 words; the closing chapter; first-person staff history, Anna POV, five acts)
 - `.pao-inbox/_creative/character-sheets/dr-leader-mission-director.md` (Anna Yusupova full sheet, LOCKED)
 - `.pao-inbox/_creative/character-sheets/_minor-characters.md` (Sabina + Hiroshi + others)
 - `.pao-inbox/_creative/character-sheets/senior-technical-specialist.md` (Diego Vargas full sheet)

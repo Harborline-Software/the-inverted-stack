@@ -1,6 +1,6 @@
 # Prose-Review Report — #11 Fleet Management (Ch21)
 
-**Chapter:** `chapters/part-5-operational-concerns/ch21-operating-a-fleet.md`
+**Chapter:** `vol-1/part-5-operational-concerns/ch21-operating-a-fleet.md`
 **Stage:** `icm/draft` → `icm/prose-review`
 **Voice register:** Hybrid spec/tutorial leaning Ch19. Direct second-person for operational instructions; declarative for primitive definitions.
 **Verdict:** PASS (with edits applied in place).

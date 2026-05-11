@@ -31,7 +31,7 @@ import sys
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
-CHAPTERS = REPO / "chapters"
+CHAPTER_ROOTS = [REPO / "vol-1", REPO / "vol-2"]
 
 # Acronyms with a SINGLE canonical spell-out — eligible for auto-remediation.
 # Ambiguous acronyms (DPA = Act vs Authority) are intentionally omitted; they
@@ -222,7 +222,9 @@ def main() -> int:
     ap.add_argument("--only", help="filter chapters by substring (e.g. 'ch01')")
     args = ap.parse_args()
 
-    targets = sorted(CHAPTERS.glob("**/*.md"))
+    targets: list[Path] = []
+    for root in CHAPTER_ROOTS:
+        targets.extend(sorted(root.glob("**/*.md")))
     targets = [p for p in targets if "_voice-drafts" not in p.parts and not p.name.endswith(".manifest.json")]
     targets = [p for p in targets if p.name not in SKIP_CHAPTERS]
     if args.only:

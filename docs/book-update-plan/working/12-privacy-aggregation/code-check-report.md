@@ -11,7 +11,7 @@
 
 Code-check pass on the new section delivered at iter-0027 / iter-0028:
 
-1. **Ch15 §Privacy-Preserving Aggregation at Relay** (`chapters/part-3-reference-architecture/ch15-security-architecture.md`, lines 710–764, ~1,674 body words / 1,716 total file words). Inserted between §Relay Trust Model (line 690) and §Security Properties Summary (line 768).
+1. **Ch15 §Privacy-Preserving Aggregation at Relay** (`vol-1/part-3-reference-architecture/ch15-security-architecture.md`, lines 710–764, ~1,674 body words / 1,716 total file words). Inserted between §Relay Trust Model (line 690) and §Security Properties Summary (line 768).
 
 The section carries:
 - 1 opening + 1 load-bearing scope clarification + 1 sub-pattern roadmap paragraph

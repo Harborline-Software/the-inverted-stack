@@ -8,6 +8,8 @@
 | 2026-05-07 14:30 | Web reader: multi-track support + render queue system | web/server.js, web/src/App.jsx, web/src/App.css, web/src/components/AudioPlayer.jsx, web/src/components/ChapterView.jsx, web/src/components/QueuePanel.jsx (NEW) | Build passes clean; 6 server changes + 5 client changes: loadMp3Tags keyed by full filename, buildCatalog scans audio variants, /api/chapters exposes tracks[], queue system with POST/GET/DELETE /api/queue, QueuePanel drawer, track selector in AudioPlayer | ~4000 |
 | 2026-05-07 01:15 | Vol 2 Ch 1 final-render audiobook launch — diagnosed and fixed 3 bugs; render in progress (background, ~2-3h estimated) | build/audiobook.py (YAML front-matter strip added to narratable_text(); ISO 8601 timestamp expansion added; default_base_url for chatterbox changed from 8881/v1 → 8883/api/v1), .wolf/buglog.json (bugs 189-191 appended), .wolf/cerebrum.md (4 new Key Learnings + 3 new Do-Not-Repeat entries) | Bugs: (1) 405 from wrong /v1 base path — proxy routes under /api/v1; (2) 504 cascade from 30s proxy gateway timeout + retry storm; fixed by using port 8883 direct backend + --no-chapter-map; (3) YAML front-matter spoken as TTS text. Render now running at ~33s/chunk avg, 270 chunks, ~2.5h total estimate. MP3 incrementally writing to build/output/audiobook/vol-2/ch01-departure.mp3. ~18000 |
 | 2026-05-07 13:09 | Editorial review feature implemented in web reader | web/server.js (+review session API), web/src/App.jsx (+ReviewPanel + review toggle), web/src/components/ReviewPanel.jsx (NEW), web/src/components/CommentToolbar.jsx (NEW), web/src/App.css (+review styles) | Build passes clean; 4 API endpoints added; submit writes co-review-*.md to .pao-inbox/; smoke test confirmed correct Markdown output | ~3200 |
+| 2026-05-07 16:00 | Part 1: Kokoro draft render of Ch 1 — ch01-departure--af_bella.mp3 (22.9 MB, 258 chunks, 16 min wall-clock including retries) | build/output/audiobook/vol-2/ch01-departure--af_bella.mp3 | Produced via --output-suffix=--af_bella; Chatterbox final (ch01-departure.mp3, 23.2 MB) confirmed untouched | ~500 |
+| 2026-05-07 16:19 | Part 2-3: aeneas forced alignment — sentence-level timing + word interpolation for Ch 1 | chapters/_voice-drafts/_alignments/ch01-departure.json (schema v2), ch01-departure.chatterbox.json.bak (backup) | aeneas 1.7.3 installed (AENEAS_WITH_CEW=False); ffmpeg via static-ffmpeg 3.0; TTS via macOS 'say' (-r=tts=macos); 257 fragments; ~5 min wall-clock for 23-min audio; words[] arrays added via linear intra-sentence interpolation (Option B); web reader API returns schema v2 stale=false | ~1500 |
 | 2026-05-05 19:30 | Vol 2 listen-test APPROVED by CO; full structural + lexical canon locked; Act I drafting authorized; Ch 1 dispatched. 8 PRs landed Tuesday (#112-#119) | vol-2-software-as-gravity.md (NEW; canon doc — software is gravity not character), vol-2-archive-and-capture-convention.md + vol-2-anchor-bridge-sync-mechanic.md + series-arc-sunfish-trajectory.md (NEW canon docs), .claude/agents/vol2-chapter-reviewer.md (NEW; line + structural editor agent), .claude/skills/crew-log-style-entry/SKILL.md (NEW), all character sheets updated (Anna voice-register spec; Joel/Priya/Wanjiru/Stefan plot-binding metadata + canon layers), three signature-discipline scenes locked (Joel bunk-laptop / Priya fourth-pass / Wanjiru exception-refusal), Ch 2 v4 redrafted under gravity rail (5,445 words / 31.9 min audio), Ch 5 prose-pass (5,971 words / 36.5 min audio), boat→RV Nansen / mission→MERIDIAN-7 / rival→HELVETICA-2 (140+ substitutions across 27 files), TTS defensive mappings, ASSEMBLY.md updated with post-verdict status, snapshot at .pao-inbox/_state-snapshots/snapshot-2026-05-05-tuesday-evening-vol2-listen-test-approved.md | listen-test pair (Ch 2 + Ch 5) audio total 68.4 min; CO listened uninterrupted; verdict "approved" lands gravity canon as validated. Act I remaining = Ch 1 (in flight) / Ch 3 / Ch 4 / Ch 6. ~140000 |
 
 | 2026-05-04 23:50 | Vol 2 scaffold + 18-chapter outline + audiobook pipeline plumbing landed (PR #109) | chapters/book-2/CHAPTER-OUTLINE.md (NEW; 18 chapters across 3 acts; per-chapter architectural-claim/frame-ratio/length/drafting-notes), chapters/book-2/README.md (NEW; orientation), chapters/book-2/{act-1,act-2,act-3}/.gitkeep, build/audiobook.py (added VOL2_CHAPTER_FILES inert placeholder list), ASSEMBLY.md (Vol 2 status section + Crossing-revision-pending flag) | PR #109 merged 2026-05-04 23:50; CO-gated next move = listen-test pair drafting (Ch 5 Day-Twenty Realization + Ch 2 Recruitment Interview) per concept-note §9; estimated ~15k words → Kokoro render → ~100min audiobook listen-test → verdict drives full Book 1 commit-or-revise | ~14000 |
@@ -2765,3 +2767,342 @@
 | 10:17 | Session end: 25 writes across 7 files (server.js, AudioPlayer.jsx, ChapterView.jsx, App.css, App.jsx) | 8 reads | ~59097 tok |
 | 10:27 | Created .pao-inbox/co-session-2026-05-07T14-27Z-web-reader-enhancements.md | — | ~1056 |
 | 14:27 | Session summary submitted to PAO inbox | .pao-inbox/co-session-2026-05-07T14-27Z-web-reader-enhancements.md | Covers: ID3 metadata, multi-track, queue, sticky player, keyboard shortcuts, session persistence, 3-layer TTS sync, editorial review system, alignment staleness detection | ~500 |
+| 10:28 | Session end: 26 writes across 8 files (server.js, AudioPlayer.jsx, ChapterView.jsx, App.css, App.jsx) | 9 reads | ~62973 tok |
+| 10:17 | Launched ch01-departure audiobook render (PID 73595) — all 5 bugs fixed (bug-189..222) | build/output/audiobook/_logs/ch01-departure-20260507-101728.log | Stalled at chunk 79/258: TTS inference worker hung on GPU box; 2x 300s timeout; first 78 chunks loaded from cache; kill+escalate | ~4200 |
+| 10:32 | Session end: 26 writes across 8 files (server.js, AudioPlayer.jsx, ChapterView.jsx, App.css, App.jsx) | 9 reads | ~62973 tok |
+| 10:37 | Session end: 26 writes across 8 files (server.js, AudioPlayer.jsx, ChapterView.jsx, App.css, App.jsx) | 10 reads | ~62973 tok |
+| 10:46 | Session end: 26 writes across 8 files (server.js, AudioPlayer.jsx, ChapterView.jsx, App.css, App.jsx) | 10 reads | ~62973 tok |
+| 10:58 | Session end: 26 writes across 8 files (server.js, AudioPlayer.jsx, ChapterView.jsx, App.css, App.jsx) | 10 reads | ~62973 tok |
+| 10:59 | Session end: 26 writes across 8 files (server.js, AudioPlayer.jsx, ChapterView.jsx, App.css, App.jsx) | 10 reads | ~62973 tok |
+
+## Session: 2026-05-07 11:23
+
+| Time | Action | File(s) | Outcome | ~Tokens |
+|------|--------|---------|---------|--------|
+| 11:24 | Edited web/server.js | 2→3 lines | ~42 |
+| 11:25 | Edited web/server.js | added error handling | ~1160 |
+| 11:25 | Created web/src/components/LogPanel.jsx | — | ~2847 |
+| 11:26 | Edited web/src/App.jsx | added 1 import(s) | ~95 |
+| 11:26 | Edited web/src/App.jsx | 3→4 lines | ~77 |
+| 11:26 | Edited web/src/App.jsx | expanded (+7 lines) | ~186 |
+| 11:26 | Edited web/src/App.jsx | 13→15 lines | ~112 |
+| 11:27 | Implemented log viewer panel — /api/logs + /api/logs/:filename + /api/logs/:filename/tail endpoints; LogPanel.jsx with two-pane layout, status dots, filter tabs, live polling, line colorization; wired into App.jsx topbar | server.js, LogPanel.jsx, App.jsx, App.css | done |
+| 11:27 | Session end: 7 writes across 3 files (server.js, LogPanel.jsx, App.jsx) | 3 reads | ~14489 tok |
+| 11:42 | Created web/src/components/LogPanel.jsx | — | ~3398 |
+| 11:42 | Edited web/src/App.css | expanded (+25 lines) | ~234 |
+| 11:42 | Edited web/src/App.css | CSS: log-maximize-btn | ~177 |
+| 11:42 | Session end: 10 writes across 4 files (server.js, LogPanel.jsx, App.jsx, App.css) | 4 reads | ~18578 tok |
+| 11:56 | Session end: 10 writes across 4 files (server.js, LogPanel.jsx, App.jsx, App.css) | 5 reads | ~19568 tok |
+| 12:02 | Session end: 10 writes across 4 files (server.js, LogPanel.jsx, App.jsx, App.css) | 5 reads | ~19568 tok |
+| 12:02 | Session end: 10 writes across 4 files (server.js, LogPanel.jsx, App.jsx, App.css) | 5 reads | ~19568 tok |
+| 12:04 | Session end: 10 writes across 4 files (server.js, LogPanel.jsx, App.jsx, App.css) | 5 reads | ~19568 tok |
+| 12:06 | Created .pao-inbox/_decisions/2026-05-07-web-app-qa-dashboard-shape.md | — | ~3933 |
+| 12:06 | Edited .pao-inbox/_decisions/2026-05-07-web-app-qa-dashboard-shape.md | modified targets() | ~266 |
+| 12:06 | Edited .pao-inbox/_decisions/2026-05-07-web-app-qa-dashboard-shape.md | inline fix | ~96 |
+| 12:06 | Edited .pao-inbox/_decisions/2026-05-07-web-app-qa-dashboard-shape.md | 5→5 lines | ~138 |
+| 12:07 | Session end: 14 writes across 5 files (server.js, LogPanel.jsx, App.jsx, App.css, 2026-05-07-web-app-qa-dashboard-shape.md) | 5 reads | ~24316 tok |
+| 12:15 | Session end: 14 writes across 5 files (server.js, LogPanel.jsx, App.jsx, App.css, 2026-05-07-web-app-qa-dashboard-shape.md) | 5 reads | ~24316 tok |
+| 13:03 | Session end: 14 writes across 5 files (server.js, LogPanel.jsx, App.jsx, App.css, 2026-05-07-web-app-qa-dashboard-shape.md) | 5 reads | ~24316 tok |
+| 13:13 | Session end: 14 writes across 5 files (server.js, LogPanel.jsx, App.jsx, App.css, 2026-05-07-web-app-qa-dashboard-shape.md) | 5 reads | ~24316 tok |
+| 13:30 | Created .pao-inbox/_creative/joel-teaching-register-canon.md | — | ~4042 |
+| 17:30 | filed Joel teaching register craft canon; Ch 7 pilot queued | .pao-inbox/_creative/joel-teaching-register-canon.md | task #11 ready-for-chapter-drafter; conditional scale on reader feedback | ~5000 |
+| 13:30 | Session end: 15 writes across 6 files (server.js, LogPanel.jsx, App.jsx, App.css, 2026-05-07-web-app-qa-dashboard-shape.md) | 5 reads | ~28647 tok |
+| 13:57 | Created build/output/qa/ch01-departure.qa.json | — | ~1697 |
+| 13:58 | Created build/output/qa/SCHEMA.md | — | ~2764 |
+| 17:58 | Ch1 render landed clean + Phase 0 manual QA + schema validation | build/output/qa/{ch01-departure.qa.json,SCHEMA.md} | 24.2 min MP3, 6/9 gates green, 3 warnings (loudness/voice-pass/wordcount) | ~6000 |
+| 13:58 | Session end: 17 writes across 8 files (server.js, LogPanel.jsx, App.jsx, App.css, 2026-05-07-web-app-qa-dashboard-shape.md) | 5 reads | ~33306 tok |
+| 14:01 | Session end: 17 writes across 8 files (server.js, LogPanel.jsx, App.jsx, App.css, 2026-05-07-web-app-qa-dashboard-shape.md) | 5 reads | ~33306 tok |
+| 14:57 | Edited web/src/components/ChapterView.jsx | added 1 condition(s) | ~137 |
+| 14:57 | Edited web/src/components/ChapterView.jsx | inline fix | ~23 |
+| 14:57 | Edited web/src/components/ChapterView.jsx | inline fix | ~15 |
+| 14:58 | Fixed highlighting broken by source_text='None' string in regenerated alignment JSON — added chunkMatchText() fallback to chunk.text (bug-228) | ChapterView.jsx | done |
+| 14:58 | Session end: 20 writes across 9 files (server.js, LogPanel.jsx, App.jsx, App.css, 2026-05-07-web-app-qa-dashboard-shape.md) | 6 reads | ~34880 tok |
+| 15:09 | Edited web/src/components/ChapterView.jsx | CSS: 1, 2, 3 | ~337 |
+| 15:10 | Fixed scoreMatch() to be bidirectional — chunk-in-element direction for per-sentence audio (bug-229). Match rate 23%→97.7% | ChapterView.jsx | done |
+| 15:10 | Session end: 21 writes across 9 files (server.js, LogPanel.jsx, App.jsx, App.css, 2026-05-07-web-app-qa-dashboard-shape.md) | 6 reads | ~35217 tok |
+| 15:16 | Edited web/src/components/ChapterView.jsx | 4→5 lines | ~54 |
+| 15:16 | Edited web/src/components/ChapterView.jsx | CSS: offsetHeight, seek | ~1067 |
+| 15:16 | Edited web/src/components/ChapterView.jsx | modified if() | ~48 |
+| 15:16 | Edited web/src/components/ChapterView.jsx | removed 9 lines | ~7 |
+| 15:17 | Seek-aware highlighting: detect time delta >1.5s as seek, force element transition + instant scroll accounting for sticky bar height, reset word/sentence state | ChapterView.jsx | done |
+| 15:17 | Session end: 25 writes across 9 files (server.js, LogPanel.jsx, App.jsx, App.css, 2026-05-07-web-app-qa-dashboard-shape.md) | 6 reads | ~36393 tok |
+| 15:28 | Edited web/src/components/ChapterView.jsx | CSS: prevWordSpanGroup | ~39 |
+| 15:28 | Edited web/src/components/ChapterView.jsx | added nullish coalescing | ~584 |
+| 15:28 | Edited web/src/components/ChapterView.jsx | CSS: prevWordSpanGroup, prevWordSpanGroup | ~114 |
+| 15:28 | Fixed per-sentence highlighting loop — sentence matched by scoreMatch per chunk, word progress scoped to matched sentence spans not whole paragraph | ChapterView.jsx | done |
+| 15:28 | Session end: 28 writes across 9 files (server.js, LogPanel.jsx, App.jsx, App.css, 2026-05-07-web-app-qa-dashboard-shape.md) | 6 reads | ~37130 tok |
+| 15:37 | Session end: 28 writes across 9 files (server.js, LogPanel.jsx, App.jsx, App.css, 2026-05-07-web-app-qa-dashboard-shape.md) | 6 reads | ~37130 tok |
+| 15:43 | Created .pao-inbox/_decisions/2026-05-07-forced-alignment-evaluation.md | — | ~2143 |
+| 19:44 | filed forced-alignment decision doc + launched Ch1 Kokoro draft + aeneas pilot subagent | .pao-inbox/_decisions/ + Sonnet subagent | task #12 in_progress; tests substitution-aware whispersync merge | ~5500 |
+| 15:45 | Session end: 29 writes across 10 files (server.js, LogPanel.jsx, App.jsx, App.css, 2026-05-07-web-app-qa-dashboard-shape.md) | 8 reads | ~67240 tok |
+| 15:53 | Edited build/audiobook.py | 14→16 lines | ~287 |
+| 15:54 | Session end: 30 writes across 11 files (server.js, LogPanel.jsx, App.jsx, App.css, 2026-05-07-web-app-qa-dashboard-shape.md) | 8 reads | ~67527 tok |
+| 15:59 | Created ../../../../../tmp/run_alignment.py | — | ~2059 |
+| 16:11 | Edited web/src/App.jsx | 8→11 lines | ~158 |
+| 16:11 | Session end: 32 writes across 12 files (server.js, LogPanel.jsx, App.jsx, App.css, 2026-05-07-web-app-qa-dashboard-shape.md) | 9 reads | ~69803 tok |
+| 16:13 | Created ../../../../../tmp/merge_alignment.py | — | ~1610 |
+| 16:13 | Edited .pao-inbox/_decisions/2026-05-07-web-app-qa-dashboard-shape.md | expanded (+20 lines) | ~459 |
+| 16:14 | Edited .pao-inbox/_decisions/2026-05-07-forced-alignment-evaluation.md | expanded (+9 lines) | ~519 |
+| 20:14 | API spec absorbed; cerebrum + decision docs updated to use real /health, /workers/reset, /audio/transcriptions endpoints | .wolf/cerebrum.md + 2 decision docs | dashboard health binding simplified; STT now production path for forced-alignment | ~3500 |
+| 16:14 | Session end: 35 writes across 13 files (server.js, LogPanel.jsx, App.jsx, App.css, 2026-05-07-web-app-qa-dashboard-shape.md) | 9 reads | ~72461 tok |
+| 20:22 | forced-alignment pilot complete (aeneas Option B fallback) | chapters/_voice-drafts/_alignments/ch01-departure.json (v2 schema) + ch01-departure--af_bella.mp3 | 73% chunks per-word-interpolated, 27% tail fallback; source_text gap flagged | ~2200 |
+| 16:22 | Session end: 35 writes across 13 files (server.js, LogPanel.jsx, App.jsx, App.css, 2026-05-07-web-app-qa-dashboard-shape.md) | 9 reads | ~72461 tok |
+
+## Session: 2026-05-07 16:38
+
+| Time | Action | File(s) | Outcome | ~Tokens |
+|------|--------|---------|---------|--------|
+| 16:38 | Edited web/server.js | modified serializeQueue() | ~220 |
+| 16:38 | Edited web/server.js | 8→9 lines | ~102 |
+| 16:39 | Edited web/server.js | added 2 condition(s) | ~612 |
+| 16:39 | Edited web/src/components/QueuePanel.jsx | CSS: processing | ~174 |
+| 16:39 | Edited web/src/components/QueuePanel.jsx | added optional chaining | ~415 |
+| 16:39 | Edited web/src/components/QueuePanel.jsx | 7→7 lines | ~72 |
+| 16:39 | Edited web/src/components/QueuePanel.jsx | 3→3 lines | ~60 |
+| 16:39 | Edited web/src/App.jsx | CSS: width | ~238 |
+| 16:39 | Edited web/src/App.jsx | inline fix | ~30 |
+| 16:40 | Edited web/src/App.jsx | added optional chaining | ~26 |
+| 16:40 | Edited web/src/App.jsx | added optional chaining | ~25 |
+| 16:40 | queue staging + Process button + progress footer | server.js, QueuePanel.jsx, App.jsx, App.css | done | ~800 |
+| 16:41 | Session end: 11 writes across 3 files (server.js, QueuePanel.jsx, App.jsx) | 2 reads | ~12533 tok |
+| 16:54 | designqc: captured 2 screenshots (85KB, ~5000 tok) | / | ready for eval | ~0 |
+| 16:55 | Edited web/src/components/QueuePanel.jsx | 1→2 lines | ~53 |
+| 16:55 | Edited web/src/components/QueuePanel.jsx | added 1 condition(s) | ~104 |
+| 16:55 | Edited web/src/components/QueuePanel.jsx | expanded (+8 lines) | ~386 |
+| 16:55 | Edited web/src/components/QueuePanel.jsx | 2→4 lines | ~65 |
+| 16:55 | Edited web/src/App.css | expanded (+30 lines) | ~437 |
+| 16:55 | Edited web/src/App.css | 2→2 lines | ~12 |
+| 16:55 | designqc: captured 2 screenshots (85KB, ~5000 tok) | / | ready for eval | ~0 |
+| 16:56 | queue chapter filter: two-row tab strip (volume + status) | QueuePanel.jsx, App.css | done | ~300 |
+| 16:56 | Session end: 17 writes across 4 files (server.js, QueuePanel.jsx, App.jsx, App.css) | 3 reads | ~14240 tok |
+| 17:13 | Session end: 17 writes across 4 files (server.js, QueuePanel.jsx, App.jsx, App.css) | 3 reads | ~14240 tok |
+| 17:21 | Session end: 17 writes across 4 files (server.js, QueuePanel.jsx, App.jsx, App.css) | 3 reads | ~14240 tok |
+| 17:29 | Edited chapters/book-2/act-1/ch01-departure.md | inline fix | ~102 |
+| 17:29 | Edited chapters/book-2/act-1/ch01-departure.md | inline fix | ~12 |
+| 17:29 | Edited chapters/book-2/act-1/ch01-departure.md | inline fix | ~132 |
+| 17:30 | Edited chapters/book-2/act-1/ch01-departure.md | inline fix | ~67 |
+| 17:30 | Edited chapters/book-2/_glossary/keys.md | modified 1() | ~339 |
+| 17:31 | Edited chapters/book-2/_glossary/keys.md | 5→5 lines | ~223 |
+| 17:31 | Edited chapters/book-2/_glossary/keys.md | modified applies() | ~302 |
+| 21:31 | Ch1 source edit: keys → credential modules in Wanjiru handoff scene | chapters/book-2/act-1/ch01-departure.md + keys.md | 4 surgical edits (lines 100,102,108,128); cadence-critical line preserved at 'I have the credentials.' | ~1500 |
+| 17:31 | Session end: 24 writes across 6 files (server.js, QueuePanel.jsx, App.jsx, App.css, ch01-departure.md) | 3 reads | ~15501 tok |
+| 17:38 | Session end: 24 writes across 6 files (server.js, QueuePanel.jsx, App.jsx, App.css, ch01-departure.md) | 4 reads | ~16464 tok |
+| 17:44 | Session end: 24 writes across 6 files (server.js, QueuePanel.jsx, App.jsx, App.css, ch01-departure.md) | 4 reads | ~16464 tok |
+| 17:49 | Session end: 24 writes across 6 files (server.js, QueuePanel.jsx, App.jsx, App.css, ch01-departure.md) | 4 reads | ~16464 tok |
+| 18:52 | Session end: 24 writes across 6 files (server.js, QueuePanel.jsx, App.jsx, App.css, ch01-departure.md) | 4 reads | ~16464 tok |
+| 18:58 | Created .pao-inbox/_creative/sunfish-submarine-security-canon.md | — | ~4879 |
+| 18:58 | Edited chapters/book-2/_glossary/keys.md | 1→3 lines | ~145 |
+| 18:58 | Edited chapters/book-2/_glossary/key-envelope.md | 1→3 lines | ~139 |
+| 18:58 | Edited chapters/book-2/_glossary/audit-log.md | 1→3 lines | ~193 |
+| 18:58 | Edited chapters/book-2/_glossary/custody.md | 1→3 lines | ~215 |
+| 18:58 | Edited chapters/book-2/_glossary/consortium-chain.md | 1→3 lines | ~249 |
+| 18:59 | Edited .pao-inbox/_creative/character-sheets/wanjiru-kamau-security-policy.md | expanded (+13 lines) | ~339 |
+| 18:59 | Edited .pao-inbox/_creative/joel-teaching-register-canon.md | 10→15 lines | ~584 |
+| 22:59 | filed Sunfish security canon + 5 workshop xrefs + Wanjiru sheet pointer + Joel-pilot brief sharpening | .pao-inbox/_creative/sunfish-submarine-security-canon.md + 5 _glossary entries + character-sheets/wanjiru + joel-teaching-register-canon.md | §7 narrative-restraint locked; canon governs all future security prose | ~6500 |
+| 19:00 | Session end: 32 writes across 13 files (server.js, QueuePanel.jsx, App.jsx, App.css, ch01-departure.md) | 5 reads | ~33318 tok |
+| 20:22 | Session end: 32 writes across 13 files (server.js, QueuePanel.jsx, App.jsx, App.css, ch01-departure.md) | 5 reads | ~33318 tok |
+| 20:23 | Edited web/service/start-server.sh | 2→3 lines | ~60 |
+| 20:23 | Session end: 33 writes across 14 files (server.js, QueuePanel.jsx, App.jsx, App.css, ch01-departure.md) | 6 reads | ~33382 tok |
+| 20:25 | Edited web/service/main.swift | 2→3 lines | ~59 |
+| 20:25 | Edited web/service/main.swift | 2→3 lines | ~43 |
+| 20:25 | Edited web/service/main.swift | modified stopSvc() | ~143 |
+| 20:25 | Session end: 36 writes across 15 files (server.js, QueuePanel.jsx, App.jsx, App.css, ch01-departure.md) | 8 reads | ~37140 tok |
+| 20:28 | Session end: 36 writes across 15 files (server.js, QueuePanel.jsx, App.jsx, App.css, ch01-departure.md) | 8 reads | ~37140 tok |
+| 20:40 | Created web/src/components/QueuePanel.jsx | — | ~4382 |
+| 20:40 | Edited web/src/App.css | expanded (+26 lines) | ~308 |
+| 20:40 | Edited web/src/App.css | expanded (+15 lines) | ~136 |
+| 20:41 | Edited web/src/App.css | expanded (+37 lines) | ~688 |
+| 20:41 | Edited web/src/App.css | CSS: flex, min-height | ~28 |
+| 20:41 | Edited web/src/App.css | CSS: flex-shrink, border-top | ~132 |
+| 20:41 | Session end: 42 writes across 15 files (server.js, QueuePanel.jsx, App.jsx, App.css, ch01-departure.md) | 8 reads | ~42814 tok |
+| 20:47 | Created web/src/components/ReviewPanel.jsx | — | ~2089 |
+| 20:47 | Edited web/src/App.css | expanded (+60 lines) | ~464 |
+| 20:48 | Session end: 44 writes across 16 files (server.js, QueuePanel.jsx, App.jsx, App.css, ch01-departure.md) | 9 reads | ~45647 tok |
+| 20:58 | Edited web/src/components/ChapterView.jsx | added optional chaining | ~417 |
+| 20:58 | Edited web/src/components/ChapterView.jsx | modified ChapterView() | ~196 |
+| 20:59 | Edited web/src/components/ChapterView.jsx | added error handling | ~367 |
+| 20:59 | Edited web/src/components/ChapterView.jsx | added 2 condition(s) | ~582 |
+| 20:59 | Edited web/src/App.jsx | 9→10 lines | ~111 |
+| 20:59 | Edited web/src/App.css | expanded (+43 lines) | ~302 |
+| 20:59 | Edited web/src/App.css | CSS: position | ~100 |
+| 20:59 | Edited web/src/App.css | CSS: margin-bottom, review-comment-item, margin-bottom | ~212 |
+| 21:00 | Session end: 52 writes across 17 files (server.js, QueuePanel.jsx, App.jsx, App.css, ch01-departure.md) | 11 reads | ~48484 tok |
+| 21:05 | Edited web/src/components/CommentToolbar.jsx | 8→12 lines | ~130 |
+| 21:05 | Edited web/src/components/CommentToolbar.jsx | added 1 condition(s) | ~204 |
+| 21:05 | Edited web/src/components/CommentToolbar.jsx | 4→5 lines | ~36 |
+| 21:05 | Session end: 55 writes across 18 files (server.js, QueuePanel.jsx, App.jsx, App.css, ch01-departure.md) | 11 reads | ~49180 tok |
+| 21:13 | Edited web/src/components/ChapterView.jsx | added error handling | ~776 |
+| 21:14 | Edited web/src/App.css | expanded (+10 lines) | ~226 |
+| 21:14 | Session end: 57 writes across 18 files (server.js, QueuePanel.jsx, App.jsx, App.css, ch01-departure.md) | 11 reads | ~50182 tok |
+| 21:27 | Edited web/server.js | added 2 condition(s) | ~279 |
+| 21:27 | Edited web/src/components/ChapterView.jsx | CSS: position | ~685 |
+| 21:27 | Edited web/src/components/ChapterView.jsx | expanded (+6 lines) | ~194 |
+| 21:27 | Edited web/src/components/ChapterView.jsx | added 3 condition(s) | ~524 |
+| 21:27 | Edited web/src/components/ChapterView.jsx | added error handling | ~241 |
+| 21:28 | Edited web/src/components/ChapterView.jsx | CSS: top, null | ~1025 |
+
+## Session: 2026-05-08 21:31
+
+| Time | Action | File(s) | Outcome | ~Tokens |
+|------|--------|---------|---------|--------|
+| 21:31 | Edited web/src/App.css | inline fix | ~36 |
+| 21:32 | Edited web/src/App.css | expanded (+151 lines) | ~1140 |
+| 21:32 | Added margin annotation CSS (review-margin-host/note/pill/actions) + position:relative on markdown-body; built dist | App.css | success | ~800 |
+| 21:32 | Session end: 2 writes across 1 files (App.css) | 1 reads | ~1826 tok |
+| 21:45 | Edited web/src/components/ChapterView.jsx | CSS: error | ~169 |
+| 21:45 | Fixed silent PATCH 404: restarted LaunchAgent, added r.ok check + console.error | ChapterView.jsx, server.js | success | ~300 |
+| 21:45 | Session end: 3 writes across 2 files (App.css, ChapterView.jsx) | 2 reads | ~2245 tok |
+| 21:52 | Session end: 3 writes across 2 files (App.css, ChapterView.jsx) | 2 reads | ~2245 tok |
+| 21:57 | Created .pao-inbox/pao-directive-2026-05-08T01-54Z-revert-to-sentence-level-highlighting.md | — | ~1126 |
+| 21:57 | Edited .pao-inbox/_decisions/2026-05-07-forced-alignment-evaluation.md | 3→3 lines | ~204 |
+| 01:57 | filed PAO directive: revert web reader to sentence-level highlighting (CO ear-test verdict) | .pao-inbox/pao-directive-2026-05-08*revert*.md + decision doc updated | aeneas pilot ended; API STT preserved as future option | ~2200 |
+| 21:57 | Session end: 5 writes across 4 files (App.css, ChapterView.jsx, pao-directive-2026-05-08T01-54Z-revert-to-sentence-level-highlighting.md, 2026-05-07-forced-alignment-evaluation.md) | 2 reads | ~3670 tok |
+| 02:28 | Session end: 5 writes across 4 files (App.css, ChapterView.jsx, pao-directive-2026-05-08T01-54Z-revert-to-sentence-level-highlighting.md, 2026-05-07-forced-alignment-evaluation.md) | 2 reads | ~3670 tok |
+| 02:46 | Created ../../../.claude/plans/smooth-swimming-moth.md | — | ~2295 |
+| 02:48 | Created ../../../.claude/plans/smooth-swimming-moth.md | — | ~1950 |
+| 03:04 | Created ../../../.claude/plans/smooth-swimming-moth.md | — | ~2506 |
+| 03:12 | Edited ../galley/services/book-server/server.js | added 2 condition(s) | ~248 |
+| 03:12 | Edited ../galley/ops/mac/scripts/install.sh | 2→4 lines | ~50 |
+| 03:12 | Edited ../galley/ops/mac/scripts/install.sh | 10→11 lines | ~104 |
+| 03:13 | Edited ../galley/ops/mac/scripts/install.sh | 7→8 lines | ~82 |
+| 03:16 | Migrated web reader to galley monorepo; book-server resolves from sync.config.json; LaunchAgent reinstalled | galley/ | success | ~600 |
+| 03:21 | Session end: 12 writes across 7 files (App.css, ChapterView.jsx, pao-directive-2026-05-08T01-54Z-revert-to-sentence-level-highlighting.md, 2026-05-07-forced-alignment-evaluation.md, smooth-swimming-moth.md) | 13 reads | ~25413 tok |
+| 03:23 | Session end: 12 writes across 7 files (App.css, ChapterView.jsx, pao-directive-2026-05-08T01-54Z-revert-to-sentence-level-highlighting.md, 2026-05-07-forced-alignment-evaluation.md, smooth-swimming-moth.md) | 13 reads | ~25413 tok |
+| 03:25 | Created ../galley/apps/web/src/app/router/index.jsx | — | ~416 |
+| 03:26 | Created ../galley/apps/web/src/app/layouts/AppLayout.jsx | — | ~2521 |
+| 03:27 | Finished galley migration: router, AppLayout, pages, tsconfigs, studio sub-routes, manifest.example | galley/apps/web | success | ~600 |
+| 03:27 | Session end: 14 writes across 9 files (App.css, ChapterView.jsx, pao-directive-2026-05-08T01-54Z-revert-to-sentence-level-highlighting.md, 2026-05-07-forced-alignment-evaluation.md, smooth-swimming-moth.md) | 13 reads | ~28350 tok |
+
+## Session: 2026-05-08 03:33
+
+| Time | Action | File(s) | Outcome | ~Tokens |
+|------|--------|---------|---------|--------|
+| 03:36 | Edited ../galley/ops/mac/scripts/install.sh | 16→16 lines | ~168 |
+| 03:36 | Edited ../galley/ops/mac/scripts/install.sh | 5→5 lines | ~46 |
+| 03:36 | Edited ../galley/ops/mac/scripts/install.sh | 2→2 lines | ~15 |
+| 03:36 | Edited ../galley/ops/mac/scripts/install.sh | 34→34 lines | ~338 |
+| 03:36 | Edited ../galley/ops/mac/scripts/install.sh | 3→3 lines | ~42 |
+| 03:36 | Edited ../galley/ops/mac/scripts/install.sh | 4→4 lines | ~31 |
+| 03:37 | Session end: 6 writes across 1 files (install.sh) | 1 reads | ~684 tok |
+| 03:37 | Session end: 6 writes across 1 files (install.sh) | 1 reads | ~684 tok |
+| 03:38 | Session end: 6 writes across 1 files (install.sh) | 1 reads | ~684 tok |
+| 03:39 | Edited ../galley/apps/menubar/src/main.swift | 3→3 lines | ~46 |
+| 03:39 | Edited ../galley/apps/menubar/src/main.swift | 3→3 lines | ~29 |
+| 03:39 | Edited ../galley/apps/menubar/src/main.swift | "The Inverted Stack Reader" → "Galley" | ~14 |
+| 03:39 | Session end: 9 writes across 2 files (install.sh, main.swift) | 2 reads | ~779 tok |
+| 03:49 | Created ../galley/integrations/library.json | — | ~496 |
+| 03:52 | Created ../galley/services/book-server/server.js | — | ~11616 |
+| 03:52 | Created ../galley/apps/web/src/app/router/index.jsx | — | ~431 |
+| 03:53 | Created ../galley/apps/web/src/app/layouts/AppLayout.jsx | — | ~2726 |
+| 03:53 | Created ../galley/apps/web/src/pages/library/LibraryPage.jsx | — | ~1335 |
+| 03:53 | Edited ../galley/apps/web/src/pages/read/ReadPage.jsx | modified if() | ~162 |
+| 03:54 | Edited ../galley/apps/web/src/features/reader/ChapterView.jsx | modified ChapterView() | ~50 |
+| 03:54 | Edited ../galley/apps/web/src/features/reader/ChapterView.jsx | modified then() | ~60 |
+| 03:54 | Edited ../galley/apps/web/src/features/reader/ChapterView.jsx | "/api/review/comment" → "/api/books/${bookId}/revi" | ~17 |
+| 03:54 | Edited ../galley/apps/web/src/features/reader/ChapterView.jsx | "/api/review/comment/${glo" → "/api/books/${bookId}/revi" | ~26 |
+| 03:54 | Edited ../galley/apps/web/src/features/reader/ChapterView.jsx | "/api/review/comment/${glo" → "/api/books/${bookId}/revi" | ~24 |
+| 03:54 | Edited ../galley/apps/web/src/features/reader/ChapterView.jsx | 7→8 lines | ~76 |
+| 03:54 | Edited ../galley/apps/web/src/features/reader/ChapterView.jsx | inline fix | ~31 |
+| 03:54 | Edited ../galley/apps/web/src/features/reader/ChapterView.jsx | 6→7 lines | ~57 |
+| 03:54 | Edited ../galley/apps/web/src/features/audio-player/AudioPlayer.jsx | inline fix | ~34 |
+| 03:55 | Edited ../galley/apps/web/src/features/audio-player/AudioPlayer.jsx | "/api/audio/${chapter.volu" → "/api/books/${bookId}/audi" | ~21 |
+| 03:55 | Edited ../galley/apps/web/src/features/tts-voices/GeneratePanel.jsx | inline fix | ~21 |
+| 03:55 | Edited ../galley/apps/web/src/features/tts-voices/GeneratePanel.jsx | "/api/chapters/${chapter.i" → "/api/books/${bookId}/chap" | ~21 |
+| 03:55 | Edited ../galley/apps/web/src/features/tts-voices/GeneratePanel.jsx | "/api/generate" → "/api/books/${bookId}/gene" | ~19 |
+| 03:55 | Edited ../galley/apps/web/src/features/annotations/CommentToolbar.jsx | inline fix | ~31 |
+| 03:55 | Edited ../galley/apps/web/src/features/annotations/CommentToolbar.jsx | "/api/review/comment" → "/api/books/${bookId}/revi" | ~20 |
+| 03:55 | Edited ../galley/apps/web/src/pages/review/ReviewPage.jsx | 9→10 lines | ~82 |
+| 03:56 | Edited ../galley/apps/web/src/features/review-sessions/ReviewPanel.jsx | inline fix | ~24 |
+| 03:56 | Edited ../galley/apps/web/src/features/review-sessions/ReviewPanel.jsx | "/api/review/submit" → "/api/books/${bookId}/revi" | ~20 |
+| 03:56 | Edited ../galley/apps/web/src/features/review-sessions/ReviewPanel.jsx | "/api/review/session" → "/api/books/${bookId}/revi" | ~23 |
+| 03:56 | Edited ../galley/apps/web/src/features/review-sessions/ReviewPanel.jsx | "/api/review/comment/${idx" → "/api/books/${bookId}/revi" | ~25 |
+| 03:56 | Edited ../galley/apps/web/src/pages/logs/LogsPage.jsx | modified LogsPage() | ~56 |
+| 03:56 | Edited ../galley/apps/web/src/features/build-logs/LogPanel.jsx | inline fix | ~16 |
+| 03:56 | Edited ../galley/apps/web/src/features/build-logs/LogPanel.jsx | "/api/logs" → "/api/books/${bookId}/logs" | ~17 |
+| 03:56 | Edited ../galley/apps/web/src/features/build-logs/LogPanel.jsx | "/api/logs/${encodeURIComp" → "/api/books/${bookId}/logs" | ~26 |
+| 03:56 | Edited ../galley/apps/web/src/features/build-logs/LogPanel.jsx | "/api/logs/${encodeURIComp" → "/api/books/${bookId}/logs" | ~31 |
+| 03:56 | Edited ../galley/apps/web/src/pages/queue/QueuePage.jsx | inline fix | ~16 |
+| 03:58 | Session end: 41 writes across 17 files (install.sh, main.swift, library.json, server.js, index.jsx) | 13 reads | ~18389 tok |
+| 17:33 | Session end: 41 writes across 17 files (install.sh, main.swift, library.json, server.js, index.jsx) | 14 reads | ~18389 tok |
+| 17:35 | Session end: 41 writes across 17 files (install.sh, main.swift, library.json, server.js, index.jsx) | 15 reads | ~25704 tok |
+| 17:38 | Created chapters/_voice-drafts/towles-pilot/ch16-final-ascent.md | — | ~7615 |
+| 17:40 | Towles voice pilot — ch16-final-ascent rewrite + Kokoro af_bella draft render | chapters/_voice-drafts/towles-pilot/ch16-final-ascent.md | 4,653 words (vs 4,721 original); render 73s; MP3 28MB; source restored clean | ~9000 |
+| 17:42 | Session end: 42 writes across 18 files (install.sh, main.swift, library.json, server.js, index.jsx) | 15 reads | ~33863 tok |
+| 17:55 | Session end: 42 writes across 18 files (install.sh, main.swift, library.json, server.js, index.jsx) | 15 reads | ~33863 tok |
+| 18:03 | Session end: 42 writes across 18 files (install.sh, main.swift, library.json, server.js, index.jsx) | 15 reads | ~33863 tok |
+| 18:07 | Session end: 42 writes across 18 files (install.sh, main.swift, library.json, server.js, index.jsx) | 15 reads | ~33863 tok |
+| 18:12 | Session end: 42 writes across 18 files (install.sh, main.swift, library.json, server.js, index.jsx) | 15 reads | ~33863 tok |
+| 18:23 | Session end: 42 writes across 18 files (install.sh, main.swift, library.json, server.js, index.jsx) | 15 reads | ~33863 tok |
+| 18:40 | Created .pao-inbox/_decisions/2026-05-08-prose-telemetry-platform.md | — | ~3832 |
+| 22:40 | filed prose-telemetry platform decision (galley/-resident; layered; cull defers to metrics) | .pao-inbox/_decisions/2026-05-08-prose-telemetry-platform.md | tasks #15 #16 created; cull plan revised to post-Phase-1 metrics-driven | ~7000 |
+| 18:41 | Session end: 43 writes across 19 files (install.sh, main.swift, library.json, server.js, index.jsx) | 15 reads | ~37968 tok |
+| 18:44 | Edited .pao-inbox/_decisions/2026-05-08-prose-telemetry-platform.md | expanded (+15 lines) | ~398 |
+| 18:45 | Edited .pao-inbox/_decisions/2026-05-08-prose-telemetry-platform.md | expanded (+18 lines) | ~838 |
+| 18:45 | Edited .pao-inbox/_decisions/2026-05-08-prose-telemetry-platform.md | modified feedback() | ~1050 |
+| 18:46 | Edited .pao-inbox/_decisions/2026-05-08-prose-telemetry-platform.md | 10→15 lines | ~452 |
+| 22:46 | integrated research-session feedback into prose-telemetry decision doc | .pao-inbox/_decisions/2026-05-08-prose-telemetry-platform.md | detector/meter split + Freestylo/StyloMetrix as primary stack + revised schema (raw events + normalized metrics + dimensions) + effort revised down to 3-5 days | ~3500 |
+| 18:46 | Session end: 47 writes across 19 files (install.sh, main.swift, library.json, server.js, index.jsx) | 15 reads | ~40902 tok |
+| 18:52 | Created .pao-inbox/_state-snapshots/snapshot-2026-05-08-friday-windown-prose-telemetry-locked.md | — | ~1789 |
+| 22:52 | filed Monday-morning resume snapshot; topic locked; β batch confirmed complete; #13 closed | .pao-inbox/_state-snapshots/snapshot-2026-05-08-*.md | tasks #11/#15/#16 open for Monday | ~3500 |
+| 18:52 | Session end: 48 writes across 20 files (install.sh, main.swift, library.json, server.js, index.jsx) | 15 reads | ~42819 tok |
+| 19:34 | Created ../../../.claude/skills/janeway_first_person_voice/SKILL.md | — | ~4457 |
+| 19:37 | Created ../../../.claude/skills/janeway_first_person_voice/SKILL.md | — | ~4801 |
+| 23:37 | created janeway_first_person_voice skill (genericized; franchise-free) | ~/.claude/skills/janeway_first_person_voice/SKILL.md | first-person captain register; antipattern discipline baked in (anaphora cap, no tautology, no franchise imports) | ~3500 |
+| 19:37 | Session end: 50 writes across 21 files (install.sh, main.swift, library.json, server.js, index.jsx) | 15 reads | ~52738 tok |
+| 19:49 | Session end: 50 writes across 21 files (install.sh, main.swift, library.json, server.js, index.jsx) | 16 reads | ~52738 tok |
+| 19:52 | Created chapters/_voice-drafts/janeway-pilot/ch16-final-ascent.md | — | ~5993 |
+| 19:53 | Janeway voice pilot: Ch16 rewrite + swap-render-revert + Kokoro draft render | chapters/_voice-drafts/janeway-pilot/ch16-final-ascent.md; ch16-final-ascent--janeway.mp3 | complete; source restored; diff exit 0 | ~4800 |
+| 23:55 | Janeway voice pilot Ch16 landed (24% reduction; antipattern discipline applied) | chapters/_voice-drafts/janeway-pilot/ + galley/.../vol-2/ch16-final-ascent--janeway.mp3 | three-way ear-test possible (original/Towles/Janeway); flagged 'consoles read what they read' edge case | ~3000 |
+| 19:55 | Session end: 51 writes across 21 files (install.sh, main.swift, library.json, server.js, index.jsx) | 16 reads | ~59159 tok |
+| 20:05 | Edited .pao-inbox/_state-snapshots/snapshot-2026-05-08-friday-windown-prose-telemetry-locked.md | 6→9 lines | ~331 |
+| 00:05 | session close — Friday windown | snapshot updated to reflect janeway pilot landing + new skill | open Monday: #11 Joel-pilot, #15 prose-telemetry, #16 skill-updates; CO ear-test pending on three-way Ch16 comparison | ~500 |
+| 20:05 | Session end: 52 writes across 21 files (install.sh, main.swift, library.json, server.js, index.jsx) | 16 reads | ~59513 tok |
+| 13:17 | Session end: 52 writes across 21 files (install.sh, main.swift, library.json, server.js, index.jsx) | 17 reads | ~61371 tok |
+| 13:20 | Edited build/audiobook.py | 3→3 lines | ~90 |
+| 17:22 | af_alloy default + launched Janeway 3-ch pilot (Ch 9, 10, 14) | build/audiobook.py PRESETS_KOKORO + Sonnet subagent | tests breadth: procedural+reflection+action; Ch 14 is the action stress-test | ~3500 |
+| 13:22 | Session end: 53 writes across 22 files (install.sh, main.swift, library.json, server.js, index.jsx) | 23 reads | ~131270 tok |
+| 13:25 | Created chapters/_voice-drafts/janeway-pilot/ch09-sync-daemon-under-drift.md | — | ~7281 |
+| 13:27 | Created chapters/_voice-drafts/janeway-pilot/ch10-aftermath-mission-that-once-was.md | — | ~6216 |
+| 13:31 | Created chapters/_voice-drafts/janeway-pilot/ch14-the-crossing.md | — | ~10461 |
+
+| 13:40 | Janeway-voice pilot: Ch9/Ch10/Ch14 rewrites + Kokoro renders | chapters/_voice-drafts/janeway-pilot/ | all three rendered; all three canonical sources restored (diff exit 0) | ~45k |
+| 17:39 | Janeway 3-ch pilot landed (Ch 9/10/14); Ch 14 surfaced device-vs-filler tension | chapters/_voice-drafts/janeway-pilot/ + galley MP3s | Ch 9/10 ~22% reduction; Ch 14 44.9% (cut load-bearing repetition); ear-test priority on Ch 14 | ~3500 |
+| 13:39 | Session end: 56 writes across 25 files (install.sh, main.swift, library.json, server.js, index.jsx) | 23 reads | ~156939 tok |
+| 13:47 | Session end: 56 writes across 25 files (install.sh, main.swift, library.json, server.js, index.jsx) | 23 reads | ~156939 tok |
+| 13:49 | Created chapters/book-2/_glossary/_lexical_fatigue_families.yaml | — | ~847 |
+| 13:50 | Created build/lexical_fatigue.py | — | ~3054 |
+| 13:50 | Edited chapters/book-2/_glossary/_lexical_fatigue_families.yaml | 3→3 lines | ~38 |
+| 13:50 | Edited chapters/book-2/_glossary/_lexical_fatigue_families.yaml | 3→3 lines | ~40 |
+| 13:50 | Edited chapters/book-2/_glossary/_lexical_fatigue_families.yaml | 3→3 lines | ~37 |
+| 13:51 | Session end: 61 writes across 27 files (install.sh, main.swift, library.json, server.js, index.jsx) | 23 reads | ~160955 tok |
+| 13:53 | Edited build/lexical_fatigue.py | modified Setup() | ~443 |
+| 13:53 | Edited build/lexical_fatigue.py | modified _get_lemmatizer() | ~1537 |
+| 13:53 | Edited build/lexical_fatigue.py | 16→20 lines | ~169 |
+| 17:54 | NLTK lemmatization added; --top-lemmas now POS-aware; --discover surfaces non-curated high-density lemmas | build/lexical_fatigue.py + NLTK install + corpora download | NLTK pip-installed user-scope; wordnet+POS-tagger corpora downloaded; register lemma count 1010 (vs crude stem 686) | ~3500 |
+| 13:55 | Session end: 64 writes across 27 files (install.sh, main.swift, library.json, server.js, index.jsx) | 23 reads | ~163104 tok |
+| 14:14 | Session end: 64 writes across 27 files (install.sh, main.swift, library.json, server.js, index.jsx) | 23 reads | ~163104 tok |
+| 14:21 | Created .pao-inbox/_creative/nansen-ingestion-canon.md | — | ~3559 |
+| 14:23 | Created chapters/book-2/_glossary/_observational_lemmas.yaml | — | ~654 |
+| 14:23 | Edited build/lexical_fatigue.py | 4→6 lines | ~108 |
+| 14:24 | Edited build/lexical_fatigue.py | added 1 condition(s) | ~1652 |
+| 14:24 | Created chapters/_voice-drafts/nansen-ingestion/ch03-ice-edge-arrival.source.md | — | ~1030 |
+| 14:24 | Edited build/lexical_fatigue.py | 2→3 lines | ~86 |
+| 14:24 | Edited build/lexical_fatigue.py | 3→6 lines | ~43 |
+| 14:24 | Created chapters/_voice-drafts/nansen-ingestion/ch03-ice-edge-arrival.transformed.md | — | ~743 |
+| 14:25 | Created chapters/_voice-drafts/nansen-ingestion/ch03-ice-edge-arrival.craft-note.md | — | ~2123 |
+| 14:25 | FFF pilot: Nansen ingestion + voice-transform on Ch 3 ice-edge arrival | chapters/_voice-drafts/nansen-ingestion/ch03-ice-edge-arrival.{source,transformed,craft-note}.md | Three files created; pilot complete | ~8000 |
+| 14:27 | Edited .pao-inbox/_creative/nansen-ingestion-canon.md | expanded (+8 lines) | ~452 |
+| 18:27 | EEE+FFF+GGG complete: Nansen-ingestion canon filed; FFF pilot landed; observational-density metric live; Verne added as second canonical source | .pao-inbox/_creative/nansen-ingestion-canon.md + chapters/_voice-drafts/nansen-ingestion/ + build/lexical_fatigue.py | Vol2 at 0.74x combined polar-explorer canon (Nansen+Verne); FFF Ch3 pilot shows visible observational lift | ~7000 |
+| 14:28 | Session end: 74 writes across 32 files (install.sh, main.swift, library.json, server.js, index.jsx) | 26 reads | ~191978 tok |
+| 14:33 | Edited .pao-inbox/_creative/nansen-ingestion-canon.md | expanded (+11 lines) | ~823 |
+| 14:33 | Edited build/lexical_fatigue.py | expanded (+11 lines) | ~295 |
+| 14:33 | Edited build/lexical_fatigue.py | modified run_observational_density() | ~472 |
+| 14:34 | Edited build/lexical_fatigue.py | modified print() | ~1056 |
+| 18:35 | added Verne 20K Leagues as third canonical reference; triangulated baseline (62.87/1k); detector updated; canon doc revised | build/lexical_fatigue.py + nansen-ingestion-canon.md | Vol 2 at 0.77x triangulated canon; 6 chapters strong ingestion candidates; 3 chapters already at/above canon | ~3500 |
+| 14:35 | Session end: 78 writes across 32 files (install.sh, main.swift, library.json, server.js, index.jsx) | 27 reads | ~201276 tok |
+
+## Session: 2026-05-11 07:30
+
+| Time | Action | File(s) | Outcome | ~Tokens |
+|------|--------|---------|---------|--------|
+| 16:50 | Edited .gitignore | expanded (+7 lines) | ~55 |

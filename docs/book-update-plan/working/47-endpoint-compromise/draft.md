@@ -159,7 +159,7 @@ Cross-references: Ch15 §Endpoint Compromise (full specification); Ch15 §In-Mem
 
 ## Part 3: Ch15 reference-list additions
 
-Append to the existing `## References` section in `chapters/part-3-reference-architecture/ch15-security-architecture.md`. Existing list runs through [13]. Apple Platform Security is already cited as [7] from extension #48; the Secure Enclave inline citation in 47b uses [14] below for the consolidated platform-enclave reference, but where the existing [7] suffices for an Apple-specific point the draft reuses it. The mapping in the draft prose: [14] Apple Secure Enclave (could collapse into existing [7] at technical-review's discretion); [15] Google Titan M; [16] Microsoft Pluton; [17][18][19] SGX cautionary attacks; [20] ARM TrustZone; [21] Pegasus; [22] Hermit / Predator collective.
+Append to the existing `## References` section in `vol-1/part-3-reference-architecture/ch15-security-architecture.md`. Existing list runs through [13]. Apple Platform Security is already cited as [7] from extension #48; the Secure Enclave inline citation in 47b uses [14] below for the consolidated platform-enclave reference, but where the existing [7] suffices for an Apple-specific point the draft reuses it. The mapping in the draft prose: [14] Apple Secure Enclave (could collapse into existing [7] at technical-review's discretion); [15] Google Titan M; [16] Microsoft Pluton; [17][18][19] SGX cautionary attacks; [20] ARM TrustZone; [21] Pegasus; [22] Hermit / Predator collective.
 
 If technical review elects to collapse [14] into existing [7] (Apple Platform Security), renumber [15]–[22] down by one. The draft is written to be renumber-stable: prose cites the work, not the bare number.
 

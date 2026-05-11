@@ -1,0 +1,76 @@
+# Hand-curated word families for Phase 0 lexical-fatigue detection.
+#
+# Phase 0 ships before the prose-telemetry platform (Monday's engineering
+# session) and lives in this repo's build/ directory. Phase 1 replaces this
+# YAML with NLTK / spaCy lemmatization inside galley/lib/prose_telemetry/.
+#
+# Each entry has a "lemma" key and an explicit "forms" list. Forms are
+# matched as case-insensitive whole-word tokens. No fuzzy matching;
+# precision over recall.
+#
+# CO ear-flagged the *register* family on 2026-05-09. Add new families as
+# CO surfaces them.
+
+version: 1
+
+families:
+  register:
+    forms: [register, registers, registered, registering, registry, registries]
+    note: Anna's signature procedural marker (CO ear-flag 2026-05-09; verified at ~10/1000 across Vol 2 — heaviest fatigue candidate in the corpus)
+
+  standing:
+    forms: [standing, stood]
+    note: Anna's signature ceremonial-procedural marker (the standing register, the standing position, standing watch)
+    excludes: [stand, stands, withstand, withstanding, understand, understood]
+
+  said:
+    forms: [said, says, saying]
+    note: Dialogue tag; 8.27/1000 in Vol 2 (high end of literary fiction; not yet pathological but close)
+
+  noted:
+    forms: [note, noted, notes, noting]
+    note: Anna's "I noted X" signature; combines with anaphora cascades
+
+  logged:
+    forms: [log, logged, logging, logs]
+    note: Anna's "I logged X" signature; companion to noted
+
+  acknowledged:
+    forms: [acknowledge, acknowledged, acknowledging, acknowledgment, acknowledgments]
+    note: Procedural-formal register marker
+
+  carry:
+    forms: [carry, carries, carried, carrying]
+    note: tautology candidate (the carry was the carry); also generic verb
+
+  discipline:
+    forms: [discipline, disciplined, disciplines, disciplining, disciplinary]
+    note: Thematic word; check density vs narrative-essential threshold
+
+  procedure:
+    forms: [procedure, procedures, procedural, procedurally]
+    note: tautology candidate (the procedure was the procedure)
+
+  assess:
+    forms: [assess, assesses, assessed, assessing, assessment, assessments, reassess, reassesses, reassessed, reassessing]
+    note: CO surfaced 2026-05-09 as candidate; data shows only 5 hits across Vol 2 — included for tracking but not a current fatigue source
+
+  against:
+    forms: [against]
+    note: Preposition tic — "against the standing register" / "against the partition" — high baseline density worth tracking
+
+  exchange:
+    forms: [exchange, exchanges, exchanged, exchanging]
+    note: Anna's the-exchange-was-X register; check density
+
+  read:
+    forms: [read, reads, reading]
+    note: Both verb and chapter-event word; track but don't auto-flag
+
+  watch:
+    forms: [watch, watches, watched, watching]
+    note: Procedural noun (watch log, watch officer) and verb; thematic
+
+  surface:
+    forms: [surface, surfaces, surfaced, surfacing]
+    note: Operational noun (surface window) and verb; narratively essential

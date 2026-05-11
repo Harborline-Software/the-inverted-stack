@@ -11,7 +11,7 @@
 
 Code-check pass on the new section delivered at iter-0032:
 
-1. **Ch16 §Per-Data-Class Device-Distribution** (`chapters/part-3-reference-architecture/ch16-persistence-beyond-the-node.md`, lines 132–190; ~1,754 body words). Inserted between the existing §Lazy Fetch and Storage Budgets section (ending line 128) and the existing §Snapshot Format and Rehydration section (line 194).
+1. **Ch16 §Per-Data-Class Device-Distribution** (`vol-1/part-3-reference-architecture/ch16-persistence-beyond-the-node.md`, lines 132–190; ~1,754 body words). Inserted between the existing §Lazy Fetch and Storage Budgets section (ending line 128) and the existing §Snapshot Format and Rehydration section (line 194).
 2. **New Ch16 §References list** (lines 397–409, six new IEEE refs [1]–[6]).
 
 The section carries:
@@ -131,7 +131,7 @@ The drafter chose **Ch16-local [1]–[6]** numbering against the prompt's origin
 1. Ch16 had no pre-existing reference list; the global [42]–[47] would imply continuity from a non-existent prior numbering.
 2. Part III chapter-local convention applies (Ch12 starts at [1], Ch13 starts at [1], Ch14 starts at [1]; Ch15 is the exception, running [1]–[36] because it has been the cumulative anchor for #46/#47/#45/#48/#9/#12).
 
-**Verification against Appendix E (`chapters/appendices/appendix-e-citation-style.md`):**
+**Verification against Appendix E (`vol-1/appendices/appendix-e-citation-style.md`):**
 
 Appendix E §"Assembly Guidance" specifies (lines 124–128):
 
@@ -141,9 +141,9 @@ Appendix E §"Assembly Guidance" specifies (lines 124–128):
 
 This rule confirms that **chapter-local numbering during draft is acceptable** because the canonical numbering is performed at final-manuscript assembly. Appendix E does not specify that mid-draft numbering must match the eventual global order. The drafter's choice is consistent with:
 
-- **Ch12** (`chapters/part-3-reference-architecture/ch12-crdt-engine-data-layer.md`) — restarts at [1].
-- **Ch13** (`chapters/part-3-reference-architecture/ch13-schema-migration-evolution.md`) — restarts at [1].
-- **Ch14** (`chapters/part-3-reference-architecture/ch14-sync-daemon-protocol.md`) — restarts at [1] (per `## References` heading at Ch14:271; not opened in this code-check, declared by drafter).
+- **Ch12** (`vol-1/part-3-reference-architecture/ch12-crdt-engine-data-layer.md`) — restarts at [1].
+- **Ch13** (`vol-1/part-3-reference-architecture/ch13-schema-migration-evolution.md`) — restarts at [1].
+- **Ch14** (`vol-1/part-3-reference-architecture/ch14-sync-daemon-protocol.md`) — restarts at [1] (per `## References` heading at Ch14:271; not opened in this code-check, declared by drafter).
 
 Ch15 is the exception, running [1]–[36] because it has accumulated reference entries cumulatively across multiple security-architecture extensions (#46/#47/#45/#48/#9/#12). That accumulation pattern reflects Ch15's role as the cumulative security-architecture anchor — not a deviation from the chapter-local convention but a chapter-internal continuation of an already-running list.
 

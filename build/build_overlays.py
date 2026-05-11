@@ -2,7 +2,7 @@
 
 Reads:
 - build/output/the-inverted-stack.epub                    (Pandoc-generated input EPUB)
-- chapters/_voice-drafts/_alignments/<chapter>.json       (per-chunk timing from audiobook.py)
+- vol-1/_voice-drafts/_alignments/<chapter>.json          (per-chunk timing from audiobook.py)
 - build/output/audiobook/<chapter>.mp3                    (per-chapter audio)
 
 Writes:
@@ -46,7 +46,7 @@ from xml.etree import ElementTree as ET
 REPO = Path(__file__).resolve().parent.parent
 INPUT_EPUB = REPO / "build" / "output" / "the-inverted-stack.epub"
 DEFAULT_OUTPUT_EPUB = REPO / "build" / "output" / "the-inverted-stack-overlays.epub"
-ALIGNMENTS_DIR = REPO / "chapters" / "_voice-drafts" / "_alignments"
+ALIGNMENTS_DIR = REPO / "vol-1" / "_voice-drafts" / "_alignments"
 AUDIO_DIR = REPO / "build" / "output" / "audiobook"
 
 # Namespaces used by EPUB 3 / OPF / SMIL

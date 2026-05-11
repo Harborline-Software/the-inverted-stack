@@ -3,8 +3,8 @@
 **Date:** 2026-04-26
 **Round:** 1
 **Scope (narrow):** Two new sections added by extension #48 only.
-- Ch15 §"Key-Loss Recovery" — `chapters/part-3-reference-architecture/ch15-security-architecture.md`, lines 117–231 (~2,050 words; specification register; six recovery mechanisms 48a–48f, threat model, deployment-class table, honest-boundary section).
-- Ch20 §"Key-Loss Recovery UX" — `chapters/part-4-implementation-playbooks/ch20-ux-sync-conflict.md`, lines 178–234 (~1,040 words; tutorial register; five UX flows).
+- Ch15 §"Key-Loss Recovery" — `vol-1/part-3-reference-architecture/ch15-security-architecture.md`, lines 117–231 (~2,050 words; specification register; six recovery mechanisms 48a–48f, threat model, deployment-class table, honest-boundary section).
+- Ch20 §"Key-Loss Recovery UX" — `vol-1/part-4-implementation-playbooks/ch20-ux-sync-conflict.md`, lines 178–234 (~1,040 words; tutorial register; five UX flows).
 
 The rest of Ch15 and Ch20 passed prior ICM cycles and is out of scope for this review. The council interrogates only what is new.
 

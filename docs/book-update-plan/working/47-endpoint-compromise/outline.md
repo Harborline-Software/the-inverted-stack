@@ -258,7 +258,7 @@ The next iteration (`outline → draft`) will invoke `@chapter-drafter` (Part II
 >
 > Cross-references: per outline §H — all must be wired in the draft.
 >
-> Insertion mechanics: write the Ch15 H2 section directly into `chapters/part-3-reference-architecture/ch15-security-architecture.md` between `## In-Memory Key Handling` and `## Supply Chain Security`. Write the App B H3 section directly into `chapters/appendices/appendix-b-threat-model-worksheets.md` as a new H3 under `## Section 2 — Actor Taxonomy Template`. Preserve all existing H2 anchor structure and H1 frontmatter. Update Ch15's reference list with the new entries.
+> Insertion mechanics: write the Ch15 H2 section directly into `vol-1/part-3-reference-architecture/ch15-security-architecture.md` between `## In-Memory Key Handling` and `## Supply Chain Security`. Write the App B H3 section directly into `vol-1/appendices/appendix-b-threat-model-worksheets.md` as a new H3 under `## Section 2 — Actor Taxonomy Template`. Preserve all existing H2 anchor structure and H1 frontmatter. Update Ch15's reference list with the new entries.
 
 ---
 

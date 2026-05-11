@@ -10,6 +10,19 @@ firewall-note: Kenyan East African fintech / mobile-money infrastructure profess
 
 # Character Sheet — Wanjiru Kamau, Relay Operations + Sunfish Security Architecture / Key Management Contributor
 
+## Canon reference (added 2026-05-07)
+
+Wanjiru's operational domain is governed by the **Sunfish Submarine Security & Key Management canon** at `.pao-inbox/_creative/sunfish-submarine-security-canon.md`. She is the **operational owner** of:
+
+- §1 Identity issuance (crew + platform + service identities; she handles the credential-module handoff in Ch 1)
+- §2 Revocation list management (downloaded and applied at surface windows)
+- §6 Satellite sync (mutual TLS; she's the relay-operations lead during all three surface windows)
+- §7 Distress recognition (**narrative-restraint applies** — her forensic recognition in Ch 15 must remain implicit; do not name false-code mechanics in Vol 2 prose)
+- §8 Panic authority (alongside the Mission Director; TPI applies to L2/L3 transitions)
+- §9 Audit-log review and shore export
+
+When chapter-drafters or voice-pass agents work scenes involving Wanjiru and security operations, the canon is the primary reference. Her professional register names this work in technical-procedural terms; Anna's POV registers her tempo and choices.
+
 ## Book 1 plot-binding (load-bearing for Vol 2 prose; CO directive 2026-05-05)
 
 Drafters working any Vol 2 chapter should plant and pay off **only these elements** of Wanjiru's character. Everything else in this sheet is reserve material for future books and should NOT be signaled in Book 1 prose.

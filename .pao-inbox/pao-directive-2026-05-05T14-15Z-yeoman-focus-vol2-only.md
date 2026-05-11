@@ -46,14 +46,14 @@ In approximate priority order:
 2. **Ch 5 redraft per archive-and-capture canon** — existing Ch 5 draft predates the canon (locked 2026-05-05); needs Pattern C log-opener + diary inset + Anchor groundedness. **Status: pending; drafter dispatch when CO authorizes.**
 3. **Vol 2 chapter drafting (remaining 16 chapters)** — gated on listen-test verdict for Ch 2 + Ch 5 listen-test pair (concept-note §9). Once verdict positive, dispatch chapter-drafter on Act I remaining chapters (Ch 1, 3, 4, 6) first.
 4. **Vol 2 audiobook rendering** — as chapters reach `icm/draft`, render via GPU-proxied Kokoro endpoint (`build/audiobook.py` default kokoro engine post-PR #111).
-5. **Vol 2 chapter outlining adjustments** — outline updates as drafting reveals chapter-level issues; minor edits to `chapters/book-2/CHAPTER-OUTLINE.md`.
+5. **Vol 2 chapter outlining adjustments** — outline updates as drafting reveals chapter-level issues; minor edits to `vol-2/CHAPTER-OUTLINE.md`.
 6. **Vol 2 character sheet expansion** — Sabina, Diego, Hiroshi, Maria currently at minor-character depth; expand on demand as chapter drafts surface specific needs (concept-note §10.4).
 
 ## Working canon Yeoman must read
 
 Before any Vol 2 chapter work:
 
-1. `chapters/book-2/CHAPTER-OUTLINE.md` — UPDATED 2026-05-05; full canon lands here
+1. `vol-2/CHAPTER-OUTLINE.md` — UPDATED 2026-05-05; full canon lands here
 2. `.pao-inbox/_creative/vol-2-archive-and-capture-convention.md` — locked 2026-05-05
 3. `.pao-inbox/_creative/vol-2-anchor-bridge-sync-mechanic.md` — locked 2026-05-05
 4. `.pao-inbox/_creative/series-arc-sunfish-trajectory.md` — locked 2026-05-05; **never reference from prose**

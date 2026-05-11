@@ -20,18 +20,18 @@ Phase 4a runs in this order. Sequencing matters because some chapters interact w
 
 ### Block 1 — independent of any pending beacon (start with these)
 
-- **Appendix A** (`chapters/appendices/appendix-a-sync-daemon-wire-protocol.md`) — Sync daemon wire protocol. Look for: state-machine narration that duplicates the protocol diagram; transition descriptions that restate the normative spec.
-- **Appendix B** (`chapters/appendices/appendix-b-threat-model-worksheets.md`) — Threat-model worksheets. Look for: shared boilerplate across the 6 worksheets that could collapse into a common prelude with worksheet-specific deltas.
-- **Appendix C** (`chapters/appendices/appendix-c-further-reading.md`) — Further reading. Look for: the longest annotations (≥4 sentences) where the annotation restates what a reader can find on the linked source.
-- **Appendix D** (`chapters/appendices/appendix-d-testing-the-inverted-stack.md`) — Testing-the-stack. Look for: test-case enumeration redundancy with the chapter's framing prose.
-- **Ch 4** (`chapters/part-1-thesis-and-pain/ch04-choosing-your-architecture.md`) — Per-Zone Compliance Posture. Specifically: each of the four zones restates the compliance framework. Look at whether one canonical statement plus zone-specific deltas reads tighter than four full restatements.
-- **Ch 13** (`chapters/part-3-reference-architecture/ch13-schema-migration-evolution.md`) — Look at illustrative paragraphs that restate the spec's normative claims.
-- **Ch 14** (`chapters/part-3-reference-architecture/ch14-sync-daemon-protocol.md`) — Same standard as Ch 13.
+- **Appendix A** (`vol-1/appendices/appendix-a-sync-daemon-wire-protocol.md`) — Sync daemon wire protocol. Look for: state-machine narration that duplicates the protocol diagram; transition descriptions that restate the normative spec.
+- **Appendix B** (`vol-1/appendices/appendix-b-threat-model-worksheets.md`) — Threat-model worksheets. Look for: shared boilerplate across the 6 worksheets that could collapse into a common prelude with worksheet-specific deltas.
+- **Appendix C** (`vol-1/appendices/appendix-c-further-reading.md`) — Further reading. Look for: the longest annotations (≥4 sentences) where the annotation restates what a reader can find on the linked source.
+- **Appendix D** (`vol-1/appendices/appendix-d-testing-the-inverted-stack.md`) — Testing-the-stack. Look for: test-case enumeration redundancy with the chapter's framing prose.
+- **Ch 4** (`vol-1/part-1-thesis-and-pain/ch04-choosing-your-architecture.md`) — Per-Zone Compliance Posture. Specifically: each of the four zones restates the compliance framework. Look at whether one canonical statement plus zone-specific deltas reads tighter than four full restatements.
+- **Ch 13** (`vol-1/part-3-reference-architecture/ch13-schema-migration-evolution.md`) — Look at illustrative paragraphs that restate the spec's normative claims.
+- **Ch 14** (`vol-1/part-3-reference-architecture/ch14-sync-daemon-protocol.md`) — Same standard as Ch 13.
 - **Ch 6, 7, 8, 9** (council chapters) — Look specifically for Round-2 acknowledgment paragraphs that restate the Round-1 critique already named in the chapter structure. Recent literary-board polish grew these chapters; some of the polish carried doubled passes through the council frame.
 
 ### Block 2 — depends on the cast-swap audit beacon
 
-- **Ch 1** (`chapters/part-1-thesis-and-pain/ch01-when-saas-fights-reality.md`) — Hold this until your earlier `pao-directive-2026-05-01T02-30Z-ch01-ch03-cast-swap-audit.md` beacon has been written. The cast-swap audit will surface specific trim candidates. Apply the earn-its-place rubric to Ch 1 *after* the cast-swap audit's edits are in place.
+- **Ch 1** (`vol-1/part-1-thesis-and-pain/ch01-when-saas-fights-reality.md`) — Hold this until your earlier `pao-directive-2026-05-01T02-30Z-ch01-ch03-cast-swap-audit.md` beacon has been written. The cast-swap audit will surface specific trim candidates. Apply the earn-its-place rubric to Ch 1 *after* the cast-swap audit's edits are in place.
 
 If you process the cast-swap audit beacon before reaching Block 2, fold Ch 1's Phase 4a pass into the same working session — single resumed beacon for both.
 

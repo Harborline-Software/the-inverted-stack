@@ -21,17 +21,17 @@ This inventory pre-stages Phase 5 of the UPF so it executes mechanically once Ph
 
 | File | Refs | Dominant target after split |
 |---|---:|---|
-| `chapters/part-4-implementation-playbooks/ch20-ux-sync-conflict.md` | 14 | Mostly Ch22 (UX counterparts to operational sections) |
-| `chapters/appendices/appendix-f-regulatory-coverage.md` | 14 | Both — chapter-range entries need split into "Ch13–Ch15, Ch22" or similar |
-| `chapters/appendices/appendix-g-glossary.md` | 12 | Mixed — `Specified in: Chapter 15 §X` per-entry classification |
-| `chapters/appendices/appendix-b-threat-model-worksheets.md` | 9 | Mixed — KH/RAF→Ch15; KCIR/Endpoint/Chain-of-Custody→Ch22 |
-| `chapters/part-5-operational-concerns/ch21-operating-a-fleet.md` | 8 | Mixed — KH/RAF→Ch15; CR/OR→Ch22 |
-| `chapters/part-3-reference-architecture/ch16-persistence-beyond-the-node.md` | 8 | Mostly Ch22 (Event-Triggered Re-classification cross-refs) |
-| `chapters/part-4-implementation-playbooks/ch17-building-first-node.md` | 3 | Ch15 (architectural primitives) |
-| `chapters/part-3-reference-architecture/ch12-crdt-engine-data-layer.md` | 3 | TBD — read at Phase 5 execution |
-| `chapters/part-2-council-reads-the-paper/ch10-synthesis.md` | 3 | TBD |
-| `chapters/part-1-thesis-and-pain/ch04-choosing-your-architecture.md` | 2 | Ch15 (compliance framework, relay legal posture) |
-| `chapters/part-1-thesis-and-pain/ch03-inverted-stack-one-diagram.md` | 2 | Ch15 (compliance framework) |
+| `vol-1/part-4-implementation-playbooks/ch20-ux-sync-conflict.md` | 14 | Mostly Ch22 (UX counterparts to operational sections) |
+| `vol-1/appendices/appendix-f-regulatory-coverage.md` | 14 | Both — chapter-range entries need split into "Ch13–Ch15, Ch22" or similar |
+| `vol-1/appendices/appendix-g-glossary.md` | 12 | Mixed — `Specified in: Chapter 15 §X` per-entry classification |
+| `vol-1/appendices/appendix-b-threat-model-worksheets.md` | 9 | Mixed — KH/RAF→Ch15; KCIR/Endpoint/Chain-of-Custody→Ch22 |
+| `vol-1/part-5-operational-concerns/ch21-operating-a-fleet.md` | 8 | Mixed — KH/RAF→Ch15; CR/OR→Ch22 |
+| `vol-1/part-3-reference-architecture/ch16-persistence-beyond-the-node.md` | 8 | Mostly Ch22 (Event-Triggered Re-classification cross-refs) |
+| `vol-1/part-4-implementation-playbooks/ch17-building-first-node.md` | 3 | Ch15 (architectural primitives) |
+| `vol-1/part-3-reference-architecture/ch12-crdt-engine-data-layer.md` | 3 | TBD — read at Phase 5 execution |
+| `vol-1/part-2-council-reads-the-paper/ch10-synthesis.md` | 3 | TBD |
+| `vol-1/part-1-thesis-and-pain/ch04-choosing-your-architecture.md` | 2 | Ch15 (compliance framework, relay legal posture) |
+| `vol-1/part-1-thesis-and-pain/ch03-inverted-stack-one-diagram.md` | 2 | Ch15 (compliance framework) |
 | `ch19-shipping-to-enterprise.md`, `ch18-migrating-existing-saas.md`, `ch14-sync-daemon-protocol.md`, `ch13-schema-migration-evolution.md`, `ch11-node-architecture.md`, `ch06-distributed-systems-lens.md`, `appendix-a-sync-daemon-wire-protocol.md` | 1 each | TBD per-line |
 
 ## Redirect rules (mechanical)

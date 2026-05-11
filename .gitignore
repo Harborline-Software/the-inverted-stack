@@ -29,7 +29,14 @@ __pycache__/
 *.pyc
 
 # Voice-pass drafts (regenerable; review and merge selectively)
-chapters/_voice-drafts/
+vol-2/_voice-drafts/
 
 # OpenWolf runtime session state (regenerated each session)
 .wolf/hooks/_session.json
+.wolf/backups/
+.wolf/designqc-captures/
+
+# Web reader build artifacts
+web/node_modules/
+web/dist/
+web/package-lock.json

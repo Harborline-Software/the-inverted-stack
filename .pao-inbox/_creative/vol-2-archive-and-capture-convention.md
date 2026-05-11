@@ -67,7 +67,7 @@ Three patterns are canonical for log-opener / log-inset placement. **Used only w
 
 **Pattern C — formal log + diary inset.** Chapter opens with the formal log (clean, professional). Mid-chapter or end-chapter, a single italic diary entry surfaces. The formal log is what Anna recorded; the diary is what she didn't put on the record. The differential is the chapter's central truth. Use for the heaviest chapters — climactic moments, partition-realization beats, leak event, cumulative reveals.
 
-Per-chapter pattern assignments live in `chapters/book-2/CHAPTER-OUTLINE.md`.
+Per-chapter pattern assignments live in `vol-2/CHAPTER-OUTLINE.md`.
 
 ## 4. The 2026-grounded local-LLM stack
 
@@ -251,7 +251,7 @@ Five rules every Vol 2 chapter draft must follow:
 
 - **Sync mechanic + Wanjiru's triage role:** see `vol-2-anchor-bridge-sync-mechanic.md`.
 - **Series trajectory (centuries-scale):** see `series-arc-sunfish-trajectory.md`.
-- **Chapter-by-chapter pattern assignments:** see `chapters/book-2/CHAPTER-OUTLINE.md`.
+- **Chapter-by-chapter pattern assignments:** see `vol-2/CHAPTER-OUTLINE.md`.
 - **Generator skill for log + diary entries:** see `.claude/skills/crew-log-style-entry/SKILL.md`.
 - **Voice exemplars:** `.pao-inbox/_creative/oss-architects-voices/` (Anna mission-log fragment + Wanjiru Annex A); `.pao-inbox/_creative/forsaken-position-papers/` (Helvetia / Stefan / Working Group voices).
 - **Character voice reference:** `.pao-inbox/_creative/character-sheets/`.

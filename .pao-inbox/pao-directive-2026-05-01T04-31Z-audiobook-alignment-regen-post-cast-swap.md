@@ -16,7 +16,7 @@ Three landed-this-week PRs invalidate audiobook alignment artifacts:
 2. **PR #65 — Phase 7 reference-list split** (merged 2026-05-01T02:24Z). Ch15 references renumbered local 1..8 (was 1..41); Ch22 gained a new 18-entry list; Ch23 gained a new 24-entry list. Body citations across all three chapters renumbered to chapter-local indices.
 3. **PR #59 — The Crossing first draft + cast-swap mirror** (merged 2026-05-01T04:23Z). New 4,430-word chapter; cast-swap names + Spanish-letter beat applied during merge.
 
-The alignment artifacts under `chapters/_voice-drafts/_alignments/*.json` mirror the chapter prose by paragraph; they were generated before any of these PRs. Specifically: `ch16-persistence-beyond-the-node.json` still contains stale Ch15 §section refs (Event-Triggered, Collaborator Revocation, Forward Secrecy) that were redirected to Ch22/Ch23 in the manuscript. `appendix-b-threat-model-worksheets.json` reflects the pre-redirect cite numbering.
+The alignment artifacts under `vol-1/_voice-drafts/_alignments/*.json` mirror the chapter prose by paragraph; they were generated before any of these PRs. Specifically: `ch16-persistence-beyond-the-node.json` still contains stale Ch15 §section refs (Event-Triggered, Collaborator Revocation, Forward Secrecy) that were redirected to Ch22/Ch23 in the manuscript. `appendix-b-threat-model-worksheets.json` reflects the pre-redirect cite numbering.
 
 ## What you are doing
 
@@ -29,7 +29,7 @@ Run the audiobook regeneration pipeline for the affected chapters. Per the audio
 - `ch16-persistence-beyond-the-node.md` (alignment JSON has stale Ch15 §refs that should be Ch22/Ch23)
 - `ch22-security-operations.md` (citation renumber + new ref list)
 - `ch23-endpoint-collaborator-ops.md` (citation renumber + new ref list)
-- `chapters/closing/the-crossing.md` (new chapter, no alignment artifact yet)
+- `vol-1/closing/the-crossing.md` (new chapter, no alignment artifact yet)
 - `appendix-b-threat-model-worksheets.md` (alignment JSON has pre-redirect cite numbering)
 
 ## Deliverable

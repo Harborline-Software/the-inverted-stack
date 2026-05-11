@@ -1,7 +1,7 @@
 """Phase 4 promotion script.
 
-Promotes a voice-passed draft from chapters/_voice-drafts/final/<ch>.md
-into chapters/<part>/<ch>.md after verifying the draft's SHA-256 matches
+Promotes a voice-passed draft from vol-1/_voice-drafts/final/<ch>.md
+into vol-1/<part>/<ch>.md after verifying the draft's SHA-256 matches
 the recorded log entry from Phase 3. Writes a sidecar manifest alongside
 the source as the permanent audit trail.
 
@@ -27,7 +27,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
-CHAPTERS = REPO / "chapters"
+CHAPTERS = REPO / "vol-1"
 DRAFTS_FINAL = CHAPTERS / "_voice-drafts" / "final"
 LOG_DIR = CHAPTERS / "_voice-drafts" / "_log"
 REJECTION_LOG = CHAPTERS / "_voice-drafts" / "_rejections.jsonl"
@@ -42,7 +42,7 @@ def compute_sha256(path: Path) -> str:
 
 
 def find_source(chapter_stem: str) -> Path | None:
-    """Locate a chapter's source file under chapters/, excluding _voice-drafts/."""
+    """Locate a chapter's source file under vol-1/, excluding _voice-drafts/."""
     for p in CHAPTERS.glob(f"**/{chapter_stem}.md"):
         if "_voice-drafts" in p.parts:
             continue
@@ -104,7 +104,7 @@ def promote_chapter(
 
 
 def log_rejection(chapter_stem: str, reason: str, rejected_at_iso: str, rejecter: str) -> None:
-    """Append a REJECT decision to chapters/_voice-drafts/_rejections.jsonl.
+    """Append a REJECT decision to vol-1/_voice-drafts/_rejections.jsonl.
 
     Single-writer assumed. Phase 4 is human-driven, one chapter at a time;
     no concurrent writers are expected. The append-mode open() is atomic for
@@ -178,7 +178,7 @@ def main() -> int:
     for ch in chapters:
         source = find_source(ch)
         if source is None:
-            print(f"SKIP {ch}: no source under chapters/")
+            print(f"SKIP {ch}: no source under vol-1/")
             continue
         draft = DRAFTS_FINAL / f"{ch}.md"
         if not draft.exists():

@@ -95,7 +95,7 @@ To complete voice-check:
 
 ## Coordination with other work
 
-This loop edits BOOK CHAPTERS in `chapters/`. It does NOT touch:
+This loop edits BOOK CHAPTERS in `vol-1/`. It does NOT touch:
 - `docs/` (specs, design decisions, MVP plan, etc.)
 - `.claude/` (agents, skills, settings)
 - `build/` (build scripts)

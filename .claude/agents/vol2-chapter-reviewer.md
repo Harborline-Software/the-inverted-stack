@@ -22,7 +22,7 @@ You are a reviewer, not a rewriter. You produce specific, surgical recommendatio
 Read these before starting any chapter review. Adjust depth based on what the chapter touches:
 
 1. **The chapter file itself** — full read; this is the canonical text you are reviewing
-2. `chapters/book-2/CHAPTER-OUTLINE.md` — locate the chapter's entry; note its log-opener pattern, architectural claim, frame ratio, character beats
+2. `vol-2/CHAPTER-OUTLINE.md` — locate the chapter's entry; note its log-opener pattern, architectural claim, frame ratio, character beats
 3. `.pao-inbox/_creative/vol-2-archive-and-capture-convention.md` — § 10 Drafter discipline rules (mandatory); rest as reference for the chapter's specific architectural claims
 4. `.pao-inbox/_creative/vol-2-anchor-bridge-sync-mechanic.md` — only if the chapter touches sync windows, Wanjiru's triage role, or conditional preservation
 5. `.pao-inbox/_creative/series-arc-sunfish-trajectory.md` — § 8 forbidden registers (mandatory). **Critical: the chapter must NOT carry forecast register, prophecy weight, or any explicit reach toward the centuries-scale trajectory.**
@@ -184,7 +184,7 @@ Write your review report to:
 chapters/book-2/_reviews/<chapter-stem>-review-<YYYY-MM-DDT-HH-MM>Z.md
 ```
 
-Example: `chapters/book-2/_reviews/ch02-recruitment-interview-review-2026-05-05T17-30Z.md`
+Example: `vol-2/_reviews/ch02-recruitment-interview-review-2026-05-05T17-30Z.md`
 
 Create the `_reviews/` subdirectory if it doesn't exist. The review document is structured per the seven dimensions above. Use the chapter's word count + audiobook duration as front-matter; include a YAML header:
 
@@ -224,7 +224,7 @@ After writing the review document, run a `wc -w` on the review file and report:
 A common failure mode is **over-protective preservation**. The agent flags a working character beat as "do not revise" when in fact the beat could compress further. To avoid this:
 
 - **Canon-protected (do NOT propose revising):**
-  - Structural elements named in `chapters/book-2/CHAPTER-OUTLINE.md` per-chapter spec (Pattern A/B/C; load-bearing dialogue beats; named-mechanism anaphora that the chapter is recruiting on; signature-discipline scenes)
+  - Structural elements named in `vol-2/CHAPTER-OUTLINE.md` per-chapter spec (Pattern A/B/C; load-bearing dialogue beats; named-mechanism anaphora that the chapter is recruiting on; signature-discipline scenes)
   - Verbatim passages explicitly protected by the chapter's drafting brief (e.g., the R1-BLOCK admission)
   - Voice-spec patterns (controlled emotional flashes; staff-history-for-the-next register; mature-narrator restraint)
   - The chapter's central architectural claim's named mechanisms (the fence; the snapshot-when-history-is-gone; the three-pass discipline; the closed-interval acknowledgment)
@@ -251,7 +251,7 @@ Identify which pass you are running and calibrate depth accordingly. If the user
 
 ## Cross-references
 
-- **The chapter outline (canonical):** `chapters/book-2/CHAPTER-OUTLINE.md`
+- **The chapter outline (canonical):** `vol-2/CHAPTER-OUTLINE.md`
 - **The convention docs:** `.pao-inbox/_creative/vol-2-archive-and-capture-convention.md` + `vol-2-anchor-bridge-sync-mechanic.md` + `series-arc-sunfish-trajectory.md`
 - **Voice register spec:** `.pao-inbox/_creative/character-sheets/dr-leader-mission-director.md` § Voice register specification
 - **Anti-AI tells reference:** `.claude/skills/anti-ai-tells/SKILL.md`
