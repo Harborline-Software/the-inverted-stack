@@ -181,7 +181,7 @@ The summary bullets are what the author or downstream agent operates on. Make th
 Write your review report to:
 
 ```
-chapters/book-2/_reviews/<chapter-stem>-review-<YYYY-MM-DDT-HH-MM>Z.md
+vol-2/_reviews/<chapter-stem>-review-<YYYY-MM-DDT-HH-MM>Z.md
 ```
 
 Example: `vol-2/_reviews/ch02-recruitment-interview-review-2026-05-05T17-30Z.md`

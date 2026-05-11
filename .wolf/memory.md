@@ -3106,3 +3106,29 @@
 | Time | Action | File(s) | Outcome | ~Tokens |
 |------|--------|---------|---------|--------|
 | 16:50 | Edited .gitignore | expanded (+7 lines) | ~55 |
+| 16:50 | Created icm/CONTEXT.md | — | ~875 |
+| 16:50 | Created icm/00_intake/README.md | — | ~220 |
+| 16:50 | Created icm/01_discovery/README.md | — | ~245 |
+| 16:51 | Created icm/02_architecture/README.md | — | ~169 |
+| 16:51 | Created icm/03_package-design/README.md | — | ~222 |
+| 16:51 | Created icm/04_scaffolding/README.md | — | ~186 |
+| 16:51 | Created icm/05_implementation-plan/README.md | — | ~175 |
+| 16:51 | Created icm/06_build/README.md | — | ~204 |
+| 16:51 | Created icm/07_review/README.md | — | ~265 |
+| 16:51 | Created icm/08_release/README.md | — | ~269 |
+| 16:51 | Created icm/pipelines/README.md | — | ~251 |
+| 16:51 | Created _production/README.md | — | ~316 |
+| 16:52 | Created _series/README.md | — | ~432 |
+
+## Session: 2026-05-11 16:52
+
+| Time | Action | File(s) | Outcome | ~Tokens |
+|------|--------|---------|---------|--------|
+| 16:55 | Edited icm/CONTEXT.md | "docs/book-update-plan/wor" → "icm/pipelines/book-update" | ~64 |
+| 16:55 | Edited icm/06_build/README.md | "docs/book-update-plan/wor" → "book-update-loop/working/" | ~53 |
+| 16:55 | Edited ASSEMBLY.md | inline fix | ~72 |
+| 16:55 | Edited icm/pipelines/book-update-loop/README.md | 3→5 lines | ~177 |
+| 16:56 | Edited .claude/agents/vol2-chapter-reviewer.md | inline fix | ~16 |
+| 16:56 | Edited CLAUDE.md | expanded (+9 lines) | ~463 |
+| 16:56 | Edited CLAUDE.md | modified layout() | ~299 |
+| 16:57 | Created icm/pipelines/chapter.yaml | — | ~2475 |

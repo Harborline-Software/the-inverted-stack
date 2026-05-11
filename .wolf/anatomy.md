@@ -1,7 +1,7 @@
 # anatomy.md
 
-> Auto-maintained by OpenWolf. Last scanned: 2026-05-11T20:50:07.706Z
-> Files: 465 tracked | Anatomy hits: 0 | Misses: 0
+> Auto-maintained by OpenWolf. Last scanned: 2026-05-11T20:57:36.355Z
+> Files: 481 tracked | Anatomy hits: 0 | Misses: 0
 
 ## ../../../../../tmp/
 
@@ -139,8 +139,9 @@
 ## ./
 
 - `.gitignore` — Git ignore rules (~162 tok)
-- `ASSEMBLY.md` — Assembly Manifest (~4243 tok)
+- `ASSEMBLY.md` — Assembly Manifest (~4234 tok)
 - `book-structure.md` — BOOK-STRUCTURE (~8079 tok)
+- `CLAUDE.md` — OpenWolf (~3500 tok)
 - `LICENSE` (~204 tok)
 - `pytest.ini` (~34 tok)
 - `README.md` — Project documentation (~1112 tok)
@@ -159,7 +160,7 @@
 - `voice-grant.md` — Grant's voice in one sentence (~3553 tok)
 - `voice-lencioni.md` — Lencioni's voice in one sentence (~3758 tok)
 - `voice-sinek.md` — Sinek's voice in one sentence (~3238 tok)
-- `vol2-chapter-reviewer.md` — What Vol 2 is — series context (~6016 tok)
+- `vol2-chapter-reviewer.md` — What Vol 2 is — series context (~6004 tok)
 
 ## .claude/commands/
 
@@ -295,6 +296,14 @@
 - `snapshot-2026-05-04-monday-morning.md` — State Snapshot — Monday 2026-05-04 morning (~1201 tok)
 - `snapshot-2026-05-05-tuesday-evening-vol2-listen-test-approved.md` — State Snapshot — Tuesday 2026-05-05 evening (Vol 2 listen-test approved; gravity canon validated) (~2290 tok)
 - `snapshot-2026-05-08-friday-windown-prose-telemetry-locked.md` — State Snapshot — Friday 2026-05-08 windown (prose-telemetry topic locked for Monday) (~1858 tok)
+
+## _production/
+
+- `README.md` — Project documentation (~296 tok)
+
+## _series/
+
+- `README.md` — Project documentation (~405 tok)
 
 ## build/
 
@@ -676,6 +685,55 @@
 - `2026-04-25-phase4-promotion-plan.md` — Phase 4 Promotion Plan (~1786 tok)
 - `2026-04-25-voice-pass-orchestration-design.council-review.md` — SEAT 1 — Dr. Marguerite Voss (Plan-as-infrastructure) (~5492 tok)
 - `2026-04-25-voice-pass-orchestration-design.md` — Voice-pass Orchestration for the Entire Book — Design (~10474 tok)
+
+## icm/
+
+- `CONTEXT.md` — ICM — Iterative Chapter / Content Manufacturing Pipeline (~844 tok)
+
+## icm/00_intake/
+
+- `README.md` — Project documentation (~206 tok)
+
+## icm/01_discovery/
+
+- `README.md` — Project documentation (~229 tok)
+
+## icm/02_architecture/
+
+- `README.md` — Project documentation (~159 tok)
+
+## icm/03_package-design/
+
+- `README.md` — Project documentation (~208 tok)
+
+## icm/04_scaffolding/
+
+- `README.md` — Project documentation (~174 tok)
+
+## icm/05_implementation-plan/
+
+- `README.md` — Project documentation (~164 tok)
+
+## icm/06_build/
+
+- `README.md` — Project documentation (~200 tok)
+
+## icm/07_review/
+
+- `README.md` — Project documentation (~248 tok)
+
+## icm/08_release/
+
+- `README.md` — Project documentation (~252 tok)
+
+## icm/pipelines/
+
+- `chapter.yaml` — icm/pipelines/chapter.yaml (~2475 tok)
+- `README.md` — Project documentation (~236 tok)
+
+## icm/pipelines/book-update-loop/
+
+- `README.md` — Project documentation (~849 tok)
 
 ## prospectus/
 

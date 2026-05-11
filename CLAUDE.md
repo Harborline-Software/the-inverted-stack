@@ -13,6 +13,18 @@ This project uses OpenWolf for context management. Read and follow .wolf/OPENWOL
 practitioner book. Chapters live under `vol-1/`. The writing plan is
 `inverted-stack-book-plan.md`. The approved structure is `book-structure.md`.
 
+**Repo layout (top-level surfaces):**
+
+| Path | Role |
+|---|---|
+| `vol-1/`, `vol-2/` | Canonical prose. The story is here; everything else serves it. |
+| `_series/` | Shared series bible — world canon, tech canon, characters, chapter registry. Cross-volume continuity. |
+| `_production/` | Format outputs — ebook, audiobook, web reader, print, comic, video. Story-agnostic build chain. |
+| `icm/` | Story-change pipeline. Eight stages (intake → release) carry in-flight work from idea to canon + production. See `icm/CONTEXT.md`. |
+| `.pao-inbox/` | Short-form coordination beacons between sessions (Yeoman ↔ PAO). Long-form artifacts live in `icm/`. |
+| `build/`, `web/`, `assets/` | Active production code (audiobook pipeline, web reader, cover art). Incremental migration into `_production/` is planned. |
+| `docs/` | Style guide, plans, specs. Non-pipeline reference material. |
+
 **Audience:** Software architects, technical founders, senior engineers, and IT decision-makers
 evaluating local-first architecture. Readers are practitioners, not researchers. They know
 distributed systems vocabulary but do not need proofs.
@@ -53,18 +65,27 @@ All source files live in `source/` at the repo root (gitignored — not committe
 
 ## ICM Pipeline
 
-Every chapter moves through these stages. The current stage is tracked as a GitHub label.
+The repo runs two parallel ICM tracks:
 
-| Stage | Label | Description |
-|---|---|---|
-| 1 | `icm/outline` | Outline drafted and reviewed against book-structure.md |
-| 2 | `icm/draft` | First draft written; word count within ±10% of target |
-| 3 | `icm/code-check` | Code snippets validated against Sunfish packages |
-| 4 | `icm/technical-review` | Technical accuracy audit against v13 + v5 |
-| 5 | `icm/prose-review` | Readability and style pass |
-| 6 | `icm/voice-check` | Human synthesis: personal anecdotes, consistent voice |
-| 7 | `icm/approved` | Chapter approved for final assembly |
-| 8 | `icm/assembled` | Included in `ASSEMBLY.md` final manifest |
+1. **GitHub label track** — per-chapter status labels applied to PRs/issues. Tracks the *state* of a chapter as it moves through reviews.
+2. **`icm/` filesystem track** — the story-change pipeline. Tracks the *artifacts* of in-flight work (intake briefs, discovery notes, plans, drafts, review reports) until they land in canon (`vol-1/`, `vol-2/`) and trigger `_production/` regeneration.
+
+Read `icm/CONTEXT.md` for the filesystem pipeline orientation. Each stage folder (`00_intake/` through `08_release/`) has its own README defining inputs, artifacts, and exit criteria. Reusable pipeline definitions live in `icm/pipelines/` — start with `icm/pipelines/chapter.yaml` for a new chapter.
+
+### GitHub label track
+
+Every chapter moves through these labels:
+
+| Stage | Label | Description | Maps to `icm/` stage |
+|---|---|---|---|
+| 1 | `icm/outline` | Outline drafted and reviewed against book-structure.md | 02–03 (architecture, design) |
+| 2 | `icm/draft` | First draft written; word count within ±10% of target | 04–06 (scaffold, plan, build) |
+| 3 | `icm/code-check` | Code snippets validated against Sunfish packages | 07 (review track) |
+| 4 | `icm/technical-review` | Technical accuracy audit against v13 + v5 | 07 |
+| 5 | `icm/prose-review` | Readability and style pass | 07 |
+| 6 | `icm/voice-check` | Human synthesis: personal anecdotes, consistent voice | 07 |
+| 7 | `icm/approved` | Chapter approved for final assembly | 08 (release) |
+| 8 | `icm/assembled` | Included in `ASSEMBLY.md` final manifest | 08 |
 
 **Branching convention:** `draft/ch01`, `draft/ch05`, etc. Open a PR against `main` when
 a chapter reaches `icm/technical-review`. Merge at `icm/approved`.

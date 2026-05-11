@@ -4523,6 +4523,54 @@
       "related_bugs": [],
       "occurrences": 1,
       "last_seen": "2026-05-09T18:33:50.658Z"
+    },
+    {
+      "id": "bug-279",
+      "timestamp": "2026-05-11T20:55:34.331Z",
+      "error_message": "Incorrect value in code",
+      "file": "icm/CONTEXT.md",
+      "root_cause": "Had `docs/book-update-plan/working/`",
+      "fix": "Changed to `icm/pipelines/book-update-loop/`",
+      "tags": [
+        "auto-detected",
+        "wrong-value",
+        "md"
+      ],
+      "related_bugs": [],
+      "occurrences": 1,
+      "last_seen": "2026-05-11T20:55:34.331Z"
+    },
+    {
+      "id": "bug-280",
+      "timestamp": "2026-05-11T20:55:38.805Z",
+      "error_message": "Incorrect value in code",
+      "file": "icm/06_build/README.md",
+      "root_cause": "Had `docs/book-update-plan/working/`",
+      "fix": "Changed to `book-update-loop/working/`",
+      "tags": [
+        "auto-detected",
+        "wrong-value",
+        "md"
+      ],
+      "related_bugs": [],
+      "occurrences": 1,
+      "last_seen": "2026-05-11T20:55:38.805Z"
+    },
+    {
+      "id": "bug-281",
+      "timestamp": "2026-05-11T20:56:43.499Z",
+      "error_message": "Significant refactor of ",
+      "file": "CLAUDE.md",
+      "root_cause": "11 lines replaced/restructured",
+      "fix": "Rewrote 17→26 lines (11 removed)",
+      "tags": [
+        "auto-detected",
+        "refactor",
+        "md"
+      ],
+      "related_bugs": [],
+      "occurrences": 1,
+      "last_seen": "2026-05-11T20:56:43.499Z"
     }
   ]
 }

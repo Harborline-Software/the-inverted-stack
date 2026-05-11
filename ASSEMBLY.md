@@ -56,7 +56,7 @@ Last refreshed: 2026-05-01 post-cast-swap (PR #64) + Phase 7 reference-list spli
 **Tier 2 (unblocks chapter compression):** #44 Per-Data-Class Device-Distribution (Ch16), #46 Forward Secrecy (Ch22), #47 Endpoint Compromise (Ch23).
 **Tier 3 (closes extension):** #9 Chain-of-Custody (Ch23), #10 Data-Class Escalation (Ch23), #12 Privacy-Aggregation (Ch15).
 
-Each extension's working artifacts live at `docs/book-update-plan/working/<extension-id>/`.
+Each extension's working artifacts live at `icm/06_build/<extension-id>/`; cross-chapter review batches live at `icm/07_review/`. (Migrated 2026-05-11 from `docs/book-update-plan/working/`; the historical orchestration is preserved at `icm/pipelines/book-update-loop/`.)
 
 ## Ch15 Split (UPF executed 2026-04-29 / 2026-04-30; Phase 7 ref split executed 2026-05-01)
 

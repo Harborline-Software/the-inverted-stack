@@ -4,7 +4,7 @@
 **Last commit before migration:** `5a02dd1` (this commit will likely follow).
 **Reason for this file:** session migration from Windows to macOS; survives even if `~/.claude/` session transcripts fail to load.
 
-If the session transcript loaded cleanly on the new machine and Claude already has full conversation context, you can ignore this file. If the transcript did not load (or you started a fresh session), paste the **First-prompt template** below to bootstrap context. The state itself is captured authoritatively in `docs/book-update-plan/state.yaml`; this file is a human-readable summary on top of that.
+If the session transcript loaded cleanly on the new machine and Claude already has full conversation context, you can ignore this file. If the transcript did not load (or you started a fresh session), paste the **First-prompt template** below to bootstrap context. The state itself is captured authoritatively in `icm/pipelines/book-update-loop/state.yaml`; this file is a human-readable summary on top of that.
 
 ---
 
@@ -27,7 +27,7 @@ The book extension loop has 10 extensions. Status as of this commit:
 
 ## Voice-check tasks queued for the human (3 sections)
 
-When you resume, three new sections await your voice-pass. Each has working artifacts in `docs/book-update-plan/working/<extension-id>/`:
+When you resume, three new sections await your voice-pass. Each has working artifacts in `icm/06_build/<extension-id>/`:
 
 ### #43 — Ch11 §Performance Contracts + Ch20 §Performance Budgets
 
@@ -66,9 +66,9 @@ When all three voice-pass tasks complete, each extension flips `awaiting-voice-c
 
 | Document | Purpose |
 |---|---|
-| `docs/book-update-plan/state.yaml` | **Authoritative loop state.** Per-extension status, current-stage, history, quality gates, kill triggers. |
-| `docs/book-update-plan/loop-plan.md` | The master plan governing the loop's protocol. |
-| `docs/book-update-plan/working/<extension-id>/` | Per-extension artifacts: outline.md, draft.md, code-check-report.md, technical-review-report.md, prose-review-report.md, council-review-round-{1,2,3}.md (where applicable), literary-board-review.md (where applicable), voice-pass-anecdote-candidates*.md (#48 only). |
+| `icm/pipelines/book-update-loop/state.yaml` | **Authoritative loop state.** Per-extension status, current-stage, history, quality gates, kill triggers. |
+| `icm/pipelines/book-update-loop/loop-plan.md` | The master plan governing the loop's protocol. |
+| `icm/06_build/<extension-id>/` | Per-extension artifacts: outline.md, draft.md, code-check-report.md, technical-review-report.md, prose-review-report.md, council-review-round-{1,2,3}.md (where applicable), literary-board-review.md (where applicable), voice-pass-anecdote-candidates*.md (#48 only). |
 | `docs/reference-implementation/sunfish-package-roadmap.md` | Authoritative roadmap of forward-looking Sunfish namespaces introduced by Volume 1 extensions. Sunfish-side mirror at `~/Projects/Sunfish/docs/specifications/inverted-stack-package-roadmap.md`. |
 | `docs/reference-implementation/design-decisions.md` §5 | Source primitive specifications for all extensions. |
 | `~/.claude/projects/.../memory/MEMORY.md` | Index of session-persistent memory entries. |
@@ -79,7 +79,7 @@ When all three voice-pass tasks complete, each extension flips `awaiting-voice-c
 
 ## First-prompt template (paste this on the new machine if the session transcript is unavailable)
 
-> I'm resuming a long-running book-update loop session that was migrated from Windows to macOS. Read `MIGRATION-RESUME.md` at the repo root for full context, then read `docs/book-update-plan/state.yaml` for authoritative loop state and `docs/book-update-plan/loop-plan.md` for the loop protocol. Three things to know up front:
+> I'm resuming a long-running book-update loop session that was migrated from Windows to macOS. Read `MIGRATION-RESUME.md` at the repo root for full context, then read `icm/pipelines/book-update-loop/state.yaml` for authoritative loop state and `icm/pipelines/book-update-loop/loop-plan.md` for the loop protocol. Three things to know up front:
 >
 > 1. **Path translation:** all references in CLAUDE.md, memory files, working artifacts, and the chapter prose to `C:/Projects/the-inverted-stack/...` map to `~/Projects/the-inverted-stack/...`, and `C:/Projects/Sunfish/...` maps to `~/Projects/Sunfish/...`. Don't rewrite anything; just translate as you read.
 > 2. **Effort policy:** per the memory entry `feedback_effort_mapping.md`, default is `/effort xhigh` for coding/agentic/multi-file work; `max` only for correctness-critical debugging or complex evaluation; `medium`/`low` for pre-decided execution. Most subagent dispatches are at opus per the agent `.md` frontmatter — that routing is automatic.
@@ -113,8 +113,8 @@ cd ~/Projects/the-inverted-stack
 
 # Repo state:
 git log --oneline -3                         # most recent should be the commit that added this file
-ls docs/book-update-plan/working/            # should list 7 working dirs (43, 45, 46, 47, 48, 9, 11)
-grep -c "^  [0-9]" docs/book-update-plan/state.yaml  # should be 10 (extension count)
+ls icm/06_build/            # should list 7 working dirs (43, 45, 46, 47, 48, 9, 11)
+grep -c "^  [0-9]" icm/pipelines/book-update-loop/state.yaml  # should be 10 (extension count)
 
 # Memory:
 ME=$(whoami)
@@ -128,7 +128,7 @@ ls ~/.claude/projects/-Users-${ME}-Projects-the-inverted-stack/memory/
 ls ~/.claude/agents/ | wc -l                 # should be 13 user-scope agents
 
 # Voice-pass artifacts (for #48, the example to mirror for #43/#45/#11 patterns):
-ls docs/book-update-plan/working/48-key-loss-recovery/
+ls icm/06_build/48-key-loss-recovery/
 # Should include: voice-pass-anecdote-candidates.md, voice-pass-anecdote-candidates-brown.md,
 #                connective-tissue-candidates.md, anecdote-bank.md
 ```

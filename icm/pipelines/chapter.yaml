@@ -1,0 +1,250 @@
+# icm/pipelines/chapter.yaml
+#
+# Default pipeline for authoring a new chapter (or a substantial new section
+# inside an existing chapter). Drives an item from intake brief through
+# release into vol-* canon and triggers downstream _production/ regen.
+#
+# Loading: drivers in icm/pipelines/scripts/ (TBD) read this file and use it
+# to promote items between stage folders, check exit gates, and assign agents.
+# For now the file is descriptive — humans and Claude can follow it manually.
+
+id: chapter
+version: 1
+description: >
+  Standard end-to-end pipeline for authoring a new chapter. Use as the
+  default when no shorter pipeline (revision, errata, adaptation) applies.
+
+# What kind of intake items this pipeline accepts.
+accepts:
+  - type: chapter
+  - type: structural   # e.g. new chapter inserted into an existing part
+
+# Stages executed in order. Each stage references its folder under icm/,
+# names the artifacts it produces, the agents/skills it uses, and the
+# gate it must pass before promotion.
+stages:
+
+  - stage: 00_intake
+    name: Intake
+    folder: icm/00_intake
+    artifacts:
+      - "{id}.md"   # one-page brief, frontmatter per icm/00_intake/README.md
+    actions:
+      - Author files brief; reviewer assigns priority.
+    gate:
+      criterion: triaged
+      checks:
+        - Brief has all frontmatter fields populated.
+        - Priority assigned (P0 / P1 / P2).
+        - Decision to proceed recorded.
+
+  - stage: 01_discovery
+    name: Discovery
+    folder: icm/01_discovery/{id}
+    artifacts:
+      - brief.md
+      - sources.md
+      - conformance.md   # optional
+    agents:
+      - research-assistant
+    skills:
+      - local-first-properties
+      - inverted-stack-conformance
+      - literary-devices       # if rhetorical strategy needs prior-art scan
+    actions:
+      - Grep source/v13, source/v5 for the one claim the chapter must land.
+      - Pull prior-art notes from _series/ where world canon applies.
+      - Run conformance skill if the chapter argues a structural property.
+    gate:
+      criterion: brief-committed
+      checks:
+        - Sources verified against source/v13 + source/v5.
+        - The one load-bearing claim is stated in plain English.
+        - Citations follow vol-1/appendices/appendix-e-citation-style.md.
+
+  - stage: 02_architecture
+    name: Architecture
+    folder: icm/02_architecture/{id}
+    artifacts:
+      - architecture.md
+      - decision.md   # optional ADR-style; only when a real choice exists
+    actions:
+      - Locate chapter in book-structure.md (Vol 1) or vol-2 outline.
+      - Enumerate impact on neighbor chapters and existing arcs.
+      - Consult _series/ for continuity (characters, tech canon, world).
+    gate:
+      criterion: placement-locked
+      checks:
+        - Placement (part / act / position) decided.
+        - Impact list complete.
+        - Cross-volume continuity flagged if relevant.
+
+  - stage: 03_package-design
+    name: Package design
+    folder: icm/03_package-design/{id}
+    artifacts:
+      - design.md
+      - voice-plan.yaml   # optional, per-section voice agent assignments
+    templates:
+      - templates/chapter-standard.md   # Part I, epilogue
+      - templates/chapter-council.md    # Part II — two-act structure
+      - templates/chapter-reference.md  # Part III — specification voice
+      - templates/chapter-playbook.md   # Part IV — tutorial voice
+    actions:
+      - Pick template matching chapter type.
+      - Set target word count, voice register, beats list, code-snippet
+        inventory, diagrams plan, citation plan.
+    gate:
+      criterion: design-ready
+      checks:
+        - Drafter can produce a scaffold without further questions.
+        - QC-7 (specification vs tutorial voice) decided.
+        - QC-9 (council two-act) applied if council chapter.
+
+  - stage: 04_scaffolding
+    name: Scaffolding
+    folder: icm/04_scaffolding/{id}
+    artifacts:
+      - scaffold.md
+      - open-questions.md   # optional
+    agents:
+      - chapter-drafter
+      - technical-book-writer
+    actions:
+      - Expand design.md beats into topic sentences.
+      - Insert section headers, code-snippet stubs, citation placeholders.
+    gate:
+      criterion: scaffold-complete
+      checks:
+        - Every section in design.md has a topic sentence.
+        - Every code snippet has a stub or "// illustrative — not runnable".
+        - Every claim has a "<!-- CITE: ? -->" marker or real citation.
+
+  - stage: 05_implementation-plan
+    name: Implementation plan
+    folder: icm/05_implementation-plan/{id}
+    artifacts:
+      - plan.md
+      - agents.md   # optional, voice agent sequencing
+    rules:
+      - .claude/rules/universal-planning.md
+    actions:
+      - Write UPF-shaped plan: Context & Why, Success Criteria,
+        Assumptions & Validation, Phases (PASS/FAIL), Verification.
+      - Assign voice agents per section if relevant.
+    gate:
+      criterion: plan-locked
+      checks:
+        - UPF rubric reaches at least B (Solid).
+        - Stage 0 discovery captured.
+        - Replanning triggers defined.
+
+  - stage: 06_build
+    name: Build
+    folder: icm/06_build/{id}
+    artifacts:
+      - draft.md
+      - draft-report.md
+      - revisions/   # optional snapshots for major passes
+    agents:
+      - chapter-drafter
+      - technical-book-writer
+      - voice-brown
+      - voice-gladwell
+      - voice-godin
+      - voice-grant
+      - voice-lencioni
+      - voice-sinek
+      - voice-towles   # via skill
+      - style-enforcer
+    skills:
+      - literary-devices
+      - anti-ai-tells
+      - crew-log-style-entry   # Vol 2 in-prose log artifacts
+      - janeway_first_person_voice   # Vol 2 captain-register passages
+    actions:
+      - Draft against plan.
+      - Apply voice agents per voice-plan.yaml or agents.md.
+      - Run style-enforcer pass before handing to review.
+    gate:
+      criterion: draft-ready-for-review
+      checks:
+        - Word count within ±10% of target (QC-1).
+        - All QC-1 through QC-10 from CLAUDE.md pass.
+        - No TBD / placeholder / unresolved CITE marker.
+
+  - stage: 07_review
+    name: Review
+    folder: icm/07_review/{id}
+    artifacts:
+      - code-check-report.md
+      - technical-review-report.md
+      - prose-review-report.md
+      - council-review-round-{N}.md
+      - literary-board-report.md
+      - vol2-chapter-review.md   # vol-2 only
+      - voice-check-report.md    # human-only step
+    agents:
+      - technical-reviewer
+      - prose-reviewer
+      - council-reviewer
+      - literary-board
+      - vol2-chapter-reviewer   # vol-2 only
+    commands:
+      - /review-cycle           # orchestrates iterative passes
+    actions:
+      - Run /review-cycle until PUBLISH or escape.
+      - Resolve all council BLOCK verdicts and literary-board REVISE/REWORK
+        verdicts.
+      - Author performs Stage 6 voice-check (human-only synthesis).
+    gate:
+      criterion: all-tracks-pass
+      checks:
+        - In-scope reviewer agents return PASS / PUBLISH.
+        - Open action items resolved OR explicitly deferred via new intake
+          brief.
+        - voice-check-report.md signed off by author.
+
+  - stage: 08_release
+    name: Release
+    folder: icm/08_release
+    artifacts:
+      - "{id}.md"   # release note
+    actions:
+      - Merge draft.md into canonical location in vol-1/ or vol-2/.
+      - Update ASSEMBLY.md, book-structure.md, _series/chapter-registry.yaml.
+      - Regenerate ebook (make epub / make draft-pdf).
+      - Regenerate audiobook alignments/overlays for affected chapters.
+      - Rebuild web reader bundle.
+      - Snapshot state in .pao-inbox/_state-snapshots/ if status materially
+        changed.
+    gate:
+      criterion: shipped
+      checks:
+        - Canon updated and committed.
+        - Production outputs rebuilt.
+        - Release note filed.
+
+# Escape conditions — when the pipeline should halt and surface a problem
+# rather than mechanically promote.
+escapes:
+  - condition: discovery-finds-claim-unsupportable
+    at: 01_discovery
+    action: kick back to 00_intake with a revised brief, or close the item
+  - condition: architecture-impact-touches-many-chapters
+    at: 02_architecture
+    action: file a structural intake item; pause this chapter pipeline
+  - condition: review-blocked-N-rounds
+    at: 07_review
+    threshold: 3
+    action: escalate to PAO / author; do not force PUBLISH
+
+# Naming convention reminder
+naming:
+  pattern: "NN-short-slug"
+  examples:
+    - "12-ch15-security-split"
+    - "57-vol2-ch11-archive-recovery"
+  rule: >
+    Numeric prefix is stable across stages. A folder with the same prefix
+    appears under each stage as the item progresses.

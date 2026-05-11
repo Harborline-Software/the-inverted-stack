@@ -1,6 +1,6 @@
 # Stage 6 — Build
 
-Active drafting and revision. This is where most working time accumulates. The predecessor folder is `docs/book-update-plan/working/`; new work items live here.
+Active drafting and revision. This is where most working time accumulates. The Vol-1-extensions queue (items 9–12, 43–48) was migrated in from the historical `book-update-loop/working/` predecessor.
 
 **Input:** Locked implementation plan.
 

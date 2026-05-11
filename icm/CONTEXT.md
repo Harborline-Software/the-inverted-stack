@@ -32,7 +32,7 @@ Work items use a numeric prefix and a slug: `NN-short-slug/` inside each stage f
 - **`_production/`** — format outputs (audiobook, web, ebook, print). Release stage hands off here.
 - **`_series/`** — shared world bible, long arcs, cross-volume continuity. Discovery and architecture consult here.
 - **`.pao-inbox/`** — short-form coordination beacons. Long-form artifacts live in `icm/`.
-- **`docs/book-update-plan/working/`** — predecessor of `icm/06_build/`. Existing work items will migrate as they touch the pipeline; no bulk move.
+- **`icm/pipelines/book-update-loop/`** — historical loop orchestration that drove the original Vol-1-extensions queue (#9–#12, #43–#48); preserved for audit trail. Working items it produced now live in `icm/06_build/` and `icm/07_review/`.
 
 ## How to start
 
