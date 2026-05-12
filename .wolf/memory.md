@@ -3132,3 +3132,64 @@
 | 16:56 | Edited CLAUDE.md | expanded (+9 lines) | ~463 |
 | 16:56 | Edited CLAUDE.md | modified layout() | ~299 |
 | 16:57 | Created icm/pipelines/chapter.yaml | — | ~2475 |
+| 16:58 | Session end: 8 writes across 6 files (CONTEXT.md, README.md, ASSEMBLY.md, vol2-chapter-reviewer.md, CLAUDE.md) | 5 reads | ~18352 tok |
+| 18:10 | Session end: 8 writes across 6 files (CONTEXT.md, README.md, ASSEMBLY.md, vol2-chapter-reviewer.md, CLAUDE.md) | 5 reads | ~18352 tok |
+| 18:24 | Session end: 8 writes across 6 files (CONTEXT.md, README.md, ASSEMBLY.md, vol2-chapter-reviewer.md, CLAUDE.md) | 5 reads | ~18352 tok |
+| 20:24 | Session end: 8 writes across 6 files (CONTEXT.md, README.md, ASSEMBLY.md, vol2-chapter-reviewer.md, CLAUDE.md) | 5 reads | ~18352 tok |
+| 20:48 | Session end: 8 writes across 6 files (CONTEXT.md, README.md, ASSEMBLY.md, vol2-chapter-reviewer.md, CLAUDE.md) | 7 reads | ~38146 tok |
+| 05:00 | Session end: 8 writes across 6 files (CONTEXT.md, README.md, ASSEMBLY.md, vol2-chapter-reviewer.md, CLAUDE.md) | 7 reads | ~38146 tok |
+| 05:02 | Session end: 8 writes across 6 files (CONTEXT.md, README.md, ASSEMBLY.md, vol2-chapter-reviewer.md, CLAUDE.md) | 7 reads | ~38146 tok |
+| 05:03 | Session end: 8 writes across 6 files (CONTEXT.md, README.md, ASSEMBLY.md, vol2-chapter-reviewer.md, CLAUDE.md) | 7 reads | ~38146 tok |
+| 05:05 | Session end: 8 writes across 6 files (CONTEXT.md, README.md, ASSEMBLY.md, vol2-chapter-reviewer.md, CLAUDE.md) | 7 reads | ~38146 tok |
+| 05:18 | Session end: 8 writes across 6 files (CONTEXT.md, README.md, ASSEMBLY.md, vol2-chapter-reviewer.md, CLAUDE.md) | 7 reads | ~38146 tok |
+| 05:25 | Session end: 8 writes across 6 files (CONTEXT.md, README.md, ASSEMBLY.md, vol2-chapter-reviewer.md, CLAUDE.md) | 7 reads | ~38146 tok |
+| 05:38 | Session end: 8 writes across 6 files (CONTEXT.md, README.md, ASSEMBLY.md, vol2-chapter-reviewer.md, CLAUDE.md) | 7 reads | ~38146 tok |
+| 05:43 | Session end: 8 writes across 6 files (CONTEXT.md, README.md, ASSEMBLY.md, vol2-chapter-reviewer.md, CLAUDE.md) | 7 reads | ~38146 tok |
+| 06:41 | Session end: 8 writes across 6 files (CONTEXT.md, README.md, ASSEMBLY.md, vol2-chapter-reviewer.md, CLAUDE.md) | 7 reads | ~38146 tok |
+| 06:51 | Session end: 8 writes across 6 files (CONTEXT.md, README.md, ASSEMBLY.md, vol2-chapter-reviewer.md, CLAUDE.md) | 7 reads | ~38146 tok |
+| 07:17 | Created vol-2/SPINE.md | — | ~1478 |
+| 07:17 | Created icm/00_intake/01-filchner-dark-voice-rebuild.md | — | ~383 |
+| 07:17 | Session end: 10 writes across 8 files (CONTEXT.md, README.md, ASSEMBLY.md, vol2-chapter-reviewer.md, CLAUDE.md) | 7 reads | ~40140 tok |
+| 09:27 | Created vol-2/ANNA-VOICE.md | — | ~2036 |
+| 09:27 | Session end: 11 writes across 9 files (CONTEXT.md, README.md, ASSEMBLY.md, vol2-chapter-reviewer.md, CLAUDE.md) | 7 reads | ~42322 tok |
+| 09:42 | Edited vol-2/ANNA-VOICE.md | inline fix | ~151 |
+| 09:42 | Edited vol-2/ANNA-VOICE.md | inline fix | ~54 |
+| 09:42 | Edited vol-2/ANNA-VOICE.md | expanded (+10 lines) | ~585 |
+| 09:44 | Created vol-2/act-1/ch01-departure.trial.md | — | ~5244 |
+| 09:44 | Session end: 15 writes across 10 files (CONTEXT.md, README.md, ASSEMBLY.md, vol2-chapter-reviewer.md, CLAUDE.md) | 7 reads | ~48786 tok |
+| 10:17 | Edited vol-2/ANNA-VOICE.md | 1→3 lines | ~498 |
+| 10:17 | Edited vol-2/ANNA-VOICE.md | 1→2 lines | ~175 |
+| 10:17 | Edited vol-2/act-1/ch01-departure.trial.md | 3→7 lines | ~537 |
+| 10:17 | Edited vol-2/act-1/ch01-departure.trial.md | inline fix | ~227 |
+| 10:17 | Edited vol-2/act-1/ch01-departure.trial.md | 1→3 lines | ~288 |
+| 10:17 | Edited vol-2/act-1/ch01-departure.trial.md | inline fix | ~23 |
+| 10:18 | Edited vol-2/act-1/ch01-departure.trial.md | 7→9 lines | ~37 |
+| 10:18 | Edited vol-2/act-1/ch01-departure.trial.md | 3→3 lines | ~314 |
+| 10:18 | Session end: 23 writes across 10 files (CONTEXT.md, README.md, ASSEMBLY.md, vol2-chapter-reviewer.md, CLAUDE.md) | 7 reads | ~51036 tok |
+| 10:24 | Edited vol-2/ANNA-VOICE.md | 1→3 lines | ~428 |
+| 10:24 | Edited vol-2/ANNA-VOICE.md | 1→3 lines | ~292 |
+| 10:24 | Edited vol-2/ANNA-VOICE.md | expanded (+17 lines) | ~788 |
+| 10:24 | Edited vol-2/act-1/ch01-departure.trial.md | 1→3 lines | ~242 |
+| 10:25 | Edited vol-2/act-1/ch01-departure.trial.md | 9→9 lines | ~39 |
+| 10:25 | Edited vol-2/act-1/ch01-departure.trial.md | expanded (+8 lines) | ~672 |
+| 10:25 | Session end: 29 writes across 10 files (CONTEXT.md, README.md, ASSEMBLY.md, vol2-chapter-reviewer.md, CLAUDE.md) | 7 reads | ~53673 tok |
+| 10:30 | Edited vol-2/ANNA-VOICE.md | 1→3 lines | ~443 |
+| 10:30 | Edited vol-2/ANNA-VOICE.md | 1→3 lines | ~322 |
+| 10:30 | Edited vol-2/act-1/ch01-departure.trial.md | 3→5 lines | ~527 |
+| 10:31 | Edited vol-2/act-1/ch01-departure.trial.md | 1→3 lines | ~468 |
+| 10:31 | Session end: 33 writes across 10 files (CONTEXT.md, README.md, ASSEMBLY.md, vol2-chapter-reviewer.md, CLAUDE.md) | 7 reads | ~55558 tok |
+| 10:39 | Edited build/audiobook.py | 2→3 lines | ~47 |
+| 10:39 | Edited build/audiobook.py | 2→3 lines | ~37 |
+| 10:41 | Session end: 35 writes across 11 files (CONTEXT.md, README.md, ASSEMBLY.md, vol2-chapter-reviewer.md, CLAUDE.md) | 7 reads | ~55642 tok |
+| 11:02 | Edited vol-2/act-1/ch01-departure.trial.md | 7→8 lines | ~87 |
+| 11:05 | Session end: 36 writes across 11 files (CONTEXT.md, README.md, ASSEMBLY.md, vol2-chapter-reviewer.md, CLAUDE.md) | 8 reads | ~62289 tok |
+| 11:08 | Session end: 36 writes across 11 files (CONTEXT.md, README.md, ASSEMBLY.md, vol2-chapter-reviewer.md, CLAUDE.md) | 8 reads | ~62289 tok |
+| 11:10 | Edited build/Makefile | expanded (+8 lines) | ~127 |
+| 11:10 | Session end: 37 writes across 12 files (CONTEXT.md, README.md, ASSEMBLY.md, vol2-chapter-reviewer.md, CLAUDE.md) | 9 reads | ~66490 tok |
+| 11:16 | Created .envrc | — | ~395 |
+| 11:19 | Session end: 38 writes across 13 files (CONTEXT.md, README.md, ASSEMBLY.md, vol2-chapter-reviewer.md, CLAUDE.md) | 9 reads | ~66913 tok |
+| 11:24 | Session end: 38 writes across 13 files (CONTEXT.md, README.md, ASSEMBLY.md, vol2-chapter-reviewer.md, CLAUDE.md) | 9 reads | ~66913 tok |
+| 14:16 | Session end: 38 writes across 13 files (CONTEXT.md, README.md, ASSEMBLY.md, vol2-chapter-reviewer.md, CLAUDE.md) | 9 reads | ~66913 tok |
+| 17:29 | Created build/prose_telemetry_handcount.py | — | ~4315 |
+| 17:30 | Created icm/00_intake/02-prose-telemetry-phase-1.md | — | ~395 |
+| 17:31 | Created icm/01_discovery/02-prose-telemetry-phase-1/handcount-pilot.md | — | ~2020 |

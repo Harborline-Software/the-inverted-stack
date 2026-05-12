@@ -1,7 +1,7 @@
 # anatomy.md
 
-> Auto-maintained by OpenWolf. Last scanned: 2026-05-11T20:57:36.355Z
-> Files: 481 tracked | Anatomy hits: 0 | Misses: 0
+> Auto-maintained by OpenWolf. Last scanned: 2026-05-12T21:31:09.381Z
+> Files: 489 tracked | Anatomy hits: 0 | Misses: 0
 
 ## ../../../../../tmp/
 
@@ -138,6 +138,7 @@
 
 ## ./
 
+- `.envrc` — direnv configuration for the-inverted-stack (~395 tok)
 - `.gitignore` — Git ignore rules (~162 tok)
 - `ASSEMBLY.md` — Assembly Manifest (~4234 tok)
 - `book-structure.md` — BOOK-STRUCTURE (~8079 tok)
@@ -310,7 +311,7 @@
 - `__init__.py` — build/__init__.py (~6 tok)
 - `apply_phase0a.py` — One-shot Phase 0a HIGH-tier compressor. (~15490 tok)
 - `AUDIO-DOCKER.md` — Audiobook Generation — Docker Setup (~4120 tok)
-- `audiobook.py` — Generate audiobook MP3s from chapter markdown using a local Kokoro TTS server. (~26381 tok)
+- `audiobook.py` — Generate audiobook MP3s from chapter markdown using a local Kokoro TTS server. (~26435 tok)
 - `build_overlays.py` — Whispersync-capable EPUB build (Phases B-E). (~6341 tok)
 - `check_audit.py` — Reference-integrity check: every jurisdiction in inline prose appears in Appendix F. (~581 tok)
 - `check_first_use.py` — First-use rule checker. (~3348 tok)
@@ -326,9 +327,10 @@
 - `librivox_browse.py` — Browse LibriVox for usable narrator reference clips. (~3880 tok)
 - `lint.py` — Structural integrity checks for The Inverted Stack manuscript. (~2352 tok)
 - `m4b.py` — Build a single .m4b audiobook file from the per-chapter MP3s. (~2052 tok)
-- `Makefile` — The Inverted Stack — Build Targets (~4065 tok)
+- `Makefile` — The Inverted Stack — Build Targets (~4161 tok)
 - `normalize.py` — EBU R128 loudness normalization for the audiobook MP3s. (~2557 tok)
 - `promote.py` — Phase 4 promotion script. (~2233 tok)
+- `prose_telemetry_handcount.py` — Hand-count prose-telemetry detectors against a single chapter markdown. (~4315 tok)
 - `remediate_first_use.py` — Remediate first-use rule violations across all chapter sources. (~3156 tok)
 - `render-chapter.sh` — render-chapter.sh — generate audiobook MP3 for a single chapter. (~963 tok)
 - `stt_spike.py` — STT QC spike — Phase 1 word-level diff between source markdown and Whisper transcript. (~3045 tok)
@@ -692,11 +694,17 @@
 
 ## icm/00_intake/
 
+- `01-filchner-dark-voice-rebuild.md` — The Filchner Dark — voice rebuild (~359 tok)
+- `02-prose-telemetry-phase-1.md` — Prose-telemetry — Phase 1 (~370 tok)
 - `README.md` — Project documentation (~206 tok)
 
 ## icm/01_discovery/
 
 - `README.md` — Project documentation (~229 tok)
+
+## icm/01_discovery/02-prose-telemetry-phase-1/
+
+- `handcount-pilot.md` — Handcount Pilot — Prose Telemetry on the Filchner Trial Chapter (~1894 tok)
 
 ## icm/02_architecture/
 
@@ -800,6 +808,15 @@
 - `test_promote.py` — Tests for the Phase 4 promotion script. (~2077 tok)
 - `test_voice_pass.py` — Tests for build/voice-pass.py. (~714 tok)
 - `timestamp.md` — Workshop entry: light; KEEP everyday meaning (~190 tok)
+
+## vol-2/
+
+- `ANNA-VOICE.md` — Anna's Voice — Narrator Specification (~4325 tok)
+- `SPINE.md` — The Filchner Dark — Volume Spine (~1386 tok)
+
+## vol-2/act-1/
+
+- `ch01-departure.trial.md` — Chapter 1 — Departure (~6555 tok)
 
 ## web/ — MOVED
 

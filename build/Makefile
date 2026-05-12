@@ -1,6 +1,14 @@
 # The Inverted Stack — Build Targets
 # Requires: pandoc, python3 (for word-count)
 
+# Repo-local environment overrides. .env is gitignored; see .env.example for
+# the variables tools in this repo recognize (TTS_API_KEY, CHATTERBOX_URL,
+# DROPBOX_AUDIOBOOK_BASE, GALLEY_BUILD_ROOT, etc). Format: simple KEY=value
+# lines, no quotes, no spaces around the equals sign. Leading dash on
+# `-include` means a missing .env is silently OK.
+-include .env
+export
+
 CHAPTERS_DIR := vol-1
 OUT_DIR := build/output
 PANDOC := pandoc

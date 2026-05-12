@@ -539,6 +539,7 @@ CHAPTER_PRESET_MAP: dict[str, str] = {
     # Apply to the Vol 2 listen-test pair; will extend to remaining Vol 2
     # chapters as they activate.
     "vol-2/act-1/ch01-departure": "female-solo",
+    "vol-2/act-1/ch01-departure.trial": "female-solo",
     "vol-2/act-1/ch02-recruitment-interview": "female-solo",
     "vol-2/act-1/ch03-drake-passage-ice-edge": "female-solo",
     "vol-2/act-1/ch04-first-submersion": "female-solo",
@@ -599,6 +600,7 @@ CHAPTER_FILES = [
     # 2026-05-05: Ch 01 (Departure; Act I install chapter; post-listen-test verdict)
     # 2026-05-06: Ch 03 (Drake Passage; loop 1) + Ch 04 (First Submersion; loop 2) + Ch 06 (First Surface; loop 3)
     "vol-2/act-1/ch01-departure.md",
+    "vol-2/act-1/ch01-departure.trial.md",
     "vol-2/act-1/ch02-recruitment-interview.md",
     "vol-2/act-1/ch03-drake-passage-ice-edge.md",
     "vol-2/act-1/ch04-first-submersion.md",
