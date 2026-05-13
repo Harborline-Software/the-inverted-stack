@@ -107,7 +107,7 @@ This is the part I do not write in the staff history.
 
 ---
 
-The chemistry rack is forward of frame thirty-six, port side, three steps down from the main passageway, and it has the only door on the boat that is not actually a hatch. I went there because Mikael had told me to and because I always do, and because, if I am being honest, I had not seen Joel Reyes since the fourth of November in Bremerhaven, and ninety-three days is enough time for a person to develop opinions about a man that the man himself has done nothing to deserve. I wanted to see him before we sailed. I wanted to confirm, with my own eyes, that he was the man I had decided ninety-three days ago not to think about, and not someone else.
+The chemistry rack is forward of frame thirty-six, port side, three steps down from the main passageway, and it has the only door on the boat that is not actually a hatch. I went there because Mikael had told me to, and because I always do. The honest reason was Joel Reyes. I had not seen him since the fourth of November in Bremerhaven, and ninety-three days is enough time to develop opinions about a man he has done nothing to deserve. I wanted to see him before we sailed. I wanted to confirm, with my own eyes, that he was the man I had decided ninety-three days ago not to think about, and not someone else.
 
 He was kneeling by the lower environmental sensor rack with a multimeter in his left hand and a coffee in his right. He had not heard me come in, or had heard me and was pretending. The cup was one I recognized. I noted this and did not remark on it.
 
