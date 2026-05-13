@@ -6,6 +6,8 @@
 
 ---
 
+Tomás Ferreira held the local-first practitioner seat on Joel's dissertation committee — not as a theorist, but as someone who had already lived through the failure modes Joel's architecture was trying to prevent.
+
 ## Who Is Tomás Ferreira
 
 Tomás Ferreira has shipped code to the Automerge ([github.com/automerge/automerge](https://github.com/automerge/automerge), a JSON-like CRDT (Conflict-free Replicated Data Type) library) repository for three years. Before that, he built a production local-first application for a small legal firm — document collaboration, no server required — and watched the users try to restore their data from a broken laptop. The restore took four hours because the backup was a folder on Dropbox that had not synced correctly. He sat in the room while it ran. He built a second application after that, this time with a proper backup strategy, and watched a different user delete their container by accident and learn what "no backup" actually means. That is the kind of discovery that does not leave you.
@@ -14,7 +16,7 @@ He is not idealistic about local-first software. He is familiar with where it br
 
 His lens on any local-first architecture proposal is not whether it upholds the principles. The principles are table stakes. His questions are operational. What happens when the user's only device dies? What happens when both peers are behind carrier-grade NAT and the relay is down? What happens when a user wants to leave and take their data somewhere else? Ferreira has sat across from non-technical users who lived through all three of these scenarios. He knows what their faces look like.
 
-When Ferreira reviewed the architecture paper in Round 1, he brought that operational history into the room with him. He commended the places the paper got right. He blocked it on the place the paper got exactly wrong.
+When Ferreira reviewed Joel's dissertation in Round 1, he brought that operational history into the room with him. He commended the places the dissertation got right. He blocked it on the place it got exactly wrong.
 
 ---
 
@@ -28,7 +30,7 @@ The multi-device onboarding flow — install, scan a QR code, sync in the backgr
 
 He also commended the container cold-start solution. One of the places local-first desktop applications fall apart is the delay between launch and ready for data. A Podman container starting from scratch on first open creates a pause that signals to users that something is wrong — that the software is not, in fact, running locally, but is somehow waiting for something remote. The architecture's answer — a persistent background service that keeps the container running, fronted by a health-check gate that holds the UI until the daemon is ready — is the right call. It hides the implementation detail without deceiving the user. Hiding without lying is craft.
 
-Alignment with the Kleppmann et al. local-first ideals [1] scored an 8 out of 10. The paper understood the ideals and implemented most of them faithfully. The Ink and Switch essays on Pushpin and Backchat were not cited, which left the paper vulnerable to community criticism. The local-first community notices when practitioners ignore prior art. That is a condition, not a block.
+Alignment with the Kleppmann et al. local-first ideals [1] scored an 8 out of 10. The dissertation understood the ideals and implemented most of them faithfully. The Ink and Switch essays on Pushpin and Backchat were not cited, which left it vulnerable to community criticism. The local-first community notices when practitioners ignore prior art. That is a condition, not a block.
 
 Community governance scored a 5 out of 10. An MIT or Apache 2 license is stated. Who controls the roadmap, who approves breaking changes, what the contribution model looks like — none of that is specified. The local-first community has watched too many promising projects fork or stall because governance was not designed before it was needed. That is a condition too.
 
@@ -62,7 +64,7 @@ The paper returned to the author with the data portability issue as a blocking i
 
 ## What Changed Between Rounds
 
-Four months passed between the Round 1 verdict and the Round 2 submission. The author addressed all six blocking issues in the paper's second version. Ferreira's three Round 1 conditions and his single blocking issue all received direct treatment.
+Four months passed between the Round 1 verdict and the Round 2 submission. Joel addressed all six blocking issues in the dissertation's second version. Ferreira's three Round 1 conditions and his single blocking issue all received direct treatment.
 
 The export path is now specified. One command produces a directory with three artifacts: a JSON file containing all user records in application-independent structure, a set of CSV files for every tabular data type, and a folder of Markdown documents for long-form content. No vendor cooperation required. No active subscription required. No internet connection needed. The command runs against the local node, reads from the local encrypted database, and writes to a path the user specifies. Any application that can ingest JSON or CSV can ingest the output.
 
@@ -98,7 +100,7 @@ The seven local-first ideals, checked against the revised architecture:
 
 **You retain ultimate ownership and control.** BYOC backup to user-controlled object storage. AGPLv3 license. Self-hostable relay. Plain-file export. The ownership is structural, not contractual, and the export path now makes it operationally real. Checked.
 
-This was the first version of the paper where Ferreira could work through the checklist without pausing. All seven ideals satisfied, without reservation. Score: 10 out of 10.
+This was the first version of the dissertation where Ferreira could work through the checklist without pausing. All seven ideals satisfied, without reservation. Score: 10 out of 10.
 
 ### The Zero-State First-Run Problem
 
@@ -118,7 +120,7 @@ The paper should specify the zero-state experience explicitly: what the user see
 
 The backup status model in the revised paper is correct. Three states — Protected, Attention, At Risk — with escalating visual treatment: subtle for Protected (users do not need to think about a working backup), amber badge for Attention (something needs configuration), persistent non-blocking banner for At Risk (data is in danger, but the user retains the ability to dismiss with acknowledgment). The dismissal with explicit acknowledgment respects user agency without hiding the problem.
 
-Ferreira's remaining gap: the paper describes the backup status display. It does not describe the recovery experience with comparable care.
+Ferreira's remaining gap: the dissertation describes the backup status display. It does not describe the recovery experience with comparable care.
 
 If a user's only device is destroyed and they initiate a restore from backup, what do they see? Does the application walk them through reconnecting to their backup target the same way it walked them through configuring it? Does the restore progress surface as a background sync indicator, using the same three-state model flipped into a restore context? Or does the user face a technical interface — a rclone path, a bucket URL — at exactly the moment when they are already stressed about lost work?
 
@@ -128,7 +130,7 @@ The architecture's backup infrastructure is solid. The recovery UX needs the sam
 
 The architecture's analogues table in the revised paper cites Figma ([figma.com](https://www.figma.com/), the design tool), Linear ([linear.app](https://linear.app/), the issue tracker), Obsidian, and PowerSync. These are correct references — they demonstrate that each subsystem of the inverted stack has production validation somewhere. But Ferreira, with Automerge and Ink & Switch adjacency, brings a practitioner's opinion on the CRDT library choice that the chapter should surface directly.
 
-Pick Yjs via YDotNet today. Ferreira's verdict is unambiguous: broadest production adoption, battle-tested merge semantics, documented wire format. Automerge 3.0 (2025) is now production-viable where it was not before; Loro is the aspirational target once C# bindings mature. Zoho's offline-capable suite serves hundreds of thousands of paying users in India and the GCC and is the regional analogue Western surveys typically miss; 1С:Предприятие is the closest CIS commercial analogue with tens of millions of users on a desktop-software-with-optional-server model. Ferreira called the framework-agnostic `ICrdtEngine` abstraction the single best architectural decision the paper makes — it keeps the choice reversible while the field continues to evolve, and Ch12 specifies the engine survey at full depth.
+Pick Yjs via YDotNet today. Ferreira's verdict is unambiguous: broadest production adoption, battle-tested merge semantics, documented wire format. Automerge 3.0 (2025) is now production-viable where it was not before; Loro is the aspirational target once C# bindings mature. Zoho's offline-capable suite serves hundreds of thousands of paying users in India and the GCC and is the regional analogue Western surveys typically miss; 1С:Предприятие is the closest CIS commercial analogue with tens of millions of users on a desktop-software-with-optional-server model. Ferreira called the framework-agnostic `ICrdtEngine` abstraction the single best architectural decision the dissertation makes — it keeps the choice reversible while the field continues to evolve, and Ch12 specifies the engine survey at full depth.
 
 The architecture has a structural accessibility advantage no council chapter has yet named explicitly: assistive technology — screen readers, switch controls, voice input — operates against local data and survives connectivity loss without cascading failures. A user running JAWS, NVDA, or VoiceOver on intermittent connectivity in rural Bahia, rural Oaxaca, or a Lagos branch with daily load-shedding does not experience the application timeouts that cloud-dependent assistive technology produces. Sync status surfaces through ARIA live regions (`role="status"`, `aria-live="polite"`); recovery flows respect the same cognitive-accessibility framing the chapter applies to non-technical users. This is the strongest accessibility argument for local-first that any practitioner has put on paper, and it lives in this chapter because Ferreira's lens — *what the user actually experiences* — is the lens that makes accessibility legible as an architectural property rather than an afterthought.
 

@@ -10,6 +10,10 @@
 
 ---
 
+> **A note on the review:** The chapters in Part II reproduce the peer review process Joel Reyes's dissertation went through before receiving conditional approval. Five reviewers examined his argument through their respective lenses — enterprise governance, distributed systems correctness, security, product economics, and local-first practice. Each reviewer read the submitted dissertation, filed a Round 1 verdict, and returned for Round 2 after Joel revised. The structure that follows — objections raised, revisions made, conditions attached — is the dissertation defense on paper.
+
+---
+
 Dr. Marguerite Voss spent twenty-two years watching innovative software die in procurement. Not because the technology was wrong. Because the people who built it had never sat through an IT security review.
 
 She has her own shorthand for the pattern. A team builds something genuinely useful. A forward-thinking IT manager shepherds it to a procurement committee. And the first question from legal or InfoSec kills it on the spot. Not whether it works — everyone in the room can see it works. The question is where the data goes when an endpoint is compromised. Or what the incident response procedure is. Or, most often, whether this runs as root.
@@ -22,7 +26,7 @@ The pattern she watches for has a canonical recent example. In 2022, Adobe, Auto
 
 That question generalizes. The 2022 enforcement event is one instance of a broader threat model the council eventually names directly: *state-mandated infrastructure access*. A vendor compelled by its home jurisdiction to suspend service, hand over plaintext, or modify behavior is no longer a technical question — it is a governance question that lives outside the contract. An architecture that keeps plaintext on customer endpoints, holds encryption keys locally, and treats relay infrastructure as a dumb forwarder of ciphertext gives the procurement committee a structural answer that no SaaS Data Processing Addendum can match. Voss does not phrase it this way in Round 1. By Round 2 she does not need to.
 
-She read the paper expecting another promising pitch that would fail the first security review. What she found was more complicated.
+She read the dissertation expecting another promising pitch that would fail the first security review. What she found was more complicated.
 
 ---
 
@@ -32,7 +36,7 @@ She read the paper expecting another promising pitch that would fail the first s
 
 Voss does not issue scores generously. A section earns an eight when it is specific, testable, and tied to actual policy.
 
-The MDM (Mobile Device Management) integration earned that score. The paper names Intune, Jamf, and SCCM — not as examples, not as supported-if-the-customer-configures-it, but as the specific management platforms the installation is designed for. More importantly, the paper places the MDM compliance check at a specific point in the protocol: capability negotiation. Before a node joins the sync mesh and touches data, it must present a valid compliance attestation from the MDM platform. A node that fails the check — because a managed policy has been violated, because the device has been flagged, because the certificate has expired — is rejected at the gate, not after it has already received data.
+The MDM (Mobile Device Management) integration earned that score. The dissertation names Intune, Jamf, and SCCM — not as examples, not as supported-if-the-customer-configures-it, but as the specific management platforms the installation is designed for. More importantly, Joel places the MDM compliance check at a specific point in the protocol: capability negotiation. Before a node joins the sync mesh and touches data, it must present a valid compliance attestation from the MDM platform. A node that fails the check — because a managed policy has been violated, because the device has been flagged, because the certificate has expired — is rejected at the gate, not after it has already received data.
 
 That is architecturally correct. Most MDM-compatible software validates compliance once at installation and then assumes the device remains compliant. The inverted stack validates it continuously at the point of access. Voss commended this directly: a compromised non-compliant node is rejected before it touches data, not after.
 
@@ -58,9 +62,9 @@ Without that document, the architecture cannot pass a security review in any ent
 
 Container update governance left three IT-department questions unanswered. The paper describes container images delivered through a registry — standard and appropriate — but says nothing about applying those updates to a running production stack without downtime, whether updates trigger automatically, or what the rollback procedure looks like when one introduces a regression. Three operational questions; zero answers.
 
-Network policy compatibility scored a seven rather than an eight. The architecture implies relay traffic over port 443 but does not say so. Worse, the paper addresses neither PAC file compatibility nor behavior behind corporate proxies that perform TLS (Transport Layer Security) inspection. Software that does not respect proxy configuration fails invisibly in these environments — the worst kind of failure, the kind no one notices until production. Confirming that the sync daemon respects system proxy configuration would have closed the gap.
+Network policy compatibility scored a seven rather than an eight. The architecture implies relay traffic over port 443 but does not say so. Worse, the dissertation addresses neither PAC file compatibility nor behavior behind corporate proxies that perform TLS (Transport Layer Security) inspection. Software that does not respect proxy configuration fails invisibly in these environments — the worst kind of failure, the kind no one notices until production. Confirming that the sync daemon respects system proxy configuration would have closed the gap.
 
-Compliance certification pathway scored a six — the lowest score in Round 1. SOC 2 Type II and ISO 27001 appear nowhere in the paper. A security questionnaire will surface that omission on the first pass; the absence of even a stated intention to pursue certification is enough to stall a procurement review.
+Compliance certification pathway scored a six — the lowest score in Round 1. SOC 2 Type II and ISO 27001 appear nowhere in the dissertation. A security questionnaire will surface that omission on the first pass; the absence of even a stated intention to pursue certification is enough to stall a procurement review.
 
 ### Round 1 Verdict: PROCEED — With One Hard Prerequisite
 
@@ -94,7 +98,7 @@ Round 2 opened with the question Voss applies to every enterprise software revie
 
 The answer had improved substantially. The SBOM in CycloneDX format satisfies the current NTIA minimum elements and CISA guidance — the specific format that federal agencies and large enterprise security teams request. Rootless Podman addresses the most common enterprise container objection: the architecture does not run its container runtime as root. That eliminates an entire class of privilege escalation concerns that InfoSec teams raise automatically when they see the word *container*. The network footprint is clean. No inbound ports on any external interface. Relay traffic on port 443 only. That is a strong story for corporate firewall approval.
 
-Voss scored the security audit story at an eight. Her remaining note was a process detail, not an architecture concern: the paper specifies what goes in the SBOM but not when and how it is generated. Security teams need the SBOM produced at build time from source code — meaning it reflects what was actually compiled into the binary — rather than assembled post-install from whatever packages happen to be present on the system. Build-time generation is the stronger claim. The paper should state it explicitly.
+Voss scored the security audit story at an eight. Her remaining note was a process detail, not an architecture concern: the dissertation specifies what goes in the SBOM but not when and how it is generated. Security teams need the SBOM produced at build time from source code — meaning it reflects what was actually compiled into the binary — rather than assembled post-install from whatever packages happen to be present on the system. Build-time generation is the stronger claim. The paper should state it explicitly.
 
 This became condition C1 in Round 2: specify SBOM generation timing in the CI/CD pipeline, confirming build-time generation from source.
 
@@ -102,7 +106,7 @@ This became condition C1 in Round 2: specify SBOM generation timing in the CI/CD
 
 The MSIX packaging for Windows with Intune deployment earned a solid score. MSIX is the correct format for enterprise Windows deployment: it supports silent installation, automatic updates, and Group Policy configuration. The Intune deployment path — package upload, deployment ring configuration, compliance policy attachment — follows the standard enterprise software deployment workflow that IT administrators already understand.
 
-The gap Voss identified: the paper does not specify whether Podman for Windows runs on the WSL2 substrate or on Hyper-V, and the choice has real implications for corporate managed environments.
+The gap Voss identified: the dissertation does not specify whether Podman for Windows runs on the WSL2 substrate or on Hyper-V, and the choice has real implications for corporate managed environments.
 
 WSL2 introduces a Linux kernel execution environment some organizations disable via Group Policy because they cannot fully audit it. Hyper-V is native and typically enabled — but conflicts with VMware Workstation Pro, which many enterprise developers run for testing. Neither choice is universally correct.
 
@@ -170,4 +174,4 @@ These are not negotiating positions. An architecture that does not meet them wil
 
 **Regulatory alignment by jurisdiction.** The architecture's local-first data custody satisfies data-residency requirements across every major enterprise regulatory regime — anchored by GDPR/Schrems II, India's DPDP Act, and the UAE's DIFC (Dubai International Financial Centre) DPL (Data Protection Law) 2020, with the full coverage matrix in Appendix F. The DIFC regime is the load-bearing example for foreign-cloud risk: financial-sector regulators in the GCC increasingly require either local data residency or explicit demonstration that foreign-cloud providers cannot be compelled by their home jurisdictions to access in-scope data. An architecture that holds plaintext on customer endpoints under customer-controlled keys answers that question structurally, not contractually. For public sector and critical infrastructure deployments in CIS markets, the same property satisfies Russian federal import substitution (импортозамещение) requirements by operating without Western cloud dependencies. The enterprise-lens test is not whether the architecture can be configured to meet these regimes. It is whether meeting them is a structural property of the deployment.
 
-Any local-first architecture that intends to be deployed on managed endpoints must satisfy this checklist. The one this book describes cleared Voss's review with five governance conditions; the chapters that follow are how the other five council members tested it against their own non-negotiable lists.
+Any local-first architecture that intends to be deployed on managed endpoints must satisfy this checklist. The one Joel's dissertation describes cleared Voss's review with five governance conditions; the chapters that follow are how the other four council members tested it against their own non-negotiable lists.

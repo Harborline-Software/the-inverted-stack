@@ -9,7 +9,7 @@
 
 ---
 
-Chapter 19 got you to production. This chapter keeps you there.
+Part IV established how to build and ship a node. This chapter specifies how a fleet of nodes is operated over time.
 
 Part IV walks the operator through the lifecycle of a single node — building it, migrating into it, shipping it past enterprise IT, and designing the surface a human interacts with. Each chapter in that part embeds an assumption: a person is nearby. The user installs the application. The administrator runs the deprovisioning command. The IT technician investigates the failed install. The architect inspects the local data directory. Every chapter in Part IV makes operational sense because someone with hands and eyes and a keyboard is close to the node when something goes wrong.
 
@@ -25,7 +25,7 @@ That conversion is the operational claim of this chapter. Fleet management does 
 
 The shift from Chapter 17's interactive QR-code onboarding to fleet provisioning ceremonies, and from Chapter 19's enterprise admin panel to the fleet observability dashboard, is more than a scale change. It is a mental-model shift. Nodes are no longer people you manage. They are infrastructure you operate.
 
-That shift has implications for how you design the runbooks, who you trust to execute the procedures, and what you measure to know the system is healthy. Acknowledging the shift explicitly is the first step. Engineering for it is the rest of this chapter.
+That shift has implications for how runbooks are designed, which operators are trusted to execute the procedures, and what metrics establish that the system is healthy. Acknowledging the shift explicitly is the first step. Engineering for it is the rest of this chapter.
 
 A new namespace surfaces alongside this chapter: `Sunfish.Foundation.Fleet`. It sits above the kernel, orchestrating the per-node primitives that `Sunfish.Kernel.Security` and `Sunfish.Kernel.Sync` already own. The fleet layer monitors and coordinates; the kernel executes. Fleet management is not a low-level protocol layer; it is a coordination-and-abstraction layer in the same architectural tier as `Sunfish.Foundation.LocalFirst` and `Sunfish.Foundation.Recovery`. All references to `Sunfish.Foundation.Fleet` in this chapter are forward-looking and marked `// illustrative — not runnable`.
 
@@ -63,7 +63,7 @@ The kill trigger for this primitive is a FAILED condition that recurs across thr
 
 ## 21.2 Sub-pattern 11a — Provisioning at flash time
 
-Without provisioning ceremonies, nodes carry keys generated outside the fleet's trust boundary, and the operator cannot tell, after the fact, which keys came from where. The fleet's security posture starts at the moment of node creation. If you cannot attest to the conditions under which a node was initialised, you cannot make any other security claim about that node downstream.
+Without provisioning ceremonies, nodes carry keys generated outside the fleet's trust boundary, and an operator cannot determine, after the fact, which keys came from where. The fleet's security posture starts at the moment of node creation. An operator who cannot attest to the conditions under which a node was initialised cannot make any other security claim about that node downstream.
 
 A fleet provisioning ceremony is a controlled, attested initialisation event that produces a signed node identity bundle: the device keypair, the initial KEK (Key Encryption Key) bundle for the node's assigned fleet segment, the initial sync configuration, and the enrollment receipt. The ceremony executes in a trusted environment — a manufacturing line, a CI/CD pipeline, a deployment staging area — never in the field. The trust boundary of the fleet starts inside the ceremony and propagates outward through the enrollment receipts the ceremony emits.
 
@@ -118,7 +118,7 @@ A node that has not confirmed by the propagation deadline is a *straggler*. Stra
 
 **Decommission escalation.** After a third deadline — typically 30 days beyond the initial propagation window, configurable per segment — the fleet registry fires a decommission escalation event. The event records in the audit trail. The operator receives an explicit notification. The operator then decides: attempt a re-provisioning ceremony if the device is reachable, or retire the node from the fleet. The architecture does not make the decision for the operator. It surfaces the choice with a defined timeline and a complete record of what has happened to the node since the rotation announcement.
 
-The 30-day default is deliberate. It is long enough to accommodate seasonal connectivity gaps — construction sites in winter, agricultural deployments in dormant seasons — while short enough that a genuinely abandoned node does not accumulate indefinitely as a fleet liability. Tighter values are appropriate for regulated-tier deployments; looser values for fleets with documented multi-month offline phases. Whatever value you choose, document it in the segment configuration and in the compliance manifest. An auditor who reads "30-day decommission escalation" should be able to find the configured value in the fleet registry, not infer it from the architecture documentation.
+The 30-day default is deliberate. It is long enough to accommodate seasonal connectivity gaps — construction sites in winter, agricultural deployments in dormant seasons — while short enough that a genuinely abandoned node does not accumulate indefinitely as a fleet liability. Tighter values are appropriate for regulated-tier deployments; looser values for fleets with documented multi-month offline phases. The configured value must be documented in the segment configuration and in the compliance manifest. An auditor who reads "30-day decommission escalation" must be able to find the configured value in the fleet registry, not infer it from the architecture documentation.
 
 Fleet key rotation cadence is deployment-class dependent. For a regulated-tier fleet — HIPAA, PCI-DSS, SOX [7], DIFC DPL 2020, DPDP + RBI, PIPL + MLPS 2.0, Japan PIPA, South Korea PIPA, NDPR, POPIA, Russia 242-FZ — rotation runs quarterly at minimum. For a standard-tier fleet, annually or on security-incident trigger. For a fleet that includes a node flagged under the endpoint-compromise primitive (extension #47, forward-looking), an out-of-band rotation triggers on the segment that included the compromised node, with the decommission escalation timeline compressed to the regulated-tier value regardless of the segment's normal classification.
 
@@ -186,7 +186,7 @@ The most expensive failure mode in fleet OTA is the bundle that passes the four 
 
 ## 21.5 Sub-pattern 11d — Fleet observability
 
-Fleet observability answers a single question. *What is the security posture and operational health of every node in the fleet, at any moment, without SSH access to individual nodes?* If you cannot answer that question in under thirty seconds for any node in your fleet, fleet observability has failed regardless of what dashboards exist. The answer must be current, signed, and complete.
+Fleet observability answers a single question. *What is the security posture and operational health of every node in the fleet, at any moment, without SSH access to individual nodes?* An operator who cannot answer that question in under thirty seconds for any node in the fleet has a fleet-observability failure, regardless of what dashboards exist. The answer must be current, signed, and complete.
 
 Each node emits a signed health heartbeat to the fleet registry on a configurable interval. The default is five minutes for connected nodes; on-reconnect for nodes returning from offline. The heartbeat carries the node's current key rotation epoch, the current software version, the sync daemon status (Running, Degraded, Stopped), the CRDT (Conflict-free Replicated Data Type) engine's last operation timestamp, the disk utilisation tier (Normal, Warning, Critical), the performance-contract status per extension #43 (Compliant, Degraded, Violated), and any queued circuit-breaker events from Chapter 15. The heartbeat travels through the same encrypted channel as the standard sync traffic and signs with the node's device key. The fleet registry discards any heartbeat that fails signature verification and surfaces it as an integrity-failure alert.
 

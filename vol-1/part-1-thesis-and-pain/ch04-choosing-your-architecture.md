@@ -7,11 +7,11 @@
 
 ---
 
-Answer this question before reading any further:
+The question this chapter answers is which architectural configuration best satisfies the criteria the preceding chapters establish.
 
-> **Does the primary value of your software come from the user's own data — or from aggregating data across many users?**
+> **Whether the primary value of a software system derives from the user's own data — or from aggregating data across many users — is the first criterion.**
 
-If the value lives in a single user's records — their projects, their clients, their documents, their field data — the local-node architecture is the right default. If the value lives in pooled behavior across users — rankings, recommendations, market pricing, social graphs — centralized infrastructure is structurally required. No version of this architecture changes that answer.
+When the value lives in a single user's records — their projects, their clients, their documents, their field data — the local-node architecture is the right default. When the value lives in pooled behavior across users — rankings, recommendations, market pricing, social graphs — centralized infrastructure is structurally required. No version of this architecture changes that answer.
 
 ---
 
@@ -25,11 +25,11 @@ Most real products contain both. A project management tool's core value is user-
 
 ---
 
-The five filters apply in order. Three of them (F1, F2, F4) can produce hard-stop verdicts; the order matters because any hard stop ends the evaluation. The order also reflects how decisively each filter rules: F1 is a property of the domain (independent of business model and team), F2 is a property of who owns the data (independent of how the team monetizes it), F3 is a property of the operational environment, F4 is a property of the business model, and F5 is a property of the team's capacity. Apply them top-down. If F1 stops the evaluation, F2 through F5 do not run. If F1 and F2 pass but F4 produces a hard stop (revenue requires data custody), the architecture cannot be reconciled with the business — F4 wins, even if F2 and F3 cleared.
+The five filters apply in order. Three of them (F1, F2, F4) can produce hard-stop verdicts; the order matters because any hard stop ends the evaluation. The order also reflects how decisively each filter rules: F1 is a property of the domain (independent of business model and team), F2 is a property of who owns the data (independent of how the team monetizes it), F3 is a property of the operational environment, F4 is a property of the business model, and F5 is a property of the team's capacity. Applied top-down, an F1 stop forecloses F2 through F5. If F1 and F2 pass but F4 produces a hard stop (revenue requires data custody), the architecture cannot be reconciled with the business — F4 wins, even if F2 and F3 cleared.
 
 ## Filter 1: Consistency Requirements (Hard Stop)
 
-This is the strongest filter for disqualifying the entire architecture. Answer each question honestly.
+This is the strongest filter for disqualifying the entire architecture. The relevant questions:
 
 | Question | If yes |
 |---|---|
@@ -38,11 +38,11 @@ This is the strongest filter for disqualifying the entire architecture. Answer e
 | Does every user need the exact same truth at the exact same millisecond? | **Stop. Centralized only.** |
 | Can users tolerate eventual consistency, where peers may diverge for minutes or hours? | Local-first viable. Continue. |
 
-No distributed system can be both available during partitions and immediately consistent across all nodes. If your domain requires atomic cross-user transactions — a seat reservation that prevents two users from booking the same seat at once, a payment that must debit one ledger and credit another atomically, a trade execution that requires globally consistent state at the moment of settlement — stop here. The local-node architecture is not the right choice for that work.
+No distributed system can be both available during partitions and immediately consistent across all nodes. When a domain requires atomic cross-user transactions — a seat reservation that prevents two users from booking the same seat at once, a payment that must debit one ledger and credit another atomically, a trade execution that requires globally consistent state at the moment of settlement — the local-node architecture is not the right choice for that work.
 
-This does not mean local-node architectures cannot handle financial data. The double-entry ledger is a deliberately specified subsystem here. It handles CP-class operations correctly: local posting with idempotent replay, CQRS read models for aggregated views, period closing with rollup snapshots. The ledger treats certain operations — cross-user settlements, real-time inventory — as out of scope for eventual consistency. If your product's *core loop* requires those operations, you are building a payments processor. You are not building a local-first productivity tool.
+This does not mean local-node architectures cannot handle financial data. The double-entry ledger is a deliberately specified subsystem here. It handles CP-class operations correctly: local posting with idempotent replay, CQRS read models for aggregated views, period closing with rollup snapshots. The ledger treats certain operations — cross-user settlements, real-time inventory — as out of scope for eventual consistency. When a product's *core loop* requires those operations, it is a payments processor. It is not a local-first productivity tool.
 
-The test is specific. Do your *primary* records require atomic cross-user consistency as a moment-to-moment invariant? A field operations manager's daily work log shows yesterday's site activity from a peer who came back online this morning. That is eventual consistency. That is fine. A commodities exchange must show every participant the same order book at the same microsecond. That is a different system. This architecture is not for it.
+The test is specific. Whether *primary* records require atomic cross-user consistency as a moment-to-moment invariant is the decisive question. A field operations manager's daily work log shows yesterday's site activity from a peer who came back online this morning. That is eventual consistency. That is fine. A commodities exchange must show every participant the same order book at the same microsecond. That is a different system. This architecture is not for it.
 
 ---
 
@@ -63,15 +63,15 @@ Contrast that with a platform whose core product is behavioral aggregation. An a
 
 The most common real-world case is mixed ownership. It resolves to Zone C: user-owned records for the day-to-day data plane, with specific aggregated surfaces — org-wide dashboards, cross-team reporting, benchmarking — handled by a separate service. The local-node architecture handles user-owned records. It treats aggregated surfaces as optional read models, not authoritative sources.
 
-If a regulatory custodian — not the user, not the vendor, but a regulator — must hold the authoritative copy, the architecture cannot make that guarantee structurally. Healthcare records under HIPAA, financial records under FINRA, export-controlled data under ITAR: each has frameworks specifying where authoritative custody must reside.
+When a regulatory custodian — not the user, not the vendor, but a regulator — must hold the authoritative copy, the architecture cannot make that guarantee structurally. Healthcare records under HIPAA, financial records under FINRA, export-controlled data under ITAR: each has frameworks specifying where authoritative custody must reside.
 
-HIPAA accommodates local-first when a Business Associate Agreement covers the storage architecture and audit trails satisfy 45 CFR §164.312's technical safeguards. The administrative safeguards under §164.308 (workforce training, access management, contingency planning) are operator-policy concerns that endpoints make harder, not easier, because each endpoint is its own access boundary. FINRA Rule 4511 and SEC Rule 17a-4 specify third-party WORM storage for broker-dealer records — requirements that may route specific retention flows to a centralized custodian even when day-to-day operations run local-first. Know which regime applies before reaching this filter.
+HIPAA accommodates local-first when a Business Associate Agreement covers the storage architecture and audit trails satisfy 45 CFR §164.312's technical safeguards. The administrative safeguards under §164.308 (workforce training, access management, contingency planning) are operator-policy concerns that endpoints make harder, not easier, because each endpoint is its own access boundary. FINRA Rule 4511 and SEC Rule 17a-4 specify third-party WORM storage for broker-dealer records — requirements that may route specific retention flows to a centralized custodian even when day-to-day operations run local-first. The applicable regime determines what this filter produces.
 
 ---
 
 ## Filter 3: Connectivity and Operational Environment
 
-What are the real operational conditions? Not the happy path. What happens when the network is gone for hours or days?
+The relevant question is not the happy path. It is what happens when the network is gone for hours or days.
 
 | Environment | Model |
 |---|---|
@@ -82,25 +82,25 @@ What are the real operational conditions? Not the happy path. What happens when 
 | Hospital floors, clinical environments, legal depositions in opposing counsel's office | Local-first strongly preferred |
 | Always-online, browser-only, zero install friction, anonymous access acceptable | Traditional SaaS (Software as a Service) |
 
-Name the actual deployment environment. Not the cloud provider's SLA (Service Level Agreement) — the physical location where the user sits when they need the software to work.
+The actual deployment environment — not the cloud provider's SLA (Service Level Agreement) — determines which row applies. The relevant question is the physical location where users sit when they need the software to work.
 
 A structural engineer doing site inspections drives between locations where cell coverage is intermittent at best. A legal team doing document review in a hotel conference room during depositions cannot guarantee stable internet. A nurse on a hospital floor whose building WiFi was designed for administrative staff and retrofitted for clinical use cannot stop charting because a cloud API (Application Programming Interface) returned a timeout. A field operations crew at a rural extraction site may have satellite uptime measured in hours per day with significant latency.
 
 These scenarios frame intermittent connectivity as exceptional. Globally, it is the baseline. Hundreds of millions of enterprise workers across Sub-Saharan Africa, South and Southeast Asia, and rural Latin America operate through load-shedding, 2G/3G coverage gaps, and irregular power — not as edge cases but as daily conditions. For these markets, local-first is not a contingency design. It is the architecture that matches the work.
 
-For these users, the question is not "can the software degrade gracefully?" It is "does the software work without network access?" Degradation is a different failure mode from absence. An app that loads stale data and queues writes is degraded — it still works. An app that shows a spinner and refuses to accept input is broken.
+For these users, the question is not whether the software can degrade gracefully. It is whether the software works without network access. Degradation is a different failure mode from absence. An app that loads stale data and queues writes is degraded — it still works. An app that shows a spinner and refuses to accept input is broken.
 
 The enterprise environment deserves separate attention. IT departments in regulated industries — finance, healthcare, defense contracting, government — often require that data not leave controlled infrastructure. A cloud SaaS where data lives on a vendor's servers in a region the vendor selects fails this requirement directly. A local-node architecture where data lives on MDM-managed endpoints under IT's control passes it. The data residency properties this architecture provides as a structural side effect of its design are a primary procurement advantage in enterprise sales — not a secondary nice-to-have.
 
 The regulatory landscape behind this filter is now global. European pressure comes from the 2020 Schrems II ruling, which constrains EU personal data transfers to US cloud providers without supplemental safeguards — followed by the 2023 EU-US Data Privacy Framework, which provides an alternative transfer mechanism for participating US organizations but is itself in active legal review and may not survive the next round of court challenges. National enforcement runs through Germany's BSI (Bundesamt für Sicherheit in der Informationstechnik) and France's CNIL (Commission nationale de l'informatique et des libertés). India's DPDP (Digital Personal Data Protection) Act 2023 and the RBI (Reserve Bank of India) data localization circular, the UAE's DIFC (Dubai International Financial Centre) DPL (Data Protection Law) 2020 (which may legally prohibit foreign cloud storage for DIFC-licensed financial entities), and Russia's Federal Law 242-FZ — among the first general-purpose data localization laws globally, predating GDPR by two years — are representative; the full coverage matrix across GCC (Gulf Cooperation Council), APAC (Asia-Pacific), African, and Americas markets is in Appendix F. In each jurisdiction, the architecture where data lives on the user's own hardware is the architecture that makes compliance tractable. In several (DIFC, RBI, 242-FZ, PIPL (Personal Information Protection Law)), it is closer to the architecture the law requires.
 
-If your users work offline regularly — or in environments where they *should* be able to work offline even if they currently cannot — the connectivity filter points toward local-first.
+When users work offline regularly — or in environments where they *should* be able to work offline even if they currently cannot — the connectivity filter points toward local-first.
 
 ---
 
 ## Filter 4: Business Model Alignment
 
-Does the business model depend on controlling data access — or does it thrive when users control their own data?
+Whether the business model depends on controlling data access — or thrives when users control their own data — is the defining question for this filter.
 
 | Situation | Implication |
 |---|---|
@@ -112,13 +112,13 @@ Does the business model depend on controlling data access — or does it thrive 
 
 This filter catches a mismatch technical teams often miss. A team builds the right local-node architecture for its domain. Then it adopts a business model that requires controlling data access. It has built an internal contradiction. The local-node architecture is structurally incompatible with monetization that depends on data custody.
 
-If revenue requires that users *cannot* access their data without the vendor's platform — per-API-call billing, subscription gating that prevents export, data lock-in as the primary retention mechanism — the local-node architecture actively undermines the business. Users who own their data can leave. If making departure difficult is the retention strategy, this architecture makes that strategy impossible to execute.
+When revenue requires that users *cannot* access their data without the vendor's platform — per-API-call billing, subscription gating that prevents export, data lock-in as the primary retention mechanism — the local-node architecture actively undermines the business. Users who own their data can leave. When making departure difficult is the retention strategy, this architecture makes that strategy impossible to execute.
 
-If revenue comes from service quality, support, the convenience of a managed relay, additional tooling, or enterprise support contracts, the local-node architecture is additive. Users who own their data and can export it freely still pay for a well-run relay, responsive support, and a team that handles the infrastructure complexity they do not want to manage. The managed relay is the correct unit of competitive analysis. Users pay for the service, not for access to their own data.
+When revenue comes from service quality, support, the convenience of a managed relay, additional tooling, or enterprise support contracts, the local-node architecture is additive. Users who own their data and can export it freely still pay for a well-run relay, responsive support, and a team that handles the infrastructure complexity they do not want to manage. The managed relay is the correct unit of competitive analysis. Users pay for the service, not for access to their own data.
 
 Dual-licensing — an open-source core with a commercial managed offering — is the strongest alignment pattern for this architecture. The community version provides the open core. The commercial offering provides the managed relay, the enterprise MDM tooling, the security audit documentation, and the SLA. Revenue scales with the quality of the service, not with the difficulty of leaving.
 
-One clarification European procurement officers will ask for. Relay failure degrades sync and cross-organization collaboration. It does not affect local operation or data access. A team whose relay provider fails keeps working on the local plane and replaces the relay without data migration. The relay is replaceable infrastructure, not a data custodian.
+One clarification European procurement officers will raise: relay failure degrades sync and cross-organization collaboration. It does not affect local operation or data access. A team whose relay provider fails keeps working on the local plane and replaces the relay without data migration. The relay is replaceable infrastructure, not a data custodian.
 
 ---
 
@@ -133,7 +133,7 @@ This filter governs *when* and *how*. It does not govern *whether*. A team fully
 | Existing hosted product with established user base and historical data | Hybrid: retain cloud as sync relay, add local-node capability incrementally |
 | Greenfield project with a team prepared to invest in the architecture | Local-first node from day one |
 
-Four skills separate local-node development from standard web application development. Acquire them honestly; do not assume they transfer automatically.
+Four skills separate local-node development from standard web application development. These are acquired competencies, not capabilities that transfer automatically from prior web development experience.
 
 **CRDT debugging.** When two peers diverge and produce unexpected merged state, the developer must understand which CRDT types were involved, which operations arrived in which order, and what the merge semantics guarantee. This is not "find the bug and fix it." This is reasoning about convergent state under uncertainty. The mental model is different from debugging a request-response API.
 
@@ -141,11 +141,11 @@ Four skills separate local-node development from standard web application develo
 
 **Schema migration in a multi-version environment.** Nodes update independently. At any given moment, the user base runs a distribution of software versions. A schema migration must work correctly when a newly updated node exchanges data with a node running two versions behind. The expand-contract pattern — adding new fields before removing old ones, maintaining backward-compatible event formats during a transition window, retiring old formats only after the compatibility window closes — is not optional.
 
-**Key management.** The architecture requires per-document data encryption keys, per-role key encryption keys, and device identity keys. Rotation, revocation, and recovery procedures must be designed and implemented before the first production deployment. A team that has not designed key compromise recovery before shipping has created a data loss risk that cannot be resolved under pressure. Plan one to three months for key hierarchy design and rotation procedure implementation before naming a production date.
+**Key management.** The architecture requires per-document data encryption keys, per-role key encryption keys, and device identity keys. Rotation, revocation, and recovery procedures must be designed and implemented before the first production deployment. A team that has not designed key compromise recovery before shipping has created a data loss risk that cannot be resolved under pressure. One to three months for key hierarchy design and rotation procedure implementation before naming a production date is the realistic budget.
 
 These skills are learnable, not rare. The combined estimate — three to six months for CRDT and sync plus one to three months for key management — reflects real project history, not pessimism. Teams that treat those months as a legitimate investment ship stable systems. Teams that skip them ship systems that fail on reconnection edge cases and schema incompatibilities in the field.
 
-Engineering capability is necessary but not sufficient. A team that clears all four engineering skills above can still ship Zone A and discover six months later that they cannot operate it. Operational capability is the second half of F5: fleet telemetry exported from unowned endpoints (which fleet members synced recently, which schema version each runs, key-rotation events), MDM coordination with customer IT on installer signing and configuration profiles, supply-chain signing with notarization and a published SBOM, and on-call runbooks for common fleet failure modes (quorum loss, schema-version skew, certificate rotation). Each is a real engineering commitment, not a nice-to-have. Part IV (Chapters 17–20) and Chapter 21 specify the playbooks; a team that treats operational capability as something to figure out post-launch ships software that fails customer 1.
+Engineering capability is necessary but not sufficient. A team that clears all four engineering skills above can still ship Zone A and discover six months later that they cannot operate it. Operational capability is the second half of F5: fleet telemetry exported from unowned endpoints (which fleet members synced recently, which schema version each runs, key-rotation events), MDM coordination with customer IT on installer signing and configuration profiles, supply-chain signing with notarization and a published SBOM, and on-call runbooks for common fleet failure modes (quorum loss, schema-version skew, certificate rotation). Each is a real engineering commitment, not a nice-to-have. Part IV (Chapters 17–20) and Chapter 21 specify the playbooks; treating operational capability as something to figure out post-launch produces software that fails customer 1.
 
 ---
 
@@ -240,24 +240,24 @@ Verdict: Zone C. The team adopts the Bridge accelerator pattern, runs Phase 1 (d
 
 ## The Practical Shortcut
 
-If the five filters feel like too much evaluation for a project in early discovery, three questions produce a fast answer for most cases.
+This chapter maps the full decision space. Three questions produce a fast first-pass answer for most cases.
 
-**Does the user own their primary records?** The records describe the user's work, their clients, their projects. The user retains meaningful access even if they stop paying. If yes — the local-node architecture is the right default.
+**Whether users own their primary records** is the first question. The records describe the user's work, their clients, their projects. The user retains meaningful access even if they stop paying. An affirmative answer points toward the local-node architecture as the right default.
 
-**Does the team need to work offline for extended periods?** Not "it would be nice if offline worked." Users are in environments where reliable connectivity cannot be guaranteed and the software must work regardless. If yes — the architecture needs to treat offline as the primary case, not a fallback.
+**Whether the system must work offline for extended periods** is the second. Not whether offline operation would be convenient — whether users are in environments where reliable connectivity cannot be guaranteed and the software must work regardless. An affirmative answer means the architecture must treat offline as the primary case, not a fallback.
 
-**Does the product need to outlive vendor infrastructure?** The software should keep working regardless of whether the vendor survives, is acquired, changes its pricing, or is directed to stop serving your jurisdiction — as hundreds of thousands of organizations in Russia and CIS (Commonwealth of Independent States) markets learned in 2022 when Western SaaS vendors suspended service under sanctions enforcement. If yes — the product must hold its own authoritative data. Software that depends on a vendor server to function cannot outlive the vendor's continued permission to serve you.
+**Whether the product must outlive vendor infrastructure** is the third. The software should keep working regardless of whether the vendor survives, is acquired, changes its pricing, or is directed to stop serving a given jurisdiction — as hundreds of thousands of organizations in Russia and CIS (Commonwealth of Independent States) markets learned in 2022 when Western SaaS vendors suspended service under sanctions enforcement. An affirmative answer means the product must hold its own authoritative data. Software that depends on a vendor server to function cannot outlive the vendor's continued permission to serve its users.
 
-If all three answers are yes: Zone A or Zone C. Start with Anchor (the Zone A local-first desktop accelerator) for a greenfield. Start with Bridge (the Zone C hybrid SaaS accelerator) for a migration or hybrid deployment. Run the full five filters to confirm no blocking constraint applies.
+When all three answers are affirmative: Zone A or Zone C applies. A greenfield project starts with Anchor (the Zone A local-first desktop accelerator). A migration or hybrid deployment starts with Bridge (the Zone C hybrid SaaS accelerator). The full five filters confirm no blocking constraint applies.
 
-If any answer is no: identify which filter captures it. A "no" on the first question is Filter 2. A "no" on the second is a Zone C tolerance. A "no" on the third is Filter 4 — a business model that requires data custody. Each has a specific implication, and the relevant filter section above addresses it.
+When any answer is negative: the corresponding filter captures the implication. A negative on the first question is Filter 2. A negative on the second is a Zone C tolerance. A negative on the third is Filter 4 — a business model that requires data custody. Each has a specific implication, and the relevant filter section above addresses it.
 
 The shortcut identifies whether a full evaluation is worth the time. It does not replace the filters for a production architectural decision.
 
 ---
 
-## What You Have Earned
+## What the Analysis Produces
 
-A reader who cleared all five filters has earned an architecture that outlives vendor decisions, works through connectivity gaps and power interruptions, and satisfies compliance in every major regulatory jurisdiction. Anchor is the Zone A reference implementation for greenfield local-first projects. Bridge is the Zone C reference for teams migrating an existing SaaS product or offering a hosted option alongside a self-hosted one. Both reference Sunfish (the open-source reference implementation, [github.com/ctwoodwa/Sunfish](https://github.com/ctwoodwa/Sunfish)) packages — pre-1.0 implementations of the architecture this book specifies, not finished products — and both are specified in full in Part IV.
+A system that clears all five filters earns an architecture that outlives vendor decisions, works through connectivity gaps and power interruptions, and satisfies compliance in every major regulatory jurisdiction. Anchor is the Zone A reference implementation for greenfield local-first projects. Bridge is the Zone C reference for teams migrating an existing SaaS product or offering a hosted option alongside a self-hosted one. Both reference Sunfish (the open-source reference implementation, [github.com/ctwoodwa/Sunfish](https://github.com/ctwoodwa/Sunfish)) packages — pre-1.0 implementations of the architecture this book specifies, not finished products — and both are specified in full in Part IV.
 
 Before that implementation, Part II stress-tests the architecture against the hardest objections five domain experts could construct. The council did not begin as believers. They began as skeptics. Every block they raised, every condition they imposed, and every objection they cleared makes the architecture stronger and the failure modes better understood.

@@ -5,9 +5,12 @@
 
 | 07:43 | Built chapter reader web app (React + Express) | web/ (10 files) | production build passes; 52 chapters/50 with audio served on port 3080 | ~3500 |
 
+| 2026-05-13 | Register shift ch17/ch18/ch19 — tutorial "you" → implementation supplement voice; Marcus reframed as field-research case; all technical content preserved | vol-1/part-4-implementation-playbooks/ch17-building-first-node.md, ch18-migrating-existing-saas.md, ch19-shipping-to-enterprise.md | Complete — three files written | ~4000 |
 | 2026-05-07 14:30 | Web reader: multi-track support + render queue system | web/server.js, web/src/App.jsx, web/src/App.css, web/src/components/AudioPlayer.jsx, web/src/components/ChapterView.jsx, web/src/components/QueuePanel.jsx (NEW) | Build passes clean; 6 server changes + 5 client changes: loadMp3Tags keyed by full filename, buildCatalog scans audio variants, /api/chapters exposes tracks[], queue system with POST/GET/DELETE /api/queue, QueuePanel drawer, track selector in AudioPlayer | ~4000 |
 | 2026-05-07 01:15 | Vol 2 Ch 1 final-render audiobook launch — diagnosed and fixed 3 bugs; render in progress (background, ~2-3h estimated) | build/audiobook.py (YAML front-matter strip added to narratable_text(); ISO 8601 timestamp expansion added; default_base_url for chatterbox changed from 8881/v1 → 8883/api/v1), .wolf/buglog.json (bugs 189-191 appended), .wolf/cerebrum.md (4 new Key Learnings + 3 new Do-Not-Repeat entries) | Bugs: (1) 405 from wrong /v1 base path — proxy routes under /api/v1; (2) 504 cascade from 30s proxy gateway timeout + retry storm; fixed by using port 8883 direct backend + --no-chapter-map; (3) YAML front-matter spoken as TTS text. Render now running at ~33s/chunk avg, 270 chunks, ~2.5h total estimate. MP3 incrementally writing to build/output/audiobook/vol-2/ch01-departure.mp3. ~18000 |
 | 2026-05-07 13:09 | Editorial review feature implemented in web reader | web/server.js (+review session API), web/src/App.jsx (+ReviewPanel + review toggle), web/src/components/ReviewPanel.jsx (NEW), web/src/components/CommentToolbar.jsx (NEW), web/src/App.css (+review styles) | Build passes clean; 4 API endpoints added; submit writes co-review-*.md to .pao-inbox/; smoke test confirmed correct Markdown output | ~3200 |
+| 08:50 | Dissertation framing — Part 2 council chapters | vol-1/part-2-council-reads-the-paper/ch05–ch09 | "this book"/"the paper" → "dissertation"/"Joel's dissertation"; added 1-2 sentence peer-review framing sentence(s) to each chapter opening; council note blockquote added to ch05 | ~2500 |
+| 2026-05-13 09:30 | Renamed Joel Reyes → Tariq Hassan (offshore UAE field engineer) + reframed "this book" → dissertation register throughout ch01 (9 targeted edits, all technical content preserved) | vol-1/part-1-thesis-and-pain/ch01-when-saas-fights-reality.md | complete; no Joel references remain; register consistent with dissertation framing | ~800 |
 | 2026-05-07 16:00 | Part 1: Kokoro draft render of Ch 1 — ch01-departure--af_bella.mp3 (22.9 MB, 258 chunks, 16 min wall-clock including retries) | build/output/audiobook/vol-2/ch01-departure--af_bella.mp3 | Produced via --output-suffix=--af_bella; Chatterbox final (ch01-departure.mp3, 23.2 MB) confirmed untouched | ~500 |
 | 2026-05-07 16:19 | Part 2-3: aeneas forced alignment — sentence-level timing + word interpolation for Ch 1 | chapters/_voice-drafts/_alignments/ch01-departure.json (schema v2), ch01-departure.chatterbox.json.bak (backup) | aeneas 1.7.3 installed (AENEAS_WITH_CEW=False); ffmpeg via static-ffmpeg 3.0; TTS via macOS 'say' (-r=tts=macos); 257 fragments; ~5 min wall-clock for 23-min audio; words[] arrays added via linear intra-sentence interpolation (Option B); web reader API returns schema v2 stale=false | ~1500 |
 | 2026-05-05 19:30 | Vol 2 listen-test APPROVED by CO; full structural + lexical canon locked; Act I drafting authorized; Ch 1 dispatched. 8 PRs landed Tuesday (#112-#119) | vol-2-software-as-gravity.md (NEW; canon doc — software is gravity not character), vol-2-archive-and-capture-convention.md + vol-2-anchor-bridge-sync-mechanic.md + series-arc-sunfish-trajectory.md (NEW canon docs), .claude/agents/vol2-chapter-reviewer.md (NEW; line + structural editor agent), .claude/skills/crew-log-style-entry/SKILL.md (NEW), all character sheets updated (Anna voice-register spec; Joel/Priya/Wanjiru/Stefan plot-binding metadata + canon layers), three signature-discipline scenes locked (Joel bunk-laptop / Priya fourth-pass / Wanjiru exception-refusal), Ch 2 v4 redrafted under gravity rail (5,445 words / 31.9 min audio), Ch 5 prose-pass (5,971 words / 36.5 min audio), boat→RV Nansen / mission→MERIDIAN-7 / rival→HELVETICA-2 (140+ substitutions across 27 files), TTS defensive mappings, ASSEMBLY.md updated with post-verdict status, snapshot at .pao-inbox/_state-snapshots/snapshot-2026-05-05-tuesday-evening-vol2-listen-test-approved.md | listen-test pair (Ch 2 + Ch 5) audio total 68.4 min; CO listened uninterrupted; verdict "approved" lands gravity canon as validated. Act I remaining = Ch 1 (in flight) / Ch 3 / Ch 4 / Ch 6. ~140000 |
@@ -3193,3 +3196,130 @@
 | 17:29 | Created build/prose_telemetry_handcount.py | — | ~4315 |
 | 17:30 | Created icm/00_intake/02-prose-telemetry-phase-1.md | — | ~395 |
 | 17:31 | Created icm/01_discovery/02-prose-telemetry-phase-1/handcount-pilot.md | — | ~2020 |
+| 17:31 | Session end: 41 writes across 16 files (CONTEXT.md, README.md, ASSEMBLY.md, vol2-chapter-reviewer.md, CLAUDE.md) | 11 reads | ~79105 tok |
+| 17:41 | Session end: 41 writes across 16 files (CONTEXT.md, README.md, ASSEMBLY.md, vol2-chapter-reviewer.md, CLAUDE.md) | 11 reads | ~79105 tok |
+| 18:32 | Edited vol-2/act-1/ch01-departure.trial.md | inline fix | ~22 |
+| 18:32 | Edited vol-2/act-1/ch01-departure.trial.md | inline fix | ~152 |
+| 18:32 | Edited vol-2/act-1/ch01-departure.trial.md | inline fix | ~127 |
+| 18:32 | Edited vol-2/act-1/ch01-departure.trial.md | inline fix | ~54 |
+| 18:33 | Session end: 45 writes across 16 files (CONTEXT.md, README.md, ASSEMBLY.md, vol2-chapter-reviewer.md, CLAUDE.md) | 11 reads | ~79485 tok |
+| 18:50 | Edited vol-2/act-1/ch01-departure.trial.md | inline fix | ~164 |
+| 18:51 | Session end: 46 writes across 16 files (CONTEXT.md, README.md, ASSEMBLY.md, vol2-chapter-reviewer.md, CLAUDE.md) | 11 reads | ~79661 tok |
+| 19:14 | Edited vol-2/act-1/ch01-departure.trial.md | inline fix | ~70 |
+| 19:15 | Edited vol-2/act-1/ch01-departure.trial.md | inline fix | ~67 |
+| 19:15 | Session end: 48 writes across 16 files (CONTEXT.md, README.md, ASSEMBLY.md, vol2-chapter-reviewer.md, CLAUDE.md) | 11 reads | ~79807 tok |
+| 19:16 | Session end: 48 writes across 16 files (CONTEXT.md, README.md, ASSEMBLY.md, vol2-chapter-reviewer.md, CLAUDE.md) | 11 reads | ~79807 tok |
+| 20:44 | Created vol-2/act-1/ch02-recruitment-interview.trial.md | — | ~9466 |
+| 20:45 | Edited vol-2/act-1/ch02-recruitment-interview.trial.md | inline fix | ~91 |
+| 20:46 | Edited vol-2/act-1/ch02-recruitment-interview.trial.md | 3→3 lines | ~124 |
+| 20:46 | Edited vol-2/act-1/ch02-recruitment-interview.trial.md | inline fix | ~101 |
+| 20:46 | Created icm/01_discovery/02-prose-telemetry-phase-1/ch02-redo-notes.md | — | ~1809 |
+| 20:47 | Edited build/audiobook.py | 1→2 lines | ~30 |
+| 20:47 | Edited build/audiobook.py | 1→2 lines | ~37 |
+| 20:48 | Session end: 55 writes across 18 files (CONTEXT.md, README.md, ASSEMBLY.md, vol2-chapter-reviewer.md, CLAUDE.md) | 12 reads | ~92292 tok |
+| 22:42 | Edited build/audiobook.py | expanded (+19 lines) | ~291 |
+| 22:43 | Session end: 56 writes across 18 files (CONTEXT.md, README.md, ASSEMBLY.md, vol2-chapter-reviewer.md, CLAUDE.md) | 13 reads | ~119053 tok |
+| 22:46 | Session end: 56 writes across 18 files (CONTEXT.md, README.md, ASSEMBLY.md, vol2-chapter-reviewer.md, CLAUDE.md) | 13 reads | ~119053 tok |
+| 22:56 | Edited vol-2/act-1/ch01-departure.trial.md | inline fix | ~66 |
+| 22:56 | Session end: 57 writes across 18 files (CONTEXT.md, README.md, ASSEMBLY.md, vol2-chapter-reviewer.md, CLAUDE.md) | 13 reads | ~119123 tok |
+| 08:11 | Session end: 57 writes across 18 files (CONTEXT.md, README.md, ASSEMBLY.md, vol2-chapter-reviewer.md, CLAUDE.md) | 13 reads | ~119123 tok |
+| 09:00 | Back cover copy (Vol 1 — The Filchner Dark): Joel dissertation framing, local-first + self-hosting, approved by CO | back-cover-vol1 | approved | ~800 |
+| 08:13 | Session end: 57 writes across 18 files (CONTEXT.md, README.md, ASSEMBLY.md, vol2-chapter-reviewer.md, CLAUDE.md) | 13 reads | ~119123 tok |
+
+## Session: 2026-05-13 08:22
+
+| Time | Action | File(s) | Outcome | ~Tokens |
+|------|--------|---------|---------|--------|
+| 08:42 | Edited vol-2/ANNA-VOICE.md | Janeway() → moves() | ~291 |
+| 08:42 | Edited vol-2/ANNA-VOICE.md | added error handling | ~155 |
+| 08:43 | Edited vol-2/ANNA-VOICE.md | expanded (+36 lines) | ~1051 |
+| 08:43 | Edited vol-2/act-1/ch01-departure.trial.md | 3→1 lines | ~23 |
+| 08:43 | Edited vol-2/act-1/ch01-departure.trial.md | 5→5 lines | ~24 |
+| 08:43 | Edited vol-2/act-1/ch01-departure.trial.md | inline fix | ~86 |
+| 08:43 | Edited vol-2/act-1/ch01-departure.trial.md | inline fix | ~125 |
+| 08:44 | Edited vol-2/act-1/ch01-departure.trial.md | 3→3 lines | ~347 |
+| 08:44 | Edited vol-2/act-1/ch01-departure.trial.md | inline fix | ~36 |
+| 08:44 | Edited vol-2/act-1/ch02-recruitment-interview.trial.md | 3→3 lines | ~139 |
+| 08:44 | Edited vol-2/act-1/ch02-recruitment-interview.trial.md | inline fix | ~114 |
+| 08:44 | Edited vol-2/act-1/ch02-recruitment-interview.trial.md | inline fix | ~86 |
+| 08:44 | Edited vol-2/act-1/ch02-recruitment-interview.trial.md | inline fix | ~41 |
+| 08:44 | Edited vol-2/act-1/ch02-recruitment-interview.trial.md | inline fix | ~62 |
+| 08:45 | Edited vol-1/part-1-thesis-and-pain/ch02-local-first-serious-stack.md | inline fix | ~75 |
+| 08:46 | Edited vol-1/part-1-thesis-and-pain/ch02-local-first-serious-stack.md | inline fix | ~138 |
+| 08:46 | Edited vol-1/part-1-thesis-and-pain/ch02-local-first-serious-stack.md | inline fix | ~8 |
+| 08:46 | Edited vol-1/part-1-thesis-and-pain/ch02-local-first-serious-stack.md | inline fix | ~73 |
+| 08:46 | Edited vol-1/part-1-thesis-and-pain/ch02-local-first-serious-stack.md | 3→3 lines | ~162 |
+| 08:46 | Edited vol-1/part-1-thesis-and-pain/ch02-local-first-serious-stack.md | "s work. The paper that na" → "s work. The paper that na" | ~49 |
+| 08:46 | Edited vol-1/part-1-thesis-and-pain/ch03-inverted-stack-one-diagram.md | inline fix | ~24 |
+| 08:46 | Edited vol-1/part-2-council-reads-the-paper/ch05-enterprise-lens.md | 5→9 lines | ~237 |
+| 08:46 | Edited vol-1/part-1-thesis-and-pain/ch03-inverted-stack-one-diagram.md | inline fix | ~24 |
+| 08:46 | Edited vol-1/part-2-council-reads-the-paper/ch05-enterprise-lens.md | inline fix | ~84 |
+| 08:46 | Edited vol-1/part-1-thesis-and-pain/ch03-inverted-stack-one-diagram.md | inline fix | ~38 |
+| 08:46 | Edited vol-1/part-2-council-reads-the-paper/ch05-enterprise-lens.md | inline fix | ~28 |
+| 08:46 | Edited vol-1/part-1-thesis-and-pain/ch01-when-saas-fights-reality.md | 5→5 lines | ~558 |
+| 08:46 | Edited vol-1/part-2-council-reads-the-paper/ch05-enterprise-lens.md | inline fix | ~30 |
+| 08:46 | Edited vol-1/part-1-thesis-and-pain/ch01-when-saas-fights-reality.md | inline fix | ~60 |
+| 08:46 | Edited vol-1/part-2-council-reads-the-paper/ch05-enterprise-lens.md | inline fix | ~20 |
+| 08:46 | Edited vol-1/part-1-thesis-and-pain/ch02-local-first-serious-stack.md | inline fix | ~24 |
+| 08:46 | Edited vol-1/part-4-implementation-playbooks/ch20-ux-sync-conflict.md | inline fix | ~100 |
+| 08:46 | Edited vol-1/part-1-thesis-and-pain/ch01-when-saas-fights-reality.md | inline fix | ~107 |
+| 08:46 | Edited vol-1/part-2-council-reads-the-paper/ch05-enterprise-lens.md | inline fix | ~65 |
+| 08:46 | Edited vol-1/part-1-thesis-and-pain/ch01-when-saas-fights-reality.md | inline fix | ~21 |
+| 08:47 | Edited vol-1/part-4-implementation-playbooks/ch20-ux-sync-conflict.md | inline fix | ~100 |
+| 08:47 | Edited vol-1/part-2-council-reads-the-paper/ch05-enterprise-lens.md | inline fix | ~38 |
+| 08:47 | surgical edits: reframe ch02+ch03 from 'this book' to Joel's dissertation voice | ch02-local-first-serious-stack.md, ch03-inverted-stack-one-diagram.md | 9 replacements, clean scan confirmed | ~800 |
+| 08:47 | Edited vol-1/part-1-thesis-and-pain/ch01-when-saas-fights-reality.md | inline fix | ~27 |
+| 08:47 | Edited vol-1/part-2-council-reads-the-paper/ch05-enterprise-lens.md | inline fix | ~55 |
+| 08:47 | Session end: 39 writes across 8 files (ANNA-VOICE.md, ch01-departure.trial.md, ch02-recruitment-interview.trial.md, ch02-local-first-serious-stack.md, ch03-inverted-stack-one-diagram.md) | 21 reads | ~18815 tok |
+| 08:47 | Edited vol-1/part-4-implementation-playbooks/ch20-ux-sync-conflict.md | inline fix | ~185 |
+| 08:47 | Edited vol-1/part-2-council-reads-the-paper/ch05-enterprise-lens.md | inline fix | ~34 |
+| 08:47 | Edited vol-1/part-1-thesis-and-pain/ch01-when-saas-fights-reality.md | inline fix | ~197 |
+| 08:47 | Edited vol-1/part-4-implementation-playbooks/ch20-ux-sync-conflict.md | inline fix | ~159 |
+| 08:47 | Session end: 43 writes across 8 files (ANNA-VOICE.md, ch01-departure.trial.md, ch02-recruitment-interview.trial.md, ch02-local-first-serious-stack.md, ch03-inverted-stack-one-diagram.md) | 24 reads | ~19430 tok |
+| 08:47 | Edited vol-1/part-2-council-reads-the-paper/ch06-distributed-systems-lens.md | 3→5 lines | ~88 |
+| 08:47 | Edited vol-1/part-2-council-reads-the-paper/ch06-distributed-systems-lens.md | inline fix | ~16 |
+| 08:47 | Edited vol-1/part-1-thesis-and-pain/ch01-when-saas-fights-reality.md | inline fix | ~199 |
+| 08:47 | Edited vol-1/part-4-implementation-playbooks/ch20-ux-sync-conflict.md | inline fix | ~125 |
+| 08:47 | Edited vol-1/part-2-council-reads-the-paper/ch06-distributed-systems-lens.md | inline fix | ~23 |
+| 08:47 | Edited vol-1/part-5-operational-concerns/ch21-operating-a-fleet.md | inline fix | ~31 |
+| 08:47 | Edited vol-1/part-1-thesis-and-pain/ch01-when-saas-fights-reality.md | inline fix | ~92 |
+| 08:47 | Edited vol-1/part-5-operational-concerns/ch21-operating-a-fleet.md | inline fix | ~72 |
+| 08:47 | Edited vol-1/part-2-council-reads-the-paper/ch07-security-lens.md | 1→3 lines | ~91 |
+| 08:47 | Edited vol-1/part-5-operational-concerns/ch21-operating-a-fleet.md | "s trust boundary, and the" → "s trust boundary, and an " | ~104 |
+| 08:47 | Edited vol-1/part-5-operational-concerns/ch21-operating-a-fleet.md | inline fix | ~72 |
+| 08:47 | Edited vol-1/part-5-operational-concerns/ch21-operating-a-fleet.md | inline fix | ~107 |
+| 08:47 | Created vol-1/front-matter/preface.md | — | ~2660 |
+| 12:50 | Rewrote preface to establish Joel Reyes as narrator/author; removed Anna Yusupova framing and AI-authorship disclosure; added 2022 terminations anchor and dissertation committee backstory | vol-1/front-matter/preface.md | complete | ~1800 |
+
+| 08:48 | Dissertation register pass: converted second-person directive voice to declarative specification in ch16 (no edits needed — already declarative), ch20 (6 edits incl. voice-check placeholder resolved), ch21 (5 edits incl. opening rewrite) | vol-1/part-4/ch20-ux-sync-conflict.md, vol-1/part-5/ch21-operating-a-fleet.md | done | ~3000 |
+| 08:48 | Session end: 56 writes across 12 files (ANNA-VOICE.md, ch01-departure.trial.md, ch02-recruitment-interview.trial.md, ch02-local-first-serious-stack.md, ch03-inverted-stack-one-diagram.md) | 24 reads | ~23375 tok |
+| 08:48 | Edited vol-1/part-2-council-reads-the-paper/ch07-security-lens.md | inline fix | ~46 |
+| 08:48 | Edited vol-1/part-1-thesis-and-pain/ch01-when-saas-fights-reality.md | inline fix | ~14 |
+| 08:48 | Edited vol-1/part-2-council-reads-the-paper/ch07-security-lens.md | inline fix | ~31 |
+| 08:48 | Session end: 59 writes across 12 files (ANNA-VOICE.md, ch01-departure.trial.md, ch02-recruitment-interview.trial.md, ch02-local-first-serious-stack.md, ch03-inverted-stack-one-diagram.md) | 24 reads | ~23471 tok |
+| 08:48 | Edited vol-1/part-2-council-reads-the-paper/ch07-security-lens.md | inline fix | ~96 |
+| 08:48 | Edited vol-1/part-2-council-reads-the-paper/ch07-security-lens.md | inline fix | ~26 |
+| 08:48 | Edited vol-1/part-2-council-reads-the-paper/ch08-product-economic-lens.md | 5→7 lines | ~101 |
+| 08:48 | Edited vol-1/part-2-council-reads-the-paper/ch08-product-economic-lens.md | inline fix | ~22 |
+| 08:48 | Edited vol-1/part-2-council-reads-the-paper/ch08-product-economic-lens.md | inline fix | ~92 |
+| 08:49 | Edited vol-1/part-2-council-reads-the-paper/ch08-product-economic-lens.md | inline fix | ~22 |
+| 08:49 | Edited vol-1/part-2-council-reads-the-paper/ch08-product-economic-lens.md | inline fix | ~34 |
+| 08:49 | Session end: 66 writes across 13 files (ANNA-VOICE.md, ch01-departure.trial.md, ch02-recruitment-interview.trial.md, ch02-local-first-serious-stack.md, ch03-inverted-stack-one-diagram.md) | 24 reads | ~23891 tok |
+| 08:49 | Edited vol-1/part-2-council-reads-the-paper/ch08-product-economic-lens.md | inline fix | ~30 |
+| 08:49 | Edited vol-1/part-2-council-reads-the-paper/ch09-local-first-practitioner-lens.md | 3→5 lines | ~78 |
+| 08:49 | Edited vol-1/part-2-council-reads-the-paper/ch09-local-first-practitioner-lens.md | inline fix | ~58 |
+| 08:49 | Edited vol-1/part-2-council-reads-the-paper/ch09-local-first-practitioner-lens.md | inline fix | ~74 |
+| 08:49 | Edited vol-1/part-2-council-reads-the-paper/ch09-local-first-practitioner-lens.md | inline fix | ~41 |
+| 08:49 | Edited vol-1/part-2-council-reads-the-paper/ch09-local-first-practitioner-lens.md | inline fix | ~30 |
+| 08:49 | Created vol-1/part-1-thesis-and-pain/ch04-choosing-your-architecture.md | — | ~9159 |
+| 08:49 | Edited vol-1/part-2-council-reads-the-paper/ch09-local-first-practitioner-lens.md | inline fix | ~39 |
+| 08:50 | Edited vol-1/part-2-council-reads-the-paper/ch09-local-first-practitioner-lens.md | inline fix | ~34 |
+| 08:50 | Created vol-1/part-4-implementation-playbooks/ch17-building-first-node.md | — | ~8158 |
+| 12:52 | Register rewrite: ch04 second-person practitioner → Joel Reyes first-person analytical dissertation frame | vol-1/part-1-thesis-and-pain/ch04-choosing-your-architecture.md | complete | ~8600 |
+| 08:50 | Session end: 76 writes across 16 files (ANNA-VOICE.md, ch01-departure.trial.md, ch02-recruitment-interview.trial.md, ch02-local-first-serious-stack.md, ch03-inverted-stack-one-diagram.md) | 24 reads | ~42855 tok |
+| 08:51 | Session end: 76 writes across 16 files (ANNA-VOICE.md, ch01-departure.trial.md, ch02-recruitment-interview.trial.md, ch02-local-first-serious-stack.md, ch03-inverted-stack-one-diagram.md) | 24 reads | ~42855 tok |
+| 08:53 | Created vol-1/part-4-implementation-playbooks/ch18-migrating-existing-saas.md | — | ~7659 |
+| 08:53 | Session end: 77 writes across 17 files (ANNA-VOICE.md, ch01-departure.trial.md, ch02-recruitment-interview.trial.md, ch02-local-first-serious-stack.md, ch03-inverted-stack-one-diagram.md) | 24 reads | ~51061 tok |
+| 08:56 | Created vol-1/part-4-implementation-playbooks/ch19-shipping-to-enterprise.md | — | ~9466 |
+| 10:30 | Vol 1 Joel-premise refactor: deleted the-crossing.md; rewrote preface, ch01, ch04, ch17-19; surgical edits ch02-03, ch05-09, ch16, ch20-21 | vol-1/ | complete | ~8000 |
+| 08:57 | Session end: 78 writes across 18 files (ANNA-VOICE.md, ch01-departure.trial.md, ch02-recruitment-interview.trial.md, ch02-local-first-serious-stack.md, ch03-inverted-stack-one-diagram.md) | 24 reads | ~61203 tok |

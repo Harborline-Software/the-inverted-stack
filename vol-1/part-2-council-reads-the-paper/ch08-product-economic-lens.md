@@ -5,6 +5,8 @@
 
 ---
 
+Jordan Kelsey held the product and economics seat on Joel's dissertation committee. His job was not to evaluate the architecture — it was to evaluate the commercial bet underneath it, and to ask the questions Joel had not yet had to answer in a room with money on the table.
+
 ## Who Is Jordan Kelsey
 
 <!-- icm/prose-review -->
@@ -13,7 +15,7 @@ Jordan Kelsey has been on both sides of the pitch. His first company was a B2C p
 
 His second company was developer tooling. It got acquired for 22 million dollars. That one worked because he had learned to test a different set of questions first: who is in pain, what does the pain cost them, and what is the smallest intervention that makes it stop. He angel-invests now and advises early-stage teams. He has reviewed more than two hundred pitches that said *we will monetize with services and support*. He has watched most of them fail at the same place. A business model that is theoretically correct and operationally impossible.
 
-When Kelsey read the Inverted Stack paper, he recognized the architecture immediately. Not the specific technical decisions — those were new to him — but the structural shape of the commercial bet. An open-source core. A managed service as the revenue vehicle. A privacy story as the differentiator. He had built that company. He knew which questions it had to answer before it could survive.
+When Kelsey read Joel's dissertation, he recognized the architecture immediately. Not the specific technical decisions — those were new to him — but the structural shape of the commercial bet. An open-source core. A managed service as the revenue vehicle. A privacy story as the differentiator. He had built that company. He knew which questions it had to answer before it could survive.
 
 ---
 
@@ -35,7 +37,7 @@ The reason is specific. A demographic is not a customer. *Developer communities 
 
 Kelsey had tried to sell privacy-first software to enterprise buyers. He knew the pitch that fails: *you care about privacy, we protect privacy, therefore you will pay*. Enterprise buyers who care about privacy already have approved vendor lists, legal review processes, and compliance frameworks. A new tool requires a procurement conversation, a security review, and a champion willing to spend political capital to shepherd an unfamiliar product through those gates. The claim that the buyer values data sovereignty addresses none of that process.
 
-The deeper problem was that the paper had no answer to the commercial question that matters most: who pays first, and why do they pay today? A first customer is not just a buyer profile. It is a specific person with a specific job, a specific pain, a specific budget, and a specific reason not to wait. The paper had no scenario.
+The deeper problem was that the dissertation had no answer to the commercial question that matters most: who pays first, and why do they pay today? A first customer is not just a buyer profile. It is a specific person with a specific job, a specific pain, a specific budget, and a specific reason not to wait. The dissertation had no scenario.
 
 ### No OSS-to-Paid Conversion Mechanism
 
@@ -85,7 +87,7 @@ The OSS-to-paid conversion trigger was specified precisely: the relay becomes ne
 
 ### The Customer Acquisition Channel
 
-Kelsey scored the first customer path 8/10 in Round 2, up from 4. He acknowledged the vertical selection as well-reasoned and the five-step path as the right framework. His remaining gap was specific: the paper identified *who* but not *where*.
+Kelsey scored the first customer path 8/10 in Round 2, up from 4. He acknowledged the vertical selection as well-reasoned and the five-step path as the right framework. His remaining gap was specific: the dissertation identified *who* but not *where*.
 
 Cold outreach to construction project managers is notoriously difficult. They are not on LinkedIn the way software buyers are; they do not attend SaaS (Software as a Service) conferences; they are skeptical of software vendors by professional habit, because the industry has been oversold on PM software that failed to account for job site realities. A customer development plan built on cold email is a list of tactics with no conversion rate behind them.
 
@@ -117,7 +119,7 @@ The standard resolution is a dual-license structure: AGPLv3 for open-source user
 
 The timing condition is non-negotiable. Introducing a dual-license structure after a community has formed requires contributor license agreements (CLAs) from every contributor who has merged code. Retroactive CLA collection fails for two reasons: contributors become unreachable, and reachable contributors sometimes refuse on principle. The CLA and dual-license structure must be in place at the repository's founding, before the first external contributor opens a pull request. After that moment, the option is either expensive or foreclosed.
 
-The specific structure the paper must document: all contributors sign a CLA assigning copyright to the project entity. The default license is AGPLv3. A commercial license is available for organizations that cannot accept AGPLv3, at a price determined by deployment scale. The relay subscription and the commercial license are separate line items; managed relay customers receive the commercial license included.
+The specific structure the dissertation must document: all contributors sign a CLA assigning copyright to the project entity. The default license is AGPLv3. A commercial license is available for organizations that cannot accept AGPLv3, at a price determined by deployment scale. The relay subscription and the commercial license are separate line items; managed relay customers receive the commercial license included.
 
 ### Year-Two Failure Modes
 
@@ -151,7 +153,7 @@ Kelsey's Round 2 average was 6.8/10, up from 5.5. All blocking issues were clear
 
 **C3 (Medium):** Add a governance model section. Who approves PRs, who decides protocol changes, what is the decision-making structure for the project? The section need not be long. It needs to exist.
 
-**C4 (Medium):** Address relay commoditization directly. Articulate what makes the managed relay defensible against infrastructure-provider competition. Support quality and product-integrated onboarding are the answer; the paper needs to say so explicitly.
+**C4 (Medium):** Address relay commoditization directly. Articulate what makes the managed relay defensible against infrastructure-provider competition. Support quality and product-integrated onboarding are the answer; the dissertation needs to say so explicitly.
 
 **C5 (Low):** Add a market-sizing sentence for the construction vertical. The US Bureau of Labor Statistics counts approximately 1.4M construction managers; ENR's biennial software penetration survey puts software-using firms at roughly 40 percent. Regional analogues — UK construction PM headcount, EU contractor classifications, India's CREDAI member-firm registries, GCC Society of Engineers UAE rosters — multiply the addressable count by an additional ~3×. The construction-vertical first-customer wedge sits inside a global addressable population large enough to support multi-tier pricing without saturating a single regional channel.
 

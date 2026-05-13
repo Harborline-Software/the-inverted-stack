@@ -88,6 +88,14 @@
 
 <!-- Significant technical decisions with rationale. Why X was chosen over Y. -->
 
+### 2026-05-13 — Preface narrator change: Joel Reyes replaces Anna Yusupova
+
+**Decision:** Vol 1 is reframed as Joel Reyes's dissertation. Joel is the first-person narrator of the preface (and all vol-1 front-matter passages). Anna Yusupova is NOT the Vol 1 narrator — she may appear in Vol 2 (mission-log frame). The "A Note from the Authors" AI-authorship disclosure and Chris Wood byline are removed from the preface entirely. Sunfish is framed as Joel's prototype, built to validate the argument.
+
+**Joel's voice:** Direct, compressed, analytical. Academic-personal. Names the 2022 SaaS terminations (17,000 documented cases) as the empirical anchor. States the argument first, reasoning follows. No memoir tone; no performed emotion. Sign-off: "— Joel Reyes, Seattle, May 2025."
+
+**What this means for future sessions:** Do not reintroduce Anna Yusupova in vol-1 prose or front-matter. Do not add AI-authorship disclosures to vol-1 chapters. If a first-person passage appears in vol-1, the voice is Joel's.
+
 ## Decision Log — 2026-04-25 — Phase 0.0 timing pilot
 
 **Decision: skip Task 2 (MED-tier pilot); proceed to Phase 0 sweep without timing data.**

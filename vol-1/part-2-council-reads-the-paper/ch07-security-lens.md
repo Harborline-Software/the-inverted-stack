@@ -7,11 +7,13 @@
 
 ---
 
+Nia Okonkwo held the security seat on Joel's dissertation committee. Her charter was not to evaluate whether the architecture was elegant — it was to find the gap between the key hierarchy on paper and the incident response on the morning a key actually gets stolen.
+
 Nia Okonkwo has broken three "local-first" demos in under twenty minutes. The pattern was the same all three times. She ignored the application layer. She ignored the data-at-rest story. She went straight for the sync channel. Two demos had no auth on the sync socket at all. The third had auth — a sixteen-character string hardcoded in the config. She found it by running `strings` on the binary.
 
 She is not a hostile reviewer because she dislikes the inverted stack. She is a hostile reviewer because she has learned that distributed architectures fail at exactly the places their designers felt most confident. The encryption is usually fine. The key hierarchy is often documented. What breaks is the gap between the hierarchy on paper and the incident response on the morning a key actually gets stolen.
 
-Okonkwo read the first version of this paper with that question in front of her — not *is the cryptography correct*, but *what happens the day after the breach.*
+Okonkwo read the first version of Joel's dissertation with that question in front of her — not *is the cryptography correct*, but *what happens the day after the breach.*
 
 ---
 
@@ -19,7 +21,7 @@ Okonkwo read the first version of this paper with that question in front of her 
 
 ### What Earned a 9/10
 
-The first version of the architecture paper gets one dimension nearly right: data minimization at the protocol layer. Subscription filtering is enforced at the sync daemon's send tier — not at the application layer, not at the UI — and that placement is specified clearly. A node that lacks the required role attestation never receives the operations. There is no receive-and-hide. There is no "we filter it before displaying." There is no trust placed in the application to discard what it should not have. The daemon does not send it.
+The first version of Joel's dissertation gets one dimension nearly right: data minimization at the protocol layer. Subscription filtering is enforced at the sync daemon's send tier — not at the application layer, not at the UI — and that placement is specified clearly. A node that lacks the required role attestation never receives the operations. There is no receive-and-hide. There is no "we filter it before displaying." There is no trust placed in the application to discard what it should not have. The daemon does not send it.
 
 Okonkwo scored this dimension a 9 out of 10. In her experience, this is the dimension most commonly implemented backwards. Teams build an application that receives all data and enforces visibility rules in UI components. Which means the data already crossed the network. Already landed in local storage. Already accessible to anyone who knows where to look. Send-tier filtering is the architectural achievement that makes the rest of the security story coherent. If filtering had been left to the application layer, no amount of key management would have compensated.
 
@@ -33,7 +35,7 @@ The key hierarchy in the first version uses envelope encryption. Each document g
 
 This is the correct model. The trouble is what happens when the KEK itself is compromised — not rotated on schedule, but actually stolen.
 
-The first version of the paper scores a 5 out of 10 on incident response for key compromise. The paper provides no detection mechanism. It specifies no re-keying procedure for the compromise case as opposed to the scheduled rotation case. It analyzes no historical data exposure window for an attacker who holds the KEK. It defines no user notification path.
+The first version of the dissertation scores a 5 out of 10 on incident response for key compromise. It provides no detection mechanism. It specifies no re-keying procedure for the compromise case as opposed to the scheduled rotation case. It analyzes no historical data exposure window for an attacker who holds the KEK. It defines no user notification path.
 
 Consider the failure scenario concretely. A senior administrator's workstation is physically stolen on the train home. The attacker recovers the device, breaks the full-disk encryption — a realistic attack if the device is powered on — and extracts the OS keychain. The keychain holds the current role KEK for every role this administrator manages. With the KEK, the attacker can decrypt every wrapped DEK in the sync log. Every document those roles ever had access to is now readable.
 
@@ -114,7 +116,7 @@ This is the right architecture. The condition is about what the relay can see ev
 
 Traffic analysis is sensitive. A relay operator who cannot read messages can still observe which nodes communicate with which, at what times, and at what volume. For a legal firm, the communication pattern between two nodes during a specific time window can reveal which matters are active and which team members are collaborating — without any payload access at all. For healthcare deployments, communication frequency between specific nodes can reveal patient activity patterns.
 
-The architecture is not broken. The limitation is real, and the paper must disclose it. Organizations for whom metadata privacy is a hard requirement should run a self-hosted relay on infrastructure they control, removing the third-party relay operator as a metadata observer.
+The architecture is not broken. The limitation is real, and the dissertation must disclose it. Organizations for whom metadata privacy is a hard requirement should run a self-hosted relay on infrastructure they control, removing the third-party relay operator as a metadata observer.
 
 **Compelled Access as a Distinct Threat Model.** The compromised-relay threat model has a cousin that deserves its own name: compelled access. In jurisdictions where cloud-hosted infrastructure is subject to mandatory government access requirements, the architecture's end-to-end encryption with keys that never leave the originating device addresses a threat model that cloud storage cannot satisfy architecturally. The relay operator cannot produce decryptable content under a compulsion order because the relay operator does not possess decryptable content. This is not a cryptographic subtlety. It is the structural reason the architecture answers compelled-access regimes that BYOK and customer-managed-key (CMK) approaches cannot reach.
 

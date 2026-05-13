@@ -7,29 +7,29 @@
 
 ---
 
-You have a working local-first node. Now you have to ship it to an organization with managed endpoints, a security team, and a procurement team that has been burned by vendor lock-in before. Enterprise IT evaluates software through three gates — a procurement checklist, a security review, and a legal sign-off. Each gate has a specific requirement. Each requirement has a concrete resolution.
+A working local-first node must reach an organization with managed endpoints, a security team, and a procurement team that has been burned by vendor lock-in before. Enterprise IT evaluates software through three gates — a procurement checklist, a security review, and a legal sign-off. Each gate has a specific requirement. Each requirement has a concrete resolution. This chapter documents how Sunfish implements them.
 
 ---
 
 ## The Procurement Conversation
 
-The first conversation with enterprise legal will focus on licensing. Open-source core sounds attractive — until the legal team runs it against their approved-licenses list and finds AGPLv3. The network-use clause requires you to publish modifications when you run the software as a service, even for internal use. That clause triggers a categorical block at many corporate legal shops. This is not negotiable on their side. It is, however, solvable on yours.
+The first conversation with enterprise legal will focus on licensing. Open-source core sounds attractive — until the legal team runs it against their approved-licenses list and finds AGPLv3. The network-use clause requires publication of modifications when running the software as a service, even for internal use. That clause triggers a categorical block at many corporate legal shops. This is not negotiable on their side. It is, however, solvable on the implementation side.
 
 AGPLv3 plus a managed relay subscription produces one predictable line item: the relay subscription fee. No per-seat count to audit. No usage-based surprise. The open-source core removes the vendor lock-in objection that killed the last three SaaS (Software as a Service) proposals the CTO (Chief Technology Officer) sat through. That story is genuinely compelling.
 
 The resolution to the AGPLv3 block is a dual-license structure. Publish the core under AGPLv3 as the default. Offer a commercial license exception to organizations that cannot accept the network-use clause. The commercial license is a standard negotiated agreement: it permits internal modification without publishing obligation, grants a warranty, and specifies SLA (Service Level Agreement) terms for security patches.
 
-Two decisions you must make before the first enterprise conversation, not after:
+Two decisions must be made before the first enterprise conversation, not after:
 
-**First:** Specify the dual-license structure in your repository. Add a `LICENSES/` directory with both the AGPLv3 text and the commercial license template. Make the offering visible without requiring a sales call to discover it. Enterprise legal will check your GitHub before they email you.
+**First:** Specify the dual-license structure in the repository. Add a `LICENSES/` directory with both the AGPLv3 text and the commercial license template. Make the offering visible without requiring a sales call to discover it. Enterprise legal will check the GitHub repository before sending email.
 
-**Second:** Put a Contributor License Agreement (CLA) in place before the first external contributor opens a pull request. Without a CLA, you cannot legally offer the commercial exception on code contributed by third parties. The CLA does not need to be elaborate — a simple inbound=outbound agreement is sufficient — but it must exist before you accept outside contributions, not after. Missing this step invalidates the dual-license offering retroactively.
+**Second:** Put a Contributor License Agreement (CLA) in place before the first external contributor opens a pull request. Without a CLA, the commercial exception cannot legally be offered on code contributed by third parties. The CLA does not need to be elaborate — a simple inbound=outbound agreement is sufficient — but it must exist before outside contributions are accepted, not after. Missing this step invalidates the dual-license offering retroactively.
 
 ---
 
 ## Build and Packaging
 
-Enterprise IT deploys software. It does not unzip archives and run scripts. Your installer must integrate silently with the tools the IT team already manages.
+Enterprise IT deploys software. It does not unzip archives and run scripts. The installer must integrate silently with the tools the IT team already manages.
 
 The reference implementation targets two packaging formats, one per major managed-endpoint platform:
 
@@ -43,7 +43,7 @@ msiexec /i Sunfish.msi /qn /norestart INSTALLFOLDER="C:\ProgramData\Sunfish" SER
 
 Both formats integrate with Intune and Jamf for policy-driven deployment. Neither format requires user interaction during install. Neither format modifies PATH or installs global developer tooling.
 
-For the multi-target MAUI build, add explicit build targets to your project file:
+For the multi-target MAUI build, add explicit build targets to the project file:
 
 ```xml
 <PropertyGroup>
@@ -112,13 +112,13 @@ Get-ChildItem -Recurse -Include *.exe,*.dll -Path .\publish\ |
 signtool verify /pa /v Sunfish.exe
 ```
 
-Guide customers to configure App Control rules based on **trusted publisher**, not individual file hashes. A publisher-based rule covers every current and future file from your certificate without requiring a policy update on every release. A hash-based rule breaks on every update and generates a support ticket every time. Put this in your deployment guide explicitly: "Configure your App Control policy to trust publisher CN=Your Org, O=Your Org. Do not configure per-hash rules."
+Configure App Control rules based on **trusted publisher**, not individual file hashes. A publisher-based rule covers every current and future file from the certificate without requiring a policy update on every release. A hash-based rule breaks on every update and generates a support ticket every time. The deployment guide should state explicitly: "Configure your App Control policy to trust publisher CN=Your Org, O=Your Org. Do not configure per-hash rules."
 
 ---
 
 ## MDM Deployment
 
-MDM deployment is where the procurement promise becomes operational reality. The IT team needs to push your application to endpoints without touching each machine manually, pre-configure it with organization-specific settings, and verify compliance before granting data access.
+MDM deployment is where the procurement promise becomes operational reality. The IT team needs to push the application to endpoints without touching each machine manually, pre-configure it with organization-specific settings, and verify compliance before granting data access.
 
 ### Intune
 
@@ -130,7 +130,7 @@ Key path: HKLM\SYSTEM\CurrentControlSet\Services\SunfishLocalNode
 Value name: (exists)
 ```
 
-Assign the app to a device group, not a user group. Device-group assignment means the daemon installs before the first user logs in, which is when you want it running.
+Assign the app to a device group, not a user group. Device-group assignment means the daemon installs before the first user logs in, which is when it needs to be running.
 
 ### Jamf
 
@@ -180,7 +180,7 @@ The schema is versioned. The current schema is `v1`:
 }
 ```
 
-The `enterpriseAttestationIssuerPublicKey` field is the base64-encoded Ed25519 public key your organization uses to issue role attestation tokens. Generate this keypair once, store the private key in your secrets vault, and distribute the public key through this config field. Nodes use it to validate attestation tokens without calling home.
+The `enterpriseAttestationIssuerPublicKey` field is the base64-encoded Ed25519 public key the organization uses to issue role attestation tokens. Generate this keypair once, store the private key in the secrets vault, and distribute the public key through this config field. Nodes use it to validate attestation tokens without calling home.
 
 The host refuses to start if the config file fails schema validation. It does not silently ignore invalid configuration. It does not fall back to defaults. It logs the validation error and exits. This is intentional. A misconfigured node that starts anyway and fails at runtime is harder to diagnose than a node that refuses to start with a clear error message.
 
@@ -188,11 +188,11 @@ The host refuses to start if the config file fails schema validation. It does no
 
 After the MDM push completes, verify installation health before declaring the deployment successful. The two failure modes to check immediately:
 
-**Daemon not running.** A silent MSI install can succeed at the OS level while the Windows Service fails to start — typically because the service account lacks read access to the `dataDirectory` path. Check the Event Viewer under `Windows Logs > Application` for `SunfishLocalNode` source errors. The most common resolution is granting `NT AUTHORITY\NetworkService` (or your chosen service account) full control over `C:\ProgramData\Sunfish`.
+**Daemon not running.** A silent MSI install can succeed at the OS level while the Windows Service fails to start — typically because the service account lacks read access to the `dataDirectory` path. Check the Event Viewer under `Windows Logs > Application` for `SunfishLocalNode` source errors. The most common resolution is granting `NT AUTHORITY\NetworkService` (or the chosen service account) full control over `C:\ProgramData\Sunfish`.
 
 **Config file not found.** The application reads `node-config.json` at startup and fails fast if it is missing or malformed. Pre-seeded config deployment via Intune is a separate assignment from the application package; if the sequencing is wrong, the app installs before the config arrives. Use an Intune Proactive Remediation script to verify the file exists and contains valid JSON before the app assignment runs. On Jamf, use a policy ordering dependency: the configuration policy must succeed before the app policy triggers.
 
-Both failure modes produce clear error logs. Neither requires a technician visit to diagnose once you know what to look for. A remote log pull via MDM resolves both within minutes.
+Both failure modes produce clear error logs. Neither requires a technician visit to diagnose once the failure signature is known. A remote log pull via MDM resolves both within minutes.
 
 ### Compliance Check at Capability Negotiation
 
@@ -238,7 +238,7 @@ Run both commands in CI as a required gate before producing a release artifact. 
 
 Publish the SBOM alongside the release artifact. The internal update server serves it at a predictable URL (see Air-Gap Deployment below). Enterprise security teams will fetch it automatically. Make that fetch reliable.
 
-**CVE Response SLA.** State this explicitly in your security policy document and reference it in the procurement response. These commitments match the architecture's security policy as specified in Chapter 5:
+**CVE Response SLA.** State this explicitly in the security policy document and reference it in the procurement response. These commitments match the architecture's security policy as specified in Chapter 5:
 
 | Severity | Response commitment |
 |---|---|
@@ -249,13 +249,13 @@ Publish the SBOM alongside the release artifact. The internal update server serv
 
 Enterprise security teams do not negotiate the SLA. They compare it to their internal policy. The 14-day critical patch window with a 48-hour advisory is defensible for a supported open-source core because it is achievable in practice — open-source maintainers who promise 24-hour critical patches either have dedicated security-engineering capacity most projects cannot sustain, or they are setting a bar they will miss. Publish the SLA before anyone asks. Meet it reliably. Escalate to emergency out-of-band releases when critical CVEs land in widely-used transitive dependencies (these cases justify advisory-plus-workaround within 48 hours and patch-released in under 7 days).
 
-When a critical CVE lands between releases, rehearse the patch-release process before you need it. The sequence is: fix the affected dependency, rebuild all targets, regenerate the SBOM, run Grype against the new SBOM to confirm the CVE is resolved, sign and notarize the artifacts, mirror to the internal update server, and push via MDM to canary before full rollout. That sequence has at least six steps and touches at least three teams — engineering, security, IT operations. If the first time you run it is during a live incident, you will miss the 14-day window. Run a dry-fire drill during your first sprint after GA. Create a test release. Promote it through the entire pipeline. Measure the elapsed time. Shorten every step that takes longer than it should.
+When a critical CVE lands between releases, rehearse the patch-release process before it is needed. The sequence is: fix the affected dependency, rebuild all targets, regenerate the SBOM, run Grype against the new SBOM to confirm the CVE is resolved, sign and notarize the artifacts, mirror to the internal update server, and push via MDM to canary before full rollout. That sequence has at least six steps and touches at least three teams — engineering, security, IT operations. If the first time the sequence runs is during a live incident, the 14-day window will be missed. Run a dry-fire drill during the first sprint after GA. Create a test release. Promote it through the entire pipeline. Measure the elapsed time. Shorten every step that takes longer than it should.
 
 ---
 
 ## Admin Tooling for Revocation
 
-The section of your deployment guide titled "Revoking User Access" cannot say "the system propagates revocation automatically." IT administrators need a named command they can run, a confirmation that it worked, and an audit trail.
+The section of the deployment guide titled "Revoking User Access" cannot say "the system propagates revocation automatically." IT administrators need a named command they can run, a confirmation that it worked, and an audit trail.
 
 The revocation command:
 
@@ -287,7 +287,7 @@ flowchart TD
     G --> I[MDM wipes dataDirectory on next check-in]
 ```
 
-Include the revocation command, the expected output, and a sample audit log entry in your IT administrator runbook. Do not assume administrators will infer the procedure from architecture documentation.
+Include the revocation command, the expected output, and a sample audit log entry in the IT administrator runbook. Do not assume administrators will infer the procedure from architecture documentation.
 
 ---
 
@@ -339,7 +339,7 @@ The `latest.json` response:
 
 Nodes verify the SHA-256 of every artifact before installing. They fetch and archive the SBOM alongside the artifact for audit. These are not optional behaviors. Nodes that skip verification are a supply chain attack surface.
 
-**One network destination you must not block:** OCSP and CRL responders. Blocking certificate revocation checking breaks TLS (Transport Layer Security) certificate chain validation across the entire node, not just update checks. Configure an internal OCSP responder and point nodes to it, or use certificate pinning with a sufficiently long-lived cert. Do not leave OCSP blocked with no alternative.
+**One network destination that must not be blocked:** OCSP and CRL responders. Blocking certificate revocation checking breaks TLS (Transport Layer Security) certificate chain validation across the entire node, not just update checks. Configure an internal OCSP responder and point nodes to it, or use certificate pinning with a sufficiently long-lived cert. Do not leave OCSP blocked with no alternative.
 
 The safe-to-block list for air-gap environments:
 
@@ -394,7 +394,7 @@ Enterprise customers require runbooks before they sign. Deliver three runbooks b
 3. Issue the MDM wipe command targeting the `dataDirectory` path from `node-config.json`.
 4. Confirm the wipe completed via MDM compliance report.
 5. Remove the user from the team's identity provider. This invalidates future attestation token issuance.
-6. Archive the audit log entries for this user for the retention period required by your compliance framework.
+6. Archive the audit log entries for this user for the retention period required by the compliance framework.
 
 **Expected duration:** Under 15 minutes from trigger to confirmed wipe.
 
@@ -432,13 +432,13 @@ Enterprise customers require runbooks before they sign. Deliver three runbooks b
 3. If a forensic hold is required, coordinate with the HR and legal notification path before wiping. The `dataDirectory` is the forensic target. Do not wipe it until legal clears the hold.
 4. After the hold or no-hold decision, issue the MDM wipe as in Runbook 1.
 5. Rotate the team's `enterpriseAttestationIssuerPublicKey` if key material on the compromised node may have included the private signing key. Push the new public key via MDM config update.
-6. Notify affected users that their local data was involved in a security event, per your incident notification obligations.
+6. Notify affected users that their local data was involved in a security event, per the incident notification obligations.
 
 **Expected duration:** Revocation within 5 minutes. Forensic hold decision within 24 hours.
 
 ### Runbook 3: Container Update Rollout
 
-**Trigger:** A new Sunfish release is available and has passed your internal security scan.
+**Trigger:** A new Sunfish release is available and has passed the internal security scan.
 
 **Steps:**
 
@@ -456,7 +456,7 @@ Enterprise customers require runbooks before they sign. Deliver three runbooks b
 
 ## Putting It Together
 
-Here is the checklist in the order it will arrive:
+The checklist in the order it will arrive:
 
 ```
 [ ] License: dual-license structure documented, CLA in place
@@ -470,4 +470,4 @@ Here is the checklist in the order it will arrive:
 [ ] Runbooks: node deprovisioning, incident response, container update rollout
 ```
 
-Satisfy each item before your first enterprise conversation. Do not negotiate the checklist. Close the gaps, ship the evidence, and let IT say yes.
+Satisfy each item before the first enterprise conversation. Do not negotiate the checklist. Close the gaps, ship the evidence, and let IT say yes.

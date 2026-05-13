@@ -7,13 +7,15 @@
 
 ---
 
+Joel's dissertation went to five peer reviewers. Prof. Dmitri Shevchenko held the distributed-systems seat — the reviewer who would find every place the architecture said *the CRDT handles it* and expected the reader to trust that claim.
+
 ## Who Is Prof. Shevchenko
 
 Prof. Dmitri Shevchenko has published fourteen papers on CRDT (Conflict-free Replicated Data Type) correctness, consensus protocols, and eventual consistency in production systems. He is not a theorist who watches production from a distance. He has personally debugged five CRDT deployments that diverged in ways the academic literature said were impossible. Which means he has sat across a conference table from an engineering team and explained, slowly and without flourish, why the data on the screen in front of them is inconsistent in a way that cannot be fully reconstructed — only estimated. His standard opening in any review is a version of the same question. *Where does your system produce incorrect results under real network conditions?*
 
-His lens for evaluating this architecture is narrow on purpose. He does not object to complexity. He objects to *hidden* complexity — the places where the architecture says *the CRDT handles it* and quietly expects the reader to assume that means the user sees correct data. CRDT convergence and application correctness are not the same property. He will find every place the paper conflates them.
+His lens for evaluating this architecture is narrow on purpose. He does not object to complexity. He objects to *hidden* complexity — the places where the architecture says *the CRDT handles it* and quietly expects the reader to assume that means the user sees correct data. CRDT convergence and application correctness are not the same property. He will find every place the dissertation conflates them.
 
-He read the architecture with zero tolerance for optimism about network partitions. The posture produced two blocking issues.
+He read the dissertation with zero tolerance for optimism about network partitions. The posture produced two blocking issues.
 
 ---
 

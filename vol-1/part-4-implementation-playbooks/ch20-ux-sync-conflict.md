@@ -11,7 +11,7 @@ The architecture handles consistency. The UX handles trust. Get the UX wrong and
 
 ## The Complexity Hiding Standard
 
-Apply this test to every UX decision in a local-first application. Can a non-technical user determine, from normal use, whether the app is local-first or cloud-first? If the answer is yes, the UX has failed. The only visible difference between the two should be that the local-first app keeps working when the internet does not.
+Well-formed implementations apply this test to every UX decision: can a non-technical user determine, from normal use, whether the application is local-first or cloud-first? If the answer is yes, the UX has failed. The design criterion is that the only visible difference between the two should be that the local-first application keeps working when the internet does not.
 
 This standard has teeth. It rules out "offline mode" banners — there is no mode. It rules out terminology like "peer sync" or "gossip protocol" anywhere a user can see it. It rules out empty loading states when the node already holds authoritative local data on the same machine the user is sitting in front of. Users experience the application as installed software that occasionally synchronises. Not as a web app with a desktop wrapper.
 
@@ -111,7 +111,7 @@ Conflicts are inevitable in a collaborative system. The goal is not to prevent t
 
 The inbox groups conflicts by record type and field. A user who edited a task's status field offline, while a colleague edited the same field, sees "Status conflict on task: Design Review". They do not see a raw CRDT diff. The grouping turns an undifferentiated list of merge failures into a structured review queue that a non-technical user can navigate.
 
-For each conflict group, the inbox offers three resolution options: prefer my version, prefer the remote version, or merge using a configurable rule. You define merge rules per record type in the application configuration. A numeric field offers "keep the higher value"; a set field offers "combine both". The data model determines the available rules, not the user.
+For each conflict group, the inbox offers three resolution options: prefer the local version, prefer the remote version, or merge using a configurable rule. Merge rules are declared per record type in the application configuration. A numeric field offers "keep the higher value"; a set field offers "combine both". The data model determines the available rules, not the user.
 
 The "resolve all similar" affordance applies a chosen rule to every conflict of the same shape in a single operation. A user with 40 status conflicts from a weekend offline period resolves all of them in two clicks: select the rule, apply to all. Outliers that do not match the rule remain in the inbox for individual review. This affordance scales conflict resolution from a tedious chore to a brief decision.
 
@@ -323,7 +323,7 @@ Revocation pairs a policy layer with a UX layer by design. Ch23 §Collaborator R
 
 ### Initiating revocation — the administrator's flow
 
-The revocation action lives in the team administration panel, not in any per-user settings screen. This placement is deliberate: revocation is an administrative act, and surfacing it at the user level confuses whose action it is. You select the departing collaborator from the team member list and choose "Remove and revoke access." A confirmation dialog names the scope — which roles will be revoked, that a key rotation will be triggered, the estimated time for re-wrapping to complete across the organization's document set. You do not need to understand the cryptographic mechanism. You need to understand what the action does and how long it takes.
+The revocation action lives in the team administration panel, not in any per-user settings screen. This placement is deliberate: revocation is an administrative act, and surfacing it at the user level confuses whose action it is. The administrator selects the departing collaborator from the team member list and chooses "Remove and revoke access." A confirmation dialog names the scope — which roles will be revoked, that a key rotation will be triggered, the estimated time for re-wrapping to complete across the organization's document set. The administrator need not understand the cryptographic mechanism. The confirmation surface communicates what the action does and how long it takes.
 
 After confirmation, the UX shows a revocation-in-progress state: "Revoking [name]'s access and rotating role keys. This may take a few minutes while documents are re-encrypted." The team continues using the application during re-wrapping; documents remain accessible under the current KEK until re-wrapping completes. Do not surface technical key-rotation terminology — "KEK re-wrapping," "DEK re-encryption," "discard broadcast" — to the administrator. Surface the business outcome: "Access revoked. Documents secured."
 
@@ -341,7 +341,7 @@ Cross-reference to Ch20 §The Three Always-Visible Indicators for the node healt
 
 The dissolution scenario is rare enough that it does not belong in the standard administration panel and structurally novel enough that it deserves a dedicated flow. The team administration panel exposes a "Partition workspace" entry under a deliberate navigation path — settings → advanced → workspace lifecycle — rather than alongside routine member-management actions. The placement reflects what the operation does: it splits one workspace into two.
 
-The wizard walks you through three steps. First, define the boundary: select the data objects, roles, and time ranges that belong to each successor entity. Second, confirm both parties are present or that you hold the legal authority to act on behalf of the absent party. Third, review the partition summary and initiate. The confirmation screen names the legal effect in plain language: "This creates two separate workspaces. Each party keeps their own data from this point forward. Historical shared data is preserved in both workspaces as a read-only record."
+The wizard proceeds through three steps. First, define the boundary: select the data objects, roles, and time ranges that belong to each successor entity. Second, confirm that both parties are present or that the authorizing administrator holds the legal authority to act on behalf of the absent party. Third, review the partition summary and initiate. The confirmation screen names the legal effect in plain language: "This creates two separate workspaces. Each party keeps their own data from this point forward. Historical shared data is preserved in both workspaces as a read-only record."
 
 The audit log entry for the partition operation surfaces in the administration panel's "Access log" view alongside routine revocation records. Each entry shows the revoked collaborator's name, the timestamp, the rotation completion status, and the data-at-risk window — the artifact a compliance team or legal counsel can read without extracting raw event data. For partition events, the entry additionally carries the boundary definition and the authorizing parties. Both successor entities receive a copy of the partition event record in their respective audit logs. Cross-reference to Ch23 §Collaborator Revocation and Post-Departure Partition sub-patterns 45e and 45f for the underlying specification.
 
@@ -349,7 +349,7 @@ The audit log entry for the partition operation surfaces in the administration p
 
 Revocation is the rare protocol operation that arrives with emotional weight outside the protocol itself. The administrator processing it knows the person on the other side. The revoked party reads the access-ended message in a context the architecture has no insight into — packing a desk, sitting in a settlement meeting, working through the aftermath of a board vote. The protocol is the same in every case; the human moment is not.
 
-<!-- voice-check: human author adds connective-tissue scene here. Candidate framings from outline §F: the departing employee whose laptop disconnects as they pack their desk; the business partner reading the access-ended message on the day a court-mediated settlement takes effect; the administrator processing access revocation for an employee who had been a colleague for a decade. Choose one; keep it brief and grounded; let the architecture description stay impersonal where the human context is not. -->
+The access-ended message the revoked party reads lands in whatever human moment surrounds the technical event: the departing employee whose laptop disconnects as they pack their desk, the business partner whose node falls silent on the day a settlement agreement takes effect. The architecture is indifferent to that context; the UX must not be. The plain-language message is the only acknowledgment the system makes that a person, not merely a credential, has left.
 
 ## Data-Class Escalation UX
 

@@ -1,7 +1,7 @@
 # anatomy.md
 
-> Auto-maintained by OpenWolf. Last scanned: 2026-05-12T21:31:09.381Z
-> Files: 489 tracked | Anatomy hits: 0 | Misses: 0
+> Auto-maintained by OpenWolf. Last scanned: 2026-05-13T12:56:42.523Z
+> Files: 505 tracked | Anatomy hits: 0 | Misses: 0
 
 ## ../../../../../tmp/
 
@@ -311,7 +311,7 @@
 - `__init__.py` — build/__init__.py (~6 tok)
 - `apply_phase0a.py` — One-shot Phase 0a HIGH-tier compressor. (~15490 tok)
 - `AUDIO-DOCKER.md` — Audiobook Generation — Docker Setup (~4120 tok)
-- `audiobook.py` — Generate audiobook MP3s from chapter markdown using a local Kokoro TTS server. (~26435 tok)
+- `audiobook.py` — Generate audiobook MP3s from chapter markdown using a local Kokoro TTS server. (~26727 tok)
 - `build_overlays.py` — Whispersync-capable EPUB build (Phases B-E). (~6341 tok)
 - `check_audit.py` — Reference-integrity check: every jurisdiction in inline prose appears in Appendix F. (~581 tok)
 - `check_first_use.py` — First-use rule checker. (~3348 tok)
@@ -534,14 +534,8 @@
 - `ch03-inverted-stack-one-diagram.md` — Chapter 3 — The Inverted Stack in One Diagram (~7399 tok)
 - `ch04-choosing-your-architecture.md` — Chapter 4 — Choosing Your Architecture (~8662 tok)
 
-## chapters/part-2-council-reads-the-paper/
+## chapters/part-2-council-reads-the-paper/ — SUPERSEDED; canonical files now at vol-1/part-2-council-reads-the-paper/
 
-- `ch05-enterprise-lens.md` — Chapter 5 — The Enterprise Lens (~6959 tok)
-- `ch06-distributed-systems-lens.md` — Chapter 6 — The Distributed Systems Lens (~7448 tok)
-- `ch07-security-lens.md` — Chapter 7 — The Security Lens (~7587 tok)
-- `ch08-product-economic-lens.md` — Chapter 8 — The Product & Economic Lens (~7814 tok)
-- `ch09-local-first-practitioner-lens.md` — Chapter 9 — The Local-First Practitioner Lens (~8221 tok)
-- `ch10-synthesis.md` — Chapter 10 — Synthesis: What the Council Finally Agreed On (~6094 tok)
 
 ## chapters/part-3-reference-architecture/
 
@@ -704,6 +698,7 @@
 
 ## icm/01_discovery/02-prose-telemetry-phase-1/
 
+- `ch02-redo-notes.md` — Chapter 2 Redo — Notes & Telemetry (~1696 tok)
 - `handcount-pilot.md` — Handcount Pilot — Prose Telemetry on the Filchner Trial Chapter (~1894 tok)
 
 ## icm/02_architecture/
@@ -809,14 +804,50 @@
 - `test_voice_pass.py` — Tests for build/voice-pass.py. (~714 tok)
 - `timestamp.md` — Workshop entry: light; KEEP everyday meaning (~190 tok)
 
+## vol-1/front-matter/
+
+- `preface.md` — Preface (~2494 tok)
+
+## vol-1/part-1-thesis-and-pain/
+
+- `ch01-when-saas-fights-reality.md` — Chapter 1 — When SaaS Fights Reality (~12321 tok)
+- `ch02-local-first-serious-stack.md` — Chapter 2 — Local-First: From Sync Toy to Serious Stack (~9429 tok)
+- `ch03-inverted-stack-one-diagram.md` — Chapter 3 — The Inverted Stack in One Diagram (~7861 tok)
+- `ch04-choosing-your-architecture.md` — Chapter 4 — Choosing Your Architecture; register-rewritten to Joel Reyes first-person analytical dissertation frame (2026-05-13) (~8600 tok)
+
+## vol-1/part-2-council-reads-the-paper/
+
+- `ch05-enterprise-lens.md` — Voss (enterprise/procurement); council framing note + "the paper"→"the dissertation" updates applied (~7000 tok)
+- `ch05-enterprise-lens.md` — Chapter 5 — The Enterprise Lens (~7119 tok)
+- `ch06-distributed-systems-lens.md` — Shevchenko (CRDT correctness); framing sentence added; "the paper"→"the dissertation" (~7450 tok)
+- `ch06-distributed-systems-lens.md` — Chapter 6 — The Distributed Systems Lens (~7499 tok)
+- `ch07-security-lens.md` — Okonkwo (security); framing sentence added; "the paper"→"the dissertation" (~7600 tok)
+- `ch07-security-lens.md` — Chapter 7 — The Security Lens (~7636 tok)
+- `ch08-product-economic-lens.md` — Kelsey (product/economic); framing sentence added; "the paper"→"the dissertation" (~7820 tok)
+- `ch08-product-economic-lens.md` — Chapter 8 — The Product & Economic Lens (~7890 tok)
+- `ch09-local-first-practitioner-lens.md` — Ferreira (local-first practitioner); framing sentence added; "the paper"→"the dissertation" (~8230 tok)
+- `ch09-local-first-practitioner-lens.md` — Chapter 9 — The Local-First Practitioner Lens (~8279 tok)
+
+## vol-1/part-4-implementation-playbooks/
+
+- `ch17-building-first-node.md` — Chapter 17 — Building Your First Node — implementation supplement register; Marcus recast as field-research case; "this chapter demonstrates" opening frame (~7400 tok)
+- `ch18-migrating-existing-saas.md` — Chapter 18 — Migrating an Existing SaaS — implementation supplement register; "you"→"the implementation/engineering team" throughout; Zone C migration path unchanged (~7100 tok)
+- `ch19-shipping-to-enterprise.md` — Chapter 19 — Shipping to Enterprise — implementation supplement register; "you"→"the implementation" throughout; all runbooks, commands, and checklists preserved (~8700 tok)
+- `ch20-ux-sync-conflict.md` — Chapter 20 — UX, Sync, and Conflict (~15937 tok)
+
+## vol-1/part-5-operational-concerns/
+
+- `ch21-operating-a-fleet.md` — Chapter 21 — Operating a Fleet of Local-First Nodes (~12407 tok)
+
 ## vol-2/
 
-- `ANNA-VOICE.md` — Anna's Voice — Narrator Specification (~4325 tok)
+- `ANNA-VOICE.md` — Anna's Voice — Narrator Specification (~5464 tok)
 - `SPINE.md` — The Filchner Dark — Volume Spine (~1386 tok)
 
 ## vol-2/act-1/
 
-- `ch01-departure.trial.md` — Chapter 1 — Departure (~6555 tok)
+- `ch01-departure.trial.md` — Chapter 1 — Departure (~6369 tok)
+- `ch02-recruitment-interview.trial.md` — Chapter 2 — The Recruitment Interview (~8677 tok)
 
 ## web/ — MOVED
 

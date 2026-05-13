@@ -1,10 +1,12 @@
 # Anna's Voice — Narrator Specification
 
 **For:** *The Filchner Dark*, Vol 1 of The Inverted Stack series
-**POV:** First-person past tense. Anna is writing this as staff history after the events.
-**Calibration:** Janeway (Voyager) × Bobiverse × narrator-affection.
+**POV:** First-person past tense. Anna is writing this as staff history after the events, with the staff-history frame *lightened* — kept as orienting register, not as a recurring meta-commentary.
+**Calibration:** **Bobiverse-dominant**, with Janeway providing *bearing* (command posture, ethics, crew loyalty) but *not* providing *rhetoric*. Narrator-affection underlies both.
 
-This document is the lens every chapter draft validates against. When in doubt, read aloud and ask: would Anna say this? Would CO's father lean in or check out?
+This document is the lens every chapter draft validates against. When in doubt, read aloud and ask: would Anna say this? Would Bob? Would CO's father lean in or check out?
+
+**Voice spec revised 2026-05-13** (Bobiverse-pull): the earlier version of this doc imported Janeway's *rhetorical* moves (aphorisms, anaphoric inventories, antithesis closures, parallel-structure tricolons) along with Janeway's *bearing* moves. CO's listen-test on ch01 and ch02 surfaced audible looping from the rhetorical side. The current version pulls Janeway *out* of the narrator rhetoric and leaves it in the in-scene bearing only. See "Anti-patterns" section below.
 
 ---
 
@@ -55,6 +57,42 @@ She is writing the staff history because the official version will not be comple
 - Drop her voice into another character's head. This is first-person; she only knows what she observed or what someone told her later.
 - Break the fourth wall.
 
+## Anti-patterns — what Anna's narrator does NOT do (revised 2026-05-13)
+
+These are the looping patterns CO's listen-test identified in ch01 and ch02. They are Janeway *rhetorical* moves rather than Janeway *bearing* moves. Anna's narration must avoid them.
+
+1. **No aphoristic paragraph closes.** Anna does not package experience into wisdom. Lines like *"Composure is the residue of decisions you made twenty years ago"* or *"We are all of us, in our small ways, getting away with something"* or *"There are things you do not pass on. That is one of mine."* are Janeway moves. Bob would not write them. A paragraph ends on (a) a concrete physical detail, (b) a forward-motion transition, (c) a wry observation, or (d) a question — never on packaged truth.
+
+2. **No anaphoric inventories.** No three-or-more consecutive sentences sharing an opening word or phrase. *"She had a niece. She had a husband. She had a man named Joel"* — wrong. Vary: *"She had a niece, Diana. There was an ex-husband. And there was the Joel thing."* The prose-telemetry threshold is `anaphora_max_run_length: 2`. The single known exception is the held *"He did not"* run-of-six in ch02; that one is annotated as the chapter's load-bearing rhetorical climax and is the *only* such exception across the volume.
+
+3. **No statement-then-reversal closures.** *"From any other candidate the same sentence would have read as bravado. From him it read as the operating cost of being on the boat."* — Janeway dramatic-monologue move. Bob says, *"Anyone else would have been showing off. From him it sounded like the price tag."*
+
+4. **No parallel-structure tricolons used for rhythm.** When Anna lists three things, the three should be a *functional* list (the survey, the sample plan, the watch rotation — actual mission items). They should not be rhythm-tricolons (*composure, ethics, command*; *coffee, news, planning*). Bob doesn't rhythm-cycle in threes.
+
+5. **No motif phrases repeated more than once per chapter.** Earlier drafts used *"what it claimed to be"* three times in one chapter and *"noted and did not yet ask about"* three times. Both retired or capped. Recurring phrases lose their character-tic feel once they appear more than once in a chapter; they start to feel like a literary device.
+
+6. **No more than one staff-history meta-frame per chapter.** Lines like *"I am writing this here so you know I made it"* are the staff-history frame doing work. Once per chapter is character; twice or more is mannerism. Pick the moment in each chapter where the frame is most load-bearing and use it there; everywhere else, just narrate.
+
+7. **No commentary on Anna's own narration habits.** Lines like *"You may notice, in this account, that I keep doing this. I will not pretend I do not know that I keep doing it."* are Anna becoming self-conscious about her narrator-voice in front of the reader. Cut. The reader notices on their own; Anna doesn't need to flag it.
+
+## Paragraph endings — explicit list of OK landings
+
+A paragraph in Anna's narration can end on any of these:
+
+- **A concrete physical detail.** *"The drawings were where I could see them when I was working."*
+- **A forward-motion transition.** *"Then I put my hands flat on the desk and did the next thing."*
+- **A wry observation, no packaging.** *"The waitress in the bakery had complimented the parka twice. I did not blame her."*
+- **A specific image, no commentary.** *"The moon is wearing a hat."*
+- **A question, real or rhetorical-without-aphorizing.** *"What was I supposed to do — explain Wanjiru to herself?"*
+- **A short sentence that doesn't try to mean too much.** *"I made tea."* / *"I went below."* / *"I closed the laptop."*
+
+A paragraph in Anna's narration may NOT end on:
+
+- An "X is not Y, X is Z" packaging
+- A "We are all of us…" universal claim
+- A reversal of the prior sentence's stake
+- A self-referential note about Anna's own writing
+
 ## Janeway moves to import
 
 - **"I need options. I need them in five minutes. Go."** — Anna gives directives the same way. Direct, time-boxed, trusts competence.
@@ -63,7 +101,7 @@ She is writing the staff history because the official version will not be comple
 
 - **The pastry-judge vocabulary.** When Anna evaluates a baked good — silently or aloud — she does it like a Great British Bake Off judge, fluent and unapologetic. *Soggy bottom. Flaky crust. The bake was confident. Two more minutes. Underproved. The cream weeped. The lamination shows. Tight crumb. Open crumb. The chocolate bloomed. The proportions were timid. The proportions were generous.* This is a register only the bakery scenes get, and it's one of the chief sources of the book's playfulness. She will lift the edge of a tart with the side of her fork to check the base while the proprietor is looking the other way. This is a thing she does. She has stopped pretending she is sorry about it.
 
-- **"What it claimed to be" is Anna's phrase.** It starts as a verdict about pastries and grows into the load-bearing recurring line of the book. She uses it about food, about equipment, about people, about decisions. By midpoint, when she applies it to the firmware update, the reader hears the whole prior accumulation behind it. *The firmware update was not what it claimed to be.* That sentence, when it lands, should feel inevitable. The phrase is therefore precious — use it deliberately, never twice in a chapter, never glibly. The first time Anna uses it about a *person* — Joel or Wanjiru or Priya or her own mother — should be a moment.
+- **~~"What it claimed to be" is Anna's phrase.~~** *Retired 2026-05-13.* The phrase was introduced as Anna's verdict-tic for pastries and was meant to grow into a load-bearing recurring line. In practice it looped audibly — three uses in a single chapter read as a rhetorical device the author was wielding rather than as a character verbal tic. Do not use this phrase going forward. Anna can be a serious pastry critic without a signature catchphrase; the technical pastry-judge vocabulary (soggy bottom, the bake was confident, two more minutes, the cream weeped) does the work.
 - **The warmth thing (and its irony).** Anna prefers warmth. She is genuinely happier at twenty-five degrees Celsius than at any other temperature. She has, somehow, built a career out of going to the coldest places on Earth. She has stopped finding this funny but will, if pressed, charge you a fee for an explanation. The ice does not get her appreciation. She is professional about it.
 - **Going off-script for crew loyalty.** When the consortium wants one thing and her crew needs another, Anna picks crew. Quietly, without fanfare, and without explaining herself unless asked.
 - **The ethical clarity.** Anna has a code. She does not articulate it. The reader infers it from what she will and will not do.

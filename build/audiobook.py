@@ -541,6 +541,7 @@ CHAPTER_PRESET_MAP: dict[str, str] = {
     "vol-2/act-1/ch01-departure": "female-solo",
     "vol-2/act-1/ch01-departure.trial": "female-solo",
     "vol-2/act-1/ch02-recruitment-interview": "female-solo",
+    "vol-2/act-1/ch02-recruitment-interview.trial": "female-solo",
     "vol-2/act-1/ch03-drake-passage-ice-edge": "female-solo",
     "vol-2/act-1/ch04-first-submersion": "female-solo",
     "vol-2/act-1/ch05-day-twenty-realization": "female-solo",
@@ -602,6 +603,7 @@ CHAPTER_FILES = [
     "vol-2/act-1/ch01-departure.md",
     "vol-2/act-1/ch01-departure.trial.md",
     "vol-2/act-1/ch02-recruitment-interview.md",
+    "vol-2/act-1/ch02-recruitment-interview.trial.md",
     "vol-2/act-1/ch03-drake-passage-ice-edge.md",
     "vol-2/act-1/ch04-first-submersion.md",
     "vol-2/act-1/ch05-day-twenty-realization.md",
@@ -1105,6 +1107,25 @@ def narratable_text(md: str, source_only: bool = False,
     # Collapse whitespace
     t = re.sub(r"[ \t]+", " ", t)
     t = re.sub(r"\n{3,}", "\n\n", t)
+
+    # Dialogue pauses: insert a short beat (..) between consecutive paragraphs
+    # that BOTH start with a quotation mark. Two characters trading dialogue
+    # render without this rule as a single uninterrupted stream and the
+    # listener cannot hear the speaker change. The ".." marker is 0.30s of
+    # silence via PAUSE_DURATIONS — enough to register a shift without
+    # dragging pacing. Runs late so smart-quote normalization, italic
+    # stripping, and whitespace collapse have all completed.
+    paragraphs = t.split("\n\n")
+    out_paras: list[str] = []
+    prev_is_dialogue = False
+    for para in paragraphs:
+        stripped = para.strip()
+        is_dialogue = bool(stripped) and stripped[0] == '"'
+        if prev_is_dialogue and is_dialogue:
+            out_paras.append("..")
+        out_paras.append(para)
+        prev_is_dialogue = is_dialogue
+    t = "\n\n".join(out_paras)
 
     return t.strip()
 

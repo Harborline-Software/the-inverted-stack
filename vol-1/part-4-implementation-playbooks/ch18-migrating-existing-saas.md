@@ -7,7 +7,7 @@
 
 ---
 
-This chapter is for the team already running a hosted SaaS product — the team that has to migrate to a hybrid local-first deployment, Zone C, the Bridge (the Zone C hybrid SaaS accelerator) accelerator, without a flag-day cutover. The architecture is one you take apart piece by piece while production keeps running, one component at a time, with the lights still on. Every phase gate below Phase 4 is reversible. The cost is the engineering *discipline* to apply Ferreira's four-phase reversible model from Chapter 9 instead of the rewrite-everything approach. Rewrite-everything has killed more SaaS-to-local-first attempts than any technical obstacle ever has.
+This chapter documents the migration path for a hosted SaaS product adopting a hybrid local-first deployment — Zone C, the Bridge (the Zone C hybrid SaaS accelerator) accelerator — without a flag-day cutover. The architecture is taken apart piece by piece while production keeps running, one component at a time, with the lights still on. Every phase gate below Phase 4 is reversible. The cost is engineering *discipline* to apply Ferreira's four-phase reversible model from Chapter 9 instead of the rewrite-everything approach. Rewrite-everything has killed more SaaS-to-local-first attempts than any technical obstacle ever has.
 
 ### Glossary (for readers entering here)
 
@@ -21,43 +21,43 @@ Teams do not migrate from SaaS to local-first on aesthetic grounds. Five trigger
 
 - **Data residency objection appearing in enterprise sales.** The sales team is losing deals at the data-sovereignty review. The architecture's relay-ciphertext-only guarantee answers this structurally rather than contractually — not in a vendor letter, in the wire protocol itself.
 
-- **SaaS vendor reliability event or service termination.** In 2022, Adobe and Autodesk and Microsoft and Figma ([figma.com](https://www.figma.com/), the design tool) — and dozens of other Western SaaS vendors — suspended or terminated service across Russia and CIS (Commonwealth of Independent States) markets under sanctions enforcement. Hundreds of thousands of organizations lost access to their own operational workflows with days of notice. Organizations under import substitution mandates, or operating in jurisdictions where vendor-level compelled access is a documented threat model, treat this as Failure Mode 0. The vendor suspends service. Your customers need an architecture that survives it.
+- **SaaS vendor reliability event or service termination.** In 2022, Adobe and Autodesk and Microsoft and Figma ([figma.com](https://www.figma.com/), the design tool) — and dozens of other Western SaaS vendors — suspended or terminated service across Russia and CIS (Commonwealth of Independent States) markets under sanctions enforcement. Hundreds of thousands of organizations lost access to their own operational workflows with days of notice. Organizations under import substitution mandates, or operating in jurisdictions where vendor-level compelled access is a documented threat model, treat this as Failure Mode 0. The vendor suspends service. The architecture must survive it.
 
 - **Customer churn driven by data sovereignty.** Repeated loss of accounts citing "the data lives on your servers" as a concrete objection — not a hypothetical one.
 
 - **Enterprise procurement review blocking adoption.** Procurement due diligence requires that the vendor relationship be replaceable without data migration. A managed relay that can be self-hosted — and a data plane that already is — passes this test. A cloud-first SaaS does not.
 
-Run all five against your actual customer conversations before you clone anything. The migration is substantial. The justification must be real.
+Run all five against actual customer conversations before any migration work begins. The migration is substantial. The justification must be real.
 
 ---
 
-## Determine Your Zone Before You Write a Line of Code
+## Determine the Zone Before Writing a Line of Code
 
 Run the five-filter framework from Chapter 4. Every filter asks the same underlying question. Does the value of this feature depend on coordinating state across users simultaneously, or does it depend on a single team managing their own data well?
 
-Filter 1 asks whether your data is user-owned or platform-owned. If the records belong to a specific team and that team's members are the only people who need to read and write them, the data passes Filter 1. Shared public feeds, aggregated analytics across all customers, and anonymized usage data do not pass.
+Filter 1 asks whether data is user-owned or platform-owned. If the records belong to a specific team and that team's members are the only people who need to read and write them, the data passes Filter 1. Shared public feeds, aggregated analytics across all customers, and anonymized usage data do not pass.
 
-Filter 2 asks whether the acceptable staleness window is minutes or milliseconds. A task board that reflects changes within 30 seconds is still useful. A financial exchange that reflects prices from 30 seconds ago is dangerous. If your staleness window is measured in minutes, you are eligible for local-first. If it is milliseconds, you are not — for that record class.
+Filter 2 asks whether the acceptable staleness window is minutes or milliseconds. A task board that reflects changes within 30 seconds is still useful. A financial exchange that reflects prices from 30 seconds ago is dangerous. If the staleness window is measured in minutes, the implementation is eligible for local-first. If it is milliseconds, it is not — for that record class.
 
 Filter 3 asks whether conflicts are resolvable without human coordination. Text edits, task status, and user preferences all have natural CRDT semantics. Inventory reservations and seat assignments do not.
 
 Filter 4 asks whether offline operation has value. A field team that loses connectivity mid-project still needs to record work. A real-time trading terminal without connectivity is simply broken. Offline value correlates directly with local-first fit.
 
-Filter 5 asks whether your compliance posture allows data to leave the server. Some customers require data residency on their own hardware. Local-first delivers that naturally. Some regulations require server-side audit trails for every write — that constraint must be modeled carefully against your AP-class domain boundaries.
+Filter 5 asks whether the compliance posture allows data to leave the server. Some customers require data residency on their own hardware. Local-first delivers that naturally. Some regulations require server-side audit trails for every write — that constraint must be modeled carefully against the AP-class domain boundaries.
 
-**Reading the results.** If every record class in your product fails Filter 1 or Filter 2, you are in Zone B. Use Sunfish packages up through the Blocks layer and stop there — the local-first kernel is not your migration target. If your product has some record classes that pass all five filters and others that do not, you are in Zone C. This chapter is for Zone C. If you are building greenfield and the framework returns Zone C, skip straight to cloning `accelerators/bridge/` — you do not need this chapter's migration path.
+**Reading the results.** If every record class in the product fails Filter 1 or Filter 2, the architecture is in Zone B. Use Sunfish packages up through the Blocks layer and stop there — the local-first kernel is not the migration target. If the product has some record classes that pass all five filters and others that do not, the architecture is in Zone C. This chapter is for Zone C. Greenfield implementations that return Zone C from the framework should clone `accelerators/bridge/` directly — the migration path documented here is for teams with production workloads.
 
 ---
 
-## Bridge Is Your Zone C Reference Implementation
+## Bridge Is the Zone C Reference Implementation
 
-Clone `accelerators/bridge/` before your first planning meeting. Bridge is the Sunfish Zone C Hybrid accelerator, and it runs a working hosted-node-as-SaaS implementation: a traditional web layer handles signup, billing, and a browser-accessible shell per tenant, while per-tenant local-node-host processes hold the data plane. Study the three logical planes Bridge separates before you touch your existing schema.
+Clone `accelerators/bridge/` before the first planning meeting. Bridge is the Sunfish Zone C Hybrid accelerator, and it runs a working hosted-node-as-SaaS implementation: a traditional web layer handles signup, billing, and a browser-accessible shell per tenant, while per-tenant local-node-host processes hold the data plane. Study the three logical planes Bridge separates before touching any existing schema.
 
-**Control plane — shared across all tenants.** The control plane handles signup, billing, subscription-tier enforcement, admin backoffice, support tickets, and system status. It holds a tenant registry with exactly this shape per tenant: `{tenant_id, plan, billing, support_contacts, team_public_key}`. No team data lives in the control plane. This is not a convention. This is a hard constraint. If you find a content record in the control plane, stop and ask why.
+**Control plane — shared across all tenants.** The control plane handles signup, billing, subscription-tier enforcement, admin backoffice, support tickets, and system status. It holds a tenant registry with exactly this shape per tenant: `{tenant_id, plan, billing, support_contacts, team_public_key}`. No team data lives in the control plane. This is not a convention. This is a hard constraint. If a content record appears in the control plane, that is a design violation to correct.
 
 **Data plane — isolated per tenant.** Each tenant gets a dedicated local-node-host process, a dedicated SQLCipher database at a per-tenant path, and a subdomain (`acme.sunfish.example.com`). The hosted-node peer participates as a ciphertext-only peer. It holds encrypted deltas for catch-up-on-reconnect. It cannot decrypt without a team-issued role attestation. The team holds the keys. The server holds ciphertext. That separation is the whole architecture in one line.
 
-**Relay tier — shared and stateless.** One RelayServer process — scaled horizontally — accepts sync-daemon transport connections from all tenants. It fans `DELTA_STREAM` and `GOSSIP_PING` frames scoped by team ID. It persists nothing. The relay is a message bus, not a database. The moment your team treats it as a database, the architecture has already started to drift.
+**Relay tier — shared and stateless.** One RelayServer process — scaled horizontally — accepts sync-daemon transport connections from all tenants. It fans `DELTA_STREAM` and `GOSSIP_PING` frames scoped by team ID. It persists nothing. The relay is a message bus, not a database. The moment the relay is treated as a database, the architecture has already started to drift.
 
 ```mermaid
 graph TB
@@ -87,35 +87,35 @@ graph TB
     RS <-->|ciphertext only| T2
 ```
 
-Bridge also defines three tenant trust levels. The default — relay-only — means the operator never holds plaintext. An attested hosted peer is opt-in: the tenant admin issues a role attestation to the hosted peer, enabling backup verification and admin-assisted recovery. Some enterprise tenants run self-hosted nodes and use Bridge only for the control plane. Know which trust level your product needs before you design the migration.
+Bridge also defines three tenant trust levels. The default — relay-only — means the operator never holds plaintext. An attested hosted peer is opt-in: the tenant admin issues a role attestation to the hosted peer, enabling backup verification and admin-assisted recovery. Some enterprise tenants run self-hosted nodes and use Bridge only for the control plane. The trust level the product requires is a decision made before the migration is designed.
 
 ---
 
-## Five Architectural Decisions to Make Before You Start
+## Five Architectural Decisions to Make Before Starting
 
-These five decisions are cheap to make now and expensive to undo after Phase 2. Make them before your first migration sprint — and make them in this order, because each rests on the one above it.
+These five decisions are cheap to make before migration begins and expensive to undo after Phase 2. Make them in this order, because each rests on the one above it.
 
-**Decision 1: Per-tenant data isolation.** If your current product uses a shared Postgres schema with tenant-ID filter columns, you cannot migrate to Bridge's per-tenant data plane without first separating the data planes. This is surgery. It touches every query, every index, every backup job. Do it first, before any local-first work begins. Wire every query through `ITenantContext` from `Sunfish.Foundation`. This interface becomes the migration seam — how you swap a Postgres-backed projection for a CRDT-backed one without rewriting your UI.
+**Decision 1: Per-tenant data isolation.** A shared Postgres schema with tenant-ID filter columns cannot migrate to Bridge's per-tenant data plane without first separating the data planes. This is surgery. It touches every query, every index, every backup job. Do it first, before any local-first work begins. Wire every query through `ITenantContext` from `Sunfish.Foundation`. This interface becomes the migration seam — how a Postgres-backed projection is swapped for a CRDT-backed one without rewriting the UI.
 
-**Decision 2: Event tables over mutable fields.** A schema that stores domain state as last-write-wins field mutations has no natural path to CRDT-backed documents. A schema with append-only event tables for mutable aggregates has a mechanical migration path. Read the event rows. Emit equivalent CRDT operations. Validate the merged state against the prior projection. Decide now. Every week you add new mutable field columns is a week of migration debt added to the bill. Prefer `TaskBody`, `TaskStatus`, `TaskAuditLog` over a single `Tasks` table with ten nullable columns.
+**Decision 2: Event tables over mutable fields.** A schema that stores domain state as last-write-wins field mutations has no natural path to CRDT-backed documents. A schema with append-only event tables for mutable aggregates has a mechanical migration path. Read the event rows. Emit equivalent CRDT operations. Validate the merged state against the prior projection. Every week of new mutable field columns added is a week of migration debt added to the bill. Prefer `TaskBody`, `TaskStatus`, `TaskAuditLog` over a single `Tasks` table with ten nullable columns.
 
-**Decision 3: Separate AP data from CP data by table.** Zone C puts AP-class data — user-owned, eventually consistent — on CRDT documents on local nodes. CP-class data — server-coordinated, strongly consistent — stays on Postgres. If your schema intermingles the two, you need a decomposition pass before you can migrate either. Name tables by aggregate and class: `ProjectBody` is AP, `ProjectBillingRecord` is CP. Never store both in the same table — not for convenience, not for joins, not ever.
+**Decision 3: Separate AP data from CP data by table.** Zone C puts AP-class data — user-owned, eventually consistent — on CRDT documents on local nodes. CP-class data — server-coordinated, strongly consistent — stays on Postgres. A schema that intermingles the two needs a decomposition pass before either can migrate. Name tables by aggregate and class: `ProjectBody` is AP, `ProjectBillingRecord` is CP. Never store both in the same table — not for convenience, not for joins, not ever.
 
-**Decision 4: Wire UI against block contracts.** `Sunfish.Blocks.*` components are CRDT-state-aware by design. A task list backed by `Sunfish.Blocks.Tasks` works identically whether the underlying data comes from a Postgres-backed projection or a CRDT-backed local document. The block's data contract is the same. Only the backing store changes. If you wire your UI directly against your ORM models or custom DTOs, every migration phase requires a UI rewrite. Wire against block contracts now and the UI follows the data layer for free.
+**Decision 4: Wire UI against block contracts.** `Sunfish.Blocks.*` components are CRDT-state-aware by design. A task list backed by `Sunfish.Blocks.Tasks` works identically whether the underlying data comes from a Postgres-backed projection or a CRDT-backed local document. The block's data contract is the same. Only the backing store changes. Wiring UI directly against ORM models or custom DTOs means every migration phase requires a UI rewrite. Wire against block contracts before the migration starts and the UI follows the data layer for free.
 
-**Decision 5: Move business logic out of stored procedures.** Stored procedures execute in the database process. The local node kernel executes in the application process. Any business logic in a stored procedure cannot replicate to a local node. Audit your stored procedures now. Move validation, computation, and workflow logic into application-layer domain services. Leave only set-based data operations in the database. This step unblocks Phase 3.
+**Decision 5: Move business logic out of stored procedures.** Stored procedures execute in the database process. The local node kernel executes in the application process. Any business logic in a stored procedure cannot replicate to a local node. Audit stored procedures before the migration begins. Move validation, computation, and workflow logic into application-layer domain services. Leave only set-based data operations in the database. This step unblocks Phase 3.
 
 ---
 
 ## Four Migration Phases
 
-The migration runs in four phases. You can pause at the end of any phase indefinitely. Phases 1 through 3 are individually reversible. Phase 4 is a one-way door per workspace — run it incrementally, one workspace at a time.
+The migration runs in four phases. The implementation can pause at the end of any phase indefinitely. Phases 1 through 3 are individually reversible. Phase 4 is a one-way door per workspace — run it incrementally, one workspace at a time.
 
 ### Phase 1 — Shadow Mode (Weeks 1–8)
 
-**What.** Deploy a local node alongside your existing SaaS. The local node mirrors all data read-only. Writes still flow through the server API (Application Programming Interface). Users see faster reads. The server remains authoritative for everything.
+**What.** Deploy a local node alongside the existing SaaS. The local node mirrors all data read-only. Writes still flow through the server API (Application Programming Interface). Users see faster reads. The server remains authoritative for everything.
 
-**How.** Add `Sunfish.Foundation.LocalFirst` to your service registration with shadow-read-only mode:
+**How.** Add `Sunfish.Foundation.LocalFirst` to the service registration with shadow-read-only mode:
 
 ```csharp
 // illustrative — not runnable (pre-1.0 API)
@@ -127,9 +127,9 @@ builder.Services.AddSunfishLocalFirst();
 // appsettings.json: { "Sunfish": { "LocalFirst": { "Mode": "ShadowRead" } } }
 ```
 
-The foundation layer populates a local SQLite replica from your existing Postgres read model. Shift UI read paths to the local replica. Write paths stay on the server API unchanged.
+The foundation layer populates a local SQLite replica from the existing Postgres read model. UI read paths shift to the local replica. Write paths stay on the server API unchanged.
 
-Wire a feature flag before shipping to production. The flag evaluates through the same mechanism your application already uses. Standard .NET `IFeatureManager` (Microsoft.FeatureManagement) reads from `appsettings.json`, Azure App Configuration, AWS AppConfig, or whatever flag provider the team runs (LaunchDarkly, ConfigCat, anything in that family). Sunfish does not ship a proprietary flag system. It expects the flag to be readable at the application layer and consulted by the foundation package before it switches reads to the local replica. The flag key `LocalFirst.ShadowMode` is a convention, not a reserved name:
+Wire a feature flag before shipping to production. The flag evaluates through the same mechanism the application already uses. Standard .NET `IFeatureManager` (Microsoft.FeatureManagement) reads from `appsettings.json`, Azure App Configuration, AWS AppConfig, or whatever flag provider the team runs (LaunchDarkly, ConfigCat, anything in that family). Sunfish does not ship a proprietary flag system. It expects the flag to be readable at the application layer and consulted by the foundation package before it switches reads to the local replica. The flag key `LocalFirst.ShadowMode` is a convention, not a reserved name:
 
 ```csharp
 // illustrative — not runnable (pre-1.0 API)
@@ -139,9 +139,9 @@ builder.Services.AddFeatureManagement();
 // appsettings.json: { "FeatureManagement": { "LocalFirst.ShadowMode": true } }
 ```
 
-This flag is your instant rollback path. If shadow mode causes a performance regression or a data inconsistency, flip the configuration value off without a deployment.
+This flag is the instant rollback path. If shadow mode causes a performance regression or a data inconsistency, flipping the configuration value off requires no deployment.
 
-**Success criteria.** P95 read latency drops by at least 20%. No regressions in write consistency. The local replica stays within your AP staleness window — 30 seconds is a reasonable baseline for most task-management domains.
+**Success criteria.** P95 read latency drops by at least 20%. No regressions in write consistency. The local replica stays within the AP staleness window — 30 seconds is a reasonable baseline for most task-management domains.
 
 **Reversible.** Remove the `AddSunfishLocalFirst` registration. UI read paths fall back to the server. No data migration required.
 
@@ -151,7 +151,7 @@ This flag is your instant rollback path. If shadow mode causes a performance reg
 
 **What.** Enable local writes for AP-class record classes — task body and drafts, personal notes, user preferences, attachments. The server remains authoritative for CP-class records: billing state and subscription limits, role membership, audit logs.
 
-**How.** Introduce `Sunfish.Kernel.Crdt` for your AP-class aggregates. Route AP-class block writes through the CRDT engine. The server transitions to a relay role for AP-class data. It propagates CRDT deltas between nodes. It does not own them.
+**How.** Introduce `Sunfish.Kernel.Crdt` for AP-class aggregates. Route AP-class block writes through the CRDT engine. The server transitions to a relay role for AP-class data. It propagates CRDT deltas between nodes. It does not own them.
 
 ```csharp
 // illustrative — not runnable (pre-1.0 API)
@@ -162,9 +162,9 @@ builder.Services.AddSunfishCrdtEngine();
 
 Identify AP-class domains by asking: if two users edit this record concurrently and both edits are preserved via merge, is the result acceptable? Task body edits merge cleanly. Seat reservation conflicts do not. The test is that simple, and that strict.
 
-**Success criteria.** AP-class edits apply without a server round-trip — users see instant local feedback. CRDT merge resolves concurrent edits without data loss. CP-class records show no correctness regressions. Run your existing integration tests unchanged against the CP-class write paths.
+**Success criteria.** AP-class edits apply without a server round-trip — users see instant local feedback. CRDT merge resolves concurrent edits without data loss. CP-class records show no correctness regressions. Existing integration tests run unchanged against the CP-class write paths.
 
-**Reversible.** Disable CRDT writes per domain. The server API resumes authority. The CRDT event log is preserved and can be replayed if you re-enable local authority. You can pause here indefinitely. Many products stabilize at Phase 2 and treat Phase 3 as a future option. That is a respectable place to stop.
+**Reversible.** Disable CRDT writes per domain. The server API resumes authority. The CRDT event log is preserved and can be replayed if local authority is re-enabled. The implementation can pause here indefinitely. Many products stabilize at Phase 2 and treat Phase 3 as a future option. That is a respectable place to stop.
 
 ---
 
@@ -174,7 +174,7 @@ Identify AP-class domains by asking: if two users edit this record concurrently 
 
 This phase introduces the full local-node stack: gossip sync daemon, local SQLCipher database per workspace, device keypair issuance. It does not touch existing workspaces.
 
-**How.** When a user creates a new workspace, provision the full kernel stack:
+**How.** When a new workspace is created, provision the full kernel stack:
 
 ```csharp
 // illustrative — not runnable (pre-1.0 API)
@@ -187,7 +187,7 @@ services.AddSunfishKernelSecurity();
 
 `Sunfish.Kernel.Security` issues device keypairs at first launch. Role attestations govern what the hosted-node peer can access. The hosted-node peer holds ciphertext for catch-up-on-reconnect. It cannot decrypt without a team-issued attestation. Configure BYOC (Bring Your Own Cloud) backup for new workspaces at provisioning time. The hosted-node peer is not a backup. It is a relay cache — see Chapter 16 for the storage guarantees. Teams that skip BYOC backup configuration discover this only during an incident. An incident is a bad classroom.
 
-**Success criteria.** New workspaces operate at full fidelity without server connectivity. Gossip anti-entropy converges within the 30-second interval under your test topology. The hosted-node peer holds ciphertext-only — verify this with the Bridge audit tooling before shipping.
+**Success criteria.** New workspaces operate at full fidelity without server connectivity. Gossip anti-entropy converges within the 30-second interval under the test topology. The hosted-node peer holds ciphertext-only — verify this with the Bridge audit tooling before shipping.
 
 **Reversible at the workspace level.** Individual workspaces that reach Phase 3 can be held there indefinitely. Phase 3 workspaces and Phase 2 workspaces coexist on the same infrastructure without conflict.
 
@@ -247,7 +247,7 @@ public class TaskBodyMigrationJob : IWorkspaceMigrationJob
 
 Run the diff validation before switching the write path. Switch only after the diff passes. Disable the Postgres write path for that workspace's AP-class domains. Run the workspace on Phase 3 for 30 days before treating the migration as stable.
 
-**Success criteria.** Zero data loss confirmed by projection diff. The team self-reports equivalent capability — no features they relied on are missing. The Postgres write path stays disabled for 30 days without rollback requests.
+**Success criteria.** Zero data loss confirmed by projection diff. The team self-reports equivalent capability — no features previously relied on are missing. The Postgres write path stays disabled for 30 days without rollback requests.
 
 **Not reversible without re-migration.** The CRDT event log becomes the system of record. Re-migration to Phase 2 requires running the copy-transform in reverse. Expensive. Error-prone. A place no team wants to find itself. Run Phase 4 on a pilot workspace first. Wait 30 days. Then expand.
 
@@ -255,7 +255,7 @@ Run the diff validation before switching the write path. Switch only after the d
 
 ## Phase Transition Gates
 
-Each phase transition requires an explicit decision — not a calendar event. Use this framing with your change advisory board.
+Each phase transition requires an explicit decision — not a calendar event. Use this framing with the change advisory board.
 
 | Transition | Gate question | Hard stop |
 |---|---|---|
@@ -263,29 +263,29 @@ Each phase transition requires an explicit decision — not a calendar event. Us
 | Phase 2 → Phase 3 | Do all AP-class domains pass CRDT merge correctness tests? | Any data loss in merge testing blocks the transition |
 | Phase 3 → Phase 4 | Does the projection diff pass for the pilot workspace? | Any diff failure blocks fleet rollout |
 
-**You can pause at Phase 2 indefinitely.** Phase 2 delivers real value — instant local writes, offline capability for non-conflicting domains, no server round-trip for the majority of user actions. Many teams reach Phase 2 and decide Phase 3 is not worth the operational complexity for their current customer base. That is a valid product decision. The architecture supports it. Phases 3 and 4 are on the table when the business case arrives.
+**The implementation can pause at Phase 2 indefinitely.** Phase 2 delivers real value — instant local writes, offline capability for non-conflicting domains, no server round-trip for the majority of user actions. Many teams reach Phase 2 and decide Phase 3 is not worth the operational complexity for their current customer base. That is a valid product decision. The architecture supports it. Phases 3 and 4 are on the table when the business case arrives.
 
 ---
 
 ## Common Failure Modes
 
-Five failure modes recur across Zone C migrations. Name them in your planning sessions so your team can recognize them early — and recognize them by behavior, before they have a name.
+Five failure modes recur across Zone C migrations. Name them in planning sessions so the engineering team can recognize them early — and recognize them by behavior, before they have a name.
 
-**Failure mode 1: Server-side feature gates re-centralizing the architecture.** This is the most common drift pattern. Phase 2 ships. A product manager asks for a feature gate to roll out a new AP-class feature. An engineer adds a server call to evaluate the gate. Six months later the server is load-bearing for every write because the feature gate call became the pattern for analytics, A/B tests, and rate limiting. The team was not failing at architecture. They were failing at *discipline*. Every individual server call looked harmless. Wire feature flags through `Sunfish.Foundation.FeatureManagement` from Phase 1. It evaluates flags locally against the node's role attestations — no server call required. If you route any AP-class decision through a server call, you have re-centralized that decision.
+**Failure mode 1: Server-side feature gates re-centralizing the architecture.** This is the most common drift pattern. Phase 2 ships. A product manager asks for a feature gate to roll out a new AP-class feature. An engineer adds a server call to evaluate the gate. Six months later the server is load-bearing for every write because the feature gate call became the pattern for analytics, A/B tests, and rate limiting. The team was not failing at architecture. They were failing at *discipline*. Every individual server call looked harmless. Wire feature flags through `Sunfish.Foundation.FeatureManagement` from Phase 1. It evaluates flags locally against the node's role attestations — no server call required. Any AP-class decision routed through a server call re-centralizes that decision.
 
-**Failure mode 2: Shared Postgres schema blocking per-tenant isolation permanently.** A shared schema with tenant-ID filter columns looks harmless at a few dozen tenants. At a few hundred tenants, the migration cost to per-tenant isolation is disproportionate — data volume, index rebuild time, and cutover risk multiply together. Once you commit to a shared schema, reaching Bridge's per-tenant data plane requires a migration project that rivals the original migration. Make this decision in week one.
+**Failure mode 2: Shared Postgres schema blocking per-tenant isolation permanently.** A shared schema with tenant-ID filter columns looks harmless at a few dozen tenants. At a few hundred tenants, the migration cost to per-tenant isolation is disproportionate — data volume, index rebuild time, and cutover risk multiply together. Once committed to a shared schema, reaching Bridge's per-tenant data plane requires a migration project that rivals the original migration. Make this decision in week one.
 
-**Failure mode 3: Relay mistaken for a backup.** The hosted-node peer stores ciphertext for catch-up. Teams that skip BYOC backup configuration assume the relay holds their data durably. It does not. The relay is a cache. It evicts. It does not guarantee retention. When a device is destroyed and the team tries to recover from the relay, they discover this constraint during the incident. Configure BYOC backup at workspace provisioning time in Phase 3. Make it non-optional in your provisioning workflow — make it the default the team has to override, not the option the team has to remember.
+**Failure mode 3: Relay mistaken for a backup.** The hosted-node peer stores ciphertext for catch-up. Teams that skip BYOC backup configuration assume the relay holds their data durably. It does not. The relay is a cache. It evicts. It does not guarantee retention. When a device is destroyed and the team tries to recover from the relay, they discover this constraint during the incident. Configure BYOC backup at workspace provisioning time in Phase 3. Make it non-optional in the provisioning workflow — make it the default the team has to override, not the option the team has to remember.
 
-**Failure mode 4: Phase 1 shadow mode without a feature flag.** Shadow mode adds a read path. If that read path introduces a performance regression — a slow SQLite query, a deserialization bug, a race condition on startup — you need to turn it off without a deployment. Without the feature flag, you are rolling back code under pressure. Wire `LocalFirst.ShadowMode` as a `Sunfish.Foundation.FeatureManagement` flag before Phase 1 goes to production. This takes 30 minutes and buys you a 30-second rollback window.
+**Failure mode 4: Phase 1 shadow mode without a feature flag.** Shadow mode adds a read path. If that read path introduces a performance regression — a slow SQLite query, a deserialization bug, a race condition on startup — turning it off without a deployment requires the flag. Without the feature flag, code rolls back under pressure. Wire `LocalFirst.ShadowMode` as a `Sunfish.Foundation.FeatureManagement` flag before Phase 1 goes to production. This takes 30 minutes and buys a 30-second rollback window.
 
-**Failure mode 5: Business logic in stored procedures discovered in Phase 3.** Stored procedures execute in the database process. The local node kernel executes in the application process. If you reach Phase 3 provisioning and discover that your workspace creation workflow calls a stored procedure that validates subscription limits and enforces naming rules, you have a problem. That logic cannot replicate to a local node. You are now doing stored-procedure extraction under migration pressure rather than before the migration started. Run the stored-procedure audit during Decision 5, before any migration sprint begins.
+**Failure mode 5: Business logic in stored procedures discovered in Phase 3.** Stored procedures execute in the database process. The local node kernel executes in the application process. If Phase 3 provisioning reveals that a workspace creation workflow calls a stored procedure that validates subscription limits and enforces naming rules, those cannot replicate to a local node. Stored-procedure extraction under migration pressure is avoidable by running the audit during Decision 5, before any migration sprint begins.
 
 ---
 
 ## What Sunfish Provides at Each Phase
 
-Know which packages become available as you advance through phases. Do not reach for a package before your architecture is ready for it.
+Know which packages become available as the architecture advances through phases. Do not reach for a package before the architecture is ready for it.
 
 | Package | Phase 1 | Phase 2 | Phase 3 | Phase 4 |
 |---|---|---|---|---|
@@ -304,16 +304,16 @@ Know which packages become available as you advance through phases. Do not reach
 
 ## The Greenfield Case
 
-If your product is greenfield — no existing data, no existing tenants, no migration debt — and the five-filter framework from Chapter 4 returns Zone C, clone `accelerators/bridge/`. It ships Zone C out of the box. The control plane, relay tier, and per-tenant data plane are already separated. The hosted-node peer ships ciphertext-only. Your work is product configuration, not architecture construction.
+Greenfield implementations — no existing data, no existing tenants, no migration debt — where the five-filter framework from Chapter 4 returns Zone C should clone `accelerators/bridge/`. It ships Zone C out of the box. The control plane, relay tier, and per-tenant data plane are already separated. The hosted-node peer ships ciphertext-only. The work is product configuration, not architecture construction.
 
 The migration path in this chapter exists for teams with production workloads, existing schemas, and customers who cannot tolerate a flag-day cutover. Every phase delivers value independently. Phase 1 is deployable in a sprint. Phase 2 is deployable in a quarter. Phases 3 and 4 are available when the business case justifies them.
 
-The phased approach lets you adopt as much local-first behavior as your product and customers can absorb, at whatever pace makes sense, without betting everything on a single rewrite.
+The phased approach allows adoption of as much local-first behavior as the product and customers can absorb, at whatever pace makes sense, without betting everything on a single rewrite.
 
 ---
 
 ## Next Steps
 
-Chapter 19 covers what happens when your Zone C product reaches an enterprise customer with a security review, a procurement process, and a change advisory board. The migration phases in this chapter give you the architectural story. Chapter 19 gives you the language to tell it.
+Chapter 19 covers what happens when a Zone C product reaches an enterprise customer with a security review, a procurement process, and a change advisory board. The migration phases in this chapter provide the architectural foundation. Chapter 19 provides the operational and compliance layer.
 
 For the full specification of the sync daemon protocol, gossip anti-entropy, and the CRDT engine internals referenced in Phases 3 and 4, see Chapters 12, 13, and 14. For key hierarchy, role attestation, and the ciphertext-only invariant, see Chapter 15.
