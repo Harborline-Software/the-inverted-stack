@@ -60,7 +60,7 @@ The note had three pieces of information. The first was that he had absorbed the
 
 I took the call from my office at the institute. Joel's camera angle was worse than mine. He was at a kitchen table in what looked like a single-story house in a coastal-American somewhere, with a window behind him that was beginning to lighten. He had the coffee. He had a notebook. He had a printed copy of the council review on his left and what looked like a printout of his own paper on his right, both of them annotated, and he had a small dark-green ceramic mug that was not the kind of mug a man buys for himself.
 
-I will not, here, write down where I had given him that mug. The fact of the giving will go on the page. Whether he had kept it was, until this moment on the call, a question I had been carrying for five months without raising it to a question. It had now been raised. I made a note. The note was three letters; I will spare you the letters.
+I will not, here, write down where I had given him that mug. The fact of the giving will go on the page. Whether he had kept it was, until this moment on the call, a question I had been carrying for five months without raising it to a question. It had now been raised. I made a note — three letters; I will spare you the letters.
 
 He said good morning. He said it in English, not in Russian — he had reading Russian and conversational basics from the OSS collaboration but did not pretend to more than that, and he was correct not to. We exchanged the names of our institutional affiliations. I told him this would be a long call and that he should drink the coffee while it was still hot. He said the coffee had been hot when he sat down.
 
@@ -84,7 +84,7 @@ There was a GC-policy question I had been waiting to ask, and I asked it.
 
 He answered without reaching for the printout. He said: *There is a kind of data where history can be GC'd, and a kind where it must not. Misclassifying is an operator sin, not an architecture bug. The classification is the implementer's responsibility.*
 
-He had answered the question I had not asked — whether he would name operator responsibility instead of hiding it inside the architecture. He had named it without prompting. He had walked me to the edge of data loss and then shown me where the fence actually stood. He had not pretended the architecture solved a problem the architecture had handed to its operators. I made a note. The note was three letters; I did not need more.
+He had answered the question I had not asked — whether he would name operator responsibility instead of hiding it inside the architecture. He had named it without prompting. He had walked me to the edge of data loss and then shown me where the fence actually stood. He had not pretended the architecture solved a problem the architecture had handed to its operators. Three letters in the notebook. I did not need more.
 
 The note was the kind of note I had wanted to make in the after-action report on the prior mission and had not. I am, as I warned a few paragraphs ago, about to return to the prior mission. I am still putting it off. The next paragraph is the lease layer.
 
@@ -98,7 +98,7 @@ He said: *The lease layer is the layer the council blocked on. I'd rather not wa
 
 I said: *Walk me through the rewrite.*
 
-He walked me through it. The fence was the load-bearing piece — the acknowledgment requirement that closed the split-write window. He explained it once and did not explain it again. His voice did not change between the technical clauses and the place where the original assumption had failed. He had not looked at his notes since minute six. When I asked the obvious adversarial case, he answered without reaching for the printout. When I asked about the wall-clock dependency, his voice dropped a register on *the assumption I missed* — not regret; not performance; the flat tone of a man stating where the failure had lived. I made a note. The note was that the rewrite was not a patch. He had not patched. He had rewritten.
+He walked me through it. The fence was the load-bearing piece — the acknowledgment requirement that closed the split-write window. He explained it once and did not explain it again. His voice did not change between the technical clauses and the place where the original assumption had failed. He had not looked at his notes since minute six. When I asked the obvious adversarial case, he answered without reaching for the printout. When I asked about the wall-clock dependency, his voice dropped a register on *the assumption I missed* — not regret; not performance; the flat tone of a man stating where the failure had lived. My note read: rewrite, not patch.
 
 What I was watching, while he talked, was not the protocol. I was watching the way his face did not change between the sentence in which the rewrite worked and the sentence in which the original had not. The two sentences cost him the same amount. A man who had cost the original protocol differently than he cost the rewrite would have shown the differential in his face. Joel did not. He had finished costing the original protocol four years earlier, on the night Klett's verdict had landed, and what was left now was the rewrite and the work of explaining it.
 
@@ -156,7 +156,7 @@ I asked him about Byzantine operations — a CRDT operation produced by a buggy 
 
 He answered the easy half first — the schema check, the quarantine queue, the receiver-trusts-its-own-schema posture. Then he stopped, looked at me through the camera, and gave me the harder half. The architecture had a break-glass procedure. The primitives existed. The dashboard did not. *If the case occurs during the mission, I will write the code on the boat.* He answered in the register of a man stating an operating cost rather than making a promise.
 
-I would not have accepted *I will write the code on the boat* from another candidate. I accepted it from him because he had already shown me, twenty minutes earlier, what he did when he found out he had written code wrong. The pattern was the same pattern. A man who had absorbed the prior failure the way Joel had was a man whose offer to write the code on the boat was an offer the architecture's discipline would carry with it. From any other candidate the same sentence would have read as bravado. From him it read as the operating cost of being on the boat. I made a note.
+I would not have accepted *I will write the code on the boat* from another candidate. I accepted it from him because he had already shown me, twenty minutes earlier, what he did when he found out he had written code wrong. The pattern was the same pattern. A man who had absorbed the prior failure the way Joel had was a man whose offer to write the code on the boat was an offer the architecture's discipline would carry with it. The same words, from anyone else, would have been a young man's bravado. I noted it.
 
 The next area was the operations layer. I asked him how he ran his own deployments. Not the architecture — the operations. What did he watch? What did he not trust? I had a specific reason for the question, which was that the failed mission's architect had been in love with his test telemetry and had not understood, until I asked him plainly under operational pressure, how little of the telemetry was running on the platform he was claiming to deploy. I had spent three years deciding I would never again recruit an architect without asking him directly what gauge he watched.
 
@@ -236,7 +236,7 @@ That is why it was him. Tonight, when I queried the local store and it answered 
 
 Joel is two compartments aft, on the late shift at the data console, working a routine reconciliation pass with Wanjiru. He does not know I am writing this. He has not known for fourteen days. He knew the call was being recorded. He spoke into the record anyway.
 
-That is the property. He spoke into the record anyway. The architecture is the same property. The boat is on the record about Day 14 of an under-ice partition operating exactly as the rewrite specified. The crew is on the record because I am writing this and I will sign it.
+He spoke into the record anyway. The architecture does the same — speaks into the record whether or not the consortium is listening. Tonight the boat is operating exactly as the rewrite specified, on Day 14 of an under-ice partition, and I am writing this and I will sign it.
 
 Above my desk, taped to the bulkhead, Diana's most recent drawing has a moon in it. The moon is wearing a hat. I have not asked her to explain the hat.
 
