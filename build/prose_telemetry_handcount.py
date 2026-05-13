@@ -702,6 +702,113 @@ _INTERNAL_ANAPHORA_FUNCTION_STARTS = {
 }
 
 
+# ─── Proximity echo (catch-all for close-range word repetition) ─────────
+# Within a single sentence (or an adjacent-sentence pair), any content
+# word appearing twice within ≤MAX_DISTANCE token positions. Catches the
+# loop-family in one rule: anadiplosis ("nervous, and nervous"), within-
+# sentence echo ("like X and like Y"), same-clause hammering ("the staff
+# history begins... because the staff history..."), and proximity-tight
+# anaphora that the sentence-level detector misses. CO ear-flagged
+# 2026-05-13 (multiple instances).
+
+_PROXIMITY_STOPWORDS = {
+    # Function words / auxiliaries / common modifiers
+    "have", "been", "this", "that", "with", "from", "they", "them",
+    "their", "which", "would", "could", "should", "about", "there",
+    "than", "then", "when", "what", "where", "while", "after", "before",
+    "into", "over", "under", "only", "even", "much", "many", "some",
+    "very", "just", "also", "always", "never", "still", "every",
+    "because", "though", "since", "until", "however", "therefore",
+    "other", "another", "same", "such", "those", "these", "where",
+    # High-frequency content words that recur naturally in narrative
+    "thing", "things", "kind", "part", "place", "time", "times",
+    "matter", "people", "person", "year", "years", "minute", "minutes",
+    "hour", "hours", "morning", "evening", "night", "today",
+    "first", "second", "third", "last", "next", "three", "four", "five",
+    "good", "well", "back", "down", "again", "around", "between",
+    "took", "made", "gave", "kept", "knew", "said", "told", "went",
+    "came", "saw", "got", "let", "put", "set", "had", "did", "was",
+    "were", "wanted", "needed", "tried", "found", "left", "asked",
+    "called", "began", "started", "stopped", "looked", "turned",
+    # Common to-be / aux forms in -ing
+    "going", "coming", "making", "saying", "doing", "looking", "thinking",
+    "knowing", "having", "being", "trying", "telling", "asking",
+    # Common adjectives that recur naturally
+    "much", "more", "less", "most", "least", "many", "few",
+}
+
+
+def detect_proximity_echo(sents: list[str], max_distance: int = 12,
+                          min_word_len: int = 5) -> list[dict]:
+    """Content word appearing twice within max_distance token positions
+    inside a SINGLE sentence. Anadiplosis detector already handles cross-
+    sentence echoes; this detector handles same-sentence proximity that
+    the within-sentence detectors miss.
+
+    Tightened from initial cut: single-sentence only, min_word_len=5,
+    max_distance=12, and expanded stopwords. Single-sentence content-word
+    echo at ≤12 tokens is audibly noticeable; across-sentence echo is
+    handled separately."""
+    findings = []
+    for sent in sents:
+        toks = tokens(sent)
+        seen: dict[str, int] = {}
+        for pos, w in enumerate(toks):
+            wl = w.lower()
+            if len(wl) < min_word_len:
+                continue
+            if wl in _PROXIMITY_STOPWORDS:
+                continue
+            # Skip proper nouns: capitalized mid-sentence.
+            if pos > 0 and w[0].isupper() and w[0].isalpha():
+                continue
+            if wl in seen:
+                distance = pos - seen[wl]
+                if distance <= max_distance:
+                    findings.append({
+                        "type": "proximity_echo",
+                        "word": wl,
+                        "distance_tokens": distance,
+                        "sentence": sent[:200] + ("..." if len(sent) > 200 else ""),
+                        "confidence": 0.75,
+                        "rule_id": "handcount:proximity_echo.content_word_near_repeat_in_sentence",
+                    })
+            seen[wl] = pos
+    return findings
+
+
+# ─── Confirmation-tag detector ──────────────────────────────────────────
+# Sentence-final tags like ", which she was." / ", which he did." /
+# ", which I had." — Anna's staff-history confirmation move. Often
+# redundant; the prose has already made the claim and the tag just
+# re-verifies. CO ear-flagged 2026-05-13.
+
+_CONFIRMATION_TAG_RE = re.compile(
+    r",\s*which\s+(I|he|she|it|they|we|you)\s+"
+    r"(was|were|is|are|did|do|had|have|has)"
+    r"(?:\s+(?:not|n't))?"
+    r"(?:\s+\w{2,7})?\s*\.",
+    re.IGNORECASE,
+)
+
+
+def detect_confirmation_tag(prose: str) -> list[dict]:
+    """Sentence-final ', which <pronoun> <aux>' confirmation tags."""
+    findings = []
+    for m in _CONFIRMATION_TAG_RE.finditer(prose):
+        findings.append({
+            "type": "confirmation_tag",
+            "match": m.group(0).strip(),
+            "pronoun": m.group(1).lower(),
+            "auxiliary": m.group(2).lower(),
+            "start_char": m.start(),
+            "end_char": m.end(),
+            "confidence": 0.9,
+            "rule_id": "handcount:confirmation_tag.which_pronoun_aux_period",
+        })
+    return findings
+
+
 # ─── Inference cascade (which meant / which was / which gave ...) ──────
 # Three-or-more clauses opening with the same "which <verb>" connector
 # inside a single sentence. This is the Bobiverse cascading-inference
@@ -1931,6 +2038,24 @@ def verdict(metrics_list: list[dict], doc: dict, thresholds: dict) -> dict:
             blockers.append(f"inference_cascade: {n} 'which X' triple-cascade(s) — cut to two or fewer")
         else:
             passes.append("inference_cascade")
+    if "proximity_echo" in by_dev:
+        n = by_dev["proximity_echo"]["raw_count"]
+        if n >= 30:
+            blockers.append(f"proximity_echo: {n} close-range word repetitions (likely real looping)")
+        elif n >= 10:
+            warnings.append(f"proximity_echo: {n} close-range word repetitions (review top hits)")
+        else:
+            passes.append("proximity_echo")
+    if "confirmation_tag" in by_dev:
+        n = by_dev["confirmation_tag"]["raw_count"]
+        if n >= 5:
+            blockers.append(f"confirmation_tag: {n} 'which <pronoun> <aux>' tags — many likely redundant")
+        elif n >= 2:
+            warnings.append(f"confirmation_tag: {n} confirmation tag(s) — review each for redundancy")
+        elif n >= 1:
+            passes.append("confirmation_tag")  # 1 is acceptable
+        else:
+            passes.append("confirmation_tag")
 
     if blockers:
         v = "red"
@@ -2073,6 +2198,8 @@ def measure(md_path: Path, dimensions: dict | None = None) -> dict:
         "infinitive_phrase": detect_infinitives(prose),
         "gerund": detect_gerunds(prose),
         "inference_cascade": detect_inference_cascade(prose),
+        "proximity_echo": detect_proximity_echo(sents),
+        "confirmation_tag": detect_confirmation_tag(prose),
     }
 
     # Apply held_lines annotations.
