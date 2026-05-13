@@ -363,6 +363,221 @@ def detect_self_referential_frame(prose: str) -> list[dict]:
     return findings
 
 
+# ─── Bigram chain loop ───────────────────────────────────────────────────
+# Pattern: two-word phrases repeating within a paragraph. Catches what the
+# single-word lexical_chain detector misses — e.g. "the staff history" as
+# a unit, "smallest possible feeling" — when the individual words don't
+# trip the threshold but the phrase does.
+
+_STOPWORD_BIGRAMS = {
+    ("in", "the"), ("of", "the"), ("to", "the"), ("on", "the"),
+    ("at", "the"), ("for", "the"), ("with", "the"), ("from", "the"),
+    ("by", "the"), ("as", "the"), ("and", "the"), ("and", "i"),
+    ("i", "had"), ("i", "have"), ("i", "was"), ("i", "am"),
+    ("she", "had"), ("he", "had"), ("it", "was"), ("there", "was"),
+    ("there", "were"), ("would", "have"), ("had", "been"),
+    ("did", "not"), ("had", "not"), ("would", "not"), ("could", "have"),
+    ("which", "was"), ("which", "is"), ("that", "i"), ("when", "i"),
+    ("when", "the"), ("if", "i"), ("if", "you"), ("but", "i"),
+    ("but", "the"), ("on", "a"), ("of", "a"), ("to", "a"), ("at", "a"),
+    ("i", "did"), ("i", "do"), ("i", "would"), ("i", "could"),
+    ("i", "knew"), ("i", "know"), ("i", "said"),
+}
+
+
+def detect_bigram_chain(prose: str, min_repeats: int = 3) -> list[dict]:
+    """Per-paragraph: bigrams that appear min_repeats or more times.
+    Excludes function-word bigrams. Two-word repetition is one of the most
+    audibly noticeable forms of looping ('the staff history' said seven
+    times in one chapter loops to a listener even when the individual
+    words 'staff' and 'history' don't independently feel repeated)."""
+    from collections import Counter
+    findings = []
+    for para in prose.split("\n\n"):
+        para = para.strip()
+        if not para or len(para) < 100:
+            continue
+        # Tokenize and find bigrams, case-folded.
+        words = [w.lower() for w in re.findall(r"[A-Za-z][A-Za-z'-]*", para)]
+        bigrams = list(zip(words, words[1:]))
+        counts = Counter(bg for bg in bigrams if bg not in _STOPWORD_BIGRAMS)
+        for bg, n in counts.items():
+            if n >= min_repeats:
+                findings.append({
+                    "type": "bigram_chain_loop",
+                    "bigram": " ".join(bg),
+                    "count": n,
+                    "paragraph_word_count": len(words),
+                    "paragraph_excerpt": para[:140] + ("..." if len(para) > 140 else ""),
+                    "confidence": 0.75,
+                    "rule_id": "handcount:bigram_chain.phrase_repeat_in_paragraph",
+                })
+    return findings
+
+
+# ─── Motif phrase tracker ────────────────────────────────────────────────
+# Author-configurable list of phrases that should appear at most once per
+# chapter. Per ANNA-VOICE.md anti-pattern #5; retired motifs flagged
+# regardless of count to prevent regression.
+
+# Phrases with hard cap of 1 per chapter (any more = warning).
+# "what it claimed to be" is RETIRED — any occurrence = blocker.
+RETIRED_MOTIFS = [
+    "what it claimed to be",
+    "what they claimed to be",
+    "what he claimed to be",
+    "what she claimed to be",
+]
+
+# Phrases capped per ANNA-VOICE.md (1 per chapter; 2 = warning; 3+ = blocker).
+CAPPED_MOTIFS = [
+    "noted and did not yet",
+    "I am writing this here",
+    "I am going to tell you",
+    "I am going to write",
+    "in this account",
+    "the smallest possible",
+    "this version of the account",
+    "I am leaving it in",
+]
+
+
+def detect_motif_overuse(prose: str) -> list[dict]:
+    """Catches (a) retired motif phrases that should not appear at all,
+    and (b) capped motif phrases that appear more than once per chapter."""
+    findings = []
+    for phrase in RETIRED_MOTIFS:
+        pat = re.compile(r"\b" + re.escape(phrase) + r"\b", re.IGNORECASE)
+        matches = list(pat.finditer(prose))
+        if matches:
+            findings.append({
+                "type": "motif_overuse",
+                "phrase": phrase,
+                "count": len(matches),
+                "status": "retired",
+                "cap": 0,
+                "char_positions": [m.start() for m in matches],
+                "confidence": 1.0,
+                "rule_id": "handcount:motif_overuse.retired_phrase",
+            })
+    for phrase in CAPPED_MOTIFS:
+        pat = re.compile(r"\b" + re.escape(phrase) + r"\b", re.IGNORECASE)
+        matches = list(pat.finditer(prose))
+        if len(matches) > 1:
+            findings.append({
+                "type": "motif_overuse",
+                "phrase": phrase,
+                "count": len(matches),
+                "status": "capped",
+                "cap": 1,
+                "char_positions": [m.start() for m in matches],
+                "confidence": 1.0,
+                "rule_id": "handcount:motif_overuse.capped_phrase",
+            })
+    return findings
+
+
+# ─── Parenthetical density ───────────────────────────────────────────────
+# Anna's voice uses em-dashes and parentheticals heavily by design
+# (Bobiverse-register move). This detector surfaces paragraphs where
+# the density crosses into excess — useful as informational signal rather
+# than a hard rule.
+
+def detect_parenthetical_density(prose: str) -> list[dict]:
+    """Per-paragraph density of em-dash appositions and parentheses.
+    Flags paragraphs where appositions/sentence ratio > 0.5."""
+    findings = []
+    for para in prose.split("\n\n"):
+        para = para.strip()
+        if not para or len(para) < 100:
+            continue
+        em_dashes = len(re.findall(r"\s—\s", para))
+        parens = para.count("(")
+        appositions = em_dashes // 2 + parens
+        sents = sentences(para)
+        if not sents:
+            continue
+        ratio = appositions / len(sents)
+        if ratio > 0.5 and appositions >= 3:
+            findings.append({
+                "type": "parenthetical_density",
+                "em_dashes": em_dashes,
+                "parens": parens,
+                "appositions_estimate": appositions,
+                "sentence_count": len(sents),
+                "ratio": round(ratio, 2),
+                "paragraph_excerpt": para[:140] + ("..." if len(para) > 140 else ""),
+                "confidence": 0.6,
+                "rule_id": "handcount:parenthetical_density.appositions_per_sentence",
+            })
+    return findings
+
+
+# ─── Fragment density ────────────────────────────────────────────────────
+# Three or more consecutive short sentences (<5 words). Deliberate fragments
+# are fine (Bobiverse uses them); a chain of them suggests breathlessness
+# or over-emphasis.
+
+def detect_fragment_density(sents: list[str], min_chain: int = 3) -> list[dict]:
+    """Consecutive runs of short sentences (≤4 words) of length min_chain
+    or more. Flags fragment cascades like 'Not a thought. A feeling.'
+    when they run too long."""
+    findings = []
+    i = 0
+    while i < len(sents):
+        run = 0
+        while i + run < len(sents) and len(tokens(sents[i + run])) <= 4:
+            run += 1
+        if run >= min_chain:
+            findings.append({
+                "type": "fragment_density",
+                "run_length": run,
+                "sentences": sents[i:i + run],
+                "confidence": 0.7,
+                "rule_id": "handcount:fragment_density.consecutive_short_sentences",
+            })
+            i += run
+        else:
+            i += 1
+    return findings
+
+
+# ─── Statement-then-reversal ─────────────────────────────────────────────
+# Per ANNA-VOICE.md anti-pattern #3: a sentence followed immediately by
+# one that pivots or negates it via "but", "yet", "from him", etc.
+# Janeway dramatic-monologue move.
+
+_REVERSAL_MARKERS = re.compile(
+    r"^\s*(but|yet|though|however|from him|from her|in his|in her|"
+    r"the same|that is|the difference)\b",
+    re.IGNORECASE,
+)
+
+
+def detect_statement_then_reversal(sents: list[str]) -> list[dict]:
+    """Consecutive sentence pair where the second starts with a reversal
+    marker pivoting the first. Surfaces statement-then-reversal closures."""
+    findings = []
+    for i in range(len(sents) - 1):
+        first = sents[i]
+        second = sents[i + 1].strip()
+        m = _REVERSAL_MARKERS.match(second)
+        if not m:
+            continue
+        # First must be substantive (not a fragment).
+        if len(tokens(first)) < 6:
+            continue
+        findings.append({
+            "type": "statement_then_reversal",
+            "first": first,
+            "second": second,
+            "reversal_marker": m.group(1).lower(),
+            "confidence": 0.65,
+            "rule_id": "handcount:statement_then_reversal.consecutive_pivot",
+        })
+    return findings
+
+
 def detect_epanorthosis(prose: str) -> list[dict]:
     """*not X — Y* self-correction patterns."""
     findings = []
@@ -517,6 +732,53 @@ def verdict(metrics_list: list[dict], doc: dict, thresholds: dict) -> dict:
         else:
             passes.append("self_referential_frame")
 
+    # Bigram chain loop — phrase-level repetition.
+    if "bigram_chain_loop" in by_dev:
+        n = by_dev["bigram_chain_loop"]["raw_count"]
+        if n >= 5:
+            blockers.append(f"bigram_chain_loop: {n} bigrams repeating 3+ times in a paragraph (likely real looping)")
+        elif n >= 1:
+            warnings.append(f"bigram_chain_loop: {n} bigram(s) flagged (review for true positives)")
+        else:
+            passes.append("bigram_chain_loop")
+    # Motif overuse — retired phrases or capped phrases over threshold.
+    if "motif_overuse" in by_dev:
+        n = by_dev["motif_overuse"]["raw_count"]
+        if n >= 1:
+            # Retired-phrase hits are blockers; capped-phrase overuse is warning.
+            # The raw_count conflates both; treat any hit as warning by default,
+            # leave it to dashboard to upgrade retired-phrase hits to blocker.
+            warnings.append(f"motif_overuse: {n} motif phrase(s) over their cap (see findings)")
+        else:
+            passes.append("motif_overuse")
+    # Parenthetical density — informational, not blocker.
+    if "parenthetical_density" in by_dev:
+        n = by_dev["parenthetical_density"]["raw_count"]
+        if n >= 5:
+            warnings.append(f"parenthetical_density: {n} paragraphs with high apposition density")
+        elif n >= 1:
+            passes.append("parenthetical_density")  # informational; not flagged
+        else:
+            passes.append("parenthetical_density")
+    # Fragment density.
+    if "fragment_density" in by_dev:
+        n = by_dev["fragment_density"]["raw_count"]
+        if n >= 3:
+            warnings.append(f"fragment_density: {n} fragment-cascade runs detected")
+        elif n >= 1:
+            passes.append("fragment_density")  # one cascade is intentional, fine
+        else:
+            passes.append("fragment_density")
+    # Statement-then-reversal — anti-pattern #3.
+    if "statement_then_reversal" in by_dev:
+        n = by_dev["statement_then_reversal"]["raw_count"]
+        if n >= 3:
+            blockers.append(f"statement_then_reversal: {n} consecutive-pivot pairs (anti-pattern #3)")
+        elif n >= 1:
+            warnings.append(f"statement_then_reversal: {n} pair(s) flagged")
+        else:
+            passes.append("statement_then_reversal")
+
     if blockers:
         v = "red"
     elif warnings:
@@ -544,6 +806,12 @@ def measure(md_path: Path, dimensions: dict | None = None) -> dict:
         "echo_and_confirm": detect_echo_and_confirm(sents),
         "lexical_chain_loop": detect_lexical_chain(prose),
         "self_referential_frame": detect_self_referential_frame(prose),
+        # New 2026-05-13 (later in same session):
+        "bigram_chain_loop": detect_bigram_chain(prose),
+        "motif_overuse": detect_motif_overuse(prose),
+        "parenthetical_density": detect_parenthetical_density(prose),
+        "fragment_density": detect_fragment_density(sents),
+        "statement_then_reversal": detect_statement_then_reversal(sents),
     }
 
     all_findings = [a for anns in findings_by_type.values() for a in anns]
