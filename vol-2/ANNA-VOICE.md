@@ -143,6 +143,64 @@ Anna has known since adolescence that the motivation was manipulative. Anna has,
 - **Astrid's betrayal lands deepest *because* Anna gave Astrid the encouragement Anna never got.** When Astrid weaponizes it, the wound is not just professional. This is plot architecture; it should not be stated on the page, but every Astrid scene should feel the gravity of it.
 - **The "what it claimed to be" phrase is downstream of the wound.** Anna has had to learn to evaluate things on their own terms because her mother taught her to evaluate everything against an invented better. The phrase is, at root, Anna refusing to do what was done to her.
 
+## How people respond to Anna (load-bearing thematic rule, locked 2026-05-13)
+
+Anna gets recognition through action, never through asking. Across ch01
+this pattern shows up in five quiet moments, from people at five
+different distances:
+
+- **Mikael (ship master, years)**: hand-on-pulse handshake; no comment.
+- **The crew at the briefing (6–11 years for most)**: take the pastry
+  box "in the way of people who had been waiting for the box and were
+  not going to admit it."
+- **Mikael (specifically)**: takes two pastries — pretense dropped.
+- **The niece at the bakery (nine days)**: refuses payment for the
+  crew box; packs three dozen of Anna's specific pastry, not a generic
+  assortment; pretends not to see the tip-jar overpay.
+- **The niece (compressed pattern)**: arrives at the same relational
+  posture in nine days that Wanjiru took eleven years to build.
+
+The thematic claim is **gentle leadership** — Greenleaf-style. *People
+serve Anna because she has served them first, without keeping score.*
+She doesn't ASK for respect; she doesn't NEGOTIATE for it; she shows up
+consistently and people respond.
+
+**Rules this implies for future chapters and other volumes:**
+
+1. **Never have an established competent character be cold to Anna
+   without earned cause.** If a new colleague meets her in Vol 2 or Vol
+   3 and is hostile, there must be a specific prior failure on Anna's
+   part. The default disposition of any competent person toward Anna,
+   after observation, is recognition without commentary.
+
+2. **Never have Anna demand respect, defend her authority, or perform
+   competence.** Her bearing produces these responses; if she had to
+   ask for them, the bearing would be undermined. Other characters can
+   note her bearing in their thoughts; she does not narrate it.
+
+3. **New characters who reach the recognition posture should do so
+   through *specific acts toward Anna*** — the way the niece does (the
+   specific pastry, the refused payment), the way Mikael does (the
+   handshake-pulse, the two pastries). Not through dialogue declarations
+   ("I respect you, Commander"); always through *gestures she didn't
+   ask for*.
+
+4. **The compressed-recognition arc is reusable.** The niece arrives
+   at long-service-relationship posture in nine days. Future characters
+   (e.g. a new junior officer joining the boat mid-mission) can travel
+   the same arc on a similar compressed timescale, *if* Anna has been
+   her usual self around them. The duration of acquaintance isn't the
+   variable; the duration of *observation* is. People who watch Anna
+   work for any meaningful period reach the posture.
+
+5. **The reverse arc — losing the posture — is also reusable, and is
+   how betrayals will hurt most.** Priya and Wanjiru held this posture
+   for 6 and 11 years respectively. Their betrayals are not technical
+   failures; they are *posture failures* — them choosing, deliberately,
+   to act against the relational compact the rest of the crew honors
+   automatically. That asymmetry is why the betrayals will land harder
+   than the technical-sabotage explanation alone would warrant.
+
 ## How Anna shows love (load-bearing)
 
 Anna's love language is *action*, not declaration. She does not say "I love you" often; the rare times she does carry enormous weight precisely because of the absence everywhere else. Show this consistently:
