@@ -122,7 +122,7 @@ objects:
   pastry_box:
     color: white
     source: Panadería La Pastora
-    contents: three dozen assorted pastries
+    contents: three dozen kuchen de murta (Anna's daily pastry; niece respects her taste)
     given_by: niece at La Pastora
     refused_payment: true
     given_for: crew of the Nansen

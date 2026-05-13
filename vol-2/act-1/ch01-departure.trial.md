@@ -27,7 +27,7 @@ This is, I am told, what people mean when they say a person is composed. I find 
 
 The niece brought a second cup at 07:14, which was four minutes earlier than I had asked for it, and I appreciated this so much that I left her a tip in two currencies.
 
-On my way to the door she handed me a white bakery box, three dozen, an assortment, for the crew — because I had mentioned on day three that we sailed on the fourteenth and she had not forgotten. She would not let me pay for it. I left the price of three days of kuchen in the tip jar on the way out, which she pretended not to see.
+On my way to the door she handed me a white bakery box, three dozen kuchen de murta, for the crew — because I had mentioned on day three that we sailed on the fourteenth and she had not forgotten. She would not let me pay for it. I left the price of three days of kuchen in the tip jar on the way out, which she pretended not to see.
 
 ---
 
