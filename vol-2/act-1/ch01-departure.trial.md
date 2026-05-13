@@ -179,7 +179,7 @@ I read them again that night anyway. I do not know why. I am a person who reads 
 
 I am going to tell you something now that I do not tell the consortium archive, which is that as I closed the laptop I had the smallest possible feeling about the second note. Not a thought. A feeling. The kind of thing a person who has been at sea for twenty-three years gets and then sets aside, because the alternative is to spend a career indulging every shadow at the periphery of competence. I set it aside. I went to sleep.
 
-I am not writing this here because the feeling was correct. The feeling was correct, and the feeling was also useless, because I could not have done anything with it at 22:51 on the fourteenth of February that I had not already done with the laptop open. I am writing this here because the staff history has the firmware log and the timestamps and the official record, and what the staff history does not have is the smallest possible feeling, and the smallest possible feeling is the part of this story I most want, in retrospect, to have respected.
+I am not writing this here because the feeling turned out to be correct. It did, and the correctness was useless — I could not have done anything with it at 22:51 on the fourteenth of February that I had not already done with the laptop open. The staff history has the firmware log and the timestamps and the official record. What it does not have is the smallest possible feeling I had that night, and that is the part of this story I most want, in retrospect, to have respected.
 
 I slept for three hours and forty minutes. I had a watch.
 

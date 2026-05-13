@@ -199,6 +199,169 @@ _EPANORTH_RE = re.compile(
     re.IGNORECASE,
 )
 
+# ─── Echo-and-confirm detector ────────────────────────────────────────────
+# Pattern: generic conditional rule ("if you X") followed by a short
+# personal-pronoun sentence (≤6 words) that echoes a key content word from
+# the rule. CO ear-flagged this 2026-05-13: "if you let it. I had let it."
+# is the textbook case.
+
+# Rule markers — tightened to avoid "if you like / if you happen to / if you
+# need to" parenthetical permissions which are NOT generic rules.
+_RULE_MARKERS = re.compile(
+    r"\b(if you (?!like|happen|wish|prefer|please|will|are\s+going|need|want)"
+    r"|when you (?!are|were)"
+    r"|you do not|you don't|if one(?!\s+of)"
+    r"|the kind of (?:thing|person|man|woman|decision|note|feeling) that)\b",
+    re.IGNORECASE,
+)
+_CONFIRM_OPENERS = {"i", "we", "my", "she", "he"}
+_ECHO_STOPWORDS = {
+    "have", "been", "this", "that", "with", "from", "they", "them",
+    "their", "which", "would", "could", "should", "about", "there",
+}
+
+
+def _content_words(text: str, min_len: int = 4) -> set[str]:
+    """Lowercase content words at least min_len chars, excluding common
+    stopwords. Used for echo-detection lemma-ish matching."""
+    return {
+        w.lower()
+        for w in re.findall(r"[A-Za-z][A-Za-z'-]{%d,}" % (min_len - 1), text)
+        if w.lower() not in _ECHO_STOPWORDS
+    }
+
+
+def detect_echo_and_confirm(sents: list[str]) -> list[dict]:
+    """Generic rule + short personal confirmation echoing a verb from the
+    rule. Heuristic: pair of consecutive sentences where the first contains
+    a rule marker (if you / when you / one) and the second is ≤6 words,
+    starts with a personal pronoun, and shares a content word ≥4 letters."""
+    findings = []
+    for i in range(len(sents) - 1):
+        rule_s = sents[i]
+        confirm_s = sents[i + 1].strip()
+        if not _RULE_MARKERS.search(rule_s):
+            continue
+        confirm_words = tokens(confirm_s)
+        if not (2 <= len(confirm_words) <= 6):
+            continue
+        if confirm_words[0].lower() not in _CONFIRM_OPENERS:
+            continue
+        rule_content = _content_words(rule_s)
+        confirm_content = _content_words(confirm_s, min_len=3)
+        # Allow loose lemma match: strip trailing -ed, -ing, -s, -es
+        def stem(w: str) -> str:
+            for suffix in ("ing", "ed", "es", "s"):
+                if w.endswith(suffix) and len(w) > len(suffix) + 2:
+                    return w[: -len(suffix)]
+            return w
+        rule_stems = {stem(w) for w in rule_content}
+        confirm_stems = {stem(w) for w in confirm_content}
+        shared = rule_stems & confirm_stems
+        if shared:
+            findings.append({
+                "type": "echo_and_confirm",
+                "rule_sentence": rule_s,
+                "confirm_sentence": confirm_s,
+                "shared_stems": sorted(shared),
+                "confidence": 0.7,
+                "rule_id": "handcount:echo_and_confirm.rule_then_personal",
+            })
+    return findings
+
+
+# ─── Lexical-chain loop detector ─────────────────────────────────────────
+# Pattern: same content word repeated 3+ times within a single paragraph.
+# CO ear-flagged 2026-05-13: "the feeling was correct… The feeling was correct…
+# the feeling was also useless… the smallest possible feeling… the smallest
+# possible feeling" — "feeling" five times in one paragraph.
+#
+# Filters out proper nouns (capitalized in source) and common stopwords.
+
+_LEXICAL_STOPWORDS = {
+    # Articles, pronouns, common verbs
+    "would", "could", "should", "where", "there", "their", "which",
+    "about", "after", "again", "those", "these", "while", "until",
+    "before", "since", "every", "other", "another", "first", "second",
+    "third", "thought", "myself", "herself", "himself", "themselves",
+    "yourself", "without", "between", "through", "during", "against",
+    "because", "always", "never", "still", "right", "wrong", "going",
+    "really", "anything", "something", "nothing", "everything", "anyone",
+    "someone", "everyone", "course", "kind", "thing", "things",
+    # Anna-voice high-frequency function words that are register, not loop
+    "consortium", "architecture", "mission",
+}
+
+
+def detect_lexical_chain(prose: str) -> list[dict]:
+    """Per-paragraph: lowercase content words (≥5 letters) that appear with
+    density exceeding the topic-word baseline. Density-based threshold to
+    suppress topic-word false positives: a long paragraph about pastry will
+    say 'kuchen' four times functionally; that's not a loop. A 100-word
+    paragraph saying 'feeling' four times IS a loop.
+
+    Threshold: count >= max(3, paragraph_word_count / 75). So:
+       paragraph 150 words: 3 occurrences = flag
+       paragraph 300 words: 4 occurrences = flag
+       paragraph 450 words: 6 occurrences = flag
+    """
+    from collections import Counter
+    findings = []
+    for para in prose.split("\n\n"):
+        para = para.strip()
+        if not para or len(para) < 80:
+            continue
+        para_word_count = len(re.findall(r"\b[A-Za-z][A-Za-z'-]*\b", para))
+        # Density-based threshold — looser for longer paragraphs.
+        threshold = max(3, int(para_word_count / 75) + 1)
+        # Match content words starting with lowercase letter (excludes most
+        # proper nouns). Negative lookbehind avoids matching mid-word.
+        words = re.findall(r"(?<![A-Za-z])([a-z][a-z]{4,})(?![A-Za-z'])", para)
+        counts = Counter(w for w in words if w not in _LEXICAL_STOPWORDS)
+        for word, n in counts.items():
+            if n >= threshold:
+                # Density signal: occurrences per 100 words of the paragraph.
+                density = round(100 * n / max(para_word_count, 1), 1)
+                findings.append({
+                    "type": "lexical_chain_loop",
+                    "word": word,
+                    "count": n,
+                    "paragraph_word_count": para_word_count,
+                    "density_per_100": density,
+                    "paragraph_excerpt": para[:140] + ("..." if len(para) > 140 else ""),
+                    "confidence": 0.75,
+                    "rule_id": "handcount:lexical_chain.density_above_threshold",
+                })
+    return findings
+
+
+# ─── Self-referential frame detector ─────────────────────────────────────
+# Pattern: staff-history meta-frame phrases. Per ANNA-VOICE.md anti-pattern
+# #6, capped at one occurrence per chapter.
+
+_FRAME_PATTERNS = re.compile(
+    r"\b(I am writing this here|I am going to write|I am going to tell you|"
+    r"in this account|the staff history|for the record|on the record|"
+    r"in retrospect|this version of the account|I am leaving (?:it|the reading) in)\b",
+    re.IGNORECASE,
+)
+
+
+def detect_self_referential_frame(prose: str) -> list[dict]:
+    """Staff-history meta-frame phrases. Counts every occurrence; verdict
+    raises warning at >1 per chapter, blocker at >3."""
+    findings = []
+    for m in _FRAME_PATTERNS.finditer(prose):
+        findings.append({
+            "type": "self_referential_frame",
+            "phrase": m.group(0).lower(),
+            "start_char": m.start(),
+            "end_char": m.end(),
+            "confidence": 1.0,
+            "rule_id": "handcount:self_referential_frame.staff_history_meta",
+        })
+    return findings
+
 
 def detect_epanorthosis(prose: str) -> list[dict]:
     """*not X — Y* self-correction patterns."""
@@ -279,6 +442,10 @@ DEFAULT_THRESHOLDS = {
     "tautology_density_per_1000": 3.0,
     "polysyndeton_density_per_1000": 5.0,
     "sentences_over_50_words_pct": 3.0,
+    # CO ear-flagged 2026-05-13 patterns:
+    "echo_and_confirm_max_per_chapter": 0,        # any instance = warning; ≥2 = blocker
+    "lexical_chain_max_per_chapter": 0,           # any 3+ repeat = warning; 4+ in one paragraph = blocker
+    "self_referential_frame_max_per_chapter": 1,  # 1 OK; 2 = warning; 3+ = blocker
 }
 
 
@@ -314,6 +481,42 @@ def verdict(metrics_list: list[dict], doc: dict, thresholds: dict) -> dict:
               by_dev["polysyndeton"]["count_per_1k_tokens"],
               thresholds["polysyndeton_density_per_1000"])
 
+    # CO ear-flagged 2026-05-13 detector verdicts
+    if "echo_and_confirm" in by_dev:
+        n = by_dev["echo_and_confirm"]["raw_count"]
+        if n >= 2:
+            blockers.append(f"echo_and_confirm: {n} instances exceeds blocker threshold of 1")
+        elif n >= 1:
+            warnings.append(f"echo_and_confirm: {n} instance found (target: 0)")
+        else:
+            passes.append("echo_and_confirm")
+    # Lexical chain: severity by per-paragraph density, not raw count.
+    # Many hits are topic-word false positives (a paragraph about pastry will
+    # say "kuchen" 4 times functionally). Real loops show as high-density
+    # repetition in tighter paragraphs.
+    if "lexical_chain_loop" in by_dev:
+        # Inspect individual chain findings to find the worst density.
+        # Without access to the raw findings list here, fall back to a
+        # softer rule: many hits = warning, very many = blocker.
+        n = by_dev["lexical_chain_loop"]["raw_count"]
+        if n >= 20:
+            blockers.append(f"lexical_chain_loop: {n} candidates flagged (likely real looping; investigate top-density hits)")
+        elif n >= 8:
+            warnings.append(f"lexical_chain_loop: {n} candidates flagged (review top-density hits; many may be topic words)")
+        elif n >= 1:
+            warnings.append(f"lexical_chain_loop: {n} candidate(s) flagged (review for true positives)")
+        else:
+            passes.append("lexical_chain_loop")
+    if "self_referential_frame" in by_dev:
+        n = by_dev["self_referential_frame"]["raw_count"]
+        limit = thresholds["self_referential_frame_max_per_chapter"]
+        if n > limit * 2:
+            blockers.append(f"self_referential_frame: {n} occurrences exceeds blocker threshold of {limit * 2}")
+        elif n > limit:
+            warnings.append(f"self_referential_frame: {n} occurrences exceeds threshold of {limit}")
+        else:
+            passes.append("self_referential_frame")
+
     if blockers:
         v = "red"
     elif warnings:
@@ -338,6 +541,9 @@ def measure(md_path: Path, dimensions: dict | None = None) -> dict:
         "polysyndeton": detect_polysyndeton(sents),
         "literal_tricolon": detect_literal_tricolon(sents),
         "epanorthosis": detect_epanorthosis(prose),
+        "echo_and_confirm": detect_echo_and_confirm(sents),
+        "lexical_chain_loop": detect_lexical_chain(prose),
+        "self_referential_frame": detect_self_referential_frame(prose),
     }
 
     all_findings = [a for anns in findings_by_type.values() for a in anns]
