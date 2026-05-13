@@ -1,0 +1,185 @@
+# The Filchner Dark — story canon
+#
+# Locked facts about characters, dates, objects, and places. The
+# story-canon validator (galley/lib/story_canon) reads this file and
+# cross-checks chapter prose against it.
+#
+# Edit this file when:
+#   - A new character is introduced
+#   - A character fact (age, location, relationship) is established
+#   - A date or duration is fixed
+#   - An object's specifications are locked
+#
+# Schema is intentionally loose; the validator only consults the keys
+# it knows about, so additional notes are safe to include.
+
+timeline:
+  chapter_date: 2026-02-14    # Ch01 present-time
+  mission_duration_days: 96
+  pre_departure_bremerhaven: 2025-11-13  # Joel + Anna's encounter (cup-giving); 93 days before chapter_date
+
+characters:
+  anna:
+    full_name: Anna Yusupova
+    age: 47
+    years_at_sea: 23
+    role: mission commander, RV Nansen
+    heritage: Russian
+    relationships:
+      brother:
+        location: Voronezh
+        child: Diana
+      ex_husband:
+        years_divorced: 11
+        on_cordial_terms: true
+      mother:
+        location: St. Petersburg
+        status: post-stroke, alive
+      niece: Diana
+
+  diana:
+    age: 5
+    school_status: kindergarten
+    location: Voronezh
+    relationship_to_anna: brother's daughter
+    relationship_to_brother: father
+    keeps:
+      - scrapbook by pillow (Anna's bakery photos)
+    bedroom_decor:
+      - newspaper clipping of Nansen (taped above desk by father)
+
+  joel:
+    full_name: Joel Reyes
+    age: 44
+    role: principal architect (Sunfish)
+    last_seen_by_anna: 2025-11-13   # Bremerhaven
+    consortium_review_date: 2025-11-13
+    kept_object_from_anna: small dark-green ceramic mug
+
+  mikael:
+    full_name: Mikael Halvorsen
+    age: 61
+    role: ship master, RV Nansen
+    nationality: Norwegian
+
+  tomas:
+    full_name: Tomás Lindqvist
+    role: chief engineer
+    years_known_to_anna: 7
+    background: second-generation Punta Arenas
+
+  priya:
+    full_name: Priya Iyer
+    age: 40
+    role: chemistry lead, second-in-command of Anna's science department
+    years_known_to_anna: 6
+    education: PhD ETH Zürich; grew up Coimbatore
+    family: has child at home
+    plot_role: first betrayer (sabotage discovered ch04-ish)
+
+  wanjiru:
+    full_name: Wanjiru Kamau
+    role: survey lead
+    years_known_to_anna: 11
+    plot_role: second betrayer (survey-line adjustments)
+
+  astrid:
+    full_name: Astrid Hansen
+    role: rival mission commander
+    relationship_to_anna: former apprentice
+    sponsor: Stefan Reinhardt
+    plot_role: external antagonist
+
+  stefan:
+    full_name: Stefan Reinhardt
+    role: rival architect / sponsor of Astrid's expedition
+    plot_role: external antagonist (sponsor)
+
+  diego:
+    role: crew member, currently standing the watch Anna is not standing
+    # TBD: full development
+
+  la_pastora:
+    role: baker / namesake of the Punta Arenas bakery
+    bakery_name: Panadería La Pastora
+    relationships:
+      niece:
+        role: runs the counter
+
+objects:
+  nansen:
+    full_name: RV Nansen
+    class: Mark III
+    type: under-ice research submarine
+    length_m: 91
+    displacement_t_surfaced: 480
+    depth_rating_under_ice_m: 400
+    features:
+      - ice-strengthened sail
+      - retractable / vertically-folded diving planes
+    crew_size: 12
+
+  pastry_box:
+    color: white
+    source: Panadería La Pastora
+    contents: three dozen assorted pastries
+    given_by: niece at La Pastora
+    refused_payment: true
+    given_for: crew of the Nansen
+
+  joel_mug:
+    color: dark green
+    material: ceramic
+    given_by: Anna
+    given_at: Bremerhaven (2025-11-13)
+
+  diana_scrapbook:
+    contents: Anna's bakery photographs (one per city she has passed through)
+    location: by Diana's pillow
+    started: ~2022 (when Diana was 1; she learned to read her own name on envelopes at 4)
+
+places:
+  punta_arenas:
+    bakery: Panadería La Pastora (Avenida Colón)
+    harbor_walk_minutes_inland: 11
+    harbor_walk_minutes_seafront: 15
+
+  voronezh:
+    country: Russia
+    resident: Diana + her father (Anna's brother)
+
+  bremerhaven:
+    event: consortium final review of Joel's paper
+    date: 2025-11-13
+
+  filchner_ronne:
+    type: ice shelf
+    location: Antarctic
+    mission_target: cable survey
+
+mission:
+  name: MERIDIAN-7
+  consortium_funded: true
+  departure: 2026-02-14
+  duration_days: 96
+  target: under Filchner-Ronne ice shelf
+  research_focus: cable survey
+
+events:
+  - id: ch01_briefing
+    date: 2026-02-14
+    time: "08:00–08:34"
+    location: Nansen wardroom
+
+  - id: ch01_departure
+    date: 2026-02-14
+    time: "09:14"
+    location: Punta Arenas harbor → Strait of Magellan
+
+  - id: ch01_clears_strait
+    date: 2026-02-15
+    time: "04:18"
+
+  - id: pre_departure_bremerhaven
+    date: 2025-11-13
+    description: consortium final review of Joel's paper; Anna and Joel's brief encounter

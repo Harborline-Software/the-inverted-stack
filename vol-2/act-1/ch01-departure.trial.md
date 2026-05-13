@@ -107,7 +107,7 @@ This is the part I do not write in the staff history.
 
 ---
 
-The chemistry rack is forward of frame thirty-six, port side, three steps down from the main passageway, and it has the only door on the boat that is not actually a hatch. I went there because Mikael had told me to, and because I always do. The honest reason was Joel Reyes. I had not seen him since the fourth of November in Bremerhaven, and ninety-three days is enough time to develop opinions about a man he has done nothing to deserve. I wanted to see him before we sailed. I wanted to confirm, with my own eyes, that he was the man I had decided ninety-three days ago not to think about, and not someone else.
+The chemistry rack is forward of frame thirty-six, port side, three steps down from the main passageway, and it has the only door on the boat that is not actually a hatch. I went there because Mikael had told me to, and because I always do. The honest reason was Joel Reyes. I had not seen him since the thirteenth of November in Bremerhaven, and ninety-three days is enough time to develop opinions about a man he has done nothing to deserve. I wanted to see him before we sailed. I wanted to confirm, with my own eyes, that he was the man I had decided ninety-three days ago not to think about, and not someone else.
 
 He was kneeling by the lower environmental sensor rack with a multimeter in his left hand and a coffee in his right. He had not heard me come in, or had heard me and was pretending. The cup was one I recognized. I noted this and did not remark on it.
 
@@ -129,7 +129,7 @@ He did not look up. "Doctor."
 
 "When."
 
-He looked up. He had the same face. He was wearing a fleece I did not recognize, which I noted in spite of myself, and he had a smudge of thermal paste on his jaw he did not know about, which I did not tell him about. He was forty-four. He had built the diagnostic system the consortium had almost not funded. He had not been on the *Nansen* during the consortium final review in Bremerhaven, which was not a place for engineers — except for the part of it, late on the fourth of November, that was, briefly, a place for one.
+He looked up. He had the same face. He was wearing a fleece I did not recognize, which I noted in spite of myself, and he had a smudge of thermal paste on his jaw he did not know about, which I did not tell him about. He was forty-four. He had built the diagnostic system the consortium had almost not funded. He had not been on the *Nansen* during the consortium final review in Bremerhaven, which was not a place for engineers — except for the part of it, late on the thirteenth of November, that was, briefly, a place for one.
 
 "When, Joel."
 
