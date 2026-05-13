@@ -40,3 +40,9 @@ vol-2/_voice-drafts/
 web/node_modules/
 web/dist/
 web/package-lock.json
+
+# Prose-telemetry reference corpora (copyrighted source texts; not committed)
+corpora/
+
+# Vale config — generated, can be regenerated via prose_telemetry_vale_export.py
+.vale/styles/
