@@ -13,6 +13,8 @@ The kuchen de murta, on the fourteenth of February, had not been let down by its
 
 I would have walked fifteen blocks for this kuchen. I had, on day three, walked seven, because there was, briefly, a rumor of a *better* one, and I will not embarrass the rumor by reporting its source.
 
+On my way to the door the granddaughter handed me a white bakery box, three dozen, an assortment, for the crew — because I had mentioned on day three that we sailed on the fourteenth and she had not forgotten. She would not let me pay for it. I left the price of three days of kuchen in the tip jar on the way out, which she pretended not to see.
+
 I read the news on my phone for thirty-six minutes — Chilean politics, the consortium's own press release about my own departure (which got two facts wrong and one fact aggressively right), and an article about a kindergarten teacher in Magadan who had won a national award for science education. Then I closed the phone and looked at the harbor through the window. The *Nansen* was the third hull from the left. From the bakery you could see her bow but not her name, which was, again, as it should be.
 
 I do not write about my mornings in the staff history, which is for the consortium archive and for whoever commands the next mission. What I had for breakfast is none of their business. But that morning is where I became the one who would walk onto the *Nansen*. You should know who I was before I did.
@@ -98,6 +100,8 @@ Nobody raised an objection. **Wanjiru Kamau**, my survey lead, asked a clarifyin
 On the morning of February fourteenth I trusted Wanjiru Kamau the way you trust the second person you ever hired, which is differently from how you trust anyone else; this trust was earned over eleven years and was not, on the morning of departure, in any way conditional. I'm telling you for the same reason I told you about Priya. You should know what I thought of these women before what happened, happened. Otherwise the part where I figure out what they did is going to read like I was suspicious of them all along, and I was not. I was running my boat with the people I had trusted longest, and that is a thing I would do again with the same information.
 
 I closed the briefing at 08:34. I told them to be on station by 09:00. I told them, with a directness I did not soften, that nobody was going to die on this mission if I could help it, and that I was going to help it.
+
+And then I put the white bakery box on the wardroom table and told them to eat. The crew took the pastries quietly, in the way of people receiving a small kindness they had not expected and were not going to say anything about. Mikael took two.
 
 This is the part I do not write in the staff history.
 
