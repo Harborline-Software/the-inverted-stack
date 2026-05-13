@@ -255,6 +255,72 @@ ACRONYM_FIXES = {
     r"(?i)\bPart VIII\b": "Part 8",
     r"(?i)\bPart IX\b":   "Part 9",
     r"(?i)\bPart X\b":    "Part 10",
+
+    # Same fix for other class/version designators that take Roman numerals.
+    # CO flagged 2026-05-13: ch01 "Mark III submarine" read as "Mark I, I, I."
+    # Pattern covers Mark, Class, Type, Phase, Mk (abbrev), and Vol/Volume.
+    # Order matters: longer Roman forms must match BEFORE shorter ones so
+    # \bMark I\b doesn't fire inside "Mark III".
+    r"(?i)\bMark VIII\b": "Mark 8",
+    r"(?i)\bMark VII\b":  "Mark 7",
+    r"(?i)\bMark VI\b":   "Mark 6",
+    r"(?i)\bMark V\b":    "Mark 5",
+    r"(?i)\bMark IV\b":   "Mark 4",
+    r"(?i)\bMark III\b":  "Mark 3",
+    r"(?i)\bMark IX\b":   "Mark 9",
+    r"(?i)\bMark II\b":   "Mark 2",
+    r"(?i)\bMark X\b":    "Mark 10",
+    r"(?i)\bMark I\b":    "Mark 1",
+
+    r"(?i)\bClass VIII\b": "Class 8",
+    r"(?i)\bClass VII\b":  "Class 7",
+    r"(?i)\bClass VI\b":   "Class 6",
+    r"(?i)\bClass V\b":    "Class 5",
+    r"(?i)\bClass IV\b":   "Class 4",
+    r"(?i)\bClass III\b":  "Class 3",
+    r"(?i)\bClass IX\b":   "Class 9",
+    r"(?i)\bClass II\b":   "Class 2",
+    r"(?i)\bClass X\b":    "Class 10",
+    r"(?i)\bClass I\b":    "Class 1",
+
+    r"(?i)\bType VIII\b": "Type 8",
+    r"(?i)\bType VII\b":  "Type 7",
+    r"(?i)\bType VI\b":   "Type 6",
+    r"(?i)\bType V\b":    "Type 5",
+    r"(?i)\bType IV\b":   "Type 4",
+    r"(?i)\bType III\b":  "Type 3",
+    r"(?i)\bType IX\b":   "Type 9",
+    r"(?i)\bType II\b":   "Type 2",
+    r"(?i)\bType X\b":    "Type 10",
+    r"(?i)\bType I\b":    "Type 1",
+
+    r"(?i)\bPhase VIII\b": "Phase 8",
+    r"(?i)\bPhase VII\b":  "Phase 7",
+    r"(?i)\bPhase VI\b":   "Phase 6",
+    r"(?i)\bPhase V\b":    "Phase 5",
+    r"(?i)\bPhase IV\b":   "Phase 4",
+    r"(?i)\bPhase III\b":  "Phase 3",
+    r"(?i)\bPhase IX\b":   "Phase 9",
+    r"(?i)\bPhase II\b":   "Phase 2",
+    r"(?i)\bPhase X\b":    "Phase 10",
+    r"(?i)\bPhase I\b":    "Phase 1",
+
+    r"(?i)\bMk\.?\s*VIII\b": "Mark 8",
+    r"(?i)\bMk\.?\s*VII\b":  "Mark 7",
+    r"(?i)\bMk\.?\s*VI\b":   "Mark 6",
+    r"(?i)\bMk\.?\s*V\b":    "Mark 5",
+    r"(?i)\bMk\.?\s*IV\b":   "Mark 4",
+    r"(?i)\bMk\.?\s*III\b":  "Mark 3",
+    r"(?i)\bMk\.?\s*IX\b":   "Mark 9",
+    r"(?i)\bMk\.?\s*II\b":   "Mark 2",
+    r"(?i)\bMk\.?\s*X\b":    "Mark 10",
+    r"(?i)\bMk\.?\s*I\b":    "Mark 1",
+
+    r"(?i)\bVol\.?\s*III\b": "Volume 3",
+    r"(?i)\bVol\.?\s*II\b":  "Volume 2",
+    r"(?i)\bVol\.?\s*IV\b":  "Volume 4",
+    r"(?i)\bVol\.?\s*V\b":   "Volume 5",
+    r"(?i)\bVol\.?\s*I\b":   "Volume 1",
 }
 
 # Chatterbox-only acronym expansions. The neural model handles most
