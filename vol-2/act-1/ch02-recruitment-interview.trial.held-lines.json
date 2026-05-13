@@ -1,0 +1,16 @@
+[
+  {
+    "device": "anaphora",
+    "match": {"text_contains": "He did not soften any of the four sentences"},
+    "reason": "The chapter's load-bearing rhetorical climax — six 'He did not' sentences cataloging Joel's restraint. Compressing destroys the dramatic peak. Explicit held exception per voice-spec locked 2026-05-13.",
+    "approved_by": "CO",
+    "approved_at": "2026-05-13T00:00:00Z"
+  },
+  {
+    "device": "bigram_chain_loop",
+    "match": {"text_contains": "He did not soften any of the four sentences"},
+    "reason": "Same passage as above — 'he did' bigram appears 7× because the held anaphora cascade contains it.",
+    "approved_by": "CO",
+    "approved_at": "2026-05-13T00:00:00Z"
+  }
+]
