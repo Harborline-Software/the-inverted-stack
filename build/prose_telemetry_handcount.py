@@ -69,7 +69,21 @@ def sentences(prose: str) -> list[str]:
 
 
 def tokens(text: str) -> list[str]:
-    return re.findall(r"[A-Za-z][A-Za-z'-]*", text)
+    """Unicode-aware word tokenization. Handles 'Tomás', 'Wanjiru', 'café',
+    and other diacritic-bearing words as single tokens. The earlier ASCII-only
+    regex split 'Tomás' into 'Tom' + 's' which polluted the bigram detector;
+    this version keeps it as one token."""
+    return re.findall(r"[^\W\d_]+(?:[''’-][^\W\d_]+)*", text, re.UNICODE)
+
+
+def _is_dialogue(s: str) -> bool:
+    """A sentence sits inside dialogue if it begins or ends with a quote
+    character. Used to exclude dialogue interiors from narrator-only
+    detectors (statement-then-reversal, rhetorical questions, etc.)."""
+    s = s.strip()
+    if not s:
+        return False
+    return s[0] in ('"', '“', '”') or s[-1] in ('"', '“', '”')
 
 
 # ─── Detectors ────────────────────────────────────────────────────────────
@@ -385,32 +399,37 @@ _STOPWORD_BIGRAMS = {
 }
 
 
-def detect_bigram_chain(prose: str, min_repeats: int = 3) -> list[dict]:
-    """Per-paragraph: bigrams that appear min_repeats or more times.
-    Excludes function-word bigrams. Two-word repetition is one of the most
-    audibly noticeable forms of looping ('the staff history' said seven
-    times in one chapter loops to a listener even when the individual
-    words 'staff' and 'history' don't independently feel repeated)."""
+def detect_bigram_chain(prose: str) -> list[dict]:
+    """Per-paragraph: bigrams whose count exceeds a density-aware threshold.
+    Catches phrase-level loops the single-word lexical detector misses
+    (the 'the staff history' ×7 case). Uses Unicode tokenization to keep
+    diacritic-bearing names ('Tomás', 'Wanjiru') as single tokens, and a
+    density threshold to suppress topic-phrase false positives in long
+    paragraphs."""
     from collections import Counter
     findings = []
     for para in prose.split("\n\n"):
         para = para.strip()
         if not para or len(para) < 100:
             continue
-        # Tokenize and find bigrams, case-folded.
-        words = [w.lower() for w in re.findall(r"[A-Za-z][A-Za-z'-]*", para)]
+        words = [w.lower() for w in tokens(para)]
+        # Density-aware threshold: longer paragraphs need more repeats to flag.
+        threshold = max(3, int(len(words) / 100) + 2)
         bigrams = list(zip(words, words[1:]))
         counts = Counter(bg for bg in bigrams if bg not in _STOPWORD_BIGRAMS)
         for bg, n in counts.items():
-            if n >= min_repeats:
+            if n >= threshold:
+                density = round(100 * n / max(len(words), 1), 1)
                 findings.append({
                     "type": "bigram_chain_loop",
                     "bigram": " ".join(bg),
                     "count": n,
                     "paragraph_word_count": len(words),
+                    "density_per_100": density,
+                    "threshold_used": threshold,
                     "paragraph_excerpt": para[:140] + ("..." if len(para) > 140 else ""),
                     "confidence": 0.75,
-                    "rule_id": "handcount:bigram_chain.phrase_repeat_in_paragraph",
+                    "rule_id": "handcount:bigram_chain.density_above_threshold",
                 })
     return findings
 
@@ -556,11 +575,16 @@ _REVERSAL_MARKERS = re.compile(
 
 def detect_statement_then_reversal(sents: list[str]) -> list[dict]:
     """Consecutive sentence pair where the second starts with a reversal
-    marker pivoting the first. Surfaces statement-then-reversal closures."""
+    marker pivoting the first. Skips dialogue interiors (sentences inside
+    quotes) since Joel/Mikael dialogue often contains conversational pivots
+    that aren't the narrator's anti-pattern #3 move."""
     findings = []
     for i in range(len(sents) - 1):
         first = sents[i]
         second = sents[i + 1].strip()
+        # Skip if either sentence is dialogue.
+        if _is_dialogue(first) or _is_dialogue(second):
+            continue
         m = _REVERSAL_MARKERS.match(second)
         if not m:
             continue
@@ -572,9 +596,352 @@ def detect_statement_then_reversal(sents: list[str]) -> list[dict]:
             "first": first,
             "second": second,
             "reversal_marker": m.group(1).lower(),
-            "confidence": 0.65,
+            "confidence": 0.7,
             "rule_id": "handcount:statement_then_reversal.consecutive_pivot",
         })
+    return findings
+
+
+# ─── Filter-word density ─────────────────────────────────────────────────
+# "I felt," "I saw," "I noticed," "I realized" — narrator filter verbs that
+# distance the reader from the sensory experience. Bob narrates directly;
+# Anna currently filters. Reducing filter words is one of the highest-yield
+# moves toward immediacy.
+
+_FILTER_VERBS = re.compile(
+    r"\bI\s+(felt|saw|noticed|realized|realised|registered|"
+    r"observed|watched|sensed|thought|wondered|considered|recognized|"
+    r"recognised|understood|knew|believed|imagined|remembered|recalled|"
+    r"experienced|perceived|decided|figured|determined)\b",
+    re.IGNORECASE,
+)
+
+
+def detect_filter_words(prose: str) -> list[dict]:
+    """Count narrator filter-verb constructions ('I felt X', 'I noticed X').
+    These distance the reader from the sensory present. Heavy use is a
+    Janeway / formal-narrator move; Bobiverse narrates direct."""
+    findings = []
+    for m in _FILTER_VERBS.finditer(prose):
+        findings.append({
+            "type": "filter_word",
+            "verb": m.group(1).lower(),
+            "match": m.group(0),
+            "start_char": m.start(),
+            "end_char": m.end(),
+            "confidence": 1.0,
+            "rule_id": "handcount:filter_word.narrator_distance_verb",
+        })
+    return findings
+
+
+# ─── Redundant-phrase detector ───────────────────────────────────────────
+# Stock filler phrases that mark amateur or academic prose. High-precision
+# exact-match detection.
+
+_REDUNDANT_PHRASES = [
+    "in order to",
+    "the fact that",
+    "for the first time",
+    "needless to say",
+    "it goes without saying",
+    "at this point in time",
+    "in the event that",
+    "due to the fact that",
+    "in spite of the fact that",
+    "with regard to",
+    "with respect to",
+    "in terms of",
+    "for all intents and purposes",
+    "first and foremost",
+    "last but not least",
+    "each and every",
+    "one and the same",
+    "completely and utterly",
+    "absolutely essential",
+    "very unique",
+    "totally complete",
+    "end result",
+    "past history",
+    "future plans",
+    "advance planning",
+    "currently underway",
+    "personal opinion",
+]
+
+
+def detect_redundant_phrases(prose: str) -> list[dict]:
+    """Stock filler phrases that should be cut. Strict exact-match."""
+    findings = []
+    for phrase in _REDUNDANT_PHRASES:
+        pat = re.compile(r"\b" + re.escape(phrase) + r"\b", re.IGNORECASE)
+        for m in pat.finditer(prose):
+            findings.append({
+                "type": "redundant_phrase",
+                "phrase": phrase,
+                "start_char": m.start(),
+                "end_char": m.end(),
+                "confidence": 1.0,
+                "rule_id": "handcount:redundant_phrase.filler_match",
+            })
+    return findings
+
+
+# ─── Internal anaphora ───────────────────────────────────────────────────
+# Within-sentence same-word echoes: "which was X, which was Y, which was Z."
+# Different from sentence-level anaphora (already detected) — this is
+# clause-level repetition inside one sentence.
+
+_INTERNAL_ANAPHORA_FUNCTION_STARTS = {
+    "the", "a", "an", "this", "that", "these", "those", "which", "who", "whom",
+    "and", "but", "or", "nor", "so", "yet", "for",
+    "to", "of", "in", "on", "at", "by", "from", "with",
+    "i", "he", "she", "it", "we", "they", "you",
+    "is", "was", "are", "were", "be", "been",
+    "his", "her", "their", "my", "your", "our",
+}
+
+
+def detect_internal_anaphora(sents: list[str], min_repeats: int = 3) -> list[dict]:
+    """Same CONTENT word starting 3+ comma-or-em-dash-delimited clauses
+    within a single sentence. Function-word starts (the, which, a, etc.)
+    are intentional Bobiverse parallelism — 'the bunk, the desk, the
+    bookshelf' is functional inventory, not looping; 'which meant X, which
+    meant Y, which meant Z' is the deliberate cascading-inference move.
+    Only flags when a substantive word (verb, noun, adverb) opens 3+
+    clauses in a row."""
+    findings = []
+    for sent in sents:
+        parts = re.split(r"\s*[,;—–]\s*", sent)
+        if len(parts) < min_repeats:
+            continue
+        first_words = []
+        for p in parts:
+            ws = tokens(p)
+            if ws:
+                first_words.append(ws[0].lower())
+        # Consecutive-run check on content words only.
+        run = 1
+        for i in range(1, len(first_words)):
+            w = first_words[i]
+            if (w == first_words[i - 1]
+                    and len(w) >= 3
+                    and w not in _INTERNAL_ANAPHORA_FUNCTION_STARTS):
+                run += 1
+                if run >= min_repeats:
+                    findings.append({
+                        "type": "internal_anaphora",
+                        "word": w,
+                        "run_length": run,
+                        "sentence": sent,
+                        "confidence": 0.85,
+                        "rule_id": "handcount:internal_anaphora.content_word_clause_echo",
+                    })
+                    break
+            else:
+                run = 1
+    return findings
+
+
+# ─── Anadiplosis chain ───────────────────────────────────────────────────
+# Last word of one clause/sentence is the first word of the next.
+# "...the room. The room was empty." Classic Janeway dramatic move.
+
+def detect_anadiplosis(sents: list[str]) -> list[dict]:
+    """Detect anadiplosis: a sentence ends on a word that is also the
+    first content word of the next sentence. Common in dramatic/Janeway
+    prose; rare in Bobiverse."""
+    findings = []
+    for i in range(len(sents) - 1):
+        a_words = tokens(sents[i])
+        b_words = tokens(sents[i + 1])
+        if len(a_words) < 4 or len(b_words) < 2:
+            continue
+        last_a = a_words[-1].lower()
+        first_b = b_words[0].lower()
+        # The first word of B might be a pronoun-skipping article.
+        if first_b in {"the", "a", "an", "this", "that", "these", "those"} and len(b_words) >= 2:
+            first_b = b_words[1].lower()
+        if last_a == first_b and len(last_a) >= 4 and last_a not in _ECHO_STOPWORDS:
+            findings.append({
+                "type": "anadiplosis",
+                "echo_word": last_a,
+                "first_sentence": sents[i],
+                "second_sentence": sents[i + 1],
+                "confidence": 0.7,
+                "rule_id": "handcount:anadiplosis.cross_sentence_echo",
+            })
+    return findings
+
+
+# ─── Modal-verb density ──────────────────────────────────────────────────
+# would / could / should / might frequency. Hedging modals are a marker of
+# narrator uncertainty; over-use makes prose tentative.
+
+_MODALS = re.compile(
+    r"\b(would|could|should|might|may|must|shall|ought|will|won't|"
+    r"wouldn't|couldn't|shouldn't|mightn't|mustn't|shan't)\b",
+    re.IGNORECASE,
+)
+
+
+def detect_modal_density(prose: str, total_words: int) -> list[dict]:
+    """Total modal-verb count. Reported as informational metric; the
+    verdict checks density per 1k tokens (>40/1k = heavy hedging)."""
+    findings = []
+    for m in _MODALS.finditer(prose):
+        findings.append({
+            "type": "modal_verb",
+            "modal": m.group(1).lower(),
+            "start_char": m.start(),
+            "confidence": 1.0,
+            "rule_id": "handcount:modal_density.hedging_marker",
+        })
+    return findings
+
+
+# ─── Vague-quantifier density ────────────────────────────────────────────
+# "very," "really," "quite," "rather," "somewhat" — intensifiers that
+# weaken rather than strengthen. Strunk-and-White perennial.
+
+_VAGUE_QUANTIFIERS = re.compile(
+    r"\b(very|really|quite|rather|somewhat|fairly|pretty|just|"
+    r"almost|nearly|basically|essentially|literally|actually|"
+    r"definitely|certainly|probably|perhaps|maybe)\b",
+    re.IGNORECASE,
+)
+
+
+def detect_vague_quantifiers(prose: str) -> list[dict]:
+    """Weakening intensifiers and hedge adverbs."""
+    findings = []
+    for m in _VAGUE_QUANTIFIERS.finditer(prose):
+        findings.append({
+            "type": "vague_quantifier",
+            "word": m.group(1).lower(),
+            "start_char": m.start(),
+            "confidence": 0.85,
+            "rule_id": "handcount:vague_quantifier.weakening_intensifier",
+        })
+    return findings
+
+
+# ─── Abstract-noun density (-tion, -ness, -ity suffixes) ─────────────────
+# Words ending in -tion, -ness, -ity, -ment, -ance are abstract nouns. Heavy
+# use signals academic register. Bobiverse uses concrete nouns; Janeway
+# leans abstract in command-monologue mode.
+
+_ABSTRACT_SUFFIX = re.compile(
+    r"\b[a-z]{3,}(?:tion|tions|ness|ity|ities|ment|ments|ance|ances|ence|ences)\b",
+    re.IGNORECASE,
+)
+
+
+def detect_abstract_nouns(prose: str) -> list[dict]:
+    """Words ending in abstract-noun suffixes. Informational metric."""
+    findings = []
+    for m in _ABSTRACT_SUFFIX.finditer(prose):
+        word = m.group(0).lower()
+        if word in {"three", "vacation", "destination", "stations"}:  # benign technicals
+            continue
+        findings.append({
+            "type": "abstract_noun",
+            "word": word,
+            "start_char": m.start(),
+            "confidence": 0.7,
+            "rule_id": "handcount:abstract_noun.suffix_match",
+        })
+    return findings
+
+
+# ─── Adverb density (-ly words) ──────────────────────────────────────────
+# -ly adverbs are weak-writing markers in fiction. Anna's voice is
+# adverb-light; an uptick would signal drift toward telling.
+
+_ADVERB_LY = re.compile(r"\b[a-z]{4,}ly\b", re.IGNORECASE)
+_ADVERB_EXCLUDE = {"only", "early", "really", "family", "ugly", "lovely", "lonely",
+                   "deadly", "daily", "yearly", "weekly", "kindly", "friendly",
+                   "lively", "monthly", "deadly", "homely", "july"}
+
+
+def detect_adverbs(prose: str) -> list[dict]:
+    """-ly adverbs. Excludes common false positives (only, family, etc.)."""
+    findings = []
+    for m in _ADVERB_LY.finditer(prose):
+        word = m.group(0).lower()
+        if word in _ADVERB_EXCLUDE:
+            continue
+        findings.append({
+            "type": "adverb_ly",
+            "word": word,
+            "start_char": m.start(),
+            "confidence": 0.85,
+            "rule_id": "handcount:adverb.ly_suffix",
+        })
+    return findings
+
+
+# ─── Dialogue-attribution overuse (he said / she said) ───────────────────
+# Most dialogue should self-attribute via context. Over-use of "he said" /
+# "she said" reads as amateur tagging.
+
+_SAID_TAGS = re.compile(
+    r"\b(he|she|I|they|we)\s+(said|replied|asked|answered|told|added|stated|"
+    r"declared|whispered|murmured|continued|repeated)\b",
+    re.IGNORECASE,
+)
+
+
+def detect_said_overuse(prose: str) -> list[dict]:
+    """Dialogue attribution tags."""
+    findings = []
+    for m in _SAID_TAGS.finditer(prose):
+        findings.append({
+            "type": "said_tag",
+            "tag": m.group(0).lower(),
+            "verb": m.group(2).lower(),
+            "start_char": m.start(),
+            "confidence": 1.0,
+            "rule_id": "handcount:said_tag.attribution_verb",
+        })
+    return findings
+
+
+# ─── Paragraph-length anomaly ────────────────────────────────────────────
+# A paragraph more than 4× the chapter mean is a wall of text; one less
+# than 0.2× the mean is a fragment. Both are register signals.
+
+def detect_paragraph_length_anomaly(prose: str) -> list[dict]:
+    """Paragraphs whose length is anomalous against the chapter's mean."""
+    findings = []
+    paras = [p.strip() for p in prose.split("\n\n") if p.strip() and len(p.strip()) > 30]
+    if len(paras) < 5:
+        return findings
+    lengths = [len(tokens(p)) for p in paras]
+    mean_len = sum(lengths) / len(lengths)
+    for i, (p, n) in enumerate(zip(paras, lengths)):
+        if n > 4 * mean_len:
+            findings.append({
+                "type": "paragraph_length_anomaly",
+                "kind": "oversized",
+                "word_count": n,
+                "chapter_mean": round(mean_len, 1),
+                "ratio": round(n / mean_len, 1),
+                "paragraph_excerpt": p[:120] + ("..." if len(p) > 120 else ""),
+                "confidence": 0.6,
+                "rule_id": "handcount:paragraph_length.over_4x_mean",
+            })
+        elif n < 0.2 * mean_len and n >= 5:
+            findings.append({
+                "type": "paragraph_length_anomaly",
+                "kind": "undersized",
+                "word_count": n,
+                "chapter_mean": round(mean_len, 1),
+                "ratio": round(n / mean_len, 2),
+                "paragraph_excerpt": p,
+                "confidence": 0.4,
+                "rule_id": "handcount:paragraph_length.under_0.2x_mean",
+            })
     return findings
 
 
@@ -779,6 +1146,102 @@ def verdict(metrics_list: list[dict], doc: dict, thresholds: dict) -> dict:
         else:
             passes.append("statement_then_reversal")
 
+    # ─── Phase 1.7 detector verdicts ────────────────────────────────────
+    word_count = doc.get("word_count", 0) or 1
+
+    # Filter words — narrator-distance verbs. >20/1k = heavy filtering.
+    if "filter_word" in by_dev:
+        n = by_dev["filter_word"]["raw_count"]
+        per_1k = n * 1000 / word_count
+        if per_1k > 15:
+            blockers.append(f"filter_word: {per_1k:.1f}/1k narrator-distance verbs (target <8/1k)")
+        elif per_1k > 8:
+            warnings.append(f"filter_word: {per_1k:.1f}/1k filter verbs (above 8/1k target)")
+        else:
+            passes.append("filter_word")
+
+    # Redundant phrases — exact-match filler.
+    if "redundant_phrase" in by_dev:
+        n = by_dev["redundant_phrase"]["raw_count"]
+        if n >= 3:
+            blockers.append(f"redundant_phrase: {n} filler phrases (cut all)")
+        elif n >= 1:
+            warnings.append(f"redundant_phrase: {n} filler phrase(s) — cut")
+        else:
+            passes.append("redundant_phrase")
+
+    # Internal anaphora — within-sentence clause-start echo.
+    if "internal_anaphora" in by_dev:
+        n = by_dev["internal_anaphora"]["raw_count"]
+        if n >= 3:
+            warnings.append(f"internal_anaphora: {n} within-sentence clause-start echoes")
+        elif n >= 1:
+            warnings.append(f"internal_anaphora: {n} clause-echo case(s) flagged")
+        else:
+            passes.append("internal_anaphora")
+
+    # Anadiplosis — cross-sentence echo.
+    if "anadiplosis" in by_dev:
+        n = by_dev["anadiplosis"]["raw_count"]
+        if n >= 2:
+            warnings.append(f"anadiplosis: {n} cross-sentence echo pair(s)")
+        elif n >= 1:
+            warnings.append(f"anadiplosis: {n} pair flagged (review)")
+        else:
+            passes.append("anadiplosis")
+
+    # Modal verbs — hedging density.
+    if "modal_verb" in by_dev:
+        n = by_dev["modal_verb"]["raw_count"]
+        per_1k = n * 1000 / word_count
+        if per_1k > 50:
+            warnings.append(f"modal_verb: {per_1k:.1f}/1k modal/hedging verbs (heavy hedging)")
+        else:
+            passes.append("modal_verb")
+
+    # Vague quantifiers.
+    if "vague_quantifier" in by_dev:
+        n = by_dev["vague_quantifier"]["raw_count"]
+        per_1k = n * 1000 / word_count
+        if per_1k > 10:
+            warnings.append(f"vague_quantifier: {per_1k:.1f}/1k weakening intensifiers")
+        else:
+            passes.append("vague_quantifier")
+
+    # Abstract nouns — academic register marker.
+    if "abstract_noun" in by_dev:
+        n = by_dev["abstract_noun"]["raw_count"]
+        per_1k = n * 1000 / word_count
+        if per_1k > 30:
+            warnings.append(f"abstract_noun: {per_1k:.1f}/1k abstract-suffix words (academic register)")
+        else:
+            passes.append("abstract_noun")
+
+    # -ly adverbs.
+    if "adverb_ly" in by_dev:
+        n = by_dev["adverb_ly"]["raw_count"]
+        per_1k = n * 1000 / word_count
+        if per_1k > 15:
+            warnings.append(f"adverb_ly: {per_1k:.1f}/1k -ly adverbs (weak-writing marker)")
+        else:
+            passes.append("adverb_ly")
+
+    # Said-tags — dialogue attribution density.
+    if "said_tag" in by_dev:
+        n = by_dev["said_tag"]["raw_count"]
+        if n >= 30:
+            warnings.append(f"said_tag: {n} dialogue-attribution tags (consider context-based attribution)")
+        else:
+            passes.append("said_tag")
+
+    # Paragraph-length anomalies.
+    if "paragraph_length_anomaly" in by_dev:
+        n = by_dev["paragraph_length_anomaly"]["raw_count"]
+        if n >= 4:
+            warnings.append(f"paragraph_length_anomaly: {n} paragraphs with anomalous length (4x or <0.2x mean)")
+        else:
+            passes.append("paragraph_length_anomaly")
+
     if blockers:
         v = "red"
     elif warnings:
@@ -812,6 +1275,17 @@ def measure(md_path: Path, dimensions: dict | None = None) -> dict:
         "parenthetical_density": detect_parenthetical_density(prose),
         "fragment_density": detect_fragment_density(sents),
         "statement_then_reversal": detect_statement_then_reversal(sents),
+        # Phase 1.7 (same session, third detector batch):
+        "filter_word": detect_filter_words(prose),
+        "redundant_phrase": detect_redundant_phrases(prose),
+        "internal_anaphora": detect_internal_anaphora(sents),
+        "anadiplosis": detect_anadiplosis(sents),
+        "modal_verb": detect_modal_density(prose, doc.get("word_count", 0)),
+        "vague_quantifier": detect_vague_quantifiers(prose),
+        "abstract_noun": detect_abstract_nouns(prose),
+        "adverb_ly": detect_adverbs(prose),
+        "said_tag": detect_said_overuse(prose),
+        "paragraph_length_anomaly": detect_paragraph_length_anomaly(prose),
     }
 
     all_findings = [a for anns in findings_by_type.values() for a in anns]
