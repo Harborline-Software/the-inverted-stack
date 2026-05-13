@@ -101,7 +101,7 @@ On the morning of February fourteenth I trusted Wanjiru Kamau the way you trust 
 
 I closed the briefing at 08:34. I told them to be on station by 09:00. I told them, with a directness I did not soften, that nobody was going to die on this mission if I could help it, and that I was going to help it.
 
-And then I put the white bakery box on the wardroom table and told them to enjoy. The crew took the pastries quietly, in the way of people receiving a small kindness they had not expected and were not going to say anything about. Mikael took two.
+And then I put the white bakery box on the wardroom table and told them to enjoy. The crew took the pastries quietly, in the way of people who had been waiting for the box and were not going to admit it. Mikael took two.
 
 This is the part I do not write in the staff history.
 
