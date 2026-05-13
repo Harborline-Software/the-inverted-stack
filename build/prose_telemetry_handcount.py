@@ -702,6 +702,44 @@ _INTERNAL_ANAPHORA_FUNCTION_STARTS = {
 }
 
 
+# ─── Inference cascade (which meant / which was / which gave ...) ──────
+# Three-or-more clauses opening with the same "which <verb>" connector
+# inside a single sentence. This is the Bobiverse cascading-inference
+# move — intentional once, audibly looping at three. The single-word
+# internal_anaphora detector excludes "which" as a function-word start
+# (otherwise it would false-positive on inventories like "the bunk,
+# the desk, the bookshelf"), so this dedicated bigram-cascade detector
+# catches the specific looping pattern. CO ear-flagged 2026-05-13.
+
+_INFERENCE_CASCADE = re.compile(
+    r"\bwhich\s+(meant|was|were|made|gave|put|left|brought|caused|forced|"
+    r"allowed|kept|told|showed|sent|carried|placed|set|fixed|knew|did|"
+    r"is|has|had|would)\b[^.!?]{1,120}?"
+    r"\bwhich\s+\1\b[^.!?]{1,120}?"
+    r"\bwhich\s+\1\b",
+    re.IGNORECASE,
+)
+
+
+def detect_inference_cascade(prose: str) -> list[dict]:
+    """Three-or-more 'which <same-verb>' clause openers in a single
+    sentence. The signature Bobiverse cascading-inference move; intentional
+    once, audibly looping at three. Detects '...which meant X, which meant
+    Y, which meant Z' style chains."""
+    findings = []
+    for m in _INFERENCE_CASCADE.finditer(prose):
+        findings.append({
+            "type": "inference_cascade",
+            "connector": f"which {m.group(1).lower()}",
+            "match": m.group(0)[:200] + ("..." if len(m.group(0)) > 200 else ""),
+            "start_char": m.start(),
+            "end_char": m.end(),
+            "confidence": 0.9,
+            "rule_id": "handcount:inference_cascade.which_verb_triple",
+        })
+    return findings
+
+
 def detect_internal_anaphora(sents: list[str], min_repeats: int = 3) -> list[dict]:
     """Same CONTENT word starting 3+ comma-or-em-dash-delimited clauses
     within a single sentence. Function-word starts (the, which, a, etc.)
@@ -1887,6 +1925,12 @@ def verdict(metrics_list: list[dict], doc: dict, thresholds: dict) -> dict:
             passes.append("infinitive_phrase")
     if "gerund" in by_dev:
         passes.append("gerund")  # informational
+    if "inference_cascade" in by_dev:
+        n = by_dev["inference_cascade"]["raw_count"]
+        if n >= 1:
+            blockers.append(f"inference_cascade: {n} 'which X' triple-cascade(s) — cut to two or fewer")
+        else:
+            passes.append("inference_cascade")
 
     if blockers:
         v = "red"
@@ -2028,6 +2072,7 @@ def measure(md_path: Path, dimensions: dict | None = None) -> dict:
         "proper_noun": detect_proper_nouns(prose),
         "infinitive_phrase": detect_infinitives(prose),
         "gerund": detect_gerunds(prose),
+        "inference_cascade": detect_inference_cascade(prose),
     }
 
     # Apply held_lines annotations.
