@@ -75,6 +75,10 @@ These are the looping patterns CO's listen-test identified in ch01 and ch02. The
 
 7. **No commentary on Anna's own narration habits.** Lines like *"You may notice, in this account, that I keep doing this. I will not pretend I do not know that I keep doing it."* are Anna becoming self-conscious about her narrator-voice in front of the reader. Cut. The reader notices on their own; Anna doesn't need to flag it.
 
+8. **No echo-and-confirm closures.** A generic rule followed by a short personal sentence that echoes a key word from the rule and confirms Anna's alignment with it. Example: *"This is the kind of decision that defines you, if you let it. I had let it."* The verbal echo (*let it / let it*) plus the rule-to-personal pivot is the looping signature. Three fixes for any instance: (a) drop the rule entirely and keep the personal action; (b) drop the personal confirmation and trust the reader to apply the rule; (c) rephrase the personal sentence so it doesn't echo the rule's verb. CO ear-flagged this pattern 2026-05-13; instances in ch01 (*if you let it / I had let it*; *I had read them. I had considered them acceptable*) and ch02 (*I had a question. I had been waiting to ask it. I asked it.*) corrected in the same pass.
+
+   **Related: no statement-then-reversal personal confirmations.** *"A different commander, with the same notes, would have done what I did. I would do it again."* — the *I would do it again* is the same echo-confirm move dressed as a comparative. Same fix list.
+
 ## Paragraph endings — explicit list of OK landings
 
 A paragraph in Anna's narration can end on any of these:

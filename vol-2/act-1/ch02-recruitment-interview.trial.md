@@ -80,7 +80,7 @@ He reached for the printout of his own paper twice in the first ten minutes. Eac
 
 I made a note of three phrases that did not appear in his paper. *Trust-but-verify.* *Single-failure mode.* *The gauge in front of you.* All three were operational vocabulary. None were academic. I would come back to one of them.
 
-I had a question about the GC policy. I had been waiting to ask it. I asked it.
+There was a GC-policy question I had been waiting to ask, and I asked it.
 
 He answered without reaching for the printout. He said: *There is a kind of data where history can be GC'd, and a kind where it must not. Misclassifying is an operator sin, not an architecture bug. The classification is the implementer's responsibility.*
 

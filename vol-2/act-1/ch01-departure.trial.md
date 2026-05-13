@@ -31,7 +31,7 @@ The waitress brought a second cup at 07:14, which was four minutes earlier than 
 
 ---
 
-The walk from the bakery to the harbor was eleven minutes if you took the inland route and fifteen if you took the seafront, and I always took the seafront. There is a particular thing the wind does in Punta Arenas in February — comes off the Strait at a heading you would not choose for yourself, smelling of cold metal and not at all of salt — and I had decided years ago that I would rather be cold for fifteen minutes than warm for eleven. This is the kind of decision that defines you, if you let it. I had let it.
+The walk from the bakery to the harbor was eleven minutes if you took the inland route and fifteen if you took the seafront, and I always took the seafront. There is a particular thing the wind does in Punta Arenas in February — comes off the Strait at a heading you would not choose for yourself, smelling of cold metal and not at all of salt — and I had decided years ago that I would rather be cold for fifteen minutes than warm for eleven. The decision had outlasted any of the reasons I had originally given for it.
 
 I should say, since I have brought it up: I do not like cold. I have never liked cold. I prefer, when given the choice, to be warm — twenty-five degrees, sun on a wall, the air doing nothing in particular. I have spent twenty-three years going to the coldest places on Earth for a living, and the contradiction has stopped, at this point, embarrassing me. The fee for the cold is paid by the consortium. The consortium does not know this is what they are paying for.
 
@@ -173,11 +173,11 @@ Then I put my hands flat on the desk and did the next thing.
 
 The next thing was the firmware log.
 
-I had told the wardroom, that morning, that I had read all three alteration notes and considered them acceptable. I had. I am writing this on the other side of what happened, and I want to be clear: I had read them. I had considered them acceptable. They *were* acceptable, on the information available, in the framework I was using, with the trust I had in the people who had signed them. A different commander, with the same notes, would have done what I did. I would do it again.
+That morning at the briefing I had told the wardroom I had read all three alteration notes and considered them acceptable. The telling was accurate. The conclusion stood: on the information available, in the framework I was using, with the trust I had in the people who had signed them, the notes were acceptable. A different commander, with the same notes, would not have flagged them either.
 
 I read them again that night anyway. I do not know why. I am a person who reads things twice, and I had a quiet hour, and the firmware notes were on the desk. I read all three. I considered all three acceptable. I closed the laptop.
 
-I am going to tell you something now that I do not tell the consortium archive, which is that as I closed the laptop I had the smallest possible feeling about the second note. Not a thought. A feeling. The kind of thing a person who has been at sea for twenty-three years gets and then ignores, because if you respect every small feeling you have at sea you do nothing else. I ignored it. I went to sleep.
+I am going to tell you something now that I do not tell the consortium archive, which is that as I closed the laptop I had the smallest possible feeling about the second note. Not a thought. A feeling. The kind of thing a person who has been at sea for twenty-three years gets and then sets aside, because the alternative is to spend a career indulging every shadow at the periphery of competence. I set it aside. I went to sleep.
 
 I am not writing this here because the feeling was correct. The feeling was correct, and the feeling was also useless, because I could not have done anything with it at 22:51 on the fourteenth of February that I had not already done with the laptop open. I am writing this here because the staff history has the firmware log and the timestamps and the official record, and what the staff history does not have is the smallest possible feeling, and the smallest possible feeling is the part of this story I most want, in retrospect, to have respected.
 
