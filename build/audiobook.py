@@ -1151,12 +1151,21 @@ def narratable_text(md: str, source_only: bool = False,
     t = re.sub(r"(?<!\n)\n(?!\n)", " ", t)
 
     # Guarantee terminal punctuation on every non-empty line so sentence
-    # prosody doesn't run past headings and stripped list items.
+    # prosody doesn't run past headings and stripped list items. CO ear-
+    # flagged 2026-05-13: original version added a period after lines
+    # ending in a closing quote (e.g. "Joel." → "Joel.".") because it
+    # only looked at the final character; the period inside the quote was
+    # missed. Now also accepts terminal punctuation immediately before a
+    # closing quote.
     def _ensure_period(line: str) -> str:
         stripped = line.rstrip()
         if not stripped:
             return line
         if stripped[-1] in ".!?:,;":
+            return line
+        # Lines ending in a closing quote (straight or curly) — check
+        # the character just inside the quote for terminal punctuation.
+        if stripped[-1] in '"”\'’' and len(stripped) >= 2 and stripped[-2] in ".!?:,;":
             return line
         return stripped + "."
 
@@ -1174,23 +1183,41 @@ def narratable_text(md: str, source_only: bool = False,
     t = re.sub(r"[ \t]+", " ", t)
     t = re.sub(r"\n{3,}", "\n\n", t)
 
-    # Dialogue pauses: insert a short beat (..) between consecutive paragraphs
-    # that BOTH start with a quotation mark. Two characters trading dialogue
-    # render without this rule as a single uninterrupted stream and the
-    # listener cannot hear the speaker change. The ".." marker is 0.30s of
-    # silence via PAUSE_DURATIONS — enough to register a shift without
-    # dragging pacing. Runs late so smart-quote normalization, italic
-    # stripping, and whitespace collapse have all completed.
+    # Dialogue pauses: insert a short beat (..) between consecutive
+    # paragraphs that BOTH start with a quotation mark — but ONLY when
+    # at least one of the two lines is substantive (>= 6 words). For
+    # short alternating exchanges ("Joel." / "Doctor." / "Have you eaten."
+    # / "I have not."), the natural sentence-end prosody handles the
+    # speaker beat; injecting silence MP3s every line stacks frame-
+    # boundary artifacts and produces audible clicks in Kokoro output
+    # (CO ear-flagged 2026-05-13).
+    #
+    # The rule:
+    #   short / short → no injected pause (natural prosody is enough)
+    #   short / long  → inject pause (gives long line breathing room)
+    #   long / short  → inject pause (separates substantive line from response)
+    #   long / long   → inject pause (default case for most non-rapid dialogue)
+    import re as _re_dpause
+    def _word_count(text: str) -> int:
+        return len(_re_dpause.findall(r"\b[A-Za-z]+\b", text))
+    SHORT_DIALOGUE_THRESHOLD = 6
+
     paragraphs = t.split("\n\n")
     out_paras: list[str] = []
     prev_is_dialogue = False
+    prev_words = 0
     for para in paragraphs:
         stripped = para.strip()
         is_dialogue = bool(stripped) and stripped[0] == '"'
+        cur_words = _word_count(stripped) if is_dialogue else 0
         if prev_is_dialogue and is_dialogue:
-            out_paras.append("..")
+            both_short = (prev_words < SHORT_DIALOGUE_THRESHOLD and
+                          cur_words < SHORT_DIALOGUE_THRESHOLD)
+            if not both_short:
+                out_paras.append("..")
         out_paras.append(para)
         prev_is_dialogue = is_dialogue
+        prev_words = cur_words
     t = "\n\n".join(out_paras)
 
     return t.strip()
