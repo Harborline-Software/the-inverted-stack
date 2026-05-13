@@ -5,7 +5,7 @@
 
 # Chapter 1 — Departure
 
-I took my last breakfast alone in Punta Arenas on the fourteenth of February, at a bakery on Avenida Colón that did not know I was leaving, which was as it should be.
+I took my last breakfast alone in Punta Arenas on the fourteenth of February, at a bakery on Avenida Colón that knew today was the day and had not made anything of it, which was as it should be.
 
 The bakery was called *Panadería La Pastora*. The woman behind the counter — not the one the place was named for, but a niece — brought my coffee and the kuchen de murta without my having to ask for either. I had been there nine days, and she had concluded that I was the kind of customer who took her coffee black, was not interested in conversation, and would order the best pastry in the case every morning until something better arrived, which had not yet happened. She was correct on all three counts. I respected her for them, and I had been tipping accordingly.
 
