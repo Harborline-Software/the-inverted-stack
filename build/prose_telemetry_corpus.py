@@ -22,7 +22,7 @@ Pipeline:
      across the corpus. Per-1k-token normalization makes lengths comparable.
   4. Run `compare` against a chapter:
         python build/prose_telemetry_corpus.py compare \\
-            ch01-departure.trial \\
+            ch01-departure \\
             corpora/bobiverse/baseline.json
      Shows where this chapter sits in the corpus distribution per detector
      (z-score and percentile).

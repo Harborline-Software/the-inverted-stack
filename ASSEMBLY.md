@@ -91,8 +91,8 @@ Phase 5 cross-reference cleanup substantially complete (verified 2026-05-01: all
 
 | Chapter | File | Status | Words | Audio |
 |---|---|---|---:|---:|
-| Ch 1 — Departure | `vol-2/act-1/ch01-departure.md` | **icm/draft** (in flight 2026-05-05) | TBD | TBD |
-| Ch 2 — Recruitment Interview | `vol-2/act-1/ch02-recruitment-interview.md` | **icm/draft (v4 — gravity rail; listen-test APPROVED)** | 5,445 | 31.9 min |
+| Ch 1 — Departure | `vol-2/act-1/ch01-departure.md` | **icm/draft (v5 — Filchner / Bobiverse register; trial promoted to canonical 2026-05-13)** | 4,720 | 22:24 |
+| Ch 2 — Recruitment Interview | `vol-2/act-1/ch02-recruitment-interview.md` | **icm/draft (v5 — Filchner / Bobiverse register; trial promoted to canonical 2026-05-13)** | 6,180 | 31:30 |
 | Ch 3 — Drake Passage | `vol-2/act-1/ch03-drake-passage-ice-edge.md` | icm/outline (Act I dispatch authorized) | — | — |
 | Ch 4 — First Submersion | `vol-2/act-1/ch04-first-submersion.md` | icm/outline (Act I dispatch authorized) | — | — |
 | Ch 5 — Day-Twenty Realization | `vol-2/act-1/ch05-day-twenty-realization.md` | **icm/draft (prose-pass; listen-test APPROVED)** | 5,971 | 36.5 min |

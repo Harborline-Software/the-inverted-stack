@@ -245,7 +245,7 @@ BasedOnStyles = InvertedStack
     print(f"Vale config at: {vale_ini}")
     print()
     print("To use in VS Code: install the Vale extension and the rules apply automatically.")
-    print("To run from CLI: brew install vale; vale vol-2/act-1/ch01-departure.trial.md")
+    print("To run from CLI: brew install vale; vale vol-2/act-1/ch01-departure.md")
 
 
 def main() -> None:
