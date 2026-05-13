@@ -13,8 +13,6 @@ The kuchen de murta, on the fourteenth of February, had not been let down by its
 
 I would have walked fifteen blocks for this kuchen. I had, on day three, walked seven, because there was, briefly, a rumor of a *better* one, and I will not embarrass the rumor by reporting its source.
 
-On my way to the door the niece handed me a white bakery box, three dozen, an assortment, for the crew — because I had mentioned on day three that we sailed on the fourteenth and she had not forgotten. She would not let me pay for it. I left the price of three days of kuchen in the tip jar on the way out, which she pretended not to see.
-
 I read the news on my phone for thirty-six minutes — Chilean politics, the consortium's own press release about my own departure (which got two facts wrong and one fact aggressively right), and an article about a kindergarten teacher in Magadan who had won a national award for science education. Then I closed the phone and looked at the harbor through the window. The *Nansen* was the third hull from the left. From the bakery you could see her bow but not her name, which was, again, as it should be.
 
 I do not write about my mornings in the staff history, which is for the consortium archive and for whoever commands the next mission. What I had for breakfast is none of their business. But that morning is where I became the one who would walk onto the *Nansen*. You should know who I was before I did.
@@ -27,7 +25,9 @@ I drank the coffee.
 
 This is, I am told, what people mean when they say a person is composed. I find the word unhelpful. I had been awake since 04:30 and had already done the parts of the day that were difficult. By the time I sat down in the bakery I had nothing left to do but drink coffee and finish reading about the kindergarten teacher.
 
-The waitress brought a second cup at 07:14, which was four minutes earlier than I had asked for it, and I appreciated this so much that I left her a tip in two currencies.
+The niece brought a second cup at 07:14, which was four minutes earlier than I had asked for it, and I appreciated this so much that I left her a tip in two currencies.
+
+On my way to the door she handed me a white bakery box, three dozen, an assortment, for the crew — because I had mentioned on day three that we sailed on the fourteenth and she had not forgotten. She would not let me pay for it. I left the price of three days of kuchen in the tip jar on the way out, which she pretended not to see.
 
 ---
 
