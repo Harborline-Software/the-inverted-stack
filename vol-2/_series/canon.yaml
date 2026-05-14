@@ -100,11 +100,16 @@ characters:
     # TBD: full development
 
   la_pastora:
-    role: baker / namesake of the Punta Arenas bakery
+    role: namesake of the Punta Arenas bakery (great-grandmother generation)
     bakery_name: Panadería La Pastora
     relationships:
-      niece:
-        role: runs the counter
+      granddaughter:
+        role: runs the counter (granddaughter once removed from La Pastora; "the
+          granddaughter" in the prose)
+      grandmother:
+        role: present-day baker; "her grandmother" in the prose (Anna observes
+          "the granddaughter and her grandmother had brought the kuchen across
+          the line")
 
 objects:
   nansen:
@@ -122,8 +127,8 @@ objects:
   pastry_box:
     color: white
     source: Panadería La Pastora
-    contents: three dozen kuchen de murta (Anna's daily pastry; niece respects her taste)
-    given_by: niece at La Pastora
+    contents: three dozen kuchen de murta (Anna's daily pastry; granddaughter respects her taste)
+    given_by: granddaughter at La Pastora
     refused_payment: true
     given_for: crew of the Nansen
 
