@@ -380,3 +380,34 @@ promote-reject:
 .PHONY: check-stale
 check-stale:
 	$(PYTHON) build/check_stale.py
+
+# ============================================================================
+# Prose telemetry (galley/prose CLI)
+# ============================================================================
+# The `prose` CLI is the Phase 0.5 unified entry point that dispatches to
+# galley's prose-telemetry (detectors + meters + verdict) and story-canon
+# (continuity validation) packages. Installed into the prose-telemetry
+# venv inside galley. Override PROSE_BIN if galley lives elsewhere.
+
+PROSE_BIN ?= /Users/christopherwood/Projects/SunfishSoftware/galley/prose/lib/prose_telemetry/.venv/bin/prose
+
+.PHONY: prose-measure
+prose-measure:
+	@test -n "$(ch)" || (echo "Usage: make prose-measure ch=ch01" && exit 1)
+	@CHAPTER=$$(find vol-1 vol-2 -name "$(ch)-*.md" 2>/dev/null | head -1); \
+	test -n "$$CHAPTER" || (echo "No chapter found for ch=$(ch)" && exit 1); \
+	$(PROSE_BIN) measure $$CHAPTER $(EXTRA)
+
+.PHONY: prose-validate
+prose-validate:
+	@test -n "$(ch)" || (echo "Usage: make prose-validate ch=ch01" && exit 1)
+	@CHAPTER=$$(find vol-1 vol-2 -name "$(ch)-*.md" 2>/dev/null | head -1); \
+	test -n "$$CHAPTER" || (echo "No chapter found for ch=$(ch)" && exit 1); \
+	$(PROSE_BIN) validate $$CHAPTER $(EXTRA)
+
+.PHONY: prose-extract
+prose-extract:
+	@test -n "$(ch)" || (echo "Usage: make prose-extract ch=ch01" && exit 1)
+	@CHAPTER=$$(find vol-1 vol-2 -name "$(ch)-*.md" 2>/dev/null | head -1); \
+	test -n "$$CHAPTER" || (echo "No chapter found for ch=$(ch)" && exit 1); \
+	$(PROSE_BIN) extract $$CHAPTER $(EXTRA)
