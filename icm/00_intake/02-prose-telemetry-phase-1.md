@@ -12,13 +12,13 @@ related:
 
 # Prose-telemetry — Phase 1
 
-Build the v1 detector + meter pipeline in `galley/lib/prose_telemetry/`, per the locked architecture. v1 composes Freestylo (detectors) + StyloMetrix (meters) + spaCy (NLP base) + small custom detectors for what Freestylo doesn't cover.
+Build the v1 detector + meter pipeline in `galley/prose/lib/prose_telemetry/`, per the locked architecture. v1 composes Freestylo (detectors) + StyloMetrix (meters) + spaCy (NLP base) + small custom detectors for what Freestylo doesn't cover.
 
 ## What this item covers
 
 1. Evaluate Freestylo's coverage of the v1 detector list (anaphora, tautological self-equation, asyndeton, polysyndeton, tricolon, isocolon, epanorthosis).
 2. Evaluate StyloMetrix's meter output against the schema's `metrics[]` shape.
-3. Build the integration package at `galley/lib/prose_telemetry/`.
+3. Build the integration package at `galley/prose/lib/prose_telemetry/`.
 4. Wire a CLI: `python -m prose_telemetry --chapter <slug>` → writes `galley/build/<book>/output/qa/<chapter>.prose-metrics.json`.
 5. Run against all 18 Vol 2 chapters to generate the corpus baseline.
 

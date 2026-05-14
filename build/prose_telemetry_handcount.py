@@ -10,9 +10,10 @@ One-shot stdlib-only implementation of the v1 detector list from
      trial chapter for comparison against the old Vol 2 baseline.
 
 This is intentionally not the real platform — it's a calibration tool. Real
-platform lives at galley/lib/prose_telemetry/ once the engineering session
-ships Phase 1. Anything this script flags should also flag in the real
-platform; anything the real platform finds that this script misses is
+platform lives at galley/prose/lib/prose_telemetry/ (promoted from
+galley/lib/ as of 2026-05-14, ADR-0005) and absorbs this script as the
+stdlib tier in Phase 1. Anything this script flags should also flag in the
+real platform; anything the real platform finds that this script misses is
 fair game (this script can't do POS-based isocolon, distributed chiasmus,
 or any ML-tier detector).
 

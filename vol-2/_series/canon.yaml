@@ -1,7 +1,7 @@
 # The Filchner Dark — story canon
 #
 # Locked facts about characters, dates, objects, and places. The
-# story-canon validator (galley/lib/story_canon) reads this file and
+# story-canon validator (galley/prose/lib/story_canon) reads this file and
 # cross-checks chapter prose against it.
 #
 # Edit this file when:

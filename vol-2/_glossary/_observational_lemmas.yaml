@@ -14,7 +14,7 @@
 #   - Plus a few canonical polar/expedition-domain nouns even at lower Nansen density
 #
 # Phase 0 ships before the prose-telemetry platform; Phase 1
-# (galley/lib/prose_telemetry/) absorbs as the seed for an observational-density
+# (galley/prose/lib/prose_telemetry/) absorbs as the seed for an observational-density
 # detector module.
 
 version: 1

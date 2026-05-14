@@ -2,7 +2,7 @@
 #
 # Phase 0 ships before the prose-telemetry platform (Monday's engineering
 # session) and lives in this repo's build/ directory. Phase 1 replaces this
-# YAML with NLTK / spaCy lemmatization inside galley/lib/prose_telemetry/.
+# YAML with NLTK / spaCy lemmatization inside galley/prose/lib/prose_telemetry/.
 #
 # Each entry has a "lemma" key and an explicit "forms" list. Forms are
 # matched as case-insensitive whole-word tokens. No fuzzy matching;

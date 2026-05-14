@@ -7,7 +7,7 @@ density; compares to Vol 2 baseline; flags chapters where any family exceeds
 to surface fatigue candidates beyond the curated YAML.
 
 Phase 0 lives in this repo's build/ directory. Phase 1
-(galley/lib/prose_telemetry/) absorbs this as one detector among many in the
+(galley/prose/lib/prose_telemetry/) absorbs this as one detector among many in the
 full detector / meter architecture per
 .pao-inbox/_decisions/2026-05-08-prose-telemetry-platform.md.
 

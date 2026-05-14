@@ -91,4 +91,4 @@ Hand-implementing the detectors with stdlib-only revealed three gaps the enginee
 - `build/prose_telemetry_handcount.py` — the stdlib hand-counter (this script)
 - `galley/build/the-inverted-stack/output/qa/ch01-departure.trial.prose-metrics.json` — the measurement artifact
 
-Both committable. The handcount script lives in this book repo (it's a calibration tool tied to this manuscript); the production tool will live in `galley/lib/prose_telemetry/` once Phase 1 ships.
+Both committable. The handcount script lives in this book repo (it's a calibration tool tied to this manuscript); the production tool will live in `galley/prose/lib/prose_telemetry/` once Phase 1 ships.

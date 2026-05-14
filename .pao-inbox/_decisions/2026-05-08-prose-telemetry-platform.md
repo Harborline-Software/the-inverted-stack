@@ -65,11 +65,11 @@ The `anti-ai-tells` skill is a sibling registry — some patterns overlap (tauto
 
 | Tier | Devices | Implementation | Compute | Lives in |
 |---|---|---|---|---|
-| **Easy** | anaphora, tautological self-equation, asyndeton, polysyndeton, literal-tricolon, sentence-length distribution | Pure Python regex on segmented sentences | CPU; sub-100ms per chapter | `galley/lib/prose_telemetry/detectors/` |
+| **Easy** | anaphora, tautological self-equation, asyndeton, polysyndeton, literal-tricolon, sentence-length distribution | Pure Python regex on segmented sentences | CPU; sub-100ms per chapter | `galley/prose/lib/prose_telemetry/detectors/` |
 | **Medium** | isocolon (parallel grammatical structure), antithesis, epanorthosis, hyperbaton, distributed-tricolon | spaCy POS + dependency parsing | CPU; spaCy model load adds ~500ms; per-chapter ~2-5s | Same |
 | **Hard** | chiasmus (distributed), metonymy, metaphor / simile detection, hypallage | Transformer-based; deferred to research-tier | **GPU required** | `galley/api/` (when added) — same routing pattern as Inference Studio TTS/STT |
 
-**Layered to add capabilities over time** per CO directive 2026-05-08: each detector is a plug-and-play module registered against a device-ID. Adding a new detector = drop a Python file into `galley/lib/prose_telemetry/detectors/<device_id>.py` exposing a standard interface (`detect(doc: spacy.Doc) -> list[Span]`). The aggregator discovers and runs all registered detectors automatically.
+**Layered to add capabilities over time** per CO directive 2026-05-08: each detector is a plug-and-play module registered against a device-ID. Adding a new detector = drop a Python file into `galley/prose/lib/prose_telemetry/detectors/<device_id>.py` exposing a standard interface (`detect(doc: spacy.Doc) -> list[Span]`). The aggregator discovers and runs all registered detectors automatically.
 
 ### Layer 3 — Aggregator + exporter (revised schema 2026-05-08)
 
@@ -214,7 +214,7 @@ Per CO directive 2026-05-08:
 
 > *"If we need a GPU we will need to add it under the galley/api or similar unless it is important enough to be its own repo under SunfishSoftware."*
 
-**v1 placement: lives inside galley/** as `galley/lib/prose_telemetry/` (Python package). CPU-tier detectors run in-process within galley's existing build/render pipeline.
+**v1 placement: lives inside galley/** as `galley/prose/lib/prose_telemetry/` (Python package). CPU-tier detectors run in-process within galley's existing build/render pipeline.
 
 **GPU-tier carve-out: routes through `galley/api/`** when needed (transformer-based hard-tier detectors). Same routing pattern as Inference Studio's TTS/STT — galley/api hosts the GPU-bound endpoints; the prose-telemetry pipeline calls them like any other API. This way galley/api becomes the multi-book GPU-compute service over time.
 
