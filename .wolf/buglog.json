@@ -5339,6 +5339,166 @@
       "related_bugs": [],
       "occurrences": 1,
       "last_seen": "2026-05-14T13:24:41.652Z"
+    },
+    {
+      "id": "bug-330",
+      "timestamp": "2026-05-15T21:57:53.375Z",
+      "error_message": "Wrong reference: question should be ground",
+      "file": "vol-2/act-1/ch02-recruitment-interview.md",
+      "root_cause": "Used \"question\" instead of \"ground\"",
+      "fix": "Changed question → ground",
+      "tags": [
+        "auto-detected",
+        "wrong-reference",
+        "md"
+      ],
+      "related_bugs": [],
+      "occurrences": 6,
+      "last_seen": "2026-05-15T22:03:44.034Z"
+    },
+    {
+      "id": "bug-331",
+      "timestamp": "2026-05-15T22:14:40.855Z",
+      "error_message": "Significant refactor of ",
+      "file": "../galley/prose/tests/test_repetition.py",
+      "root_cause": "4 lines replaced/restructured",
+      "fix": "Rewrote 23→27 lines (4 removed)",
+      "tags": [
+        "auto-detected",
+        "refactor",
+        "py"
+      ],
+      "related_bugs": [],
+      "occurrences": 1,
+      "last_seen": "2026-05-15T22:14:40.855Z"
+    },
+    {
+      "id": "bug-332",
+      "timestamp": "2026-05-15T22:26:31.833Z",
+      "error_message": "Significant refactor of ",
+      "file": "../galley/prose/lib/prose_telemetry/src/prose_telemetry/spacy_detectors.py",
+      "root_cause": "2 lines replaced/restructured",
+      "fix": "Rewrote 17→30 lines (2 removed) | Also: def analyze_chapter(nlp: Language, md_path: Path |; produces, so the dashboard / drift tools consume i",
+      "tags": [
+        "auto-detected",
+        "refactor",
+        "py"
+      ],
+      "related_bugs": [],
+      "occurrences": 2,
+      "last_seen": "2026-05-15T22:29:18.360Z"
+    },
+    {
+      "id": "bug-333",
+      "timestamp": "2026-05-15T22:27:40.862Z",
+      "error_message": "Missing error handling in unknown",
+      "file": "book.editorial.yaml",
+      "root_cause": "Code path had no error handling — exceptions would propagate uncaught",
+      "fix": "Added try/catch block",
+      "tags": [
+        "auto-detected",
+        "error-handling",
+        "yaml"
+      ],
+      "related_bugs": [],
+      "occurrences": 1,
+      "last_seen": "2026-05-15T22:27:40.862Z"
+    },
+    {
+      "id": "bug-334",
+      "timestamp": "2026-05-15T22:39:13.572Z",
+      "error_message": "Significant refactor of ",
+      "file": "../galley/prose/lib/prose_telemetry/src/prose_telemetry/spacy_detectors.py",
+      "root_cause": "6 lines replaced/restructured",
+      "fix": "Rewrote 22→78 lines (6 removed) | Also: # ─── Built-in stopword defaults ─────────────────; # These lemmas are book-universal noise for the sp | Also: stopword_lemmas: set[str] | None = None,; \"\"\"Nouns whose form suggests they were derived fro",
+      "tags": [
+        "auto-detected",
+        "refactor",
+        "py"
+      ],
+      "related_bugs": [],
+      "occurrences": 3,
+      "last_seen": "2026-05-15T22:43:59.973Z"
+    },
+    {
+      "id": "bug-335",
+      "timestamp": "2026-05-15T22:39:54.716Z",
+      "error_message": "Significant refactor of ",
+      "file": "book.editorial.yaml",
+      "root_cause": "47 lines replaced/restructured",
+      "fix": "Rewrote 65→44 lines (47 removed)",
+      "tags": [
+        "auto-detected",
+        "refactor",
+        "yaml"
+      ],
+      "related_bugs": [],
+      "occurrences": 1,
+      "last_seen": "2026-05-15T22:39:54.716Z"
+    },
+    {
+      "id": "bug-336",
+      "timestamp": "2026-05-15T22:40:51.261Z",
+      "error_message": "Wrong operator: == should be <=",
+      "file": "../galley/prose/tests/test_voice.py",
+      "root_cause": "Used \"==\" instead of \"<=\"",
+      "fix": "Changed operator == → <=",
+      "tags": [
+        "auto-detected",
+        "operator-fix",
+        "py"
+      ],
+      "related_bugs": [],
+      "occurrences": 1,
+      "last_seen": "2026-05-15T22:40:51.261Z"
+    },
+    {
+      "id": "bug-337",
+      "timestamp": "2026-05-15T22:44:39.403Z",
+      "error_message": "Significant refactor of ",
+      "file": "../galley/prose/lib/prose_telemetry/src/prose_telemetry/detectors/spacy/nominalization.py",
+      "root_cause": "7 lines replaced/restructured",
+      "fix": "Rewrote 48→69 lines (7 removed)",
+      "tags": [
+        "auto-detected",
+        "refactor",
+        "py"
+      ],
+      "related_bugs": [],
+      "occurrences": 1,
+      "last_seen": "2026-05-15T22:44:39.403Z"
+    },
+    {
+      "id": "bug-338",
+      "timestamp": "2026-05-15T22:45:12.825Z",
+      "error_message": "Significant refactor of ",
+      "file": "../galley/prose/lib/prose_telemetry/src/prose_telemetry/cli.py",
+      "root_cause": "4 lines replaced/restructured",
+      "fix": "Rewrote 15→26 lines (4 removed) | Also: n = by_dev[\"distributed_chiasmus\"][\"raw_count\"]; if n >= 5: | Also: merged[\"metrics\"].append({; })",
+      "tags": [
+        "auto-detected",
+        "refactor",
+        "py"
+      ],
+      "related_bugs": [],
+      "occurrences": 3,
+      "last_seen": "2026-05-15T22:48:47.045Z"
+    },
+    {
+      "id": "bug-339",
+      "timestamp": "2026-05-15T22:45:41.769Z",
+      "error_message": "Significant refactor of ",
+      "file": "book.editorial.yaml",
+      "root_cause": "26 lines replaced/restructured",
+      "fix": "Rewrote 44→55 lines (26 removed)",
+      "tags": [
+        "auto-detected",
+        "refactor",
+        "yaml"
+      ],
+      "related_bugs": [],
+      "occurrences": 1,
+      "last_seen": "2026-05-15T22:45:41.769Z"
     }
   ]
 }

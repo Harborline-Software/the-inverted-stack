@@ -1,7 +1,7 @@
 # anatomy.md
 
-> Auto-maintained by OpenWolf. Last scanned: 2026-05-14T13:24:48.721Z
-> Files: 531 tracked | Anatomy hits: 0 | Misses: 0
+> Auto-maintained by OpenWolf. Last scanned: 2026-05-15T22:57:30.647Z
+> Files: 542 tracked | Anatomy hits: 0 | Misses: 0
 
 ## ../../../../../tmp/
 
@@ -164,6 +164,34 @@
 
 - `install.sh` — install.sh — set up Galley as a macOS background service (~1937 tok)
 
+## ../galley/prose/
+
+- `CHANGELOG.md` — prose — changelog (~4232 tok)
+
+## ../galley/prose/books/
+
+- `README.md` — Project documentation (~1878 tok)
+
+## ../galley/prose/lib/prose_telemetry/src/prose_telemetry/
+
+- `cli.py` — Unified prose-telemetry CLI — runs stdlib + spaCy detectors and writes (~4698 tok)
+- `spacy_detectors.py` — spaCy-tier detectors for prose-telemetry. (~5074 tok)
+
+## ../galley/prose/lib/prose_telemetry/src/prose_telemetry/detectors/repetition/
+
+- `__init__.py` — Repetition + echo + self-correction detector pack — Phase 8 batch 2a. (~515 tok)
+- `redundant_explicit_predicate.py` — Redundant explicit predicate — short echo sentence re-states a predicate (~2418 tok)
+
+## ../galley/prose/lib/prose_telemetry/src/prose_telemetry/detectors/spacy/
+
+- `distributed_chiasmus.py` — Distributed chiasmus — ABBA lemma reversal across a windowed range. (~554 tok)
+- `nominalization.py` — Nominalization density — nouns derived from verbs (tion/sion/ment/...). (~737 tok)
+
+## ../galley/prose/tests/
+
+- `test_repetition.py` — Tests for the repetition/echo detector pack (Phase 8 batch 2a). (~2256 tok)
+- `test_voice.py` — Tests for the voice detector pack (galley/prose Phase 4). (~2745 tok)
+
 ## ../galley/services/book-server/
 
 - `server.js` — __dirname: loadLibrary, saveLibrary, readMp3TtsTags + 10 more (~18571 tok)
@@ -174,6 +202,7 @@
 - `.gitignore` — Git ignore rules (~211 tok)
 - `ASSEMBLY.md` — Assembly Manifest (~4257 tok)
 - `book-structure.md` — BOOK-STRUCTURE (~8079 tok)
+- `book.editorial.yaml` — Editorial profile for the-inverted-stack. (~1885 tok)
 - `CLAUDE.md` — OpenWolf (~3500 tok)
 - `LICENSE` (~204 tok)
 - `pytest.ini` (~34 tok)
@@ -301,7 +330,7 @@
 - `2026-05-08-prose-telemetry-platform.md` — Prose Telemetry Platform — "OpenTelemetry for Prose" (~5290 tok)
 - `2026-05-13-vol2-bobiverse-pull-voice-tuning.md` — Vol 2 — Bobiverse-pull voice tuning (~1722 tok)
 - `2026-05-14-plot-grid-tool-plan.md` — Plot-grid tool — UPF v1.2 plan (~6985 tok)
-- `2026-05-14-prose-telemetry-metric-improvements-plan.md` — Prose-telemetry metric improvements (~4422 tok)
+- `2026-05-14-prose-telemetry-metric-improvements-plan.md` — Prose-telemetry metric improvements (~7737 tok)
 - `antarctic-vision-chapter-concept-2026-04-30.md` — Antarctic Vision Chapter — Concept State and Resume Instructions (~5210 tok)
 - `co-seat-deferred-structural-decisions-2026-04-30.md` — CO-Seat Deferred Structural Decisions — Ch11 + Ch15 (~2015 tok)
 
@@ -889,10 +918,10 @@
 
 ## vol-2/act-1/
 
-- `ch01-departure.md` — Chapter 1 — Departure (~6188 tok)
+- `ch01-departure.md` — Chapter 1 — Departure (~6163 tok)
 - `ch01-departure.trial.md` — Chapter 1 — Departure (~6174 tok)
 - `ch02-recruitment-interview.held-lines.json` (~747 tok)
-- `ch02-recruitment-interview.md` — Chapter 2 — The Recruitment Interview (~8248 tok)
+- `ch02-recruitment-interview.md` — Chapter 2 — The Recruitment Interview (~8144 tok)
 - `ch02-recruitment-interview.trial.held-lines.json` (~202 tok)
 - `ch02-recruitment-interview.trial.md` — Chapter 2 — The Recruitment Interview (~8506 tok)
 

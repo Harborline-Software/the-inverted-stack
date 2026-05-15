@@ -3664,3 +3664,98 @@
 | 09:24 | Edited ../galley/apps/web/src/pages/library/LibraryPage.jsx | added optional chaining | ~584 |
 | 09:24 | Edited ../galley/apps/web/src/styles/App.css | expanded (+30 lines) | ~208 |
 | 09:25 | Session end: 85 writes across 10 files (library.json, server.js, ch02-recruitment-interview.md, 2026-05-14-plot-grid-tool-plan.md, ch01-departure.md) | 13 reads | ~76245 tok |
+| 21:19 | Session end: 85 writes across 10 files (library.json, server.js, ch02-recruitment-interview.md, 2026-05-14-plot-grid-tool-plan.md, ch01-departure.md) | 13 reads | ~76245 tok |
+| 20:30 | build(prose): retire 3 handcount duplicates (filter_words/motif_overuse/self_referential_frame) → migrate to book.editorial.yaml + galley/prose registry | book.editorial.yaml (new), build/prose_telemetry_handcount.py (-110 lines) | committed 6c909be, pushed; validated on vol-2 ch01 (5/0/5 match baseline; verdict=red blocker self_referential_frame≥4) | ~3000 |
+| 17:40 | Session end: 85 writes across 10 files (library.json, server.js, ch02-recruitment-interview.md, 2026-05-14-plot-grid-tool-plan.md, ch01-departure.md) | 13 reads | ~76245 tok |
+| 17:41 | Session end: 85 writes across 10 files (library.json, server.js, ch02-recruitment-interview.md, 2026-05-14-plot-grid-tool-plan.md, ch01-departure.md) | 13 reads | ~76245 tok |
+| 17:42 | Session end: 85 writes across 10 files (library.json, server.js, ch02-recruitment-interview.md, 2026-05-14-plot-grid-tool-plan.md, ch01-departure.md) | 13 reads | ~76245 tok |
+| 17:48 | Session end: 85 writes across 10 files (library.json, server.js, ch02-recruitment-interview.md, 2026-05-14-plot-grid-tool-plan.md, ch01-departure.md) | 14 reads | ~76245 tok |
+| 17:55 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~100 |
+| 17:55 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~91 |
+| 17:56 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~148 |
+| 17:56 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~104 |
+| 17:57 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~145 |
+| 17:57 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~67 |
+| 17:57 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~40 |
+| 17:57 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~58 |
+| 17:57 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~48 |
+| 17:57 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~79 |
+| 17:57 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~154 |
+| 17:57 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~100 |
+| 17:57 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~59 |
+| 17:58 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~47 |
+| 17:58 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~103 |
+| 17:58 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~29 |
+| 17:58 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~80 |
+| 17:58 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~148 |
+| 17:58 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~34 |
+| 17:58 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~118 |
+| 17:59 | Edited vol-2/act-1/ch02-recruitment-interview.md | 3→3 lines | ~124 |
+| 17:59 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~67 |
+| 18:00 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~58 |
+| 18:00 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~123 |
+| 18:00 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~58 |
+| 18:00 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~157 |
+| 18:00 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~91 |
+| 18:00 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~86 |
+| 18:01 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~205 |
+| 18:01 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~152 |
+| 18:02 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~56 |
+| 18:02 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~60 |
+| 18:02 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~77 |
+| 18:02 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~105 |
+| 18:02 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~96 |
+| 18:02 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~123 |
+| 18:03 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~24 |
+| 18:03 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~90 |
+| 18:04 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~133 |
+| 18:05 | Session end: 124 writes across 10 files (library.json, server.js, ch02-recruitment-interview.md, 2026-05-14-plot-grid-tool-plan.md, ch01-departure.md) | 14 reads | ~80138 tok |
+| 18:10 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~60 |
+| 18:10 | Session end: 125 writes across 10 files (library.json, server.js, ch02-recruitment-interview.md, 2026-05-14-plot-grid-tool-plan.md, ch01-departure.md) | 14 reads | ~80203 tok |
+| 18:13 | Created ../galley/prose/lib/prose_telemetry/src/prose_telemetry/detectors/repetition/redundant_explicit_predicate.py | — | ~2418 |
+| 18:14 | Edited ../galley/prose/lib/prose_telemetry/src/prose_telemetry/detectors/repetition/__init__.py | expanded (+9 lines) | ~364 |
+| 18:14 | Edited ../galley/prose/tests/test_repetition.py | modified test_repetition_pack_registered() | ~259 |
+| 18:15 | Edited ../galley/prose/tests/test_repetition.py | modified test_echo_and_confirm_silent_when_confirm_too_long() | ~1164 |
+| 18:16 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~77 |
+| 18:16 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~47 |
+| 18:17 | Session end: 131 writes across 13 files (library.json, server.js, ch02-recruitment-interview.md, 2026-05-14-plot-grid-tool-plan.md, ch01-departure.md) | 18 reads | ~84541 tok |
+| 18:20 | Edited .pao-inbox/_decisions/2026-05-14-prose-telemetry-metric-improvements-plan.md | 12→15 lines | ~224 |
+| 18:21 | Edited .pao-inbox/_decisions/2026-05-14-prose-telemetry-metric-improvements-plan.md | modified pair() | ~1591 |
+| 18:21 | Session end: 133 writes across 13 files (library.json, server.js, ch02-recruitment-interview.md, 2026-05-14-plot-grid-tool-plan.md, ch01-departure.md) | 19 reads | ~90907 tok |
+| 18:23 | Edited vol-2/act-1/ch01-departure.md | inline fix | ~88 |
+| 18:23 | Edited vol-2/act-1/ch01-departure.md | inline fix | ~52 |
+| 18:23 | Edited vol-2/act-1/ch01-departure.md | inline fix | ~12 |
+| 18:23 | Edited vol-2/act-1/ch01-departure.md | inline fix | ~97 |
+| 18:23 | Edited vol-2/act-1/ch01-departure.md | inline fix | ~36 |
+| 18:26 | Edited ../galley/prose/lib/prose_telemetry/src/prose_telemetry/spacy_detectors.py | modified detect_distributed_chiasmus() | ~645 |
+| 18:26 | Edited ../galley/prose/lib/prose_telemetry/src/prose_telemetry/spacy_detectors.py | modified detect_nominalizations() | ~344 |
+| 18:26 | Edited ../galley/prose/lib/prose_telemetry/src/prose_telemetry/detectors/spacy/nominalization.py | modified detect_nominalization() | ~440 |
+| 18:27 | Edited ../galley/prose/lib/prose_telemetry/src/prose_telemetry/detectors/spacy/distributed_chiasmus.py | modified detect_distributed_chiasmus() | ~487 |
+| 18:27 | Edited book.editorial.yaml | expanded (+66 lines) | ~507 |
+| 18:29 | Edited ../galley/prose/lib/prose_telemetry/src/prose_telemetry/spacy_detectors.py | modified analyze_chapter() | ~329 |
+| 18:29 | Edited ../galley/prose/lib/prose_telemetry/src/prose_telemetry/cli.py | expanded (+9 lines) | ~207 |
+| 18:30 | Edited vol-2/act-1/ch01-departure.md | inline fix | ~36 |
+| 18:31 | Session end: 146 writes across 18 files (library.json, server.js, ch02-recruitment-interview.md, 2026-05-14-plot-grid-tool-plan.md, ch01-departure.md) | 24 reads | ~94208 tok |
+| 18:39 | Edited ../galley/prose/lib/prose_telemetry/src/prose_telemetry/spacy_detectors.py | vocabulary() → parts() | ~1007 |
+| 18:39 | Edited ../galley/prose/lib/prose_telemetry/src/prose_telemetry/spacy_detectors.py | modified detect_nominalizations() | ~222 |
+| 18:39 | Edited book.editorial.yaml | reduced (-21 lines) | ~636 |
+| 18:40 | Edited ../galley/prose/tests/test_voice.py | modified test_voice_pack_registers_three_detectors() | ~138 |
+| 18:41 | Session end: 150 writes across 19 files (library.json, server.js, ch02-recruitment-interview.md, 2026-05-14-plot-grid-tool-plan.md, ch01-departure.md) | 25 reads | ~96211 tok |
+| 18:43 | Edited ../galley/prose/lib/prose_telemetry/src/prose_telemetry/spacy_detectors.py | expanded (+21 lines) | ~1020 |
+| 18:43 | Edited ../galley/prose/lib/prose_telemetry/src/prose_telemetry/spacy_detectors.py | modified detect_distributed_chiasmus() | ~826 |
+| 18:43 | Edited ../galley/prose/lib/prose_telemetry/src/prose_telemetry/spacy_detectors.py | modified detect_nominalizations() | ~632 |
+| 18:44 | Edited ../galley/prose/lib/prose_telemetry/src/prose_telemetry/spacy_detectors.py | modified analyze_chapter() | ~383 |
+| 18:44 | Edited ../galley/prose/lib/prose_telemetry/src/prose_telemetry/detectors/spacy/nominalization.py | modified detect_nominalization() | ~737 |
+| 18:44 | Edited ../galley/prose/lib/prose_telemetry/src/prose_telemetry/detectors/spacy/distributed_chiasmus.py | modified detect_distributed_chiasmus() | ~553 |
+| 18:45 | Edited ../galley/prose/lib/prose_telemetry/src/prose_telemetry/cli.py | modified in() | ~355 |
+| 18:45 | Edited book.editorial.yaml | expanded (+11 lines) | ~852 |
+| 18:47 | Edited ../galley/prose/lib/prose_telemetry/src/prose_telemetry/spacy_detectors.py | modified items() | ~391 |
+| 18:47 | Edited ../galley/prose/lib/prose_telemetry/src/prose_telemetry/cli.py | expanded (+10 lines) | ~237 |
+| 18:48 | Edited ../galley/prose/lib/prose_telemetry/src/prose_telemetry/cli.py | modified get() | ~224 |
+| 18:49 | Session end: 161 writes across 19 files (library.json, server.js, ch02-recruitment-interview.md, 2026-05-14-plot-grid-tool-plan.md, ch01-departure.md) | 25 reads | ~102421 tok |
+| 18:54 | Session end: 161 writes across 19 files (library.json, server.js, ch02-recruitment-interview.md, 2026-05-14-plot-grid-tool-plan.md, ch01-departure.md) | 25 reads | ~102421 tok |
+| 18:54 | Edited ../galley/prose/books/README.md | 2→4 lines | ~59 |
+| 18:55 | Edited ../galley/prose/books/README.md | expanded (+114 lines) | ~1248 |
+| 18:56 | Edited ../galley/prose/CHANGELOG.md | modified limitations() | ~904 |
+| 18:56 | Edited .pao-inbox/_decisions/2026-05-14-prose-telemetry-metric-improvements-plan.md | 15→16 lines | ~403 |
+| 18:57 | Edited .pao-inbox/_decisions/2026-05-14-prose-telemetry-metric-improvements-plan.md | modified append() | ~1915 |
