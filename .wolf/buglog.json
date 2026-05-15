@@ -4843,6 +4843,502 @@
       "related_bugs": [],
       "occurrences": 3,
       "last_seen": "2026-05-13T12:50:01.581Z"
+    },
+    {
+      "id": "bug-299",
+      "timestamp": "2026-05-13T14:00:58.635Z",
+      "error_message": "Significant refactor of ",
+      "file": "build/prose_telemetry_handcount.py",
+      "root_cause": "7 lines replaced/restructured",
+      "fix": "Rewrote 25→40 lines (7 removed) | Also: if n >= 3:; blockers.append(f\"lexical_chain_loop: {n} paragrap",
+      "tags": [
+        "auto-detected",
+        "refactor",
+        "py"
+      ],
+      "related_bugs": [],
+      "occurrences": 2,
+      "last_seen": "2026-05-13T14:02:06.409Z"
+    },
+    {
+      "id": "bug-300",
+      "timestamp": "2026-05-13T14:18:10.376Z",
+      "error_message": "Wrong return value",
+      "file": "build/prose_telemetry_handcount.py",
+      "root_cause": "Was returning: re.findall(r\"[A-Za-z][A-Za-z'-]*\", text)",
+      "fix": "Now returns: re.findall(r\"[^\\W\\d_]+(?:[''’-][^\\W\\d_]+)*\", text,",
+      "tags": [
+        "auto-detected",
+        "return-value",
+        "py"
+      ],
+      "related_bugs": [],
+      "occurrences": 1,
+      "last_seen": "2026-05-13T14:18:10.376Z"
+    },
+    {
+      "id": "bug-301",
+      "timestamp": "2026-05-13T14:21:06.660Z",
+      "error_message": "Significant refactor of ",
+      "file": "build/prose_telemetry_handcount.py",
+      "root_cause": "13 lines replaced/restructured",
+      "fix": "Rewrote 37→49 lines (13 removed) | Also: # New 2026-05-13 (later in same session):; # Phase 1.7 (same session, third detector batch): | Also: \"raw_count\": len(anns),; \"count_per_1k_tokens\": per_1k(len(anns), total_w), | Also: \"_schema_version\": 2,; \"_schema_status\": \"handcount-pilot — stdlib-only v | Also: \"\"\"Annotate findings whose span is inside any held; Returns (updated_findings, held_count).\"\"\"",
+      "tags": [
+        "auto-detected",
+        "refactor",
+        "py"
+      ],
+      "related_bugs": [],
+      "occurrences": 5,
+      "last_seen": "2026-05-13T14:27:14.654Z"
+    },
+    {
+      "id": "bug-302",
+      "timestamp": "2026-05-13T14:36:10.521Z",
+      "error_message": "Wrong reference: QA_DIR should be noqa",
+      "file": "build/prose_telemetry_corpus.py",
+      "root_cause": "Used \"QA_DIR\" instead of \"noqa\"",
+      "fix": "Changed QA_DIR → noqa",
+      "tags": [
+        "auto-detected",
+        "wrong-reference",
+        "py"
+      ],
+      "related_bugs": [],
+      "occurrences": 1,
+      "last_seen": "2026-05-13T14:36:10.521Z"
+    },
+    {
+      "id": "bug-303",
+      "timestamp": "2026-05-13T16:56:17.684Z",
+      "error_message": "Missing error handling in detect_inference_cascade",
+      "file": "build/prose_telemetry_handcount.py",
+      "root_cause": "Code path had no error handling — exceptions would propagate uncaught",
+      "fix": "Added try/catch block",
+      "tags": [
+        "auto-detected",
+        "error-handling",
+        "py"
+      ],
+      "related_bugs": [],
+      "occurrences": 1,
+      "last_seen": "2026-05-13T16:56:17.684Z"
+    },
+    {
+      "id": "bug-304",
+      "timestamp": "2026-05-13T17:07:07.828Z",
+      "error_message": "Missing error handling in detect_proximity_echo",
+      "file": "build/prose_telemetry_handcount.py",
+      "root_cause": "Code path had no error handling — exceptions would propagate uncaught",
+      "fix": "Added try/catch block",
+      "tags": [
+        "auto-detected",
+        "error-handling",
+        "py"
+      ],
+      "related_bugs": [],
+      "occurrences": 1,
+      "last_seen": "2026-05-13T17:07:07.828Z"
+    },
+    {
+      "id": "bug-305",
+      "timestamp": "2026-05-13T18:18:01.618Z",
+      "error_message": "Wrong reference: bed should be desk",
+      "file": "vol-2/act-1/ch01-departure.trial.md",
+      "root_cause": "Used \"bed\" instead of \"desk\"",
+      "fix": "Changed bed → desk",
+      "tags": [
+        "auto-detected",
+        "wrong-reference",
+        "md"
+      ],
+      "related_bugs": [],
+      "occurrences": 1,
+      "last_seen": "2026-05-13T18:18:01.618Z"
+    },
+    {
+      "id": "bug-306",
+      "timestamp": "2026-05-13T19:10:01.835Z",
+      "error_message": "Wrong reference: granddaughter should be niece",
+      "file": "vol-2/act-1/ch01-departure.trial.md",
+      "root_cause": "Used \"granddaughter\" instead of \"niece\"",
+      "fix": "Changed granddaughter → niece",
+      "tags": [
+        "auto-detected",
+        "wrong-reference",
+        "md"
+      ],
+      "related_bugs": [],
+      "occurrences": 4,
+      "last_seen": "2026-05-13T19:10:28.380Z"
+    },
+    {
+      "id": "bug-307",
+      "timestamp": "2026-05-13T20:04:28.211Z",
+      "error_message": "Significant refactor of ",
+      "file": "../galley/lib/story_canon/src/story_canon/extractors.py",
+      "root_cause": "5 lines replaced/restructured",
+      "fix": "Rewrote 13→24 lines (5 removed)",
+      "tags": [
+        "auto-detected",
+        "refactor",
+        "py"
+      ],
+      "related_bugs": [],
+      "occurrences": 1,
+      "last_seen": "2026-05-13T20:04:28.211Z"
+    },
+    {
+      "id": "bug-308",
+      "timestamp": "2026-05-13T20:05:25.207Z",
+      "error_message": "Wrong reference: fourth should be thirteenth",
+      "file": "vol-2/act-1/ch01-departure.trial.md",
+      "root_cause": "Used \"fourth\" instead of \"thirteenth\"",
+      "fix": "Changed fourth → thirteenth",
+      "tags": [
+        "auto-detected",
+        "wrong-reference",
+        "md"
+      ],
+      "related_bugs": [],
+      "occurrences": 1,
+      "last_seen": "2026-05-13T20:05:25.207Z"
+    },
+    {
+      "id": "bug-309",
+      "timestamp": "2026-05-13T20:37:21.874Z",
+      "error_message": "Wrong reference: waitress should be niece",
+      "file": "vol-2/act-1/ch01-departure.trial.md",
+      "root_cause": "Used \"waitress\" instead of \"niece\"",
+      "fix": "Changed waitress → niece",
+      "tags": [
+        "auto-detected",
+        "wrong-reference",
+        "md"
+      ],
+      "related_bugs": [],
+      "occurrences": 1,
+      "last_seen": "2026-05-13T20:37:21.874Z"
+    },
+    {
+      "id": "bug-310",
+      "timestamp": "2026-05-13T21:18:13.022Z",
+      "error_message": "Significant refactor of ",
+      "file": "build/audiobook.py",
+      "root_cause": "7 lines replaced/restructured",
+      "fix": "Rewrote 20→38 lines (7 removed)",
+      "tags": [
+        "auto-detected",
+        "refactor",
+        "py"
+      ],
+      "related_bugs": [],
+      "occurrences": 1,
+      "last_seen": "2026-05-13T21:18:13.022Z"
+    },
+    {
+      "id": "bug-311",
+      "timestamp": "2026-05-13T22:43:15.806Z",
+      "error_message": "Incorrect value in code",
+      "file": "build/prose_telemetry_vale_export.py",
+      "root_cause": "Had \"To run from CLI: brew install vale; vale vol-2/ac",
+      "fix": "Changed to \"To run from CLI: brew install vale; vale vol-2/ac",
+      "tags": [
+        "auto-detected",
+        "wrong-value",
+        "py"
+      ],
+      "related_bugs": [],
+      "occurrences": 1,
+      "last_seen": "2026-05-13T22:43:15.806Z"
+    },
+    {
+      "id": "bug-312",
+      "timestamp": "2026-05-14T00:04:30.702Z",
+      "error_message": "Wrong reference: niece should be granddaughter",
+      "file": "vol-2/act-1/ch01-departure.md",
+      "root_cause": "Used \"niece\" instead of \"granddaughter\"",
+      "fix": "Changed niece → granddaughter",
+      "tags": [
+        "auto-detected",
+        "wrong-reference",
+        "md"
+      ],
+      "related_bugs": [],
+      "occurrences": 4,
+      "last_seen": "2026-05-14T00:04:54.631Z"
+    },
+    {
+      "id": "bug-313",
+      "timestamp": "2026-05-14T00:05:05.830Z",
+      "error_message": "Significant refactor of ",
+      "file": "vol-2/_series/canon.yaml",
+      "root_cause": "3 lines replaced/restructured",
+      "fix": "Rewrote 6→11 lines (3 removed)",
+      "tags": [
+        "auto-detected",
+        "refactor",
+        "yaml"
+      ],
+      "related_bugs": [],
+      "occurrences": 1,
+      "last_seen": "2026-05-14T00:05:05.830Z"
+    },
+    {
+      "id": "bug-314",
+      "timestamp": "2026-05-14T02:33:00.748Z",
+      "error_message": "Incorrect value in code",
+      "file": "../galley/integrations/library.json",
+      "root_cause": "Had \"/Users/christopherwood/Projects/SunfishSoftware/t",
+      "fix": "Changed to \"/Users/christopherwood/Projects/SunfishSoftware/t",
+      "tags": [
+        "auto-detected",
+        "wrong-value",
+        "json"
+      ],
+      "related_bugs": [],
+      "occurrences": 1,
+      "last_seen": "2026-05-14T02:33:00.748Z"
+    },
+    {
+      "id": "bug-315",
+      "timestamp": "2026-05-14T02:33:24.681Z",
+      "error_message": "Missing guard clause",
+      "file": "../galley/services/book-server/server.js",
+      "root_cause": "No early return/throw for edge case: !fs.existsSync(bookRoot",
+      "fix": "Added guard clause: if (!fs.existsSync(bookRoot)",
+      "tags": [
+        "auto-detected",
+        "guard-clause",
+        "js"
+      ],
+      "related_bugs": [],
+      "occurrences": 1,
+      "last_seen": "2026-05-14T02:33:24.681Z"
+    },
+    {
+      "id": "bug-316",
+      "timestamp": "2026-05-14T02:33:32.331Z",
+      "error_message": "Wrong reference: chaptersDir should be chapterRoots",
+      "file": "../galley/services/book-server/server.js",
+      "root_cause": "Used \"chaptersDir\" instead of \"chapterRoots\"",
+      "fix": "Changed chaptersDir → chapterRoots",
+      "tags": [
+        "auto-detected",
+        "wrong-reference",
+        "js"
+      ],
+      "related_bugs": [],
+      "occurrences": 1,
+      "last_seen": "2026-05-14T02:33:32.331Z"
+    },
+    {
+      "id": "bug-317",
+      "timestamp": "2026-05-14T06:55:05.621Z",
+      "error_message": "Incorrect value in code",
+      "file": "vol-2/act-1/ch02-recruitment-interview.md",
+      "root_cause": "Had 's architect to be the structural inverse of the m",
+      "fix": "Changed to 's architect to be the structural inverse of the m",
+      "tags": [
+        "auto-detected",
+        "wrong-value",
+        "md"
+      ],
+      "related_bugs": [],
+      "occurrences": 1,
+      "last_seen": "2026-05-14T06:55:05.621Z"
+    },
+    {
+      "id": "bug-318",
+      "timestamp": "2026-05-14T07:21:39.212Z",
+      "error_message": "Wrong reference: call should be conversation",
+      "file": "vol-2/act-1/ch02-recruitment-interview.md",
+      "root_cause": "Used \"call\" instead of \"conversation\"",
+      "fix": "Changed call → conversation",
+      "tags": [
+        "auto-detected",
+        "wrong-reference",
+        "md"
+      ],
+      "related_bugs": [],
+      "occurrences": 1,
+      "last_seen": "2026-05-14T07:21:39.212Z"
+    },
+    {
+      "id": "bug-319",
+      "timestamp": "2026-05-14T07:21:52.451Z",
+      "error_message": "Incorrect value in code",
+      "file": "vol-2/act-1/ch02-recruitment-interview.md",
+      "root_cause": "Had 's published work on schema migration and had been",
+      "fix": "Changed to 's published work on schema migration and had foll",
+      "tags": [
+        "auto-detected",
+        "wrong-value",
+        "md"
+      ],
+      "related_bugs": [],
+      "occurrences": 2,
+      "last_seen": "2026-05-14T07:21:59.128Z"
+    },
+    {
+      "id": "bug-320",
+      "timestamp": "2026-05-14T13:00:23.866Z",
+      "error_message": "Missing error handling in _isUnderHome",
+      "file": "../galley/services/book-server/server.js",
+      "root_cause": "Code path had no error handling — exceptions would propagate uncaught",
+      "fix": "Added try/catch block",
+      "tags": [
+        "auto-detected",
+        "error-handling",
+        "js"
+      ],
+      "related_bugs": [],
+      "occurrences": 1,
+      "last_seen": "2026-05-14T13:00:23.866Z"
+    },
+    {
+      "id": "bug-321",
+      "timestamp": "2026-05-14T13:01:12.502Z",
+      "error_message": "CSS fix: bookRoot",
+      "file": "../galley/apps/web/src/pages/library/LibraryPage.jsx",
+      "root_cause": "bookRoot: e.target.value → p",
+      "fix": "Changed bookRoot: e.target.value → p",
+      "tags": [
+        "auto-detected",
+        "style-fix",
+        "jsx"
+      ],
+      "related_bugs": [],
+      "occurrences": 1,
+      "last_seen": "2026-05-14T13:01:12.502Z"
+    },
+    {
+      "id": "bug-322",
+      "timestamp": "2026-05-14T13:15:26.457Z",
+      "error_message": "Missing error handling in _isContentDir",
+      "file": "../galley/services/book-server/server.js",
+      "root_cause": "Code path had no error handling — exceptions would propagate uncaught",
+      "fix": "Added try/catch block | Also: const scanDir = (dir, relDir, rootRoot) => {; let entries",
+      "tags": [
+        "auto-detected",
+        "error-handling",
+        "js"
+      ],
+      "related_bugs": [],
+      "occurrences": 2,
+      "last_seen": "2026-05-14T13:15:44.964Z"
+    },
+    {
+      "id": "bug-323",
+      "timestamp": "2026-05-14T13:15:59.308Z",
+      "error_message": "Significant refactor of ",
+      "file": "../galley/services/book-server/server.js",
+      "root_cause": "2 lines replaced/restructured",
+      "fix": "Rewrote 8→17 lines (2 removed) | Also: return [{ root: legacy, prefix: 'chapters', volId:; prefix: e.name,",
+      "tags": [
+        "auto-detected",
+        "refactor",
+        "js"
+      ],
+      "related_bugs": [],
+      "occurrences": 2,
+      "last_seen": "2026-05-14T13:17:17.237Z"
+    },
+    {
+      "id": "bug-324",
+      "timestamp": "2026-05-14T13:23:14.926Z",
+      "error_message": "Missing error handling in bookBuildDir",
+      "file": "../galley/services/book-server/server.js",
+      "root_cause": "Code path had no error handling — exceptions would propagate uncaught",
+      "fix": "Added try/catch block",
+      "tags": [
+        "auto-detected",
+        "error-handling",
+        "js"
+      ],
+      "related_bugs": [],
+      "occurrences": 1,
+      "last_seen": "2026-05-14T13:23:14.926Z"
+    },
+    {
+      "id": "bug-325",
+      "timestamp": "2026-05-14T13:24:00.073Z",
+      "error_message": "Significant refactor of ",
+      "file": "../galley/services/book-server/server.js",
+      "root_cause": "3 lines replaced/restructured",
+      "fix": "Rewrote 22→57 lines (3 removed)",
+      "tags": [
+        "auto-detected",
+        "refactor",
+        "js"
+      ],
+      "related_bugs": [],
+      "occurrences": 1,
+      "last_seen": "2026-05-14T13:24:00.073Z"
+    },
+    {
+      "id": "bug-326",
+      "timestamp": "2026-05-14T13:24:09.697Z",
+      "error_message": "Incorrect value in code",
+      "file": "../galley/apps/web/src/pages/library/LibraryPage.jsx",
+      "root_cause": "Had ' })\n  const [error, setError]     = useState('",
+      "fix": "Changed to ', audioRoot: '",
+      "tags": [
+        "auto-detected",
+        "wrong-value",
+        "jsx"
+      ],
+      "related_bugs": [],
+      "occurrences": 1,
+      "last_seen": "2026-05-14T13:24:09.697Z"
+    },
+    {
+      "id": "bug-327",
+      "timestamp": "2026-05-14T13:24:20.120Z",
+      "error_message": "CSS fix: id",
+      "file": "../galley/apps/web/src/pages/library/LibraryPage.jsx",
+      "root_cause": "id: '', title: '', bookRoot: '' → '', title: '', bookRoot: '', audioRoot: ''",
+      "fix": "Changed id: '', title: '', bookRoot: '' → '', title: '', bookRoot: '', audioRoot: ''",
+      "tags": [
+        "auto-detected",
+        "style-fix",
+        "jsx"
+      ],
+      "related_bugs": [],
+      "occurrences": 1,
+      "last_seen": "2026-05-14T13:24:20.120Z"
+    },
+    {
+      "id": "bug-328",
+      "timestamp": "2026-05-14T13:24:30.024Z",
+      "error_message": "Missing error handling in unknown",
+      "file": "../galley/apps/web/src/pages/library/LibraryPage.jsx",
+      "root_cause": "Code path had no error handling — exceptions would propagate uncaught",
+      "fix": "Added try/catch block",
+      "tags": [
+        "auto-detected",
+        "error-handling",
+        "jsx"
+      ],
+      "related_bugs": [],
+      "occurrences": 1,
+      "last_seen": "2026-05-14T13:24:30.024Z"
+    },
+    {
+      "id": "bug-329",
+      "timestamp": "2026-05-14T13:24:41.652Z",
+      "error_message": "Null/undefined access in ",
+      "file": "../galley/apps/web/src/pages/library/LibraryPage.jsx",
+      "root_cause": "Property access on potentially null/undefined value",
+      "fix": "Added null safety (optional chaining or null check)",
+      "tags": [
+        "auto-detected",
+        "null-safety",
+        "jsx"
+      ],
+      "related_bugs": [],
+      "occurrences": 1,
+      "last_seen": "2026-05-14T13:24:41.652Z"
     }
   ]
 }

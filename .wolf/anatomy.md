@@ -1,7 +1,7 @@
 # anatomy.md
 
-> Auto-maintained by OpenWolf. Last scanned: 2026-05-13T12:56:42.523Z
-> Files: 505 tracked | Anatomy hits: 0 | Misses: 0
+> Auto-maintained by OpenWolf. Last scanned: 2026-05-14T13:24:48.721Z
+> Files: 531 tracked | Anatomy hits: 0 | Misses: 0
 
 ## ../../../../../tmp/
 
@@ -80,6 +80,10 @@
 
 - `index.jsx` — router (~431 tok)
 
+## ../galley/apps/web/src/components/
+
+- `DirectoryPicker.jsx` — Server-backed directory picker. Browses the filesystem rooted at the (~1509 tok)
+
 ## ../galley/apps/web/src/features/annotations/
 
 - `CommentToolbar.jsx` — TYPES (~1820 tok)
@@ -106,7 +110,7 @@
 
 ## ../galley/apps/web/src/pages/library/
 
-- `LibraryPage.jsx` — LibraryPage — renders form (~1335 tok)
+- `LibraryPage.jsx` — LibraryPage — renders form (~2207 tok)
 
 ## ../galley/apps/web/src/pages/logs/
 
@@ -124,9 +128,37 @@
 
 - `ReviewPage.jsx` — ReviewPage (~134 tok)
 
+## ../galley/apps/web/src/styles/
+
+- `App.css` — Styles: 83 rules, 18 vars (~24866 tok)
+
 ## ../galley/integrations/
 
-- `library.json` (~496 tok)
+- `library.json` (~61 tok)
+
+## ../galley/lib/prose_telemetry/
+
+- `pyproject.toml` — Prose telemetry — detect literary devices and looping patterns in chapter prose. (~211 tok)
+- `README.md` — Project documentation (~534 tok)
+
+## ../galley/lib/prose_telemetry/src/prose_telemetry/
+
+- `__init__.py` — prose-telemetry — spaCy-tier detectors for literary-device telemetry. (~251 tok)
+- `cli.py` — Unified prose-telemetry CLI — runs stdlib + spaCy detectors and writes (~2449 tok)
+- `spacy_detectors.py` — spaCy-tier detectors for prose-telemetry. (~2891 tok)
+
+## ../galley/lib/story_canon/
+
+- `pyproject.toml` — Continuity verification for fiction — extract facts from prose, reconcile against a story-canon YAML (~143 tok)
+- `README.md` — Project documentation (~697 tok)
+
+## ../galley/lib/story_canon/src/story_canon/
+
+- `__init__.py` — story-canon — continuity verification for fiction. (~114 tok)
+- `cli.py` — story-canon CLI. (~1437 tok)
+- `extractors.py` — Extract factual claims from prose. (~1825 tok)
+- `numwords.py` — Convert spelled-out English number words to integers. (~874 tok)
+- `validator.py` — Reconcile extracted facts against a story-canon YAML. (~2498 tok)
 
 ## ../galley/ops/mac/scripts/
 
@@ -134,13 +166,13 @@
 
 ## ../galley/services/book-server/
 
-- `server.js` — __dirname: loadLibrary, saveLibrary, readMp3TtsTags + 11 more (~11616 tok)
+- `server.js` — __dirname: loadLibrary, saveLibrary, readMp3TtsTags + 10 more (~18571 tok)
 
 ## ./
 
 - `.envrc` — direnv configuration for the-inverted-stack (~395 tok)
-- `.gitignore` — Git ignore rules (~162 tok)
-- `ASSEMBLY.md` — Assembly Manifest (~4234 tok)
+- `.gitignore` — Git ignore rules (~211 tok)
+- `ASSEMBLY.md` — Assembly Manifest (~4257 tok)
 - `book-structure.md` — BOOK-STRUCTURE (~8079 tok)
 - `CLAUDE.md` — OpenWolf (~3500 tok)
 - `LICENSE` (~204 tok)
@@ -267,6 +299,9 @@
 - `2026-05-07-forced-alignment-evaluation.md` — Forced Alignment for Word-Level Whispersync — Evaluation (~2497 tok)
 - `2026-05-07-web-app-qa-dashboard-shape.md` — Web App QA Dashboard — Architectural Shape (~4125 tok)
 - `2026-05-08-prose-telemetry-platform.md` — Prose Telemetry Platform — "OpenTelemetry for Prose" (~5290 tok)
+- `2026-05-13-vol2-bobiverse-pull-voice-tuning.md` — Vol 2 — Bobiverse-pull voice tuning (~1722 tok)
+- `2026-05-14-plot-grid-tool-plan.md` — Plot-grid tool — UPF v1.2 plan (~6985 tok)
+- `2026-05-14-prose-telemetry-metric-improvements-plan.md` — Prose-telemetry metric improvements (~4422 tok)
 - `antarctic-vision-chapter-concept-2026-04-30.md` — Antarctic Vision Chapter — Concept State and Resume Instructions (~5210 tok)
 - `co-seat-deferred-structural-decisions-2026-04-30.md` — CO-Seat Deferred Structural Decisions — Ch11 + Ch15 (~2015 tok)
 
@@ -311,7 +346,7 @@
 - `__init__.py` — build/__init__.py (~6 tok)
 - `apply_phase0a.py` — One-shot Phase 0a HIGH-tier compressor. (~15490 tok)
 - `AUDIO-DOCKER.md` — Audiobook Generation — Docker Setup (~4120 tok)
-- `audiobook.py` — Generate audiobook MP3s from chapter markdown using a local Kokoro TTS server. (~26727 tok)
+- `audiobook.py` — Generate audiobook MP3s from chapter markdown using a local Kokoro TTS server. (~27807 tok)
 - `build_overlays.py` — Whispersync-capable EPUB build (Phases B-E). (~6341 tok)
 - `check_audit.py` — Reference-integrity check: every jurisdiction in inline prose appears in Appendix F. (~581 tok)
 - `check_first_use.py` — First-use rule checker. (~3348 tok)
@@ -330,7 +365,11 @@
 - `Makefile` — The Inverted Stack — Build Targets (~4161 tok)
 - `normalize.py` — EBU R128 loudness normalization for the audiobook MP3s. (~2557 tok)
 - `promote.py` — Phase 4 promotion script. (~2233 tok)
-- `prose_telemetry_handcount.py` — Hand-count prose-telemetry detectors against a single chapter markdown. (~4315 tok)
+- `prose_telemetry_corpus.py` — Reference-corpus comparison for prose-telemetry. (~2643 tok)
+- `prose_telemetry_dashboard.py` — Render prose-telemetry metrics as an HTML dashboard. (~4580 tok)
+- `prose_telemetry_diff.py` — Diff two prose-telemetry runs to surface drift. (~1934 tok)
+- `prose_telemetry_handcount.py` — Hand-count prose-telemetry detectors against a single chapter markdown. (~26468 tok)
+- `prose_telemetry_vale_export.py` — Export prose-telemetry detector rules as Vale-compatible YAML. (~2409 tok)
 - `remediate_first_use.py` — Remediate first-use rule violations across all chapter sources. (~3156 tok)
 - `render-chapter.sh` — render-chapter.sh — generate audiobook MP3 for a single chapter. (~963 tok)
 - `stt_spike.py` — STT QC spike — Phase 1 word-level diff between source markdown and Whisper transcript. (~3045 tok)
@@ -841,13 +880,21 @@
 
 ## vol-2/
 
-- `ANNA-VOICE.md` — Anna's Voice — Narrator Specification (~5464 tok)
+- `ANNA-VOICE.md` — Anna's Voice — Narrator Specification (~6516 tok)
 - `SPINE.md` — The Filchner Dark — Volume Spine (~1386 tok)
+
+## vol-2/_series/
+
+- `canon.yaml` — The Filchner Dark — story canon (~1495 tok)
 
 ## vol-2/act-1/
 
-- `ch01-departure.trial.md` — Chapter 1 — Departure (~6369 tok)
-- `ch02-recruitment-interview.trial.md` — Chapter 2 — The Recruitment Interview (~8677 tok)
+- `ch01-departure.md` — Chapter 1 — Departure (~6188 tok)
+- `ch01-departure.trial.md` — Chapter 1 — Departure (~6174 tok)
+- `ch02-recruitment-interview.held-lines.json` (~747 tok)
+- `ch02-recruitment-interview.md` — Chapter 2 — The Recruitment Interview (~8248 tok)
+- `ch02-recruitment-interview.trial.held-lines.json` (~202 tok)
+- `ch02-recruitment-interview.trial.md` — Chapter 2 — The Recruitment Interview (~8506 tok)
 
 ## web/ — MOVED
 

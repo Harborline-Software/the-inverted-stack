@@ -3323,3 +3323,344 @@
 | 08:56 | Created vol-1/part-4-implementation-playbooks/ch19-shipping-to-enterprise.md | — | ~9466 |
 | 10:30 | Vol 1 Joel-premise refactor: deleted the-crossing.md; rewrote preface, ch01, ch04, ch17-19; surgical edits ch02-03, ch05-09, ch16, ch20-21 | vol-1/ | complete | ~8000 |
 | 08:57 | Session end: 78 writes across 18 files (ANNA-VOICE.md, ch01-departure.trial.md, ch02-recruitment-interview.trial.md, ch02-local-first-serious-stack.md, ch03-inverted-stack-one-diagram.md) | 24 reads | ~61203 tok |
+| 09:24 | Session end: 78 writes across 18 files (ANNA-VOICE.md, ch01-departure.trial.md, ch02-recruitment-interview.trial.md, ch02-local-first-serious-stack.md, ch03-inverted-stack-one-diagram.md) | 24 reads | ~61203 tok |
+| 09:25 | Session end: 78 writes across 18 files (ANNA-VOICE.md, ch01-departure.trial.md, ch02-recruitment-interview.trial.md, ch02-local-first-serious-stack.md, ch03-inverted-stack-one-diagram.md) | 24 reads | ~61203 tok |
+| 09:35 | Created .pao-inbox/_decisions/2026-05-13-vol2-bobiverse-pull-voice-tuning.md | — | ~1837 |
+| 09:35 | Session end: 79 writes across 19 files (ANNA-VOICE.md, ch01-departure.trial.md, ch02-recruitment-interview.trial.md, ch02-local-first-serious-stack.md, ch03-inverted-stack-one-diagram.md) | 24 reads | ~63171 tok |
+| 09:54 | Edited vol-2/ANNA-VOICE.md | 1→5 lines | ~379 |
+| 09:54 | Edited vol-2/act-1/ch01-departure.trial.md | inline fix | ~139 |
+| 09:54 | Edited vol-2/act-1/ch01-departure.trial.md | inline fix | ~105 |
+| 09:54 | Edited vol-2/act-1/ch01-departure.trial.md | inline fix | ~115 |
+| 09:54 | Edited vol-2/act-1/ch02-recruitment-interview.trial.md | inline fix | ~20 |
+| 09:56 | Session end: 84 writes across 19 files (ANNA-VOICE.md, ch01-departure.trial.md, ch02-recruitment-interview.trial.md, ch02-local-first-serious-stack.md, ch03-inverted-stack-one-diagram.md) | 24 reads | ~63983 tok |
+| 09:58 | Edited vol-2/act-1/ch01-departure.trial.md | inline fix | ~128 |
+| 09:58 | Edited build/prose_telemetry_handcount.py | modified _content_words() | ~1804 |
+| 09:58 | Edited build/prose_telemetry_handcount.py | 7→11 lines | ~155 |
+| 09:59 | Edited build/prose_telemetry_handcount.py | 8→11 lines | ~154 |
+| 09:59 | Edited build/prose_telemetry_handcount.py | expanded (+27 lines) | ~442 |
+| 10:00 | Edited build/prose_telemetry_handcount.py | modified detect_lexical_chain() | ~580 |
+| 10:01 | Edited build/prose_telemetry_handcount.py | 4→9 lines | ~121 |
+| 10:02 | Edited build/prose_telemetry_handcount.py | expanded (+9 lines) | ~299 |
+| 10:04 | Session end: 92 writes across 20 files (ANNA-VOICE.md, ch01-departure.trial.md, ch02-recruitment-interview.trial.md, ch02-local-first-serious-stack.md, ch03-inverted-stack-one-diagram.md) | 24 reads | ~67676 tok |
+| 10:13 | Edited build/prose_telemetry_handcount.py | modified detect_bigram_chain() | ~2468 |
+| 10:13 | Edited build/prose_telemetry_handcount.py | modified 13() | ~258 |
+| 10:14 | Edited build/prose_telemetry_handcount.py | expanded (+47 lines) | ~804 |
+| 10:15 | Session end: 95 writes across 20 files (ANNA-VOICE.md, ch01-departure.trial.md, ch02-recruitment-interview.trial.md, ch02-local-first-serious-stack.md, ch03-inverted-stack-one-diagram.md) | 24 reads | ~71206 tok |
+| 10:18 | Edited build/prose_telemetry_handcount.py | modified tokens() | ~215 |
+| 10:18 | Edited build/prose_telemetry_handcount.py | modified detect_bigram_chain() | ~462 |
+| 10:18 | Edited build/prose_telemetry_handcount.py | modified detect_statement_then_reversal() | ~315 |
+| 10:19 | Edited build/prose_telemetry_handcount.py | modified detect_filter_words() | ~3510 |
+| 10:19 | Edited build/prose_telemetry_handcount.py | modified 13() | ~290 |
+| 10:19 | Edited build/prose_telemetry_handcount.py | expanded (+96 lines) | ~1204 |
+| 10:21 | Edited build/prose_telemetry_handcount.py | added 1 condition(s) | ~577 |
+| 10:22 | Session end: 102 writes across 20 files (ANNA-VOICE.md, ch01-departure.trial.md, ch02-recruitment-interview.trial.md, ch02-local-first-serious-stack.md, ch03-inverted-stack-one-diagram.md) | 24 reads | ~77779 tok |
+| 10:24 | Edited build/prose_telemetry_handcount.py | modified detect_trigram_chain() | ~6064 |
+| 10:25 | Edited build/prose_telemetry_handcount.py | modified _load_held_lines() | ~1286 |
+| 10:25 | Edited build/prose_telemetry_handcount.py | modified meters() | ~233 |
+| 10:25 | Edited build/prose_telemetry_handcount.py | expanded (+7 lines) | ~186 |
+| 10:25 | Edited build/prose_telemetry_handcount.py | 6→11 lines | ~116 |
+| 10:26 | Edited build/prose_telemetry_handcount.py | expanded (+92 lines) | ~1251 |
+| 10:26 | Created vol-2/act-1/ch02-recruitment-interview.trial.held-lines.json | — | ~200 |
+| 10:27 | Edited build/prose_telemetry_handcount.py | modified _apply_held_lines() | ~776 |
+| 10:27 | Created vol-2/act-1/ch02-recruitment-interview.trial.held-lines.json | — | ~202 |
+| 10:28 | Session end: 111 writes across 21 files (ANNA-VOICE.md, ch01-departure.trial.md, ch02-recruitment-interview.trial.md, ch02-local-first-serious-stack.md, ch03-inverted-stack-one-diagram.md) | 24 reads | ~88093 tok |
+| 10:33 | Created build/prose_telemetry_dashboard.py | — | ~4580 |
+| 10:34 | Created build/prose_telemetry_diff.py | — | ~1934 |
+| 10:35 | Created build/prose_telemetry_vale_export.py | — | ~2394 |
+| 10:36 | Created build/prose_telemetry_corpus.py | — | ~2652 |
+| 10:36 | Edited build/prose_telemetry_corpus.py | modified from() | ~45 |
+| 10:36 | Edited .gitignore | expanded (+6 lines) | ~70 |
+| 10:36 | Edited build/prose_telemetry_vale_export.py | 5→7 lines | ~86 |
+| 10:37 | Session end: 118 writes across 26 files (ANNA-VOICE.md, ch01-departure.trial.md, ch02-recruitment-interview.trial.md, ch02-local-first-serious-stack.md, ch03-inverted-stack-one-diagram.md) | 24 reads | ~99859 tok |
+| 11:17 | Session end: 118 writes across 26 files (ANNA-VOICE.md, ch01-departure.trial.md, ch02-recruitment-interview.trial.md, ch02-local-first-serious-stack.md, ch03-inverted-stack-one-diagram.md) | 24 reads | ~99859 tok |
+| 11:20 | Session end: 118 writes across 26 files (ANNA-VOICE.md, ch01-departure.trial.md, ch02-recruitment-interview.trial.md, ch02-local-first-serious-stack.md, ch03-inverted-stack-one-diagram.md) | 24 reads | ~99859 tok |
+| 11:24 | Created ../galley/lib/prose_telemetry/pyproject.toml | — | ~194 |
+| 11:25 | Created ../galley/lib/prose_telemetry/README.md | — | ~570 |
+| 11:25 | Created ../galley/lib/prose_telemetry/src/prose_telemetry/__init__.py | — | ~251 |
+| 11:25 | Created ../galley/lib/prose_telemetry/src/prose_telemetry/spacy_detectors.py | — | ~2891 |
+| 11:27 | Session end: 122 writes across 30 files (ANNA-VOICE.md, ch01-departure.trial.md, ch02-recruitment-interview.trial.md, ch02-local-first-serious-stack.md, ch03-inverted-stack-one-diagram.md) | 24 reads | ~103820 tok |
+| 11:34 | Created ../galley/lib/prose_telemetry/src/prose_telemetry/cli.py | — | ~2449 |
+| 11:34 | Edited ../galley/lib/prose_telemetry/pyproject.toml | 4→7 lines | ~33 |
+| 11:35 | Session end: 124 writes across 31 files (ANNA-VOICE.md, ch01-departure.trial.md, ch02-recruitment-interview.trial.md, ch02-local-first-serious-stack.md, ch03-inverted-stack-one-diagram.md) | 24 reads | ~106305 tok |
+| 12:01 | Edited vol-2/act-1/ch01-departure.trial.md | 3→1 lines | ~114 |
+| 12:01 | Edited vol-2/act-1/ch01-departure.trial.md | inline fix | ~96 |
+| 12:01 | Edited vol-2/act-1/ch01-departure.trial.md | inline fix | ~22 |
+| 12:01 | Edited vol-2/act-1/ch01-departure.trial.md | inline fix | ~52 |
+| 12:02 | Edited vol-2/act-1/ch01-departure.trial.md | inline fix | ~179 |
+| 12:02 | Edited vol-2/act-1/ch01-departure.trial.md | inline fix | ~82 |
+| 12:02 | Edited vol-2/act-1/ch01-departure.trial.md | inline fix | ~56 |
+| 12:02 | Edited vol-2/act-1/ch01-departure.trial.md | inline fix | ~74 |
+| 12:02 | Edited vol-2/act-1/ch01-departure.trial.md | inline fix | ~129 |
+| 12:03 | Edited vol-2/act-1/ch02-recruitment-interview.trial.md | inline fix | ~60 |
+| 12:03 | Edited vol-2/act-1/ch02-recruitment-interview.trial.md | inline fix | ~41 |
+| 12:03 | Edited vol-2/act-1/ch02-recruitment-interview.trial.md | inline fix | ~61 |
+| 12:03 | Edited vol-2/act-1/ch02-recruitment-interview.trial.md | inline fix | ~138 |
+| 12:03 | Edited vol-2/act-1/ch02-recruitment-interview.trial.md | inline fix | ~74 |
+| 12:05 | Session end: 138 writes across 31 files (ANNA-VOICE.md, ch01-departure.trial.md, ch02-recruitment-interview.trial.md, ch02-local-first-serious-stack.md, ch03-inverted-stack-one-diagram.md) | 24 reads | ~107567 tok |
+| 12:55 | Edited vol-2/act-1/ch01-departure.trial.md | inline fix | ~111 |
+| 12:56 | Edited build/prose_telemetry_handcount.py | modified detect_inference_cascade() | ~498 |
+| 12:56 | Edited build/prose_telemetry_handcount.py | 3→4 lines | ~47 |
+| 12:56 | Edited build/prose_telemetry_handcount.py | expanded (+6 lines) | ~106 |
+| 12:58 | Edited vol-2/act-1/ch01-departure.trial.md | inline fix | ~115 |
+| 12:58 | Session end: 143 writes across 31 files (ANNA-VOICE.md, ch01-departure.trial.md, ch02-recruitment-interview.trial.md, ch02-local-first-serious-stack.md, ch03-inverted-stack-one-diagram.md) | 24 reads | ~108460 tok |
+| 13:00 | Edited vol-2/act-1/ch01-departure.trial.md | inline fix | ~63 |
+| 13:00 | Session end: 144 writes across 31 files (ANNA-VOICE.md, ch01-departure.trial.md, ch02-recruitment-interview.trial.md, ch02-local-first-serious-stack.md, ch03-inverted-stack-one-diagram.md) | 24 reads | ~108528 tok |
+| 13:03 | Edited vol-2/act-1/ch01-departure.trial.md | inline fix | ~59 |
+| 13:04 | Session end: 145 writes across 31 files (ANNA-VOICE.md, ch01-departure.trial.md, ch02-recruitment-interview.trial.md, ch02-local-first-serious-stack.md, ch03-inverted-stack-one-diagram.md) | 24 reads | ~108591 tok |
+| 13:07 | Edited build/prose_telemetry_handcount.py | modified detect_proximity_echo() | ~1280 |
+| 13:07 | Edited build/prose_telemetry_handcount.py | 2→4 lines | ~53 |
+| 13:07 | Edited build/prose_telemetry_handcount.py | expanded (+18 lines) | ~333 |
+| 13:08 | Edited build/prose_telemetry_handcount.py | modified detect_proximity_echo() | ~911 |
+| 13:09 | Session end: 149 writes across 31 files (ANNA-VOICE.md, ch01-departure.trial.md, ch02-recruitment-interview.trial.md, ch02-local-first-serious-stack.md, ch03-inverted-stack-one-diagram.md) | 24 reads | ~111168 tok |
+| 13:12 | Edited vol-2/act-1/ch01-departure.trial.md | inline fix | ~137 |
+| 13:13 | Session end: 150 writes across 31 files (ANNA-VOICE.md, ch01-departure.trial.md, ch02-recruitment-interview.trial.md, ch02-local-first-serious-stack.md, ch03-inverted-stack-one-diagram.md) | 24 reads | ~111315 tok |
+| 13:14 | Edited vol-2/act-1/ch01-departure.trial.md | inline fix | ~135 |
+| 13:15 | Session end: 151 writes across 31 files (ANNA-VOICE.md, ch01-departure.trial.md, ch02-recruitment-interview.trial.md, ch02-local-first-serious-stack.md, ch03-inverted-stack-one-diagram.md) | 24 reads | ~111460 tok |
+| 13:18 | Edited vol-2/act-1/ch01-departure.trial.md | inline fix | ~134 |
+| 13:18 | Session end: 152 writes across 31 files (ANNA-VOICE.md, ch01-departure.trial.md, ch02-recruitment-interview.trial.md, ch02-local-first-serious-stack.md, ch03-inverted-stack-one-diagram.md) | 24 reads | ~111604 tok |
+| 13:22 | Edited vol-2/act-1/ch01-departure.trial.md | inline fix | ~125 |
+| 13:22 | Edited vol-2/act-1/ch01-departure.trial.md | inline fix | ~38 |
+| 13:22 | Edited vol-2/act-1/ch01-departure.trial.md | inline fix | ~58 |
+| 13:22 | Edited vol-2/act-1/ch01-departure.trial.md | inline fix | ~16 |
+| 13:22 | Edited vol-2/act-1/ch01-departure.trial.md | inline fix | ~60 |
+| 13:22 | Edited vol-2/act-1/ch01-departure.trial.md | inline fix | ~57 |
+| 13:24 | Session end: 158 writes across 31 files (ANNA-VOICE.md, ch01-departure.trial.md, ch02-recruitment-interview.trial.md, ch02-local-first-serious-stack.md, ch03-inverted-stack-one-diagram.md) | 24 reads | ~111982 tok |
+| 13:25 | Edited vol-2/act-1/ch01-departure.trial.md | inline fix | ~122 |
+| 13:26 | Edited vol-2/act-1/ch01-departure.trial.md | inline fix | ~96 |
+| 13:26 | Edited vol-2/act-1/ch01-departure.trial.md | inline fix | ~49 |
+| 13:27 | Session end: 161 writes across 31 files (ANNA-VOICE.md, ch01-departure.trial.md, ch02-recruitment-interview.trial.md, ch02-local-first-serious-stack.md, ch03-inverted-stack-one-diagram.md) | 24 reads | ~112267 tok |
+| 13:34 | Edited vol-2/act-1/ch01-departure.trial.md | inline fix | ~42 |
+| 13:34 | Session end: 162 writes across 31 files (ANNA-VOICE.md, ch01-departure.trial.md, ch02-recruitment-interview.trial.md, ch02-local-first-serious-stack.md, ch03-inverted-stack-one-diagram.md) | 24 reads | ~112312 tok |
+| 13:37 | Session end: 162 writes across 31 files (ANNA-VOICE.md, ch01-departure.trial.md, ch02-recruitment-interview.trial.md, ch02-local-first-serious-stack.md, ch03-inverted-stack-one-diagram.md) | 24 reads | ~112312 tok |
+| 13:47 | Session end: 162 writes across 31 files (ANNA-VOICE.md, ch01-departure.trial.md, ch02-recruitment-interview.trial.md, ch02-local-first-serious-stack.md, ch03-inverted-stack-one-diagram.md) | 24 reads | ~112312 tok |
+| 13:47 | Session end: 162 writes across 31 files (ANNA-VOICE.md, ch01-departure.trial.md, ch02-recruitment-interview.trial.md, ch02-local-first-serious-stack.md, ch03-inverted-stack-one-diagram.md) | 24 reads | ~112312 tok |
+| 13:57 | Edited vol-2/act-1/ch01-departure.trial.md | 7→7 lines | ~372 |
+| 13:58 | Session end: 163 writes across 31 files (ANNA-VOICE.md, ch01-departure.trial.md, ch02-recruitment-interview.trial.md, ch02-local-first-serious-stack.md, ch03-inverted-stack-one-diagram.md) | 24 reads | ~112711 tok |
+| 14:08 | Edited vol-2/act-1/ch01-departure.trial.md | inline fix | ~284 |
+| 14:08 | Edited vol-2/act-1/ch01-departure.trial.md | inline fix | ~79 |
+| 14:08 | Edited vol-2/act-1/ch01-departure.trial.md | inline fix | ~44 |
+| 14:08 | Edited vol-2/act-1/ch01-departure.trial.md | inline fix | ~67 |
+| 14:08 | Edited vol-2/act-1/ch01-departure.trial.md | inline fix | ~84 |
+| 14:09 | Session end: 168 writes across 31 files (ANNA-VOICE.md, ch01-departure.trial.md, ch02-recruitment-interview.trial.md, ch02-local-first-serious-stack.md, ch03-inverted-stack-one-diagram.md) | 24 reads | ~113309 tok |
+| 14:18 | Edited vol-2/act-1/ch01-departure.trial.md | inline fix | ~58 |
+| 14:18 | Edited vol-2/act-1/ch01-departure.trial.md | inline fix | ~25 |
+| 14:18 | Edited vol-2/act-1/ch01-departure.trial.md | inline fix | ~48 |
+| 14:19 | Session end: 171 writes across 31 files (ANNA-VOICE.md, ch01-departure.trial.md, ch02-recruitment-interview.trial.md, ch02-local-first-serious-stack.md, ch03-inverted-stack-one-diagram.md) | 24 reads | ~113449 tok |
+| 14:28 | Edited vol-2/act-1/ch01-departure.trial.md | inline fix | ~101 |
+| 14:29 | Session end: 172 writes across 31 files (ANNA-VOICE.md, ch01-departure.trial.md, ch02-recruitment-interview.trial.md, ch02-local-first-serious-stack.md, ch03-inverted-stack-one-diagram.md) | 24 reads | ~113557 tok |
+| 14:37 | Edited build/audiobook.py | expanded (+66 lines) | ~801 |
+| 14:38 | Session end: 173 writes across 32 files (ANNA-VOICE.md, ch01-departure.trial.md, ch02-recruitment-interview.trial.md, ch02-local-first-serious-stack.md, ch03-inverted-stack-one-diagram.md) | 24 reads | ~114358 tok |
+| 14:39 | Edited vol-2/act-1/ch01-departure.trial.md | inline fix | ~220 |
+| 14:39 | Session end: 174 writes across 32 files (ANNA-VOICE.md, ch01-departure.trial.md, ch02-recruitment-interview.trial.md, ch02-local-first-serious-stack.md, ch03-inverted-stack-one-diagram.md) | 24 reads | ~114594 tok |
+| 14:42 | Edited vol-2/act-1/ch01-departure.trial.md | inline fix | ~93 |
+| 14:43 | Session end: 175 writes across 32 files (ANNA-VOICE.md, ch01-departure.trial.md, ch02-recruitment-interview.trial.md, ch02-local-first-serious-stack.md, ch03-inverted-stack-one-diagram.md) | 24 reads | ~114694 tok |
+| 14:46 | Edited vol-2/act-1/ch01-departure.trial.md | inline fix | ~70 |
+| 14:47 | Session end: 176 writes across 32 files (ANNA-VOICE.md, ch01-departure.trial.md, ch02-recruitment-interview.trial.md, ch02-local-first-serious-stack.md, ch03-inverted-stack-one-diagram.md) | 24 reads | ~114769 tok |
+| 15:02 | Edited vol-2/act-1/ch01-departure.trial.md | 1→3 lines | ~147 |
+| 15:03 | Edited vol-2/act-1/ch01-departure.trial.md | 3→5 lines | ~139 |
+| 15:03 | Session end: 178 writes across 32 files (ANNA-VOICE.md, ch01-departure.trial.md, ch02-recruitment-interview.trial.md, ch02-local-first-serious-stack.md, ch03-inverted-stack-one-diagram.md) | 24 reads | ~115074 tok |
+| 15:09 | Edited vol-2/act-1/ch01-departure.trial.md | inline fix | ~56 |
+| 15:10 | Edited vol-2/act-1/ch01-departure.trial.md | inline fix | ~26 |
+| 15:10 | Edited vol-2/act-1/ch01-departure.trial.md | inline fix | ~69 |
+| 15:10 | Edited vol-2/act-1/ch01-departure.trial.md | inline fix | ~17 |
+| 15:10 | Edited vol-2/act-1/ch01-departure.trial.md | inline fix | ~16 |
+| 15:10 | Edited vol-2/act-1/ch01-departure.trial.md | inline fix | ~22 |
+| 15:11 | Session end: 184 writes across 32 files (ANNA-VOICE.md, ch01-departure.trial.md, ch02-recruitment-interview.trial.md, ch02-local-first-serious-stack.md, ch03-inverted-stack-one-diagram.md) | 24 reads | ~115295 tok |
+| 15:19 | Edited vol-2/act-1/ch01-departure.trial.md | inline fix | ~59 |
+| 15:20 | Session end: 185 writes across 32 files (ANNA-VOICE.md, ch01-departure.trial.md, ch02-recruitment-interview.trial.md, ch02-local-first-serious-stack.md, ch03-inverted-stack-one-diagram.md) | 24 reads | ~115358 tok |
+| 15:25 | Edited vol-2/act-1/ch01-departure.trial.md | inline fix | ~72 |
+| 15:26 | Session end: 186 writes across 32 files (ANNA-VOICE.md, ch01-departure.trial.md, ch02-recruitment-interview.trial.md, ch02-local-first-serious-stack.md, ch03-inverted-stack-one-diagram.md) | 24 reads | ~115435 tok |
+| 15:44 | Edited vol-2/act-1/ch01-departure.trial.md | inline fix | ~126 |
+| 15:45 | Edited vol-2/act-1/ch01-departure.trial.md | inline fix | ~111 |
+| 15:45 | Edited vol-2/act-1/ch01-departure.trial.md | inline fix | ~98 |
+| 15:45 | Edited vol-2/act-1/ch01-departure.trial.md | inline fix | ~95 |
+| 15:45 | Edited vol-2/act-1/ch01-departure.trial.md | inline fix | ~89 |
+| 15:46 | Session end: 191 writes across 32 files (ANNA-VOICE.md, ch01-departure.trial.md, ch02-recruitment-interview.trial.md, ch02-local-first-serious-stack.md, ch03-inverted-stack-one-diagram.md) | 24 reads | ~115990 tok |
+| 15:53 | Edited vol-2/act-1/ch01-departure.trial.md | inline fix | ~52 |
+| 15:54 | Session end: 192 writes across 32 files (ANNA-VOICE.md, ch01-departure.trial.md, ch02-recruitment-interview.trial.md, ch02-local-first-serious-stack.md, ch03-inverted-stack-one-diagram.md) | 24 reads | ~116046 tok |
+| 15:56 | Session end: 192 writes across 32 files (ANNA-VOICE.md, ch01-departure.trial.md, ch02-recruitment-interview.trial.md, ch02-local-first-serious-stack.md, ch03-inverted-stack-one-diagram.md) | 24 reads | ~116046 tok |
+| 16:00 | Created ../galley/lib/story_canon/pyproject.toml | — | ~143 |
+| 16:00 | Created ../galley/lib/story_canon/src/story_canon/numwords.py | — | ~874 |
+| 16:01 | Created ../galley/lib/story_canon/src/story_canon/extractors.py | — | ~1688 |
+| 16:01 | Created ../galley/lib/story_canon/src/story_canon/validator.py | — | ~2498 |
+| 16:02 | Created ../galley/lib/story_canon/src/story_canon/__init__.py | — | ~114 |
+| 16:02 | Created ../galley/lib/story_canon/src/story_canon/cli.py | — | ~1437 |
+| 16:03 | Created vol-2/_series/canon.yaml | — | ~1378 |
+| 16:03 | Created ../galley/lib/story_canon/README.md | — | ~744 |
+| 16:04 | Edited ../galley/lib/story_canon/src/story_canon/extractors.py | expanded (+11 lines) | ~244 |
+| 16:04 | Edited vol-2/act-1/ch01-departure.trial.md | inline fix | ~55 |
+| 16:05 | Edited vol-2/act-1/ch01-departure.trial.md | inline fix | ~54 |
+| 16:05 | Edited vol-2/act-1/ch01-departure.trial.md | inline fix | ~59 |
+| 16:05 | Edited vol-2/_series/canon.yaml | 4→4 lines | ~56 |
+| 16:07 | Session end: 205 writes across 36 files (ANNA-VOICE.md, ch01-departure.trial.md, ch02-recruitment-interview.trial.md, ch02-local-first-serious-stack.md, ch03-inverted-stack-one-diagram.md) | 24 reads | ~125464 tok |
+| 16:37 | Edited vol-2/act-1/ch01-departure.trial.md | inline fix | ~45 |
+| 16:38 | Edited vol-2/act-1/ch01-departure.trial.md | 5→3 lines | ~68 |
+| 16:38 | Edited vol-2/act-1/ch01-departure.trial.md | 3→5 lines | ~136 |
+| 16:39 | Session end: 208 writes across 36 files (ANNA-VOICE.md, ch01-departure.trial.md, ch02-recruitment-interview.trial.md, ch02-local-first-serious-stack.md, ch03-inverted-stack-one-diagram.md) | 24 reads | ~125730 tok |
+| 16:43 | Edited vol-2/act-1/ch01-departure.trial.md | inline fix | ~89 |
+| 16:43 | Edited vol-2/_series/canon.yaml | 7→7 lines | ~71 |
+| 16:44 | Session end: 210 writes across 36 files (ANNA-VOICE.md, ch01-departure.trial.md, ch02-recruitment-interview.trial.md, ch02-local-first-serious-stack.md, ch03-inverted-stack-one-diagram.md) | 24 reads | ~125897 tok |
+| 16:47 | Edited vol-2/ANNA-VOICE.md | expanded (+58 lines) | ~841 |
+| 16:47 | Session end: 211 writes across 36 files (ANNA-VOICE.md, ch01-departure.trial.md, ch02-recruitment-interview.trial.md, ch02-local-first-serious-stack.md, ch03-inverted-stack-one-diagram.md) | 24 reads | ~126798 tok |
+| 16:51 | Session end: 211 writes across 36 files (ANNA-VOICE.md, ch01-departure.trial.md, ch02-recruitment-interview.trial.md, ch02-local-first-serious-stack.md, ch03-inverted-stack-one-diagram.md) | 24 reads | ~126798 tok |
+| 17:05 | Edited vol-2/act-1/ch01-departure.trial.md | inline fix | ~122 |
+| 17:05 | Edited vol-2/act-1/ch01-departure.trial.md | inline fix | ~89 |
+| 17:05 | Session end: 213 writes across 36 files (ANNA-VOICE.md, ch01-departure.trial.md, ch02-recruitment-interview.trial.md, ch02-local-first-serious-stack.md, ch03-inverted-stack-one-diagram.md) | 24 reads | ~127023 tok |
+| 17:17 | Edited build/audiobook.py | modified _ensure_period() | ~264 |
+| 17:18 | Edited build/audiobook.py | modified _word_count() | ~488 |
+| 17:19 | Session end: 215 writes across 36 files (ANNA-VOICE.md, ch01-departure.trial.md, ch02-recruitment-interview.trial.md, ch02-local-first-serious-stack.md, ch03-inverted-stack-one-diagram.md) | 25 reads | ~155362 tok |
+| 18:37 | Session end: 215 writes across 36 files (ANNA-VOICE.md, ch01-departure.trial.md, ch02-recruitment-interview.trial.md, ch02-local-first-serious-stack.md, ch03-inverted-stack-one-diagram.md) | 25 reads | ~155362 tok |
+| 18:39 | Edited vol-2/act-1/ch02-recruitment-interview.trial.md | inline fix | ~75 |
+| 18:39 | Edited vol-2/act-1/ch02-recruitment-interview.trial.md | inline fix | ~21 |
+| 18:39 | Edited vol-2/act-1/ch02-recruitment-interview.trial.md | 3→3 lines | ~23 |
+| 18:39 | Edited vol-2/act-1/ch02-recruitment-interview.trial.md | inline fix | ~127 |
+| 18:39 | Edited vol-2/act-1/ch02-recruitment-interview.trial.md | inline fix | ~68 |
+| 18:40 | Edited vol-2/act-1/ch02-recruitment-interview.trial.md | inline fix | ~37 |
+| 18:40 | Edited vol-2/act-1/ch02-recruitment-interview.trial.md | inline fix | ~75 |
+| 18:41 | Edited build/audiobook.py | 4→2 lines | ~32 |
+| 18:42 | Edited build/audiobook.py | 7→8 lines | ~154 |
+| 18:43 | Edited build/prose_telemetry_corpus.py | inline fix | ~9 |
+| 18:43 | Edited build/prose_telemetry_vale_export.py | "To run from CLI: brew ins" → "To run from CLI: brew ins" | ~24 |
+| 18:43 | Edited ASSEMBLY.md | 2→2 lines | ~94 |
+| 18:44 | Session end: 227 writes across 37 files (ANNA-VOICE.md, ch01-departure.trial.md, ch02-recruitment-interview.trial.md, ch02-local-first-serious-stack.md, ch03-inverted-stack-one-diagram.md) | 25 reads | ~156327 tok |
+| 19:09 | Edited vol-2/act-1/ch01-departure.md | inline fix | ~45 |
+| 19:09 | Edited vol-2/act-1/ch01-departure.md | inline fix | ~31 |
+| 19:09 | Edited vol-2/act-1/ch01-departure.md | inline fix | ~70 |
+| 19:09 | Edited vol-2/act-1/ch01-departure.md | inline fix | ~47 |
+| 19:09 | Edited vol-2/act-1/ch01-departure.md | inline fix | ~47 |
+| 19:09 | Edited vol-2/act-1/ch01-departure.md | inline fix | ~37 |
+| 19:10 | Edited vol-2/act-1/ch01-departure.md | inline fix | ~59 |
+| 19:10 | Edited vol-2/act-1/ch01-departure.md | 1→3 lines | ~152 |
+| 19:11 | Session end: 235 writes across 38 files (ANNA-VOICE.md, ch01-departure.trial.md, ch02-recruitment-interview.trial.md, ch02-local-first-serious-stack.md, ch03-inverted-stack-one-diagram.md) | 26 reads | ~156851 tok |
+| 19:32 | Session end: 235 writes across 38 files (ANNA-VOICE.md, ch01-departure.trial.md, ch02-recruitment-interview.trial.md, ch02-local-first-serious-stack.md, ch03-inverted-stack-one-diagram.md) | 26 reads | ~156851 tok |
+| 19:43 | Edited vol-2/act-1/ch01-departure.md | inline fix | ~379 |
+| 19:43 | Edited vol-2/act-1/ch01-departure.md | inline fix | ~90 |
+| 19:43 | Edited vol-2/act-1/ch01-departure.md | 3→3 lines | ~114 |
+| 19:43 | Edited vol-2/act-1/ch01-departure.md | inline fix | ~60 |
+| 19:44 | Session end: 239 writes across 38 files (ANNA-VOICE.md, ch01-departure.trial.md, ch02-recruitment-interview.trial.md, ch02-local-first-serious-stack.md, ch03-inverted-stack-one-diagram.md) | 26 reads | ~157539 tok |
+| 20:04 | Edited vol-2/act-1/ch01-departure.md | inline fix | ~61 |
+| 20:04 | Edited vol-2/act-1/ch01-departure.md | inline fix | ~28 |
+| 20:04 | Edited vol-2/act-1/ch01-departure.md | inline fix | ~28 |
+| 20:04 | Edited vol-2/act-1/ch01-departure.md | inline fix | ~29 |
+| 20:04 | Edited vol-2/act-1/ch01-departure.md | inline fix | ~13 |
+| 20:04 | Edited vol-2/act-1/ch01-departure.md | inline fix | ~23 |
+| 20:05 | Edited vol-2/_series/canon.yaml | 6→11 lines | ~139 |
+| 20:05 | Edited vol-2/_series/canon.yaml | 7→7 lines | ~76 |
+| 20:05 | Session end: 247 writes across 38 files (ANNA-VOICE.md, ch01-departure.trial.md, ch02-recruitment-interview.trial.md, ch02-local-first-serious-stack.md, ch03-inverted-stack-one-diagram.md) | 26 reads | ~157949 tok |
+| 20:30 | Edited vol-2/act-1/ch01-departure.md | inline fix | ~187 |
+| 20:30 | Session end: 248 writes across 38 files (ANNA-VOICE.md, ch01-departure.trial.md, ch02-recruitment-interview.trial.md, ch02-local-first-serious-stack.md, ch03-inverted-stack-one-diagram.md) | 26 reads | ~158149 tok |
+| 22:20 | Session end: 248 writes across 38 files (ANNA-VOICE.md, ch01-departure.trial.md, ch02-recruitment-interview.trial.md, ch02-local-first-serious-stack.md, ch03-inverted-stack-one-diagram.md) | 26 reads | ~158149 tok |
+
+## Session: 2026-05-14 22:32
+
+| Time | Action | File(s) | Outcome | ~Tokens |
+|------|--------|---------|---------|--------|
+| 22:33 | Edited ../galley/integrations/library.json | inline fix | ~25 |
+| 22:33 | Edited ../galley/services/book-server/server.js | added 5 condition(s) | ~1315 |
+| 22:33 | Edited ../galley/services/book-server/server.js | 5→5 lines | ~66 |
+| 22:33 | Edited ../galley/services/book-server/server.js | 2→2 lines | ~24 |
+| 22:33 | Edited ../galley/services/book-server/server.js | modified watchBook() | ~107 |
+| 22:34 | Session end: 5 writes across 2 files (library.json, server.js) | 2 reads | ~1537 tok |
+| 02:51 | Session end: 5 writes across 2 files (library.json, server.js) | 2 reads | ~1537 tok |
+| 02:54 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~87 |
+| 02:54 | Edited vol-2/act-1/ch02-recruitment-interview.md | 3→3 lines | ~128 |
+| 02:54 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~98 |
+| 02:54 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~120 |
+| 02:54 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~202 |
+| 02:54 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~105 |
+| 02:55 | Edited vol-2/act-1/ch02-recruitment-interview.md | "s architect to be the str" → "s architect to be the str" | ~146 |
+| 02:55 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~115 |
+| 02:55 | Edited vol-2/act-1/ch02-recruitment-interview.md | 3→3 lines | ~211 |
+| 02:55 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~86 |
+| 02:56 | Edited vol-2/act-1/ch02-recruitment-interview.md | 7→7 lines | ~434 |
+| 02:56 | Session end: 16 writes across 3 files (library.json, server.js, ch02-recruitment-interview.md) | 3 reads | ~3392 tok |
+| 03:02 | Session end: 16 writes across 3 files (library.json, server.js, ch02-recruitment-interview.md) | 3 reads | ~3392 tok |
+| 03:03 | Session end: 16 writes across 3 files (library.json, server.js, ch02-recruitment-interview.md) | 9 reads | ~7385 tok |
+| 03:06 | Created .pao-inbox/_decisions/2026-05-14-plot-grid-tool-plan.md | — | ~7451 |
+| 03:06 | Session end: 17 writes across 4 files (library.json, server.js, ch02-recruitment-interview.md, 2026-05-14-plot-grid-tool-plan.md) | 9 reads | ~15368 tok |
+| 03:08 | Edited vol-2/act-1/ch02-recruitment-interview.md | removed 7 lines | ~11 |
+| 03:08 | Edited vol-2/act-1/ch01-departure.md | removed 6 lines | ~7 |
+| 03:09 | Session end: 19 writes across 5 files (library.json, server.js, ch02-recruitment-interview.md, 2026-05-14-plot-grid-tool-plan.md, ch01-departure.md) | 10 reads | ~30067 tok |
+| 03:13 | Session end: 19 writes across 5 files (library.json, server.js, ch02-recruitment-interview.md, 2026-05-14-plot-grid-tool-plan.md, ch01-departure.md) | 10 reads | ~30067 tok |
+| 03:17 | Session end: 19 writes across 5 files (library.json, server.js, ch02-recruitment-interview.md, 2026-05-14-plot-grid-tool-plan.md, ch01-departure.md) | 10 reads | ~30067 tok |
+| 03:20 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~171 |
+| 03:20 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~329 |
+| 03:20 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~153 |
+| 03:20 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~149 |
+| 03:20 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~63 |
+| 03:20 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~59 |
+| 03:20 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~61 |
+| 03:20 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~84 |
+| 03:20 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~53 |
+| 03:21 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~18 |
+| 03:21 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~23 |
+| 03:21 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~190 |
+| 03:21 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~97 |
+| 03:21 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~149 |
+| 03:21 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~85 |
+| 03:21 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~111 |
+| 03:21 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~110 |
+| 03:21 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~114 |
+| 03:21 | Edited vol-2/act-1/ch02-recruitment-interview.md | "s claim under sustained p" → "s claim under sustained p" | ~96 |
+| 03:23 | Created vol-2/act-1/ch02-recruitment-interview.held-lines.json | — | ~747 |
+| 03:23 | Session end: 39 writes across 6 files (library.json, server.js, ch02-recruitment-interview.md, 2026-05-14-plot-grid-tool-plan.md, ch01-departure.md) | 10 reads | ~32994 tok |
+| 03:35 | Edited vol-2/act-1/ch02-recruitment-interview.md | 3→3 lines | ~112 |
+| 03:35 | Session end: 40 writes across 6 files (library.json, server.js, ch02-recruitment-interview.md, 2026-05-14-plot-grid-tool-plan.md, ch01-departure.md) | 10 reads | ~33114 tok |
+| 03:38 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~44 |
+| 03:39 | Session end: 41 writes across 6 files (library.json, server.js, ch02-recruitment-interview.md, 2026-05-14-plot-grid-tool-plan.md, ch01-departure.md) | 10 reads | ~33162 tok |
+| 03:43 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~165 |
+| 03:43 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~50 |
+| 03:43 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~25 |
+| 03:43 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~68 |
+| 03:43 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~56 |
+| 03:43 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~56 |
+| 03:43 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~104 |
+| 03:43 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~68 |
+| 03:44 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~80 |
+| 03:44 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~56 |
+| 03:44 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~18 |
+| 03:44 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~63 |
+| 03:44 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~262 |
+| 03:44 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~39 |
+| 03:44 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~46 |
+| 03:44 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~115 |
+| 03:44 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~158 |
+| 03:45 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~101 |
+| 03:46 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~331 |
+| 03:47 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~39 |
+| 03:48 | Session end: 61 writes across 6 files (library.json, server.js, ch02-recruitment-interview.md, 2026-05-14-plot-grid-tool-plan.md, ch01-departure.md) | 10 reads | ~35105 tok |
+| 03:52 | Session end: 61 writes across 6 files (library.json, server.js, ch02-recruitment-interview.md, 2026-05-14-plot-grid-tool-plan.md, ch01-departure.md) | 10 reads | ~35105 tok |
+| 04:53 | Session end: 61 writes across 6 files (library.json, server.js, ch02-recruitment-interview.md, 2026-05-14-plot-grid-tool-plan.md, ch01-departure.md) | 10 reads | ~35105 tok |
+| 05:54 | Session end: 61 writes across 6 files (library.json, server.js, ch02-recruitment-interview.md, 2026-05-14-plot-grid-tool-plan.md, ch01-departure.md) | 10 reads | ~35105 tok |
+| 06:55 | Session end: 61 writes across 6 files (library.json, server.js, ch02-recruitment-interview.md, 2026-05-14-plot-grid-tool-plan.md, ch01-departure.md) | 10 reads | ~35105 tok |
+| 06:59 | Session end: 61 writes across 6 files (library.json, server.js, ch02-recruitment-interview.md, 2026-05-14-plot-grid-tool-plan.md, ch01-departure.md) | 10 reads | ~35105 tok |
+| 07:43 | Session end: 61 writes across 6 files (library.json, server.js, ch02-recruitment-interview.md, 2026-05-14-plot-grid-tool-plan.md, ch01-departure.md) | 11 reads | ~61573 tok |
+| 07:49 | Created .pao-inbox/_decisions/2026-05-14-prose-telemetry-metric-improvements-plan.md | — | ~4717 |
+| 07:49 | Session end: 62 writes across 7 files (library.json, server.js, ch02-recruitment-interview.md, 2026-05-14-plot-grid-tool-plan.md, ch01-departure.md) | 11 reads | ~66627 tok |
+| 09:00 | Edited ../galley/services/book-server/server.js | added 1 import(s) | ~59 |
+| 09:00 | Edited ../galley/services/book-server/server.js | added error handling | ~636 |
+| 09:00 | Created ../galley/apps/web/src/components/DirectoryPicker.jsx | — | ~1509 |
+| 09:01 | Edited ../galley/apps/web/src/pages/library/LibraryPage.jsx | added 1 import(s) | ~47 |
+| 09:01 | Edited ../galley/apps/web/src/pages/library/LibraryPage.jsx | 9→9 lines | ~89 |
+| 09:01 | Edited ../galley/apps/web/src/styles/App.css | modified not() | ~1144 |
+| 09:02 | Session end: 68 writes across 10 files (library.json, server.js, ch02-recruitment-interview.md, 2026-05-14-plot-grid-tool-plan.md, ch01-departure.md) | 13 reads | ~70111 tok |
+| 09:09 | Session end: 68 writes across 10 files (library.json, server.js, ch02-recruitment-interview.md, 2026-05-14-plot-grid-tool-plan.md, ch01-departure.md) | 13 reads | ~70111 tok |
+| 09:15 | Edited ../galley/services/book-server/server.js | added error handling | ~838 |
+| 09:15 | Edited ../galley/services/book-server/server.js | added error handling | ~640 |
+| 09:15 | Edited ../galley/services/book-server/server.js | modified map() | ~189 |
+| 09:17 | Edited ../galley/services/book-server/server.js | modified resolveChapterRoots() | ~698 |
+| 09:17 | Edited ../galley/services/book-server/server.js | modified join() | ~611 |
+| 09:17 | Edited ../galley/services/book-server/server.js | 12→13 lines | ~161 |
+| 09:17 | Edited ../galley/services/book-server/server.js | modified chapterListResponse() | ~77 |
+| 09:18 | Edited ../galley/services/book-server/server.js | 2→3 lines | ~57 |
+| 09:18 | Session end: 76 writes across 10 files (library.json, server.js, ch02-recruitment-interview.md, 2026-05-14-plot-grid-tool-plan.md, ch01-departure.md) | 13 reads | ~73382 tok |
+| 09:23 | Edited ../galley/services/book-server/server.js | added error handling | ~610 |
+| 09:23 | Edited ../galley/services/book-server/server.js | bookAudioDir() → resolveBookAudioDir() | ~36 |
+| 09:23 | Edited ../galley/services/book-server/server.js | added 3 condition(s) | ~313 |
+| 09:24 | Edited ../galley/services/book-server/server.js | added 4 condition(s) | ~639 |
+| 09:24 | Edited ../galley/apps/web/src/pages/library/LibraryPage.jsx | CSS: audioRoot | ~68 |
+| 09:24 | Edited ../galley/apps/web/src/pages/library/LibraryPage.jsx | CSS: audioRoot | ~44 |
+| 09:24 | Edited ../galley/apps/web/src/pages/library/LibraryPage.jsx | added error handling | ~361 |
+| 09:24 | Edited ../galley/apps/web/src/pages/library/LibraryPage.jsx | added optional chaining | ~584 |
+| 09:24 | Edited ../galley/apps/web/src/styles/App.css | expanded (+30 lines) | ~208 |
+| 09:25 | Session end: 85 writes across 10 files (library.json, server.js, ch02-recruitment-interview.md, 2026-05-14-plot-grid-tool-plan.md, ch01-departure.md) | 13 reads | ~76245 tok |
