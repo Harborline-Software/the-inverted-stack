@@ -1,6 +1,6 @@
 # anatomy.md
 
-> Auto-maintained by OpenWolf. Last scanned: 2026-05-15T22:57:30.647Z
+> Auto-maintained by OpenWolf. Last scanned: 2026-05-15T23:15:23.381Z
 > Files: 542 tracked | Anatomy hits: 0 | Misses: 0
 
 ## ../../../../../tmp/
@@ -918,10 +918,10 @@
 
 ## vol-2/act-1/
 
-- `ch01-departure.md` — Chapter 1 — Departure (~6163 tok)
+- `ch01-departure.md` — Chapter 1 — Departure (~6326 tok)
 - `ch01-departure.trial.md` — Chapter 1 — Departure (~6174 tok)
 - `ch02-recruitment-interview.held-lines.json` (~747 tok)
-- `ch02-recruitment-interview.md` — Chapter 2 — The Recruitment Interview (~8144 tok)
+- `ch02-recruitment-interview.md` — Chapter 2 — The Recruitment Interview (~8287 tok)
 - `ch02-recruitment-interview.trial.held-lines.json` (~202 tok)
 - `ch02-recruitment-interview.trial.md` — Chapter 2 — The Recruitment Interview (~8506 tok)
 

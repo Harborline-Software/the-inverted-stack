@@ -3759,3 +3759,7 @@
 | 18:56 | Edited ../galley/prose/CHANGELOG.md | modified limitations() | ~904 |
 | 18:56 | Edited .pao-inbox/_decisions/2026-05-14-prose-telemetry-metric-improvements-plan.md | 15→16 lines | ~403 |
 | 18:57 | Edited .pao-inbox/_decisions/2026-05-14-prose-telemetry-metric-improvements-plan.md | modified append() | ~1915 |
+| 18:59 | Session end: 166 writes across 21 files (library.json, server.js, ch02-recruitment-interview.md, 2026-05-14-plot-grid-tool-plan.md, ch01-departure.md) | 27 reads | ~108386 tok |
+| 19:15 | Edited vol-2/act-1/ch01-departure.md | "s children were always do" → "s children were always do" | ~405 |
+| 19:15 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~318 |
+| 19:17 | Session end: 168 writes across 21 files (library.json, server.js, ch02-recruitment-interview.md, 2026-05-14-plot-grid-tool-plan.md, ch01-departure.md) | 27 reads | ~109197 tok |
