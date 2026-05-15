@@ -141,63 +141,8 @@ def _is_dialogue(s: str) -> bool:
 # the density crosses into excess — useful as informational signal rather
 # than a hard rule.
 
-def detect_parenthetical_density(prose: str) -> list[dict]:
-    """Per-paragraph density of em-dash appositions and parentheses.
-    Flags paragraphs where appositions/sentence ratio > 0.5."""
-    findings = []
-    for para in prose.split("\n\n"):
-        para = para.strip()
-        if not para or len(para) < 100:
-            continue
-        em_dashes = len(re.findall(r"\s—\s", para))
-        parens = para.count("(")
-        appositions = em_dashes // 2 + parens
-        sents = sentences(para)
-        if not sents:
-            continue
-        ratio = appositions / len(sents)
-        if ratio > 0.5 and appositions >= 3:
-            findings.append({
-                "type": "parenthetical_density",
-                "em_dashes": em_dashes,
-                "parens": parens,
-                "appositions_estimate": appositions,
-                "sentence_count": len(sents),
-                "ratio": round(ratio, 2),
-                "paragraph_excerpt": para[:140] + ("..." if len(para) > 140 else ""),
-                "confidence": 0.6,
-                "rule_id": "handcount:parenthetical_density.appositions_per_sentence",
-            })
-    return findings
-
-
-# ─── Fragment density ────────────────────────────────────────────────────
-# Three or more consecutive short sentences (<5 words). Deliberate fragments
-# are fine (Bobiverse uses them); a chain of them suggests breathlessness
-# or over-emphasis.
-
-def detect_fragment_density(sents: list[str], min_chain: int = 3) -> list[dict]:
-    """Consecutive runs of short sentences (≤4 words) of length min_chain
-    or more. Flags fragment cascades like 'Not a thought. A feeling.'
-    when they run too long."""
-    findings = []
-    i = 0
-    while i < len(sents):
-        run = 0
-        while i + run < len(sents) and len(tokens(sents[i + run])) <= 4:
-            run += 1
-        if run >= min_chain:
-            findings.append({
-                "type": "fragment_density",
-                "run_length": run,
-                "sentences": sents[i:i + run],
-                "confidence": 0.7,
-                "rule_id": "handcount:fragment_density.consecutive_short_sentences",
-            })
-            i += run
-        else:
-            i += 1
-    return findings
+# parenthetical_density + fragment_density retired — migrated to galley/prose
+# registry under detectors/density_style/. Phase 8 batch 4.
 
 
 # ─── Statement-then-reversal ─────────────────────────────────────────────
@@ -225,52 +170,8 @@ def detect_fragment_density(sents: list[str], min_chain: int = 3) -> list[dict]:
 # Stock filler phrases that mark amateur or academic prose. High-precision
 # exact-match detection.
 
-_REDUNDANT_PHRASES = [
-    "in order to",
-    "the fact that",
-    "for the first time",
-    "needless to say",
-    "it goes without saying",
-    "at this point in time",
-    "in the event that",
-    "due to the fact that",
-    "in spite of the fact that",
-    "with regard to",
-    "with respect to",
-    "in terms of",
-    "for all intents and purposes",
-    "first and foremost",
-    "last but not least",
-    "each and every",
-    "one and the same",
-    "completely and utterly",
-    "absolutely essential",
-    "very unique",
-    "totally complete",
-    "end result",
-    "past history",
-    "future plans",
-    "advance planning",
-    "currently underway",
-    "personal opinion",
-]
-
-
-def detect_redundant_phrases(prose: str) -> list[dict]:
-    """Stock filler phrases that should be cut. Strict exact-match."""
-    findings = []
-    for phrase in _REDUNDANT_PHRASES:
-        pat = re.compile(r"\b" + re.escape(phrase) + r"\b", re.IGNORECASE)
-        for m in pat.finditer(prose):
-            findings.append({
-                "type": "redundant_phrase",
-                "phrase": phrase,
-                "start_char": m.start(),
-                "end_char": m.end(),
-                "confidence": 1.0,
-                "rule_id": "handcount:redundant_phrase.filler_match",
-            })
-    return findings
+# redundant_phrase retired — migrated to galley/prose registry under
+# detectors/density_style/redundant_phrases.py. Phase 8 batch 4.
 
 
 # ─── Internal anaphora ───────────────────────────────────────────────────
@@ -387,171 +288,9 @@ def detect_proximity_echo(sents: list[str], max_distance: int = 12,
 # would / could / should / might frequency. Hedging modals are a marker of
 # narrator uncertainty; over-use makes prose tentative.
 
-_MODALS = re.compile(
-    r"\b(would|could|should|might|may|must|shall|ought|will|won't|"
-    r"wouldn't|couldn't|shouldn't|mightn't|mustn't|shan't)\b",
-    re.IGNORECASE,
-)
-
-
-def detect_modal_density(prose: str, total_words: int) -> list[dict]:
-    """Total modal-verb count. Reported as informational metric; the
-    verdict checks density per 1k tokens (>40/1k = heavy hedging)."""
-    findings = []
-    for m in _MODALS.finditer(prose):
-        findings.append({
-            "type": "modal_verb",
-            "modal": m.group(1).lower(),
-            "start_char": m.start(),
-            "confidence": 1.0,
-            "rule_id": "handcount:modal_density.hedging_marker",
-        })
-    return findings
-
-
-# ─── Vague-quantifier density ────────────────────────────────────────────
-# "very," "really," "quite," "rather," "somewhat" — intensifiers that
-# weaken rather than strengthen. Strunk-and-White perennial.
-
-_VAGUE_QUANTIFIERS = re.compile(
-    r"\b(very|really|quite|rather|somewhat|fairly|pretty|just|"
-    r"almost|nearly|basically|essentially|literally|actually|"
-    r"definitely|certainly|probably|perhaps|maybe)\b",
-    re.IGNORECASE,
-)
-
-
-def detect_vague_quantifiers(prose: str) -> list[dict]:
-    """Weakening intensifiers and hedge adverbs."""
-    findings = []
-    for m in _VAGUE_QUANTIFIERS.finditer(prose):
-        findings.append({
-            "type": "vague_quantifier",
-            "word": m.group(1).lower(),
-            "start_char": m.start(),
-            "confidence": 0.85,
-            "rule_id": "handcount:vague_quantifier.weakening_intensifier",
-        })
-    return findings
-
-
-# ─── Abstract-noun density (-tion, -ness, -ity suffixes) ─────────────────
-# Words ending in -tion, -ness, -ity, -ment, -ance are abstract nouns. Heavy
-# use signals academic register. Bobiverse uses concrete nouns; Janeway
-# leans abstract in command-monologue mode.
-
-_ABSTRACT_SUFFIX = re.compile(
-    r"\b[a-z]{3,}(?:tion|tions|ness|ity|ities|ment|ments|ance|ances|ence|ences)\b",
-    re.IGNORECASE,
-)
-
-
-def detect_abstract_nouns(prose: str) -> list[dict]:
-    """Words ending in abstract-noun suffixes. Informational metric."""
-    findings = []
-    for m in _ABSTRACT_SUFFIX.finditer(prose):
-        word = m.group(0).lower()
-        if word in {"three", "vacation", "destination", "stations"}:  # benign technicals
-            continue
-        findings.append({
-            "type": "abstract_noun",
-            "word": word,
-            "start_char": m.start(),
-            "confidence": 0.7,
-            "rule_id": "handcount:abstract_noun.suffix_match",
-        })
-    return findings
-
-
-# ─── Adverb density (-ly words) ──────────────────────────────────────────
-# -ly adverbs are weak-writing markers in fiction. Anna's voice is
-# adverb-light; an uptick would signal drift toward telling.
-
-_ADVERB_LY = re.compile(r"\b[a-z]{4,}ly\b", re.IGNORECASE)
-_ADVERB_EXCLUDE = {"only", "early", "really", "family", "ugly", "lovely", "lonely",
-                   "deadly", "daily", "yearly", "weekly", "kindly", "friendly",
-                   "lively", "monthly", "deadly", "homely", "july"}
-
-
-def detect_adverbs(prose: str) -> list[dict]:
-    """-ly adverbs. Excludes common false positives (only, family, etc.)."""
-    findings = []
-    for m in _ADVERB_LY.finditer(prose):
-        word = m.group(0).lower()
-        if word in _ADVERB_EXCLUDE:
-            continue
-        findings.append({
-            "type": "adverb_ly",
-            "word": word,
-            "start_char": m.start(),
-            "confidence": 0.85,
-            "rule_id": "handcount:adverb.ly_suffix",
-        })
-    return findings
-
-
-# ─── Dialogue-attribution overuse (he said / she said) ───────────────────
-# Most dialogue should self-attribute via context. Over-use of "he said" /
-# "she said" reads as amateur tagging.
-
-_SAID_TAGS = re.compile(
-    r"\b(he|she|I|they|we)\s+(said|replied|asked|answered|told|added|stated|"
-    r"declared|whispered|murmured|continued|repeated)\b",
-    re.IGNORECASE,
-)
-
-
-def detect_said_overuse(prose: str) -> list[dict]:
-    """Dialogue attribution tags."""
-    findings = []
-    for m in _SAID_TAGS.finditer(prose):
-        findings.append({
-            "type": "said_tag",
-            "tag": m.group(0).lower(),
-            "verb": m.group(2).lower(),
-            "start_char": m.start(),
-            "confidence": 1.0,
-            "rule_id": "handcount:said_tag.attribution_verb",
-        })
-    return findings
-
-
-# ─── Paragraph-length anomaly ────────────────────────────────────────────
-# A paragraph more than 4× the chapter mean is a wall of text; one less
-# than 0.2× the mean is a fragment. Both are register signals.
-
-def detect_paragraph_length_anomaly(prose: str) -> list[dict]:
-    """Paragraphs whose length is anomalous against the chapter's mean."""
-    findings = []
-    paras = [p.strip() for p in prose.split("\n\n") if p.strip() and len(p.strip()) > 30]
-    if len(paras) < 5:
-        return findings
-    lengths = [len(tokens(p)) for p in paras]
-    mean_len = sum(lengths) / len(lengths)
-    for i, (p, n) in enumerate(zip(paras, lengths)):
-        if n > 4 * mean_len:
-            findings.append({
-                "type": "paragraph_length_anomaly",
-                "kind": "oversized",
-                "word_count": n,
-                "chapter_mean": round(mean_len, 1),
-                "ratio": round(n / mean_len, 1),
-                "paragraph_excerpt": p[:120] + ("..." if len(p) > 120 else ""),
-                "confidence": 0.6,
-                "rule_id": "handcount:paragraph_length.over_4x_mean",
-            })
-        elif n < 0.2 * mean_len and n >= 5:
-            findings.append({
-                "type": "paragraph_length_anomaly",
-                "kind": "undersized",
-                "word_count": n,
-                "chapter_mean": round(mean_len, 1),
-                "ratio": round(n / mean_len, 2),
-                "paragraph_excerpt": p,
-                "confidence": 0.4,
-                "rule_id": "handcount:paragraph_length.under_0.2x_mean",
-            })
-    return findings
+# modal_verb / vague_quantifier / abstract_noun / adverb_ly / said_tag /
+# paragraph_length_anomaly detectors retired — migrated to galley/prose
+# registry under detectors/density_style/. Phase 8 batch 4.
 
 
 # ═══════════════════════════════════════════════════════════════════════════
@@ -747,54 +486,8 @@ def detect_comma_splices(prose: str) -> list[dict]:
     return findings
 
 
-# ─── Cliché detection ────────────────────────────────────────────────────
-# List of common fiction clichés. Exact-match.
-
-_CLICHES = [
-    "at the end of the day", "all that glitters", "back to square one",
-    "better safe than sorry", "burning the midnight oil", "by the skin of",
-    "calm before the storm", "cat got your tongue", "cool as a cucumber",
-    "cry over spilt milk", "dead as a doornail", "easy as pie",
-    "every cloud has a silver lining", "fish out of water",
-    "for what it's worth", "hit the nail on the head", "in the nick of time",
-    "it's not rocket science", "needle in a haystack",
-    "only time will tell", "out of the blue", "piece of cake",
-    "raining cats and dogs", "read between the lines", "see the light",
-    "the calm before", "the apple of his eye", "the apple of her eye",
-    "think outside the box", "thinking outside the box", "tip of the iceberg",
-    "tomorrow is another day", "two birds with one stone",
-    "when push comes to shove", "with bated breath", "writing on the wall",
-    "a stitch in time", "all in a day's work", "all walks of life",
-    "as luck would have it", "avoid like the plague",
-    "between a rock and a hard place", "beyond the pale",
-    "blood is thicker than", "calm as a hindu cow", "diamond in the rough",
-    "dyed in the wool", "easier said than done", "every fiber of my being",
-    "fall by the wayside", "fall on deaf ears", "from the get-go",
-    "gentle as a lamb", "grass is always greener", "in the same boat",
-    "last but not least", "let the cat out of the bag", "lock, stock, and barrel",
-    "lost in the shuffle", "make a long story short", "no pain, no gain",
-    "off the beaten path", "on the wrong side of the bed",
-    "play it by ear", "pull yourself up by your bootstraps",
-    "put two and two together", "rolling in the dough",
-    "sharp as a tack", "stick out like a sore thumb",
-]
-
-
-def detect_cliches(prose: str) -> list[dict]:
-    """Exact-match common fiction clichés."""
-    findings = []
-    low = prose.lower()
-    for phrase in _CLICHES:
-        if phrase in low:
-            for m in re.finditer(re.escape(phrase), low):
-                findings.append({
-                    "type": "cliche",
-                    "phrase": phrase,
-                    "start_char": m.start(),
-                    "confidence": 1.0,
-                    "rule_id": "handcount:cliche.exact_match",
-                })
-    return findings
+# cliche detector retired — migrated to galley/prose registry under
+# detectors/density_style/cliche.py. Phase 8 batch 4.
 
 
 # ─── Direct-address ("dear reader" etc.) ─────────────────────────────────
@@ -975,11 +668,22 @@ def detect_paragraph_opener_repeats(prose: str, min_repeats: int = 3) -> list[di
 # (replied / answered / continued) are over-represented, attribution is
 # self-conscious.
 
+# Local copy of the said-tags regex for attribution-variety stats.
+# The said_tag detector itself was migrated to galley/prose in batch 4,
+# but this function uses the same regex purely for per-chapter entropy
+# stats and is unrelated to the detector's finding emission.
+_ATTRIBUTION_TAGS = re.compile(
+    r"\b(he|she|I|they|we)\s+(said|replied|asked|answered|told|added|stated|"
+    r"declared|whispered|murmured|continued|repeated)\b",
+    re.IGNORECASE,
+)
+
+
 def compute_attribution_variety(prose: str) -> dict:
     """Distribution of dialogue-attribution verbs."""
     import math
     from collections import Counter
-    tags = list(_SAID_TAGS.finditer(prose))
+    tags = list(_ATTRIBUTION_TAGS.finditer(prose))
     if not tags:
         return {"total_attributions": 0, "unique_verbs": 0, "entropy": 0.0}
     verb_counts = Counter(m.group(2).lower() for m in tags)
@@ -1185,24 +889,8 @@ def verdict(metrics_list: list[dict], doc: dict, thresholds: dict) -> dict:
     # than one per phrase, so verdict thresholds in the yaml reflect
     # per-occurrence counting.
 
-    # Parenthetical density — informational, not blocker.
-    if "parenthetical_density" in by_dev:
-        n = by_dev["parenthetical_density"]["raw_count"]
-        if n >= 5:
-            warnings.append(f"parenthetical_density: {n} paragraphs with high apposition density")
-        elif n >= 1:
-            passes.append("parenthetical_density")  # informational; not flagged
-        else:
-            passes.append("parenthetical_density")
-    # Fragment density.
-    if "fragment_density" in by_dev:
-        n = by_dev["fragment_density"]["raw_count"]
-        if n >= 3:
-            warnings.append(f"fragment_density: {n} fragment-cascade runs detected")
-        elif n >= 1:
-            passes.append("fragment_density")  # one cascade is intentional, fine
-        else:
-            passes.append("fragment_density")
+    # parenthetical_density / fragment_density rollups migrated to
+    # galley/prose verdict.rollup_registry (Phase 8 batch 4).
     # statement_then_reversal rollup migrated to galley/prose
     # verdict.rollup_registry (Phase 8 batch 3).
 
@@ -1213,70 +901,11 @@ def verdict(metrics_list: list[dict], doc: dict, thresholds: dict) -> dict:
     # `detectors.filter_words.filter_words` (verb list). The registry
     # detector + galley/prose verdict layer handle the >8/1k threshold.
 
-    # Redundant phrases — exact-match filler.
-    if "redundant_phrase" in by_dev:
-        n = by_dev["redundant_phrase"]["raw_count"]
-        if n >= 3:
-            blockers.append(f"redundant_phrase: {n} filler phrases (cut all)")
-        elif n >= 1:
-            warnings.append(f"redundant_phrase: {n} filler phrase(s) — cut")
-        else:
-            passes.append("redundant_phrase")
-
+    # redundant_phrase / modal_verb / vague_quantifier / abstract_noun /
+    # adverb_ly / said_tag / paragraph_length_anomaly rollups migrated to
+    # galley/prose verdict.rollup_registry (Phase 8 batch 4).
     # internal_anaphora / anadiplosis / epanorthosis rollups migrated
     # to galley/prose verdict.rollup_registry (Phase 8 batch 2a).
-
-    # Modal verbs — hedging density.
-    if "modal_verb" in by_dev:
-        n = by_dev["modal_verb"]["raw_count"]
-        per_1k = n * 1000 / word_count
-        if per_1k > 50:
-            warnings.append(f"modal_verb: {per_1k:.1f}/1k modal/hedging verbs (heavy hedging)")
-        else:
-            passes.append("modal_verb")
-
-    # Vague quantifiers.
-    if "vague_quantifier" in by_dev:
-        n = by_dev["vague_quantifier"]["raw_count"]
-        per_1k = n * 1000 / word_count
-        if per_1k > 10:
-            warnings.append(f"vague_quantifier: {per_1k:.1f}/1k weakening intensifiers")
-        else:
-            passes.append("vague_quantifier")
-
-    # Abstract nouns — academic register marker.
-    if "abstract_noun" in by_dev:
-        n = by_dev["abstract_noun"]["raw_count"]
-        per_1k = n * 1000 / word_count
-        if per_1k > 30:
-            warnings.append(f"abstract_noun: {per_1k:.1f}/1k abstract-suffix words (academic register)")
-        else:
-            passes.append("abstract_noun")
-
-    # -ly adverbs.
-    if "adverb_ly" in by_dev:
-        n = by_dev["adverb_ly"]["raw_count"]
-        per_1k = n * 1000 / word_count
-        if per_1k > 15:
-            warnings.append(f"adverb_ly: {per_1k:.1f}/1k -ly adverbs (weak-writing marker)")
-        else:
-            passes.append("adverb_ly")
-
-    # Said-tags — dialogue attribution density.
-    if "said_tag" in by_dev:
-        n = by_dev["said_tag"]["raw_count"]
-        if n >= 30:
-            warnings.append(f"said_tag: {n} dialogue-attribution tags (consider context-based attribution)")
-        else:
-            passes.append("said_tag")
-
-    # Paragraph-length anomalies.
-    if "paragraph_length_anomaly" in by_dev:
-        n = by_dev["paragraph_length_anomaly"]["raw_count"]
-        if n >= 4:
-            warnings.append(f"paragraph_length_anomaly: {n} paragraphs with anomalous length (4x or <0.2x mean)")
-        else:
-            passes.append("paragraph_length_anomaly")
 
     # trigram_chain_loop rollup migrated to galley/prose
     # verdict.rollup_registry (Phase 8 batch 2b).
@@ -1318,12 +947,7 @@ def verdict(metrics_list: list[dict], doc: dict, thresholds: dict) -> dict:
             warnings.append(f"comma_splice: {n} suspected splice(s) (low-confidence; review)")
         else:
             passes.append("comma_splice")
-    if "cliche" in by_dev:
-        n = by_dev["cliche"]["raw_count"]
-        if n >= 1:
-            blockers.append(f"cliche: {n} stock fiction cliché(s) — cut")
-        else:
-            passes.append("cliche")
+    # cliche rollup migrated to galley/prose verdict.rollup_registry (batch 4).
     if "direct_address" in by_dev:
         n = by_dev["direct_address"]["raw_count"]
         if n >= 10:
@@ -1483,18 +1107,13 @@ def measure(md_path: Path, dimensions: dict | None = None) -> dict:
         # self_referential_frame migrated to registry (book.editorial.yaml).
         # bigram_chain_loop migrated to registry — batch 2b.
         # motif_overuse migrated to registry (book.editorial.yaml).
-        "parenthetical_density": detect_parenthetical_density(prose),
-        "fragment_density": detect_fragment_density(sents),
+        # parenthetical_density / fragment_density migrated to registry — batch 4.
         # statement_then_reversal migrated to registry — batch 3.
         # filter_word migrated to registry (book.editorial.yaml).
-        "redundant_phrase": detect_redundant_phrases(prose),
+        # redundant_phrase migrated to registry — batch 4.
         # internal_anaphora / anadiplosis migrated to registry — batch 2a.
-        "modal_verb": detect_modal_density(prose, doc.get("word_count", 0)),
-        "vague_quantifier": detect_vague_quantifiers(prose),
-        "abstract_noun": detect_abstract_nouns(prose),
-        "adverb_ly": detect_adverbs(prose),
-        "said_tag": detect_said_overuse(prose),
-        "paragraph_length_anomaly": detect_paragraph_length_anomaly(prose),
+        # modal_verb / vague_quantifier / abstract_noun / adverb_ly /
+        # said_tag / paragraph_length_anomaly migrated to registry — batch 4.
         # Phase 1.8 (final round):
         # trigram_chain_loop migrated to registry — batch 2b.
         "passive_voice": detect_passive_voice(prose),
@@ -1503,7 +1122,7 @@ def measure(md_path: Path, dimensions: dict | None = None) -> dict:
         "conjunctive_adverb": detect_conjunctive_adverbs(prose),
         "double_negative": detect_double_negatives(prose),
         "comma_splice": detect_comma_splices(prose),
-        "cliche": detect_cliches(prose),
+        # cliche migrated to registry — batch 4.
         "direct_address": detect_direct_address(prose),
         "timestamp": detect_timestamps(prose),
         "temporal_marker": detect_temporal_markers(prose),
