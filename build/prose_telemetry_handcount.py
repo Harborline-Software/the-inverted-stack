@@ -124,69 +124,11 @@ def detect_tautology(prose: str) -> list[dict]:
 # galley/prose registry under detectors/repetition/. Phase 8 batch 2a.
 
 
-# ─── Lexical-chain loop detector ─────────────────────────────────────────
-# Pattern: same content word repeated 3+ times within a single paragraph.
-# CO ear-flagged 2026-05-13: "the feeling was correct… The feeling was correct…
-# the feeling was also useless… the smallest possible feeling… the smallest
-# possible feeling" — "feeling" five times in one paragraph.
-#
-# Filters out proper nouns (capitalized in source) and common stopwords.
-
-_LEXICAL_STOPWORDS = {
-    # Articles, pronouns, common verbs
-    "would", "could", "should", "where", "there", "their", "which",
-    "about", "after", "again", "those", "these", "while", "until",
-    "before", "since", "every", "other", "another", "first", "second",
-    "third", "thought", "myself", "herself", "himself", "themselves",
-    "yourself", "without", "between", "through", "during", "against",
-    "because", "always", "never", "still", "right", "wrong", "going",
-    "really", "anything", "something", "nothing", "everything", "anyone",
-    "someone", "everyone", "course", "kind", "thing", "things",
-    # Anna-voice high-frequency function words that are register, not loop
-    "consortium", "architecture", "mission",
-}
-
-
-def detect_lexical_chain(prose: str) -> list[dict]:
-    """Per-paragraph: lowercase content words (≥5 letters) that appear with
-    density exceeding the topic-word baseline. Density-based threshold to
-    suppress topic-word false positives: a long paragraph about pastry will
-    say 'kuchen' four times functionally; that's not a loop. A 100-word
-    paragraph saying 'feeling' four times IS a loop.
-
-    Threshold: count >= max(3, paragraph_word_count / 75). So:
-       paragraph 150 words: 3 occurrences = flag
-       paragraph 300 words: 4 occurrences = flag
-       paragraph 450 words: 6 occurrences = flag
-    """
-    from collections import Counter
-    findings = []
-    for para in prose.split("\n\n"):
-        para = para.strip()
-        if not para or len(para) < 80:
-            continue
-        para_word_count = len(re.findall(r"\b[A-Za-z][A-Za-z'-]*\b", para))
-        # Density-based threshold — looser for longer paragraphs.
-        threshold = max(3, int(para_word_count / 75) + 1)
-        # Match content words starting with lowercase letter (excludes most
-        # proper nouns). Negative lookbehind avoids matching mid-word.
-        words = re.findall(r"(?<![A-Za-z])([a-z][a-z]{4,})(?![A-Za-z'])", para)
-        counts = Counter(w for w in words if w not in _LEXICAL_STOPWORDS)
-        for word, n in counts.items():
-            if n >= threshold:
-                # Density signal: occurrences per 100 words of the paragraph.
-                density = round(100 * n / max(para_word_count, 1), 1)
-                findings.append({
-                    "type": "lexical_chain_loop",
-                    "word": word,
-                    "count": n,
-                    "paragraph_word_count": para_word_count,
-                    "density_per_100": density,
-                    "paragraph_excerpt": para[:140] + ("..." if len(para) > 140 else ""),
-                    "confidence": 0.75,
-                    "rule_id": "handcount:lexical_chain.density_above_threshold",
-                })
-    return findings
+# lexical_chain_loop detector retired — migrated to galley/prose
+# registry under detectors/chain/lexical_chain.py. Generic English
+# stopwords are detector defaults; Anna's high-frequency register words
+# (consortium, architecture, mission) live in book.editorial.yaml
+# under detectors.lexical_chain_loop.stopwords. Phase 8 batch 2b.
 
 
 # self_referential_frame detector retired — migrated to galley/prose
@@ -195,61 +137,8 @@ def detect_lexical_chain(prose: str) -> list[dict]:
 # in the same yaml are consumed by galley/prose's verdict.rollup_registry.
 
 
-# ─── Bigram chain loop ───────────────────────────────────────────────────
-# Pattern: two-word phrases repeating within a paragraph. Catches what the
-# single-word lexical_chain detector misses — e.g. "the staff history" as
-# a unit, "smallest possible feeling" — when the individual words don't
-# trip the threshold but the phrase does.
-
-_STOPWORD_BIGRAMS = {
-    ("in", "the"), ("of", "the"), ("to", "the"), ("on", "the"),
-    ("at", "the"), ("for", "the"), ("with", "the"), ("from", "the"),
-    ("by", "the"), ("as", "the"), ("and", "the"), ("and", "i"),
-    ("i", "had"), ("i", "have"), ("i", "was"), ("i", "am"),
-    ("she", "had"), ("he", "had"), ("it", "was"), ("there", "was"),
-    ("there", "were"), ("would", "have"), ("had", "been"),
-    ("did", "not"), ("had", "not"), ("would", "not"), ("could", "have"),
-    ("which", "was"), ("which", "is"), ("that", "i"), ("when", "i"),
-    ("when", "the"), ("if", "i"), ("if", "you"), ("but", "i"),
-    ("but", "the"), ("on", "a"), ("of", "a"), ("to", "a"), ("at", "a"),
-    ("i", "did"), ("i", "do"), ("i", "would"), ("i", "could"),
-    ("i", "knew"), ("i", "know"), ("i", "said"),
-}
-
-
-def detect_bigram_chain(prose: str) -> list[dict]:
-    """Per-paragraph: bigrams whose count exceeds a density-aware threshold.
-    Catches phrase-level loops the single-word lexical detector misses
-    (the 'the staff history' ×7 case). Uses Unicode tokenization to keep
-    diacritic-bearing names ('Tomás', 'Wanjiru') as single tokens, and a
-    density threshold to suppress topic-phrase false positives in long
-    paragraphs."""
-    from collections import Counter
-    findings = []
-    for para in prose.split("\n\n"):
-        para = para.strip()
-        if not para or len(para) < 100:
-            continue
-        words = [w.lower() for w in tokens(para)]
-        # Density-aware threshold: longer paragraphs need more repeats to flag.
-        threshold = max(3, int(len(words) / 100) + 2)
-        bigrams = list(zip(words, words[1:]))
-        counts = Counter(bg for bg in bigrams if bg not in _STOPWORD_BIGRAMS)
-        for bg, n in counts.items():
-            if n >= threshold:
-                density = round(100 * n / max(len(words), 1), 1)
-                findings.append({
-                    "type": "bigram_chain_loop",
-                    "bigram": " ".join(bg),
-                    "count": n,
-                    "paragraph_word_count": len(words),
-                    "density_per_100": density,
-                    "threshold_used": threshold,
-                    "paragraph_excerpt": para[:140] + ("..." if len(para) > 140 else ""),
-                    "confidence": 0.75,
-                    "rule_id": "handcount:bigram_chain.density_above_threshold",
-                })
-    return findings
+# bigram_chain_loop detector retired — migrated to galley/prose
+# registry under detectors/chain/bigram_chain.py. Phase 8 batch 2b.
 
 
 # ─── Motif phrase tracker ────────────────────────────────────────────────
@@ -775,38 +664,8 @@ def detect_paragraph_length_anomaly(prose: str) -> list[dict]:
 # "history" or "the staff" + "staff history"). High precision because
 # three-word collisions are unlikely by chance in narrative prose.
 
-_STOPWORD_TRIGRAMS = {
-    ("one", "of", "the"), ("the", "rest", "of"), ("part", "of", "the"),
-    ("in", "the", "way"), ("at", "the", "same"), ("for", "the", "first"),
-    ("in", "the", "case"), ("by", "the", "way"), ("on", "the", "other"),
-    ("the", "other", "hand"), ("in", "the", "end"), ("at", "the", "end"),
-}
-
-
-def detect_trigram_chain(prose: str, min_repeats: int = 3) -> list[dict]:
-    """Per-paragraph: 3-grams that appear min_repeats or more times."""
-    from collections import Counter
-    findings = []
-    for para in prose.split("\n\n"):
-        para = para.strip()
-        if not para or len(para) < 120:
-            continue
-        words = [w.lower() for w in tokens(para)]
-        threshold = max(2, int(len(words) / 150) + 1)
-        trigrams = list(zip(words, words[1:], words[2:]))
-        counts = Counter(tg for tg in trigrams if tg not in _STOPWORD_TRIGRAMS)
-        for tg, n in counts.items():
-            if n >= max(threshold, min_repeats):
-                findings.append({
-                    "type": "trigram_chain_loop",
-                    "trigram": " ".join(tg),
-                    "count": n,
-                    "paragraph_word_count": len(words),
-                    "paragraph_excerpt": para[:140] + ("..." if len(para) > 140 else ""),
-                    "confidence": 0.85,
-                    "rule_id": "handcount:trigram_chain.phrase_repeat_in_paragraph",
-                })
-    return findings
+# trigram_chain_loop detector retired — migrated to galley/prose
+# registry under detectors/chain/trigram_chain.py. Phase 8 batch 2b.
 
 
 # ─── Passive voice density ───────────────────────────────────────────────
@@ -1413,37 +1272,12 @@ def verdict(metrics_list: list[dict], doc: dict, thresholds: dict) -> dict:
     # echo_and_confirm rollup migrated to galley/prose registry
     # (verdict.rollup_registry consumes book.editorial.yaml thresholds).
     # Phase 8 batch 2a.
-    # Lexical chain: severity by per-paragraph density, not raw count.
-    # Many hits are topic-word false positives (a paragraph about pastry will
-    # say "kuchen" 4 times functionally). Real loops show as high-density
-    # repetition in tighter paragraphs.
-    if "lexical_chain_loop" in by_dev:
-        # Inspect individual chain findings to find the worst density.
-        # Without access to the raw findings list here, fall back to a
-        # softer rule: many hits = warning, very many = blocker.
-        n = by_dev["lexical_chain_loop"]["raw_count"]
-        if n >= 20:
-            blockers.append(f"lexical_chain_loop: {n} candidates flagged (likely real looping; investigate top-density hits)")
-        elif n >= 8:
-            warnings.append(f"lexical_chain_loop: {n} candidates flagged (review top-density hits; many may be topic words)")
-        elif n >= 1:
-            warnings.append(f"lexical_chain_loop: {n} candidate(s) flagged (review for true positives)")
-        else:
-            passes.append("lexical_chain_loop")
+    # lexical_chain_loop / bigram_chain_loop rollups migrated to
+    # galley/prose verdict.rollup_registry (Phase 8 batch 2b).
     # self_referential_frame migrated to registry: see book.editorial.yaml
     # `detectors.self_referential_frame`. Galley/prose's registry detector
     # fires under family='voice', and `verdict.rollup_registry` classifies
     # against `warning_raw_count` / `blocker_raw_count` in that yaml.
-
-    # Bigram chain loop — phrase-level repetition.
-    if "bigram_chain_loop" in by_dev:
-        n = by_dev["bigram_chain_loop"]["raw_count"]
-        if n >= 5:
-            blockers.append(f"bigram_chain_loop: {n} bigrams repeating 3+ times in a paragraph (likely real looping)")
-        elif n >= 1:
-            warnings.append(f"bigram_chain_loop: {n} bigram(s) flagged (review for true positives)")
-        else:
-            passes.append("bigram_chain_loop")
     # motif_overuse migrated to registry: see book.editorial.yaml
     # `detectors.motif_overuse` (retired_motifs + motifs cap dict). The
     # registry version emits one finding per over-cap occurrence rather
@@ -1550,15 +1384,8 @@ def verdict(metrics_list: list[dict], doc: dict, thresholds: dict) -> dict:
         else:
             passes.append("paragraph_length_anomaly")
 
-    # ─── Phase 1.8 detector verdicts ────────────────────────────────────
-    if "trigram_chain_loop" in by_dev:
-        n = by_dev["trigram_chain_loop"]["raw_count"]
-        if n >= 3:
-            blockers.append(f"trigram_chain_loop: {n} three-word phrases repeating (strong looping signal)")
-        elif n >= 1:
-            warnings.append(f"trigram_chain_loop: {n} trigram(s) flagged")
-        else:
-            passes.append("trigram_chain_loop")
+    # trigram_chain_loop rollup migrated to galley/prose
+    # verdict.rollup_registry (Phase 8 batch 2b).
     if "passive_voice" in by_dev:
         n = by_dev["passive_voice"]["raw_count"]
         per_1k_val = n * 1000 / word_count
@@ -1770,9 +1597,9 @@ def measure(md_path: Path, dimensions: dict | None = None) -> dict:
         # to registry (detectors/classical_rhetoric/). Phase 8 batch 1.
         "tautological_self_equation": detect_tautology(prose),
         # epanorthosis / echo_and_confirm migrated to registry — batch 2a.
-        "lexical_chain_loop": detect_lexical_chain(prose),
+        # lexical_chain_loop migrated to registry — batch 2b.
         # self_referential_frame migrated to registry (book.editorial.yaml).
-        "bigram_chain_loop": detect_bigram_chain(prose),
+        # bigram_chain_loop migrated to registry — batch 2b.
         # motif_overuse migrated to registry (book.editorial.yaml).
         "parenthetical_density": detect_parenthetical_density(prose),
         "fragment_density": detect_fragment_density(sents),
@@ -1787,7 +1614,7 @@ def measure(md_path: Path, dimensions: dict | None = None) -> dict:
         "said_tag": detect_said_overuse(prose),
         "paragraph_length_anomaly": detect_paragraph_length_anomaly(prose),
         # Phase 1.8 (final round):
-        "trigram_chain_loop": detect_trigram_chain(prose),
+        # trigram_chain_loop migrated to registry — batch 2b.
         "passive_voice": detect_passive_voice(prose),
         "expletive_construction": detect_expletive_constructions(sents),
         "conjunction_start": detect_conjunction_starts(sents),

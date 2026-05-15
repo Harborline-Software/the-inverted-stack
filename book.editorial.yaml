@@ -76,6 +76,16 @@ detectors:
     warning_raw_count: 1
     blocker_raw_count: 3
 
+  # ─── lexical_chain_loop ───────────────────────────────────────────────
+  # Anna's high-frequency register words that recur as voice signature,
+  # not as loops. These are book-specific extensions on top of the
+  # galley/prose generic English stopword default.
+  lexical_chain_loop:
+    stopwords:
+      - consortium
+      - architecture
+      - mission
+
   # ─── self_referential_frame ───────────────────────────────────────────
   # Staff-history meta-frame phrases. Per ANNA-VOICE.md anti-pattern #6,
   # these are author-of-the-account devices the narrator should use
