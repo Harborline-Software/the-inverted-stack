@@ -9,8 +9,36 @@
   {
     "device": "bigram_chain_loop",
     "match": {"text_contains": "He did not soften any of the four sentences"},
-    "reason": "Same passage as above — 'he did' bigram appears 7× because the held anaphora cascade contains it.",
+    "reason": "Same passage as above — 'he did' bigram appears 7x because the held anaphora cascade contains it. 'the original' also appears 4x inside the same cascade ('the original protocol', 'when he wrote the original', 'the original assumption', 'the original protocol had passed') — same exemption rationale.",
     "approved_by": "CO",
     "approved_at": "2026-05-13T00:00:00Z"
+  },
+  {
+    "device": "lexical_chain_loop",
+    "match": {"text_contains": "I had read it the first time at a kitchen table"},
+    "reason": "Three-reading anaphora chain — 'I had read it the first time / I read it the second time / I read it the third time' — is the deliberate scaffold of the chapter's opening movement. The repeated 'read' across paragraphs 2-5 is the device, not a defect.",
+    "approved_by": "CO",
+    "approved_at": "2026-05-14T00:00:00Z"
+  },
+  {
+    "device": "lexical_chain_loop",
+    "match": {"text_contains": "the original protocol assumed the network"},
+    "reason": "Joel's four-sentence confession plus the costing paragraph that follows are the chapter's emotional core. 'Original' / 'rewrite' clustering is structural — Anna is watching Joel's face NOT change between the two terms. The metric flags the device.",
+    "approved_by": "CO",
+    "approved_at": "2026-05-14T00:00:00Z"
+  },
+  {
+    "device": "bigram_chain_loop",
+    "match": {"text_contains": "He explained it once and did not explain it again"},
+    "reason": "The lease-rewrite walkthrough paragraph deliberately echoes 'the rewrite / the original' as Anna watches Joel's face for differential cost. Load-bearing per voice-spec.",
+    "approved_by": "CO",
+    "approved_at": "2026-05-14T00:00:00Z"
+  },
+  {
+    "device": "trigram_chain_loop",
+    "match": {"text_contains": "the neighbor's daughter was becoming"},
+    "reason": "Anna names her mother's comparison standard ('the neighbor's daughter') deliberately. After the Tier-1 sweep this appears 2x, the third reference now uses 'the daughter' / pronoun. Holding the residual.",
+    "approved_by": "CO",
+    "approved_at": "2026-05-14T00:00:00Z"
   }
 ]

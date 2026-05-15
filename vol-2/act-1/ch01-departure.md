@@ -1,8 +1,3 @@
-<!-- Trial draft. First clean-slate chapter in the locked Filchner / Anna-voice
-     register. Sits beside the existing ch01-departure.md until the register
-     passes the listen-test with the primary listener. Do not assemble; do not
-     promote. -->
-
 # Chapter 1 — Departure
 
 I took my last breakfast alone in Punta Arenas on the fourteenth of February, at a bakery on Avenida Colón that knew today was the day and had not made anything of it, which was as it should be.
