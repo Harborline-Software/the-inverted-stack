@@ -315,175 +315,10 @@ def detect_proximity_echo(sents: list[str], max_distance: int = 12,
 # constructions. False-positive prone on copulative adjectives, but useful
 # as a density signal.
 
-_BE_VERBS = (
-    "is|was|were|are|been|being|am|be"
-)
-_PASSIVE_RE = re.compile(
-    r"\b(" + _BE_VERBS + r")\s+"
-    r"((?:[a-z]+ly\s+)?(?:[a-z]+ed|known|seen|made|done|been|gone|"
-    r"taken|given|written|told|said|broken|frozen|chosen|driven|"
-    r"thrown|found|held|kept|left|paid|set|cut|hit|put|shut|spread|"
-    r"shown))\b",
-    re.IGNORECASE,
-)
-# Common past participles that are usually adjectival (false-positive source).
-_PASSIVE_FALSE_POSITIVES = {
-    "is fine", "was fine", "is right", "was right", "is wrong",
-    "was wrong", "is open", "was open", "is closed", "was closed",
-}
-
-
-def detect_passive_voice(prose: str) -> list[dict]:
-    """Be-verb + past participle as passive heuristic. Density metric."""
-    findings = []
-    for m in _PASSIVE_RE.finditer(prose):
-        snippet = m.group(0).lower()
-        if any(fp in snippet for fp in _PASSIVE_FALSE_POSITIVES):
-            continue
-        findings.append({
-            "type": "passive_voice",
-            "match": m.group(0),
-            "start_char": m.start(),
-            "confidence": 0.55,
-            "rule_id": "handcount:passive_voice.be_plus_past_participle",
-        })
-    return findings
-
-
-# ─── Expletive constructions ─────────────────────────────────────────────
-# "There is / There was / It is / It was" sentence starters. Weak openings
-# that delay the actual subject. High-precision detector.
-
-_EXPLETIVE_START = re.compile(
-    r"^(There\s+(?:is|are|was|were|will\s+be|has\s+been|have\s+been)|"
-    r"It\s+(?:is|was|will\s+be|has\s+been|seemed|seems|appeared|appears))\b",
-    re.IGNORECASE,
-)
-
-
-def detect_expletive_constructions(sents: list[str]) -> list[dict]:
-    """Sentences starting with expletive 'there'/'it' constructions."""
-    findings = []
-    for s in sents:
-        if _is_dialogue(s):
-            continue
-        m = _EXPLETIVE_START.match(s.strip())
-        if m:
-            findings.append({
-                "type": "expletive_construction",
-                "opener": m.group(0).lower(),
-                "sentence_start": s[:80],
-                "confidence": 0.9,
-                "rule_id": "handcount:expletive_construction.weak_opener",
-            })
-    return findings
-
-
-# ─── Conjunction-start sentences (And / But / So density) ───────────────
-# Sentences starting with And/But/So. Per modern usage these are fine in
-# moderation but density signals casualness or list-rhythm.
-
-_CONJUNCTION_START = re.compile(r"^(And|But|So|Or|Yet|Nor)\b")
-
-
-def detect_conjunction_starts(sents: list[str]) -> list[dict]:
-    """Sentences starting with And/But/So/Or/Yet/Nor."""
-    findings = []
-    for s in sents:
-        if _is_dialogue(s):
-            continue
-        m = _CONJUNCTION_START.match(s.strip())
-        if m:
-            findings.append({
-                "type": "conjunction_start",
-                "conjunction": m.group(1),
-                "sentence_start": s[:80],
-                "confidence": 1.0,
-                "rule_id": "handcount:conjunction_start.coordinating",
-            })
-    return findings
-
-
-# ─── Conjunctive adverbs (academic register marker) ─────────────────────
-# However, therefore, moreover, furthermore — formal academic register.
-# Anna's voice should be light on these.
-
-_CONJUNCTIVE_ADVERB = re.compile(
-    r"\b(however|therefore|moreover|furthermore|nevertheless|nonetheless|"
-    r"consequently|accordingly|hence|thus|indeed|otherwise|likewise|"
-    r"similarly|conversely)\b",
-    re.IGNORECASE,
-)
-
-
-def detect_conjunctive_adverbs(prose: str) -> list[dict]:
-    """Formal conjunctive adverbs (academic register marker)."""
-    findings = []
-    for m in _CONJUNCTIVE_ADVERB.finditer(prose):
-        findings.append({
-            "type": "conjunctive_adverb",
-            "word": m.group(1).lower(),
-            "start_char": m.start(),
-            "confidence": 1.0,
-            "rule_id": "handcount:conjunctive_adverb.academic_register",
-        })
-    return findings
-
-
-# ─── Double negative ─────────────────────────────────────────────────────
-# "did not... no" / "could not... never" / "had not... nothing" — error or
-# stylistic choice. Anna does this *deliberately* sometimes ("I did not
-# tell him about it"); detect for visibility.
-
-_DOUBLE_NEG_RE = re.compile(
-    r"\b(?:not|n't)\b[^.!?]{1,40}\b(?:no|none|nothing|never|nobody|nowhere|neither)\b",
-    re.IGNORECASE,
-)
-
-
-def detect_double_negatives(prose: str) -> list[dict]:
-    """Double-negative patterns within close range."""
-    findings = []
-    for m in _DOUBLE_NEG_RE.finditer(prose):
-        findings.append({
-            "type": "double_negative",
-            "match": m.group(0)[:80],
-            "start_char": m.start(),
-            "confidence": 0.7,
-            "rule_id": "handcount:double_negative.proximity_match",
-        })
-    return findings
-
-
-# ─── Comma splice (heuristic) ────────────────────────────────────────────
-# Independent clause + comma + independent clause (no conjunction). Rough
-# heuristic: comma followed by a personal pronoun + verb without an
-# intervening conjunction.
-
-_COMMA_SPLICE_RE = re.compile(
-    r"[a-z],\s+(I|he|she|it|they|we|you)\s+(was|were|is|are|"
-    r"had|have|did|do|went|came|said|knew|told|saw|felt|made|took|gave|got)\b",
-)
-
-
-def detect_comma_splices(prose: str) -> list[dict]:
-    """Pronoun+verb after comma without conjunction (comma splice heuristic)."""
-    findings = []
-    for m in _COMMA_SPLICE_RE.finditer(prose):
-        # Skip if surrounding context contains "and", "but", "or" within 30 chars
-        # before the comma (compound predicate, not splice).
-        context_start = max(0, m.start() - 50)
-        context = prose[context_start:m.start() + 10].lower()
-        if any(w in context for w in (" and ", " but ", " or ", " yet ", " for ", " so ")):
-            continue
-        findings.append({
-            "type": "comma_splice",
-            "match": m.group(0),
-            "start_char": m.start(),
-            "confidence": 0.5,
-            "rule_id": "handcount:comma_splice.pronoun_after_comma",
-        })
-    return findings
+# passive_voice / expletive_construction / conjunction_start /
+# conjunctive_adverb / double_negative / comma_splice retired —
+# migrated to galley/prose registry under detectors/grammar_mechanics/.
+# Phase 8 batch 5.
 
 
 # cliche detector retired — migrated to galley/prose registry under
@@ -728,54 +563,8 @@ def detect_proper_nouns(prose: str) -> list[dict]:
 # ─── Infinitive-phrase density ───────────────────────────────────────────
 # "to be," "to have," "to know" — abstract / academic register marker.
 
-_INFINITIVE_RE = re.compile(r"\bto\s+([a-z]{2,})\b", re.IGNORECASE)
-
-
-def detect_infinitives(prose: str) -> list[dict]:
-    """to-infinitive phrases. Density metric."""
-    findings = []
-    for m in _INFINITIVE_RE.finditer(prose):
-        verb = m.group(1).lower()
-        # Skip prepositional "to" patterns (to the / to him / to her)
-        if verb in {"the", "him", "her", "them", "us", "me", "you", "it"}:
-            continue
-        findings.append({
-            "type": "infinitive_phrase",
-            "verb": verb,
-            "start_char": m.start(),
-            "confidence": 0.7,
-            "rule_id": "handcount:infinitive_phrase.to_verb_pattern",
-        })
-    return findings
-
-
-# ─── Gerund density (-ing nouns and participles) ─────────────────────────
-
-_GERUND_RE = re.compile(r"\b([a-z]{3,}ing)\b", re.IGNORECASE)
-_GERUND_EXCLUDE = {"during", "morning", "evening", "nothing", "anything", "everything",
-                   "something", "feeling", "meeting", "writing", "reading",
-                   "having", "being", "going", "coming", "looking", "thinking",
-                   "wedding", "ceiling", "ring", "spring", "string", "thing",
-                   "wing", "king", "bring", "sing"}
-
-
-def detect_gerunds(prose: str) -> list[dict]:
-    """-ing forms. Density metric."""
-    findings = []
-    for m in _GERUND_RE.finditer(prose):
-        word = m.group(1).lower()
-        if word in _GERUND_EXCLUDE:
-            continue
-        if word.endswith("thing"):
-            continue
-        findings.append({
-            "type": "gerund",
-            "word": word,
-            "start_char": m.start(),
-            "confidence": 0.6,
-            "rule_id": "handcount:gerund.ing_suffix",
-        })
-    return findings
+# infinitive_phrase / gerund detectors retired — migrated to galley/prose
+# registry under detectors/grammar_mechanics/. Phase 8 batch 5.
 
 
 # detect_epanorthosis retired — migrated to galley/prose registry
@@ -909,44 +698,9 @@ def verdict(metrics_list: list[dict], doc: dict, thresholds: dict) -> dict:
 
     # trigram_chain_loop rollup migrated to galley/prose
     # verdict.rollup_registry (Phase 8 batch 2b).
-    if "passive_voice" in by_dev:
-        n = by_dev["passive_voice"]["raw_count"]
-        per_1k_val = n * 1000 / word_count
-        if per_1k_val > 15:
-            warnings.append(f"passive_voice: {per_1k_val:.1f}/1k passive constructions")
-        else:
-            passes.append("passive_voice")
-    if "expletive_construction" in by_dev:
-        n = by_dev["expletive_construction"]["raw_count"]
-        if n >= 8:
-            warnings.append(f"expletive_construction: {n} weak openers (There is / It was)")
-        else:
-            passes.append("expletive_construction")
-    if "conjunction_start" in by_dev:
-        n = by_dev["conjunction_start"]["raw_count"]
-        per_1k_val = n * 1000 / word_count
-        if per_1k_val > 8:
-            warnings.append(f"conjunction_start: {per_1k_val:.1f}/1k And/But/So sentence openers")
-        else:
-            passes.append("conjunction_start")
-    if "conjunctive_adverb" in by_dev:
-        n = by_dev["conjunctive_adverb"]["raw_count"]
-        if n >= 5:
-            warnings.append(f"conjunctive_adverb: {n} however/therefore/moreover (academic register)")
-        else:
-            passes.append("conjunctive_adverb")
-    if "double_negative" in by_dev:
-        n = by_dev["double_negative"]["raw_count"]
-        if n >= 3:
-            warnings.append(f"double_negative: {n} proximity-pair instances (review)")
-        else:
-            passes.append("double_negative")
-    if "comma_splice" in by_dev:
-        n = by_dev["comma_splice"]["raw_count"]
-        if n >= 1:
-            warnings.append(f"comma_splice: {n} suspected splice(s) (low-confidence; review)")
-        else:
-            passes.append("comma_splice")
+    # passive_voice / expletive_construction / conjunction_start /
+    # conjunctive_adverb / double_negative / comma_splice rollups
+    # migrated to galley/prose verdict.rollup_registry (Phase 8 batch 5).
     # cliche rollup migrated to galley/prose verdict.rollup_registry (batch 4).
     if "direct_address" in by_dev:
         n = by_dev["direct_address"]["raw_count"]
@@ -977,15 +731,8 @@ def verdict(metrics_list: list[dict], doc: dict, thresholds: dict) -> dict:
     if "proper_noun" in by_dev:
         # Informational only — high count is name-heavy chapter, normal.
         passes.append("proper_noun")
-    if "infinitive_phrase" in by_dev:
-        n = by_dev["infinitive_phrase"]["raw_count"]
-        per_1k_val = n * 1000 / word_count
-        if per_1k_val > 30:
-            warnings.append(f"infinitive_phrase: {per_1k_val:.1f}/1k 'to-verb' phrases (abstract register)")
-        else:
-            passes.append("infinitive_phrase")
-    if "gerund" in by_dev:
-        passes.append("gerund")  # informational
+    # infinitive_phrase / gerund rollups migrated to galley/prose
+    # verdict.rollup_registry (Phase 8 batch 5).
     # inference_cascade rollup migrated to galley/prose
     # verdict.rollup_registry (Phase 8 batch 3).
     if "proximity_echo" in by_dev:
@@ -1116,20 +863,16 @@ def measure(md_path: Path, dimensions: dict | None = None) -> dict:
         # said_tag / paragraph_length_anomaly migrated to registry — batch 4.
         # Phase 1.8 (final round):
         # trigram_chain_loop migrated to registry — batch 2b.
-        "passive_voice": detect_passive_voice(prose),
-        "expletive_construction": detect_expletive_constructions(sents),
-        "conjunction_start": detect_conjunction_starts(sents),
-        "conjunctive_adverb": detect_conjunctive_adverbs(prose),
-        "double_negative": detect_double_negatives(prose),
-        "comma_splice": detect_comma_splices(prose),
+        # passive_voice / expletive_construction / conjunction_start /
+        # conjunctive_adverb / double_negative / comma_splice migrated
+        # to registry — batch 5.
         # cliche migrated to registry — batch 4.
         "direct_address": detect_direct_address(prose),
         "timestamp": detect_timestamps(prose),
         "temporal_marker": detect_temporal_markers(prose),
         "paragraph_opener_repeat": detect_paragraph_opener_repeats(prose),
         "proper_noun": detect_proper_nouns(prose),
-        "infinitive_phrase": detect_infinitives(prose),
-        "gerund": detect_gerunds(prose),
+        # infinitive_phrase / gerund migrated to registry — batch 5.
         # inference_cascade migrated to registry — batch 3.
         "proximity_echo": detect_proximity_echo(sents),
         # confirmation_tag migrated to registry — batch 3.
