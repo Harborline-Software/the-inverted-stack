@@ -89,41 +89,8 @@ def _is_dialogue(s: str) -> bool:
 
 # ─── Detectors ────────────────────────────────────────────────────────────
 
-def detect_anaphora(sents: list[str], n_prefix: int = 2, min_run: int = 3) -> list[dict]:
-    """Consecutive sentences sharing the first n_prefix words. Reports runs of
-    length >= min_run (a run of 3 = three consecutive sentences with same
-    opening, including the first one)."""
-    if not sents:
-        return []
-    findings: list[dict] = []
-
-    def prefix(s: str) -> str | None:
-        toks = tokens(s)[:n_prefix]
-        if len(toks) < n_prefix:
-            return None
-        return " ".join(t.lower() for t in toks)
-
-    i = 0
-    while i < len(sents):
-        pref = prefix(sents[i])
-        if pref is None:
-            i += 1
-            continue
-        j = i + 1
-        while j < len(sents) and prefix(sents[j]) == pref:
-            j += 1
-        run_len = j - i
-        if run_len >= min_run:
-            findings.append({
-                "type": "anaphora",
-                "run_length": run_len,
-                "prefix": " ".join(tokens(sents[i])[:n_prefix]),
-                "sentences": sents[i:j],
-                "confidence": 1.0,
-                "rule_id": "handcount:anaphora.consecutive_sentence_opening",
-            })
-        i = j
-    return findings
+# anaphora detector retired — migrated to galley/prose registry
+# (detectors/classical_rhetoric/anaphora.py). Phase 8 batch 1.
 
 
 _TAUT_RE = re.compile(
@@ -148,65 +115,9 @@ def detect_tautology(prose: str) -> list[dict]:
     return findings
 
 
-def detect_asyndeton(sents: list[str], min_items: int = 3) -> list[dict]:
-    """Comma-separated list of >= min_items with no 'and'/'or' before the last
-    element. Conservative: only flags clear cases."""
-    findings = []
-    for s in sents:
-        # Find longest comma-separated run of word groups without and/or
-        # immediately before the final group.
-        if "," not in s:
-            continue
-        # Heuristic: tail of sentence with no ", and " or ", or " before the last clause.
-        # Count commas; if 2+ commas and no "and "/"or " in the last 30 chars before period.
-        commas = s.count(",")
-        tail = s.rstrip(".!?").rsplit(",", 1)[-1].strip()
-        if commas >= (min_items - 1) and not re.match(r"^(and|or|nor|but)\b", tail, re.IGNORECASE):
-            findings.append({
-                "type": "asyndeton",
-                "commas": commas,
-                "sentence": s,
-                "confidence": 0.6,  # heuristic; flag-not-prove
-                "rule_id": "handcount:asyndeton.comma_run_no_conjunction",
-            })
-    return findings
-
-
-def detect_polysyndeton(sents: list[str], min_conjunctions: int = 3) -> list[dict]:
-    """3+ 'and'/'or' within one sentence."""
-    findings = []
-    for s in sents:
-        ands = len(re.findall(r"\band\b", s, re.IGNORECASE))
-        ors = len(re.findall(r"\bor\b", s, re.IGNORECASE))
-        total = ands + ors
-        if total >= min_conjunctions:
-            findings.append({
-                "type": "polysyndeton",
-                "and_count": ands,
-                "or_count": ors,
-                "sentence": s,
-                "confidence": 0.8,
-                "rule_id": "handcount:polysyndeton.conjunction_density",
-            })
-    return findings
-
-
-def detect_literal_tricolon(sents: list[str]) -> list[dict]:
-    """Heuristic: exactly two commas with no 'and'/'or' between the first two
-    items and an 'and'/'or' before the third (classic A, B, and C)."""
-    findings = []
-    for s in sents:
-        # Look for "X, Y, and Z" or "X, Y, or Z" patterns
-        m = re.search(r"(\b\w[\w' -]{2,40}),\s+(\b\w[\w' -]{2,40}),\s+(?:and|or)\s+(\b\w[\w' -]{2,40})", s)
-        if m:
-            findings.append({
-                "type": "literal_tricolon",
-                "items": [m.group(1).strip(), m.group(2).strip(), m.group(3).strip()],
-                "text": m.group(0),
-                "confidence": 0.75,
-                "rule_id": "handcount:literal_tricolon.serial_comma_pattern",
-            })
-    return findings
+# asyndeton / polysyndeton / literal_tricolon detectors retired —
+# migrated to galley/prose registry under
+# detectors/classical_rhetoric/. Phase 8 batch 1.
 
 
 _EPANORTH_RE = re.compile(
@@ -1596,9 +1507,7 @@ def sentence_coverage(annotations: list[dict], total_sents: int, key: str) -> fl
     """Approximate sentence-coverage for run-bearing devices."""
     if total_sents == 0:
         return 0.0
-    if key == "anaphora":
-        trapped = sum(a.get("run_length", 0) for a in annotations)
-        return round(100 * trapped / total_sents, 1)
+    # anaphora run-length branch retired with Phase 8 batch 1 migration.
     return round(100 * len(annotations) / total_sents, 1)
 
 
@@ -1617,8 +1526,6 @@ def meters(annotations_by_type: dict[str, list[dict]], doc: dict) -> list[dict]:
             "count_per_1k_tokens": per_1k(len(live), total_w),
             "sentence_coverage_pct": sentence_coverage(live, total_s, dev),
         }
-        if dev == "anaphora" and live:
-            m["max_run_length"] = max(a["run_length"] for a in live)
         out.append(m)
     return out
 
@@ -1626,10 +1533,9 @@ def meters(annotations_by_type: dict[str, list[dict]], doc: dict) -> list[dict]:
 # ─── Verdict / rollup ─────────────────────────────────────────────────────
 
 DEFAULT_THRESHOLDS = {
-    "anaphora_density_per_1000": 25.0,
-    "anaphora_max_run_length": 3,
+    # anaphora / polysyndeton thresholds migrated to galley/prose
+    # verdict.rollup_registry (Phase 8 batch 1).
     "tautology_density_per_1000": 3.0,
-    "polysyndeton_density_per_1000": 5.0,
     "sentences_over_50_words_pct": 3.0,
     # CO ear-flagged 2026-05-13 patterns:
     "echo_and_confirm_max_per_chapter": 0,        # any instance = warning; ≥2 = blocker
@@ -1653,22 +1559,14 @@ def verdict(metrics_list: list[dict], doc: dict, thresholds: dict) -> dict:
         else:
             passes.append(name)
 
-    if "anaphora" in by_dev:
-        check("anaphora_density_per_1000",
-              by_dev["anaphora"]["count_per_1k_tokens"],
-              thresholds["anaphora_density_per_1000"])
-        if "max_run_length" in by_dev["anaphora"]:
-            check("anaphora_max_run_length",
-                  by_dev["anaphora"]["max_run_length"],
-                  thresholds["anaphora_max_run_length"])
+    # anaphora / polysyndeton / literal_tricolon / asyndeton verdict
+    # blocks migrated to galley/prose registry. See book.editorial.yaml
+    # detectors.<name>.{warning_raw_count,blocker_raw_count} if
+    # per-chapter thresholds are desired.
     if "tautological_self_equation" in by_dev:
         check("tautology_density_per_1000",
               by_dev["tautological_self_equation"]["count_per_1k_tokens"],
               thresholds["tautology_density_per_1000"])
-    if "polysyndeton" in by_dev:
-        check("polysyndeton_density_per_1000",
-              by_dev["polysyndeton"]["count_per_1k_tokens"],
-              thresholds["polysyndeton_density_per_1000"])
 
     # CO ear-flagged 2026-05-13 detector verdicts
     if "echo_and_confirm" in by_dev:
@@ -2049,11 +1947,9 @@ def measure(md_path: Path, dimensions: dict | None = None) -> dict:
     held_lines = _load_held_lines(md_path)
 
     findings_by_type = {
-        "anaphora": detect_anaphora(sents),
+        # anaphora / asyndeton / polysyndeton / literal_tricolon migrated
+        # to registry (detectors/classical_rhetoric/). Phase 8 batch 1.
         "tautological_self_equation": detect_tautology(prose),
-        "asyndeton": detect_asyndeton(sents),
-        "polysyndeton": detect_polysyndeton(sents),
-        "literal_tricolon": detect_literal_tricolon(sents),
         "epanorthosis": detect_epanorthosis(prose),
         "echo_and_confirm": detect_echo_and_confirm(sents),
         "lexical_chain_loop": detect_lexical_chain(prose),
