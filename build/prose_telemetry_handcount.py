@@ -350,32 +350,10 @@ def detect_lexical_chain(prose: str) -> list[dict]:
     return findings
 
 
-# ─── Self-referential frame detector ─────────────────────────────────────
-# Pattern: staff-history meta-frame phrases. Per ANNA-VOICE.md anti-pattern
-# #6, capped at one occurrence per chapter.
-
-_FRAME_PATTERNS = re.compile(
-    r"\b(I am writing this here|I am going to write|I am going to tell you|"
-    r"in this account|the staff history|for the record|on the record|"
-    r"in retrospect|this version of the account|I am leaving (?:it|the reading) in)\b",
-    re.IGNORECASE,
-)
-
-
-def detect_self_referential_frame(prose: str) -> list[dict]:
-    """Staff-history meta-frame phrases. Counts every occurrence; verdict
-    raises warning at >1 per chapter, blocker at >3."""
-    findings = []
-    for m in _FRAME_PATTERNS.finditer(prose):
-        findings.append({
-            "type": "self_referential_frame",
-            "phrase": m.group(0).lower(),
-            "start_char": m.start(),
-            "end_char": m.end(),
-            "confidence": 1.0,
-            "rule_id": "handcount:self_referential_frame.staff_history_meta",
-        })
-    return findings
+# self_referential_frame detector retired — migrated to galley/prose
+# registry. Phrase list lives in book.editorial.yaml under
+# `detectors.self_referential_frame.self_referential_frames`. Thresholds
+# in the same yaml are consumed by galley/prose's verdict.rollup_registry.
 
 
 # ─── Bigram chain loop ───────────────────────────────────────────────────
@@ -440,61 +418,11 @@ def detect_bigram_chain(prose: str) -> list[dict]:
 # chapter. Per ANNA-VOICE.md anti-pattern #5; retired motifs flagged
 # regardless of count to prevent regression.
 
-# Phrases with hard cap of 1 per chapter (any more = warning).
-# "what it claimed to be" is RETIRED — any occurrence = blocker.
-RETIRED_MOTIFS = [
-    "what it claimed to be",
-    "what they claimed to be",
-    "what he claimed to be",
-    "what she claimed to be",
-]
-
-# Phrases capped per ANNA-VOICE.md (1 per chapter; 2 = warning; 3+ = blocker).
-CAPPED_MOTIFS = [
-    "noted and did not yet",
-    "I am writing this here",
-    "I am going to tell you",
-    "I am going to write",
-    "in this account",
-    "the smallest possible",
-    "this version of the account",
-    "I am leaving it in",
-]
-
-
-def detect_motif_overuse(prose: str) -> list[dict]:
-    """Catches (a) retired motif phrases that should not appear at all,
-    and (b) capped motif phrases that appear more than once per chapter."""
-    findings = []
-    for phrase in RETIRED_MOTIFS:
-        pat = re.compile(r"\b" + re.escape(phrase) + r"\b", re.IGNORECASE)
-        matches = list(pat.finditer(prose))
-        if matches:
-            findings.append({
-                "type": "motif_overuse",
-                "phrase": phrase,
-                "count": len(matches),
-                "status": "retired",
-                "cap": 0,
-                "char_positions": [m.start() for m in matches],
-                "confidence": 1.0,
-                "rule_id": "handcount:motif_overuse.retired_phrase",
-            })
-    for phrase in CAPPED_MOTIFS:
-        pat = re.compile(r"\b" + re.escape(phrase) + r"\b", re.IGNORECASE)
-        matches = list(pat.finditer(prose))
-        if len(matches) > 1:
-            findings.append({
-                "type": "motif_overuse",
-                "phrase": phrase,
-                "count": len(matches),
-                "status": "capped",
-                "cap": 1,
-                "char_positions": [m.start() for m in matches],
-                "confidence": 1.0,
-                "rule_id": "handcount:motif_overuse.capped_phrase",
-            })
-    return findings
+# motif_overuse detector retired — migrated to galley/prose registry.
+# Retired-motif blacklist + capped-motif cap-dict live in
+# book.editorial.yaml under `detectors.motif_overuse`. The registry
+# version emits one finding per over-cap occurrence (rather than the
+# legacy one-per-phrase) so the verdict layer can count crossings.
 
 
 # ─── Parenthetical density ───────────────────────────────────────────────
@@ -609,31 +537,10 @@ def detect_statement_then_reversal(sents: list[str]) -> list[dict]:
 # Anna currently filters. Reducing filter words is one of the highest-yield
 # moves toward immediacy.
 
-_FILTER_VERBS = re.compile(
-    r"\bI\s+(felt|saw|noticed|realized|realised|registered|"
-    r"observed|watched|sensed|thought|wondered|considered|recognized|"
-    r"recognised|understood|knew|believed|imagined|remembered|recalled|"
-    r"experienced|perceived|decided|figured|determined)\b",
-    re.IGNORECASE,
-)
-
-
-def detect_filter_words(prose: str) -> list[dict]:
-    """Count narrator filter-verb constructions ('I felt X', 'I noticed X').
-    These distance the reader from the sensory present. Heavy use is a
-    Janeway / formal-narrator move; Bobiverse narrates direct."""
-    findings = []
-    for m in _FILTER_VERBS.finditer(prose):
-        findings.append({
-            "type": "filter_word",
-            "verb": m.group(1).lower(),
-            "match": m.group(0),
-            "start_char": m.start(),
-            "end_char": m.end(),
-            "confidence": 1.0,
-            "rule_id": "handcount:filter_word.narrator_distance_verb",
-        })
-    return findings
+# filter_words detector retired — migrated to galley/prose registry.
+# Verb list lives in book.editorial.yaml under
+# `detectors.filter_words.filter_words`. Threshold + verdict handled
+# by galley/prose's verdict.rollup_registry against the same yaml.
 
 
 # ─── Redundant-phrase detector ───────────────────────────────────────────
@@ -1727,7 +1634,7 @@ DEFAULT_THRESHOLDS = {
     # CO ear-flagged 2026-05-13 patterns:
     "echo_and_confirm_max_per_chapter": 0,        # any instance = warning; ≥2 = blocker
     "lexical_chain_max_per_chapter": 0,           # any 3+ repeat = warning; 4+ in one paragraph = blocker
-    "self_referential_frame_max_per_chapter": 1,  # 1 OK; 2 = warning; 3+ = blocker
+    # self_referential_frame threshold migrated to book.editorial.yaml.
 }
 
 
@@ -1789,15 +1696,10 @@ def verdict(metrics_list: list[dict], doc: dict, thresholds: dict) -> dict:
             warnings.append(f"lexical_chain_loop: {n} candidate(s) flagged (review for true positives)")
         else:
             passes.append("lexical_chain_loop")
-    if "self_referential_frame" in by_dev:
-        n = by_dev["self_referential_frame"]["raw_count"]
-        limit = thresholds["self_referential_frame_max_per_chapter"]
-        if n > limit * 2:
-            blockers.append(f"self_referential_frame: {n} occurrences exceeds blocker threshold of {limit * 2}")
-        elif n > limit:
-            warnings.append(f"self_referential_frame: {n} occurrences exceeds threshold of {limit}")
-        else:
-            passes.append("self_referential_frame")
+    # self_referential_frame migrated to registry: see book.editorial.yaml
+    # `detectors.self_referential_frame`. Galley/prose's registry detector
+    # fires under family='voice', and `verdict.rollup_registry` classifies
+    # against `warning_raw_count` / `blocker_raw_count` in that yaml.
 
     # Bigram chain loop — phrase-level repetition.
     if "bigram_chain_loop" in by_dev:
@@ -1808,16 +1710,12 @@ def verdict(metrics_list: list[dict], doc: dict, thresholds: dict) -> dict:
             warnings.append(f"bigram_chain_loop: {n} bigram(s) flagged (review for true positives)")
         else:
             passes.append("bigram_chain_loop")
-    # Motif overuse — retired phrases or capped phrases over threshold.
-    if "motif_overuse" in by_dev:
-        n = by_dev["motif_overuse"]["raw_count"]
-        if n >= 1:
-            # Retired-phrase hits are blockers; capped-phrase overuse is warning.
-            # The raw_count conflates both; treat any hit as warning by default,
-            # leave it to dashboard to upgrade retired-phrase hits to blocker.
-            warnings.append(f"motif_overuse: {n} motif phrase(s) over their cap (see findings)")
-        else:
-            passes.append("motif_overuse")
+    # motif_overuse migrated to registry: see book.editorial.yaml
+    # `detectors.motif_overuse` (retired_motifs + motifs cap dict). The
+    # registry version emits one finding per over-cap occurrence rather
+    # than one per phrase, so verdict thresholds in the yaml reflect
+    # per-occurrence counting.
+
     # Parenthetical density — informational, not blocker.
     if "parenthetical_density" in by_dev:
         n = by_dev["parenthetical_density"]["raw_count"]
@@ -1849,16 +1747,9 @@ def verdict(metrics_list: list[dict], doc: dict, thresholds: dict) -> dict:
     # ─── Phase 1.7 detector verdicts ────────────────────────────────────
     word_count = doc.get("word_count", 0) or 1
 
-    # Filter words — narrator-distance verbs. >20/1k = heavy filtering.
-    if "filter_word" in by_dev:
-        n = by_dev["filter_word"]["raw_count"]
-        per_1k = n * 1000 / word_count
-        if per_1k > 15:
-            blockers.append(f"filter_word: {per_1k:.1f}/1k narrator-distance verbs (target <8/1k)")
-        elif per_1k > 8:
-            warnings.append(f"filter_word: {per_1k:.1f}/1k filter verbs (above 8/1k target)")
-        else:
-            passes.append("filter_word")
+    # filter_words migrated to registry: see book.editorial.yaml
+    # `detectors.filter_words.filter_words` (verb list). The registry
+    # detector + galley/prose verdict layer handle the >8/1k threshold.
 
     # Redundant phrases — exact-match filler.
     if "redundant_phrase" in by_dev:
@@ -2166,13 +2057,13 @@ def measure(md_path: Path, dimensions: dict | None = None) -> dict:
         "epanorthosis": detect_epanorthosis(prose),
         "echo_and_confirm": detect_echo_and_confirm(sents),
         "lexical_chain_loop": detect_lexical_chain(prose),
-        "self_referential_frame": detect_self_referential_frame(prose),
+        # self_referential_frame migrated to registry (book.editorial.yaml).
         "bigram_chain_loop": detect_bigram_chain(prose),
-        "motif_overuse": detect_motif_overuse(prose),
+        # motif_overuse migrated to registry (book.editorial.yaml).
         "parenthetical_density": detect_parenthetical_density(prose),
         "fragment_density": detect_fragment_density(sents),
         "statement_then_reversal": detect_statement_then_reversal(sents),
-        "filter_word": detect_filter_words(prose),
+        # filter_word migrated to registry (book.editorial.yaml).
         "redundant_phrase": detect_redundant_phrases(prose),
         "internal_anaphora": detect_internal_anaphora(sents),
         "anadiplosis": detect_anadiplosis(sents),

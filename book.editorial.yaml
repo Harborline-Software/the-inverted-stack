@@ -1,0 +1,97 @@
+# Editorial profile for the-inverted-stack.
+#
+# Author-owned configuration consumed by the galley/prose pipeline. The
+# galley settings UI lays an overlay on top of this file at
+# `.galley/editorial.json` (preset scaling + narrator voice); the
+# pipeline reads both via `BookProfile.from_book_root`.
+#
+# This file is the authoritative source for the three voice detectors
+# (filter_words, motif_overuse, self_referential_frame) that previously
+# lived as hardcoded constants in `build/prose_telemetry_handcount.py`.
+# Updating phrases / verbs / caps happens here; the handcount script's
+# duplicate detectors are scheduled for removal.
+
+book_id: the-inverted-stack
+voice: anna
+genre: literary-fiction
+
+detectors:
+
+  # ─── filter_words ─────────────────────────────────────────────────────
+  # Narrator-distance verbs of the form "I <verb>" that filter sensory
+  # experience through the narrator instead of presenting it directly.
+  # Anna's profile currently uses these heavily by design (Janeway /
+  # formal-narrator register). Reducing them is one of the highest-yield
+  # moves toward immediacy when the register needs to shift.
+  filter_words:
+    filter_words:
+      - felt
+      - saw
+      - noticed
+      - realized
+      - realised
+      - registered
+      - observed
+      - watched
+      - sensed
+      - thought
+      - wondered
+      - considered
+      - recognized
+      - recognised
+      - understood
+      - knew
+      - believed
+      - imagined
+      - remembered
+      - recalled
+      - experienced
+      - perceived
+      - decided
+      - figured
+      - determined
+
+  # ─── motif_overuse ────────────────────────────────────────────────────
+  # Two-layer Anna-voice motif management. `retired_motifs` is a hard
+  # blacklist — any occurrence is a finding. `motifs` is a soft-cap
+  # dictionary (phrase → max-allowed count per chapter); findings emit
+  # for every occurrence past the cap. Source: ANNA-VOICE.md anti-pattern
+  # #5 (retired) + per-chapter cap discipline (capped).
+  motif_overuse:
+    retired_motifs:
+      - what it claimed to be
+      - what they claimed to be
+      - what he claimed to be
+      - what she claimed to be
+    motifs:
+      "noted and did not yet": 1
+      "I am writing this here": 1
+      "I am going to tell you": 1
+      "I am going to write": 1
+      "in this account": 1
+      "the smallest possible": 1
+      "this version of the account": 1
+      "I am leaving it in": 1
+    # Verdict thresholds: any retired/over-cap finding warns; 3+ blocks.
+    warning_raw_count: 1
+    blocker_raw_count: 3
+
+  # ─── self_referential_frame ───────────────────────────────────────────
+  # Staff-history meta-frame phrases. Per ANNA-VOICE.md anti-pattern #6,
+  # these are author-of-the-account devices the narrator should use
+  # sparingly. Threshold: >1 per chapter = warning, >3 = blocker.
+  self_referential_frame:
+    self_referential_frames:
+      - I am writing this here
+      - I am going to write
+      - I am going to tell you
+      - in this account
+      - the staff history
+      - for the record
+      - on the record
+      - in retrospect
+      - this version of the account
+      - I am leaving it in
+      - I am leaving the reading in
+    warning_raw_count: 2
+    blocker_raw_count: 4
