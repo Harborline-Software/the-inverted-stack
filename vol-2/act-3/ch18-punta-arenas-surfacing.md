@@ -4,13 +4,16 @@ volume: 2
 act: 3
 chapter: 18
 mission-day: 56
-icm-stage: icm/draft
+icm-stage: icm/pre-rewrite
 word-count-target: 7000
 log-opener-pattern: C
 primary-rail: rival-mission-institutional-capture
 secondary-rail: trust-prior-betrayal
 chapter-version: v1
 ---
+
+
+<!-- PRE-BOBIVERSE DRAFT. Awaiting rewrite in the locked Filchner / Anna-voice register (vol-2/SPINE.md, vol-2/ANNA-VOICE.md). Not for assembly, not for listen-test, not for audiobook regeneration until rewritten. -->
 
 *Final mission log, Mission Day 56, 0441 local. Yusupova, Mission Director. RV Nansen, MERIDIAN-7. Punta Arenas, Chile.*
 

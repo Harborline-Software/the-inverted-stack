@@ -4,13 +4,16 @@ volume: 2
 act: 3
 chapter: 15
 mission-day: 47-48
-icm-stage: icm/draft
+icm-stage: icm/pre-rewrite
 word-count-target: 8500
 log-opener-pattern: A
 primary-rail: class-region-institutional-politics
 secondary-rail: career-cost-aging-out
 chapter-version: v1
 ---
+
+
+<!-- PRE-BOBIVERSE DRAFT. Awaiting rewrite in the locked Filchner / Anna-voice register (vol-2/SPINE.md, vol-2/ANNA-VOICE.md). Not for assembly, not for listen-test, not for audiobook regeneration until rewritten. -->
 
 *Damage report — relay state. Kamau, W., Relay Operations Officer. RV Nansen, MERIDIAN-7. Mission Day 47, 0617 local.*
 

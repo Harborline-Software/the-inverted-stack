@@ -4,13 +4,16 @@ volume: 2
 act: 1
 chapter: 3
 mission-day: 1-7
-icm-stage: icm/draft
+icm-stage: icm/pre-rewrite
 word-count-target: 4500
 log-opener-pattern: none
 primary-rail: mission-as-survival
 secondary-rail: class-region-politics
 chapter-version: v1
 ---
+
+
+<!-- PRE-BOBIVERSE DRAFT. Awaiting rewrite in the locked Filchner / Anna-voice register (vol-2/SPINE.md, vol-2/ANNA-VOICE.md). Not for assembly, not for listen-test, not for audiobook regeneration until rewritten. -->
 
 The Strait of Magellan was behind us by the second watch of Day 1. The Strait is its own kind of water — sheltered, glacial-fed, the grey-green you can stand at the rail of and read the depth of by eye. The Strait is not the Drake. The boat knew the difference before any of us did. Around eighteen hundred, the Nansen began to take the first of the swells the boat takes on the southern leg, and from that hour on the deck moved.
 

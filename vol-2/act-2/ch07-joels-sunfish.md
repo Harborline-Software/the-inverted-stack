@@ -4,13 +4,16 @@ volume: 2
 act: 2
 chapter: 7
 mission-day: 22
-icm-stage: icm/draft
+icm-stage: icm/pre-rewrite
 word-count-target: 5000
 log-opener-pattern: none
 primary-rail: career-cost-and-aging-out
 secondary-rail: grief-family-memory
 chapter-version: v1
 ---
+
+
+<!-- PRE-BOBIVERSE DRAFT. Awaiting rewrite in the locked Filchner / Anna-voice register (vol-2/SPINE.md, vol-2/ANNA-VOICE.md). Not for assembly, not for listen-test, not for audiobook regeneration until rewritten. -->
 
 The wardroom at twenty-two-thirty on Day 22 was the wardroom the surface window had emptied for the night. The bridge had the watch. Wanjiru had the comm space. Diego had been at the polar-operations console an hour earlier and had gone forward to his bunk after the second pass on the Belgrano cross-traffic. Hiroshi had filed his daily and had gone to his own bunk at the early end of the rotation he kept on every mission he had ever served on. Maria had finished the crew-fitness pass at twenty. Sabina had gone to read against the inventory in the conference space because Sabina read against the inventory in the conference space the way other officers read against a paperback in their bunk. Priya was asleep. The boat was on the surface and the surface was quiet.
 

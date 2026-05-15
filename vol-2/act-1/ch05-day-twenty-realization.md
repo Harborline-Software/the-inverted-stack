@@ -4,9 +4,12 @@ volume: 2
 act: 1
 chapter: 5
 mission-day: 20
-icm-stage: icm/draft
+icm-stage: icm/pre-rewrite
 word-count-target: 6000
 ---
+
+
+<!-- PRE-BOBIVERSE DRAFT. Awaiting rewrite in the locked Filchner / Anna-voice register (vol-2/SPINE.md, vol-2/ANNA-VOICE.md). Not for assembly, not for listen-test, not for audiobook regeneration until rewritten. -->
 
 I have written the part of this account that I can compose without ceremony. The departure. The transit south. The first dive. The thirteen days of routine that established what *routine* would mean for the duration. That part is procedure, and procedure writes itself if you let it.
 

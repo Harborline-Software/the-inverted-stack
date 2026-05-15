@@ -4,13 +4,16 @@ volume: 2
 act: 3
 chapter: 14
 mission-day: 47
-icm-stage: icm/draft
+icm-stage: icm/pre-rewrite
 word-count-target: 12500
 log-opener-pattern: C
 primary-rail: mission-as-survival
 secondary-rail: trust-and-prior-betrayal
 chapter-version: v1
 ---
+
+
+<!-- PRE-BOBIVERSE DRAFT. Awaiting rewrite in the locked Filchner / Anna-voice register (vol-2/SPINE.md, vol-2/ANNA-VOICE.md). Not for assembly, not for listen-test, not for audiobook regeneration until rewritten. -->
 
 *Operational damage report — Yusupova, A., Mission Director. RV Nansen, MERIDIAN-7. Mission Day 47.*
 

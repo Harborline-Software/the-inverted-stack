@@ -4,13 +4,16 @@ volume: 2
 act: 2
 chapter: 8
 mission-day: 23
-icm-stage: icm/draft
+icm-stage: icm/pre-rewrite
 word-count-target: 5000
 log-opener-pattern: none
 primary-rail: class-region-institutional-politics
 secondary-rail: mission-as-survival
 chapter-version: v1
 ---
+
+
+<!-- PRE-BOBIVERSE DRAFT. Awaiting rewrite in the locked Filchner / Anna-voice register (vol-2/SPINE.md, vol-2/ANNA-VOICE.md). Not for assembly, not for listen-test, not for audiobook regeneration until rewritten. -->
 
 The Nansen passed below the surface at oh-five-thirty on Day 23.
 

@@ -4,13 +4,16 @@ volume: 2
 act: 3
 chapter: 13
 mission-day: 43-44
-icm-stage: icm/draft
+icm-stage: icm/pre-rewrite
 word-count-target: 10000
 log-opener-pattern: B
 primary-rail: class-region-institutional-politics
 secondary-rail: career-cost-and-aging-out
 chapter-version: v1
 ---
+
+
+<!-- PRE-BOBIVERSE DRAFT. Awaiting rewrite in the locked Filchner / Anna-voice register (vol-2/SPINE.md, vol-2/ANNA-VOICE.md). Not for assembly, not for listen-test, not for audiobook regeneration until rewritten. -->
 
 *Engineer's notes — Iyer, P., Lead Instrumentation. Mission Day 43, 1942 local. RV Nansen, MERIDIAN-7.*
 

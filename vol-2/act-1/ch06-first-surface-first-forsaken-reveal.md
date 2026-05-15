@@ -4,13 +4,16 @@ volume: 2
 act: 1
 chapter: 6
 mission-day: 21-23
-icm-stage: icm/draft
+icm-stage: icm/pre-rewrite
 word-count-target: 5000
 log-opener-pattern: A
 primary-rail: trust-and-prior-betrayal
 secondary-rail: rival-mission-institutional-capture
 chapter-version: v1
 ---
+
+
+<!-- PRE-BOBIVERSE DRAFT. Awaiting rewrite in the locked Filchner / Anna-voice register (vol-2/SPINE.md, vol-2/ANNA-VOICE.md). Not for assembly, not for listen-test, not for audiobook regeneration until rewritten. -->
 
 *Mission log, Mission Day 21, 0617 local. Yusupova, Mission Director. RV Nansen, MERIDIAN-7.*
 

@@ -4,13 +4,16 @@ volume: 2
 act: 2
 chapter: 11
 mission-day: 37-39
-icm-stage: icm/draft
+icm-stage: icm/pre-rewrite
 word-count-target: 5000
 log-opener-pattern: A
 primary-rail: rival-mission-institutional-capture
 secondary-rail: trust-and-prior-betrayal
 chapter-version: v1
 ---
+
+
+<!-- PRE-BOBIVERSE DRAFT. Awaiting rewrite in the locked Filchner / Anna-voice register (vol-2/SPINE.md, vol-2/ANNA-VOICE.md). Not for assembly, not for listen-test, not for audiobook regeneration until rewritten. -->
 
 *Crew log, 2026-10-25T07:14Z. RV Nansen, MERIDIAN-7. Yusupova, Mission Director, reporting Surface 2 commencement.*
 

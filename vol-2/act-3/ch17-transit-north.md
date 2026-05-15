@@ -4,13 +4,16 @@ volume: 2
 act: 3
 chapter: 17
 mission-day: 52-56
-icm-stage: icm/draft
+icm-stage: icm/pre-rewrite
 word-count-target: 5000
 log-opener-pattern: B
 primary-rail: rival-mission-institutional-capture
 secondary-rail: career-cost-aging-out
 chapter-version: v1
 ---
+
+
+<!-- PRE-BOBIVERSE DRAFT. Awaiting rewrite in the locked Filchner / Anna-voice register (vol-2/SPINE.md, vol-2/ANNA-VOICE.md). Not for assembly, not for listen-test, not for audiobook regeneration until rewritten. -->
 
 *Crew log, Mission Day 53, 0612 local. Yusupova, Mission Director. RV Nansen, MERIDIAN-7.*
 

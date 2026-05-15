@@ -1,3 +1,5 @@
+<!-- PRE-BOBIVERSE DRAFT. Awaiting rewrite in the locked Filchner / Anna-voice register (vol-2/SPINE.md, vol-2/ANNA-VOICE.md). Not for assembly, not for listen-test, not for audiobook regeneration until rewritten. -->
+
 # Chapter 10 — *The Aftermath of a Mission That Once Was*
 
 The wardroom hum was the wardroom hum. The light was the wardroom light. The clock on the bulkhead read oh-two-fifty-one. The boat had been at depth for twenty-six days and nine hours.
