@@ -120,80 +120,8 @@ def detect_tautology(prose: str) -> list[dict]:
 # detectors/classical_rhetoric/. Phase 8 batch 1.
 
 
-_EPANORTH_RE = re.compile(
-    r"\bnot\s+[^,.;:—-]{2,60}\s+[—–-]\s+[A-Za-z]",
-    re.IGNORECASE,
-)
-
-# ─── Echo-and-confirm detector ────────────────────────────────────────────
-# Pattern: generic conditional rule ("if you X") followed by a short
-# personal-pronoun sentence (≤6 words) that echoes a key content word from
-# the rule. CO ear-flagged this 2026-05-13: "if you let it. I had let it."
-# is the textbook case.
-
-# Rule markers — tightened to avoid "if you like / if you happen to / if you
-# need to" parenthetical permissions which are NOT generic rules.
-_RULE_MARKERS = re.compile(
-    r"\b(if you (?!like|happen|wish|prefer|please|will|are\s+going|need|want)"
-    r"|when you (?!are|were)"
-    r"|you do not|you don't|if one(?!\s+of)"
-    r"|the kind of (?:thing|person|man|woman|decision|note|feeling) that)\b",
-    re.IGNORECASE,
-)
-_CONFIRM_OPENERS = {"i", "we", "my", "she", "he"}
-_ECHO_STOPWORDS = {
-    "have", "been", "this", "that", "with", "from", "they", "them",
-    "their", "which", "would", "could", "should", "about", "there",
-}
-
-
-def _content_words(text: str, min_len: int = 4) -> set[str]:
-    """Lowercase content words at least min_len chars, excluding common
-    stopwords. Used for echo-detection lemma-ish matching."""
-    return {
-        w.lower()
-        for w in re.findall(r"[A-Za-z][A-Za-z'-]{%d,}" % (min_len - 1), text)
-        if w.lower() not in _ECHO_STOPWORDS
-    }
-
-
-def detect_echo_and_confirm(sents: list[str]) -> list[dict]:
-    """Generic rule + short personal confirmation echoing a verb from the
-    rule. Heuristic: pair of consecutive sentences where the first contains
-    a rule marker (if you / when you / one) and the second is ≤6 words,
-    starts with a personal pronoun, and shares a content word ≥4 letters."""
-    findings = []
-    for i in range(len(sents) - 1):
-        rule_s = sents[i]
-        confirm_s = sents[i + 1].strip()
-        if not _RULE_MARKERS.search(rule_s):
-            continue
-        confirm_words = tokens(confirm_s)
-        if not (2 <= len(confirm_words) <= 6):
-            continue
-        if confirm_words[0].lower() not in _CONFIRM_OPENERS:
-            continue
-        rule_content = _content_words(rule_s)
-        confirm_content = _content_words(confirm_s, min_len=3)
-        # Allow loose lemma match: strip trailing -ed, -ing, -s, -es
-        def stem(w: str) -> str:
-            for suffix in ("ing", "ed", "es", "s"):
-                if w.endswith(suffix) and len(w) > len(suffix) + 2:
-                    return w[: -len(suffix)]
-            return w
-        rule_stems = {stem(w) for w in rule_content}
-        confirm_stems = {stem(w) for w in confirm_content}
-        shared = rule_stems & confirm_stems
-        if shared:
-            findings.append({
-                "type": "echo_and_confirm",
-                "rule_sentence": rule_s,
-                "confirm_sentence": confirm_s,
-                "shared_stems": sorted(shared),
-                "confidence": 0.7,
-                "rule_id": "handcount:echo_and_confirm.rule_then_personal",
-            })
-    return findings
+# epanorthosis + echo_and_confirm detectors retired — migrated to
+# galley/prose registry under detectors/repetition/. Phase 8 batch 2a.
 
 
 # ─── Lexical-chain loop detector ─────────────────────────────────────────
@@ -511,14 +439,7 @@ def detect_redundant_phrases(prose: str) -> list[dict]:
 # Different from sentence-level anaphora (already detected) — this is
 # clause-level repetition inside one sentence.
 
-_INTERNAL_ANAPHORA_FUNCTION_STARTS = {
-    "the", "a", "an", "this", "that", "these", "those", "which", "who", "whom",
-    "and", "but", "or", "nor", "so", "yet", "for",
-    "to", "of", "in", "on", "at", "by", "from", "with",
-    "i", "he", "she", "it", "we", "they", "you",
-    "is", "was", "are", "were", "be", "been",
-    "his", "her", "their", "my", "your", "our",
-}
+# _INTERNAL_ANAPHORA_FUNCTION_STARTS retired with detector — Phase 8 batch 2a.
 
 
 # ─── Proximity echo (catch-all for close-range word repetition) ─────────
@@ -666,76 +587,8 @@ def detect_inference_cascade(prose: str) -> list[dict]:
     return findings
 
 
-def detect_internal_anaphora(sents: list[str], min_repeats: int = 3) -> list[dict]:
-    """Same CONTENT word starting 3+ comma-or-em-dash-delimited clauses
-    within a single sentence. Function-word starts (the, which, a, etc.)
-    are intentional Bobiverse parallelism — 'the bunk, the desk, the
-    bookshelf' is functional inventory, not looping; 'which meant X, which
-    meant Y, which meant Z' is the deliberate cascading-inference move.
-    Only flags when a substantive word (verb, noun, adverb) opens 3+
-    clauses in a row."""
-    findings = []
-    for sent in sents:
-        parts = re.split(r"\s*[,;—–]\s*", sent)
-        if len(parts) < min_repeats:
-            continue
-        first_words = []
-        for p in parts:
-            ws = tokens(p)
-            if ws:
-                first_words.append(ws[0].lower())
-        # Consecutive-run check on content words only.
-        run = 1
-        for i in range(1, len(first_words)):
-            w = first_words[i]
-            if (w == first_words[i - 1]
-                    and len(w) >= 3
-                    and w not in _INTERNAL_ANAPHORA_FUNCTION_STARTS):
-                run += 1
-                if run >= min_repeats:
-                    findings.append({
-                        "type": "internal_anaphora",
-                        "word": w,
-                        "run_length": run,
-                        "sentence": sent,
-                        "confidence": 0.85,
-                        "rule_id": "handcount:internal_anaphora.content_word_clause_echo",
-                    })
-                    break
-            else:
-                run = 1
-    return findings
-
-
-# ─── Anadiplosis chain ───────────────────────────────────────────────────
-# Last word of one clause/sentence is the first word of the next.
-# "...the room. The room was empty." Classic Janeway dramatic move.
-
-def detect_anadiplosis(sents: list[str]) -> list[dict]:
-    """Detect anadiplosis: a sentence ends on a word that is also the
-    first content word of the next sentence. Common in dramatic/Janeway
-    prose; rare in Bobiverse."""
-    findings = []
-    for i in range(len(sents) - 1):
-        a_words = tokens(sents[i])
-        b_words = tokens(sents[i + 1])
-        if len(a_words) < 4 or len(b_words) < 2:
-            continue
-        last_a = a_words[-1].lower()
-        first_b = b_words[0].lower()
-        # The first word of B might be a pronoun-skipping article.
-        if first_b in {"the", "a", "an", "this", "that", "these", "those"} and len(b_words) >= 2:
-            first_b = b_words[1].lower()
-        if last_a == first_b and len(last_a) >= 4 and last_a not in _ECHO_STOPWORDS:
-            findings.append({
-                "type": "anadiplosis",
-                "echo_word": last_a,
-                "first_sentence": sents[i],
-                "second_sentence": sents[i + 1],
-                "confidence": 0.7,
-                "rule_id": "handcount:anadiplosis.cross_sentence_echo",
-            })
-    return findings
+# detect_internal_anaphora + detect_anadiplosis retired — migrated
+# to galley/prose registry under detectors/repetition/. Phase 8 batch 2a.
 
 
 # ─── Modal-verb density ──────────────────────────────────────────────────
@@ -1459,19 +1312,8 @@ def detect_gerunds(prose: str) -> list[dict]:
     return findings
 
 
-def detect_epanorthosis(prose: str) -> list[dict]:
-    """*not X — Y* self-correction patterns."""
-    findings = []
-    for m in _EPANORTH_RE.finditer(prose):
-        findings.append({
-            "type": "epanorthosis",
-            "text": m.group(0),
-            "start_char": m.start(),
-            "end_char": m.end(),
-            "confidence": 0.7,
-            "rule_id": "handcount:epanorthosis.not_X_em_Y",
-        })
-    return findings
+# detect_epanorthosis retired — migrated to galley/prose registry
+# under detectors/repetition/epanorthosis.py. Phase 8 batch 2a.
 
 
 # ─── Document-level metrics ───────────────────────────────────────────────
@@ -1568,15 +1410,9 @@ def verdict(metrics_list: list[dict], doc: dict, thresholds: dict) -> dict:
               by_dev["tautological_self_equation"]["count_per_1k_tokens"],
               thresholds["tautology_density_per_1000"])
 
-    # CO ear-flagged 2026-05-13 detector verdicts
-    if "echo_and_confirm" in by_dev:
-        n = by_dev["echo_and_confirm"]["raw_count"]
-        if n >= 2:
-            blockers.append(f"echo_and_confirm: {n} instances exceeds blocker threshold of 1")
-        elif n >= 1:
-            warnings.append(f"echo_and_confirm: {n} instance found (target: 0)")
-        else:
-            passes.append("echo_and_confirm")
+    # echo_and_confirm rollup migrated to galley/prose registry
+    # (verdict.rollup_registry consumes book.editorial.yaml thresholds).
+    # Phase 8 batch 2a.
     # Lexical chain: severity by per-paragraph density, not raw count.
     # Many hits are topic-word false positives (a paragraph about pastry will
     # say "kuchen" 4 times functionally). Real loops show as high-density
@@ -1659,25 +1495,8 @@ def verdict(metrics_list: list[dict], doc: dict, thresholds: dict) -> dict:
         else:
             passes.append("redundant_phrase")
 
-    # Internal anaphora — within-sentence clause-start echo.
-    if "internal_anaphora" in by_dev:
-        n = by_dev["internal_anaphora"]["raw_count"]
-        if n >= 3:
-            warnings.append(f"internal_anaphora: {n} within-sentence clause-start echoes")
-        elif n >= 1:
-            warnings.append(f"internal_anaphora: {n} clause-echo case(s) flagged")
-        else:
-            passes.append("internal_anaphora")
-
-    # Anadiplosis — cross-sentence echo.
-    if "anadiplosis" in by_dev:
-        n = by_dev["anadiplosis"]["raw_count"]
-        if n >= 2:
-            warnings.append(f"anadiplosis: {n} cross-sentence echo pair(s)")
-        elif n >= 1:
-            warnings.append(f"anadiplosis: {n} pair flagged (review)")
-        else:
-            passes.append("anadiplosis")
+    # internal_anaphora / anadiplosis / epanorthosis rollups migrated
+    # to galley/prose verdict.rollup_registry (Phase 8 batch 2a).
 
     # Modal verbs — hedging density.
     if "modal_verb" in by_dev:
@@ -1950,8 +1769,7 @@ def measure(md_path: Path, dimensions: dict | None = None) -> dict:
         # anaphora / asyndeton / polysyndeton / literal_tricolon migrated
         # to registry (detectors/classical_rhetoric/). Phase 8 batch 1.
         "tautological_self_equation": detect_tautology(prose),
-        "epanorthosis": detect_epanorthosis(prose),
-        "echo_and_confirm": detect_echo_and_confirm(sents),
+        # epanorthosis / echo_and_confirm migrated to registry — batch 2a.
         "lexical_chain_loop": detect_lexical_chain(prose),
         # self_referential_frame migrated to registry (book.editorial.yaml).
         "bigram_chain_loop": detect_bigram_chain(prose),
@@ -1961,8 +1779,7 @@ def measure(md_path: Path, dimensions: dict | None = None) -> dict:
         "statement_then_reversal": detect_statement_then_reversal(sents),
         # filter_word migrated to registry (book.editorial.yaml).
         "redundant_phrase": detect_redundant_phrases(prose),
-        "internal_anaphora": detect_internal_anaphora(sents),
-        "anadiplosis": detect_anadiplosis(sents),
+        # internal_anaphora / anadiplosis migrated to registry — batch 2a.
         "modal_verb": detect_modal_density(prose, doc.get("word_count", 0)),
         "vague_quantifier": detect_vague_quantifiers(prose),
         "abstract_noun": detect_abstract_nouns(prose),
