@@ -93,26 +93,8 @@ def _is_dialogue(s: str) -> bool:
 # (detectors/classical_rhetoric/anaphora.py). Phase 8 batch 1.
 
 
-_TAUT_RE = re.compile(
-    r"\bthe\s+(\w+)\s+(?:was|is|were|are|had been|has been)\s+the\s+\1\b",
-    re.IGNORECASE,
-)
-
-
-def detect_tautology(prose: str) -> list[dict]:
-    """`the X was the X` and grammatical variants."""
-    findings = []
-    for m in _TAUT_RE.finditer(prose):
-        findings.append({
-            "type": "tautological_self_equation",
-            "head": m.group(1).lower(),
-            "start_char": m.start(),
-            "end_char": m.end(),
-            "text": m.group(0),
-            "confidence": 1.0,
-            "rule_id": "handcount:tautological_self_equation.regex",
-        })
-    return findings
+# tautological_self_equation detector retired — migrated to galley/prose
+# registry under detectors/pivot_inference/tautology.py. Phase 8 batch 3.
 
 
 # asyndeton / polysyndeton / literal_tricolon detectors retired —
@@ -223,40 +205,8 @@ def detect_fragment_density(sents: list[str], min_chain: int = 3) -> list[dict]:
 # one that pivots or negates it via "but", "yet", "from him", etc.
 # Janeway dramatic-monologue move.
 
-_REVERSAL_MARKERS = re.compile(
-    r"^\s*(but|yet|though|however|from him|from her|in his|in her|"
-    r"the same|that is|the difference)\b",
-    re.IGNORECASE,
-)
-
-
-def detect_statement_then_reversal(sents: list[str]) -> list[dict]:
-    """Consecutive sentence pair where the second starts with a reversal
-    marker pivoting the first. Skips dialogue interiors (sentences inside
-    quotes) since Joel/Mikael dialogue often contains conversational pivots
-    that aren't the narrator's anti-pattern #3 move."""
-    findings = []
-    for i in range(len(sents) - 1):
-        first = sents[i]
-        second = sents[i + 1].strip()
-        # Skip if either sentence is dialogue.
-        if _is_dialogue(first) or _is_dialogue(second):
-            continue
-        m = _REVERSAL_MARKERS.match(second)
-        if not m:
-            continue
-        # First must be substantive (not a fragment).
-        if len(tokens(first)) < 6:
-            continue
-        findings.append({
-            "type": "statement_then_reversal",
-            "first": first,
-            "second": second,
-            "reversal_marker": m.group(1).lower(),
-            "confidence": 0.7,
-            "rule_id": "handcount:statement_then_reversal.consecutive_pivot",
-        })
-    return findings
+# statement_then_reversal detector retired — migrated to galley/prose
+# registry under detectors/pivot_inference/. Phase 8 batch 3.
 
 
 # ─── Filter-word density ─────────────────────────────────────────────────
@@ -412,30 +362,8 @@ def detect_proximity_echo(sents: list[str], max_distance: int = 12,
 # redundant; the prose has already made the claim and the tag just
 # re-verifies. CO ear-flagged 2026-05-13.
 
-_CONFIRMATION_TAG_RE = re.compile(
-    r",\s*which\s+(I|he|she|it|they|we|you)\s+"
-    r"(was|were|is|are|did|do|had|have|has)"
-    r"(?:\s+(?:not|n't))?"
-    r"(?:\s+\w{2,7})?\s*\.",
-    re.IGNORECASE,
-)
-
-
-def detect_confirmation_tag(prose: str) -> list[dict]:
-    """Sentence-final ', which <pronoun> <aux>' confirmation tags."""
-    findings = []
-    for m in _CONFIRMATION_TAG_RE.finditer(prose):
-        findings.append({
-            "type": "confirmation_tag",
-            "match": m.group(0).strip(),
-            "pronoun": m.group(1).lower(),
-            "auxiliary": m.group(2).lower(),
-            "start_char": m.start(),
-            "end_char": m.end(),
-            "confidence": 0.9,
-            "rule_id": "handcount:confirmation_tag.which_pronoun_aux_period",
-        })
-    return findings
+# confirmation_tag detector retired — migrated to galley/prose registry
+# under detectors/pivot_inference/confirmation_tag.py. Phase 8 batch 3.
 
 
 # ─── Inference cascade (which meant / which was / which gave ...) ──────
@@ -447,33 +375,8 @@ def detect_confirmation_tag(prose: str) -> list[dict]:
 # the desk, the bookshelf"), so this dedicated bigram-cascade detector
 # catches the specific looping pattern. CO ear-flagged 2026-05-13.
 
-_INFERENCE_CASCADE = re.compile(
-    r"\bwhich\s+(meant|was|were|made|gave|put|left|brought|caused|forced|"
-    r"allowed|kept|told|showed|sent|carried|placed|set|fixed|knew|did|"
-    r"is|has|had|would)\b[^.!?]{1,120}?"
-    r"\bwhich\s+\1\b[^.!?]{1,120}?"
-    r"\bwhich\s+\1\b",
-    re.IGNORECASE,
-)
-
-
-def detect_inference_cascade(prose: str) -> list[dict]:
-    """Three-or-more 'which <same-verb>' clause openers in a single
-    sentence. The signature Bobiverse cascading-inference move; intentional
-    once, audibly looping at three. Detects '...which meant X, which meant
-    Y, which meant Z' style chains."""
-    findings = []
-    for m in _INFERENCE_CASCADE.finditer(prose):
-        findings.append({
-            "type": "inference_cascade",
-            "connector": f"which {m.group(1).lower()}",
-            "match": m.group(0)[:200] + ("..." if len(m.group(0)) > 200 else ""),
-            "start_char": m.start(),
-            "end_char": m.end(),
-            "confidence": 0.9,
-            "rule_id": "handcount:inference_cascade.which_verb_triple",
-        })
-    return findings
+# inference_cascade detector retired — migrated to galley/prose registry
+# under detectors/pivot_inference/inference_cascade.py. Phase 8 batch 3.
 
 
 # detect_internal_anaphora + detect_anadiplosis retired — migrated
@@ -1236,7 +1139,7 @@ def meters(annotations_by_type: dict[str, list[dict]], doc: dict) -> list[dict]:
 DEFAULT_THRESHOLDS = {
     # anaphora / polysyndeton thresholds migrated to galley/prose
     # verdict.rollup_registry (Phase 8 batch 1).
-    "tautology_density_per_1000": 3.0,
+    # tautology_density threshold migrated to galley/prose (Phase 8 batch 3).
     "sentences_over_50_words_pct": 3.0,
     # CO ear-flagged 2026-05-13 patterns:
     "echo_and_confirm_max_per_chapter": 0,        # any instance = warning; ≥2 = blocker
@@ -1264,10 +1167,8 @@ def verdict(metrics_list: list[dict], doc: dict, thresholds: dict) -> dict:
     # blocks migrated to galley/prose registry. See book.editorial.yaml
     # detectors.<name>.{warning_raw_count,blocker_raw_count} if
     # per-chapter thresholds are desired.
-    if "tautological_self_equation" in by_dev:
-        check("tautology_density_per_1000",
-              by_dev["tautological_self_equation"]["count_per_1k_tokens"],
-              thresholds["tautology_density_per_1000"])
+    # tautological_self_equation rollup migrated to galley/prose
+    # verdict.rollup_registry (Phase 8 batch 3).
 
     # echo_and_confirm rollup migrated to galley/prose registry
     # (verdict.rollup_registry consumes book.editorial.yaml thresholds).
@@ -1302,15 +1203,8 @@ def verdict(metrics_list: list[dict], doc: dict, thresholds: dict) -> dict:
             passes.append("fragment_density")  # one cascade is intentional, fine
         else:
             passes.append("fragment_density")
-    # Statement-then-reversal — anti-pattern #3.
-    if "statement_then_reversal" in by_dev:
-        n = by_dev["statement_then_reversal"]["raw_count"]
-        if n >= 3:
-            blockers.append(f"statement_then_reversal: {n} consecutive-pivot pairs (anti-pattern #3)")
-        elif n >= 1:
-            warnings.append(f"statement_then_reversal: {n} pair(s) flagged")
-        else:
-            passes.append("statement_then_reversal")
+    # statement_then_reversal rollup migrated to galley/prose
+    # verdict.rollup_registry (Phase 8 batch 3).
 
     # ─── Phase 1.7 detector verdicts ────────────────────────────────────
     word_count = doc.get("word_count", 0) or 1
@@ -1468,12 +1362,8 @@ def verdict(metrics_list: list[dict], doc: dict, thresholds: dict) -> dict:
             passes.append("infinitive_phrase")
     if "gerund" in by_dev:
         passes.append("gerund")  # informational
-    if "inference_cascade" in by_dev:
-        n = by_dev["inference_cascade"]["raw_count"]
-        if n >= 1:
-            blockers.append(f"inference_cascade: {n} 'which X' triple-cascade(s) — cut to two or fewer")
-        else:
-            passes.append("inference_cascade")
+    # inference_cascade rollup migrated to galley/prose
+    # verdict.rollup_registry (Phase 8 batch 3).
     if "proximity_echo" in by_dev:
         n = by_dev["proximity_echo"]["raw_count"]
         if n >= 30:
@@ -1482,16 +1372,8 @@ def verdict(metrics_list: list[dict], doc: dict, thresholds: dict) -> dict:
             warnings.append(f"proximity_echo: {n} close-range word repetitions (review top hits)")
         else:
             passes.append("proximity_echo")
-    if "confirmation_tag" in by_dev:
-        n = by_dev["confirmation_tag"]["raw_count"]
-        if n >= 5:
-            blockers.append(f"confirmation_tag: {n} 'which <pronoun> <aux>' tags — many likely redundant")
-        elif n >= 2:
-            warnings.append(f"confirmation_tag: {n} confirmation tag(s) — review each for redundancy")
-        elif n >= 1:
-            passes.append("confirmation_tag")  # 1 is acceptable
-        else:
-            passes.append("confirmation_tag")
+    # confirmation_tag rollup migrated to galley/prose
+    # verdict.rollup_registry (Phase 8 batch 3).
 
     if blockers:
         v = "red"
@@ -1595,7 +1477,7 @@ def measure(md_path: Path, dimensions: dict | None = None) -> dict:
     findings_by_type = {
         # anaphora / asyndeton / polysyndeton / literal_tricolon migrated
         # to registry (detectors/classical_rhetoric/). Phase 8 batch 1.
-        "tautological_self_equation": detect_tautology(prose),
+        # tautological_self_equation migrated to registry — batch 3.
         # epanorthosis / echo_and_confirm migrated to registry — batch 2a.
         # lexical_chain_loop migrated to registry — batch 2b.
         # self_referential_frame migrated to registry (book.editorial.yaml).
@@ -1603,7 +1485,7 @@ def measure(md_path: Path, dimensions: dict | None = None) -> dict:
         # motif_overuse migrated to registry (book.editorial.yaml).
         "parenthetical_density": detect_parenthetical_density(prose),
         "fragment_density": detect_fragment_density(sents),
-        "statement_then_reversal": detect_statement_then_reversal(sents),
+        # statement_then_reversal migrated to registry — batch 3.
         # filter_word migrated to registry (book.editorial.yaml).
         "redundant_phrase": detect_redundant_phrases(prose),
         # internal_anaphora / anadiplosis migrated to registry — batch 2a.
@@ -1629,9 +1511,9 @@ def measure(md_path: Path, dimensions: dict | None = None) -> dict:
         "proper_noun": detect_proper_nouns(prose),
         "infinitive_phrase": detect_infinitives(prose),
         "gerund": detect_gerunds(prose),
-        "inference_cascade": detect_inference_cascade(prose),
+        # inference_cascade migrated to registry — batch 3.
         "proximity_echo": detect_proximity_echo(sents),
-        "confirmation_tag": detect_confirmation_tag(prose),
+        # confirmation_tag migrated to registry — batch 3.
     }
 
     # Apply held_lines annotations.
