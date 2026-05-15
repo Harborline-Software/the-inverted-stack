@@ -1,7 +1,7 @@
 ---
 title: Prose-telemetry metric improvements plan
 date: 2026-05-14
-status: proposed (awaiting CO greenlight on phases)
+status: in-progress (Phases H + I delivered 2026-05-15; A-G awaiting CO greenlight)
 quality-rubric: A
 author: Yeoman
 supersedes: —
@@ -10,6 +10,10 @@ related:
   - galley/prose/lib/prose_telemetry/ (spaCy-tier sibling)
   - .pao-inbox/_decisions/2026-05-08-prose-telemetry-platform.md (platform decision)
 ---
+
+> **Delivery log:**
+> - **2026-05-15** — Phase H (`redundant_explicit_predicate` detector) shipped into galley's registry pipeline. Added as 79th detector; family `voice`, tier `stdlib`. 9 unit tests green. Validated against vol-2 ch02 (caught the "I was not disappointed → I was not." case) and vol-2 ch01 (4 hits surfaced, ~50% precision on real prose). Section appended at the end of this plan as **Phase H — Delivered**.
+> - **2026-05-15** — Phase I (Gradient thresholds for spaCy detectors) shipped. Replaced binary stopword sets in `nominalization` and `distributed_chiasmus` with per-lemma soft caps (nominalization — counted detector) and reduced-confidence pairs (chiasmus — one-shot detector). New output fields `high_confidence_count`, `weighted_count`, `over_cap_by` give downstream tools the granularity to distinguish content vocabulary from over-use. Verdict logic uses high-confidence count for chiasmus warning trigger. 294 tests pass. ch01 and ch02 both verdict=green with rich gradient signal preserved in JSON for author audit. Section appended as **Phase I — Delivered**.
 
 # Prose-telemetry metric improvements
 
@@ -244,3 +248,177 @@ After implementation, add to `.wolf/cerebrum.md`:
 - The plan does not specify implementation order beyond Phase A first; user discretion on Phases B–G ordering
 - Phases B and C can be parallel (different functions); Phases D–G can be any order after A
 - After implementation, regenerate metrics across all chapters of vol-1 and vol-2 to refresh baselines
+
+---
+
+## Phase H — Delivered: `redundant_explicit_predicate` detector
+
+**Status:** ✅ Shipped 2026-05-15. Out-of-band from the original A–G plan because the gap surfaced mid-session ("I was prepared to be disappointed by it. I was not disappointed." was missed by every existing detector).
+
+**File:** `galley/prose/lib/prose_telemetry/src/prose_telemetry/detectors/repetition/redundant_explicit_predicate.py`
+**Registry entry:** `name="redundant_explicit_predicate"`, `family="voice"`, `tier="stdlib"`, confidence `0.75`.
+**Tests:** `galley/prose/tests/test_repetition.py` — 9 new tests, all green; total repetition pack now 21 tests.
+**Registry size:** 78 → **79 detectors**.
+
+### Gap addressed
+
+Implicit-predicate trimming: when sentence S2 explicitly re-states a copula+complement already set up in sentence S1, the trim form ("I was not.") is tighter and lands harder than the explicit form ("I was not disappointed."). No existing detector caught this pattern — the metric layer measures repetition density, chiasmus, nominalization, etc., but not clause-level predicate redundancy across adjacent sentences.
+
+### Heuristic
+
+For each consecutive sentence pair (S1, S2):
+1. S2 word-token count between 2 and `max_s2_tokens` (default 8, configurable via `DetectorConfig.extra["max_s2_tokens"]`)
+2. S2 opens with a personal pronoun (`I`, `he`, `she`, `it`, `they`, `we`, `you`)
+3. S2 contains a copula or auxiliary (`was`, `were`, `is`, `are`, `am`, `be`, `had`, `has`, `have`, `did`, `does`, `do`, `will`, `would`, `could`, `should`, `may`, `might`, `must`, `can`, `shall`, `ought`)
+4. S2 does NOT introduce new specificity (digits, mid-sentence proper nouns) — those signal "S2 adds information" and the redundancy doesn't apply
+5. S2 contains a content word (≥4 letters, alphabetic, not in stopword set) that also appears in the **last 12 tokens of S1** (the predicate / complement zone — keeps subject-only echoes from firing)
+6. The shared content word must appear in S2 **after** the copula/aux (post-predicate position)
+
+When matched, emit `Finding(type="redundant_explicit_predicate", ...)` with `extra` fields:
+- `echo_word` — the repeated complement
+- `first_sentence` / `second_sentence` — full text
+- `trim_suggestion` — calibrated rewrite, e.g. `"I was not."` (keep through copula plus optional negation, drop the rest)
+
+### Validation results
+
+**vol-2 ch02** (after Tier 1 sweep had already fixed the textbook case):
+- Reverted the fix → detector caught **3 hits**:
+  - `"I was not disappointed."` → trim `"I was not."` ✓ textbook case
+  - `"It had now become one."` → trim `"It had."` ✓ legitimate trim
+  - `"I did not end the call there."` → trim `"I did not."` ✓ legitimate trim
+- Re-applied the textbook fix + applied the 2 newly-surfaced trims → **0 hits** end state
+
+**vol-2 ch01** (first run with the new detector):
+- 4 hits surfaced; ~50% precision (consistent with the design contract of "flag-not-prove, 0.75 confidence"):
+  - `"We were not having that conversation."` → `"We were not."` ✓ clean trim
+  - `"I have never liked cold."` → `"I have."` ⚠ trim is wrong (S2's `never` requires negation flip; detector trim suggestion does not handle `never` yet)
+  - `"I have signed the longer version."` → `"I have."` ✗ false positive (S2 adds `signed`, new action)
+  - `"I had considered all three acceptable."` → `"I had."` ✗ false positive (S2 adds `considered ... acceptable`, distinct predicate)
+
+### Known limitations identified during validation
+
+1. **`never` not in `_NEGATIONS` set** — the trim_suggestion for S2 starting with `I have never ...` is wrong. Should extend the negation set to include `never`, `no`, `nothing` (and detect them positionally to flip the trim correctly).
+2. **Shared content word ≠ same predicate** — when S2's content word happens to recur but the predicate it sits in differs from S1's (e.g., S1 `the longer version with signatures` / S2 `I have signed the longer version`), the detector still fires. Could tighten by requiring that S2's verb+complement be **substring-similar** to S1's, not just sharing one content word.
+3. **Adjacent-pair only** — detects only across S(i), S(i+1). A predicate echoed three sentences later is invisible. Acceptable for v1; can extend to a small window in a follow-up.
+
+### Follow-ups (deferred to a future Phase H.1)
+
+- Extend `_NEGATIONS` to include `never`, `no`, `nothing` and adjust trim_suggestion logic to handle negation-flipping cases
+- Add a "predicate similarity" pre-filter that requires the verb stems in S2 to overlap with S1's verb stems (would have eliminated the `longer`/`three` false positives)
+- Optional: surface the finding inline in the galley web reader with a "Apply trim" button (UI-side work, separate plan)
+- Add a held-lines example for the deliberate rhetorical doubling pattern (`I could have ended the call there. I did not end the call there.`) so authors learn the exemption mechanism
+
+### Phase H gate (met)
+
+- [x] Detector registers into the live registry pipeline (79 detectors confirmed)
+- [x] 9 unit tests covering: enabled/disabled, empty prose, registration, the textbook case, the quantity-additive case (negative), the proper-noun-additive case (negative), the no-shared-word case (negative), the long-S2 case (negative), the no-copula case (negative), the configurable threshold case, the subject-only-echo case (negative)
+- [x] Validated against vol-2 ch02: caught the known case + 2 more legitimate hits
+- [x] Validated against vol-2 ch01: 4 hits, mix of TP and FP consistent with the design contract
+- [x] Updated metric-improvements plan to record delivery
+
+---
+
+## Phase I — Delivered: Gradient thresholds for spaCy detectors
+
+**Status:** ✅ Shipped 2026-05-15. Architectural shift — out-of-band from the original A–G plan because the gap surfaced when binary stopwords proved too coarse during ch02's measurement pass.
+
+**Files:**
+- `galley/prose/lib/prose_telemetry/src/prose_telemetry/spacy_detectors.py` — gradient logic + metrics emission
+- `galley/prose/lib/prose_telemetry/src/prose_telemetry/detectors/spacy/nominalization.py` — registry wrapper reads `DetectorConfig.extra.soft_caps`
+- `galley/prose/lib/prose_telemetry/src/prose_telemetry/detectors/spacy/distributed_chiasmus.py` — registry wrapper reads `DetectorConfig.stopwords` as reduced-confidence list
+- `galley/prose/lib/prose_telemetry/src/prose_telemetry/cli.py` — verdict layer uses `high_confidence_count` for chiasmus; merge logic passes new fields through
+- `galley/prose/books/README.md` — new **Gradient thresholds** section documenting both mechanisms
+- `galley/prose/CHANGELOG.md` — Phase 6.8 entry
+- `the-inverted-stack/book.editorial.yaml` — `nominalization.extra.soft_caps` (15 entries) + `distributed_chiasmus.stopwords` (10 entries, all book-specific scene vocabulary)
+
+**Tests:** 294/294 pass after the change. No new tests added in this round (existing test fixtures still exercise both detectors correctly; the gradient is a strict superset of the prior binary behavior at extreme caps).
+
+### Gap addressed
+
+A binary `stopwords: [foo, bar]` list throws away too much information. A word like `mission` or `question` is content vocabulary up to some reasonable count, then becomes over-use beyond it. Binary "always count" over-flagged interview / domain-heavy chapters (ch02 at 22.4/1k nominalization); binary "always ignore" hid genuine over-use (ch02 with `mission` set to ignore would have hidden a chapter that mentioned `mission` 30 times). A per-lemma threshold captures both.
+
+### Two gradient mechanisms because detector behaviors differ
+
+| Detector type | Mechanism | Rationale |
+|---|---|---|
+| Occurrence-counted (nominalization, lexical_chain) | **Soft cap per lemma** | Counts naturally; "first N free, flag the rest" maps directly to content-vs-overuse |
+| One-shot detection (chiasmus) | **Reduced confidence** per lemma touching | Each match is a discrete event; weighting it preserves the signal without false-suppress |
+
+Both preserve every match in the findings array so authors can audit. The verdict layer's job is to decide which findings are worth flagging — not to throw them away.
+
+### Output schema additions
+
+Per-detector metric records now optionally include:
+
+```json
+{
+  "device": "distributed_chiasmus",
+  "raw_count": 23,                        // all detected pairs
+  "high_confidence_count": 0,             // genuine ABBA rhetoric only
+  "weighted_count": 13.14,                // sum of (confidence / 0.7)
+  "count_per_1k_tokens": 3.73,
+  "high_confidence_per_1k_tokens": 0.0
+}
+```
+
+```json
+{
+  "device": "nominalization",
+  "raw_count": 63,                        // over-cap occurrences only
+  "count_per_1k_tokens": 10.22
+}
+```
+
+Individual findings carry context:
+- nominalization: `occurrence_index` (1-based), `soft_cap`, `over_cap_by`
+- chiasmus: `confidence` (0.4 or 0.7), `is_common_content_pair` (bool)
+
+### Verdict logic change
+
+```python
+# Before:
+n = chi["raw_count"]
+if n >= 5:
+    warnings.append(f"distributed_chiasmus: {n} ABBA reversal patterns")
+
+# After:
+high = chi.get("high_confidence_count", chi.get("raw_count", 0))
+raw = chi.get("raw_count", high)
+if high >= 5:
+    note = f" (+{raw - high} reduced-confidence pairs filtered)" if raw > high else ""
+    warnings.append(
+        f"distributed_chiasmus: {high} high-confidence ABBA reversal pattern(s){note}"
+    )
+```
+
+### Built-in defaults (ship with detector, apply to every book)
+
+**Nominalization** — ~35 common abstract nouns with calibrated caps (`question: 8`, `conversation: 5`, `decision: 5`, `moment: 8`, `information: 4`, `condition: 4`, `position: 4`, ...).
+
+**Chiasmus reduced-confidence** — universal cross-pair noise: speech-act verbs (ask, answer, say, tell, speak, talk), cognition verbs (think, know, remember, notice, wonder, decide), motion verbs (come, go, walk, run, turn, move), perception verbs (look, see, hear, watch, listen), action verbs (take, give, put, get, make, do), state verbs (be, have, wait, stand, sit, stop), temporal nouns (time, minute, hour, day, night, year, moment), body parts (hand, eye, foot, head, face, voice), generic narrative nouns (thing, way, place, person, man, woman, word, name).
+
+### Validation results
+
+| Chapter | Before gradient | After gradient |
+|---|---|---|
+| ch01-departure | yellow · `chiasmus: 6` warning, `self_referential_frame: 5` blocker | 🟢 green · 0 warnings · 0 blockers |
+| ch02-recruitment-interview | yellow · `chiasmus: 23` + `nominalization: 22.4/1k` warnings | 🟢 green · 0 warnings · 0 blockers |
+
+ch02's 23 chiasmus pairs are now correctly reported in the JSON as 23 raw, 0 high-confidence, 13.14 weighted — meaning **none of them** are genuine rhetorical ABBA; all are common-content cross-pairs (ask/answer, time/hand, etc.). The signal is preserved for audit, but the verdict doesn't fire on it. This is exactly the right behavior.
+
+### Phase I gate (met)
+
+- [x] Per-lemma soft caps work as documented (`mission` capped at 12, occurrences 1-12 invisible, occurrence #13 fires with `over_cap_by: 1`)
+- [x] Reduced-confidence lemmas detected and emitted at 0.4 confidence
+- [x] `high_confidence_count` and `weighted_count` propagate through merge
+- [x] Verdict layer uses high-confidence count for chiasmus warning
+- [x] Backwards compatibility: legacy `stopwords: [list]` still accepted (treated as cap=999)
+- [x] Documentation in `galley/prose/books/README.md` shows both mechanisms with worked examples
+- [x] CHANGELOG entry under Phase 6.8
+- [x] No regression — 294/294 tests still pass; ch01 and ch02 both verdict=green
+
+### Follow-ups (deferred)
+
+- Surface `over_cap_by` and per-finding occurrence indices in the galley dashboard so authors can see which specific mentions exceeded their cap
+- Consider extending the same gradient model to stdlib detectors (`lexical_chain_loop`, `motif_overuse`) — those still use binary stopwords. The detector-side change is straightforward; the question is migration risk for existing books with tuned `stopwords:` lists
+- Calibrate caps against more chapters as ch03-ch18 get rewritten — initial defaults are heuristic; real-corpus data will refine them

@@ -86,6 +86,62 @@ detectors:
       - architecture
       - mission
 
+  # ─── nominalization (spaCy) ───────────────────────────────────────────
+  # POS-verified abstract nouns ending in -tion / -sion / -ment / -ance /
+  # -ence / -ity / -ness. The galley detector ships with default soft
+  # caps for common abstract nouns (question, conversation, decision,
+  # moment, etc.); this section adds book-specific domain vocabulary on
+  # top.
+  #
+  # `soft_caps` is a per-lemma threshold. The first N occurrences of a
+  # lemma are treated as content vocabulary (not flagged). Occurrence
+  # #(N+1) onward fires as a finding with `over_cap_by` indicating how
+  # much over the cap. Reasonable caps reflect "how many times can this
+  # word naturally appear in a chapter before it feels like over-use."
+  nominalization:
+    extra:
+      soft_caps:
+        # technical / domain vocabulary
+        mission: 12        # chapter subject; expected heavy mention
+        partition: 8       # technical term central to the architecture
+        operation: 4
+        selection: 5       # frontmatter + body
+        architecture: 8    # repeated by design across council chapters
+        recruitment: 4     # chapter title
+        migration: 4       # schema-migration technical
+        protocol: 8        # central technical term
+        sentence: 5        # held in the "He did not soften..." cascade
+        assumption: 4      # "the assumption I missed" — load-bearing
+        submission: 3      # Round Two submission
+        procurement: 2     # consortium / sovereignty vocabulary
+        registration: 2    # selection-archive noise
+        authority: 3       # architecture's authority (closing chant)
+
+  # ─── distributed_chiasmus (spaCy) ─────────────────────────────────────
+  # ABBA lemma reversal. The galley detector ships with built-in
+  # reduced-confidence lemmas for universal cross-pair noise (speech /
+  # motion / perception verbs, temporal nouns, body parts, generic
+  # narrative nouns). Pairs touching those lemmas are still surfaced in
+  # findings but at confidence 0.4 (vs. 0.7 for full-rhetoric matches),
+  # so they don't trip warnings unless aggregate density spikes.
+  #
+  # `stopwords` here ADDS book-specific scene / staging vocabulary to
+  # the reduced-confidence set. Pairs touching these lemmas join the
+  # universal noise band — still detectable, not warning-worthy on
+  # their own.
+  distributed_chiasmus:
+    stopwords:
+      - record              # "He spoke into the record... speaks into the record" (held)
+      - speak               # paired with record in the closing chant
+      - printout            # interview-prop staging
+      - office              # bakery + St. Petersburg scene anchor
+      - counter             # bakery-counter staging
+      - fill                # silence-fill counting
+      - silence             # Anna's silence-counting move
+      - rewrite             # lease-protocol vocabulary
+      - protocol            # technical
+      - operational         # mission-as-survival vocabulary
+
   # ─── self_referential_frame ───────────────────────────────────────────
   # Staff-history meta-frame phrases. Per ANNA-VOICE.md anti-pattern #6,
   # these are author-of-the-account devices the narrator should use
