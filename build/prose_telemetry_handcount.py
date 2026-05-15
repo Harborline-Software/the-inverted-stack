@@ -191,70 +191,8 @@ def _is_dialogue(s: str) -> bool:
 # anaphora that the sentence-level detector misses. CO ear-flagged
 # 2026-05-13 (multiple instances).
 
-_PROXIMITY_STOPWORDS = {
-    # Function words / auxiliaries / common modifiers
-    "have", "been", "this", "that", "with", "from", "they", "them",
-    "their", "which", "would", "could", "should", "about", "there",
-    "than", "then", "when", "what", "where", "while", "after", "before",
-    "into", "over", "under", "only", "even", "much", "many", "some",
-    "very", "just", "also", "always", "never", "still", "every",
-    "because", "though", "since", "until", "however", "therefore",
-    "other", "another", "same", "such", "those", "these", "where",
-    # High-frequency content words that recur naturally in narrative
-    "thing", "things", "kind", "part", "place", "time", "times",
-    "matter", "people", "person", "year", "years", "minute", "minutes",
-    "hour", "hours", "morning", "evening", "night", "today",
-    "first", "second", "third", "last", "next", "three", "four", "five",
-    "good", "well", "back", "down", "again", "around", "between",
-    "took", "made", "gave", "kept", "knew", "said", "told", "went",
-    "came", "saw", "got", "let", "put", "set", "had", "did", "was",
-    "were", "wanted", "needed", "tried", "found", "left", "asked",
-    "called", "began", "started", "stopped", "looked", "turned",
-    # Common to-be / aux forms in -ing
-    "going", "coming", "making", "saying", "doing", "looking", "thinking",
-    "knowing", "having", "being", "trying", "telling", "asking",
-    # Common adjectives that recur naturally
-    "much", "more", "less", "most", "least", "many", "few",
-}
-
-
-def detect_proximity_echo(sents: list[str], max_distance: int = 12,
-                          min_word_len: int = 5) -> list[dict]:
-    """Content word appearing twice within max_distance token positions
-    inside a SINGLE sentence. Anadiplosis detector already handles cross-
-    sentence echoes; this detector handles same-sentence proximity that
-    the within-sentence detectors miss.
-
-    Tightened from initial cut: single-sentence only, min_word_len=5,
-    max_distance=12, and expanded stopwords. Single-sentence content-word
-    echo at ≤12 tokens is audibly noticeable; across-sentence echo is
-    handled separately."""
-    findings = []
-    for sent in sents:
-        toks = tokens(sent)
-        seen: dict[str, int] = {}
-        for pos, w in enumerate(toks):
-            wl = w.lower()
-            if len(wl) < min_word_len:
-                continue
-            if wl in _PROXIMITY_STOPWORDS:
-                continue
-            # Skip proper nouns: capitalized mid-sentence.
-            if pos > 0 and w[0].isupper() and w[0].isalpha():
-                continue
-            if wl in seen:
-                distance = pos - seen[wl]
-                if distance <= max_distance:
-                    findings.append({
-                        "type": "proximity_echo",
-                        "word": wl,
-                        "distance_tokens": distance,
-                        "sentence": sent[:200] + ("..." if len(sent) > 200 else ""),
-                        "confidence": 0.75,
-                        "rule_id": "handcount:proximity_echo.content_word_near_repeat_in_sentence",
-                    })
-            seen[wl] = pos
-    return findings
+# proximity_echo detector retired — migrated to galley/prose registry
+# under detectors/structural/proximity_echo.py. Phase 8 batch 6.
 
 
 # ─── Confirmation-tag detector ──────────────────────────────────────────
@@ -329,78 +267,9 @@ def detect_proximity_echo(sents: list[str], max_distance: int = 12,
 # Lines that directly address the reader. Anna's staff-history frame does
 # this deliberately; detect for visibility.
 
-_DIRECT_ADDRESS = re.compile(
-    r"\b(dear reader|gentle reader|you must understand|"
-    r"you may|you should know|you will see|let me|let us|trust me|"
-    r"believe me|you can imagine|imagine|consider)\b",
-    re.IGNORECASE,
-)
-
-
-def detect_direct_address(prose: str) -> list[dict]:
-    """Narrator addressing the reader directly."""
-    findings = []
-    for m in _DIRECT_ADDRESS.finditer(prose):
-        # Skip if inside dialogue (these are normal in dialogue).
-        # Crude check: look back for unmatched quote.
-        context_start = max(0, m.start() - 200)
-        context = prose[context_start:m.start()]
-        if context.count('"') % 2 == 1:
-            continue
-        findings.append({
-            "type": "direct_address",
-            "phrase": m.group(0).lower(),
-            "start_char": m.start(),
-            "confidence": 0.7,
-            "rule_id": "handcount:direct_address.reader_addressed",
-        })
-    return findings
-
-
-# ─── Time-stamp density ──────────────────────────────────────────────────
-# Specific times (HH:MM, "at 09:14", "by 03:17"). Anna's voice has many.
-
-_TIMESTAMP_RE = re.compile(r"\b\d{1,2}:\d{2}\b")
-
-
-def detect_timestamps(prose: str) -> list[dict]:
-    """HH:MM time stamps in narration."""
-    findings = []
-    for m in _TIMESTAMP_RE.finditer(prose):
-        findings.append({
-            "type": "timestamp",
-            "time": m.group(0),
-            "start_char": m.start(),
-            "confidence": 1.0,
-            "rule_id": "handcount:timestamp.hh_mm_match",
-        })
-    return findings
-
-
-# ─── Temporal-marker overuse ─────────────────────────────────────────────
-# "then", "now", "soon", "suddenly", "eventually" — narrative-time
-# adverbs. Heavy use signals reliance on telling-not-showing transitions.
-
-_TEMPORAL_MARKERS = re.compile(
-    r"\b(then|now|soon|suddenly|eventually|finally|immediately|"
-    r"presently|shortly|previously|currently|formerly|"
-    r"earlier|later|afterwards|afterward|meanwhile)\b",
-    re.IGNORECASE,
-)
-
-
-def detect_temporal_markers(prose: str) -> list[dict]:
-    """Narrative-time adverbs."""
-    findings = []
-    for m in _TEMPORAL_MARKERS.finditer(prose):
-        findings.append({
-            "type": "temporal_marker",
-            "marker": m.group(1).lower(),
-            "start_char": m.start(),
-            "confidence": 0.9,
-            "rule_id": "handcount:temporal_marker.transition_adverb",
-        })
-    return findings
+# direct_address / timestamp / temporal_marker detectors retired —
+# migrated to galley/prose registry under detectors/structural/.
+# Phase 8 batch 6.
 
 
 # ─── Lexical diversity (type-token ratio) ────────────────────────────────
@@ -472,30 +341,8 @@ def compute_sentence_starter_entropy(sents: list[str]) -> dict:
 # louder signal — if 3+ paragraphs in a chapter start with the same word,
 # it's noticeable to a reader.
 
-def detect_paragraph_opener_repeats(prose: str, min_repeats: int = 3) -> list[dict]:
-    """Words that open min_repeats or more paragraphs in the chapter."""
-    from collections import Counter
-    findings = []
-    paras = [p.strip() for p in prose.split("\n\n") if p.strip()]
-    openers = []
-    for p in paras:
-        if _is_dialogue(p):
-            continue
-        ws = tokens(p)
-        if ws:
-            openers.append(ws[0].lower())
-    counts = Counter(openers)
-    for word, n in counts.items():
-        if n >= min_repeats and word not in {"the", "a", "an", "this", "that", "it", "he", "she", "they"}:
-            findings.append({
-                "type": "paragraph_opener_repeat",
-                "word": word,
-                "count": n,
-                "total_paragraphs": len(openers),
-                "confidence": 0.85,
-                "rule_id": "handcount:paragraph_opener.repeat_above_threshold",
-            })
-    return findings
+# paragraph_opener_repeat detector retired — migrated to galley/prose
+# registry under detectors/structural/paragraph_opener_repeat.py. Phase 8 batch 6.
 
 
 # ─── Dialogue-attribution variety (Shannon entropy) ──────────────────────
@@ -537,27 +384,8 @@ def compute_attribution_variety(prose: str) -> dict:
 # Capitalized-mid-sentence words. Heuristic for proper nouns. Used as a
 # density metric and as input for named-entity tracking.
 
-_PROPER_NOUN_RE = re.compile(r"(?<![.!?]\s)(?<!^)\b([A-Z][a-z]{2,})\b")
-
-
-def detect_proper_nouns(prose: str) -> list[dict]:
-    """Mid-sentence capitalized words as proper-noun heuristic. Density
-    metric; useful for tracking name-heavy paragraphs."""
-    findings = []
-    for m in _PROPER_NOUN_RE.finditer(prose):
-        word = m.group(1)
-        # Skip common false positives (sentence-start words wrapped by
-        # markdown italics).
-        if word in {"The", "A", "An", "I", "It", "He", "She", "We", "They", "You", "But", "And", "So"}:
-            continue
-        findings.append({
-            "type": "proper_noun",
-            "word": word,
-            "start_char": m.start(),
-            "confidence": 0.7,
-            "rule_id": "handcount:proper_noun.mid_sentence_capitalized",
-        })
-    return findings
+# proper_noun detector retired — migrated to galley/prose registry
+# under detectors/structural/proper_noun.py. Phase 8 batch 6.
 
 
 # ─── Infinitive-phrase density ───────────────────────────────────────────
@@ -702,47 +530,13 @@ def verdict(metrics_list: list[dict], doc: dict, thresholds: dict) -> dict:
     # conjunctive_adverb / double_negative / comma_splice rollups
     # migrated to galley/prose verdict.rollup_registry (Phase 8 batch 5).
     # cliche rollup migrated to galley/prose verdict.rollup_registry (batch 4).
-    if "direct_address" in by_dev:
-        n = by_dev["direct_address"]["raw_count"]
-        if n >= 10:
-            warnings.append(f"direct_address: {n} reader-address phrases (heavy staff-history frame)")
-        else:
-            passes.append("direct_address")
-    if "timestamp" in by_dev:
-        n = by_dev["timestamp"]["raw_count"]
-        # informational only
-        if n >= 15:
-            warnings.append(f"timestamp: {n} HH:MM stamps (verify intentional density)")
-        else:
-            passes.append("timestamp")
-    if "temporal_marker" in by_dev:
-        n = by_dev["temporal_marker"]["raw_count"]
-        per_1k_val = n * 1000 / word_count
-        if per_1k_val > 8:
-            warnings.append(f"temporal_marker: {per_1k_val:.1f}/1k then/now/soon transitions")
-        else:
-            passes.append("temporal_marker")
-    if "paragraph_opener_repeat" in by_dev:
-        n = by_dev["paragraph_opener_repeat"]["raw_count"]
-        if n >= 2:
-            warnings.append(f"paragraph_opener_repeat: {n} word(s) opening 3+ paragraphs")
-        else:
-            passes.append("paragraph_opener_repeat")
-    if "proper_noun" in by_dev:
-        # Informational only — high count is name-heavy chapter, normal.
-        passes.append("proper_noun")
+    # direct_address / timestamp / temporal_marker / paragraph_opener_repeat /
+    # proper_noun / proximity_echo rollups migrated to galley/prose
+    # verdict.rollup_registry (Phase 8 batch 6).
     # infinitive_phrase / gerund rollups migrated to galley/prose
     # verdict.rollup_registry (Phase 8 batch 5).
     # inference_cascade rollup migrated to galley/prose
     # verdict.rollup_registry (Phase 8 batch 3).
-    if "proximity_echo" in by_dev:
-        n = by_dev["proximity_echo"]["raw_count"]
-        if n >= 30:
-            blockers.append(f"proximity_echo: {n} close-range word repetitions (likely real looping)")
-        elif n >= 10:
-            warnings.append(f"proximity_echo: {n} close-range word repetitions (review top hits)")
-        else:
-            passes.append("proximity_echo")
     # confirmation_tag rollup migrated to galley/prose
     # verdict.rollup_registry (Phase 8 batch 3).
 
@@ -867,14 +661,11 @@ def measure(md_path: Path, dimensions: dict | None = None) -> dict:
         # conjunctive_adverb / double_negative / comma_splice migrated
         # to registry — batch 5.
         # cliche migrated to registry — batch 4.
-        "direct_address": detect_direct_address(prose),
-        "timestamp": detect_timestamps(prose),
-        "temporal_marker": detect_temporal_markers(prose),
-        "paragraph_opener_repeat": detect_paragraph_opener_repeats(prose),
-        "proper_noun": detect_proper_nouns(prose),
+        # direct_address / timestamp / temporal_marker /
+        # paragraph_opener_repeat / proper_noun / proximity_echo migrated
+        # to registry — batch 6.
         # infinitive_phrase / gerund migrated to registry — batch 5.
         # inference_cascade migrated to registry — batch 3.
-        "proximity_echo": detect_proximity_echo(sents),
         # confirmation_tag migrated to registry — batch 3.
     }
 
