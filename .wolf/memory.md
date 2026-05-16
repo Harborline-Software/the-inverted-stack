@@ -5,6 +5,8 @@
 
 | 07:43 | Built chapter reader web app (React + Express) | web/ (10 files) | production build passes; 52 chapters/50 with audio served on port 3080 | ~3500 |
 
+| 2026-05-16 18:05 | FFF Nansen-ingestion pilot Ch 17 transit-north — downloaded 3 Gutenberg sources; identified 7 source passages; produced source.md, transformed.md, craft-note.md; lexical fatigue ran clean (register 15.52/1k, standing 12.63/1k confirmed as primary targets); observational uplift estimated 35.66→39+ at chapter level for this passage; full-chapter FFF scope needed for canon range | vol-2/_voice-drafts/nansen-ingestion/ch17-transit-north.{source,transformed,craft-note}.md | 3 pilot artifacts complete | ~4500 |
+| 2026-05-16 17:52 | Joel teaching-register pilot on Ch 7 — T2 direct-briefing beat (identity triad §1) + tempo-registration deepening + Anna interior gap-recognition beat; three existing moments deepened, no new scenes | vol-2/act-2/ch07-joels-sunfish.md, .pao-inbox/yeoman-resumed-2026-05-16T12-00Z-ch07-joel-teaching-pilot.md | 5,279 words (was 4,898); telemetry clean (no flags); all canonical lines intact | ~3500 |
 | 2026-05-13 | Register shift ch17/ch18/ch19 — tutorial "you" → implementation supplement voice; Marcus reframed as field-research case; all technical content preserved | vol-1/part-4-implementation-playbooks/ch17-building-first-node.md, ch18-migrating-existing-saas.md, ch19-shipping-to-enterprise.md | Complete — three files written | ~4000 |
 | 2026-05-07 14:30 | Web reader: multi-track support + render queue system | web/server.js, web/src/App.jsx, web/src/App.css, web/src/components/AudioPlayer.jsx, web/src/components/ChapterView.jsx, web/src/components/QueuePanel.jsx (NEW) | Build passes clean; 6 server changes + 5 client changes: loadMp3Tags keyed by full filename, buildCatalog scans audio variants, /api/chapters exposes tracks[], queue system with POST/GET/DELETE /api/queue, QueuePanel drawer, track selector in AudioPlayer | ~4000 |
 | 2026-05-07 01:15 | Vol 2 Ch 1 final-render audiobook launch — diagnosed and fixed 3 bugs; render in progress (background, ~2-3h estimated) | build/audiobook.py (YAML front-matter strip added to narratable_text(); ISO 8601 timestamp expansion added; default_base_url for chatterbox changed from 8881/v1 → 8883/api/v1), .wolf/buglog.json (bugs 189-191 appended), .wolf/cerebrum.md (4 new Key Learnings + 3 new Do-Not-Repeat entries) | Bugs: (1) 405 from wrong /v1 base path — proxy routes under /api/v1; (2) 504 cascade from 30s proxy gateway timeout + retry storm; fixed by using port 8883 direct backend + --no-chapter-map; (3) YAML front-matter spoken as TTS text. Render now running at ~33s/chunk avg, 270 chunks, ~2.5h total estimate. MP3 incrementally writing to build/output/audiobook/vol-2/ch01-departure.mp3. ~18000 |
@@ -3763,3 +3765,187 @@
 | 19:15 | Edited vol-2/act-1/ch01-departure.md | "s children were always do" → "s children were always do" | ~405 |
 | 19:15 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~318 |
 | 19:17 | Session end: 168 writes across 21 files (library.json, server.js, ch02-recruitment-interview.md, 2026-05-14-plot-grid-tool-plan.md, ch01-departure.md) | 27 reads | ~109197 tok |
+| 19:53 | Session end: 168 writes across 21 files (library.json, server.js, ch02-recruitment-interview.md, 2026-05-14-plot-grid-tool-plan.md, ch01-departure.md) | 27 reads | ~109197 tok |
+
+## Session: 2026-05-15 19:57
+
+| Time | Action | File(s) | Outcome | ~Tokens |
+|------|--------|---------|---------|--------|
+
+## Session: 2026-05-16 20:00
+
+| Time | Action | File(s) | Outcome | ~Tokens |
+|------|--------|---------|---------|--------|
+| 02:38 | review ch02 pre-line-39 voice + telemetry | vol-2/act-1/ch02-recruitment-interview.md | green / 79 passes / 0 warnings; fatigue noted 2.26x pre-existing; obs-density 0.77x canon unchanged | ~2.5k |
+| 02:52 | per-section telemetry comparison ch02 opening vs rest | vol-2/act-1/ch02-recruitment-interview.md | opening 28.71/1k obs (reflection-dominant by design); rest 39.50/1k; six voice signatures span both; funnel structure load-bearing — ship | ~3k |
+| 07:41 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~15 |
+| 11:43 | reprocess ch02 (complete rewrite) + render | vol-2/act-1/ch02-recruitment-interview.md | 87 typography fixes (paragraph-fusion paste artifacts); dissertation-board→block canon fix; verdict green 79/79; obs/1k 37.32→39.21; chatterbox render launched (51 chunks, bg) | ~5k |
+| 07:43 | Session end: 1 writes across 1 files (ch02-recruitment-interview.md) | 1 reads | ~8303 tok |
+| 07:50 | Session end: 1 writes across 1 files (ch02-recruitment-interview.md) | 1 reads | ~8303 tok |
+| 07:53 | Created .pao-inbox/pao-directive-2026-05-16T11-52Z-vol2-audio-staleness-audit.md | — | ~831 |
+| 07:53 | Created .pao-inbox/pao-directive-2026-05-16T11-53Z-fff-nansen-ingestion-ch17.md | — | ~1014 |
+| 07:53 | Created .pao-inbox/pao-directive-2026-05-16T11-54Z-joel-teaching-register-ch07.md | — | ~919 |
+| 07:54 | Created .pao-inbox/pao-directive-2026-05-16T11-55Z-anatomy-description-cleanup.md | — | ~591 |
+| 11:54 | draft 4 Yeoman directives + archive 2 superseded beacons | .pao-inbox/ | audio-audit + Ch17 FFF + Ch7 Joel + anatomy-cleanup queued; May-6 stale beacons archived | ~3k |
+| 07:54 | Session end: 5 writes across 5 files (ch02-recruitment-interview.md, pao-directive-2026-05-16T11-52Z-vol2-audio-staleness-audit.md, pao-directive-2026-05-16T11-53Z-fff-nansen-ingestion-ch17.md, pao-directive-2026-05-16T11-54Z-joel-teaching-register-ch07.md, pao-directive-2026-05-16T11-55Z-anatomy-description-cleanup.md) | 2 reads | ~12952 tok |
+| 12:27 | ch02 chatterbox render complete | output/audiobook/manifest.json + ~/Library/CloudStorage/Dropbox/.../ch02-recruitment-interview.mp3 | 51/51 chunks, 2693.8s wall (44.9 min), 30.6MB MP3, ciufi-galeazzi | ~1k |
+| 08:28 | Session end: 5 writes across 5 files (ch02-recruitment-interview.md, pao-directive-2026-05-16T11-52Z-vol2-audio-staleness-audit.md, pao-directive-2026-05-16T11-53Z-fff-nansen-ingestion-ch17.md, pao-directive-2026-05-16T11-54Z-joel-teaching-register-ch07.md, pao-directive-2026-05-16T11-55Z-anatomy-description-cleanup.md) | 2 reads | ~12952 tok |
+| 10:00 | Edited vol-2/act-1/ch03-drake-passage-ice-edge.md | inline fix | ~71 |
+| 10:00 | Edited vol-2/act-1/ch03-drake-passage-ice-edge.md | inline fix | ~40 |
+| 10:00 | Edited vol-2/act-1/ch03-drake-passage-ice-edge.md | inline fix | ~40 |
+| 10:00 | Edited vol-2/act-1/ch03-drake-passage-ice-edge.md | inline fix | ~57 |
+| 10:00 | Edited vol-2/act-1/ch03-drake-passage-ice-edge.md | inline fix | ~25 |
+| 10:00 | Edited vol-2/act-1/ch03-drake-passage-ice-edge.md | inline fix | ~111 |
+| 10:00 | Edited vol-2/act-1/ch03-drake-passage-ice-edge.md | inline fix | ~90 |
+| 10:00 | Edited vol-2/act-1/ch03-drake-passage-ice-edge.md | inline fix | ~63 |
+| 10:00 | Edited vol-2/act-1/ch03-drake-passage-ice-edge.md | inline fix | ~55 |
+| 10:00 | Edited vol-2/act-1/ch03-drake-passage-ice-edge.md | inline fix | ~140 |
+| 10:01 | Edited vol-2/act-1/ch03-drake-passage-ice-edge.md | inline fix | ~68 |
+| 10:01 | Edited vol-2/act-1/ch03-drake-passage-ice-edge.md | inline fix | ~118 |
+| 10:01 | Edited vol-2/act-1/ch03-drake-passage-ice-edge.md | "s technical scope. The sc" → "s technical scope. The sc" | ~176 |
+| 10:01 | Edited vol-2/act-1/ch03-drake-passage-ice-edge.md | inline fix | ~95 |
+| 10:02 | Edited vol-2/act-1/ch03-drake-passage-ice-edge.md | inline fix | ~82 |
+| 10:02 | Edited vol-2/act-1/ch03-drake-passage-ice-edge.md | inline fix | ~29 |
+| 10:02 | Edited vol-2/act-1/ch03-drake-passage-ice-edge.md | inline fix | ~18 |
+| 10:02 | Edited vol-2/act-1/ch03-drake-passage-ice-edge.md | "s fourth pass was not a t" → "s fourth pass was not a t" | ~206 |
+| 10:02 | Edited vol-2/act-1/ch03-drake-passage-ice-edge.md | inline fix | ~66 |
+| 10:02 | Edited vol-2/act-1/ch03-drake-passage-ice-edge.md | inline fix | ~143 |
+| 10:02 | Edited vol-2/act-1/ch03-drake-passage-ice-edge.md | inline fix | ~51 |
+| 10:02 | Edited vol-2/act-1/ch03-drake-passage-ice-edge.md | inline fix | ~143 |
+| 10:02 | Edited vol-2/act-1/ch03-drake-passage-ice-edge.md | inline fix | ~67 |
+| 10:02 | Edited vol-2/act-1/ch03-drake-passage-ice-edge.md | 3→3 lines | ~46 |
+| 10:02 | Edited vol-2/act-1/ch03-drake-passage-ice-edge.md | inline fix | ~47 |
+| 10:03 | Edited vol-2/act-1/ch03-drake-passage-ice-edge.md | inline fix | ~33 |
+| 10:03 | Edited vol-2/act-1/ch03-drake-passage-ice-edge.md | inline fix | ~163 |
+| 10:03 | Edited vol-2/act-1/ch03-drake-passage-ice-edge.md | inline fix | ~109 |
+| 10:03 | Edited vol-2/act-1/ch03-drake-passage-ice-edge.md | inline fix | ~52 |
+| 10:03 | Edited vol-2/act-1/ch03-drake-passage-ice-edge.md | inline fix | ~36 |
+| 10:04 | Edited vol-2/act-1/ch03-drake-passage-ice-edge.md | inline fix | ~39 |
+| 10:04 | Edited vol-2/act-1/ch03-drake-passage-ice-edge.md | inline fix | ~108 |
+| 10:04 | Edited vol-2/act-1/ch03-drake-passage-ice-edge.md | inline fix | ~51 |
+| 10:04 | Edited vol-2/act-1/ch03-drake-passage-ice-edge.md | inline fix | ~61 |
+| 10:05 | Edited vol-2/act-1/ch03-drake-passage-ice-edge.md | inline fix | ~74 |
+| 10:05 | Edited vol-2/act-1/ch03-drake-passage-ice-edge.md | inline fix | ~6 |
+| 10:05 | Edited vol-2/act-1/ch03-drake-passage-ice-edge.md | inline fix | ~110 |
+| 11:49 | Edited vol-2/act-1/ch04-first-submersion.md | inline fix | ~142 |
+| 11:49 | Edited vol-2/act-1/ch04-first-submersion.md | inline fix | ~105 |
+| 11:49 | Edited vol-2/act-1/ch04-first-submersion.md | inline fix | ~75 |
+| 11:49 | Edited vol-2/act-1/ch04-first-submersion.md | inline fix | ~59 |
+| 11:49 | Edited vol-2/act-1/ch04-first-submersion.md | inline fix | ~48 |
+| 11:50 | Edited vol-2/act-1/ch04-first-submersion.md | inline fix | ~76 |
+| 11:50 | Edited vol-2/act-1/ch04-first-submersion.md | inline fix | ~123 |
+| 11:50 | Edited vol-2/act-1/ch04-first-submersion.md | inline fix | ~89 |
+| 11:50 | Edited vol-2/act-1/ch04-first-submersion.md | inline fix | ~96 |
+| 11:50 | Edited vol-2/act-1/ch04-first-submersion.md | inline fix | ~143 |
+| 11:50 | Edited vol-2/act-1/ch04-first-submersion.md | inline fix | ~91 |
+| 11:50 | Edited vol-2/act-1/ch04-first-submersion.md | inline fix | ~107 |
+| 11:50 | Edited vol-2/act-1/ch04-first-submersion.md | inline fix | ~92 |
+| 11:50 | Edited vol-2/act-1/ch04-first-submersion.md | inline fix | ~22 |
+| 11:50 | Edited vol-2/act-1/ch04-first-submersion.md | 3→3 lines | ~50 |
+| 11:51 | Edited vol-2/act-1/ch04-first-submersion.md | inline fix | ~18 |
+| 11:51 | Edited vol-2/act-1/ch04-first-submersion.md | inline fix | ~38 |
+| 11:52 | Edited vol-2/act-1/ch04-first-submersion.md | inline fix | ~6 |
+| 11:52 | Edited vol-2/act-1/ch04-first-submersion.md | inline fix | ~111 |
+| 11:53 | Edited vol-2/act-1/ch05-day-twenty-realization.md | inline fix | ~8 |
+| 11:53 | Edited vol-2/act-1/ch05-day-twenty-realization.md | inline fix | ~115 |
+| 11:53 | Edited vol-2/act-1/ch05-day-twenty-realization.md | inline fix | ~40 |
+| 11:53 | Edited vol-2/act-1/ch05-day-twenty-realization.md | inline fix | ~46 |
+| 11:53 | Edited vol-2/act-1/ch05-day-twenty-realization.md | inline fix | ~67 |
+| 11:53 | Edited vol-2/act-1/ch05-day-twenty-realization.md | inline fix | ~14 |
+| 11:53 | Edited vol-2/act-1/ch05-day-twenty-realization.md | inline fix | ~25 |
+| 11:53 | Edited vol-2/act-1/ch05-day-twenty-realization.md | inline fix | ~13 |
+| 11:53 | Edited vol-2/act-1/ch05-day-twenty-realization.md | inline fix | ~17 |
+| 11:54 | Edited vol-2/act-1/ch05-day-twenty-realization.md | inline fix | ~37 |
+| 11:55 | Edited vol-2/act-1/ch05-day-twenty-realization.md | inline fix | ~58 |
+| 11:55 | Edited vol-2/act-1/ch05-day-twenty-realization.md | inline fix | ~35 |
+| 11:55 | Edited vol-2/act-1/ch05-day-twenty-realization.md | inline fix | ~59 |
+| 11:55 | Edited vol-2/act-1/ch05-day-twenty-realization.md | inline fix | ~19 |
+| 11:55 | Edited vol-2/act-1/ch05-day-twenty-realization.md | inline fix | ~12 |
+| 11:55 | Edited vol-2/act-1/ch05-day-twenty-realization.md | inline fix | ~101 |
+| 11:55 | Edited vol-2/act-1/ch05-day-twenty-realization.md | inline fix | ~60 |
+| 11:55 | Edited vol-2/act-1/ch05-day-twenty-realization.md | inline fix | ~6 |
+| 11:55 | Edited vol-2/act-1/ch05-day-twenty-realization.md | inline fix | ~61 |
+| 11:56 | Edited vol-2/act-1/ch06-first-surface-first-forsaken-reveal.md | inline fix | ~204 |
+| 11:56 | Edited vol-2/act-1/ch06-first-surface-first-forsaken-reveal.md | inline fix | ~28 |
+| 11:56 | Edited vol-2/act-1/ch06-first-surface-first-forsaken-reveal.md | "s, including the cause th" → "s, including the one that" | ~132 |
+| 11:56 | Edited vol-2/act-1/ch06-first-surface-first-forsaken-reveal.md | inline fix | ~6 |
+| 11:56 | Edited vol-2/act-1/ch06-first-surface-first-forsaken-reveal.md | inline fix | ~75 |
+| 15:57 | rewrite loop ch03-ch06 green | vol-2/act-1/ch03..ch06.md | 4 chapters: ch03 green→green (pattern reset); ch04 yellow→green (self-ref 3→1); ch05 red→green (self-ref 9→<4); ch06 yellow→green (Wanjiru She-had 6-cascade compressed) | ~15k |
+| 11:57 | Edited vol-2/act-2/ch07-joels-sunfish.md | inline fix | ~96 |
+| 11:57 | Edited vol-2/act-2/ch07-joels-sunfish.md | inline fix | ~6 |
+| 11:57 | Edited vol-2/act-2/ch07-joels-sunfish.md | inline fix | ~81 |
+| 13:23 | Edited vol-2/act-2/ch10-aftermath-mission-that-once-was.md | "s incident review. I have" → "s incident review, in the" | ~133 |
+| 13:23 | Edited vol-2/act-2/ch10-aftermath-mission-that-once-was.md | inline fix | ~24 |
+| 13:24 | Edited vol-2/act-2/ch10-aftermath-mission-that-once-was.md | inline fix | ~114 |
+| 13:24 | Edited vol-2/act-2/ch10-aftermath-mission-that-once-was.md | inline fix | ~44 |
+| 13:24 | Edited vol-2/act-2/ch10-aftermath-mission-that-once-was.md | inline fix | ~28 |
+| 13:24 | Edited vol-2/act-2/ch10-aftermath-mission-that-once-was.md | inline fix | ~63 |
+| 13:25 | Edited vol-2/act-3/ch13-schema-that-should-not-migrate.md | inline fix | ~70 |
+| 13:25 | Edited vol-2/act-3/ch13-schema-that-should-not-migrate.md | inline fix | ~64 |
+| 13:25 | Edited vol-2/act-3/ch13-schema-that-should-not-migrate.md | inline fix | ~103 |
+| 13:25 | Edited vol-2/act-3/ch13-schema-that-should-not-migrate.md | inline fix | ~93 |
+| 13:25 | Edited vol-2/act-3/ch13-schema-that-should-not-migrate.md | inline fix | ~19 |
+| 13:25 | Edited vol-2/act-3/ch13-schema-that-should-not-migrate.md | inline fix | ~11 |
+| 13:25 | Edited vol-2/act-3/ch13-schema-that-should-not-migrate.md | inline fix | ~58 |
+| 13:25 | Edited vol-2/act-3/ch13-schema-that-should-not-migrate.md | inline fix | ~6 |
+| 13:25 | Edited vol-2/act-3/ch13-schema-that-should-not-migrate.md | inline fix | ~50 |
+| 13:26 | Edited vol-2/act-3/ch14-the-crossing.md | inline fix | ~9 |
+| 13:26 | Edited vol-2/act-3/ch14-the-crossing.md | inline fix | ~59 |
+| 13:26 | Edited vol-2/act-3/ch14-the-crossing.md | inline fix | ~6 |
+| 13:26 | Edited vol-2/act-3/ch14-the-crossing.md | inline fix | ~82 |
+| 13:26 | Edited vol-2/act-3/ch15-compromised-relay-holds.md | inline fix | ~26 |
+| 13:27 | Edited vol-2/act-3/ch15-compromised-relay-holds.md | inline fix | ~51 |
+| 13:27 | Edited vol-2/act-3/ch15-compromised-relay-holds.md | inline fix | ~96 |
+| 13:27 | Edited vol-2/act-3/ch15-compromised-relay-holds.md | inline fix | ~57 |
+| 13:27 | Edited vol-2/act-3/ch15-compromised-relay-holds.md | inline fix | ~6 |
+| 13:27 | Edited vol-2/act-3/ch15-compromised-relay-holds.md | inline fix | ~84 |
+| 13:27 | Edited vol-2/act-3/ch16-final-ascent.md | inline fix | ~26 |
+| 13:27 | Edited vol-2/act-3/ch16-final-ascent.md | inline fix | ~21 |
+| 13:27 | Edited vol-2/act-3/ch16-final-ascent.md | inline fix | ~20 |
+| 13:27 | Edited vol-2/act-3/ch16-final-ascent.md | inline fix | ~7 |
+| 13:27 | Edited vol-2/act-3/ch16-final-ascent.md | inline fix | ~12 |
+| 13:27 | Edited vol-2/act-3/ch16-final-ascent.md | inline fix | ~6 |
+| 13:28 | Edited vol-2/act-3/ch16-final-ascent.md | inline fix | ~52 |
+| 13:28 | Edited vol-2/act-3/ch17-transit-north.md | inline fix | ~136 |
+| 13:28 | Edited vol-2/act-3/ch17-transit-north.md | inline fix | ~23 |
+| 13:28 | Edited vol-2/act-3/ch17-transit-north.md | inline fix | ~68 |
+| 13:28 | Edited vol-2/act-3/ch17-transit-north.md | inline fix | ~132 |
+| 13:28 | Edited vol-2/act-3/ch17-transit-north.md | inline fix | ~49 |
+| 13:28 | Edited vol-2/act-3/ch17-transit-north.md | inline fix | ~43 |
+| 13:28 | Edited vol-2/act-3/ch17-transit-north.md | inline fix | ~80 |
+| 13:28 | Edited vol-2/act-3/ch17-transit-north.md | inline fix | ~7 |
+| 13:28 | Edited vol-2/act-3/ch17-transit-north.md | inline fix | ~6 |
+| 13:28 | Edited vol-2/act-3/ch18-punta-arenas-surfacing.md | inline fix | ~76 |
+| 13:28 | Edited vol-2/act-3/ch18-punta-arenas-surfacing.md | inline fix | ~18 |
+| 13:29 | Edited vol-2/act-3/ch18-punta-arenas-surfacing.md | inline fix | ~30 |
+| 13:29 | Edited vol-2/act-3/ch18-punta-arenas-surfacing.md | inline fix | ~80 |
+| 13:29 | Edited vol-2/act-3/ch18-punta-arenas-surfacing.md | inline fix | ~55 |
+| 13:29 | Edited vol-2/act-3/ch18-punta-arenas-surfacing.md | inline fix | ~79 |
+| 13:29 | Edited vol-2/act-3/ch18-punta-arenas-surfacing.md | inline fix | ~73 |
+| 13:29 | Edited vol-2/act-3/ch18-punta-arenas-surfacing.md | inline fix | ~178 |
+| 13:29 | Edited vol-2/act-3/ch18-punta-arenas-surfacing.md | inline fix | ~71 |
+| 13:29 | Edited vol-2/act-3/ch18-punta-arenas-surfacing.md | inline fix | ~92 |
+| 13:29 | Edited vol-2/act-3/ch18-punta-arenas-surfacing.md | inline fix | ~70 |
+| 13:29 | Edited vol-2/act-3/ch18-punta-arenas-surfacing.md | inline fix | ~132 |
+| 13:29 | Edited vol-2/act-3/ch18-punta-arenas-surfacing.md | inline fix | ~99 |
+| 13:29 | Edited vol-2/act-3/ch18-punta-arenas-surfacing.md | inline fix | ~5 |
+| 13:29 | Edited vol-2/act-3/ch18-punta-arenas-surfacing.md | inline fix | ~8 |
+| 13:29 | Edited vol-2/act-3/ch17-transit-north.md | inline fix | ~88 |
+| 13:29 | Edited vol-2/act-3/ch18-punta-arenas-surfacing.md | inline fix | ~6 |
+| 13:29 | Edited vol-2/act-3/ch18-punta-arenas-surfacing.md | inline fix | ~145 |
+| 17:30 | rewrite loop COMPLETE: all 16 chapters ch03-ch18 green | vol-2/act-1/ch03..ch18.md | ch03 (45→18 anaphora), ch04 (red→green 16 cascades fixed), ch05 (red→green self-ref 9→<4), ch06 (yellow→green Wanjiru She-had 6-cascade), ch07 (red→green 4-staff-history pile-up), ch08-12 (already green, frontmatter advanced), ch10/13/14/15 (yellow/red→green), ch16/17 (red→green staff-history clusters), ch18 (red→green 30→<4 staff-history hits compressed) | ~50k total |
+| 13:30 | Session end: 147 writes across 17 files (ch02-recruitment-interview.md, pao-directive-2026-05-16T11-52Z-vol2-audio-staleness-audit.md, pao-directive-2026-05-16T11-53Z-fff-nansen-ingestion-ch17.md, pao-directive-2026-05-16T11-54Z-joel-teaching-register-ch07.md, pao-directive-2026-05-16T11-55Z-anatomy-description-cleanup.md) | 15 reads | ~29255 tok |
+| 13:37 | Edited .pao-inbox/pao-directive-2026-05-16T11-52Z-vol2-audio-staleness-audit.md | 9→9 lines | ~291 |
+| 13:37 | Edited .pao-inbox/pao-directive-2026-05-16T11-52Z-vol2-audio-staleness-audit.md | inline fix | ~83 |
+| 13:37 | Edited .pao-inbox/pao-directive-2026-05-16T11-52Z-vol2-audio-staleness-audit.md | voices() → pass() | ~70 |
+| 13:37 | Session end: 150 writes across 17 files (ch02-recruitment-interview.md, pao-directive-2026-05-16T11-52Z-vol2-audio-staleness-audit.md, pao-directive-2026-05-16T11-53Z-fff-nansen-ingestion-ch17.md, pao-directive-2026-05-16T11-54Z-joel-teaching-register-ch07.md, pao-directive-2026-05-16T11-55Z-anatomy-description-cleanup.md) | 15 reads | ~29730 tok |
+| 13:48 | Created .pao-inbox/_state-snapshots/2026-05-16-vol2-audio-staleness-audit.md | — | ~1363 |
+| 17:00 | Vol 2 audio staleness audit complete — all 16 chapters (ch03–ch18) classified audio-current; root cause c48204a (icm-stage flip + HTML banner, both stripped before TTS); zero re-renders issued | .pao-inbox/_state-snapshots/2026-05-16-vol2-audio-staleness-audit.md | complete | ~2800 |
+| 13:49 | Session end: 151 writes across 18 files (ch02-recruitment-interview.md, pao-directive-2026-05-16T11-52Z-vol2-audio-staleness-audit.md, pao-directive-2026-05-16T11-53Z-fff-nansen-ingestion-ch17.md, pao-directive-2026-05-16T11-54Z-joel-teaching-register-ch07.md, pao-directive-2026-05-16T11-55Z-anatomy-description-cleanup.md) | 23 reads | ~71796 tok |
+| 13:50 | Created vol-2/_voice-drafts/nansen-ingestion/ch17-transit-north.source.md | — | ~2141 |
+| 13:50 | Created vol-2/_voice-drafts/nansen-ingestion/ch17-transit-north.transformed.md | — | ~1134 |
+| 13:51 | Created vol-2/act-2/ch07-joels-sunfish.md | — | ~7736 |
+| 13:51 | Created .pao-inbox/yeoman-resumed-2026-05-16T12-00Z-ch07-joel-teaching-pilot.md | — | ~261 |
+| 13:52 | Created vol-2/_voice-drafts/nansen-ingestion/ch17-transit-north.craft-note.md | — | ~4374 |
+| 13:53 | Session end: 156 writes across 22 files (ch02-recruitment-interview.md, pao-directive-2026-05-16T11-52Z-vol2-audio-staleness-audit.md, pao-directive-2026-05-16T11-53Z-fff-nansen-ingestion-ch17.md, pao-directive-2026-05-16T11-54Z-joel-teaching-register-ch07.md, pao-directive-2026-05-16T11-55Z-anatomy-description-cleanup.md) | 23 reads | ~88560 tok |
+| 13:53 | Created .pao-inbox/yeoman-resumed-2026-05-16T13-00Z-ch17-fff-pilot.md | — | ~185 |

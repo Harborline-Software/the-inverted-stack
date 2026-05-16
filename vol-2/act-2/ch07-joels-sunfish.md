@@ -4,16 +4,16 @@ volume: 2
 act: 2
 chapter: 7
 mission-day: 22
-icm-stage: icm/pre-rewrite
+icm-stage: icm/draft
 word-count-target: 5000
 log-opener-pattern: none
 primary-rail: career-cost-and-aging-out
 secondary-rail: grief-family-memory
-chapter-version: v1
+chapter-version: v2
 ---
 
 
-<!-- PRE-BOBIVERSE DRAFT. Awaiting rewrite in the locked Filchner / Anna-voice register (vol-2/SPINE.md, vol-2/ANNA-VOICE.md). Not for assembly, not for listen-test, not for audiobook regeneration until rewritten. -->
+<!-- Anna-voice rewrite pass 2026-05-16 (PAO). self_referential_frame 4→0 (4× "staff history" pile-up in single paragraph at chapter-close compressed); galley red→green. Joel teaching-register pilot (Task #11 / directive 2026-05-16T11-54Z) applied: three existing beats deepened — soft-case/identity-triad T2 briefing added; discipline-tempo registration deepened; architecture-mapping paragraph receives Anna's interior recognition beat. No new scenes. Net +~430 words; within ±10% of 5000-word target. -->
 
 The wardroom at twenty-two-thirty on Day 22 was the wardroom the surface window had emptied for the night. The bridge had the watch. Wanjiru had the comm space. Diego had been at the polar-operations console an hour earlier and had gone forward to his bunk after the second pass on the Belgrano cross-traffic. Hiroshi had filed his daily and had gone to his own bunk at the early end of the rotation he kept on every mission he had ever served on. Maria had finished the crew-fitness pass at twenty. Sabina had gone to read against the inventory in the conference space because Sabina read against the inventory in the conference space the way other officers read against a paperback in their bunk. Priya was asleep. The boat was on the surface and the surface was quiet.
 
@@ -79,6 +79,8 @@ He took another quarter of the coffee. He set the mug back down at the precise p
 
 He said it in one breath at the operational tempo. The tempo was the tempo Wanjiru had used at the comm space on the morning of Day 21 to walk me through the priority queue. The tempo was the tempo Joel had used in the conference space on the morning of Day 7 to walk me through the partition. The tempo was a tempo I had registered in him three different times and was registering again. He was telling me about the boat at the tempo he used for telling me about the architecture. The two tempos were the same tempo.
 
+What I registered, in addition to the tempo, was what the tempo was not doing. It was not accelerating at the technical content. It was not eliding the difficult part and naming the conclusion. Joel's tempo was the tempo of a man who waited for the picture to assemble itself in the listener before he placed the next piece. The discipline he had been describing was not a list. He was constructing it in the order it wanted to be constructed in and he was giving me time to receive it. I had read his paper three times in St. Petersburg; I had noted the same patience in the prose. The paper had done the same thing at the sentence level that Joel's voice was doing now in the wardroom.
+
 I said nothing. I let the breath end where the breath ended.
 
 He said: *I was on her for four years. I qualified in the engine room on the first patrol. I made the dolphins in the second year. I stood watches on her under polar ice on a transit no one talked about and on a Mediterranean deployment and on two Atlantic patrols. I learned to sleep in three-on six-off rotations and to eat in shifts and to write a logbook entry that the next watch could read and act on without asking me anything. I learned to do casualty drills at zero-three-twenty when I had been asleep at zero-three-eighteen. I learned what redundant indications were and what single-failure modes were and what trust-but-verify meant when the verification was a different gauge on a different system on a different bulkhead from the indication that had been the indication I had been about to act on. The boat ran on those words and the words ran on the boat.*
@@ -121,7 +123,21 @@ He took the rest of the coffee in two pulls and set the mug down empty.
 
 He paused.
 
-*That is what I owe you. I owe you that the discipline you bet your crew on came from the boat.*
+He reached for the soft case. He opened it. The laptop inside was the kind of laptop that does not have a consortium asset tag on it. He set it open on the desk, angled so I could see the screen. He did not make any motion to explain the laptop. He let the laptop be the statement it was.
+
+He said: *The architecture on this boat runs three distinct identities. Not one. The crew's, the platform's, and the services'. I built them separate because the boat built separate compartments. A reactor casualty does not become a weapons casualty because you kept the hatches closed. A compromised service key does not become a compromised platform because you kept the chains separate. They seem like the same system from the outside. They are not the same compartment from the inside.*
+
+He let that sit for three seconds. He did not gloss it. He did not produce the next sentence until the three seconds had run. That was the register I had noted in his paper — the sentence that does not chase itself. The sentence that lets the reader arrive before the next sentence departs.
+
+I said: *Wanjiru's three credential modules at the Helsinki handoff.*
+
+He said: *yes. That is what those were. You already ran the ceremony. I owed you the name of the thing you ran.*
+
+I registered the construction. He had not said *you should have known* and he had not said *I should have told you earlier*. He had said *I owed you the name of the thing you ran*. The debt was his, and the debt was architectural, and naming it was the same discipline he had described for twenty minutes: you do not pass a watch with an unresolved indication.
+
+He closed the laptop. He set it back in the case. He did not zip the case.
+
+He said: *That is what I owe you. I owe you that the discipline you bet your crew on came from the boat.*
 
 I said: *acknowledged.*
 
@@ -199,7 +215,7 @@ He said: *I will. You should too, Director.*
 
 I said: *I will.*
 
-He stood. He took the empty mug to the urn. He rinsed it at the small sink at the urn's left. He set it on the rack. He came back to the desk. He picked up the soft case he had set down at the start of the conversation; he had not opened it; it had been on the desk the whole hour and a half. I had not asked what was in the case. He had not offered.
+He stood. He took the empty mug to the urn. He rinsed it at the small sink at the urn's left. He set it on the rack. He came back to the desk. He picked up the soft case he had set down at the start of the conversation; he had opened it and he had closed it and it was back on the desk where it had been for the hour and a half before that. I had asked what was in the case. He had answered. The answer had not been the case's content. The answer had been what the case's content ran on.
 
 He stood for a second at the corner of the desk. He looked at me.
 
@@ -211,7 +227,7 @@ He went forward through the hatch.
 
 I sat at the desk. The wardroom was the wardroom. The hum was the hum. The clock at twenty-three forty-three was the clock at twenty-three forty-three. The window had twenty-nine hours and forty-seven minutes left on it. The boat would dive at oh-five-thirty on Day 23 and Segment 2 would commence at the routine tempo and the architecture would resume the partition register the architecture had been honest about since the morning of Day 7.
 
-I sat with what Joel had said. I did not write it down. I had registered enough of it that the registering would carry. I would log the conversation, in the staff history I had been writing, in the form the staff history would carry it in, when I came to write the part of the staff history this conversation belonged in. The form would not be the form the conversation had taken in the wardroom. The form of the wardroom belonged to the wardroom. The form of the staff history would be a different form.
+I sat with what Joel had said. I did not write it down. I had registered enough of it that the registering would carry. The conversation would be logged later, in the form the record would need to carry it in. That form would not be the one the conversation had taken in the wardroom. The wardroom kept its own register; the record would land it differently.
 
 I stood. I rinsed my own cup. I closed the wardroom desk terminal. I turned the wardroom sconce down at the dimmer. The hum continued. The hum would continue.
 
