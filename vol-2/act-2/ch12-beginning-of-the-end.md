@@ -4,7 +4,7 @@ volume: 2
 act: 2
 chapter: 12
 mission-day: 39
-icm-stage: icm/pre-rewrite
+icm-stage: icm/draft
 word-count-target: 5000
 log-opener-pattern: A
 primary-rail: mission-as-survival

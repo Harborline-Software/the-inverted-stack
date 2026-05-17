@@ -4,7 +4,7 @@ volume: 2
 act: 3
 chapter: 18
 mission-day: 56
-icm-stage: icm/pre-rewrite
+icm-stage: icm/draft
 word-count-target: 7000
 log-opener-pattern: C
 primary-rail: rival-mission-institutional-capture
@@ -13,7 +13,7 @@ chapter-version: v1
 ---
 
 
-<!-- PRE-BOBIVERSE DRAFT. Awaiting rewrite in the locked Filchner / Anna-voice register (vol-2/SPINE.md, vol-2/ANNA-VOICE.md). Not for assembly, not for listen-test, not for audiobook regeneration until rewritten. -->
+<!-- Anna-voice rewrite pass 2026-05-16 (PAO). self_referential_frame 30→<4 (galley red→green; the deepest rewrite of any Vol 2 chapter): "the staff history" cluster compressed via "the document" / "the record" / "the file" varied alternatives in narration AND in the Day 50 personal-file diary inset; Wanjiru's institutional dialog (line 300) preserved as the one load-bearing in-character use of "the staff history" by the character whose convention is at stake; tautological self-equation pile-up at lines 44, 106, 132, 192 compressed. -->
 
 *Final mission log, Mission Day 56, 0441 local. Yusupova, Mission Director. RV Nansen, MERIDIAN-7. Punta Arenas, Chile.*
 
@@ -41,7 +41,7 @@ Holm said: *Director Yusupova. Welcome to Punta Arenas. The consortium acknowled
 
 I said: *Dr. Holm. Acknowledged. The boat is yours at the consortium register. The crew will disembark at the medical-clearance register. The cargo manifest is at the post-handshake transfer.*
 
-The exchange was the institutional exchange the consortium handshake required. The institutional exchange was the institutional exchange. I had registered the words I had said and the words Holm had said and the order in which the four officers had come across the gangway. The registration would carry to the staff history at the institutional register.
+The exchange was the institutional one the consortium handshake required. I had registered the words I had said and the words Holm had said and the order in which the four officers had come across the gangway. The registration would carry to the record at the institutional register.
 
 The medical-clearance officer began with Joel.
 
@@ -103,7 +103,7 @@ Twelve items closed in nineteen minutes.
 
 I worked Wanjiru's deferred forensic question next. The full vendor-ownership trace against Helvetia Trust SA's investment portfolio across the small-firmware-vendor space came up against the full corpus at the standing register. The pattern Wanjiru and Joel had sketched on the per-laptop register against the back nine days was now resolvable against the post-handshake archive. The pattern was stronger than it had been at the per-laptop register. The pattern carried seven additional vendor-ownership chains the per-laptop's local cache had not held. The pattern carried four additional firmware-update-window deviations against three of the seven chains. The pattern was still inconclusive at the standard regulatory register; the data still did not discriminate between the benign reading and the deliberate reading; the pattern was now substantially larger and substantially more recurring than it had been at the per-laptop register. The standards-body work Wanjiru had named at the wardroom table on Mission Day 54 had a larger evidentiary base now than it had had then.
 
-I logged the resolution to the staff history file. I did not narrate the logging. The logging was the logging.
+I logged the resolution to the file. I did not narrate the logging.
 
 I worked the personal items next.
 
@@ -129,7 +129,7 @@ The two paragraphs were about the lending instruments by which a multinational c
 
 I marked the page. I closed the book. I put it back in the inner pocket beside the list.
 
-I did not narrate the connection. The connection was the connection. The staff history would carry it at the register the staff history carried the connections it carried.
+I did not narrate the connection. The record would carry it at the register the record carries such things at.
 
 ---
 
@@ -189,7 +189,7 @@ I did not register the exchange aloud. The room was at the institutional registe
 
 I went to the coffee table. I poured a cup. I drank it at the standing register.
 
-I would record the exchange at the staff history at the institutional register without flourish. I would not record what had not been said. The reader of the staff history at the next mission director's selection cycle would read what I had recorded. The reader would register the gap or not register the gap. The gap was the gap. The institutional register was the institutional register.
+I would record the exchange at the institutional register without flourish. I would not record what had not been said. The next director, at the start of her selection cycle, would read what I had recorded. She would register the gap or not register it. The institutional register was what it was.
 
 I returned to the work the reception required.
 
@@ -243,7 +243,7 @@ I said: *acknowledged.*
 
 He nodded. He closed the notebook with his thumb still covering the unfinished line. He put the notebook in his inner pocket. He went over to Diego at the side table. The two of them spoke briefly. Hiroshi said something in Japanese-English that the IAA reception lead did not register; Diego said something in Spanish-English that the consortium-affiliate did not register; the two of them laughed at the standing register the two of them had carried at the wardroom across the back fifty-six days. The laughter was warm. The laughter was the laughter of two senior scientists at the close of a maiden voyage they had been on at the institutional register.
 
-I registered Hiroshi at the institutional register the staff history would carry him at. I registered him also at the register the staff history would not carry. The register the staff history would not carry was the register the diary would carry. The register was the register at which a man who had stopped drawing at twenty had been drawing in the back of every notebook for forty-five years and had not lamented the drawing he had not done because the cold edge had been the drawing he had done.
+I registered Hiroshi at the institutional register the record would carry him at. I registered him also at the register the record would not carry. That second register was where the diary would carry him. The register was the register at which a man who had stopped drawing at twenty had been drawing in the back of every notebook for forty-five years and had not lamented the drawing he had not done because the cold edge had been the drawing he had done.
 
 I went to the gangway.
 
@@ -297,11 +297,11 @@ There was a knock at the door at 1147.
 
 Wanjiru was at the door. She had her per-laptop in its sleeve and the cucu-notebook in her free hand. The cucu-notebook was closed. She did not come in further than the door's threshold.
 
-She said: *Director. The institution requires the staff history at the close of the maiden voyage. The convention is at the consortium's standing onboarding documentation. I am asking now at the institutional register at the close of the reception. The convention will be honored at the institutional handshake when you file the staff history.*
+She said: *Director. The institution requires the staff history at the close of the maiden voyage. The convention is at the consortium's standing onboarding documentation. I am asking now at the institutional register at the close of the reception. The convention will be honored when you file.*
 
 She was asking the way she had named the convention on Day 22 and the way she had asked it formally on Day 53 — at the institutional register, at the moment the institution required the asking, at the discipline that did not assume the convention would be honored without naming.
 
-I said: *acknowledged. The staff history will be filed at the consortium archive at the close of the post-mission documentation cycle. The file is at the standing register at the per-laptop. The file will close at the institutional register when I close it at the post-mission cycle.*
+I said: *acknowledged. The document will be filed at the consortium archive at the close of the post-mission documentation cycle. It is at the standing register at the per-laptop. The file will close at the institutional register when I close it at the post-mission cycle.*
 
 She said: *acknowledged.*
 
@@ -317,7 +317,7 @@ She nodded. She closed the door.
 
 I sat at the desk.
 
-I had been writing the staff history across the back year. The file at the per-laptop was the file the staff history was being drafted from. The file carried the pre-mission cycle and the departure and the Drake Passage and the first submersion and the Day-Twenty realization and the first surface and the second submersion and the Day-Forty-Seven leak and the post-leak transit and the Punta Arenas surface against the institutional register the staff history would carry them at. The file would close when I closed it at the post-mission documentation cycle. The file would carry to the consortium archive at the institutional handshake. The next mission director would read the file at the start of her selection cycle.
+I had been writing the document across the back year. The file at the per-laptop was the draft it was being built from. It carried the pre-mission cycle and the departure and the Drake Passage and the first submersion and the Day-Twenty realization and the first surface and the second submersion and the Day-Forty-Seven leak and the post-leak transit and the Punta Arenas surface, each at the institutional register the convention required. It would close when I closed it at the post-mission documentation cycle. It would carry to the consortium archive at the institutional handshake. The next mission director would read it at the start of her selection cycle.
 
 I had been writing what the next mission director would read.
 
@@ -343,11 +343,11 @@ I opened a different file.
 
 *I am at the desk. The desk is at the hotel. The hotel is at Punta Arenas. The room looks north against the Strait.*
 
-*The exchange with Stefan was thirty seconds. I have not written the exchange in the staff history. I will write the exchange in the staff history. The staff history will not carry what was not said. The staff history will carry what was said. The reader of the staff history will register what is not said or will not register it. The institutional register is the institutional register.*
+*The exchange with Stefan was thirty seconds. I have not yet written it. I will. The record will not carry what was not said. It will carry what was said. The reader will register what is not said or will not register it. The institutional register is what it is.*
 
 *Five years between the prior failure and now. Thirty seconds against the consortium's standing institutional handshake. He did not say what he could have said. I did not require him to say what he could have said. The institutional register did not require him to say it. I do not know whether I will see him again at a register that is not the institutional register. I do not know whether the register at which what was not said could be said is a register that exists in this life. The not-knowing is permanent. The not-knowing has been permanent since 2018. The not-knowing was permanent at 0517 today as it was at 0517 in 2018. The institutional register is what holds.*
 
-*Joel was at the wardroom on Day 44. I have not written what Joel said in the staff history. What Joel said is in the file that is not the staff history. What Joel said requires registering at the register at which one person registers another. The registering has been registered. The registering will continue. The institutional register is what holds.*
+*Joel was at the wardroom on Day 44. I have not written what he said in the institutional record. What he said is in the other file — the one that is not for the consortium. It requires registering at the register at which one person registers another. The registering has been done. It will continue. The institutional register is what holds.*
 
 *Hiroshi has been drawing for forty-five years. He did not draw for the medium; he drew for the impulse. The impulse went to the cold edge. He did not lament the medium. He chose the impulse. The choice is what one is. I have registered him at the institutional register for ten years and have not registered him at the impulse register until today.*
 
@@ -355,11 +355,11 @@ I opened a different file.
 
 *Diego is going home. The architecture preserved his photographs and his logs and the letter and the paper. The architecture did not preserve him. He preserved himself. The architecture was the architecture for what he made. The desk at the lake side of the road into San Martín de los Andes is what he will write at. María Elena will cook in the kitchen. Sofía will come at school holidays. The architecture is not the architecture for any of that.*
 
-*I am the mission director. I am writing the staff history. I have been writing it for a year. Wanjiru asked at the door at 1147. I said acknowledged. The file will close at the post-mission documentation cycle. The file will carry to the consortium archive at the institutional handshake.*
+*I am the mission director. I have been writing the document for a year. Wanjiru asked at the door at 1147. I said acknowledged. The file will close at the post-mission documentation cycle. It will carry to the consortium archive at the institutional handshake.*
 
-*The next mission director will read the file at the start of her selection cycle. She will read what the convention requires me to write. She will read what I have decided to write at the discretion the convention permits. She will not read what is in this file. This file is for me. This file is the file that is not the staff history. This file will close when I close it. The file will not replicate. The file will not carry to the consortium archive. The file will carry to me at the register the file carries.*
+*The next mission director will read the institutional file at the start of her selection cycle. She will read what the convention requires me to write. She will read what I have decided to write at the discretion the convention permits. She will not read what is in this one. This one is for me. It is not the record going to the consortium. It will close when I close it. It will not replicate. It will not carry to the consortium archive. It will carry to me, at the register it carries at.*
 
-*I am writing the staff history because Wanjiru asked. I am writing the staff history because the convention required asking. I am writing the staff history because the directors who came before me wrote staff histories that I read at the start of my selection cycle and I learned what I needed to learn from the writing they had done. I am writing the staff history because the next mission director will need what I have to give her. That is enough.*
+*I am writing because Wanjiru asked. I am writing because the convention required asking. I am writing because the directors who came before me wrote what I read at the start of my own selection cycle, and I learned what I needed to learn from the writing they had done. I am writing because the next mission director will need what I have to give her. That is enough.*
 
 *The mission is at the close. The contest is at the institutional register. The architecture has held. The convention is older than the architecture. The convention will hold.*
 
@@ -373,7 +373,7 @@ I opened a different file.
 
 I closed the file.
 
-I opened the staff history file.
+I opened the file.
 
 I added a paragraph.
 
@@ -399,7 +399,7 @@ The crew was at the dispersal.
 
 The mission was at the close.
 
-The staff history was at the desk.
+The record was at the desk.
 
 I kept writing.
 

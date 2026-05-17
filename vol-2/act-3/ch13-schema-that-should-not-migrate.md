@@ -4,7 +4,7 @@ volume: 2
 act: 3
 chapter: 13
 mission-day: 43-44
-icm-stage: icm/pre-rewrite
+icm-stage: icm/draft
 word-count-target: 10000
 log-opener-pattern: B
 primary-rail: class-region-institutional-politics
@@ -13,7 +13,7 @@ chapter-version: v1
 ---
 
 
-<!-- PRE-BOBIVERSE DRAFT. Awaiting rewrite in the locked Filchner / Anna-voice register (vol-2/SPINE.md, vol-2/ANNA-VOICE.md). Not for assembly, not for listen-test, not for audiobook regeneration until rewritten. -->
+<!-- Anna-voice rewrite pass 2026-05-16 (PAO). self_referential_frame 10→0 (galley red→green): "the staff history" cluster compressed; "on the record" varied to "filed"/"in writing". -->
 
 *Engineer's notes — Iyer, P., Lead Instrumentation. Mission Day 43, 1942 local. RV Nansen, MERIDIAN-7.*
 
@@ -21,7 +21,7 @@ chapter-version: v1
 
 *The refusal: the auxiliary-salinity stream's emergency reclassification — from instrumentation-data-class-3 to instrumentation-data-class-2 with the failure-mode-flag field added — requires a schema migration on a stream that is currently producing readings at one Hz against a probe whose firmware was updated four days ago and whose mid-segment behaviour has not yet completed the standard fourteen-day post-update observation window. The migration also requires a partition-tolerant rewrite of the schema-version handshake at the contraction phase, which under the current single-window-closed-against-Punta-Arenas operational state means there is no third party available for read-confirmation across the ten remaining mission days. The contraction-phase safety property in the architecture's specification requires three-party read-confirmation. The boat has the boat.*
 
-*The refusal is on the record at this filing.*
+*The refusal is filed at the audit log.*
 
 *The yes-with-conditions: the operational requirement exceeds my verification protocol. I will authorize the migration under three conditions. First, Reyes executes; I supervise; my hands do not touch the keyboard during the migration window. Second, the boat is at minimum operational tempo for the duration of the window; no concurrent writes from other systems while the migration is in flight. Third, if the third pass surfaces a single read-skew event, the rollback is automatic; no human-in-the-loop authorization to roll forward. Conditions accepted by the Mission Director at this filing. Standing four-pass cycle replaces the standard three-pass cycle for this migration only — the fourth pass is the delayed read-confirmation cycle that surfaces clock-skew faults the first three cannot.*
 
@@ -141,7 +141,7 @@ I left the compartment at nineteen-thirty-six. The compartment was the compartme
 
 I went to my desk. I had thirty-eight minutes before the second-watch handoff at twenty-fourteen. I sat at the desk. I did not open the terminal. I sat at the desk and held what had been said in the engineering compartment.
 
-Priya had said no. She had said no at the filing. She had said no in the way Priya says no — not as resistance to the work, not as a refusal to engage, but as a refusal to authorize without the conditions that made the work survivable. She had said no on the record. She had said no in writing. The no had gone to the audit log at nineteen-forty-two and was now in the audit log permanently, in the same way the eleven-minute fourth-pass calibration on Day 5 was in the audit log permanently — as a fact of record about how Priya had run her work on this boat.
+Priya had said no. She had said no at the filing. She had said no in the way Priya says no — not as resistance to the work, not as a refusal to engage, but as a refusal to authorize without the conditions that made the work survivable. She had said no in writing, at the audit log, where it would not move. The no had gone to the audit log at nineteen-forty-two and was now in the audit log permanently, in the same way the eleven-minute fourth-pass calibration on Day 5 was in the audit log permanently — as a fact of record about how Priya had run her work on this boat.
 
 I had not overridden the no.
 
@@ -153,7 +153,7 @@ The selection had been the selection. I had selected her for the migrations she 
 
 I noted this in my command log at the personal-reflection register. *I am the precondition for the safety net. If I do not respect the no, the yes-with-conditions does not exist; the safety net does not exist; the architecture's response to this case becomes a thing the boat does not have access to. The discipline that holds the migration is procedural. The procedure depends on the command authority respecting the procedure's refusals. I am that authority. The respect is the operational requirement, not the personal courtesy.*
 
-I closed the entry. I did not file it. I marked it as personal-reflection, encrypted under my key, access self-only. The entry would not enter the staff history's main thread. The entry would enter the staff history if and when I chose to surface it, in the curation that would happen after the mission, in the writing that would happen after the writing began.
+I closed the entry. I did not file it. I marked it as personal-reflection, encrypted under my key, access self-only. It would not enter the main record. It might enter later, if and when I chose to surface it, in the curation that would happen after the mission.
 
 I went to the bridge at twenty-twelve. I stood the second-watch handoff at twenty-fourteen. I went to my rack at twenty-two-forty-one. I did not sleep until the early hours.
 
@@ -499,13 +499,13 @@ I read the post-migration filing at ten-oh-three. I read it twice. The filing cl
 
 I went to the wardroom corner. The boat had returned to operational tempo across the back two hours; the routine had reasserted; Diego had filed the half-degree south on the cross-section read at the noon brief. Priya's cross-instrument-cross-check between starboard and port had cleared at twelve-fourteen against tolerance; the migration's purpose had been served; the starboard probe's firmware-failure-mode field was now surfacing the diagnostic state the firmware had been generating since Day 39; the back twenty-four hours had registered four anomalous-state events, two below the watchword threshold and two at the watchword threshold; none had reached the firmware's escalation threshold; the probe was operating within the firmware's specified behaviour. The cross-check had confirmed the redundancy. The boat's auxiliary-salinity reading was now adequately monitored against the firmware-state the original schema had been suppressing.
 
-I sat at the desk. I read both filings — Priya's pre-migration filing from the night before, and Priya's post-migration filing from the morning. I read them at the staff history's register, which is the register I now read filings at when the filings have closed a thread the staff history will carry.
+I sat at the desk. I read both filings — Priya's pre-migration filing from the night before, and Priya's post-migration filing from the morning. I read them in the register I now reserve for filings that have closed a thread worth carrying.
 
-The two filings were the same engineer's filings. The two filings were not the same in tone. The pre-migration filing was conditional. The pre-migration filing was a refusal-of-record under a yes-with-conditions. The pre-migration filing carried the weight of an engineer who had filed the no first because filing the no was the discipline, and had filed the yes-with-conditions second because the yes was conditional on the no being filed first. The pre-migration filing was the filing of an engineer who knew that her conditions were the conditions the architecture would operate under, and that her conditions had to be on the record before the migration could be on the record.
+The two filings were the same engineer's filings. The two filings were not the same in tone. The pre-migration filing was conditional. The pre-migration filing was a refusal-of-record under a yes-with-conditions. The pre-migration filing carried the weight of an engineer who had filed the no first because filing the no was the discipline, and had filed the yes-with-conditions second because the yes was conditional on the no being filed first. The pre-migration filing was the filing of an engineer who knew that her conditions were the conditions the architecture would operate under, and that those conditions had to be filed before the migration was filed.
 
 The post-migration filing was past tense. The post-migration filing was clean. The post-migration filing carried the weight of an engineer reporting two near-failures the discipline had caught. The near-failures were not framed as catastrophes averted. The near-failures were framed as discipline operating as discipline. The four-pass cycle was named as having been the right cycle. The architecture-extensions were filed at the level the extensions would be filed at. The next migration's reader at the consortium corpus would read the extensions and would understand them; the corpus would carry forward.
 
-The differential between the two filings was where the chapter lived. The pre-migration filing was the filing of an engineer holding her work against a case the architecture had not contemplated. The post-migration filing was the filing of an engineer who had run the work and confirmed the architecture's response. The two filings were both her filings. The two filings together were what the staff history would carry. Neither filing alone would have been adequate.
+The differential between the two filings was where the chapter lived. The pre-migration filing held her work against a case the architecture had not contemplated. The post-migration filing recorded an engineer who had run the work and confirmed the architecture's response. Both were her filings; together they were what the record would carry. Neither alone would have been adequate.
 
 I noted the differential. I held it.
 
@@ -515,7 +515,7 @@ I had not overridden the no. The no had become the yes-with-conditions. The yes-
 
 The architecture had behaved as the architecture was specified. The chapter the architecture was operating in was the chapter Priya's caution had built into it as a constraint, not the chapter the mission was following her caution as a rule. The constraint and the rule were not the same shape. The constraint was structural. The rule was personal. I had spent the morning watching the structural constraint operate. I had spent the morning watching it operate because Priya had filed her work against the constraint, and because I had not overridden the filing, and because the architecture had been built to receive a filing of that shape.
 
-I closed the filing. I noted, at my command log at the personal-reflection register: *the architecture worked because Priya's caution was built into it as a constraint, not because the mission followed her caution as a rule*. I marked the entry encrypted under my key, access self-only, like the prior night's entry. The entry would enter the staff history if and when I chose to surface it.
+I closed the filing. I noted, at my command log at the personal-reflection register: *the architecture worked because Priya's caution was built into it as a constraint, not because the mission followed her caution as a rule*. I marked the entry encrypted under my key, access self-only, like the prior night's entry. It would surface later, or not.
 
 I did not surface it now. I went to the bridge for the afternoon watch.
 

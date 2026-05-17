@@ -4,7 +4,7 @@ volume: 2
 act: 3
 chapter: 17
 mission-day: 52-56
-icm-stage: icm/pre-rewrite
+icm-stage: icm/draft
 word-count-target: 5000
 log-opener-pattern: B
 primary-rail: rival-mission-institutional-capture
@@ -13,7 +13,7 @@ chapter-version: v1
 ---
 
 
-<!-- PRE-BOBIVERSE DRAFT. Awaiting rewrite in the locked Filchner / Anna-voice register (vol-2/SPINE.md, vol-2/ANNA-VOICE.md). Not for assembly, not for listen-test, not for audiobook regeneration until rewritten. -->
+<!-- Anna-voice rewrite pass 2026-05-16 (PAO). self_referential_frame 12→<3 (galley red→green): "the staff history" cluster compressed via "the document" / "the record" / "the file" varied alternatives; Wanjiru's institutional dialog preserved with reduced repetition; final "in my hands" line preserved as load-bearing close. -->
 
 *Crew log, Mission Day 53, 0612 local. Yusupova, Mission Director. RV Nansen, MERIDIAN-7.*
 
@@ -53,13 +53,13 @@ She had said something close to it on Mission Day 22.
 
 She had said it in the comm space at the surface window, after the bandwidth-allocation discussion had cleared and the priority-queue discussion had cleared and the regulatory-bulletin discussion had cleared, when the comm space had emptied and only the two of us were at the consoles. She had said: *the staff history convention is the institutional discipline that carries the architecture forward. The architecture preserves what reaches the consortium ports. The institutional discipline preserves what the architecture cannot say about itself. I read prior staff histories before I came to this mission. I learned the missions from what the directors had written. The next mission director will read what you write about this one.*
 
-She had not asked for the staff history that day. She had named the convention. She had let the convention sit. I had registered her naming it. I had logged the naming in the file I kept for things that were not the bridge log. The file was the file the staff history would be drafted from. The naming had gone in the file at the same standing register as the conversation in the wardroom with Joel and the morning at the desk on Day 20 and Wanjiru's exception-refusal at Surface 1 and the registration of the firmware-update timestamp gap on Day 47.
+She had not asked for the document that day. She had named the convention. She had let the convention sit. I had registered her naming it. I had logged it in the file I kept for things that were not the bridge log — the file the record would be drafted from. The naming had gone in at the same standing register as the conversation in the wardroom with Joel and the morning at the desk on Day 20 and Wanjiru's exception-refusal at Surface 1 and the registration of the firmware-update timestamp gap on Day 47.
 
-I had been writing the staff history in the file Wanjiru was now asking for at the institutional register.
+I had been writing the document she was now asking for at the institutional register.
 
 She knew it. Wanjiru read what reached the relay-operations log at the standing register and what the institutional pattern of the convention was. She had named the convention on Day 22 because she had wanted the convention named at the moment the convention had been carried at the standing register. She was asking now because the mission was at the close and the institution required the artifact.
 
-I said: *Wanjiru. The staff history will be filed at the institutional register at the consortium archive at the close of the post-mission documentation cycle. I have been writing it at the file at the standing register since pre-mission. The convention will be honored.*
+I said: *Wanjiru. The document will be filed at the institutional register at the consortium archive at the close of the post-mission documentation cycle. I have been writing it at the standing register since pre-mission. The convention will be honored.*
 
 She said: *acknowledged.*
 
@@ -71,9 +71,9 @@ I said: *acknowledged.*
 
 She nodded. She went out.
 
-I sat at the desk. The file was on the per-laptop. The file had been growing for a year. The file at this moment carried the staff history's text from the pre-mission cycle through the wardroom at 0312 on Mission Day 52 and the comm-node at 0420 and the open file at the desk at 0814. The file was at the canonical authored-content archive at the standing replication register. The file was signed at capture under my KEK. The file would carry to Punta Arenas. The file would become the staff history at the institutional register when I closed it at the post-mission documentation cycle.
+I sat at the desk. The file was on the per-laptop. It had been growing for a year. It carried the text from the pre-mission cycle through the wardroom at 0312 on Mission Day 52 and the comm-node at 0420 and the open file at the desk at 0814. It was at the canonical authored-content archive at the standing replication register, signed at capture under my KEK. It would carry to Punta Arenas. It would become the institutional document when I closed it at the post-mission documentation cycle.
 
-The file had been the staff history all along. I had not named it. I had been writing it. I had been writing what the next mission director would read at the start of her selection cycle.
+The file had been the document all along. I had not named it. I had been writing it. I had been writing what the next mission director would read at the start of her selection cycle.
 
 I registered what I was writing.
 
@@ -151,7 +151,7 @@ She did not say more.
 
 Joel did not say more.
 
-I registered the half-beat. The registration would carry to the staff history at the institutional register the staff history would carry it at. The registration would not carry at the bridge log. The bridge log was the bridge log.
+I registered the half-beat. The registration would carry to the record at the institutional register, not at the bridge log. The bridge log was the bridge log.
 
 Joel said: *we will draft the regulatory filing tonight. The filing will document the firmware-update history, the metadata pattern, the post-patch behavior, and the inconclusive reading. The filing will not name a conclusion.*
 
@@ -263,13 +263,13 @@ I read the consoles at the bridge. The consoles read what the consoles read. The
 
 The list at the desk was at twenty-six items. The architecture would close the gap at Punta Arenas.
 
-The staff history was in the file at the canonical authored-content archive. The file was at twenty-three thousand words against the back year of writing. The file would close when I closed it at the post-mission documentation cycle. The next mission director would read it at the start of her selection cycle.
+The record was in the file at the canonical authored-content archive. The file was at twenty-three thousand words against the back year of writing. It would close when I closed it at the post-mission documentation cycle. The next mission director would read it at the start of her selection cycle.
 
 Punta Arenas at 0441 tomorrow.
 
 The archive is in the queue.
 
-The staff history is in my hands.
+The record is in my hands.
 
 ---
 

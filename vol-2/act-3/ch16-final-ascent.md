@@ -4,7 +4,7 @@ volume: 2
 act: 3
 chapter: 16
 mission-day: 49-52
-icm-stage: icm/pre-rewrite
+icm-stage: icm/draft
 word-count-target: 5000
 log-opener-pattern: A
 primary-rail: mission-as-survival
@@ -13,7 +13,7 @@ chapter-version: v1
 ---
 
 
-<!-- PRE-BOBIVERSE DRAFT. Awaiting rewrite in the locked Filchner / Anna-voice register (vol-2/SPINE.md, vol-2/ANNA-VOICE.md). Not for assembly, not for listen-test, not for audiobook regeneration until rewritten. -->
+<!-- Anna-voice rewrite pass 2026-05-16 (PAO). self_referential_frame 5→<3 (galley red→green): "the staff history" cluster compressed; "the file" / "the record" used as varied alternatives. -->
 
 *Crew log, Mission Day 52, 0418 local. Yusupova, Mission Director. RV Nansen, MERIDIAN-7.*
 
@@ -37,7 +37,7 @@ The list of *queries to run when we surface* was on the page at the desk in my c
 
 Some questions we asked the system; some questions we wrote down to ask later.
 
-The list was the structural device the staff history would carry against the reduced-capability state. The list was on the page at the desk. The list would carry to the surface. The system would answer the items at the consortium-port register at Punta Arenas. The architecture would close the gap. The gap was the gap the architecture had built into its specification.
+The list was the structural device the record would carry against the reduced-capability state. The list was on the page at the desk. The list would carry to the surface. The system would answer the items at the consortium-port register at Punta Arenas. The architecture would close the gap. The gap was the gap the architecture had built into its specification.
 
 The crew was at the routine. The boat had been operating on per-laptop register for ten days. The cycle had settled — Diego on the polar-operations console at the ascent watch, Hiroshi on the helm, Wanjiru at the comm node working the prioritization queue against the Drake's standing surface-window topology, Priya in the lab compartment running the post-incident analysis at the smaller context window, Sabina in the logistics compartment closing the cross-jurisdictional procurement-audit ledger by hand, Maria in the medical bay against Joel's recovery checkpoints, Joel at the engineering compartment against the per-laptop's standing diagnostic cycle. The boat was at the operational tempo at reduced capability. The reduced capability was the standing register the boat had run on since Day 47.
 
@@ -155,7 +155,7 @@ I sat at the wardroom desk at 0814 on Mission Day 52.
 
 The wardroom was empty at the standing post-handshake hour. The bridge was at the watch I had handed to Hiroshi at 0700 against the surfacing rotation. Diego was off the polar-operations console at 0700 — he had stood the polar-operations console for sixteen of the back twenty-four hours; he was in his cabin at the standing rest hour against the medical register Maria had set on Mission Day 51. Joel was at the engineering compartment against the morning diagnostic cycle. Wanjiru was at the comm node against the priority list. Priya was in the lab compartment. Sabina was at the logistics compartment closing the manifest for the Punta Arenas resupply.
 
-I had a cup of tea on the desk. I had the staff history's open file on the per-laptop. I had the list of *queries to run when we surface* on the page at the desk corner. The list at 0814 had twenty-five items. I had added the twenty-fifth at 0729 when I had read the morning brief against the surfacing register and had registered a small question about the handshake's institutional-acknowledgment cycle that the heavy-LLM hosting would have answered at the standing rate and that the per-laptop register had held until surfacing.
+I had a cup of tea on the desk. The record's open file was on the per-laptop. I had the list of *queries to run when we surface* on the page at the desk corner. The list at 0814 had twenty-five items. I had added the twenty-fifth at 0729 when I had read the morning brief against the surfacing register and had registered a small question about the handshake's institutional-acknowledgment cycle that the heavy-LLM hosting would have answered at the standing rate and that the per-laptop register had held until surfacing.
 
 I rereread the list.
 
@@ -169,7 +169,7 @@ The list itself was what the architecture was for.
 
 The questions had survived the journey because the architecture had preserved them. The questions had not been lost to the cascade. The questions had not been lost to the compute hub. The questions had not been lost to the depth and the cold and the Drake's standing cross-current. The questions had been written down. The system would answer the items the system could answer. The system would not answer the items the system could not answer. The list would carry both kinds.
 
-I drank my tea. I read the list a second time. I returned to the staff history's open file.
+I drank my tea. I read the list a second time. I returned to the open file.
 
 I had pulled the small allocation of dried Uzbek melon from the Mission Director's discretionary cargo at the wardroom on Mission Day 51 — Sabina had logged it without comment against the standing manifest at the per-laptop register against the same standing register Sabina had logged it at when the manifest had been filed before departure. I had eaten one strip with afternoon tea on Mission Day 51. The taste had been the taste — honeyed, dense, a little dry, the kind of dried melon the cane-awning markets in the Chilonzor district had stacked in late September when I was eight years old and my grandmother had known the names of the women at every stall and had taught me to read the shape of the *qovun* before I had been able to read the price written above the stack. The taste had carried the geography. The geography had carried the mother-and-grandmother register that came with it. I had registered the taste. I had registered the geography. I had returned to the work.
 
@@ -177,9 +177,9 @@ I took a strip from the desk drawer at 0832 against the same standing register.
 
 I ate it.
 
-I returned to the staff history.
+I returned to the file.
 
-The mission had cost what the mission had cost. The compute hub was lost; no commentary. Diego's retirement was at the institutional register at the IAA; the retirement was Diego's. The leak had run; the boat had survived; the architecture's environmental-stress claim had held. The mission had not lost more than it had lost. The mission had lost what the mission had lost. The standing register did not require me to mourn the GPU and did not require me to mourn anything else. The standing register required me to write the staff history.
+The mission had cost what the mission had cost. The compute hub was lost; no commentary. Diego's retirement was at the institutional register at the IAA; the retirement was Diego's. The leak had run; the boat had survived; the architecture's environmental-stress claim had held. The mission had not lost more than it had lost. The mission had lost what the mission had lost. The standing register did not require me to mourn the GPU and did not require me to mourn anything else. The standing register required me to write.
 
 I wrote.
 

@@ -4,7 +4,7 @@ volume: 2
 act: 3
 chapter: 15
 mission-day: 47-48
-icm-stage: icm/pre-rewrite
+icm-stage: icm/draft
 word-count-target: 8500
 log-opener-pattern: A
 primary-rail: class-region-institutional-politics
@@ -13,7 +13,7 @@ chapter-version: v1
 ---
 
 
-<!-- PRE-BOBIVERSE DRAFT. Awaiting rewrite in the locked Filchner / Anna-voice register (vol-2/SPINE.md, vol-2/ANNA-VOICE.md). Not for assembly, not for listen-test, not for audiobook regeneration until rewritten. -->
+<!-- Anna-voice rewrite pass 2026-05-16 (PAO). self_referential_frame 7→<2 (galley red→green): "the staff history" cluster compressed to "the record" / "the day's account"; "the exchange was the exchange" tautological tricolon broken; Day 48 diary inset preserved with internal staff-history reference replaced. -->
 
 *Damage report — relay state. Kamau, W., Relay Operations Officer. RV Nansen, MERIDIAN-7. Mission Day 47, 0617 local.*
 
@@ -305,7 +305,7 @@ She went out.
 
 I sat at the desk for a duration I did not measure. I added an item to the list at the desk: *the consortium's full procurement-officer schedule for the week of 2026-March-fourth through 2026-March-sixth; the integration facility's installation-queue history for the same week; the manufacturer's release-cycle pattern for the back several years; the cross-mission firmware-update timing deviation history at the consortium archive.* The list grew.
 
-The list at the end of Day 47 had had three items. The list at 1652 on Day 48 had eleven. The list was growing at the rate the architecture's reduced capability was producing the gap between what the system could answer at the per-laptop register and what the system would answer at the consortium-port register at surfacing. The list was the structural device the staff history would carry against the reduced-capability state. The list was a record of what the boat could not yet ask the system at the rate the boat had been asking the system at the standing tempo. The list was what the boat would carry to the surface.
+The list at the end of Day 47 had had three items. The list at 1652 on Day 48 had eleven. The list was growing at the rate the architecture's reduced capability was producing the gap between what the system could answer at the per-laptop register and what the system would answer at the consortium-port register at surfacing. The list was the structural device the record would carry against the reduced-capability state. The list was a record of what the boat could not yet ask the system at the rate the boat had been asking the system at the standing tempo. The list was what the boat would carry to the surface.
 
 I did not narrate the registration. The list was on the page.
 
@@ -347,7 +347,7 @@ She said: *the substrate held.*
 
 He stood at the station for half a beat after the exchange. He nodded once. He said *Wanjiru.* She said *Joel.* He went out.
 
-The exchange was the exchange Wanjiru repeated to me later because the exchange was the exchange the staff history would carry. The exchange was the exchange the post-incident review would carry. The exchange was the exchange the architecture's forensic property would carry. The exchange was Joel's nuclear-Navy register on a question his discipline did not yet have the data to settle. The exchange was Wanjiru's institutional discipline on the same question. The two registers met at the panel and walked away at the standing.
+The exchange was the one Wanjiru repeated to me later because the record would have to carry it. The post-incident review would carry it. The architecture's forensic property would carry it. The exchange was Joel's nuclear-Navy register on a question his discipline did not yet have the data to settle. The exchange was Wanjiru's institutional discipline on the same question. The two registers met at the panel and walked away at the standing.
 
 The institutional discipline had been the discipline at the comm node since 0322. The institutional discipline was the discipline now. The discipline was the discipline.
 
@@ -383,7 +383,7 @@ The crew did not narrate the adaptation. The adaptation was at the standing regi
 
 I sat at the wardroom desk at 2304 on Mission Day 48.
 
-I had not written in the staff history since the cascade. I had filed the operational damage report at 0518 the morning before. I had filed the half-mission report at the per-laptop register at 1647. I had not written the staff history's account of the day. The staff history's account of the day was the account the book the reader is reading would carry, and the account had not yet been written, and the account would not be written until I had registered enough of the day at the per-laptop register to know what the account was going to carry.
+The record had not been written since the cascade. The operational damage report had been filed at 0518 the morning before; the half-mission report at the per-laptop register at 1647. The day's account had not yet been set down. It would not be set down until I had registered enough of the day at the per-laptop register to know what it was going to carry.
 
 I had registered enough now.
 
@@ -411,7 +411,7 @@ I went to bed.
 
 *The relay holding was the relay holding. The architecture's defense against the architecture being misused was Wanjiru's discipline. The two are the same thing at different layers.*
 
-*I will write the staff history's account of the day at the standing register. I will not write the pattern at the standing register. The pattern is the pattern the reader will register from what Wanjiru does and does not do. The pattern is what the staff history's reader will carry.*
+*The day's account will be set down at the standing register. The pattern will not. The pattern is what the reader will register from what Wanjiru does and does not do. The pattern is what the reader will carry.*
 
 *The boat is at depth. The list is at thirteen. The cycle holds.*
 

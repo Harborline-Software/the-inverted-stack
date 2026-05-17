@@ -4,7 +4,7 @@ volume: 2
 act: 2
 chapter: 9
 mission-day: 30
-icm-stage: icm/pre-rewrite
+icm-stage: icm/draft
 word-count-target: 6000
 log-opener-pattern: B
 primary-rail: career-cost-and-aging-out

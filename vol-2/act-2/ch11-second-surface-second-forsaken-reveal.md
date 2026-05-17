@@ -4,7 +4,7 @@ volume: 2
 act: 2
 chapter: 11
 mission-day: 37-39
-icm-stage: icm/pre-rewrite
+icm-stage: icm/draft
 word-count-target: 5000
 log-opener-pattern: A
 primary-rail: rival-mission-institutional-capture

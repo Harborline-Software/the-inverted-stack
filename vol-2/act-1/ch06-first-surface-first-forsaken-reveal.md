@@ -4,7 +4,7 @@ volume: 2
 act: 1
 chapter: 6
 mission-day: 21-23
-icm-stage: icm/pre-rewrite
+icm-stage: icm/draft
 word-count-target: 5000
 log-opener-pattern: A
 primary-rail: trust-and-prior-betrayal
@@ -13,7 +13,7 @@ chapter-version: v1
 ---
 
 
-<!-- PRE-BOBIVERSE DRAFT. Awaiting rewrite in the locked Filchner / Anna-voice register (vol-2/SPINE.md, vol-2/ANNA-VOICE.md). Not for assembly, not for listen-test, not for audiobook regeneration until rewritten. -->
+<!-- Anna-voice rewrite pass 2026-05-16 (PAO). 6-cascade "She had..." anaphora at Wanjiru-discipline beat compressed to single sentence; "I noted X. I noted Y. I noted Z." flattened to single sentence; staff-history meta-frame triplet at line 94 reduced; galley yellow→green. -->
 
 *Mission log, Mission Day 21, 0617 local. Yusupova, Mission Director. RV Nansen, MERIDIAN-7.*
 
@@ -25,7 +25,7 @@ chapter-version: v1
 
 The boat rose into a colour I had not expected to register the way I registered it. The colour above three hundred meters of ice for fourteen days had been the colour the architecture had been showing me on the bridge displays — a flat charted grey for the underside of the floe, the carrier-acoustic floor laid in narrower greens, the trim and the depth and the bottom contour rendered in the flat institutional palette the boat's master and Diego had calibrated together in the surface days before the dive. The colour at 0612 on the morning of Day 21 was not that colour. It was the colour the southern ocean has at sixty-one degrees south in late September, a few minutes after the boat clears the marginal zone from below — a green that is not yet a green, with the low light of a sun that had not yet risen on the horizon laid across the water in a band one shade lighter than the band above it. I had seen the colour once before, on a different boat, sixteen years earlier. The body remembers the colour faster than the mind names it.
 
-I came up the ladder to the bridge wing and stood at the rail with the wind on my face for the first time since Day 7. After fourteen days inside a sealed hull the wind on the face is a thing the body registers as a fact that is no longer abstract. I noted the air temperature. I noted the swell period. I noted the moisture on the deck plates from the surface spray. The logging would happen at the watch handoff.
+I came up the ladder to the bridge wing and stood at the rail with the wind on my face for the first time since Day 7. After fourteen days inside a sealed hull the wind on the face is a thing the body registers as a fact that is no longer abstract. I noted the air temperature, the swell period, the moisture on the deck plates from the surface spray. The logging would happen at the watch handoff.
 
 I went forward to the comm space.
 
@@ -91,13 +91,13 @@ I sat in the wardroom with the cooling carafe of the night-watch coffee and made
 
 The prior mission had failed on a request that resembled Diego's. Not the same shape. Different operator, different system, different consortium. The shape was the same. An exception had been requested on operational grounds. The operator had been competent and trusted and right about the immediate operational case. The officer authorizing the exception had been competent and trusted and right about the immediate operational case. The exception had cleared in good faith because the documented path was slower. Three months later, in a downstream case nobody in the original authorization had been thinking about, the exception had been the surface on which the failure landed.
 
-The surface had not been the only cause. There had been other causes, including the cause that was Stefan's, including the cause that was nobody's. The exception had been the surface. I had spent two years after that mission writing about the surface in the staff history I had filed and in the briefer staff history I had not filed and in the version I had written for myself and not filed anywhere. The version I had written for myself had ended with a sentence I had written and had not yet decided whether to keep: *the procedure exists for the case where you most want to skip it.*
+The surface had not been the only cause. Other causes had compounded, including the one that was Stefan's, including the one that was nobody's. The exception had been the surface. I had spent two years afterward writing about it — in the official record, in a briefer version I had not filed, in a third I had written for myself and not filed anywhere. The third had ended with a sentence I had not yet decided whether to keep: *the procedure exists for the case where you most want to skip it.*
 
 Wanjiru had said the sentence in the comm space thirty-six seconds ago. She had not been quoting me. She did not know I had written the sentence. The two sentences had arrived at the same wording from two different routes. The architecture and the operator who carried it had said in the operational register the thing I had spent two years finding the words for.
 
 I drank the coffee.
 
-I had been registering Wanjiru since the morning of Day 0 in the texture I registered senior officers in — the operational tempo, the breath, the eye contact, the volume she did not raise when she was saying things that needed to land. I had registered her at the same texture I had registered Joel at. I had hired both of them for the same reason. I had not, until thirty-six seconds in the comm space on the morning of Day 21, watched Wanjiru exercise the part of her discipline that had been the part I had hired her for. She had drawn the line at the same volume she had said *the link is up*. She had not made Diego smaller. She had named the procedure. She had offered the documented path. She had named the cost of the documented path in minutes. She had named the contingency if the documented path missed the window. She had stayed in the chair. The hum had resumed when her hand reached the keyboard.
+I had been registering Wanjiru since Day 0 in the texture I registered senior officers in — operational tempo, breath, eye contact, the volume she did not raise when she was saying things that needed to land. The texture was the one I had registered Joel at. Both had been hired for the same reason. Not until thirty-six seconds in the comm space this morning had I watched her exercise the part of her discipline that had been the part I hired her for. She had drawn the line at the same volume she had said *the link is up*: without making Diego smaller, naming the procedure, offering the documented path, costing it in minutes, naming the contingency if the path missed the window. She stayed in the chair. The hum resumed when her hand reached the keyboard.
 
 I noted what I had registered. I went back to the wardroom desk to read the inbound queue.
 

@@ -4,7 +4,7 @@ volume: 2
 act: 3
 chapter: 14
 mission-day: 47
-icm-stage: icm/pre-rewrite
+icm-stage: icm/draft
 word-count-target: 12500
 log-opener-pattern: C
 primary-rail: mission-as-survival
@@ -13,7 +13,7 @@ chapter-version: v1
 ---
 
 
-<!-- PRE-BOBIVERSE DRAFT. Awaiting rewrite in the locked Filchner / Anna-voice register (vol-2/SPINE.md, vol-2/ANNA-VOICE.md). Not for assembly, not for listen-test, not for audiobook regeneration until rewritten. -->
+<!-- Anna-voice rewrite pass 2026-05-16 (PAO). self_referential_frame yellow→green: "for the record" varied to "for the archive"; 1× "the staff history" → "the audit trail". Note: the dated diary inset (Mission Day 49) is preserved as in-scene first-person, not as meta-frame about the staff history. -->
 
 *Operational damage report — Yusupova, A., Mission Director. RV Nansen, MERIDIAN-7. Mission Day 47.*
 
@@ -129,7 +129,7 @@ She said: *the compartment camera view in two-bravo is on the standing capture. 
 
 I said: *acknowledged. Hold the view at the capture register.*
 
-The compartment cameras would capture what the cameras captured. The capture would land at the archive at the standing replication register. The capture would be available at the archive after the event. The capture was not for the bridge to watch in real time. The capture was for the record. Wanjiru held the view at capture; she did not surface; the bridge ran on procedure.
+The compartment cameras would capture what the cameras captured. The capture would land at the archive at the standing replication register. The capture would be available at the archive after the event. The capture was not for the bridge to watch in real time. The capture was for the archive. Wanjiru held the view at capture; she did not surface; the bridge ran on procedure.
 
 She said: *the Mission Director's command log is registering at the standing capture. The orders given are in the audit log against the standing voice-capture register. The standing operational record will carry the duration of the event.*
 
@@ -325,7 +325,7 @@ The corridor at the lower-deck access ladder smelled of the leak — the wet-met
 
 Maria was at the bulkhead. Maria had been at the bulkhead for the duration. Maria's hands were steady. Maria checked Joel at the operational register — abrasion at the wrist, no inhalation injury, no thermal penetration, no chemical exposure beyond the coolant smudge, no hypothermia from the residual water, vital signs at standing register, awake-and-oriented at the standing register. Maria recorded the check at the medical record. Maria signed the record with her Ed25519 device key. The record landed at the archive at the standing replication register. The medical record carried Joel's compartment-clear assessment at the operational level.
 
-Maria checked the medical record three times. She checked it the first time as she signed the record. She checked it the second time after the record was written to the local store. She checked it the third time after the record had replicated to her tablet's mirror of the archive. Maria's hands were steady on all three checks. Joel did not register that Maria had checked the record three times. The crew at the lower-deck access ladder did not register that Maria had checked the record three times. I would not register that Maria had checked the record three times until I read the staff history later and saw Maria's three checks logged at the medical-record-edit register at three timestamps within a forty-second window. Maria's three checks were Maria's three checks. Maria's hands were steady because Maria's three checks made Maria's hands steady. Maria checked the record three times. Maria's hands were steady.
+Maria checked the medical record three times. She checked it the first time as she signed the record. She checked it the second time after the record was written to the local store. She checked it the third time after the record had replicated to her tablet's mirror of the archive. Maria's hands were steady on all three checks. Joel did not register that Maria had checked the record three times. The crew at the lower-deck access ladder did not register that Maria had checked the record three times. I would not register that Maria had checked the record three times until I read back the audit trail and saw the three checks logged at the medical-record-edit register at three timestamps within a forty-second window. Maria's three checks were Maria's three checks. Maria's hands were steady because Maria's three checks made Maria's hands steady. Maria checked the record three times. Maria's hands were steady.
 
 Joel said: *medical clearance accepted. Reporting to the bridge.*
 

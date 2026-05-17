@@ -275,3 +275,76 @@ substitutions:
     workshop_entry: __abbreviation-hazard
     notes: Same hazard pattern (Dr. Holm, Dr. Stefan Reinhardt). Backref \1 preserves the capitalized name's first letter.
 
+
+  # ─── Military time normalization (hyphens → spaces) ─────────────────────
+  # Added 2026-05-17 (PAO) after CO ear-test flagged hyphenated military time
+  # being read with audible dash-pauses ("oh DASH eight DASH thirty DASH
+  # seven"). The text keeps hyphenated forms ("oh-eight-thirty-seven") for
+  # staff-history register consistency; the audio layer strips inner hyphens
+  # so the TTS engine emits natural spoken time.
+  #
+  # Pattern ordering: longest-first (5-part → 4-part → 3-part → 2-part).
+  # The minute-word filter (ten|eleven|twelve|...|hundred) prevents
+  # false-positives on non-time compounds (fourteen-day, thirteen-year-olds,
+  # twenty-five, etc.) by requiring the trailing position to be a clock
+  # minute or "hundred".
+
+  - pattern: '\b[oO]h-([a-z]+)-([a-z]+)-([a-z]+)-([a-z]+)\b'
+    replacement: 'oh \1 \2 \3 \4'
+    case_sensitive: true
+    workshop_entry: military-time.md
+    notes: 5-part oh-prefixed military time (oh-six-fourteen-forty-one)
+
+  - pattern: '\b[zZ]ero-([a-z]+)-([a-z]+)-([a-z]+)-([a-z]+)\b'
+    replacement: 'zero \1 \2 \3 \4'
+    case_sensitive: true
+    workshop_entry: military-time.md
+    notes: 5-part zero-prefixed military time
+
+  - pattern: '\b[oO]h-([a-z]+)-([a-z]+)-([a-z]+)\b'
+    replacement: 'oh \1 \2 \3'
+    case_sensitive: true
+    workshop_entry: military-time.md
+    notes: 4-part oh-prefixed (oh-eight-thirty-seven, oh-three-fifty-eight, oh-three-oh-three)
+
+  - pattern: '\b[zZ]ero-([a-z]+)-([a-z]+)-([a-z]+)\b'
+    replacement: 'zero \1 \2 \3'
+    case_sensitive: true
+    workshop_entry: military-time.md
+    notes: 4-part zero-prefixed (zero-three-twenty, zero-eight-twenty)
+
+  - pattern: '\b(thirteen|fourteen|fifteen|sixteen|seventeen|eighteen|nineteen|twenty)-(ten|eleven|twelve|thirteen|fourteen|fifteen|sixteen|seventeen|eighteen|nineteen|twenty|thirty|forty|fifty|hundred)-([a-z]+)\b'
+    replacement: '\1 \2 \3'
+    case_sensitive: false
+    workshop_entry: military-time.md
+    notes: 3-part 13-20 hour military time (nineteen-thirty-six, eighteen-fifty-eight, fourteen-forty-one)
+
+  - pattern: '\b(twenty-one|twenty-two|twenty-three|twenty-four)-(ten|twenty|thirty|forty|fifty|hundred)\b'
+    replacement: '\1 \2'
+    case_sensitive: false
+    workshop_entry: military-time.md
+    notes: twenty-two-thirty (22:30) — the 20-24-hour band
+
+  - pattern: '\b[oO]h-([a-z]+)-([a-z]+)\b'
+    replacement: 'oh \1 \2'
+    case_sensitive: true
+    workshop_entry: military-time.md
+    notes: 3-part oh-prefixed (oh-three-forty, oh-eight-hundred, oh-five-thirty)
+
+  - pattern: '\b[zZ]ero-([a-z]+)-([a-z]+)\b'
+    replacement: 'zero \1 \2'
+    case_sensitive: true
+    workshop_entry: military-time.md
+    notes: 3-part zero-prefixed (zero-seven-fifty, zero-eight-twenty)
+
+  - pattern: '\b(thirteen|fourteen|fifteen|sixteen|seventeen|eighteen|nineteen|twenty)-(ten|eleven|twelve|thirteen|fourteen|fifteen|sixteen|seventeen|eighteen|nineteen|twenty|thirty|forty|fifty|hundred)\b'
+    replacement: '\1 \2'
+    case_sensitive: false
+    workshop_entry: military-time.md
+    notes: 2-part 13-20 hour military time (fourteen-thirty, fifteen-eighteen, nineteen-fourteen, sixteen-hundred)
+
+  - pattern: '\b(one|two|three|four|five|six|seven|eight|nine)-(ten|eleven|twelve|fourteen|fifteen|eighteen|twenty|thirty|forty|fifty|hundred)\b'
+    replacement: '\1 \2'
+    case_sensitive: false
+    workshop_entry: military-time.md
+    notes: Single-digit-hour military time (two-thirty, three-eighteen, eight-twenty, nine-hundred)
