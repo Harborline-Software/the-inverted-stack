@@ -1,7 +1,7 @@
 # anatomy.md
 
-> Auto-maintained by OpenWolf. Last scanned: 2026-05-17T08:03:05.040Z
-> Files: 568 tracked | Anatomy hits: 0 | Misses: 0
+> Auto-maintained by OpenWolf. Last scanned: 2026-05-17T09:50:13.023Z
+> Files: 569 tracked | Anatomy hits: 0 | Misses: 0
 
 ## ../../../../../tmp/
 
@@ -199,7 +199,7 @@
 ## ./
 
 - `.envrc` — direnv configuration for the-inverted-stack (~395 tok)
-- `.gitignore` — Git ignore rules (~211 tok)
+- `.gitignore` — Git ignore rules (~295 tok)
 - `ASSEMBLY.md` — Assembly Manifest (~4257 tok)
 - `book-structure.md` — BOOK-STRUCTURE (~8079 tok)
 - `book.editorial.yaml` — Editorial profile for the-inverted-stack. (~1885 tok)
@@ -316,8 +316,9 @@
 ## .pao-inbox/_creative/character-sheets/
 
 - `_minor-characters.md` — Minor Characters — Brief Sheets (~4731 tok)
+- `anna-yusupova-mission-director.md` — Character Sheet — Anna Yusupova, Mission Director (~2719 tok)
 - `dr-leader-mission-director.md` — Character Sheet — Dr. Anna Yusupova, Mission Director (~19806 tok)
-- `joel-reyes-principal-architect.md` — Character Sheet — Joel Reyes, Principal Architect of Sunfish (~12169 tok)
+- `joel-reyes-principal-architect.md` — Character Sheet — Joel Reyes, Principal Architect of Sunfish (~12753 tok)
 - `maria-santos.md` — Character Sheet — Maria Santos, Mission Medical Officer (~1529 tok)
 - `priya-iyer-schema-migration.md` — Character Sheet — Priya Iyer, Lead Instrumentation Engineer + Sunfish Schema-Migration Contributor (~7336 tok)
 - `senior-technical-specialist.md` — Character Sheet — Senior Technical Specialist (~3440 tok)
@@ -919,7 +920,7 @@
 
 ## vol-2/
 
-- `ANNA-VOICE.md` — Anna's Voice — Narrator Specification (~6516 tok)
+- `ANNA-VOICE.md` — Anna's Voice — Narrator Specification (~6634 tok)
 - `SPINE.md` — The Filchner Dark — Volume Spine (~1386 tok)
 
 ## vol-2/_glossary/
@@ -938,27 +939,27 @@
 
 ## vol-2/act-1/
 
-- `ch01-departure.md` — Chapter 1 — Departure (~6326 tok)
+- `ch01-departure.md` — Chapter 1 — Departure (~6397 tok)
 - `ch01-departure.trial.md` — Chapter 1 — Departure (~6174 tok)
 - `ch02-recruitment-interview.held-lines.json` (~747 tok)
-- `ch02-recruitment-interview.md` — Chapter 2 — The Recruitment Interview (~7681 tok)
+- `ch02-recruitment-interview.md` — Chapter 2 — The Recruitment Interview (~7737 tok)
 - `ch02-recruitment-interview.trial.held-lines.json` (~202 tok)
 - `ch02-recruitment-interview.trial.md` — Chapter 2 — The Recruitment Interview (~8506 tok)
 - `ch03-drake-passage-ice-edge.md` — Act 1: Drake Passage crossing; Anna's eleven-crossing history; Nansen transitions from Strait to open southern ocean (~6854 tok)
-- `ch04-first-submersion.md` — Act 1: Day 7 first dive; Anna on bridge for sealed-hull threshold; gangway metaphor closed; institutional pre-mission file on secondary display (~7242 tok)
+- `ch04-first-submersion.md` (~7241 tok)
 - `ch05-day-twenty-realization.md` — Act 1: Day 20 hinge; Anna's quiet desk realization that the Sunfish architecture is doing exactly what it was designed to do (~8644 tok)
 - `ch06-first-surface-first-forsaken-reveal.md` — Act 1: Day 21 first surfacing; southern-ocean green; Stefan Reinhardt (HELVETICA-2) first Forsaken reveal via surface-window comms (~7143 tok)
 
 ## vol-2/act-2/
 
 - `ch07-joels-sunfish.md` — Act 2: Day 22 wardroom; Joel discloses Sunfish naming origin (USS Sunfish SSN-649) + identity-triad teaching beat (§1 three-compartment discipline); Anna registers Joel's pedagogical tempo + interior gap-recognition; v2 teaching-register pilot applied (~6900 tok)
-- `ch10-aftermath-mission-that-once-was.md` — Chapter 10 — *The Aftermath of a Mission That Once Was* (~7501 tok)
+- `ch10-aftermath-mission-that-once-was.md` — Chapter 10 — *The Aftermath of a Mission That Once Was* (~7503 tok)
 
 ## vol-2/act-3/
 
-- `ch13-schema-that-should-not-migrate.md` — Act 3: Day 43–44; Priya and Joel 4h in engineering; schema-migration crisis; Wanjiru's institutional-politics response (~16153 tok)
+- `ch13-schema-that-should-not-migrate.md` — Declares is (~16152 tok)
 - `ch14-the-crossing.md` — Act 3: Day 47 mission-survival crisis; Diego survival (cast-swap canon); Joel push-past locked bulkhead; porthole look; leak event (~17852 tok)
-- `ch15-compromised-relay-holds.md` — Act 3: Day 47–48; compromised relay aftermath from Anna's POV; Wanjiru forensic supply-chain recognition; relay holds (~13033 tok)
+- `ch15-compromised-relay-holds.md` — Declares register (~13033 tok)
 - `ch16-final-ascent.md` — Act 3: Day 49–52; RV Nansen ascends after 48 days at depth; Anna's sealed-hull reckoning before surface; mission-as-survival rail closes (~7349 tok)
 - `ch17-transit-north.md` — Act 3: Day 52–56; surface transit north; Joel honest-engineering register; rival-mission/institutional-capture rail; Stefan intelligence thread (~8210 tok)
 - `ch18-punta-arenas-surfacing.md` — Act 3: Day 56; docking at Punta Arenas; Stefan 30-second courtesy exchange; Anna records: "He did not say what he might have said." (~11362 tok)

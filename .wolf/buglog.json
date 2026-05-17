@@ -5819,6 +5819,86 @@
       "related_bugs": [],
       "occurrences": 1,
       "last_seen": "2026-05-17T08:02:11.786Z"
+    },
+    {
+      "id": "bug-360",
+      "timestamp": "2026-05-17T08:46:48.445Z",
+      "error_message": "Wrong reference: block should be hold",
+      "file": "vol-2/act-1/ch02-recruitment-interview.md",
+      "root_cause": "Used \"block\" instead of \"hold\"",
+      "fix": "Changed block → hold",
+      "tags": [
+        "auto-detected",
+        "wrong-reference",
+        "md"
+      ],
+      "related_bugs": [],
+      "occurrences": 4,
+      "last_seen": "2026-05-17T08:46:57.860Z"
+    },
+    {
+      "id": "bug-361",
+      "timestamp": "2026-05-17T08:47:37.781Z",
+      "error_message": "Wrong reference: block should be hold",
+      "file": "vol-2/act-1/ch04-first-submersion.md",
+      "root_cause": "Used \"block\" instead of \"hold\"",
+      "fix": "Changed block → hold",
+      "tags": [
+        "auto-detected",
+        "wrong-reference",
+        "md"
+      ],
+      "related_bugs": [],
+      "occurrences": 1,
+      "last_seen": "2026-05-17T08:47:37.781Z"
+    },
+    {
+      "id": "bug-362",
+      "timestamp": "2026-05-17T08:47:46.073Z",
+      "error_message": "Wrong reference: BLOCK should be hold",
+      "file": "vol-2/act-2/ch10-aftermath-mission-that-once-was.md",
+      "root_cause": "Used \"BLOCK\" instead of \"hold\"",
+      "fix": "Changed BLOCK → hold",
+      "tags": [
+        "auto-detected",
+        "wrong-reference",
+        "md"
+      ],
+      "related_bugs": [],
+      "occurrences": 2,
+      "last_seen": "2026-05-17T08:47:46.846Z"
+    },
+    {
+      "id": "bug-363",
+      "timestamp": "2026-05-17T08:47:48.272Z",
+      "error_message": "Wrong reference: BLOCK should be hold",
+      "file": "vol-2/act-3/ch13-schema-that-should-not-migrate.md",
+      "root_cause": "Used \"BLOCK\" instead of \"hold\"",
+      "fix": "Changed BLOCK → hold",
+      "tags": [
+        "auto-detected",
+        "wrong-reference",
+        "md"
+      ],
+      "related_bugs": [],
+      "occurrences": 1,
+      "last_seen": "2026-05-17T08:47:48.272Z"
+    },
+    {
+      "id": "bug-364",
+      "timestamp": "2026-05-17T08:47:51.898Z",
+      "error_message": "Wrong reference: BLOCK should be hold",
+      "file": "vol-2/act-3/ch15-compromised-relay-holds.md",
+      "root_cause": "Used \"BLOCK\" instead of \"hold\"",
+      "fix": "Changed BLOCK → hold",
+      "tags": [
+        "auto-detected",
+        "wrong-reference",
+        "md"
+      ],
+      "related_bugs": [],
+      "occurrences": 1,
+      "last_seen": "2026-05-17T08:47:51.898Z"
     }
   ]
 }

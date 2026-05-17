@@ -4022,3 +4022,43 @@
 | 05:50 | Session end: 196 writes across 33 files (ch02-recruitment-interview.md, pao-directive-2026-05-16T11-52Z-vol2-audio-staleness-audit.md, pao-directive-2026-05-16T11-53Z-fff-nansen-ingestion-ch17.md, pao-directive-2026-05-16T11-54Z-joel-teaching-register-ch07.md, pao-directive-2026-05-16T11-55Z-anatomy-description-cleanup.md) | 31 reads | ~110629 tok |
 | 05:50 | Session end: 196 writes across 33 files (ch02-recruitment-interview.md, pao-directive-2026-05-16T11-52Z-vol2-audio-staleness-audit.md, pao-directive-2026-05-16T11-53Z-fff-nansen-ingestion-ch17.md, pao-directive-2026-05-16T11-54Z-joel-teaching-register-ch07.md, pao-directive-2026-05-16T11-55Z-anatomy-description-cleanup.md) | 31 reads | ~110629 tok |
 | 14:45 | Session close: back-cover blurb (vol1 approved); vol1 Joel-premise refactor (15 files, the-crossing deleted); 4 PAO directives executed (audio audit false-positive, FFF ch17 pilot, Joel ch07 pilot, anatomy cleanup); 2 follow-up directives closed (Verne strike, discipline thematic) | vol-1/, vol-2/, .wolf/ | complete | ~320000 |
+| 11:00 | Session end: 196 writes across 33 files (ch02-recruitment-interview.md, pao-directive-2026-05-16T11-52Z-vol2-audio-staleness-audit.md, pao-directive-2026-05-16T11-53Z-fff-nansen-ingestion-ch17.md, pao-directive-2026-05-16T11-54Z-joel-teaching-register-ch07.md, pao-directive-2026-05-16T11-55Z-anatomy-description-cleanup.md) | 31 reads | ~110629 tok |
+
+## Session-end summary — 2026-05-17
+
+**Post-commit work this session (after 40aaff7):**
+
+Text edits to vol-2 (5 chapters touched):
+- ch01: pastry-critic refactor — aroma beat added at bakery door ("butter and toasted sugar over a whisper of yeast"); kuchen critique gained adjective-stack ("tender against the tooth, brittle at the edge") + flavor axis (tartness vs cream-sweetness); "wronged-baker" backstory tightened to "had run the experiment more than once" (metaphor-inflation rule).
+- ch02: 4 edits — feelings-line rewrite ("didn't force me to confront my feelings, which I was finally and unwillingly experiencing"); 7× block/BLOCK → hold (institutional review process); vatrushka beat gained flavor note ("clean butter note over the curd's faint tang"); line 21 added one-beat first-meeting clarification (Bremerhaven, December, four-day OSS workshop on distributed systems, neither speaker).
+- ch04: 1× "no block on the lease layer" → "no hold on the lease layer"
+- ch10: 3 fixes — Klett-in-quote sweep + 3× BLOCK → hold in the council-disclosure paragraph
+- ch13: 4× near-BLOCK → near-hold
+- ch15: 1× R1 BLOCK → R1 hold
+
+New canon docs:
+- `.pao-inbox/_creative/character-sheets/anna-yusupova-mission-director.md` — first dedicated Anna sheet (others had sheets; she had only voice spec). Includes new pastry-critic 4-axis framework (appearance/aroma/texture/flavor + verdict), vocabulary bank, deployment rules (brevity, negation-as-praise, fork-test, dry-not-effusive register), pastry-type roster.
+- `vol-2/ANNA-VOICE.md` updated: pastry-judge vocabulary paragraph now points to new sheet for expanded structure.
+- `.pao-inbox/_creative/character-sheets/joel-reyes-principal-architect.md` — first-meeting canon locked: Anna ↔ Joel met in Bremerhaven at a December OSS workshop on distributed systems, neither was speaker. Mug gift withheld in Vol 2; Book 3 disclosure-arc material.
+
+Audio renders (Kokoro fast, all chapters that received text edits this session):
+- ch01-departure.mp3 — fresh render with pastry-critic refactor (21.3MB, May 17 05:11)
+- ch02-recruitment-interview.mp3 — five re-renders this session through all text iterations; final at 26.4MB May 17 ~05:13 with all fixes baked in (preamble dedup, Klett genericized, military-time normalized, block→hold, pastry flavor note, feelings line, Bremerhaven first-meeting beat)
+- ch04, ch10, ch13, ch15 — text-edited block→hold but audio held per CO direction "stick to chapter 2 for now"; their audio is now stale vs text
+
+Audio glossary:
+- `vol-2/_glossary/_audio_substitutions.yaml` — 10 military-time normalization patterns added (hyphen→space for oh-X-Y-Z, zero-X-Y, NN-MM, twenty-two-thirty forms)
+
+Cache operations:
+- Chunk cache wiped twice (1.4GB → 0 → rebuilt; then 512MB → 0 → rebuilt) to guarantee fresh renders after substitution rule changes
+
+Yeoman coordination:
+- 6 new PAO directives written (audio audit, FFF ch17, Joel ch07, anatomy cleanup, Verne strike, discipline density)
+- 4 superseded yeoman beacons archived
+
+Open / deferred:
+- ch04, ch10, ch13, ch15 audio re-render held per CO direction
+- Chatterbox final-quality renders for ch03-ch18 (the Kokoro batches are draft)
+- Task #15 prose telemetry Phase 1 (Monday engineering session)
+- Task #16 voice-towles + anti-ai-tells antipattern catalogs
+- Task #24 Yeoman anatomy.md description cleanup
