@@ -3982,3 +3982,43 @@
 | 04:02 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~29 |
 | 04:03 | Edited vol-2/act-2/ch10-aftermath-mission-that-once-was.md | inline fix | ~40 |
 | 04:03 | Session end: 174 writes across 28 files (ch02-recruitment-interview.md, pao-directive-2026-05-16T11-52Z-vol2-audio-staleness-audit.md, pao-directive-2026-05-16T11-53Z-fff-nansen-ingestion-ch17.md, pao-directive-2026-05-16T11-54Z-joel-teaching-register-ch07.md, pao-directive-2026-05-16T11-55Z-anatomy-description-cleanup.md) | 29 reads | ~98560 tok |
+| 04:08 | Session end: 174 writes across 28 files (ch02-recruitment-interview.md, pao-directive-2026-05-16T11-52Z-vol2-audio-staleness-audit.md, pao-directive-2026-05-16T11-53Z-fff-nansen-ingestion-ch17.md, pao-directive-2026-05-16T11-54Z-joel-teaching-register-ch07.md, pao-directive-2026-05-16T11-55Z-anatomy-description-cleanup.md) | 29 reads | ~98560 tok |
+| 04:09 | Edited .gitignore | expanded (+8 lines) | ~119 |
+| 04:09 | Session end: 175 writes across 29 files (ch02-recruitment-interview.md, pao-directive-2026-05-16T11-52Z-vol2-audio-staleness-audit.md, pao-directive-2026-05-16T11-53Z-fff-nansen-ingestion-ch17.md, pao-directive-2026-05-16T11-54Z-joel-teaching-register-ch07.md, pao-directive-2026-05-16T11-55Z-anatomy-description-cleanup.md) | 30 reads | ~98898 tok |
+| 04:13 | Session end: 175 writes across 29 files (ch02-recruitment-interview.md, pao-directive-2026-05-16T11-52Z-vol2-audio-staleness-audit.md, pao-directive-2026-05-16T11-53Z-fff-nansen-ingestion-ch17.md, pao-directive-2026-05-16T11-54Z-joel-teaching-register-ch07.md, pao-directive-2026-05-16T11-55Z-anatomy-description-cleanup.md) | 30 reads | ~98898 tok |
+| 08:14 | ch02 re-render complete — all 3 fixes verified | ~/Library/.../vol-2/ch02-recruitment-interview.mp3 (May 17 04:13, 26.2 MB) | 46.5s wall; Klett=0, "from my recollection"=0, hyphenated military time=0, "fourteen thirty" spaced confirmed | ~1k |
+| 04:14 | Session end: 175 writes across 29 files (ch02-recruitment-interview.md, pao-directive-2026-05-16T11-52Z-vol2-audio-staleness-audit.md, pao-directive-2026-05-16T11-53Z-fff-nansen-ingestion-ch17.md, pao-directive-2026-05-16T11-54Z-joel-teaching-register-ch07.md, pao-directive-2026-05-16T11-55Z-anatomy-description-cleanup.md) | 30 reads | ~98898 tok |
+| 04:43 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~42 |
+| 04:44 | Session end: 176 writes across 29 files (ch02-recruitment-interview.md, pao-directive-2026-05-16T11-52Z-vol2-audio-staleness-audit.md, pao-directive-2026-05-16T11-53Z-fff-nansen-ingestion-ch17.md, pao-directive-2026-05-16T11-54Z-joel-teaching-register-ch07.md, pao-directive-2026-05-16T11-55Z-anatomy-description-cleanup.md) | 30 reads | ~98943 tok |
+| 04:46 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~32 |
+| 04:46 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~68 |
+| 04:46 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~42 |
+| 04:46 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~34 |
+| 04:46 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~63 |
+| 04:46 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~15 |
+| 04:46 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~50 |
+| 04:47 | Edited vol-2/act-1/ch04-first-submersion.md | inline fix | ~86 |
+| 04:47 | Edited vol-2/act-2/ch10-aftermath-mission-that-once-was.md | inline fix | ~192 |
+| 04:47 | Edited vol-2/act-2/ch10-aftermath-mission-that-once-was.md | inline fix | ~16 |
+| 04:47 | Edited vol-2/act-2/ch10-aftermath-mission-that-once-was.md | inline fix | ~36 |
+| 04:47 | Edited vol-2/act-3/ch13-schema-that-should-not-migrate.md | inline fix | ~3 |
+| 04:47 | Edited vol-2/act-3/ch15-compromised-relay-holds.md | inline fix | ~45 |
+| 04:48 | Session end: 189 writes across 29 files (ch02-recruitment-interview.md, pao-directive-2026-05-16T11-52Z-vol2-audio-staleness-audit.md, pao-directive-2026-05-16T11-53Z-fff-nansen-ingestion-ch17.md, pao-directive-2026-05-16T11-54Z-joel-teaching-register-ch07.md, pao-directive-2026-05-16T11-55Z-anatomy-description-cleanup.md) | 30 reads | ~99672 tok |
+| 04:54 | Session end: 189 writes across 29 files (ch02-recruitment-interview.md, pao-directive-2026-05-16T11-52Z-vol2-audio-staleness-audit.md, pao-directive-2026-05-16T11-53Z-fff-nansen-ingestion-ch17.md, pao-directive-2026-05-16T11-54Z-joel-teaching-register-ch07.md, pao-directive-2026-05-16T11-55Z-anatomy-description-cleanup.md) | 30 reads | ~99672 tok |
+| 08:54 | ch02 re-render (4th of session) — block→hold + feelings line | ~/Library/.../vol-2/ch02-recruitment-interview.mp3 | 11.6s wall (cache-warm); 0 protocol-block, 11 hold/holding, new feelings line confirmed in audio script | ~1k |
+| 04:55 | Session end: 189 writes across 29 files (ch02-recruitment-interview.md, pao-directive-2026-05-16T11-52Z-vol2-audio-staleness-audit.md, pao-directive-2026-05-16T11-53Z-fff-nansen-ingestion-ch17.md, pao-directive-2026-05-16T11-54Z-joel-teaching-register-ch07.md, pao-directive-2026-05-16T11-55Z-anatomy-description-cleanup.md) | 30 reads | ~99672 tok |
+| 05:07 | Created .pao-inbox/_creative/character-sheets/anna-yusupova-mission-director.md | — | ~2900 |
+| 05:07 | Edited vol-2/ANNA-VOICE.md | inline fix | ~314 |
+| 09:07 | create Anna character sheet + pastry-critic register canon | .pao-inbox/_creative/character-sheets/anna-yusupova-mission-director.md + vol-2/ANNA-VOICE.md | new sheet: full Anna character file with 4-axis critic framework (appearance/aroma/texture/flavor/verdict), vocabulary bank, deployment rules (brevity/negation/fork-test/dry-register), retired moves; ANNA-VOICE.md pastry section now points to sheet for expanded structure | ~4k |
+| 05:08 | Session end: 191 writes across 31 files (ch02-recruitment-interview.md, pao-directive-2026-05-16T11-52Z-vol2-audio-staleness-audit.md, pao-directive-2026-05-16T11-53Z-fff-nansen-ingestion-ch17.md, pao-directive-2026-05-16T11-54Z-joel-teaching-register-ch07.md, pao-directive-2026-05-16T11-55Z-anatomy-description-cleanup.md) | 30 reads | ~103115 tok |
+| 05:10 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~38 |
+| 05:10 | Edited vol-2/act-1/ch01-departure.md | inline fix | ~100 |
+| 05:10 | Edited vol-2/act-1/ch01-departure.md | inline fix | ~260 |
+| 05:12 | Session end: 194 writes across 32 files (ch02-recruitment-interview.md, pao-directive-2026-05-16T11-52Z-vol2-audio-staleness-audit.md, pao-directive-2026-05-16T11-53Z-fff-nansen-ingestion-ch17.md, pao-directive-2026-05-16T11-54Z-joel-teaching-register-ch07.md, pao-directive-2026-05-16T11-55Z-anatomy-description-cleanup.md) | 31 reads | ~109866 tok |
+| 09:12 | ch01+ch02 pastry-critic refactor renders complete | ~/Library/.../vol-2/ch01-departure.mp3 + ch02-recruitment-interview.mp3 | ch01 36.6s (fresh, no cache); ch02 5.5s (cache-warm); all 5 edits verified in audio scripts | ~1k |
+| 05:12 | Session end: 194 writes across 32 files (ch02-recruitment-interview.md, pao-directive-2026-05-16T11-52Z-vol2-audio-staleness-audit.md, pao-directive-2026-05-16T11-53Z-fff-nansen-ingestion-ch17.md, pao-directive-2026-05-16T11-54Z-joel-teaching-register-ch07.md, pao-directive-2026-05-16T11-55Z-anatomy-description-cleanup.md) | 31 reads | ~109866 tok |
+| 05:49 | Edited vol-2/act-1/ch02-recruitment-interview.md | inline fix | ~80 |
+| 05:50 | Edited .pao-inbox/_creative/character-sheets/joel-reyes-principal-architect.md | expanded (+17 lines) | ~632 |
+| 05:50 | Session end: 196 writes across 33 files (ch02-recruitment-interview.md, pao-directive-2026-05-16T11-52Z-vol2-audio-staleness-audit.md, pao-directive-2026-05-16T11-53Z-fff-nansen-ingestion-ch17.md, pao-directive-2026-05-16T11-54Z-joel-teaching-register-ch07.md, pao-directive-2026-05-16T11-55Z-anatomy-description-cleanup.md) | 31 reads | ~110629 tok |
+| 05:50 | Session end: 196 writes across 33 files (ch02-recruitment-interview.md, pao-directive-2026-05-16T11-52Z-vol2-audio-staleness-audit.md, pao-directive-2026-05-16T11-53Z-fff-nansen-ingestion-ch17.md, pao-directive-2026-05-16T11-54Z-joel-teaching-register-ch07.md, pao-directive-2026-05-16T11-55Z-anatomy-description-cleanup.md) | 31 reads | ~110629 tok |
+| 14:45 | Session close: back-cover blurb (vol1 approved); vol1 Joel-premise refactor (15 files, the-crossing deleted); 4 PAO directives executed (audio audit false-positive, FFF ch17 pilot, Joel ch07 pilot, anatomy cleanup); 2 follow-up directives closed (Verne strike, discipline thematic) | vol-1/, vol-2/, .wolf/ | complete | ~320000 |
