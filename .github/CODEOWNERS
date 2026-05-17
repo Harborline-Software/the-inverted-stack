@@ -1,0 +1,8 @@
+# CODEOWNERS — the-inverted-stack book repo
+
+# Default: all unmatched paths
+*                       @ctwoodwa
+
+# Repo infrastructure
+/.github/               @ctwoodwa
+/README.md              @ctwoodwa
