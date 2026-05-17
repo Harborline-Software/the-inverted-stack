@@ -29,6 +29,23 @@ Drafters working any Vol 2 chapter should plant and pay off **only these element
 - Joel's role in the Sunfish-replication branching decisions (Books 4-5)
 - Any forecast register about what the architecture becomes — see `series-arc-sunfish-trajectory.md` § 8 for the forbidden-registers list
 
+## First-meeting canon — Anna ↔ Joel (locked 2026-05-17)
+
+**Where they first met:** Bremerhaven, **early December** of the year prior to the *Nansen* mission. A four-day OSS workshop on distributed systems. Neither was the speaker. Anna was traveling on her AWI post-doc-era network; Joel was attending as a participant.
+
+**The mug:** Anna gave Joel a small dark-green ceramic mug on or after that workshop. The exact circumstances of the gift are **deliberately withheld** from the Vol 2 record (Anna's narration in ch02 explicitly refuses: *"I will not record here where I had given him that mug. The fact of the gift belongs on the page."*). Joel had the mug at his desk during the May recruitment call ~5 months later. Anna noticed. The noticing was a small interior beat, not narrated to him.
+
+**What this commits us to / what stays open:**
+- ✅ **Committed:** First meeting was Bremerhaven, December, OSS workshop, neither speaker. The workshop was on distributed systems specifically.
+- ✅ **Committed:** Some prior contact close enough that Anna gave Joel a gift (the mug) within that trip's window.
+- 🔒 **Deliberately withheld in Vol 2:** The specific circumstances of the gift, any private conversation between them at the workshop, anything about the relational substrate that's already forming. All of this is **Book 3 disclosure-arc material** (see § "Joel's interior — when, why, how" below and concept-note §6.4).
+- 🔒 **Open for future books:** Whether they spoke at length at the workshop; whether they corresponded between December and May; whether anyone else at the workshop registered the contact between them; what Joel was thinking when he packed the mug for the morning of the recruitment call.
+
+**Drafter guidance:**
+- If you need to reference the first meeting in Vol 2 prose: refer to "Bremerhaven" or "the workshop in December" sparingly. The voice spec rule ("Bremerhaven is referenced once or twice across the book. Never explained in full.") binds.
+- Do NOT add Joel-at-Bremerhaven scene material. Do NOT invent dialogue from the workshop. The withholding is the canon.
+- The ch02 line 21 reference ("a four-day OSS workshop on distributed systems had put me in a room with him for the first time, neither of us the speaker") is the **anchor** the rest of the book references against. Don't drift from it.
+
 ## Why this character is promoted
 
 Joel was originally a minor character in The Crossing — a Filipino engineer with GCC offshore-platform credentials who ran independent life-support diagnostics and didn't trust cloud telemetry. Those traits read as competent-skeptical-engineer in Vol 1.

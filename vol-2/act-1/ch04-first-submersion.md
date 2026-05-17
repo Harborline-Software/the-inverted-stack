@@ -228,7 +228,7 @@ I had needed to install all of those things in my own head this morning. The rea
 
 I had asked them. He had answered them. The answers had landed.
 
-I was going to use the answers, in the days ahead, as the floor under every operational decision the boat would make under the ice. It was the floor I had read in his paper four times — the one the council had cleared with fifteen conditions and no block on the lease layer in Round Two; the one I had spent half an hour this morning, in a conference space at three hundred meters, asking him to walk me through in the language the boat would need it in. It would carry. It was carrying. The boat under my feet was at depth on it.
+I was going to use the answers, in the days ahead, as the floor under every operational decision the boat would make under the ice. It was the floor I had read in his paper four times — the one the council had cleared with fifteen conditions and no hold on the lease layer in Round Two; the one I had spent half an hour this morning, in a conference space at three hundred meters, asking him to walk me through in the language the boat would need it in. It would carry. It was carrying. The boat under my feet was at depth on it.
 
 He picked up the coffee. He drank what was left of it. He stood. He said: *Director.*
 

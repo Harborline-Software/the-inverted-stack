@@ -49,7 +49,7 @@ The gossip layer's state was the layer's standing state at the boat-internal-rep
 
 I checked the revocation-propagation channels.
 
-The revocation-propagation channels were the part of the relay layer that carried policy-layer decisions across the boat's nodes — revocations of compromised keys, escalations of access-control state, the institutional decisions that had to reach every crew node at consensus before a revocation could be considered effective. The architecture I had specified after the R1 BLOCK required quorum-acknowledgment from a defined set of receivers before a revocation propagated to operational state. The propagation ran on three channels in the standing register: the boat-internal mesh's primary path, the boat-internal mesh's secondary path through the polar-operations console's relay, and a tertiary backup channel that ran through the comm-node's auxiliary bus.
+The revocation-propagation channels were the part of the relay layer that carried policy-layer decisions across the boat's nodes — revocations of compromised keys, escalations of access-control state, the institutional decisions that had to reach every crew node at consensus before a revocation could be considered effective. The architecture I had specified after the R1 hold required quorum-acknowledgment from a defined set of receivers before a revocation propagated to operational state. The propagation ran on three channels in the standing register: the boat-internal mesh's primary path, the boat-internal mesh's secondary path through the polar-operations console's relay, and a tertiary backup channel that ran through the comm-node's auxiliary bus.
 
 The primary channel was singed.
 
