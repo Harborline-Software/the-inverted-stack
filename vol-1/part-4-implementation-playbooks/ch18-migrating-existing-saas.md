@@ -7,7 +7,7 @@
 
 ---
 
-This chapter documents the migration path for a hosted SaaS product adopting a hybrid local-first deployment — Zone C, the Bridge (the Zone C hybrid SaaS accelerator) accelerator — without a flag-day cutover. The architecture is taken apart piece by piece while production keeps running, one component at a time, with the lights still on. Every phase gate below Phase 4 is reversible. The cost is engineering *discipline* to apply Ferreira's four-phase reversible model from Chapter 9 instead of the rewrite-everything approach. Rewrite-everything has killed more SaaS-to-local-first attempts than any technical obstacle ever has.
+This chapter documents the migration path for a hosted SaaS product adopting a hybrid local-first deployment — Zone C, the comms mesh accelerator — without a flag-day cutover. The architecture is taken apart piece by piece while production keeps running, one component at a time, with the lights still on. Every phase gate below Phase 4 is reversible. The cost is engineering *discipline* to apply Ferreira's four-phase reversible model from Chapter 9 instead of the rewrite-everything approach. Rewrite-everything has killed more SaaS-to-local-first attempts than any technical obstacle ever has.
 
 ### Glossary (for readers entering here)
 
@@ -49,9 +49,9 @@ Filter 5 asks whether the compliance posture allows data to leave the server. So
 
 ---
 
-## Bridge Is the Zone C Reference Implementation
+## The Zone C Accelerator Is the Reference Implementation
 
-Clone `accelerators/bridge/` before the first planning meeting. Bridge is the Sunfish Zone C Hybrid accelerator, and it runs a working hosted-node-as-SaaS implementation: a traditional web layer handles signup, billing, and a browser-accessible shell per tenant, while per-tenant local-node-host processes hold the data plane. Study the three logical planes Bridge separates before touching any existing schema.
+Clone `accelerators/bridge/` before the first planning meeting. The Zone C accelerator is the Sunfish comms mesh reference implementation, and it runs a working hosted-node-as-SaaS implementation: a traditional web layer handles signup, billing, and a browser-accessible shell per tenant, while per-tenant local-node-host processes hold the data plane. Study the three logical planes the accelerator separates before touching any existing schema.
 
 **Control plane — shared across all tenants.** The control plane handles signup, billing, subscription-tier enforcement, admin backoffice, support tickets, and system status. It holds a tenant registry with exactly this shape per tenant: `{tenant_id, plan, billing, support_contacts, team_public_key}`. No team data lives in the control plane. This is not a convention. This is a hard constraint. If a content record appears in the control plane, that is a design violation to correct.
 
@@ -87,7 +87,7 @@ graph TB
     RS <-->|ciphertext only| T2
 ```
 
-Bridge also defines three tenant trust levels. The default — relay-only — means the operator never holds plaintext. An attested hosted peer is opt-in: the tenant admin issues a role attestation to the hosted peer, enabling backup verification and admin-assisted recovery. Some enterprise tenants run self-hosted nodes and use Bridge only for the control plane. The trust level the product requires is a decision made before the migration is designed.
+The Zone C accelerator also defines three tenant trust levels. The default — relay-only — means the operator never holds plaintext. An attested hosted peer is opt-in: the tenant admin issues a role attestation to the hosted peer, enabling backup verification and admin-assisted recovery. Some enterprise tenants run self-hosted nodes and use the comms mesh only for the control plane. The trust level the product requires is a decision made before the migration is designed.
 
 ---
 
@@ -95,7 +95,7 @@ Bridge also defines three tenant trust levels. The default — relay-only — me
 
 These five decisions are cheap to make before migration begins and expensive to undo after Phase 2. Make them in this order, because each rests on the one above it.
 
-**Decision 1: Per-tenant data isolation.** A shared Postgres schema with tenant-ID filter columns cannot migrate to Bridge's per-tenant data plane without first separating the data planes. This is surgery. It touches every query, every index, every backup job. Do it first, before any local-first work begins. Wire every query through `ITenantContext` from `Sunfish.Foundation`. This interface becomes the migration seam — how a Postgres-backed projection is swapped for a CRDT-backed one without rewriting the UI.
+**Decision 1: Per-tenant data isolation.** A shared Postgres schema with tenant-ID filter columns cannot migrate to the Zone C accelerator's per-tenant data plane without first separating the data planes. This is surgery. It touches every query, every index, every backup job. Do it first, before any local-first work begins. Wire every query through `ITenantContext` from `Sunfish.Foundation`. This interface becomes the migration seam — how a Postgres-backed projection is swapped for a CRDT-backed one without rewriting the UI.
 
 **Decision 2: Event tables over mutable fields.** A schema that stores domain state as last-write-wins field mutations has no natural path to CRDT-backed documents. A schema with append-only event tables for mutable aggregates has a mechanical migration path. Read the event rows. Emit equivalent CRDT operations. Validate the merged state against the prior projection. Every week of new mutable field columns added is a week of migration debt added to the bill. Prefer `TaskBody`, `TaskStatus`, `TaskAuditLog` over a single `Tasks` table with ten nullable columns.
 
@@ -187,7 +187,7 @@ services.AddSunfishKernelSecurity();
 
 `Sunfish.Kernel.Security` issues device keypairs at first launch. Role attestations govern what the hosted-node peer can access. The hosted-node peer holds ciphertext for catch-up-on-reconnect. It cannot decrypt without a team-issued attestation. Configure BYOC (Bring Your Own Cloud) backup for new workspaces at provisioning time. The hosted-node peer is not a backup. It is a relay cache — see Chapter 16 for the storage guarantees. Teams that skip BYOC backup configuration discover this only during an incident. An incident is a bad classroom.
 
-**Success criteria.** New workspaces operate at full fidelity without server connectivity. Gossip anti-entropy converges within the 30-second interval under the test topology. The hosted-node peer holds ciphertext-only — verify this with the Bridge audit tooling before shipping.
+**Success criteria.** New workspaces operate at full fidelity without server connectivity. Gossip anti-entropy converges within the 30-second interval under the test topology. The hosted-node peer holds ciphertext-only — verify this with the comms mesh audit tooling before shipping.
 
 **Reversible at the workspace level.** Individual workspaces that reach Phase 3 can be held there indefinitely. Phase 3 workspaces and Phase 2 workspaces coexist on the same infrastructure without conflict.
 
@@ -273,7 +273,7 @@ Five failure modes recur across Zone C migrations. Name them in planning session
 
 **Failure mode 1: Server-side feature gates re-centralizing the architecture.** This is the most common drift pattern. Phase 2 ships. A product manager asks for a feature gate to roll out a new AP-class feature. An engineer adds a server call to evaluate the gate. Six months later the server is load-bearing for every write because the feature gate call became the pattern for analytics, A/B tests, and rate limiting. The team was not failing at architecture. They were failing at *discipline*. Every individual server call looked harmless. Wire feature flags through `Sunfish.Foundation.FeatureManagement` from Phase 1. It evaluates flags locally against the node's role attestations — no server call required. Any AP-class decision routed through a server call re-centralizes that decision.
 
-**Failure mode 2: Shared Postgres schema blocking per-tenant isolation permanently.** A shared schema with tenant-ID filter columns looks harmless at a few dozen tenants. At a few hundred tenants, the migration cost to per-tenant isolation is disproportionate — data volume, index rebuild time, and cutover risk multiply together. Once committed to a shared schema, reaching Bridge's per-tenant data plane requires a migration project that rivals the original migration. Make this decision in week one.
+**Failure mode 2: Shared Postgres schema blocking per-tenant isolation permanently.** A shared schema with tenant-ID filter columns looks harmless at a few dozen tenants. At a few hundred tenants, the migration cost to per-tenant isolation is disproportionate — data volume, index rebuild time, and cutover risk multiply together. Once committed to a shared schema, reaching the Zone C accelerator's per-tenant data plane requires a migration project that rivals the original migration. Make this decision in week one.
 
 **Failure mode 3: Relay mistaken for a backup.** The hosted-node peer stores ciphertext for catch-up. Teams that skip BYOC backup configuration assume the relay holds their data durably. It does not. The relay is a cache. It evicts. It does not guarantee retention. When a device is destroyed and the team tries to recover from the relay, they discover this constraint during the incident. Configure BYOC backup at workspace provisioning time in Phase 3. Make it non-optional in the provisioning workflow — make it the default the team has to override, not the option the team has to remember.
 

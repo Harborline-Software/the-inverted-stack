@@ -375,7 +375,7 @@ I noted the holding at the per-laptop register.
 
 I did not mourn the GPU.
 
-The list of *queries to run when we surface* grew. The list at the end of Day 48 had thirteen items. The list would have twenty-two items by Day 56 against the chart. The list would carry to surfacing. The system would answer the items at the consortium-port register when the boat surfaced and the Bridge filled. The architecture would close the gap at surfacing. The architecture had built the gap into its specification. The gap was the gap the architecture had been honest about.
+The list of *queries to run when we surface* grew. The list at the end of Day 48 had thirteen items. The list would have twenty-two items by Day 56 against the chart. The list would carry to surfacing. The system would answer the items at the consortium-port register when the boat surfaced and the relay filled. The architecture would close the gap at surfacing. The architecture had built the gap into its specification. The gap was the gap the architecture had been honest about.
 
 The crew did not narrate the adaptation. The adaptation was at the standing register. The standing register was the standing register.
 

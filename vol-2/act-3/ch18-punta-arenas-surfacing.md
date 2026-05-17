@@ -17,7 +17,7 @@ chapter-version: v1
 
 *Final mission log, Mission Day 56, 0441 local. Yusupova, Mission Director. RV Nansen, MERIDIAN-7. Punta Arenas, Chile.*
 
-*Surface secured at 0441 local against the consortium's standing handshake. Mooring complete at the consortium-port berth at the standing register. Bridge channel fully open at the surface-bandwidth allocation. Post-handshake mirror at the consortium port acknowledged at the standing register; full-bandwidth replication of the back-queue priority list opened at the standing handshake.*
+*Surface secured at 0441 local against the consortium's standing handshake. Mooring complete at the consortium-port berth at the standing register. Relay channel fully open at the surface-bandwidth allocation. Post-handshake mirror at the consortium port acknowledged at the standing register; full-bandwidth replication of the back-queue priority list opened at the standing handshake.*
 
 *Mission summary at the close. Mission duration: fifty-six days from departure. Crew complement: ten at departure; ten at return. Crew fatalities: zero. Crew injuries: one. Reyes, J., minor abrasions, Mission Day 47, leak event; cleared at the medical register on Mission Day 49. Operational damage: starboard sensor head one, leak source, compartment-isolated and decommissioned per procedure; central workstation one, compute hub, water damage at the rack register, decommissioned per procedure. Both losses recovered at the procedure register; capability degradation absorbed at the per-laptop register through the back nine days; capability restoration scheduled against the Punta Arenas resupply.*
 

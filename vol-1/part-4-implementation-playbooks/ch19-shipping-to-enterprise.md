@@ -203,7 +203,7 @@ Revoking MDM compliance propagates to data access within minutes, not at the nex
 ```mermaid
 sequenceDiagram
     participant Node
-    participant Relay as Bridge Relay
+    participant Relay as Comms Mesh Relay
     participant MDM as MDM Compliance
 
     Node->>Relay: Connect + present attestation token
@@ -304,7 +304,7 @@ Some enterprise customers have endpoints that cannot reach the public internet. 
 Four configuration steps produce strict posture, all in `node-config.json` and the surrounding infrastructure:
 
 1. Set `updateServerUrl` to the internal mirror URL.
-2. Set `relayEndpoint` to the self-hosted Bridge (the Zone C hybrid SaaS accelerator) relay.
+2. Set `relayEndpoint` to the self-hosted Zone C comms mesh relay.
 3. Omit any outbound telemetry endpoint.
 4. Apply operator-level firewall rules denying egress to the public internet.
 
@@ -347,17 +347,17 @@ The safe-to-block list for air-gap environments:
 |---|---|---|
 | Public package feeds (nuget.org) | Dev build only | Yes |
 | Public update feed | Auto-update | Yes — use internal mirror |
-| Managed relay SaaS | Sync | Yes — use internal Bridge |
+| Managed relay SaaS | Sync | Yes — use internal relay |
 | Telemetry endpoint | Diagnostics | Yes |
 | OCSP / CRL responders | TLS validation | **No — configure internal OCSP** |
 
-### Self-Hosted Bridge Relay — Deployment Details
+### Self-Hosted Relay — Deployment Details
 
-Ch16 specifies the Bridge relay architecture in full; this section covers the operational details an enterprise IT team needs to deploy it. The relay ships as a single statically-compiled binary and as an OCI container image (`sunfish/bridge-relay`). Resource profile for a 50-person team: 512 MiB RAM, 2 vCPU, 10 GiB disk for operational logs, no persistent state required beyond the subscription routing table. A 500-person enterprise deployment runs on 2 GiB RAM, 4 vCPU with a horizontal-scaling configuration behind a TLS-terminating load balancer. The relay listens on port 443 (TLS 1.3 required), authenticates connections against Ed25519 public keys registered in `enterpriseAttestationIssuerPublicKey`, and forwards CRDT (Conflict-free Replicated Data Type) operation frames at the network layer without access to payload content.
+Ch16 specifies the relay architecture in full; this section covers the operational details an enterprise IT team needs to deploy it. The relay ships as a single statically-compiled binary and as an OCI container image (`sunfish/bridge-relay`). Resource profile for a 50-person team: 512 MiB RAM, 2 vCPU, 10 GiB disk for operational logs, no persistent state required beyond the subscription routing table. A 500-person enterprise deployment runs on 2 GiB RAM, 4 vCPU with a horizontal-scaling configuration behind a TLS-terminating load balancer. The relay listens on port 443 (TLS 1.3 required), authenticates connections against Ed25519 public keys registered in `enterpriseAttestationIssuerPublicKey`, and forwards CRDT (Conflict-free Replicated Data Type) operation frames at the network layer without access to payload content.
 
-Jurisdictional deployment matters. For compliance-mandated markets — DIFC-licensed firms under UAE DPL (Data Protection Law) 2022 and DIFC DPL 2020, Indian BFSI under RBI data localization, EU organizations under Schrems II, CIS (Commonwealth of Independent States) organizations under Russia Federal Law 242-FZ and import substitution mandates, and the broader compliance matrix in Appendix F — the self-hosted Bridge relay must run on infrastructure within the required jurisdiction (on-premise VM, sovereign cloud, or domestic data center). This is not a preference. It is the compliance configuration that makes the relay-sovereignty guarantee legally defensible. Two-node HA deployment is the minimum for production use; three-node with automatic failover is the recommended profile for enterprise SLAs.
+Jurisdictional deployment matters. For compliance-mandated markets — DIFC-licensed firms under UAE DPL (Data Protection Law) 2022 and DIFC DPL 2020, Indian BFSI under RBI data localization, EU organizations under Schrems II, CIS (Commonwealth of Independent States) organizations under Russia Federal Law 242-FZ and import substitution mandates, and the broader compliance matrix in Appendix F — the self-hosted relay must run on infrastructure within the required jurisdiction (on-premise VM, sovereign cloud, or domestic data center). This is not a preference. It is the compliance configuration that makes the relay-sovereignty guarantee legally defensible. Two-node HA deployment is the minimum for production use; three-node with automatic failover is the recommended profile for enterprise SLAs.
 
-The 2022 SaaS service terminations are the documented historical demonstration of why self-hosted relay matters. Adobe. Autodesk. Microsoft. Figma ([figma.com](https://www.figma.com/), the design tool). Dozens of others suspended service across Russia and CIS markets under sanctions enforcement. Organizations whose relay infrastructure was a vendor-operated SaaS lost access to their own data when the vendor was directed to stop serving them. The self-hosted Bridge relay is the architectural answer — not a theoretical safeguard, but the specific infrastructure deployment posture that converts a survivable-by-SLA problem into a non-problem.
+The 2022 SaaS service terminations are the documented historical demonstration of why self-hosted relay matters. Adobe. Autodesk. Microsoft. Figma ([figma.com](https://www.figma.com/), the design tool). Dozens of others suspended service across Russia and CIS markets under sanctions enforcement. Organizations whose relay infrastructure was a vendor-operated SaaS lost access to their own data when the vendor was directed to stop serving them. The self-hosted relay is the architectural answer — not a theoretical safeguard, but the specific infrastructure deployment posture that converts a survivable-by-SLA problem into a non-problem.
 
 ### Power-Interruption Resilience
 
@@ -371,11 +371,11 @@ Producing the documentation enterprise regulators require is itself an operation
 
 **SOC 2 Type II evidence package.** The node's audit log (Chapter 15 specifies the tamper-evident structure) is the operational evidence source for access-control and data-handling SOC 2 controls. Export the audit log monthly with the `sunfish admin audit-export --from <date> --to <date>` command; the export produces a CSV-and-JSON bundle that maps directly onto the SOC 2 Trust Services Criteria (CC6 for logical access, CC7 for system operations, CC8 for change management). The SBOM, the Grype CVE report, and the MDM compliance attestation report together satisfy CC7.2 vulnerability management.
 
-**GDPR (General Data Protection Regulation) Article 30 records of processing activities.** Assemble from the bucket definitions (what categories of personal data the node processes), the node-config.json (where data is stored and for what purpose), the SBOM (what processing tools are used), and the MDM deployment manifest (which endpoints hold which data categories). A quarterly rollup of these into a GDPR Article 30 document satisfies EU controller obligations. Add the Bridge relay's data processing agreement — naming the relay operator as an Article 28 processor and stating the supplementary measures under Schrems II — for any cross-border deployment.
+**GDPR (General Data Protection Regulation) Article 30 records of processing activities.** Assemble from the bucket definitions (what categories of personal data the node processes), the node-config.json (where data is stored and for what purpose), the SBOM (what processing tools are used), and the MDM deployment manifest (which endpoints hold which data categories). A quarterly rollup of these into a GDPR Article 30 document satisfies EU controller obligations. Add the relay's data processing agreement — naming the relay operator as an Article 28 processor and stating the supplementary measures under Schrems II — for any cross-border deployment.
 
 **EU Cyber Resilience Act SBOM obligations.** The CRA entered into force October 2024 with a 36-month transition for product-specific SBOM obligations. Syft-generated CycloneDX SBOMs signed and attested under SLSA Level 3 satisfy the operative CRA requirements for software products sold in EU markets. Publish the signed SBOM at a predictable URL so EU enterprise buyers can verify before procurement completes.
 
-**Major regulatory regimes (Appendix F coverage matrix).** Each regime has its own documentation format but shares a common evidence substrate: what data the architecture handles, where it lives jurisdictionally, who has access, and what happens on incident. The artifacts above — audit log export, SBOM, MDM compliance manifest, Bridge relay jurisdictional configuration — compose into every regime's required documentation with regime-specific formatting. The underlying evidence is the same because the architecture is the same.
+**Major regulatory regimes (Appendix F coverage matrix).** Each regime has its own documentation format but shares a common evidence substrate: what data the architecture handles, where it lives jurisdictionally, who has access, and what happens on incident. The artifacts above — audit log export, SBOM, MDM compliance manifest, relay jurisdictional configuration — compose into every regime's required documentation with regime-specific formatting. The underlying evidence is the same because the architecture is the same.
 
 ---
 
@@ -406,7 +406,7 @@ Enterprise customers require runbooks before they sign. Deliver three runbooks b
 
 1. Confirm the employee's role and team membership in the identity provider. The role determines which attestation bundle the administrator issues.
 2. The administrator runs the founder-to-joiner attestation issuance — per the `Sunfish.Kernel.Security` surface, this is `IssueJoinerAttestationAsync(teamId, joinerPublicKey, founderPrivateKey, ct)`. The joiner public key comes from the node's first-run key generation; the administrator receives it through the onboarding QR code or paste-bundle flow specified in Chapter 17.
-3. Pre-seed `node-config.json` on the target device via MDM, with `teamId`, `relayEndpoint` (pointing at the jurisdictional self-hosted Bridge relay), `allowedBuckets` scoped to the role's authorized record types, and `enterpriseAttestationIssuerPublicKey` set to the team's issuer public key.
+3. Pre-seed `node-config.json` on the target device via MDM, with `teamId`, `relayEndpoint` (pointing at the jurisdictional self-hosted relay), `allowedBuckets` scoped to the role's authorized record types, and `enterpriseAttestationIssuerPublicKey` set to the team's issuer public key.
 4. Deploy the signed installer through Intune, Jamf, SCCM, SOTI, MaaS360, or Ivanti per the MDM section above. The daemon starts automatically on install, reads the pre-seeded config, and presents the onboarding paste-bundle surface on first user login.
 5. The new employee pastes the attestation bundle. The node validates the signature against the `enterpriseAttestationIssuerPublicKey`, stores role keys in the OS-native keystore, and initiates first sync with the relay.
 6. Verify successful onboarding: the administrator checks the team audit log for a `NodeJoined` event with the correct role attestation and the expected peer node identity. Expected output:

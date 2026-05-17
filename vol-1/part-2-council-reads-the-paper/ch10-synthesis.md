@@ -1,143 +1,136 @@
 # Chapter 10 — Synthesis: What the Council Finally Agreed On
 
-<!-- icm/prose-review -->
+<!-- icm/draft -->
 
 <!-- Target: ~2,500 words -->
 <!-- Source: R1, R2 -->
 
-Five experts. Two rounds. Two blocks cleared, fifteen conditions attached, one unconditional PROCEED, and an architecture that entered Round 1 as a proposal and exited Round 2 as a structural commitment. Shevchenko blocked on CRDT (Conflict-free Replicated Data Type) garbage collection and Flease split-writes. Kelsey blocked on the missing commercial model. Okonkwo conditioned on key compromise response. Ferreira conditioned on the export path. Voss conditioned on MDM (Mobile Device Management) governance and SBOM (Software Bill of Materials). Every block cleared. Every condition produced a specific change in the architecture. The architecture that survived is not the architecture that was proposed. It is the architecture the council allowed to proceed. This is what the review found, where it pulled in opposing directions, and what the result became.
+This chapter does not follow the structure of the five that preceded it. Each of those chapters had two acts: a council member identified a failure, the revision addressed it, the verdict followed. That structure served the evaluation. The evaluation is over.
 
+What remains is a different question — not what each reviewer found, but what they all found. Not the five separate verdicts, but the one pattern running through all of them. A summary reports what happened. A synthesis identifies the pattern that connects what happened.
 
----
-
-## Round 1: The Architecture Fails
-
-The council entered with different concerns but arrived at the same judgment. The architecture was not ready.
-
-The aggregate Round 1 scorecard told one story on the surface and concealed another underneath. The 6.8 average across five members sounds like a reasonable start. Two members issued hard blocks. When two of five reviewers block, the paper does not proceed. No averaging resolves that. Averaging is for conditions, not blocks.
-
-| Member | Domain Avg | Verdict |
-|--------|-----------|---------|
-| Dr. Voss — Enterprise Infrastructure | 7.1 | PROCEED WITH CONDITIONS |
-| Prof. Shevchenko — Distributed Systems | 7.1 | **BLOCK** |
-| Nia Okonkwo — Security | 7.3 | PROCEED WITH CONDITIONS |
-| Jordan Kelsey — Product | 5.5 | **BLOCK** |
-| Tomás Ferreira — Local-First | 7.0 | PROCEED WITH CONDITIONS |
-
-Shevchenko's block was technical. Two separate correctness gaps, each serious enough on its own. The CRDT garbage collection strategy was absent. Without a GC policy, every node accumulates operation log history without bound — a performance cliff that hits any deployment running longer than about twelve months. The Flease split-write window was unaddressed. If the lease-holder becomes unreachable during a write and a new lease is elected, two nodes can briefly and simultaneously believe they hold write authority. That window is either safe because CRDT merge absorbs it, or it creates a data corruption scenario. The paper said nothing about which.
-
-Kelsey's block was commercial. The first customer archetype was completely absent. Not vague — absent. A paper proposing a commercial architecture that cannot name who pays first, why they pay, and how to find them has not written the business case yet. The OSS-to-paid conversion mechanism had the same problem. The paper implied that teams would pay for the relay when they need it without specifying what causes that need to crystallize into a transaction.
-
-Shevchenko's block and Kelsey's block were entirely separate failures. Either could have been resolved without touching the other. The paper had two distinct things to fix, not one.
-
-Okonkwo did not block. Her verdict carried a condition that functioned like a soft block. Key compromise incident response was absent. She graded the dimension at 5/10 and conditioned her PROCEED on the issue being resolved before any security review sign-off. For a system where a compromised node key potentially exposes all data the node had ever been authorized to read, the absence of a detection mechanism, a re-keying procedure, and a user-visible notification was not an oversight. It was a gap in the threat model.
-
-Ferreira's block — data portability — was the sharpest philosophical objection in either round. A paper that argues for data ownership as a core principle and then omits the export button contradicts itself in the most visible possible way. His words: "This is a philosophical and practical blocker."
-
-The Round 1 commendations marked what the revision had to preserve. Shevchenko and Ferreira commended the three-tier CRDT resolution model. Okonkwo and Shevchenko commended subscription filtering at the send tier. Voss commended the MDM compliance check at capability negotiation. Okonkwo commended the EAS attestation and key wrapping distinction. Kelsey commended the OSS public-good reframe. These were not politeness — they marked the parts of the architecture that worked.
+The pattern is this: every block and every condition the council produced, across two rounds and five domains, reduces to the same structural concern. Where does authority live, and who enforces it when it is contested?
 
 ---
 
-## Round 2: The Architecture Survives (with Conditions)
+## The Enterprise Lens — Voss
 
-The revision cleared every BLOCK verdict.
+Dr. Voss arrived representing the procurement officers, the MDM administrators, and the compliance teams that approve what runs on their endpoints. Her domain is not architecture for its own sake. Her domain is architecture that can be defended in a procurement review, where the question is never about elegance and always about demonstrable control.
 
-| Member | R1 Avg | R2 Avg | Delta | Verdict |
-|--------|--------|--------|-------|---------|
-| Dr. Voss | 7.1 | 7.2 | +0.1 | PROCEED WITH CONDITIONS |
-| Prof. Shevchenko | 7.1 | 6.8 | -0.3 | PROCEED WITH CONDITIONS |
-| Nia Okonkwo | 7.3 | 7.0 | -0.3 | PROCEED WITH CONDITIONS |
-| Jordan Kelsey | 5.5 | 6.8 | +1.3 | PROCEED WITH CONDITIONS |
-| Tomás Ferreira | 7.0 | 7.6 | +0.6 | PROCEED — NO CONDITIONS |
-| **Overall** | **6.8** | **7.1** | **+0.3** | **PROCEED WITH CONDITIONS** |
+Her through-line claim: authority over a node's network access belongs to the MDM platform, not the vendor. The architecture earns procurement approval by placing the compliance check at capability negotiation — before data crosses the boundary — and by specifying the incident response procedure that demonstrates the authority chain when something goes wrong.
 
-Ferreira's unconditional PROCEED is the most meaningful single verdict in Round 2. He is the council member with the strictest local-first standards — a practitioner who has shipped production local-first applications and watched the failure modes that theory misses. He checked the revised architecture against all seven Kleppmann ideals and found every one satisfied. A practitioner with the hardest standards gave the cleanest pass.
+The MDM compliance check at capability negotiation is not a configuration option. It is the enforcement point. A compromised non-compliant node is rejected before it touches data, not detected after. The SBOM gives the enterprise authority over supply chain provenance — the ability to name every component and its origin before the software is admitted to a managed device fleet. The incident response runbook closes the loop: when the authority chain is tested under a real failure, the runbook specifies who acts, in what order, with what tools.
 
-Kelsey's +1.3 delta is the largest movement in either direction. His Round 1 score was the lowest from any member — 5.5, reflecting a commercial section that was not yet written. Round 2 addressed the construction vertical selection, the five-step customer development path, and the relay economics model. The commercial section moved from the architecture's weakest section to a credible business model in a single revision.
-
-Shevchenko's -0.3 delta is the one number that requires explanation. His score dropped. That did not signal a failure. It signaled the opposite. He entered Round 2 with his two blocking issues resolved and raised new technical concerns he had not seen before: stale peer recovery protocol, CRDT operation validation, sync daemon buffer behavior during prolonged partition. These are real gaps, but they are implementation-depth concerns, not correctness failures. Shevchenko's score dropped because he took the architecture more seriously in Round 2, not less.
-
-The council's consensus statement captures what happened between rounds: "The new concerns raised in Round 2 are second-order — they arise from the paper being taken seriously as an implementation guide rather than a conceptual proposal."
-
-The consensus was not frictionless. Three tensions ran across Round 2.
-
-**Okonkwo and Kelsey.** Okonkwo's insistence that the key-compromise incident-response procedure be executable by a non-cryptographer IT administrator before first external release conflicted directly with Kelsey's commercial-timeline pressure to ship the dual-license structure and first-customer acquisition path on a revenue-bearing cadence. The architecture resolved this by classifying both as pre-GA blockers rather than post-GA roadmap items. Neither ships without the other.
-
-**Ferreira and Voss.** Ferreira's plain-file export — the Property 7 proof of ownership — collided with Voss's enterprise data-governance requirements, where some data categories sit under regulatory custody that constrains free export (DIFC DPL 2020 for DIFC-licensed financial entities, RBI's 2018 BFSI localization circular for Indian payment data). The resolution: export must exist for user-owned records and must disclose the categories where regulatory custody overrides user export rights.
-
-**Shevchenko and Kelsey.** The quietest friction. Shevchenko's correctness rigor required formal documentation of stale peer recovery before implementation. Kelsey's unit economics required shipping with known rough edges to reach revenue. The resolution was to ship the protocol with documented known gaps rather than perfecting it first, but to name the gaps in the public specification.
-
-Every resolution was made. None of them were free.
+Enterprise procurement requires exactly this. Not a promise of control, but a specified mechanism for exercising it.
 
 ---
 
-## The Seven Non-Negotiables
+## The Distributed Systems Lens — Shevchenko
 
-Five reviewers across two rounds produced hundreds of individual observations. Most were specific to one member's domain. Seven properties were different. They appeared across multiple members, survived both rounds, and were treated as mandatory without negotiation. Part III is built against these seven constraints.
+Prof. Shevchenko held the architecture to a standard that most distributed systems proposals never reach: prove it, do not assume it. A gap in a correctness argument is not a known risk to be managed — it is an unanswered question about whether the system behaves correctly at all.
 
-**1. Data minimization at the protocol layer.** Subscription filtering happens at the send tier. Not in the application layer. Not at the receive tier. A node receives only the data its role authorizes, and that constraint is enforced before the data leaves the sending node. Okonkwo called this "a genuine architectural achievement, not a compliance checkbox." Shevchenko commended it as the correct security invariant, noting that most implementations get it backwards. An application-layer filter intercepts the same data at the wrong point — after it has already been transmitted.
+His through-line claim: authority over writes to CP-class records belongs to the lease-holder, and the architecture must prove — not assume — that a split-write window cannot produce incorrect results that survive merge. The three-tier GC policy and the Flease split-write proof establish the authority boundaries that make the distributed model correct, not merely plausible.
 
-**2. MDM compliance check at capability negotiation.** Before a node exchanges any data, it must pass an MDM compliance check. A node that fails the check does not proceed to the capability negotiation phase. Voss's commendation was precise: a compromised non-compliant node is rejected before it touches data. Enterprise deployments cannot rely on reactive detection. The compliance gate must be proactive and early. This constraint belongs in the sync daemon handshake protocol, not in an application policy layer.
+The split-write proof is the authority declaration. Two nodes cannot simultaneously hold write authority for a CP-class record without the architecture specifying what happens when their writes collide. The Flease lease coordination resolves that ambiguity: the lease-holder is the authority, the authority is contested only during a bounded lease-expiry window, and the write semantics during that window are formally specified. The three-tier GC policy is the authority over history: which operation log entries must be preserved to maintain correctness across merge, and which can be discarded when they are no longer needed.
 
-**3. Three-tier CRDT resolution model.** The architecture does not apply CRDT merge uniformly across all data types. Documents and collaborative content sit in the AP tier, where CRDT merge handles conflicts automatically. Operations that require a single writer — sequential ID generation, inventory quantity, appointment slots, financial transaction totals — sit in the CP tier under distributed lease coordination. Financial ledger entries sit outside the CRDT entirely. They are append-only, posted by the domain ledger engine, and not subject to merge. Shevchenko commended this as "the most technically honest treatment of CRDT applicability seen in a local-first architecture proposal." The three-tier model works because it stops claiming CRDT solves problems it does not solve.
-
-**4. DEK (Data Encryption Key)/KEK (Key Encryption Key) envelope encryption with rotation proportional to document count.** Each document holds a data encryption key (DEK). Each role holds a key encryption key (KEK) that wraps the DEKs for documents that role can access. When a role is revoked, the KEK rotates, and DEKs for affected documents are re-wrapped under the new KEK. An attacker who compromises a role KEK gains access to documents that key could decrypt. Not documents outside that role's scope. Not forward access after rotation. Okonkwo's key hierarchy requirement — root org key to role KEKs to per-node wrapped keys to per-record DEKs — codifies exactly this structure.
-
-**5. Dual-license structure from day one.** AGPLv3 governs the open-source repository. A commercial license is available for organizations that cannot accept AGPLv3's network use clause. Kelsey's condition was the sharper one. The CLA and dual-license structure must be in place before the repository opens. Retrofitting a license change after the community has formed requires contributor license agreements from every prior contributor. The structure must be established at founding.
-
-**6. Non-technical disaster recovery path.** A non-technical user must be able to recover their complete data after total device failure without calling support. Data ownership is meaningless if only a developer can perform the restore. The non-technical disaster recovery walkthrough is not a UX nicety. It is the proof of the ownership claim.
-
-**7. Plain-file export with no vendor cooperation required.** Users can export all their data to a standard file format — plain files, CSV, JSON — without contacting the vendor, without the vendor's cooperation, and without any special tooling beyond a standard file manager. A user who can export their data can leave. A user who cannot is not in control, regardless of what the marketing copy says.
-
-These seven properties function as architectural invariants. They operate in a deployment context where intermittent connectivity is the baseline operating condition for hundreds of millions of enterprise workers. GCC (Gulf Cooperation Council) field operations, rural Indian BFSI (Banking, Financial Services, and Insurance), Sub-Saharan African field deployments, rural Latin American secondary cities — these are not edge cases the architecture gracefully handles. The non-negotiables are the structural answer to that deployment reality, not optional resilience layers for a cloud-stable-by-default product.
-
-The council's verdict rests on one empirical anchor the architecture can point to without hedging. In 2022, Adobe, Autodesk, Microsoft, Figma ([figma.com](https://www.figma.com/), the design tool), and dozens of other Western SaaS (Software as a Service) vendors suspended service across Russia and CIS (Commonwealth of Independent States) markets under sanctions enforcement. Hundreds of thousands of organizations that had built operational workflows over more than a decade lost access with days of notice. Every non-negotiable above is a constraint that would have changed the outcome for affected organizations. Data minimization and DEK/KEK encryption kept ciphertext locally even where relay access was severed. The three-tier CRDT model and plain-file export preserved operational continuity independent of vendor availability. The dual-license structure meant the software itself was not removable from the customer even when the vendor's service was. The council did not build these seven properties against a hypothetical threat. They built them against a documented failure the industry had already produced.
+Shevchenko's score dropped in Round 2 not because the architecture weakened but because he took it more seriously. An architecture reviewed as a conceptual proposal gets one set of questions. An architecture reviewed as an implementation guide gets harder ones. The harder questions arrived. The architecture was in a position to answer most of them.
 
 ---
 
-## The Open Questions
+## The Security Lens — Okonkwo
 
-The council cleared the architecture for alpha implementation. Six questions remain genuinely open. Not because the council avoided them. Because they represent constraints the implementation must navigate without a clean answer.
+Nia Okonkwo's concern was not the key hierarchy in normal operation. Any architecture that handles keys in normal operation can look correct. Her question was the failure case: what happens when the hierarchy is violated, who knows, and what do they do?
 
-**Multi-jurisdiction data sovereignty and CRDT systems.** The Right to Erasure under GDPR Article 17 — and the parallel erasure rights across LGPD, LFPDPPP, POPIA, Kenya DPA, NDPR, DPDP, Japan PIPA, South Korea PIPA, PIPL, and others enumerated in Appendix F — creates a structural tension with CRDT full-history retention. Crypto-shredding offers a uniform resolution: destroy the DEK, render the data cryptographically inaccessible. But cryptographically inaccessible is not the same as erased, and no DPA has issued a binding opinion on crypto-shredding equivalence; Article 11 GDPR is the closest formal anchor and EDPB pseudonymization guidance does not fully resolve the question. Schrems II (CJEU C-311/18, 2020) adds a parallel cross-border transfer constraint that the architecture's local-retention model answers structurally, not contractually. China's MLPS 2.0 cybersecurity classification, South Korea's ISMS-P certification regime, Russia's 242-FZ, DIFC DPL 2020, India's RBI BFSI localization circular, and Japan's APPI all impose deployment shapes the architecture must honor — Chapter 15 specifies the compliance framework mapping; Appendix F catalogues the per-jurisdiction obligations.
+Her through-line claim: authority over encrypted data resides in the key hierarchy, and the architecture must specify what happens when that hierarchy is violated — not just what it looks like in normal operation. The key compromise response procedure is the difference between a security architecture and a security story.
 
-**Relay geographic architecture.** The managed relay routes ciphertext only. The metadata it observes — which nodes communicate with which, at what times, at what volume — is itself subject to jurisdictional data-residency scrutiny. For EU buyers under Schrems II, DIFC-licensed firms under DIFC 2020, Russian organizations under 242-FZ, or Chinese organizations under PIPL, the question of where the relay operator's infrastructure is legally located determines whether the architecture satisfies regulatory transfer constraints. The self-hosted relay path answers this for high-sensitivity deployments. The managed relay requires jurisdictional deployment choices: EU-resident for Schrems II, Russia-resident for 242-FZ, and so on. This is one of the most consequential implementation decisions in the architecture and is currently unspecified. Chapter 16 addresses the relay architecture; relay geographic residency becomes a per-deployment choice with regulatory consequences. A distinct threat model operates in parallel: state-mandated data access on cloud-hosted infrastructure. Local key management, where keys never leave the user's device, addresses this threat model architecturally — the relay cannot produce decryptable content because the relay does not possess decryptable content. This is a deployment consideration relevant across multiple jurisdictions, not a political judgment about any specific government.
+The DEK/KEK envelope hierarchy places authority in a verifiable chain: root org key, role key encryption keys, per-node wrapped keys, per-record data encryption keys. Each layer's authority is bounded. A compromised role KEK exposes only the records that key could decrypt — not other roles' records, not forward records after rotation. That scoping is the authority enforcement at rest.
 
-**Relay commoditization moat.** The managed relay is the primary revenue source. The relay protocol is open-source. A cloud provider can offer a managed relay at infrastructure cost with no margin. What makes the vendor's relay defensible? Kelsey named this the most likely year-two failure mode. Datadog, Snowflake, and MongoDB Atlas all faced the same threat — open underlying technology, hyperscaler willing to commoditize at infrastructure cost — and survived through the same play: vertically integrated product experience (telemetry pipelines, query optimization, ops-tooling) that the hyperscaler's commodity offering does not match. The architecture's analogous play would be vertically integrated relay-plus-onboarding (signed-installer pipelines, MDM integrations, regulated-tier deployment templates) where the value sits above the protocol layer. That play is plausible but not yet specified. Operational moats require a different kind of specification, and the architecture document currently leaves the specification at "support quality, product-integrated onboarding, reliability SLAs" — defensible as a direction, undeveloped as a plan.
-
-**Formal validation of domain-level merge invariants.** When a CRDT operation arrives at a node — structurally valid, correctly signed, from a legitimate peer — but semantically incorrect because the client had a software bug, the CRDT merges it faithfully and propagates the corruption to all peers. This is an inherent property of any convergent system. Structural validity does not imply semantic correctness. The architecture specifies operation validation at insertion, but formal criteria require domain-specific specification. Part III defines the validation layer. Each deployment defines its own domain invariants.
-
-**KEK compromise incident response under realistic enterprise conditions.** The procedure exists in the revised architecture. The open question is not whether it is specified. It is whether it is executable. An IT administrator who is not a cryptographer. A node offline for an unknown duration. A role KEK in use for months. The procedure needs operational testing. Alpha implementation is the right time to find the gaps.
-
-**Analytics and telemetry without re-centralizing.** Ferreira's observation about implementation drift is the most likely long-term architectural risk. In a local-first architecture, a server-side analytics endpoint is not available by default. Teams that add one, for valid product development reasons, begin re-centralizing the architecture in exactly the way the original local-first ideals warn against [1]. The architecture must specify an analytics model before implementation teams face the pressure: opt-in telemetry only, aggregate statistics through relay metadata, or no analytics at all. Not choosing is also a choice. Made under pressure, not deliberation.
-
-These six questions are not architectural flaws. They are known constraints the implementation must navigate. Part III specifies each component with these constraints in view.
+The compromise response procedure is the authority enforcement under failure. Detection, re-keying, notification, audit trail. An architecture that specifies the key hierarchy but not the recovery procedure has specified the normal-operation claim without proving it holds when the authority chain is broken. Okonkwo required the proof. The revision provided it.
 
 ---
 
-## How the Council Verdict Shapes Part III
+## The Product and Economic Lens — Kelsey
 
-The council's PROCEED with fifteen conditions is not a finished design. It is a green light to build, with a specific list of things to get right.
+Jordan Kelsey's block was not about the technology. It was about the claim. An architecture that cannot name who pays first, for what, and how, has not written its business case. The technology proves the architecture is possible. The business case proves the architecture can survive long enough to matter.
 
-Part III is structured against the seven non-negotiables. Chapter 11 specifies the node kernel, including the plugin contract that enforces the three-tier CRDT model. Chapter 12 specifies the CRDT engine and data layer, including the GC policy, the stale peer recovery protocol, and the operation validation layer Shevchenko conditioned in Round 2. Chapter 13 specifies schema migration — the hardest operational problem that underlies the stale peer recovery condition directly. Chapter 14 specifies the sync daemon protocol, including the five-phase handshake, the data minimization invariant at the send tier, and the distributed lease coordination governing CP-class operations. Chapter 15 specifies the security architecture, including the full DEK/KEK hierarchy, the key compromise incident response procedure, and the compliance framework mapping Okonkwo conditioned. Chapter 16 specifies persistence beyond the node, including the relay architecture, the BYOC (Bring Your Own Cloud) backup model, and the plain-file export path Ferreira required.
+His through-line claim: authority over the first transaction belongs to a named customer with a named pain, not to a demographic. The architecture did not become commercially viable when it added a relay pricing model — it became viable when it identified a specific failure mode in a specific industry and built the conversion trigger around that failure.
 
-The fifteen conditions are distributed across Part III and Part IV, addressed where they are architecturally relevant. The stale peer recovery protocol belongs in Chapter 12, alongside the GC policy that creates the condition under which it is needed. The admin tooling sketch belongs in Chapter 19, alongside the MDM deployment guidance. The GDPR Article 17 crypto-shredding treatment belongs in Chapter 15, alongside the compliance framework mapping.
+The construction project manager who needs field sync to work when the cell tower drops is not an archetype. She is the first paying customer, and the architecture works because it solves her specific problem in a way no SaaS relay can. The relay subscription is the authority transfer point from open-source artifact to funded project. The conversion trigger — NAT traversal failure at the relay — is the specific moment when the pain is acute enough to become a transaction.
 
-The council reviewed an architecture document. Part III is the architecture. The two are different objects.
+Commercial authority requires specificity. A general-purpose platform proposition defers the authority question to some future customer who will understand the value. A named vertical closes the question now.
 
-Chapters 5 through 10 were a procedure. A proposal submitted, reviewed, blocked, revised, and approved under conditions. The reader witnessed a process. The architecture had to be argued for, defended, and refined against objection. It arrived at its current form through that process. The Flease lease coordination, the send-tier subscription filter, the DEK/KEK rotation policy are not arbitrary choices. They are specific answers to specific blocks.
+---
+
+## The Local-First Practitioner Lens — Ferreira
+
+Tomás Ferreira's objection was philosophical before it was technical. A paper arguing for data ownership that does not specify how a user exports their data in an application-independent format does not deliver data ownership. It delivers data custody under better conditions. Custody and ownership are not the same word.
+
+His through-line claim: authority over user data cannot be asserted architecturally if it cannot be exercised practically. The data portability path — one command producing JSON, CSV, and Markdown from the local node, with no vendor cooperation required — is the only honest implementation of the ownership claim.
+
+The export command is the authority exercise mechanism. A user who cannot retrieve their data in a form that any other application can read has a theoretical ownership claim with no practical enforcement. The non-technical disaster recovery walkthrough closes the second gap: authority is recoverable, not just theoretical. A non-technical user who loses their device can restore their complete data without calling support. The community governance model specifies the third layer: authority transfer for the project itself, so the architecture does not become vendor-dependent at the governance layer after establishing independence at the data layer.
+
+Ferreira's unconditional PROCEED in Round 2 — from the strictest local-first practitioner on the council — is the single most meaningful verdict in the entire review.
+
+---
+
+> **Round 2 Scorecard**
+>
+> | Member | Domain | R1 Avg | R2 Avg | Delta | Verdict |
+> |--------|--------|--------|--------|-------|---------|
+> | Dr. Voss | Enterprise Infrastructure | 7.1 | 7.2 | +0.1 | PROCEED WITH CONDITIONS |
+> | Prof. Shevchenko | Distributed Systems | 7.1 | 6.8 | −0.3 | PROCEED WITH CONDITIONS |
+> | Nia Okonkwo | Security | 7.3 | 7.0 | −0.3 | PROCEED WITH CONDITIONS |
+> | Jordan Kelsey | Product | 5.5 | 6.8 | +1.3 | PROCEED WITH CONDITIONS |
+> | Tomás Ferreira | Local-First | 7.0 | 7.6 | +0.6 | PROCEED — NO CONDITIONS |
+> | **Overall** | | **6.8** | **7.1** | **+0.3** | **PROCEED WITH CONDITIONS** |
+
+---
+
+## The Question Each Lens Was Asking
+
+The five reviewers arrived with different vocabularies and different failure modes as their primary concern. Voss cared about procurement. Shevchenko cared about correctness. Okonkwo cared about key compromise. Kelsey cared about commercial survival. Ferreira cared about user custody. Five domains. Five sets of blocking criteria. Five distinct definitions of what success required.
+
+The underlying question was the same in every case: where does authority live, and who enforces it when it is contested?
+
+This is not a coincidence. It is structural. The architecture that emerged from two rounds of adversarial review is an architecture because it resolved this question consistently across all five domains. The consistency is the synthesis.
+
+The architecture's answer has four components.
+
+**Authority lives at the edge.** The node holds the data. The node holds the keys — wrapped and role-scoped, but node-resident. The node enforces capability negotiation. The relay is a forwarder of ciphertext. It holds no authority over plaintext or keys. Every council member, from a different starting point, arrived at the conclusion that centralized authority was the failure mode they were protecting against. Voss's MDM compliance check, Shevchenko's lease holder, Okonkwo's key hierarchy, Ferreira's export path — all of them locate authority at the edge, not at the center.
+
+**Authority is encoded cryptographically, not contractually.** The vendor cannot assert authority over a node's data because the vendor does not hold the decryption keys. The enforcement is structural. A contract can be voided. A key hierarchy cannot be unilaterally revised by the vendor after deployment. Okonkwo's DEK/KEK envelope, Ferreira's portable export format, Shevchenko's lease-holder protocol — all encode authority in a structure that cannot be overridden by vendor policy.
+
+**Authority is recoverable through explicit procedure.** Voss's incident response runbook. Okonkwo's key compromise re-keying procedure. Ferreira's export path. Shevchenko's stale peer recovery protocol. In every domain, the council required not just a stated authority but a specified recovery path. An authority that cannot be recovered when it is violated is not an authority — it is an assumption. The procedures are the proofs.
+
+**Authority is auditable.** The CRDT operation log is append-only and tamper-evident. The MDM compliance attestation is presented and verified at capability negotiation. The role attestation chain is signed and verifiable at the boundary. Every authority assertion leaves a verifiable trace. Kelsey's dual-license structure is auditable authority over commercial terms: the user can verify what license applies and what that license permits. Ferreira's export path is auditable authority over data custody: the user can verify what they own by exercising the export.
+
+The six non-negotiable properties the council collectively endorsed are expressions of these four principles. Data minimization at the protocol layer: authority over what crosses the relay. Subscription filtering at the send tier: authority over who receives what before it leaves the node. MDM compliance check at capability negotiation: authority over who joins the mesh. Three-tier CRDT resolution model: authority over which conflict-resolution regime applies to which record class. Key compromise response procedure: authority recovery when the cryptographic chain is violated. Dual-license structure from day one: authority over the commercial sustainability of the project itself.
+
+The open questions the council did not fully resolve are also expressions of these principles. They are the places where authority has not yet been fully specified.
+
+Relay commoditization: if the only commercial authority the architecture retains — the managed relay — can be replicated at infrastructure cost by any cloud provider, the project's commercial authority evaporates. The architecture names the threat. It does not yet fully specify the moat.
+
+GDPR Article 17 in CRDT systems: who holds authority over deletion when the data structure is designed not to delete? Crypto-shredding renders data cryptographically inaccessible. It does not erase it. No data protection authority has issued a binding opinion on whether these are equivalent. The architecture specifies a path; the legal authority to declare it sufficient has not yet been established.
+
+Long-term archival format stability: does user authority over their data extend to formats readable in twenty years? An export today in a format that becomes opaque in a decade is not full data authority. The architecture does not yet address this.
+
+These are not architectural failures. They are the honest residual of a thorough review. An architecture that papers over its open questions is not more complete — it is less honest. The council was rigorous enough to name what it could not resolve. That rigor is part of the result.
+
+---
+
+## The Specification Begins
+
+Part II was a procedure. A proposal was submitted, reviewed, blocked, revised, and cleared under conditions. The five preceding chapters documented that process in the sequence it happened. The reader witnessed the architecture being argued for, defended, and refined against objection. The Flease lease coordination, the send-tier subscription filter, the DEK/KEK rotation policy are not arbitrary choices. They are specific answers to specific blocks.
 
 Part III is not a continuation of that process. It is its output.
 
+The council's PROCEED with fifteen conditions is a green light to build with a specific list of things to get right. Those fifteen conditions are distributed across Part III — addressed where they are architecturally relevant. The stale peer recovery protocol belongs with the GC policy, because the GC policy creates the condition that makes stale peer recovery necessary. The key compromise procedure belongs with the security architecture, because the key hierarchy is the thing it recovers. The plain-file export belongs with persistence, because persistence is where the ownership claim is either honored or abandoned.
+
 The voice shifts here by design. Part II's register is narrative: events happened, reviewers reacted, positions changed. Part III's register is specification: the component does this, the invariant holds for this reason, the failure mode presents as this. A specification that performs uncertainty undermines the thing it is specifying. Part III is written with the confidence of an architecture that has already survived adversarial review. Because it has.
 
-Read Part III knowing that every mechanism was earned before it was specified. The seven non-negotiables are the spinal cord. Each specification chapter is organized against at least one of them.
+The architecture the council allowed to proceed places authority at the edge, encodes it cryptographically, makes it recoverable through explicit procedure, and leaves an auditable trace at every authority assertion. Part III specifies how that architecture is built — the node, the CRDT engine, the schema migration infrastructure, the sync daemon protocol, the security architecture, and the persistence layer beyond the node. Each chapter in Part III answers a question the council forced into specificity.
 
----
-
-*Part III begins with the node — its kernel, its plugin contracts, and the process boundaries that make the rest of the architecture possible.*
-
-The construction project manager who lost three weeks of field updates when the SaaS vendor pushed a forced upgrade through her team's laptops mid-shift; the rural BFSI loan officer in Madhya Pradesh whose authorization workflow stalls every time the cell tower drops; the GCC field engineer whose dashcam footage becomes legally load-bearing the moment a third-party claim appears — these are the subjects the architecture is built for. The council's seven non-negotiables exist because each one of them has, somewhere in the recent past, shipped a workflow into a system that ignored it. The architecture proceeds from here because the council verified that the seven properties they care about have a structural answer, not a vendor promise.
+The council finished its work. The specification begins.
 
 ---
 
