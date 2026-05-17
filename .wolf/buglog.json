@@ -5515,6 +5515,310 @@
       "related_bugs": [],
       "occurrences": 1,
       "last_seen": "2026-05-15T23:15:10.113Z"
+    },
+    {
+      "id": "bug-341",
+      "timestamp": "2026-05-16T14:01:16.618Z",
+      "error_message": "Incorrect value in code",
+      "file": "vol-2/act-1/ch03-drake-passage-ice-edge.md",
+      "root_cause": "Had 's technical scope. The scope was the scope. What ",
+      "fix": "Changed to 's technical scope. The scope was correct on its f",
+      "tags": [
+        "auto-detected",
+        "wrong-value",
+        "md"
+      ],
+      "related_bugs": [],
+      "occurrences": 2,
+      "last_seen": "2026-05-16T14:02:25.039Z"
+    },
+    {
+      "id": "bug-342",
+      "timestamp": "2026-05-16T14:05:01.939Z",
+      "error_message": "Wrong reference: marginal should be edge",
+      "file": "vol-2/act-1/ch03-drake-passage-ice-edge.md",
+      "root_cause": "Used \"marginal\" instead of \"edge\"",
+      "fix": "Changed marginal → edge",
+      "tags": [
+        "auto-detected",
+        "wrong-reference",
+        "md"
+      ],
+      "related_bugs": [],
+      "occurrences": 2,
+      "last_seen": "2026-05-16T14:05:03.499Z"
+    },
+    {
+      "id": "bug-343",
+      "timestamp": "2026-05-16T15:50:01.866Z",
+      "error_message": "Incorrect value in code",
+      "file": "vol-2/act-1/ch04-first-submersion.md",
+      "root_cause": "Had 's compute hub. Each of them is the same kind of d",
+      "fix": "Changed to 's compute hub. Each is the same kind of database,",
+      "tags": [
+        "auto-detected",
+        "wrong-value",
+        "md"
+      ],
+      "related_bugs": [],
+      "occurrences": 1,
+      "last_seen": "2026-05-16T15:50:01.866Z"
+    },
+    {
+      "id": "bug-344",
+      "timestamp": "2026-05-16T15:52:01.457Z",
+      "error_message": "Wrong reference: pre should be draft",
+      "file": "vol-2/act-1/ch04-first-submersion.md",
+      "root_cause": "Used \"pre\" instead of \"draft\"",
+      "fix": "Changed pre → draft",
+      "tags": [
+        "auto-detected",
+        "wrong-reference",
+        "md"
+      ],
+      "related_bugs": [],
+      "occurrences": 1,
+      "last_seen": "2026-05-16T15:52:01.457Z"
+    },
+    {
+      "id": "bug-345",
+      "timestamp": "2026-05-16T15:55:46.610Z",
+      "error_message": "Wrong reference: pre should be draft",
+      "file": "vol-2/act-1/ch05-day-twenty-realization.md",
+      "root_cause": "Used \"pre\" instead of \"draft\"",
+      "fix": "Changed pre → draft",
+      "tags": [
+        "auto-detected",
+        "wrong-reference",
+        "md"
+      ],
+      "related_bugs": [],
+      "occurrences": 1,
+      "last_seen": "2026-05-16T15:55:46.610Z"
+    },
+    {
+      "id": "bug-346",
+      "timestamp": "2026-05-16T15:56:39.153Z",
+      "error_message": "Incorrect value in code",
+      "file": "vol-2/act-1/ch06-first-surface-first-forsaken-reveal.md",
+      "root_cause": "Had 's, including the cause that was nobody'",
+      "fix": "Changed to 's, including the one that was nobody'",
+      "tags": [
+        "auto-detected",
+        "wrong-value",
+        "md"
+      ],
+      "related_bugs": [],
+      "occurrences": 1,
+      "last_seen": "2026-05-16T15:56:39.153Z"
+    },
+    {
+      "id": "bug-347",
+      "timestamp": "2026-05-16T15:56:50.061Z",
+      "error_message": "Wrong reference: pre should be draft",
+      "file": "vol-2/act-1/ch06-first-surface-first-forsaken-reveal.md",
+      "root_cause": "Used \"pre\" instead of \"draft\"",
+      "fix": "Changed pre → draft",
+      "tags": [
+        "auto-detected",
+        "wrong-reference",
+        "md"
+      ],
+      "related_bugs": [],
+      "occurrences": 1,
+      "last_seen": "2026-05-16T15:56:50.061Z"
+    },
+    {
+      "id": "bug-348",
+      "timestamp": "2026-05-16T15:57:43.530Z",
+      "error_message": "Wrong reference: pre should be draft",
+      "file": "vol-2/act-2/ch07-joels-sunfish.md",
+      "root_cause": "Used \"pre\" instead of \"draft\"",
+      "fix": "Changed pre → draft",
+      "tags": [
+        "auto-detected",
+        "wrong-reference",
+        "md"
+      ],
+      "related_bugs": [],
+      "occurrences": 1,
+      "last_seen": "2026-05-16T15:57:43.530Z"
+    },
+    {
+      "id": "bug-349",
+      "timestamp": "2026-05-16T17:23:41.572Z",
+      "error_message": "Incorrect value in code",
+      "file": "vol-2/act-2/ch10-aftermath-mission-that-once-was.md",
+      "root_cause": "Had 's incident review. I have written portions of it ",
+      "fix": "Changed to 's incident review, in the mortality letter, in no",
+      "tags": [
+        "auto-detected",
+        "wrong-value",
+        "md"
+      ],
+      "related_bugs": [],
+      "occurrences": 1,
+      "last_seen": "2026-05-16T17:23:41.572Z"
+    },
+    {
+      "id": "bug-350",
+      "timestamp": "2026-05-16T17:25:51.464Z",
+      "error_message": "Wrong reference: pre should be draft",
+      "file": "vol-2/act-3/ch13-schema-that-should-not-migrate.md",
+      "root_cause": "Used \"pre\" instead of \"draft\"",
+      "fix": "Changed pre → draft",
+      "tags": [
+        "auto-detected",
+        "wrong-reference",
+        "md"
+      ],
+      "related_bugs": [],
+      "occurrences": 1,
+      "last_seen": "2026-05-16T17:25:51.464Z"
+    },
+    {
+      "id": "bug-351",
+      "timestamp": "2026-05-16T17:26:17.778Z",
+      "error_message": "Wrong reference: record should be archive",
+      "file": "vol-2/act-3/ch14-the-crossing.md",
+      "root_cause": "Used \"record\" instead of \"archive\"",
+      "fix": "Changed record → archive",
+      "tags": [
+        "auto-detected",
+        "wrong-reference",
+        "md"
+      ],
+      "related_bugs": [],
+      "occurrences": 2,
+      "last_seen": "2026-05-16T17:26:35.882Z"
+    },
+    {
+      "id": "bug-352",
+      "timestamp": "2026-05-16T17:27:14.603Z",
+      "error_message": "Wrong reference: pre should be draft",
+      "file": "vol-2/act-3/ch15-compromised-relay-holds.md",
+      "root_cause": "Used \"pre\" instead of \"draft\"",
+      "fix": "Changed pre → draft",
+      "tags": [
+        "auto-detected",
+        "wrong-reference",
+        "md"
+      ],
+      "related_bugs": [],
+      "occurrences": 1,
+      "last_seen": "2026-05-16T17:27:14.603Z"
+    },
+    {
+      "id": "bug-353",
+      "timestamp": "2026-05-16T17:27:40.362Z",
+      "error_message": "Wrong reference: staff should be file",
+      "file": "vol-2/act-3/ch16-final-ascent.md",
+      "root_cause": "Used \"staff\" instead of \"file\"",
+      "fix": "Changed staff → file",
+      "tags": [
+        "auto-detected",
+        "wrong-reference",
+        "md"
+      ],
+      "related_bugs": [],
+      "occurrences": 2,
+      "last_seen": "2026-05-16T17:27:50.652Z"
+    },
+    {
+      "id": "bug-354",
+      "timestamp": "2026-05-16T17:28:42.176Z",
+      "error_message": "Wrong reference: pre should be draft",
+      "file": "vol-2/act-3/ch17-transit-north.md",
+      "root_cause": "Used \"pre\" instead of \"draft\"",
+      "fix": "Changed pre → draft",
+      "tags": [
+        "auto-detected",
+        "wrong-reference",
+        "md"
+      ],
+      "related_bugs": [],
+      "occurrences": 1,
+      "last_seen": "2026-05-16T17:28:42.176Z"
+    },
+    {
+      "id": "bug-355",
+      "timestamp": "2026-05-16T17:29:32.588Z",
+      "error_message": "Wrong reference: staff should be file",
+      "file": "vol-2/act-3/ch18-punta-arenas-surfacing.md",
+      "root_cause": "Used \"staff\" instead of \"file\"",
+      "fix": "Changed staff → file",
+      "tags": [
+        "auto-detected",
+        "wrong-reference",
+        "md"
+      ],
+      "related_bugs": [],
+      "occurrences": 2,
+      "last_seen": "2026-05-16T17:29:48.221Z"
+    },
+    {
+      "id": "bug-356",
+      "timestamp": "2026-05-16T17:37:33.815Z",
+      "error_message": "Significant refactor of ",
+      "file": ".pao-inbox/pao-directive-2026-05-16T11-52Z-vol2-audio-staleness-audit.md",
+      "root_cause": "6 lines replaced/restructured",
+      "fix": "Rewrote 9→9 lines (6 removed)",
+      "tags": [
+        "auto-detected",
+        "refactor",
+        "md"
+      ],
+      "related_bugs": [],
+      "occurrences": 1,
+      "last_seen": "2026-05-16T17:37:33.815Z"
+    },
+    {
+      "id": "bug-357",
+      "timestamp": "2026-05-16T17:37:38.244Z",
+      "error_message": "Incorrect value in code",
+      "file": ".pao-inbox/pao-directive-2026-05-16T11-52Z-vol2-audio-staleness-audit.md",
+      "root_cause": "Had `~/Library/CloudStorage/Dropbox/the-inverted-stack",
+      "fix": "Changed to `--af_alloy`",
+      "tags": [
+        "auto-detected",
+        "wrong-value",
+        "md"
+      ],
+      "related_bugs": [],
+      "occurrences": 2,
+      "last_seen": "2026-05-16T17:37:42.110Z"
+    },
+    {
+      "id": "bug-358",
+      "timestamp": "2026-05-16T18:19:16.540Z",
+      "error_message": "Incorrect value in code",
+      "file": "vol-2/_voice-drafts/nansen-ingestion/ch17-transit-north.craft-note.md",
+      "root_cause": "Had \"the air came in the way Verne described it when t",
+      "fix": "Changed to \"the air came in — not gently.\"",
+      "tags": [
+        "auto-detected",
+        "wrong-value",
+        "md"
+      ],
+      "related_bugs": [],
+      "occurrences": 2,
+      "last_seen": "2026-05-16T18:19:35.367Z"
+    },
+    {
+      "id": "bug-359",
+      "timestamp": "2026-05-17T08:02:11.786Z",
+      "error_message": "Incorrect value in code",
+      "file": "vol-2/act-1/ch02-recruitment-interview.md",
+      "root_cause": "Had 's head between the block and the rewrite was the ",
+      "fix": "Changed to 's lead reviewer wrote the verdict in the prose he",
+      "tags": [
+        "auto-detected",
+        "wrong-value",
+        "md"
+      ],
+      "related_bugs": [],
+      "occurrences": 1,
+      "last_seen": "2026-05-17T08:02:11.786Z"
     }
   ]
 }

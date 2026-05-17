@@ -1,7 +1,7 @@
 # anatomy.md
 
-> Auto-maintained by OpenWolf. Last scanned: 2026-05-16T17:53:51.832Z
-> Files: 564 tracked | Anatomy hits: 0 | Misses: 0
+> Auto-maintained by OpenWolf. Last scanned: 2026-05-17T08:03:05.040Z
+> Files: 568 tracked | Anatomy hits: 0 | Misses: 0
 
 ## ../../../../../tmp/
 
@@ -277,6 +277,8 @@
 - `pao-directive-2026-05-16T11-53Z-fff-nansen-ingestion-ch17.md` — PAO Directive — FFF Nansen-ingestion pilot on Ch 17 (transit north) (~950 tok)
 - `pao-directive-2026-05-16T11-54Z-joel-teaching-register-ch07.md` — PAO Directive — Pilot Joel teaching-register extension on Ch 7 (~861 tok)
 - `pao-directive-2026-05-16T11-55Z-anatomy-description-cleanup.md` — PAO Directive — Anatomy.md auto-generated description cleanup (~554 tok)
+- `pao-directive-2026-05-16T14-05Z-ch17-verne-citation-strike.md` — PAO Directive — Strike the Verne citation in Ch 17 transformed passage (~879 tok)
+- `pao-directive-2026-05-16T14-06Z-ch07-discipline-density-thematic.md` — PAO Directive — Ch 07 `discipline` density is thematic; keep as is (~1119 tok)
 - `yeoman-question-2026-04-29T23-22Z-phase3-complete.md` — <Section Name> (~952 tok)
 - `yeoman-question-2026-04-30T07-27Z-ch15-forward-pointers-routed.md` — Declares work (~499 tok)
 - `yeoman-question-2026-04-30T07-32Z-phase5-spot-check-stragglers.md` — Declares table (~876 tok)
@@ -298,11 +300,12 @@
 - `yeoman-resumed-2026-05-06T07-38Z-stt-spike-phase2-medium.md` — STT QC Spike Phase 2 — Verdict: FAIL (~922 tok)
 - `yeoman-resumed-2026-05-16T12-00Z-ch07-joel-teaching-pilot.md` (~245 tok)
 - `yeoman-resumed-2026-05-16T13-00Z-ch17-fff-pilot.md` (~174 tok)
+- `yeoman-resumed-2026-05-16T14-30Z-ch17-verne-strike-ch07-discipline-resolved.md` (~115 tok)
 
 ## .pao-inbox/_creative/
 
 - `joel-teaching-register-canon.md` — Joel Reyes Teaching Register — Canon Note (~4098 tok)
-- `nansen-ingestion-canon.md` — Nansen Ingestion — Public-Domain Source Material Canon (~4036 tok)
+- `nansen-ingestion-canon.md` — Nansen Ingestion — Public-Domain Source Material Canon (~4200 tok)
 - `series-arc-sunfish-trajectory.md` — Series Arc — The Sunfish Trajectory (~3630 tok)
 - `sunfish-submarine-security-canon.md` — Sunfish Submarine Security & Key Management — Canon (~4574 tok)
 - `the-crossing-concept-note-2026-04-30.md` — Concept Note — The Crossing (Closing Chapter) (~4423 tok)
@@ -919,22 +922,26 @@
 - `ANNA-VOICE.md` — Anna's Voice — Narrator Specification (~6516 tok)
 - `SPINE.md` — The Filchner Dark — Volume Spine (~1386 tok)
 
+## vol-2/_glossary/
+
+- `_lexical_fatigue_families.yaml` — Hand-curated word families for Phase 0 lexical-fatigue detection. (~890 tok)
+
 ## vol-2/_series/
 
 - `canon.yaml` — The Filchner Dark — story canon (~1495 tok)
 
 ## vol-2/_voice-drafts/nansen-ingestion/
 
-- `ch17-transit-north.craft-note.md` — Craft Note — Ch 17 Transit North (~4101 tok)
+- `ch17-transit-north.craft-note.md` — Craft Note — Ch 17 Transit North (~4128 tok)
 - `ch17-transit-north.source.md` — Nansen Source — Ch 17 Transit North (~2007 tok)
-- `ch17-transit-north.transformed.md` — Transformed Passage — Ch 17 Transit North (~1063 tok)
+- `ch17-transit-north.transformed.md` — Transformed Passage — Ch 17 Transit North (~1058 tok)
 
 ## vol-2/act-1/
 
 - `ch01-departure.md` — Chapter 1 — Departure (~6326 tok)
 - `ch01-departure.trial.md` — Chapter 1 — Departure (~6174 tok)
 - `ch02-recruitment-interview.held-lines.json` (~747 tok)
-- `ch02-recruitment-interview.md` — Chapter 2 — The Recruitment Interview (~7674 tok)
+- `ch02-recruitment-interview.md` — Chapter 2 — The Recruitment Interview (~7681 tok)
 - `ch02-recruitment-interview.trial.held-lines.json` (~202 tok)
 - `ch02-recruitment-interview.trial.md` — Chapter 2 — The Recruitment Interview (~8506 tok)
 - `ch03-drake-passage-ice-edge.md` — Act 1: Drake Passage crossing; Anna's eleven-crossing history; Nansen transitions from Strait to open southern ocean (~6854 tok)
@@ -945,7 +952,7 @@
 ## vol-2/act-2/
 
 - `ch07-joels-sunfish.md` — Act 2: Day 22 wardroom; Joel discloses Sunfish naming origin (USS Sunfish SSN-649) + identity-triad teaching beat (§1 three-compartment discipline); Anna registers Joel's pedagogical tempo + interior gap-recognition; v2 teaching-register pilot applied (~6900 tok)
-- `ch10-aftermath-mission-that-once-was.md` — Act 2: Day 33–36 aftermath of surface-window data haul; crew recalibrates mission scope against what the ice returned (~7499 tok)
+- `ch10-aftermath-mission-that-once-was.md` — Chapter 10 — *The Aftermath of a Mission That Once Was* (~7501 tok)
 
 ## vol-2/act-3/
 
