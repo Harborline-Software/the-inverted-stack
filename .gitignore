@@ -36,6 +36,14 @@ vol-2/_voice-drafts/
 .wolf/backups/
 .wolf/designqc-captures/
 
+# Claude Code runtime locks (per-machine; not source)
+.claude/scheduled_tasks.lock
+
+# Galley platform working state inside vol-2 (canonical galley root lives
+# under ../galley/build/<book-id>/ per architectural decision 2026-05-08;
+# this directory is local working state that should not be committed)
+vol-2/.galley/
+
 # Web reader build artifacts
 web/node_modules/
 web/dist/
