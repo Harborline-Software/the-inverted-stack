@@ -17,7 +17,7 @@ This chapter is an implementation supplement, not a specification. When the ques
 
 ---
 
-## 1. Start with Sunfish (the open-source reference implementation, [github.com/ctwoodwa/Sunfish](https://github.com/ctwoodwa/Sunfish)) Anchor (the Zone A local-first desktop accelerator)
+## 1. Start with the Zone A Accelerator (Sunfish `accelerators/anchor/`)
 
 A case observed during field research: a professional services firm lost bid data — not because it was destroyed, but because someone else controlled the infrastructure it lived on. Everything wired in this chapter inverts that arrangement. The data stays on the device that needs it. The infrastructure answers to the team that owns the data.
 
@@ -56,9 +56,9 @@ iOS and Android targets build on macOS. Windows is the fastest path for first co
 
 ---
 
-## 2. What Anchor Provides
+## 2. What the Zone A Accelerator Provides
 
-Before any domain code is written, what the Anchor accelerator provides and what an implementation builds on top of it need to be clear. The accelerator delivers the security and sync infrastructure — the parts that are hardest to get right. The application domain is not part of the accelerator.
+Before any domain code is written, what the Zone A accelerator (the Anchor pattern) provides and what an implementation builds on top of it need to be clear. The accelerator delivers the security and sync infrastructure — the parts that are hardest to get right. The application domain is not part of the accelerator.
 
 **The accelerator provides:**
 
@@ -404,7 +404,7 @@ Chapter 11 defines the full plugin contract, including lifecycle hooks, dependen
 
 Three topics are deferred.
 
-**Bridge (the Zone C hybrid SaaS accelerator) integration.** Anchor is a Zone-A node. If the architecture includes a Zone-C cloud relay, see Chapter 18, which covers the sync boundary between the local node and the cloud. The relay trust model in Chapter 15 should be read before Bridge calls are added to Anchor.
+**Zone C comms mesh integration.** The Zone A accelerator is an offline-by-default local-first node. If the architecture includes a Zone-C cloud relay, see Chapter 18, which covers the sync boundary between the local node and the cloud. The relay trust model in Chapter 15 should be read before Zone C relay calls are added to the Zone A node.
 
 **Multi-team support.** Anchor v1 ships single-team per install. V2 adopts a workspace-switcher model — one installation, multiple teams, per-team HKDF (HMAC-based Key Derivation Function) subkeys, per-workspace state isolation. The v2 migration path is additive, not a rewrite.
 

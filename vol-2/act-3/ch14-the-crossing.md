@@ -211,7 +211,7 @@ I held the look for the duration the look required. Then I gave him the small ac
 
 He went to work.
 
-The look was at the archive at the consent-gated capture register the compartment cameras carried for the duration of the event. The capture was preserved. The capture was hash-chained at the moment it occurred. The capture would land at the per-laptop replication at the next archive sync. The capture would land at Bridge replication at Punta Arenas surfacing. The capture was a record of the event at the operational level. The capture was the operational record. The capture was not anything else.
+The look was at the archive at the consent-gated capture register the compartment cameras carried for the duration of the event. The capture was preserved. The capture was hash-chained at the moment it occurred. The capture would land at the per-laptop replication at the next archive sync. The capture would land at relay replication at Punta Arenas surfacing. The capture was a record of the event at the operational level. The capture was the operational record. The capture was not anything else.
 
 The bridge was watching me.
 
@@ -497,7 +497,7 @@ The mission continued.
 
 *I have not spoken of the look. He has not spoken of the look. We will not speak of the look across the remainder of the mission. The mission has another seven days against the chart. We will speak of the look at some point. The point will not be on the boat. The point will be after Punta Arenas. The point will be after I have decided what to do with the point. I am writing this so that I have a record of the point at the moment the point is fresh.*
 
-*The compartment cameras captured the moment. The capture is at the consent-gated register. The capture is signed at capture under the bridge's standing recording authority. The capture has been replicated to my per-laptop and to the comm-node and to the principal architect's per-laptop and to the relay-operations officer's per-laptop and to the medical officer's per-laptop. The capture will replicate to the Bridge mirror at Punta Arenas surfacing. The capture is at the archive. The capture is hash-chained. The capture is signed. The capture is mine to read at any time the access controls grant me to read it. The access controls grant me. I could play it back. I am not going to.*
+*The compartment cameras captured the moment. The capture is at the consent-gated register. The capture is signed at capture under the bridge's standing recording authority. The capture has been replicated to my per-laptop and to the comm-node and to the principal architect's per-laptop and to the relay-operations officer's per-laptop and to the medical officer's per-laptop. The capture will replicate to the relay mirror at Punta Arenas surfacing. The capture is at the archive. The capture is hash-chained. The capture is signed. The capture is mine to read at any time the access controls grant me to read it. The access controls grant me. I could play it back. I am not going to.*
 
 *The reason I am not going to is not that I do not want to. The reason is that I do not need to. The look was at the porthole window. I received it. The receiving was at the level the receiving was at. The receiving was the receiving. The capture would not give me what I had at the porthole window. The capture would give me the capture. The capture is at the archive. The receiving is in me. The two are not the same. I do not want the second copy.*
 

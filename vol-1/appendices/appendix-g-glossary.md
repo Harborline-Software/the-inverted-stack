@@ -14,8 +14,8 @@ The glossary is the canonical first-use reference for the book's specialized voc
 **AES-256-GCM (Advanced Encryption Standard, 256-bit, Galois/Counter Mode)**
 A NIST-standard authenticated encryption algorithm. The local-node architecture uses AES-256-GCM for envelope encryption — each document gets a random 256-bit Data Encryption Key (DEK), the DEK encrypts the document body with a fresh 96-bit nonce per encryption event and a 128-bit authentication tag. See also: DEK, KEK. Specified in: Chapter 15 §Key Hierarchy.
 
-**Anchor (Sunfish accelerator)**
-The reference implementation of the Zone A pattern — a .NET MAUI Blazor Hybrid local-first desktop application. Source: `Sunfish/accelerators/anchor/`. The Anchor accelerator is the right shape for offline-by-default professional or enterprise software where each user runs a complete local node. Pre-1.0; in active development. See also: Bridge, Zone A. Specified in: Chapter 17.
+**Anchor pattern (Zone A accelerator)**
+The reference implementation of the Zone A pattern — a .NET MAUI Blazor Hybrid local-first desktop application. Source: `Shipyard/accelerators/anchor/`. The Zone A accelerator is the right shape for offline-by-default professional or enterprise software where each user runs a complete local node. Pre-1.0; in active development. See also: Zone A. Specified in: Chapter 17.
 
 **Anti-entropy**
 A class of distributed-systems protocols that converge replicas by exchanging only the differences (deltas) between them, rather than retransmitting full state. The local-node architecture's sync daemon uses gossip-based anti-entropy: every 30 seconds, the daemon exchanges a delta with two random peers. See also: gossip protocol, vector clock. Specified in: Chapter 14 §Sync Daemon Protocol.
@@ -33,8 +33,8 @@ A memory-hard password-based key derivation function, winner of the 2015 Passwor
 **BAA (Business Associate Agreement)**
 A HIPAA-required contract between a covered entity (a healthcare provider) and a business associate (a vendor handling protected health information) that specifies the business associate's obligations under HIPAA. A vendor shipping local-node software for HIPAA workloads needs a BAA covering the storage architecture and the audit-trail surfaces. See also: HIPAA. Specified in: Chapter 4 §Per-Zone Compliance Posture; Chapter 15.
 
-**Bridge (Sunfish accelerator)**
-The reference implementation of the Zone C pattern — a .NET Aspire multi-tenant hosted SaaS where each tenant gets a dedicated local-node host process. Source: `Sunfish/accelerators/bridge/`. The Bridge accelerator is the right shape for organizations that want hosted-service deployment simplicity alongside local-first data sovereignty guarantees. Pre-1.0; in active development. See also: Anchor, Zone C. Specified in: Chapter 18.
+**Zone C accelerator (comms mesh pattern)**
+The reference implementation of the Zone C pattern — a .NET Aspire multi-tenant hosted SaaS where each tenant gets a dedicated local-node host process. Source: `Shipyard/accelerators/bridge/`. The Zone C accelerator is the right shape for organizations that want hosted-service deployment simplicity alongside local-first data sovereignty guarantees. Pre-1.0; in active development. See also: Zone A, Zone C. Specified in: Chapter 18.
 
 ---
 
@@ -146,7 +146,7 @@ A Rust-core CRDT library ([github.com/loro-dev/loro](https://github.com/loro-dev
 ## M
 
 **MAUI (.NET Multi-platform App UI)**
-Microsoft's cross-platform UI framework for building native desktop and mobile applications from a single .NET codebase. The Anchor accelerator uses MAUI Blazor Hybrid — a native MAUI shell embedding a Blazor WebView — to ship the same component surface as the Bridge accelerator's browser shell. Specified in: Chapter 11; Chapter 17.
+Microsoft's cross-platform UI framework for building native desktop and mobile applications from a single .NET codebase. The Zone A accelerator (the Anchor pattern) uses MAUI Blazor Hybrid — a native MAUI shell embedding a Blazor WebView — to ship the same component surface as the Zone C accelerator's browser shell. Specified in: Chapter 11; Chapter 17.
 
 **mDNS (Multicast DNS)**
 A zero-configuration networking protocol (RFC 6762) that resolves hostnames on local networks without a DNS server. The sync daemon uses mDNS for peer discovery on the same LAN. Note: enterprise Wi-Fi configurations frequently filter mDNS multicast traffic; the next discovery tier (mesh VPN, then managed relay) handles those environments. Specified in: Chapter 14 §Peer Discovery.
@@ -166,7 +166,7 @@ The US federal agency that publishes cryptographic standards (FIPS publications,
 ## O
 
 **OAuth (Open Authorization)**
-The IETF standard (current version OAuth 2.0, RFC 6749) for delegated authorization. The book references OAuth in the context of enterprise SSO integrations and federated identity for Bridge-pattern deployments. Specified in: Chapter 19 §SSO Integration.
+The IETF standard (current version OAuth 2.0, RFC 6749) for delegated authorization. The book references OAuth in the context of enterprise SSO integrations and federated identity for Zone C (comms mesh) deployments. Specified in: Chapter 19 §SSO Integration.
 
 ---
 
@@ -208,7 +208,7 @@ The Internet Engineering Task Force's standard publication format. The book refe
 ## S
 
 **SaaS (Software as a Service)**
-A cloud-computing service model where the vendor hosts the application and the customer accesses it over the network, typically with data stored on vendor infrastructure. The book's central argument is that the historical reasons for the SaaS bundle (technical necessity of centralized state, sync complexity, multi-device access) are now removable, and that local-node architectures provide a path that preserves the SaaS user experience without vendor data custody. See also: IaaS, PaaS, Bridge (Zone C).
+A cloud-computing service model where the vendor hosts the application and the customer accesses it over the network, typically with data stored on vendor infrastructure. The book's central argument is that the historical reasons for the SaaS bundle (technical necessity of centralized state, sync complexity, multi-device access) are now removable, and that local-node architectures provide a path that preserves the SaaS user experience without vendor data custody. See also: IaaS, PaaS, Zone C.
 
 **SBOM (Software Bill of Materials)**
 A formal record of the components, libraries, and modules used to build a piece of software. SBOM publication is an enterprise procurement requirement in regulated industries and is increasingly required by US federal procurement (Executive Order 14028). The local-node architecture's release pipeline produces SBOMs for every published artifact. Specified in: Chapter 19 §Supply Chain.
@@ -226,7 +226,10 @@ The US law governing financial reporting controls for publicly traded companies.
 An open-source SQLite extension that provides transparent AES-256 encryption at the database file level. The local-node architecture uses SQLCipher for all local data storage; the database key derives from the OS-keystore-stored root seed via HKDF. See also: HKDF. Specified in: Chapter 15 §Layer 1: Encryption at Rest.
 
 **Sunfish**
-The open-source reference implementation of the architecture this book describes. Source: [github.com/ctwoodwa/Sunfish](https://github.com/ctwoodwa/Sunfish). Sunfish ships the Anchor accelerator (Zone A), the Bridge accelerator (Zone C), and the kernel + foundation packages they share. Pre-1.0; in active development. Package references throughout the book follow the convention of naming packages without specifying class APIs.
+The ERP product built on the Shipyard platform. The open-source reference implementation of the architecture this book describes. Source: [github.com/ctwoodwa/Sunfish](https://github.com/ctwoodwa/Sunfish). Sunfish ships the Zone A accelerator (offline-by-default local-first desktop), the Zone C accelerator (comms mesh, hybrid SaaS), and the kernel + foundation packages they share. Pre-1.0; in active development. Package references throughout the book follow the convention of naming packages without specifying class APIs.
+
+**Shipyard**
+The platform that hosts and ships the Sunfish ERP product. Shipyard is the open-source platform brand; Sunfish is the ERP product brand. The architecture described in this book is the Shipyard platform architecture.
 
 ---
 
@@ -267,13 +270,13 @@ A JavaScript CRDT library ([github.com/yjs/yjs](https://github.com/yjs/yjs)) wid
 ## Z
 
 **Zone A (Local-First Node)**
-The book's name for the deployment shape where every user runs a complete local node and the relay is optional infrastructure. Realized by the Anchor accelerator. See also: Anchor, Zone B, Zone C. Specified in: Chapter 4.
+The book's name for the deployment shape where every user runs a complete local node and the relay is optional infrastructure. Realized by the Zone A accelerator (the Anchor pattern). See also: Zone B, Zone C. Specified in: Chapter 4.
 
 **Zone B (Traditional SaaS)**
 The book's name for the centralized-server deployment shape, used as a contrast point and as the correct answer for some workloads (atomic cross-user transactions, multi-tenant aggregation as core value, small-team-fast-ship greenfield). See also: SaaS, Zone A, Zone C. Specified in: Chapter 4.
 
 **Zone C (Hybrid)**
-The book's name for the deployment shape where the local node handles user-owned data and a hosted relay handles sync, cross-organization collaboration, and public-facing surfaces. Realized by the Bridge accelerator. The most frequent outcome for enterprise software teams adopting local-first incrementally. See also: Bridge, Zone A, Zone B. Specified in: Chapter 4.
+The book's name for the deployment shape where the local node handles user-owned data and a hosted relay (the comms mesh) handles sync, cross-organization collaboration, and public-facing surfaces. Realized by the Zone C accelerator. The most frequent outcome for enterprise software teams adopting local-first incrementally. See also: Zone A, Zone B. Specified in: Chapter 4.
 
 ---
 

@@ -17,7 +17,7 @@ chapter-version: v1
 
 *Crew log, Mission Day 53, 0612 local. Yusupova, Mission Director. RV Nansen, MERIDIAN-7.*
 
-*Surface transit, Drake Passage, course 348 magnetic against the Punta Arenas approach. Estimated time of arrival 0441 local Mission Day 56 against the consortium's standing handshake. Trim nominal at the surface envelope. List nominal against the September swell. Bridge channel open at the surface-bandwidth allocation; sync queue priority list cleared through item six to the consortium-port mirror at Punta Arenas; the remaining three items in flight at the standing rate.*
+*Surface transit, Drake Passage, course 348 magnetic against the Punta Arenas approach. Estimated time of arrival 0441 local Mission Day 56 against the consortium's standing handshake. Trim nominal at the surface envelope. List nominal against the September swell. Relay channel open at the surface-bandwidth allocation; sync queue priority list cleared through item six to the consortium-port mirror at Punta Arenas; the remaining three items in flight at the standing rate.*
 
 *Reduced-capability operation continuing at the standing register. Compute hub offline since Mission Day 47. Per-laptop nodes operational at the standing register. Heavy-LLM hosting unavailable; full-archive RAG index unavailable; cross-corpus tooling unavailable. Forensic-substrate analysis at the post-incident review register continues at the laptop-class register against the priority-list fifth item.*
 
@@ -275,7 +275,7 @@ The record is in my hands.
 
 *Crew log, Mission Day 56, 0017 local. Yusupova, Mission Director. RV Nansen, MERIDIAN-7.*
 
-*Surface-approach watch. Punta Arenas approach at the standing transit rate; estimated time of arrival 0441 local against the consortium's standing handshake. Trim nominal at the surface-approach envelope. Bridge channel open at the surface-bandwidth allocation; priority queue cleared through item eight to the consortium-port mirror at Punta Arenas; the regulatory filing in flight at the post-handshake carrier; the remaining queue items in flight at the standing rate.*
+*Surface-approach watch. Punta Arenas approach at the standing transit rate; estimated time of arrival 0441 local against the consortium's standing handshake. Trim nominal at the surface-approach envelope. Relay channel open at the surface-bandwidth allocation; priority queue cleared through item eight to the consortium-port mirror at Punta Arenas; the regulatory filing in flight at the post-handshake carrier; the remaining queue items in flight at the standing rate.*
 
 *Reduced-capability operation closing at the standing register against the Punta Arenas resupply. Compute hub procurement queued at the consortium logistics standing register for the post-handshake reception. Per-laptop nodes operational at full register through the surface approach.*
 

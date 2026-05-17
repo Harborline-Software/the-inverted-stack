@@ -151,7 +151,7 @@ Engineering capability is necessary but not sufficient. A team that clears all f
 
 ## The Three Outcome Zones
 
-Running the five filters produces one of three conclusions. The three Zones are anchor points on a spectrum, not a strict partition — most projects land cleanly in one, but some sit between Zone A and Zone C (a small team starting Anchor-style on the Anchor accelerator and adding a hosted relay later), and one valid migration path moves a Zone C deployment toward Zone A over years as engineering capacity grows.
+Running the five filters produces one of three conclusions. The three Zones are fixed points on a spectrum, not a strict partition — most projects land cleanly in one, but some sit between Zone A and Zone C (a small team starting with the Zone A accelerator and adding a hosted relay later), and one valid migration path moves a Zone C deployment toward Zone A over years as engineering capacity grows.
 
 ```mermaid
 flowchart TD
@@ -185,7 +185,7 @@ All five filters clear without a hard stop. The team has the timeline and capabi
 
 Zone A applies to: single-tenant or team-scoped productivity and business software; offline or regulated operational environments; software whose core value exists before any other user joins; professional or enterprise users who install software and expect it to stay installed. Representative domains: project management, professional CRM, field operations tools, legal and healthcare records management, engineering and design applications.
 
-The Zone A operational picture: a fleet of MDM-managed endpoints running the Anchor accelerator (Sunfish `accelerators/anchor/`), a self-hosted or managed relay coordinating peer discovery and serving as a fan-out point when LAN sync is not viable, and a fleet observability pipeline collecting per-endpoint sync-health, schema-version, and key-rotation telemetry. When the relay fails, day-to-day work continues on the local plane; sync catches up when the relay returns. Part III (Chapters 11–16) specifies the architecture; Part IV (Chapters 17–20) and Chapter 21 specify the playbooks for shipping, MDM packaging, enterprise procurement, and fleet operations.
+The Zone A operational picture: a fleet of MDM-managed endpoints running the Zone A accelerator (Sunfish `accelerators/anchor/`), a self-hosted or managed relay coordinating peer discovery and serving as a fan-out point when LAN sync is not viable, and a fleet observability pipeline collecting per-endpoint sync-health, schema-version, and key-rotation telemetry. When the relay fails, day-to-day work continues on the local plane; sync catches up when the relay returns. Part III (Chapters 11–16) specifies the architecture; Part IV (Chapters 17–20) and Chapter 21 specify the playbooks for shipping, MDM packaging, enterprise procurement, and fleet operations.
 
 **Zone B — Traditional SaaS or Website**
 
@@ -195,7 +195,7 @@ Zone B is the right answer for a significant category of software. Building fina
 
 **Zone C — Hybrid**
 
-The filters pass for user-scoped primary records but fail for specific coordination features — or Filter 5 indicates a timeline that cannot support the full Zone A investment immediately. Zone C is the most frequent outcome for enterprise software teams adopting local-first incrementally. The local node handles all user-owned data and day-to-day compute. The cloud relay handles sync, cross-organization collaboration, payments, and compliance reporting. A traditional web layer handles public-facing surfaces. The Bridge accelerator (Sunfish `accelerators/bridge/`) is the reference implementation; Chapter 18 specifies the Zone C migration playbook for an existing hosted SaaS product.
+The filters pass for user-scoped primary records but fail for specific coordination features — or Filter 5 indicates a timeline that cannot support the full Zone A investment immediately. Zone C is the most frequent outcome for enterprise software teams adopting local-first incrementally. The local node handles all user-owned data and day-to-day compute. The cloud relay handles sync, cross-organization collaboration, payments, and compliance reporting. A traditional web layer handles public-facing surfaces. The Zone C accelerator (Sunfish `accelerators/bridge/`) is the reference implementation; Chapter 18 specifies the Zone C migration playbook for an existing hosted SaaS product.
 
 Zone C also applies to teams migrating an existing SaaS product. Retaining cloud infrastructure as the sync relay while adding local-node capability incrementally is a legitimate migration path, not a compromise. Hybrids designed to move toward Zone A over time stay architecturally honest. Hybrids that allow server-side logic to accumulate indefinitely tend to re-centralize gradually — a failure mode the epilogue addresses directly.
 
@@ -234,7 +234,7 @@ A 60-person construction-industry software company has shipped a hosted SaaS for
 
 *Filter 5 (Team capability).* The team has built sync engines before but not CRDT-based ones. Existing customers cannot tolerate a six-month feature freeze for a from-scratch rewrite. Greenfield Zone A is not the right shape. **Zone C — Hybrid migration, retain cloud relay, add local-node capability incrementally.**
 
-Verdict: Zone C. The team adopts the Bridge accelerator pattern, runs Phase 1 (data-plane local replicas with read-through to the existing API) for 90 days, then Phase 2 (write-path migration to local-first with the existing API as a sync relay) over the following six months. Chapter 18 specifies this migration playbook in detail.
+Verdict: Zone C. The team adopts the Zone C accelerator pattern, runs Phase 1 (data-plane local replicas with read-through to the existing API) for 90 days, then Phase 2 (write-path migration to local-first with the existing API as a sync relay) over the following six months. Chapter 18 specifies this migration playbook in detail.
 
 ---
 
@@ -248,7 +248,7 @@ This chapter maps the full decision space. Three questions produce a fast first-
 
 **Whether the product must outlive vendor infrastructure** is the third. The software should keep working regardless of whether the vendor survives, is acquired, changes its pricing, or is directed to stop serving a given jurisdiction — as hundreds of thousands of organizations in Russia and CIS (Commonwealth of Independent States) markets learned in 2022 when Western SaaS vendors suspended service under sanctions enforcement. An affirmative answer means the product must hold its own authoritative data. Software that depends on a vendor server to function cannot outlive the vendor's continued permission to serve its users.
 
-When all three answers are affirmative: Zone A or Zone C applies. A greenfield project starts with Anchor (the Zone A local-first desktop accelerator). A migration or hybrid deployment starts with Bridge (the Zone C hybrid SaaS accelerator). The full five filters confirm no blocking constraint applies.
+When all three answers are affirmative: Zone A or Zone C applies. A greenfield project starts with the Zone A accelerator (the Anchor pattern — offline-by-default local-first desktop). A migration or hybrid deployment starts with the Zone C accelerator (the comms mesh pattern — hybrid SaaS with relay). The full five filters confirm no blocking constraint applies.
 
 When any answer is negative: the corresponding filter captures the implication. A negative on the first question is Filter 2. A negative on the second is a Zone C tolerance. A negative on the third is Filter 4 — a business model that requires data custody. Each has a specific implication, and the relevant filter section above addresses it.
 
@@ -258,6 +258,6 @@ The shortcut identifies whether a full evaluation is worth the time. It does not
 
 ## What the Analysis Produces
 
-A system that clears all five filters earns an architecture that outlives vendor decisions, works through connectivity gaps and power interruptions, and satisfies compliance in every major regulatory jurisdiction. Anchor is the Zone A reference implementation for greenfield local-first projects. Bridge is the Zone C reference for teams migrating an existing SaaS product or offering a hosted option alongside a self-hosted one. Both reference Sunfish (the open-source reference implementation, [github.com/ctwoodwa/Sunfish](https://github.com/ctwoodwa/Sunfish)) packages — pre-1.0 implementations of the architecture this book specifies, not finished products — and both are specified in full in Part IV.
+A system that clears all five filters earns an architecture that outlives vendor decisions, works through connectivity gaps and power interruptions, and satisfies compliance in every major regulatory jurisdiction. The Zone A accelerator is the reference implementation for greenfield local-first projects. The Zone C accelerator is the reference for teams migrating an existing SaaS product or offering a hosted option alongside a self-hosted one. Both reference Sunfish (the open-source ERP product, [github.com/ctwoodwa/Sunfish](https://github.com/ctwoodwa/Sunfish)) packages — pre-1.0 implementations of the architecture this book specifies, not finished products — and both are specified in full in Part IV.
 
 Before that implementation, Part II stress-tests the architecture against the hardest objections five domain experts could construct. The council did not begin as believers. They began as skeptics. Every block they raised, every condition they imposed, and every objection they cleared makes the architecture stronger and the failure modes better understood.

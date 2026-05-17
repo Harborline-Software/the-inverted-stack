@@ -17,7 +17,7 @@ chapter-version: v1
 
 *Crew log, Mission Day 52, 0418 local. Yusupova, Mission Director. RV Nansen, MERIDIAN-7.*
 
-*Surface commencement. The boat broke the standing depth at 0411 against the Drake-Passage approach to Punta Arenas. Trim nominal. List nominal. Bridge channel opened to the consortium at 0414 against the standing handshake. Sync queue prioritized at the relay-operations register: operational damage report, Reyes recovery documentation, the half-mission report at the per-laptop register, the polar-operations specialist's institutional carryover. The forensic-substrate query carries to the post-incident review at the consortium-port register. Sync state nominal across the prioritized queue.*
+*Surface commencement. The boat broke the standing depth at 0411 against the Drake-Passage approach to Punta Arenas. Trim nominal. List nominal. Relay channel opened to the consortium at 0414 against the standing handshake. Sync queue prioritized at the relay-operations register: operational damage report, Reyes recovery documentation, the half-mission report at the per-laptop register, the polar-operations specialist's institutional carryover. The forensic-substrate query carries to the post-incident review at the consortium-port register. Sync state nominal across the prioritized queue.*
 
 *Reduced-capability operation closing at the standing register. The compute hub is offline since Mission Day 47. Per-laptop nodes operational at full register across the ten-day degraded window. Audit log continuous. Hash chain unbroken from oh-three-fifteen Mission Day 47 through the surfacing.*
 
@@ -115,7 +115,7 @@ The hierarchy at the Punta Arenas surfacing was the hierarchy the post-cascade r
 
 The queue was at the comm node at the standing position. Wanjiru had walked the queue with me at 0900 on Mission Day 51. I had acknowledged the priority list at the standing register. The list was the list. The Mission Director's standing register on the relay-operations officer's prioritization decision was acknowledgment, not adjustment. Wanjiru had set the queue. The queue was the queue.
 
-The bridge channel opened at 0414. The audit-log streaming to the consortium-port mirror at Punta Arenas began at the standing rate at 0416. The full-archive Bridge sync began at 0418 against the priority list. The queue moved at the surface bandwidth's standing rate.
+The relay channel opened at 0414. The audit-log streaming to the consortium-port mirror at Punta Arenas began at the standing rate at 0416. The full-archive relay sync began at 0418 against the priority list. The queue moved at the surface bandwidth's standing rate.
 
 Wanjiru sat at the comm node. The hum was on at the low Kikuyu lullaby register the hum had been at for the back week. The hum had returned at 0247 on Mission Day 50 against the standing register. The hum had been at the standing register across the back two and a half days. The hum was on now.
 
@@ -199,7 +199,7 @@ The consoles read what the consoles read.
 
 I went to the rail. I looked west. The Drake was the Drake at the September afternoon standing register. The horizon was the horizon. The Punta Arenas approach was in sight at the standing transit rate. Two days. The boat would dock against the consortium's standing handshake at 0441 local on Mission Day 56.
 
-Surface. Bridge open. Punta Arenas approach in two days.
+Surface. Relay open. Punta Arenas approach in two days.
 
 The mission had held.
 
@@ -207,7 +207,7 @@ The mission had held.
 
 *Crew log, Mission Day 52, 1224 local. Yusupova, Mission Director. RV Nansen, MERIDIAN-7.*
 
-*Surface confirmed at standing surface depth at 1148 local. Bridge channel open at full institutional bandwidth against the consortium-port mirror at Punta Arenas. Audit-log streaming uninterrupted from cascade window through surfacing. Full-archive sync against priority list at the standing rate; six of the priority list's nine items cleared to the consortium-port mirror at the standing institutional register; the remaining three in flight at the surface-window's standing throughput.*
+*Surface confirmed at standing surface depth at 1148 local. Relay channel open at full institutional bandwidth against the consortium-port mirror at Punta Arenas. Audit-log streaming uninterrupted from cascade window through surfacing. Full-archive sync against priority list at the standing rate; six of the priority list's nine items cleared to the consortium-port mirror at the standing institutional register; the remaining three in flight at the surface-window's standing throughput.*
 
 *Reduced-capability operation closing at the standing register against the Punta Arenas resupply. The compute hub remains offline; replacement procurement against the consortium's standing logistics is queued for the Punta Arenas reception at the institutional register. Per-laptop nodes operational at full register through the surfacing.*
 
