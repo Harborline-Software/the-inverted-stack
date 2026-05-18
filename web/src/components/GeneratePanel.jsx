@@ -218,7 +218,7 @@ export default function GeneratePanel({ chapter, onGenerated }) {
               </div>
               <div className="config-row">
                 <label>Base URL</label>
-                <input type="text" placeholder="http://host:8883/api/v1"
+                <input type="text" placeholder="http://host:8881/api/v1"
                   value={config.base_url} onChange={e => set('base_url', e.target.value)} />
               </div>
               <div className="config-row">
