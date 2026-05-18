@@ -1182,41 +1182,34 @@ def narratable_text(md: str, source_only: bool = False,
     t = re.sub(r"[ \t]+", " ", t)
     t = re.sub(r"\n{3,}", "\n\n", t)
 
-    # Dialogue pauses: insert a short beat (..) between consecutive
-    # paragraphs that BOTH start with a quotation mark — but ONLY when
-    # at least one of the two lines is substantive (>= 6 words). For
-    # short alternating exchanges ("Joel." / "Doctor." / "Have you eaten."
-    # / "I have not."), the natural sentence-end prosody handles the
-    # speaker beat; injecting silence MP3s every line stacks frame-
-    # boundary artifacts and produces audible clicks in Kokoro output
-    # (CO ear-flagged 2026-05-13).
+    # Dialogue pauses: insert a beat (...) between every pair of
+    # consecutive paragraphs that BOTH start with a quotation mark.
+    # Beat duration: `...` (3 dots = ~0.7s) per PAUSE_DURATIONS.
     #
-    # The rule:
-    #   short / short → no injected pause (natural prosody is enough)
-    #   short / long  → inject pause (gives long line breathing room)
-    #   long / short  → inject pause (separates substantive line from response)
-    #   long / long   → inject pause (default case for most non-rapid dialogue)
-    import re as _re_dpause
-    def _word_count(text: str) -> int:
-        return len(_re_dpause.findall(r"\b[A-Za-z]+\b", text))
-    SHORT_DIALOGUE_THRESHOLD = 6
-
+    # History:
+    # - 2026-05-13: original rule skipped short/short pairs ("Joel." /
+    #   "Doctor.") on the theory that natural sentence-end prosody was
+    #   enough and that injecting silence MP3s every line could stack
+    #   frame-boundary artifacts in Kokoro output.
+    # - 2026-05-18: CIC ear-flagged short/short pairs as still feeling
+    #   rushed in practice (e.g. "Doctor." / "Captain." opening the
+    #   Anna-Mikael exchange). Removed the short/short exemption; every
+    #   consecutive-dialogue pair now gets the beat. The earlier Kokoro
+    #   click concern is subordinated to pacing fidelity, and Chatterbox
+    #   (the current default for vol-2) handles the inserted silence
+    #   cleanly.
+    # - 2026-05-18: beat duration bumped from `..` (0.3s) to `...` (0.7s)
+    #   in the same review pass for the same reason.
     paragraphs = t.split("\n\n")
     out_paras: list[str] = []
     prev_is_dialogue = False
-    prev_words = 0
     for para in paragraphs:
         stripped = para.strip()
         is_dialogue = bool(stripped) and stripped[0] == '"'
-        cur_words = _word_count(stripped) if is_dialogue else 0
         if prev_is_dialogue and is_dialogue:
-            both_short = (prev_words < SHORT_DIALOGUE_THRESHOLD and
-                          cur_words < SHORT_DIALOGUE_THRESHOLD)
-            if not both_short:
-                out_paras.append("..")
+            out_paras.append("...")
         out_paras.append(para)
         prev_is_dialogue = is_dialogue
-        prev_words = cur_words
     t = "\n\n".join(out_paras)
 
     return t.strip()
