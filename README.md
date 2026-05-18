@@ -72,8 +72,8 @@ ls build/output/audiobook/vol-2/*.mp3
 
 What the wrapper does (and why):
 
-- Targets `http://desktop-umt08rn:8883/api/v1` (the chatterbox-tts endpoint;
-  the older `:8881/v1` path returns 405 / has a 30s proxy timeout).
+- Targets `http://desktop-umt08rn:8881/api/v1` (the chatterbox-tts canonical endpoint;
+  port 8881 is the fleet-wide standard per CIC standardization 2026-05-19).
 - Passes `--no-chapter-map` so `--preset` is honored. The default preset map
   otherwise routes some chapters to alternate voices.
 - Defaults the preset to `ciufi-galeazzi` (the cloned voice currently used for

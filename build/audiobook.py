@@ -550,19 +550,17 @@ ENGINES: dict[str, dict] = {
     },
     "chatterbox": {
         "presets": PRESETS_CHATTERBOX,
-        # Override at the CLI with --base-url. Default is the direct backend
-        # port on the Tailscale hostname for the Windows GPU box.
-        # NOTE (2026-05-07 bug-189): The Inference Studio reverse proxy at
-        # port 8881 routes TTS under /api/v1/{path} — NOT /v1/{path}. Use
-        # http://desktop-umt08rn:8881/api/v1 for the proxy path, or
-        # http://desktop-umt08rn:8883/api/v1 to hit the backend directly
-        # (no 30-second proxy gateway timeout on port 8883). For long
-        # ciufi-galeazzi sentences (>100 chars) the proxy timeout causes
-        # 504s that cascade into a retry storm; use port 8883 for final renders.
+        # Override at the CLI with --base-url. Default is the canonical fleet
+        # endpoint on the Tailscale hostname for the Windows GPU box.
+        # NOTE (2026-05-19 CIC standardization): port 8881 is the canonical TTS
+        # port fleet-wide. Both 8881 and 8883 route to the same single uvicorn
+        # backend (double-bound); CIC verified byte-identical responses.
+        # Port 8883 listener will be retired by po-win. Use 8881 for all renders.
+        # Path is /api/v1/{path} — NOT /v1/{path}.
         # Server-side model name is "higgs" per the unified TTS API spec
         # (2026-05-05); update the model_name field if the server-side
         # alias changes.
-        "default_base_url": "http://desktop-umt08rn:8883/api/v1",
+        "default_base_url": "http://desktop-umt08rn:8881/api/v1",
         "model_name": "higgs",
         "requires_auth": True,
         "description": "Chatterbox/higgs (Resemble AI) on the Windows GPU box — voice-cloning, high-quality path",
