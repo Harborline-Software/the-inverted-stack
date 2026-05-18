@@ -948,11 +948,12 @@ def narratable_text(md: str, source_only: bool = False,
     is_neural = engine == "chatterbox"
     t = md
 
-    # Strip YAML front-matter (--- delimited block at the very start of the file).
-    # The horizontal-rule strip below only removes the `---` delimiter lines, leaving
+    # Strip YAML front-matter (--- or - delimited block at the very start of the file).
+    # The horizontal-rule strip below only removes the delimiter lines, leaving
     # the key: value content (title, icm-stage, etc.) as spoken text — which causes
     # slow inference on cloned TTS voices (pathological for the 30-second proxy timeout).
-    t = re.sub(r"\A---\n.*?\n---\n", "", t, flags=re.DOTALL)
+    # Vol-2 files use a single `-` delimiter; vol-1 files use `---`. Both are handled.
+    t = re.sub(r"\A-{1,3}\n.*?\n-{1,3}\n", "", t, flags=re.DOTALL)
 
     # Strip Vol 2 log-opener block (Pattern A artifact): italicized "filed log"
     # paragraphs between the YAML front-matter and the first prose paragraph,
