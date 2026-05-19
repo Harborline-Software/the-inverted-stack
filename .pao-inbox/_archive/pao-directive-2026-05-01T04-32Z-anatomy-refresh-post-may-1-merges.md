@@ -6,7 +6,7 @@ priority: P3
 expected-output: yeoman-resumed-* beacon; anatomy.md updated; PAO commits
 ---
 
-# PAO directive — refresh `.wolf/anatomy.md` after the cast-swap + Phase 7 + Crossing landing
+# PAO directive - refresh `.wolf/anatomy.md` after the cast-swap + Phase 7 + Crossing landing
 
 ## Context
 
@@ -32,11 +32,11 @@ Specifically these new files need entries:
 - `.pao-inbox/_editorial-reviews/` (whatever's in there from the literary-board pass)
 - `.pao-inbox/pao-directive-2026-05-01T*.md` (three directives this session, including this one)
 
-Skip ephemeral beacons (`yeoman-question-*.md`, `yeoman-resumed-*.md`) — anatomy.md should reflect durable artifacts only.
+Skip ephemeral beacons (`yeoman-question-*.md`, `yeoman-resumed-*.md`) - anatomy.md should reflect durable artifacts only.
 
 ## Deliverable
 
-Edit `.wolf/anatomy.md` directly. Do not commit — PAO commits. Write `yeoman-resumed-2026-05-01THH-MMZ-anatomy-refresh-complete.md` with summary of what you added + any files you skipped + reasoning.
+Edit `.wolf/anatomy.md` directly. Do not commit - PAO commits. Write `yeoman-resumed-2026-05-01THH-MMZ-anatomy-refresh-complete.md` with summary of what you added + any files you skipped + reasoning.
 
 ## Note
 

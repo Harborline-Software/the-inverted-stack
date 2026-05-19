@@ -4,15 +4,15 @@ chapter: ch19-shipping-to-enterprise
 date: 2026-04-30
 author: PAO
 audience: Yeoman (executor), CO (visibility)
-status: review — light compression candidate; recommend ship-as-is or modest prune
+status: review - light compression candidate; recommend ship-as-is or modest prune
 target-reduction: 5,019 → 3,500 (target = 143% currently); modest compression yields ~400-500 words
 ---
 
-# Ch19 (Shipping to Enterprise) — Compression Review
+# Ch19 (Shipping to Enterprise) - Compression Review
 
 ## TL;DR
 
-Ch19 is at 143% of target — the **closest to target of any remaining compressible chapter**. Voice-passed, no extension pending. PAO read: ship-as-is is defensible (Part IV tutorial chapters tolerate +30-50% bloat for completeness; this is exactly that). A light editorial prune would recover ~400-500 words; that's the upper bound. No structural surgery needed.
+Ch19 is at 143% of target - the **closest to target of any remaining compressible chapter**. Voice-passed, no extension pending. PAO read: ship-as-is is defensible (Part IV tutorial chapters tolerate +30-50% bloat for completeness; this is exactly that). A light editorial prune would recover ~400-500 words; that's the upper bound. No structural surgery needed.
 
 ## Section inventory
 
@@ -33,25 +33,25 @@ Ch19 is at 143% of target — the **closest to target of any remaining compressi
 
 ## Cut proposals
 
-### Cut 1 — §Air-Gap Deployment (-200 words)
+### Cut 1 - §Air-Gap Deployment (-200 words)
 
-§Air-Gap Deployment is the chapter's longest section at 1,233 words. The opening 3-posture comparison table (connected / proxied / air-gap strict) is well-pitched. The mid-section detailed deployment instructions across the three postures contain some procedural redundancy — internal update server setup repeats across the proxied and air-gap-strict scenarios. Collapse to "internal update server (same setup for proxied and air-gap-strict modes; differences only at the endpoint reachability boundary)."
+§Air-Gap Deployment is the chapter's longest section at 1,233 words. The opening 3-posture comparison table (connected / proxied / air-gap strict) is well-pitched. The mid-section detailed deployment instructions across the three postures contain some procedural redundancy - internal update server setup repeats across the proxied and air-gap-strict scenarios. Collapse to "internal update server (same setup for proxied and air-gap-strict modes; differences only at the endpoint reachability boundary)."
 
-### Cut 2 — §MDM Deployment (-150 words)
+### Cut 2 - §MDM Deployment (-150 words)
 
 The Intune and Jamf sub-sections describe similar pre-configuration steps (signing key trust anchors, MSI/PKG silent-install flags, post-install verification) using parallel structure. A consolidated "MDM-agnostic deployment steps" subsection followed by Intune-specific and Jamf-specific deltas would tighten the prose without losing detail.
 
-### Cut 3 — §The Operational Runbook Minimum (-100 words)
+### Cut 3 - §The Operational Runbook Minimum (-100 words)
 
 The three runbooks (node deprovisioning, key compromise IR, schema-epoch update) get full prose treatment. Convert each runbook to a bullet-form checklist with 5-7 steps; keep narrative for the 1-2 most critical decision points only. Saves prose churn; readers prefer checklist format for runbooks anyway.
 
-### Cut 4 — §Code Signing (-50 words)
+### Cut 4 - §Code Signing (-50 words)
 
 Light tightening of the macOS notarization step descriptions; the technical content stays.
 
 ## What PAO is NOT proposing
 
-- **§The Procurement Conversation, §Build and Packaging, §SBOM, §Admin Tooling for Revocation, §Putting It Together** — all tight; cuts would weaken the chapter.
+- **§The Procurement Conversation, §Build and Packaging, §SBOM, §Admin Tooling for Revocation, §Putting It Together** - all tight; cuts would weaken the chapter.
 - **No structural reorganization.** The chapter's narrative arc (procurement → packaging → signing → MDM → SBOM → admin tooling → air-gap → runbooks → checklist) is well-pitched for the enterprise IT reader who is the chapter's audience.
 
 ## Recommended outcome

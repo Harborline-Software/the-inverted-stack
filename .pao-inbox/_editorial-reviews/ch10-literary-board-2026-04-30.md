@@ -4,10 +4,10 @@ chapter: ch10-synthesis
 date: 2026-04-30
 author: literary-board subagent (12 critics)
 audience: CO (final voice-pass), PAO (action items)
-verdict: POLISH (7.9/10 board consensus — highest score so far across reviewed chapters)
+verdict: POLISH (7.9/10 board consensus - highest score so far across reviewed chapters)
 ---
 
-# Literary Board Review — Ch10 (Synthesis: What the Council Finally Agreed On)
+# Literary Board Review - Ch10 (Synthesis: What the Council Finally Agreed On)
 
 ## Board scores
 
@@ -33,17 +33,17 @@ verdict: POLISH (7.9/10 board consensus — highest score so far across reviewed
 
 ## Comparison to Ch22/Ch23 reviews
 
-Ch10 scores higher than either Ch22 (7.5) or Ch23 (6.7). Largest deltas from regional reviewers — Ch10 already does what Ch22/Ch23 polish PRs needed to add. **Ch10 is the model these earlier chapters should be polished against.** The Schrems II treatment at line 94, the state-mandated-access threat-model paragraph at line 96, and the 2022 SaaS-termination empirical anchor at line 86 are bookmark passages.
+Ch10 scores higher than either Ch22 (7.5) or Ch23 (6.7). Largest deltas from regional reviewers - Ch10 already does what Ch22/Ch23 polish PRs needed to add. **Ch10 is the model these earlier chapters should be polished against.** The Schrems II treatment at line 94, the state-mandated-access threat-model paragraph at line 96, and the 2022 SaaS-termination empirical anchor at line 86 are bookmark passages.
 
 ## Strengths to preserve
 
-- **Opening fragment-stack and council roll-call** — best Part-closer opener in the book
-- **Round 1/Round 2 score tables with deltas** — load-bearing artifact for skim-readers
-- **Shevchenko -0.3 explanation paragraph** — most rhetorically sophisticated move in the chapter
-- **Seven non-negotiables enumeration with council attribution** — author's authority correctly delegated to council
-- **§The council's verdict rests on one empirical anchor paragraph** — 2022 SaaS-termination event canonical phrasing
-- **Schrems II treatment** — bookmark as model
-- **State-mandated data access threat-model paragraph** — politically careful, technically precise
+- **Opening fragment-stack and council roll-call** - best Part-closer opener in the book
+- **Round 1/Round 2 score tables with deltas** - load-bearing artifact for skim-readers
+- **Shevchenko -0.3 explanation paragraph** - most rhetorically sophisticated move in the chapter
+- **Seven non-negotiables enumeration with council attribution** - author's authority correctly delegated to council
+- **§The council's verdict rests on one empirical anchor paragraph** - 2022 SaaS-termination event canonical phrasing
+- **Schrems II treatment** - bookmark as model
+- **State-mandated data access threat-model paragraph** - politically careful, technically precise
 
 ## Priority PAO action items applied
 
@@ -73,7 +73,7 @@ Confirmed voice-passed; cadence-quality concerns raised by Halvorsen are paragra
 
 ## Other findings (not priority-ordered)
 
-- Webb: §Open Questions has heterogeneous question types (architectural / operational / commercial / governance) — could disambiguate
+- Webb: §Open Questions has heterogeneous question types (architectural / operational / commercial / governance) - could disambiguate
 - Osei: Flease split-write resolution criterion needs commutativity-under-merge-function precision; Saltzer-Schroeder primary/secondary distinction would strengthen Shevchenko -0.3 explanation
 - Halvorsen: Vary prose architecture across the seven non-negotiables (pattern #16 stack risk)
 - Reyes: One sentence on accessibility property (assistive-tech operates through connectivity loss) would convert chapter from architecturally-aware to accessibility-aware
@@ -82,10 +82,10 @@ Confirmed voice-passed; cadence-quality concerns raised by Halvorsen are paragra
 - Volkov: import substitution (импортозамещение) terminology not yet named explicitly
 - Barker: BSI cloud-security requirements as parallel European regime to GDPR
 
-These items NOT addressed in this PR — they're polish opportunities for a future pass. Ch10 is the model already; not all items rise to PR-worthy.
+These items NOT addressed in this PR - they're polish opportunities for a future pass. Ch10 is the model already; not all items rise to PR-worthy.
 
 ## Word-count outcome
 
 Before polish: 3,438. After polish: 3,542. Net +104.
 
-Compression on item 1 (-130) was offset by additions on item 4 (+80) and item 5 (+120). The lit-board recommended landing ~3,100 words; we landed at 3,542. That's earned — the steel-man and human-scale closer additions are load-bearing per the board's own priority items. Ch10 is now the model the manuscript's other Part-closer / synthesis chapters should be polished against.
+Compression on item 1 (-130) was offset by additions on item 4 (+80) and item 5 (+120). The lit-board recommended landing ~3,100 words; we landed at 3,542. That's earned - the steel-man and human-scale closer additions are load-bearing per the board's own priority items. Ch10 is now the model the manuscript's other Part-closer / synthesis chapters should be polished against.

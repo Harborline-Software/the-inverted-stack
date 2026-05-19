@@ -4,10 +4,10 @@ chapter: ch14-sync-daemon-protocol
 date: 2026-04-30
 author: literary-board subagent (12 critics)
 audience: CO (final voice-pass), PAO (action items)
-verdict: POLISH (7.8/10 board consensus — wire-format table is the load-bearing artifact)
+verdict: POLISH (7.8/10 board consensus - wire-format table is the load-bearing artifact)
 ---
 
-# Literary Board Review — Ch14 (Sync Daemon Protocol)
+# Literary Board Review - Ch14 (Sync Daemon Protocol)
 
 ## Board scores
 
@@ -29,7 +29,7 @@ verdict: POLISH (7.8/10 board consensus — wire-format table is the load-bearin
 
 ## Voice register verification
 
-**SPECIFICATION VOICE — CONFIRMED.** Holds across protocol mechanics (L52–L237) and protocol-invariants close (L251–L261). Two passages bend toward council/advocacy voice: regional-deployment context wedged into Tier 3 at L46, regulatory enumeration at L147 (11-sentence Part-II-style argument inside Part III). Both content-correct; voice friction is structural placement, not register failure.
+**SPECIFICATION VOICE - CONFIRMED.** Holds across protocol mechanics (L52–L237) and protocol-invariants close (L251–L261). Two passages bend toward council/advocacy voice: regional-deployment context wedged into Tier 3 at L46, regulatory enumeration at L147 (11-sentence Part-II-style argument inside Part III). Both content-correct; voice friction is structural placement, not register failure.
 
 ## Cross-reference verification
 
@@ -42,21 +42,21 @@ verdict: POLISH (7.8/10 board consensus — wire-format table is the load-bearin
 
 ## Cross-chapter consistency
 
-**Ch14 IS THE CANONICAL HOME** for HELLO/CAPABILITY_NEG wire format. Upstream redundancy concern: **Ch11 L141** reproduces the same five-phase handshake + signature details. Recommendation flagged for follow-up — Ch11 should reference Ch14 rather than reproduce the wire format. Ch12, Ch13, Ch15 are clean (no wire-format duplication).
+**Ch14 IS THE CANONICAL HOME** for HELLO/CAPABILITY_NEG wire format. Upstream redundancy concern: **Ch11 L141** reproduces the same five-phase handshake + signature details. Recommendation flagged for follow-up - Ch11 should reference Ch14 rather than reproduce the wire format. Ch12, Ch13, Ch15 are clean (no wire-format duplication).
 
 ## Strengths to preserve
 
-- **L9 opening paragraph** — three short subject-verb sentences + closing constraint; best opener in Part III
+- **L9 opening paragraph** - three short subject-verb sentences + closing constraint; best opener in Part III
 - **L17 "Picture the application restarting…" anaphora triplet** + closing chiasmus "The application can fail without the network failing with it"
-- **L46 Tier 3 as primary operational tier** — the architectural priority inversion several critics named as strongest in any reference-architecture chapter
-- **L57 handshake sequence diagram + L71–L80 five-step handshake spec** — specification-complete
-- **L91 wire-format table** — field-level types, required/optional marking, signature scope, CBOR canonical, length-prefixing, replay window. The artifact an engineer can stub from
-- **L147 state-mandated data access framing** — regionally accurate, politically tactful, technically correct
-- **L161 endpoint-compromise consequence** — Nakamura positioning sentence
-- **L187 lease-blocked never silently queued** — decisive trade-off
-- **L247 closing chiasmus** — "The application can fail; the network keeps its promises"
-- **L251 Protocol Invariants section** — Hollis: rhetorical climax
-- **L261 no-trusted-network-mode sentence** — structural assurance
+- **L46 Tier 3 as primary operational tier** - the architectural priority inversion several critics named as strongest in any reference-architecture chapter
+- **L57 handshake sequence diagram + L71–L80 five-step handshake spec** - specification-complete
+- **L91 wire-format table** - field-level types, required/optional marking, signature scope, CBOR canonical, length-prefixing, replay window. The artifact an engineer can stub from
+- **L147 state-mandated data access framing** - regionally accurate, politically tactful, technically correct
+- **L161 endpoint-compromise consequence** - Nakamura positioning sentence
+- **L187 lease-blocked never silently queued** - decisive trade-off
+- **L247 closing chiasmus** - "The application can fail; the network keeps its promises"
+- **L251 Protocol Invariants section** - Hollis: rhetorical climax
+- **L261 no-trusted-network-mode sentence** - structural assurance
 
 ## Priority PAO action items (in priority order)
 
@@ -67,7 +67,7 @@ Currently 11 sentences / ~320 words. Split at "A distinct threat model operates 
 - **Tanaka:** Japan APPI 2022 + South Korea PIPA + China PIPL + MLPS 2.0 (currently named in Ch6/Ch10 but not Ch14)
 - **Diallo:** NDPR + POPIA + Kenya DPA (currently in Appendix F only)
 - **Krishnamurthy:** DIFC vs ADGM vs UAE-federal jurisdictional distinction
-- **Barker:** Formal CJEU case citation for Schrems II — *Data Protection Commissioner v. Facebook Ireland Limited*, C-311/18, 2020
+- **Barker:** Formal CJEU case citation for Schrems II - *Data Protection Commissioner v. Facebook Ireland Limited*, C-311/18, 2020
 
 ### 2. Extract L46 regional deployment-context list into separate paragraph
 
@@ -91,7 +91,7 @@ Currently claims "daemon strips operations for out-of-scope fields before transm
 
 - **Halvorsen:** L46 56-word parenthetical needs sentence break; L147 11-sentence paragraph needs split (combines with item 1); add one snap-sentence at L165 or L213
 - **Webb:** Optional pointer at L267 naming what Ch15 covers (attestation cryptography, key wrapping); name what specifically depends on it
-- **Nakamura:** L143 add SaaS-counterfactual sentence — name how SaaS sync layers run subscription filtering at API gateway vs daemon's send-tier filter
+- **Nakamura:** L143 add SaaS-counterfactual sentence - name how SaaS sync layers run subscription filtering at API gateway vs daemon's send-tier filter
 - **Osei:** L97 canonical CBOR encoding rule (RFC 8949 §3.9) implied not stated; L133 name "uniform random peer selection" explicitly
 - **Krishnamurthy:** L267 Related Specifications could point to Appendix F per-jurisdiction matrix
 - **Hollis:** After L9 add one sentence framing chapter's dual register (protocol spec + threat-closure rationale); consider letting Related Specifications close the chapter
@@ -108,4 +108,4 @@ After priority-5 polish target: ~3,750–3,900 words (107–112%). Net-zero or s
 
 ---
 
-**End of review.** PAO will apply priority items 1–5 in a polish PR. No voice-pass required — Part III specification register holds.
+**End of review.** PAO will apply priority items 1–5 in a polish PR. No voice-pass required - Part III specification register holds.

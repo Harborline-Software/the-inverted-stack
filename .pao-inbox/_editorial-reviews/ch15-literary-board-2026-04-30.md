@@ -4,10 +4,10 @@ chapter: ch15-security-architecture
 date: 2026-04-30
 author: literary-board subagent (12 critics)
 audience: CO (final voice-pass), PAO (action items)
-verdict: POLISH (7.7/10 board consensus — split landed cleanly; structural overrun localized to §Privacy-Preserving Aggregation)
+verdict: POLISH (7.7/10 board consensus - split landed cleanly; structural overrun localized to §Privacy-Preserving Aggregation)
 ---
 
-# Literary Board Review — Ch15 (Security Architecture)
+# Literary Board Review - Ch15 (Security Architecture)
 
 ## Board scores
 
@@ -32,7 +32,7 @@ verdict: POLISH (7.7/10 board consensus — split landed cleanly; structural ove
 **SPECIFICATION VOICE HOLDS** for §Threat Model, §Four Defensive Layers, §Key Hierarchy, §Role Attestation Flow, §In-Memory Key Handling, §Supply Chain Security, §GDPR Article 17, §Relay Trust Model (mostly), §Security Properties Summary.
 
 **Voice drifts** in two locations:
-- Compelled-access paragraph (L201) shifts to argument/essay register — defensible but should be named, not hidden
+- Compelled-access paragraph (L201) shifts to argument/essay register - defensible but should be named, not hidden
 - §Privacy-Preserving Aggregation (L213–269) carries academic register heavier than surrounding spec voice
 
 §Break-glass corrupt-sequence recovery subsection (L205) drifts into Ch14/Ch22 territory.
@@ -41,37 +41,37 @@ verdict: POLISH (7.7/10 board consensus — split landed cleanly; structural ove
 
 **ALL FORWARD-POINTERS RESOLVE CLEANLY:**
 - Ch7 L155 → Ch15 §GDPR Article 17 and Crypto-Shredding (L171–181)
-- Ch11 L153 → Ch15 (crypto-shredding mechanism) + Ch13 (stream compaction) — split correct after today's polish
+- Ch11 L153 → Ch15 (crypto-shredding mechanism) + Ch13 (stream compaction) - split correct after today's polish
 - Ch13 L147 → Ch15 §GDPR Article 17 (L171–181)
 - Ch14 L147 (state-mandated-access) → Ch15 L201 (resolves but should also surface in §Threat Model at L10)
-- Ch15→Ch22 deferrals (Key Compromise IR, Key-Loss Recovery, Forward Secrecy) — all resolve to Ch22 sections with matching titles
-- Ch15→Ch23 deferrals (Offline Node Revocation, Collaborator Revocation, Endpoint Compromise, Chain-of-Custody, Event-Triggered) — all resolve to Ch23 sections with matching titles
+- Ch15→Ch22 deferrals (Key Compromise IR, Key-Loss Recovery, Forward Secrecy) - all resolve to Ch22 sections with matching titles
+- Ch15→Ch23 deferrals (Offline Node Revocation, Collaborator Revocation, Endpoint Compromise, Chain-of-Custody, Event-Triggered) - all resolve to Ch23 sections with matching titles
 
 ## Split verification (Ch15→Ch22, Ch15→Ch23)
 
-**Split landed cleanly at section-title level.** All seven deferral pointers resolve. Only Ch22/Ch23 territory bleeding back into Ch15: §Break-glass corrupt-sequence recovery (L205) — sync-daemon operational territory, should move.
+**Split landed cleanly at section-title level.** All seven deferral pointers resolve. Only Ch22/Ch23 territory bleeding back into Ch15: §Break-glass corrupt-sequence recovery (L205) - sync-daemon operational territory, should move.
 
 Other concern is structural: six consecutive single-line deferral stubs (L99, L105, L111, L117, L123, L145, L165, L185) read as navigation skeleton inside chapter body.
 
 ## Strengths to preserve
 
-- **L12 opening hook** — "Distributing data to endpoints does not eliminate the honeypot problem. It distributes it." Two-sentence pivot
-- **L22–48 §Four Defensive Layers** — exemplary specification voice; each layer with controlling sentence + mechanism + invariant
-- **L73 envelope encryption mechanics** — concrete primitive specification (256-bit DEK, AES-256-GCM, 96-bit random nonce, KEK rotation re-wraps DEKs not bodies)
-- **L75 Argon2id parameters** — explicit OWASP baseline citation, tiered for regulated industry
-- **L57–71 Mermaid key hierarchy diagram** — concrete, scannable
-- **L179 crypto-shredding honesty** — "The architecture makes content erasure technically possible. Legal counsel determines whether residual metadata satisfies the specific data subject's request"
-- **L201 CMK-vs-local-first competitive distinction** — unique, CTO-grade
-- **L203 2022 SaaS terminations empirical anchor** — converts structural argument to documented historical reference
-- **L255 honest scoping in §Sub-pattern 12c** — "The rolling-window budget is a practical engineering heuristic, not a formal solution to temporal differential privacy"
-- **L263–269 §FAILED conditions** for privacy-aggregation primitive — explicit kill triggers
+- **L12 opening hook** - "Distributing data to endpoints does not eliminate the honeypot problem. It distributes it." Two-sentence pivot
+- **L22–48 §Four Defensive Layers** - exemplary specification voice; each layer with controlling sentence + mechanism + invariant
+- **L73 envelope encryption mechanics** - concrete primitive specification (256-bit DEK, AES-256-GCM, 96-bit random nonce, KEK rotation re-wraps DEKs not bodies)
+- **L75 Argon2id parameters** - explicit OWASP baseline citation, tiered for regulated industry
+- **L57–71 Mermaid key hierarchy diagram** - concrete, scannable
+- **L179 crypto-shredding honesty** - "The architecture makes content erasure technically possible. Legal counsel determines whether residual metadata satisfies the specific data subject's request"
+- **L201 CMK-vs-local-first competitive distinction** - unique, CTO-grade
+- **L203 2022 SaaS terminations empirical anchor** - converts structural argument to documented historical reference
+- **L255 honest scoping in §Sub-pattern 12c** - "The rolling-window budget is a practical engineering heuristic, not a formal solution to temporal differential privacy"
+- **L263–269 §FAILED conditions** for privacy-aggregation primitive - explicit kill triggers
 - **L277–283 closing Properties Summary table + L285 administrator-trust-anchor honesty**
 
 ## Priority PAO action items (in priority order)
 
 ### 1. Resolve the six operational-deferral stubs
 
-L99, L105, L111, L117, L123, L145, L165, L185 — collapse eight single-line deferrals into one consolidated "Operational lifecycle map" paragraph at chapter close that names topics in prose and points to Ch22/Ch23. Currently reads as navigation skeleton inside spec body. (Chase, Webb, Hollis converge)
+L99, L105, L111, L117, L123, L145, L165, L185 - collapse eight single-line deferrals into one consolidated "Operational lifecycle map" paragraph at chapter close that names topics in prose and points to Ch22/Ch23. Currently reads as navigation skeleton inside spec body. (Chase, Webb, Hollis converge)
 
 ### 2. Decide the fate of §Privacy-Preserving Aggregation (L213–269)
 
@@ -112,7 +112,7 @@ Sync-daemon operational territory belonging in Ch14 or Ch22, not the security ar
 
 ## Word-count outcome
 
-Before polish: 5,701 body words (142% of 4,000 target — improved from 159% pre-split).
+Before polish: 5,701 body words (142% of 4,000 target - improved from 159% pre-split).
 
 After priority-5 polish target:
 - Item 2 (move Privacy-Preserving Aggregation): -1,500 words → 4,200 (105%)
@@ -120,7 +120,7 @@ After priority-5 polish target:
 - Item 3 (tighten anaphora) + Item 5 (move break-glass): -200 words
 - Items 1+2+3+5: -1,780 words gross
 - Regulatory parity additions (item 3) + state-mandated-access surfacing (item 4): +250 words
-- **Net: -1,530 words → ~4,170 (104%) — within ±10% target band**
+- **Net: -1,530 words → ~4,170 (104%) - within ±10% target band**
 
 ---
 

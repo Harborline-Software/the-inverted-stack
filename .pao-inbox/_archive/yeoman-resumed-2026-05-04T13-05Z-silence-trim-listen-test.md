@@ -9,7 +9,7 @@ Silence-trim filter applied. Listen test requires CO (see below).
 ## Build script change applied
 
 The directive specified `build/audiobook.py`. The ffmpeg concat is actually in
-`build/m4b.py` — `audiobook.py` writes per-chapter MP3 bytes directly in Python
+`build/m4b.py` - `audiobook.py` writes per-chapter MP3 bytes directly in Python
 without an ffmpeg concat step. Applied to `m4b.py` instead.
 
 Modified `cmd` list in `build/m4b.py` (before the `-c:a aac` line):
@@ -23,7 +23,7 @@ cmd += [
 ]
 ```
 
-Defaults used: `stop_periods=-1`, `stop_duration=1.5`, `stop_threshold=-50dB` — per the
+Defaults used: `stop_periods=-1`, `stop_duration=1.5`, `stop_threshold=-50dB` - per the
 recommendation doc. One-line change; easy to revert or tune.
 
 ## the-crossing also relaunched
@@ -33,7 +33,7 @@ Simultaneously re-launched the-crossing regen (PID 15664, headless). Log:
 See yeoman-resumed-2026-05-04T13-00Z-audiobook-regen-complete.md for context on the
 Friday failure.
 
-## Listen test — requires CO
+## Listen test - requires CO
 
 Cannot perform the listen test autonomously (no audio playback). What CO needs to do:
 
@@ -51,7 +51,7 @@ Cannot perform the listen test autonomously (no audio playback). What CO needs t
 ## Recommendation for listen-test scope
 
 Suggest Ch 6 (council chapter, heavy H2 structure) rather than Ch 1 for the
-intra-chapter beat check — more section breaks, faster to verify the 1.2s H2 pause
+intra-chapter beat check - more section breaks, faster to verify the 1.2s H2 pause
 survives. Ch 1 is still the right chapter for cast-swap name pronunciation check.
 
 ## Pending PAO actions

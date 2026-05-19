@@ -1,26 +1,26 @@
-# Forced Alignment for Word-Level Whispersync — Evaluation
+# Forced Alignment for Word-Level Whispersync - Evaluation
 
 **Date:** 2026-05-07
 **Author:** PAO
-**Status:** **Pilot complete 2026-05-07. Outcome: revert to sentence-level highlighting (CO ear-test verdict 2026-05-08).** Word-level interpolation — whether across full chunks or within aeneas-derived sentence fragments — is always an estimate; CO's ear-test confirmed the estimate is visibly wrong. Sentence-level highlighting binds against ground-truth chunk timestamps and is the chosen direction. **API STT (`POST /api/v1/audio/transcriptions`) remains a viable future path** if word-level is reconsidered; aeneas is NOT the path forward (structural tail-confidence-loss limitation). See PAO directive `pao-directive-2026-05-08T01-54Z-revert-to-sentence-level-highlighting.md` for the Yeoman-side implementation directive.
+**Status:** **Pilot complete 2026-05-07. Outcome: revert to sentence-level highlighting (CO ear-test verdict 2026-05-08).** Word-level interpolation - whether across full chunks or within aeneas-derived sentence fragments - is always an estimate; CO's ear-test confirmed the estimate is visibly wrong. Sentence-level highlighting binds against ground-truth chunk timestamps and is the chosen direction. **API STT (`POST /api/v1/audio/transcriptions`) remains a viable future path** if word-level is reconsidered; aeneas is NOT the path forward (structural tail-confidence-loss limitation). See PAO directive `pao-directive-2026-05-08T01-54Z-revert-to-sentence-level-highlighting.md` for the Yeoman-side implementation directive.
 **Related:**
 - `.pao-inbox/co-session-2026-05-07T14-27Z-web-reader-enhancements.md` (the whispersync directive)
-- `.pao-inbox/_decisions/2026-05-04-stt-qc-spike-phase1-outcome.md` (prior STT spike — different problem)
+- `.pao-inbox/_decisions/2026-05-04-stt-qc-spike-phase1-outcome.md` (prior STT spike - different problem)
 - `.pao-inbox/yeoman-resumed-2026-05-06T07-38Z-stt-spike-phase2-medium.md` (FAIL verdict on QC use case)
 
 ---
 
 ## Problem statement
 
-The current word-level highlight in the web reader uses **linear interpolation across the chunk's duration** to estimate which word the listener is hearing right now. This assumes uniform speech rate within a sentence. The assumption is wrong for ciufi-galeazzi (Italian-cadenced cloned voice with non-uniform delivery) — and arguably wrong for any voice that punctuates, emphasizes, or pauses naturally. Drift is probably 200-500ms inside typical sentences and 1+ second on long sentences.
+The current word-level highlight in the web reader uses **linear interpolation across the chunk's duration** to estimate which word the listener is hearing right now. This assumes uniform speech rate within a sentence. The assumption is wrong for ciufi-galeazzi (Italian-cadenced cloned voice with non-uniform delivery) - and arguably wrong for any voice that punctuates, emphasizes, or pauses naturally. Drift is probably 200-500ms inside typical sentences and 1+ second on long sentences.
 
 Better-quality whispersync alignment improves the reading-while-listening experience, and is a pre-publication artifact concern (Apple Books Whispersync-style media overlays expect word-level accuracy).
 
-## Why STT was the wrong tool — and forced alignment is the right one
+## Why STT was the wrong tool - and forced alignment is the right one
 
 The prior STT QC spike (Phases 1 + 2, 2026-05-04 to 2026-05-06) had an open-vocabulary recognition problem: *"did the audio match the source word-for-word?"* Whisper had to recognize the text from scratch. It failed on math notation, hallucinated paragraphs as "thank you", confused homophones. **Verdict: FAIL.**
 
-The whispersync alignment problem is the inverse: **the source text is known**; the aligner only has to localize where in the audio each known word is spoken. This is **forced alignment**, not full STT. Tools designed for it are computationally lighter, tolerant of pronunciation variation, and don't need to "recognize" anything — they only need to time-stamp.
+The whispersync alignment problem is the inverse: **the source text is known**; the aligner only has to localize where in the audio each known word is spoken. This is **forced alignment**, not full STT. Tools designed for it are computationally lighter, tolerant of pronunciation variation, and don't need to "recognize" anything - they only need to time-stamp.
 
 | Tool | Notes |
 |---|---|
@@ -30,17 +30,17 @@ The whispersync alignment problem is the inverse: **the source text is known**; 
 | Montreal Forced Aligner (MFA) | Highest accuracy; phoneme-level; Kaldi-based; heavy install. Overkill for this case. |
 | `gentle` | Older; works well on clean narration. |
 
-**Production path: API STT** — `POST /api/v1/audio/transcriptions` with `file=<chapter>.mp3, model=whisper, response_format=verbose_json`. Returns word-level timestamps. Merge against the post-substitution script to produce the new alignment JSON.
+**Production path: API STT** - `POST /api/v1/audio/transcriptions` with `file=<chapter>.mp3, model=whisper, response_format=verbose_json`. Returns word-level timestamps. Merge against the post-substitution script to produce the new alignment JSON.
 
 **Why API STT works for forced-alignment-style use even though the prior STT QC spike FAILED:**
 
-The QC spike measured *open-vocabulary recognition fidelity* — "did Whisper transcribe the audio correctly?" Verdict FAIL because of math notation, hallucinations, homophones.
+The QC spike measured *open-vocabulary recognition fidelity* - "did Whisper transcribe the audio correctly?" Verdict FAIL because of math notation, hallucinations, homophones.
 
-Forced-alignment uses Whisper's **timing data** + the **known source script**. The merge layer aligns Whisper's recognized-word stream against the source script via edit-distance matching; mistranscribed words get their timing from the matched source word. Whisper's recognition errors don't break the merge — they just have to localize *roughly* where each spoken word is, and the source-side match catches everything else.
+Forced-alignment uses Whisper's **timing data** + the **known source script**. The merge layer aligns Whisper's recognized-word stream against the source script via edit-distance matching; mistranscribed words get their timing from the matched source word. Whisper's recognition errors don't break the merge - they just have to localize *roughly* where each spoken word is, and the source-side match catches everything else.
 
-**Pilot fallback: aeneas** — if the API STT pilot reveals unexpected merge issues, aeneas is a CPU-only local alternative that works on the same audio + text inputs.
+**Pilot fallback: aeneas** - if the API STT pilot reveals unexpected merge issues, aeneas is a CPU-only local alternative that works on the same audio + text inputs.
 
-## Substitution-awareness — required for the merge
+## Substitution-awareness - required for the merge
 
 Audio glossary substitutions create text divergence:
 
@@ -49,11 +49,11 @@ Audio glossary substitutions create text divergence:
 
 The aligner needs to know which print word corresponds to which audio word. Two integration patterns:
 
-### Option A (recommended) — align against the substituted script
+### Option A (recommended) - align against the substituted script
 
 The aligner sees the audio and the post-substitution script (what `audiobook.py` already passes to TTS). It produces per-word timing for the AUDIO-SIDE text. The web reader's data layer maps audio-side word indices back to print-side word indices via the substitution table. Cleaner data; UI does the mapping.
 
-### Option B — align against the print source directly
+### Option B - align against the print source directly
 
 The aligner has to skip insertions and tolerate replacements. Doable but messy; alignments drift at substitution boundaries.
 
@@ -84,15 +84,15 @@ The current `_alignments/<chapter>.json` has only sentence-level boundaries (`st
 }
 ```
 
-The `substituted: true` flag also unlocks the hover-diff feature from the QA dashboard proposal — when a print word is highlighted that corresponds to a substituted audio word, the UI can show the print/audio diff inline.
+The `substituted: true` flag also unlocks the hover-diff feature from the QA dashboard proposal - when a print word is highlighted that corresponds to a substituted audio word, the UI can show the print/audio diff inline.
 
 ## Pilot scope
 
 **Vehicle:** Ch 1 (just rendered Chatterbox-final at 24.2 min, 258 chunks, 22.16 MB).
 
-**Iteration cost reduction — use Kokoro draft mode for the alignment iteration loop.**
+**Iteration cost reduction - use Kokoro draft mode for the alignment iteration loop.**
 
-Kokoro renders Ch 1 in single-digit minutes (vs Chatterbox's 21.8 min). Forced alignment work iterates faster against the draft MP3. Once the alignment pipeline is validated, re-run against the Chatterbox final render — the forced-aligner has no engine dependency.
+Kokoro renders Ch 1 in single-digit minutes (vs Chatterbox's 21.8 min). Forced alignment work iterates faster against the draft MP3. Once the alignment pipeline is validated, re-run against the Chatterbox final render - the forced-aligner has no engine dependency.
 
 **Pilot steps:**
 

@@ -18,24 +18,24 @@ Wall time: ~4.5 min per chapter (Intel i9, CPU int8).
 
 ## Key findings
 
-**ch01 (narrative prose)** — VARIANT-dominated. Dominant patterns:
-- `saas` → "software as a service" (~50 hits) — TTS expands acronym, not an error
-- `priya` → "prier/preer", `pune` → "pooner" — proper noun phonetics, not errors
-- Number words ↔ digits — stylistic variation, not errors
-- Time digit corruption (REAL ×6): "4:47" → "4:07", "9:30" → "9:000 tree" — systematic base-model
+**ch01 (narrative prose)** - VARIANT-dominated. Dominant patterns:
+- `saas` → "software as a service" (~50 hits) - TTS expands acronym, not an error
+- `priya` → "prier/preer", `pune` → "pooner" - proper noun phonetics, not errors
+- Number words ↔ digits - stylistic variation, not errors
+- Time digit corruption (REAL ×6): "4:47" → "4:07", "9:30" → "9:000 tree" - systematic base-model
   failure on two-digit time components after decimal context
-- `sulfa` → "sulfur" (REAL ×2) — medically significant medication name
+- `sulfa` → "sulfur" (REAL ×2) - medically significant medication name
 
-**ch15 (security/crypto)** — Higher REAL rate driven by:
+**ch15 (security/crypto)** - Higher REAL rate driven by:
 - Mathematical notation (ε, λ, σ, δ) completely garbled throughout (REAL ×~20)
 - TTS inserting package names from inline code refs: "sunfish colonel security", "sunfish kernel
-  sync", etc. (REAL ×8) — `_strip_inline_code` regex misses some patterns
-- `sync` → "sink" (REAL ×3) — critical distributed-systems term
-- `writes` → "rights" (REAL ×5) — critical CRDT term
-- Large section drops (rows 71-72, 75-78, 81, 160, 238, 250-251) — multiple consecutive sentences
+  sync", etc. (REAL ×8) - `_strip_inline_code` regex misses some patterns
+- `sync` → "sink" (REAL ×3) - critical distributed-systems term
+- `writes` → "rights" (REAL ×5) - critical CRDT term
+- Large section drops (rows 71-72, 75-78, 81, 160, 238, 250-251) - multiple consecutive sentences
   dropped or replaced with garbage; listeners would miss entire functional specifications
-- Foreign legal text (Portuguese LGPD, Spanish LFPDPPP, Russian импортозамещение) — FOREIGN ×7
-- `counsel` → "council" (REAL) — recurring cross-chapter homophone error
+- Foreign legal text (Portuguese LGPD, Spanish LFPDPPP, Russian импортозамещение) - FOREIGN ×7
+- `counsel` → "council" (REAL) - recurring cross-chapter homophone error
 
 ## Model adequacy verdict
 
@@ -57,8 +57,8 @@ TTS reads these and produces garbage in the transcript. Fix before Phase 2 run.
 
 ## Artifacts
 
-- `build/output/stt_spike/ch01-when-saas-fights-reality_diff.md` — classified, 265 regions
-- `build/output/stt_spike/ch01-when-saas-fights-reality_transcript.txt` — raw Whisper output
-- `build/output/stt_spike/ch15-security-architecture_diff.md` — classified, 281 regions
-- `build/output/stt_spike/ch15-security-architecture_transcript.txt` — raw Whisper output
-- `build/stt_spike.py` — spike script (not committed per directive; PAO to commit when ready)
+- `build/output/stt_spike/ch01-when-saas-fights-reality_diff.md` - classified, 265 regions
+- `build/output/stt_spike/ch01-when-saas-fights-reality_transcript.txt` - raw Whisper output
+- `build/output/stt_spike/ch15-security-architecture_diff.md` - classified, 281 regions
+- `build/output/stt_spike/ch15-security-architecture_transcript.txt` - raw Whisper output
+- `build/stt_spike.py` - spike script (not committed per directive; PAO to commit when ready)

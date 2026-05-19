@@ -17,7 +17,7 @@ commit-authority.
 ```
 
 **Safety:** The current running render (PID 51987 from 2026-04-29 06:55) read CHAPTER_FILES at
-process startup. Editing the script now affects only future runs — no disruption to in-flight
+process startup. Editing the script now affects only future runs - no disruption to in-flight
 render. Verified the script reads the list once at startup (line 1399 `targets = CHAPTER_FILES`).
 
 **Voice-plan.yaml status:** Already updated with `ch22-security-operations: sinek` and

@@ -4,11 +4,11 @@ chapter: ch12-crdt-engine-data-layer
 date: 2026-04-30
 author: literary-board subagent (12 critics)
 audience: CO (final voice-pass), PAO (action items)
-verdict: POLISH (7.5/10 board consensus — strongest double-entry-ledger sub-chapter in Part III)
+verdict: POLISH (7.5/10 board consensus - strongest double-entry-ledger sub-chapter in Part III)
 supersedes: .pao-inbox/_editorial-reviews/ch12-compression-2026-04-29.md (compression-only review)
 ---
 
-# Literary Board Review — Ch12 (CRDT Engine and Data Layer)
+# Literary Board Review - Ch12 (CRDT Engine and Data Layer)
 
 ## Board scores
 
@@ -54,18 +54,18 @@ Soft overlap: **Stale Peer Recovery Protocol (L128–140)** specifies sync-proto
 
 ## Strengths to preserve
 
-- **L10 opening** — three-sentence ascending-stakes lead earns the chapter
-- **L18 commutativity/associativity/idempotency triad** — mathematically correct framing
-- **L52–58 AP/CP positioning table** — load-bearing reference artifact
+- **L10 opening** - three-sentence ascending-stakes lead earns the chapter
+- **L18 commutativity/associativity/idempotency triad** - mathematically correct framing
+- **L52–58 AP/CP positioning table** - load-bearing reference artifact
 - **L74 "CRDT document is a live working surface. Append-only event log is the source of truth"**
-- **L80 Automerge exclusion** — Nakamura: model of intellectually honest competitive positioning
-- **L112 operator-cost honesty** — "AckVector maintenance, peer-staleness window administration..."
-- **L126 named-deployment list** — GCC construction, rural Indian BFSI, Sub-Saharan African field ops as operational baselines
+- **L80 Automerge exclusion** - Nakamura: model of intellectually honest competitive positioning
+- **L112 operator-cost honesty** - "AckVector maintenance, peer-staleness window administration..."
+- **L126 named-deployment list** - GCC construction, rural Indian BFSI, Sub-Saharan African field ops as operational baselines
 - **L148 Schrems II citation [5]** correct and complete (CJEU C-311/18, 2020)
-- **L156–208 double-entry ledger sub-chapter** — Webb: "single best section"
-- **L231 Layer 2 durability + load-shedding framing** — Diallo: strongest African-markets signal
-- **L243–254 Failure Modes table** — Hollis: right closing artifact
-- **L258–268 Sunfish Package Reference table** — Tanaka SIer-readiness signal
+- **L156–208 double-entry ledger sub-chapter** - Webb: "single best section"
+- **L231 Layer 2 durability + load-shedding framing** - Diallo: strongest African-markets signal
+- **L243–254 Failure Modes table** - Hollis: right closing artifact
+- **L258–268 Sunfish Package Reference table** - Tanaka SIer-readiness signal
 
 ## Priority PAO action items (in priority order)
 
@@ -96,7 +96,7 @@ Sync-daemon territory belonging in Ch14. Resolves word-count overage and improve
 
 Osei: cite Almeida/Baquero on bounded version vectors; one-clause acknowledgment that Yjs/Loro are operation-based at runtime with state-based snapshots.
 
-### 5. Manuscript-wide cleanup — fix duplicated YDotNet parenthetical in preface.md L41 + appendix-a L123
+### 5. Manuscript-wide cleanup - fix duplicated YDotNet parenthetical in preface.md L41 + appendix-a L123
 
 Same artifact today's Ch11 PR #48 fixed. Follow-up PR scope.
 
@@ -107,14 +107,14 @@ Same artifact today's Ch11 PR #48 fixed. Follow-up PR scope.
 - **Nakamura:** One paragraph naming SaaS-database alternative explicitly (PostgreSQL + logical replication) and what local-first complexity buys; steelman "this is just NoSQL with extra steps"
 - **Reyes:** Add LATAM regions to L126 named-deployment list (interior Mato Grosso, Amazonas, Chihuahua, Sonora); one sentence connecting offline-first guarantee to assistive-tech continuity
 - **Tanaka:** Verify Appendix F per-regime mapping includes APPI cabinet guidelines, MLPS 2.0 categorization, ISMS-P certification
-- **Barker:** Schrems II citation [5] correct; verify it's only direct citation needed (Article 17 forward-references to Ch15 — clean)
+- **Barker:** Schrems II citation [5] correct; verify it's only direct citation needed (Article 17 forward-references to Ch15 - clean)
 - **Diallo:** Reference M-PESA or MTN MoMo as African precedent for offline-first architecture in financial services (one sentence)
 - **Volkov:** Add Yandex Cloud or VK Cloud as named S3-compatible providers in L233 example list
 
 ## Word-count outcome target
 
 Before polish: 5,316 words (133% of 4,000 target).
-After priority-5 polish target: 4,400–4,800 (110–120%) — same band as Ch13/Ch14/Ch15 post-polish.
+After priority-5 polish target: 4,400–4,800 (110–120%) - same band as Ch13/Ch14/Ch15 post-polish.
 
 Compression avenues:
 - Item 2 (Stale Peer Recovery → Ch14): -440 words → 4,876

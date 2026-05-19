@@ -9,11 +9,11 @@ parent-decisions:
 yeoman-beacon: ../yeoman-resumed-2026-05-04T13-30Z-stt-spike-phase1-complete.md
 ---
 
-# STT QC Spike — Phase 1 Outcome + Phase 2 Decision
+# STT QC Spike - Phase 1 Outcome + Phase 2 Decision
 
 ## TL;DR
 
-Phase 1 ran two chapters (ch01 narrative, ch15 crypto/security) through faster-whisper base. The spike **LOWER-PASSES** the success criterion (≥1 REAL per 5 chapters with FP ratio < 5:1) on both chapters. **The findings are not symmetric** — base is **marginally usable for narrative prose, inadequate for technical/crypto prose**. Phase 2 should run a focused sub-spike: whisper-medium on ch15 only, to determine whether medium resolves the math-notation garble + large-section drops that make base unusable for technical content.
+Phase 1 ran two chapters (ch01 narrative, ch15 crypto/security) through faster-whisper base. The spike **LOWER-PASSES** the success criterion (≥1 REAL per 5 chapters with FP ratio < 5:1) on both chapters. **The findings are not symmetric** - base is **marginally usable for narrative prose, inadequate for technical/crypto prose**. Phase 2 should run a focused sub-spike: whisper-medium on ch15 only, to determine whether medium resolves the math-notation garble + large-section drops that make base unusable for technical content.
 
 ## Phase 1 results vs success criterion
 
@@ -33,11 +33,11 @@ Aggregate: 147 REAL across 2 chapters = 73.5 REAL per chapter on average. Both c
 
 The numerical pass conceals the structural finding. Phase 1 surfaced two distinct error profiles:
 
-### Narrative chapter (ch01) — base is marginally adequate
+### Narrative chapter (ch01) - base is marginally adequate
 
 Dominant REAL classes:
 - **Time-digit corruption** (×6): "4:47" → "4:07", "9:30" → "9:000 tree". Systematic base-model failure on two-digit time components after decimal context.
-- **Medication name** (×2): "sulfa" → "sulfur" — medically significant in the asthma scene; would need flagging on listen.
+- **Medication name** (×2): "sulfa" → "sulfur" - medically significant in the asthma scene; would need flagging on listen.
 
 Dominant VARIANT classes (false positives, not errors):
 - **Acronym expansion** (~50): TTS expands `saas` → "software as a service" before reading; STT transcribes the expansion.
@@ -46,13 +46,13 @@ Dominant VARIANT classes (false positives, not errors):
 
 Verdict: A medium-attention listener could follow base-model output and would flag ~53 items per chapter for human review. **Adequate for narrative-chapter QC.**
 
-### Technical chapter (ch15) — base is inadequate
+### Technical chapter (ch15) - base is inadequate
 
 Dominant REAL classes:
 - **Math notation** (×~20): Greek letters (ε, λ, σ, δ) garbled or dropped throughout. Critical for §Privacy-Preserving Aggregation (DP epsilon-budget).
 - **Package-name false-insertions** (×8): TTS reads ``Sunfish.Kernel.Security`` aloud; STT transcribes "sunfish kernel security"; spike script's `_strip_inline_code` regex was eliding the source content, so TTS-spoken words appeared as inserted REAL errors. **Script-level bug, fixed in this PR** (preserve backtick content as words).
 - **Critical homophones** (×8 across two patterns): `sync` → "sink" (×3, distributed-systems term), `writes` → "rights" (×5, CRDT term), `counsel` → "council" (×1).
-- **Large section drops**: rows 71-72, 75-78, 81, 160, 238, 250-251 — multiple consecutive sentences dropped or replaced with garbage. **Listeners would miss entire functional specifications.**
+- **Large section drops**: rows 71-72, 75-78, 81, 160, 238, 250-251 - multiple consecutive sentences dropped or replaced with garbage. **Listeners would miss entire functional specifications.**
 
 Verdict: Base-model output cannot be used as the durable QC layer on technical chapters. Math notation garbled; section drops mean an entire normative paragraph could be silently broken without flagging.
 
@@ -64,7 +64,7 @@ Per Yeoman's flag, `build/stt_spike.py:_strip_inline_code` was replacing backtic
 
 Two paths considered:
 
-### Path A — Re-run Phase 1 with whisper-medium on ch15 only
+### Path A - Re-run Phase 1 with whisper-medium on ch15 only
 
 Cost: ~10-20 min wall-time on Mac CPU (medium is ~3× base; ch15 was ~5 min on base; medium estimated 15-20 min).
 
@@ -73,7 +73,7 @@ Decision criteria:
 - If medium still fails on math-notation drop / large-section drop, escalate to large-v3 (estimated 45-60 min wall-time on Mac CPU) or pivot to GPU host once Higgs is back.
 - If even large-v3 fails, the round-trip STT approach is fundamentally inadequate for technical chapters → defer technical-chapter QC to Phase 3 (forced alignment via WhisperX).
 
-### Path B — Skip directly to Phase 3 (forced alignment)
+### Path B - Skip directly to Phase 3 (forced alignment)
 
 Cost: ~1-2 hours setup + integration into `build/audiobook.py` as post-generation QC step.
 

@@ -1,33 +1,33 @@
 ---
 type: character-sheet (institutional + named representative)
-character: Helvetia Trust SA — Swiss federated-identity corporate sponsor; Dr. Lukas Brandt — senior representative
-status: working — initial draft 2026-05-04 per CO direction (rival cast in case)
+character: Helvetia Trust SA - Swiss federated-identity corporate sponsor; Dr. Lukas Brandt - senior representative
+status: working - initial draft 2026-05-04 per CO direction (rival cast in case)
 sheet-depth: institutional sketch + named-rep medium
 chapter: Vol 2+ (the corporate-vs-OSS axis is the architectural-philosophical split externalized; Helvetia is the structural force, Brandt is the human face for scenes)
 firewall-note: Helvetia Trust SA is fictional. Swiss federated-identity infrastructure is a real and growing commercial sector but no specific real company is being represented. PAO writes a sheet that is informed-by-pattern but not based-on. Sensitivity-reader feedback welcome through CO.
 ---
 
-# Character Sheet — Helvetia Trust SA + Dr. Lukas Brandt (Senior Representative)
+# Character Sheet - Helvetia Trust SA + Dr. Lukas Brandt (Senior Representative)
 
 ## Why this exists
 
 Per CO direction: *the corporate sponsor is the core difference compared to the OSS of the Sunfish.* The Helvetia Trust SA partnership with Stefan Reinhardt's organization is the structural axis on which the rival platform's architectural compromise rests. Sunfish is OSS (community-built; community-governed; commercially neutral); TrustMesh / HelveSync is OSS *wrapper* on top of Helvetia's commercial federated-identity layer. The architecture's centralized-trust component is not philosophy; it is commercial product.
 
-The corporate-sponsor structure is the **Forsaken's institutional vehicle** — sincere, compliance-friendly, regulator-blessed, and architecturally compromised in ways that serve the sponsor's commercial interests. Helvetia Trust is not cartoon evil; it is a real-feeling Swiss tech firm whose business model requires the centralization Sunfish refuses.
+The corporate-sponsor structure is the **Forsaken's institutional vehicle** - sincere, compliance-friendly, regulator-blessed, and architecturally compromised in ways that serve the sponsor's commercial interests. Helvetia Trust is not cartoon evil; it is a real-feeling Swiss tech firm whose business model requires the centralization Sunfish refuses.
 
 Two parts to this sheet:
-1. **The institution** — Helvetia Trust SA as structural force (the dominant treatment in the series)
-2. **The representative** — Dr. Lukas Brandt as the human face for occasional scenes (lighter treatment; CO can flesh out more if specific scenes require it)
+1. **The institution** - Helvetia Trust SA as structural force (the dominant treatment in the series)
+2. **The representative** - Dr. Lukas Brandt as the human face for occasional scenes (lighter treatment; CO can flesh out more if specific scenes require it)
 
-## Part 1: Helvetia Trust SA — the institution
+## Part 1: Helvetia Trust SA - the institution
 
 ### Identity
 
-- **Name:** Helvetia Trust SA (working — Swiss-domiciled; "SA" is *société anonyme* / *Aktiengesellschaft*; "Helvetia" is the personification of Switzerland; the name reads as financially-credible without being on-the-nose)
-- **Domicile:** Zurich (working — Geneva alternative; Zurich is the more credible center for federated-identity infrastructure given the Swiss banking + tech-cluster pattern)
-- **Founded:** ~2010 (working — early enough to have built a serious product before federated-identity became a regulatory category; late enough to be credibly post-cloud)
+- **Name:** Helvetia Trust SA (working - Swiss-domiciled; "SA" is *société anonyme* / *Aktiengesellschaft*; "Helvetia" is the personification of Switzerland; the name reads as financially-credible without being on-the-nose)
+- **Domicile:** Zurich (working - Geneva alternative; Zurich is the more credible center for federated-identity infrastructure given the Swiss banking + tech-cluster pattern)
+- **Founded:** ~2010 (working - early enough to have built a serious product before federated-identity became a regulatory category; late enough to be credibly post-cloud)
 - **Industry:** Federated-identity infrastructure for distributed systems; key-management-as-a-service; trust-broker services for compliance-friendly architectures
-- **Public framing:** "Swiss-quality identity infrastructure for the post-cloud era." The Swiss-neutrality-of-data branding is part of their marketing — they sell themselves as the trust layer that's politically reliable in ways the U.S. and EU alternatives are not. The branding works in jurisdictions skeptical of both.
+- **Public framing:** "Swiss-quality identity infrastructure for the post-cloud era." The Swiss-neutrality-of-data branding is part of their marketing - they sell themselves as the trust layer that's politically reliable in ways the U.S. and EU alternatives are not. The branding works in jurisdictions skeptical of both.
 - **Company size at series time:** mid-cap European tech firm; a few hundred to maybe a thousand employees; revenue in the hundreds of millions of euros / Swiss francs. Big enough to matter; small enough to be agile.
 
 ### What they actually do
@@ -54,7 +54,7 @@ Around 2018-2019, Helvetia Trust approached Stefan's research-engineering organi
 
 The partnership is **strategically central** for Helvetia. They needed a flagship local-first deployment vehicle to make their identity infrastructure relevant in the new architectural era. Without Stefan's toolkit, their identity product has fewer markets; with it, they're positioned as the standard for compliance-friendly distributed systems.
 
-The partnership is **strategically central** for Stefan's organization too — but **asymmetrically.** Helvetia has other revenue streams that survive Stefan's specific platform failing; Stefan does not have other architectural alliances that survive Helvetia withdrawing. The asymmetry is real. Stefan does not fully see it.
+The partnership is **strategically central** for Stefan's organization too - but **asymmetrically.** Helvetia has other revenue streams that survive Stefan's specific platform failing; Stefan does not have other architectural alliances that survive Helvetia withdrawing. The asymmetry is real. Stefan does not fully see it.
 
 ### Public posture
 
@@ -75,18 +75,18 @@ The series treats Helvetia with structural seriousness: they are a competent, si
 | 1 (*The Filchner Dark*) | Off-page; referenced in Stefan's biography and the rival mission's institutional backing. Most readers register Helvetia as "the company behind the rival platform" without yet seeing the architectural implications. |
 | 2 | First public assertions: Helvetia testifies at a major regulatory hearing about federated-trust architecture. The position is sincere; the position is also Wanjiru's first direct institutional opponent. |
 | 3 | Helvetia's product wins a major standards-body endorsement in one jurisdiction. The win is real; the win is also the result of competent lobbying that Wanjiru's standards body cannot match without becoming what it opposes. |
-| 4 (*Aiel Waste*) | The flashback book reveals when Helvetia first approached Stefan. The audience sees the deal in its original form — sincere on both sides; the architectural compromise was not yet visible. |
-| 5 (*Fires of Heaven*) | Helvetia's commercial momentum at peak. The architectural argument runs against them; the commercial argument runs for them. The convergence with the political moment of Moiraine's fall (Anna) is structural — Helvetia's interests are part of why Anna's apparent loss happens. |
+| 4 (*Aiel Waste*) | The flashback book reveals when Helvetia first approached Stefan. The audience sees the deal in its original form - sincere on both sides; the architectural compromise was not yet visible. |
+| 5 (*Fires of Heaven*) | Helvetia's commercial momentum at peak. The architectural argument runs against them; the commercial argument runs for them. The convergence with the political moment of Moiraine's fall (Anna) is structural - Helvetia's interests are part of why Anna's apparent loss happens. |
 | 6 (*Lord of Chaos*) | Helvetia is publicly identified as the institutional vehicle of the centralizing direction. Their PR work intensifies. Wanjiru's standards body publishes a detailed architectural analysis that legibly shows Helvetia's centralization for the first time at the standards-process level. |
 | 7-8 | Legislative work begins. Helvetia is the primary corporate lobbyist on the centralizing side. Wanjiru's coalition gradually wins; Helvetia's commercial momentum slows; their flagship platform (TrustMesh / HelveSync) starts losing customers as the regulatory direction shifts. |
 | Final | Helvetia is still a real company at series end. They have not been destroyed; their architectural compromise has been institutionally rejected. The legislative + architectural lock-in for local-first sovereignty does not include their identity-as-mandatory model. They pivot to a less-architectural product role. The Wheel turns; commercial actors that bet wrong on architectural direction adapt. |
 
-## Part 2: Dr. Lukas Brandt — Senior Representative
+## Part 2: Dr. Lukas Brandt - Senior Representative
 
 ### Identity
 
-- **Name:** Dr. Lukas Brandt (working — Swiss-German given name; common Germanic surname; not iconic)
-- **Title:** Senior Vice President, Strategy and Government Relations, Helvetia Trust SA (or some functionally-equivalent title — the head of public-facing engagement)
+- **Name:** Dr. Lukas Brandt (working - Swiss-German given name; common Germanic surname; not iconic)
+- **Title:** Senior Vice President, Strategy and Government Relations, Helvetia Trust SA (or some functionally-equivalent title - the head of public-facing engagement)
 - **Age at Vol 2 / Vol 3 series time:** 50-58
 - **Citizenship:** Swiss
 - **Origin / domicile:** Zurich; Swiss-German linguistic and cultural background
@@ -110,7 +110,7 @@ The series treats Helvetia with structural seriousness: they are a competent, si
 ### What he wants
 
 - Helvetia Trust to win the regulatory and standards-body fights of the next decade
-- His own career to advance — possibly to CEO of Helvetia, possibly to a board portfolio elsewhere
+- His own career to advance - possibly to CEO of Helvetia, possibly to a board portfolio elsewhere
 - Stefan's platform to remain commercially viable as long as the partnership serves Helvetia's interests; to be discontinued cleanly once it doesn't
 
 ### What he fears
@@ -130,7 +130,7 @@ Lukas appears in scenes where Helvetia needs a human face:
 ### Voice samples (PAO drafts)
 
 **Regulatory testimony (Vol 3 / 4 register):**
-> *We at Helvetia Trust SA share the local-first community's principled commitment to data sovereignty. Where we disagree — respectfully — is on the operational instantiation. Federated-identity infrastructure is not, in our view, a compromise of sovereignty. It is the architecture of sovereignty enacted at a scale that survives regulatory audit and enterprise procurement. We have offered our infrastructure in service of that architecture for over a decade. We continue to do so.*
+> *We at Helvetia Trust SA share the local-first community's principled commitment to data sovereignty. Where we disagree - respectfully - is on the operational instantiation. Federated-identity infrastructure is not, in our view, a compromise of sovereignty. It is the architecture of sovereignty enacted at a scale that survives regulatory audit and enterprise procurement. We have offered our infrastructure in service of that architecture for over a decade. We continue to do so.*
 
 **Private meeting with a member of Wanjiru's standards body (Vol 5 or 6):**
 > *(privately, after a public session) The body's architectural analysis is technically rigorous. We have read it carefully. We do not think it accounts adequately for the operational complexity of running pure-OSS local-first at the scale the financial-services sector requires. (Pause) I would welcome a more detailed conversation about the operational case studies. (The deputy he is talking to does not respond. Lukas registers this and adjusts.) The conversation can wait. Thank you for the session.*

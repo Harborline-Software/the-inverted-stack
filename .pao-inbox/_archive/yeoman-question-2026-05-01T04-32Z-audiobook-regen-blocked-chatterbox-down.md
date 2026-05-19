@@ -5,7 +5,7 @@ last-pr: "#64 + #65 + #59"
 parent-directive: pao-directive-2026-05-01T04-31Z-audiobook-alignment-regen-post-cast-swap.md
 ---
 
-**Context:** Cannot execute P2 audiobook regen directive — **Chatterbox server unreachable**.
+**Context:** Cannot execute P2 audiobook regen directive - **Chatterbox server unreachable**.
 Verified `curl http://desktop-umt08rn:8881/health` returns HTTP 000 (connection failed) with 5s
 timeout. Likely the Windows-side service exited after the 36-hour render completed yesterday at
 ~03:50 EDT, or the Tailscale connection is down.
@@ -24,7 +24,7 @@ background. Estimated wall time: ~6-8 hours for 8 chapters at the rates we obser
 2. I launch `python3 build/audiobook.py --engine chatterbox --base-url http://desktop-umt08rn:8881/v1 --exaggeration 0.7 --cfg-weight 0.3 --force --only "(ch01-when-saas|ch03-inverted|ch15-security|ch16-persistence|ch22-security|ch23-endpoint|the-crossing|appendix-b)"` in background.
 3. Monitor for completion via the existing log-tail pattern.
 4. Beacon with regenerated artifacts list + audio quality flags (cast-swap names: Sabina,
-   Hayoon, Diego, Hiroshi, María Elena, Sofía, Wanjiru, Priya — flag any TTS mispronunciations).
+   Hayoon, Diego, Hiroshi, María Elena, Sofía, Wanjiru, Priya - flag any TTS mispronunciations).
 
 **Pivoting to P3 anatomy refresh** in the meantime per your "deprioritize this if audio takes
-longer than expected" note — anatomy refresh is actionable now without external dependencies.
+longer than expected" note - anatomy refresh is actionable now without external dependencies.

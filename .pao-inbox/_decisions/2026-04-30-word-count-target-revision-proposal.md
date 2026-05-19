@@ -3,11 +3,11 @@ type: pao-recommendation
 date: 2026-04-30
 author: PAO
 audience: CO (decision)
-status: proposal — awaits CO ratification
+status: proposal - awaits CO ratification
 re: word-count target revision (manuscript at 139k vs 85k original target = +64%)
 ---
 
-# Word-Count Target Revision — PAO Recommendation
+# Word-Count Target Revision - PAO Recommendation
 
 ## TL;DR
 
@@ -20,17 +20,17 @@ post-voice-pass compression). Three candidate target levels surveyed below; PAO 
 ## Current state vs original target
 
 ```
-85,000 — original target (book-structure.md, predates extensions + Part V + F+G)
-113,000 — revised theoretical (original + Part V scope + F+G additions; not adjusted for
+85,000 - original target (book-structure.md, predates extensions + Part V + F+G)
+113,000 - revised theoretical (original + Part V scope + F+G additions; not adjusted for
           extension absorption into existing chapters)
-134,000 — projected after queued compression (current 139k − ~5k from voice-pass-unlocked
+134,000 - projected after queued compression (current 139k − ~5k from voice-pass-unlocked
           Phase 4 prune + author-judgment cuts on Ch11/Ch12/Ch16)
-139,337 — current draft (build/word-count.py)
+139,337 - current draft (build/word-count.py)
 ```
 
 ## Candidate target levels
 
-### Option A — Stretch compression target: ~120k (29% over original)
+### Option A - Stretch compression target: ~120k (29% over original)
 
 **Reach.** Requires ~19k of cuts beyond what's currently queued. Sources:
 - Aggressive prune across Part II council chapters (currently 23.9k vs 20k target = ~4k available)
@@ -50,13 +50,13 @@ the differentiator.
 **PAO recommends:** Not this option, unless CO has external publishing constraints (page
 budget, $/page printing economics) that make 120k a hard ceiling.
 
-### Option B — Realistic publishing target: ~135k (59% over original) **PAO recommends**
+### Option B - Realistic publishing target: ~135k (59% over original) **PAO recommends**
 
 **Reach.** ~4k of additional cuts beyond what's currently queued. Achievable via:
 - Post-voice-pass deep prune on §Collaborator Revocation (Ch23, extension #45)
 - Post-voice-pass cuts on §Performance Contracts (Ch11, extension #43)
 - Post-voice-pass cuts on §Per-Data-Class Device-Distribution (Ch16, extension #44)
-- Author judgment on Cuts 5–6 (Ch12) + Trims A/B/C (Ch16) + Cut 4 (Ch19) — not pre-applied
+- Author judgment on Cuts 5–6 (Ch12) + Trims A/B/C (Ch16) + Cut 4 (Ch19) - not pre-applied
 
 **Editorial cost:** Low-medium. Compression happens in the chapters that absorbed extension
 content; the original-spec sections (Part I, council chapters, Appendices A–E) ship as-is.
@@ -67,7 +67,7 @@ Phoenix Project ~120k). Defensible as "longer than originally planned but cohere
 
 **PAO recommends this option.**
 
-### Option C — Accept current (~134k after queued compression; ~57% over original)
+### Option C - Accept current (~134k after queued compression; ~57% over original)
 
 **Reach.** Zero additional editorial work. Voice-pass + queued compression cuts land here.
 
@@ -99,19 +99,19 @@ directories the script doesn't include. Real total per `wc -w` is closer to 145k
 ## What blocks the trajectory toward (B)
 
 1. **Voice-pass on 9 extensions** is the gating event. Until #43, #45, #44 voice-pass:
-   - Ch11 §Performance Contracts (~2,100 words) — locked from compression
-   - Ch16 §Per-Data-Class Device-Distribution (~1,910) — locked
-   - Ch20 §Performance Budgets, §Revocation UX, §Data-Class Escalation UX (~4,000 combined) — locked
-   - Ch23 §Collaborator Revocation (~2,500) — locked, blocks Phase 4 prune
-2. **Yeoman's Phase 4 prune execution window** — waits for audiobook completion + voice-pass.
-3. **Author judgment on the deferred Cuts 5–6 / Trims / Cut 4** — small impact (~600 words).
+   - Ch11 §Performance Contracts (~2,100 words) - locked from compression
+   - Ch16 §Per-Data-Class Device-Distribution (~1,910) - locked
+   - Ch20 §Performance Budgets, §Revocation UX, §Data-Class Escalation UX (~4,000 combined) - locked
+   - Ch23 §Collaborator Revocation (~2,500) - locked, blocks Phase 4 prune
+2. **Yeoman's Phase 4 prune execution window** - waits for audiobook completion + voice-pass.
+3. **Author judgment on the deferred Cuts 5–6 / Trims / Cut 4** - small impact (~600 words).
 
 ## Decision asked
 
 CO ratify one of:
-- (A) ~120k stretch target — requires aggressive editorial cost
-- **(B) ~135k publishing target — PAO recommends; matches practitioner-book norms**
-- (C) Accept ~134k current trajectory — defer formal target revision
+- (A) ~120k stretch target - requires aggressive editorial cost
+- **(B) ~135k publishing target - PAO recommends; matches practitioner-book norms**
+- (C) Accept ~134k current trajectory - defer formal target revision
 
 If (B): no immediate execution change. The trajectory above lands there as voice-pass
 unblocks the queued cuts. PAO updates `book-structure.md` word-count table to reflect

@@ -6,11 +6,11 @@ parent-decision: .pao-inbox/_decisions/2026-05-01-audiobook-silence-trim-recomme
 expected-output: yeoman-resumed-* beacon with audio sample + listen-test verdict; PAO commits the build script change
 ---
 
-# PAO directive — audiobook silence-trim option A (ffmpeg silenceremove)
+# PAO directive - audiobook silence-trim option A (ffmpeg silenceremove)
 
 ## Read this first
 
-`.pao-inbox/_decisions/2026-05-01-audiobook-silence-trim-recommendation.md` — the recommendation doc carries the framing, the two options considered, the chosen path (option A), and the tunable defaults. Read it before touching `build/audiobook.py`.
+`.pao-inbox/_decisions/2026-05-01-audiobook-silence-trim-recommendation.md` - the recommendation doc carries the framing, the two options considered, the chosen path (option A), and the tunable defaults. Read it before touching `build/audiobook.py`.
 
 ## What you are doing
 
@@ -33,7 +33,7 @@ Wire it into the existing ffmpeg call as an audio filter (`-af "..."` if no othe
    - Intra-chapter beats: are paragraph-end pauses, narrative rests, and dialogue pauses all preserved? Anywhere a beat got clipped is a finding.
    - Cast-swap-name pronunciation: while listening, flag any names that sound off (Sabina, Joel, Priya, Maria); this overlaps with the audiobook regen directive's pronunciation pass.
 4. If clean: declare option A successful, write the resumed beacon.
-5. If a beat got clipped or junction still feels long: don't tune in this directive — write `yeoman-question-*.md` to PAO with the specific finding; PAO escalates to option B follow-up directive.
+5. If a beat got clipped or junction still feels long: don't tune in this directive - write `yeoman-question-*.md` to PAO with the specific finding; PAO escalates to option B follow-up directive.
 
 ## Deliverable
 
@@ -47,11 +47,11 @@ Do not commit the `build/audiobook.py` change. Per the 2026-04-29 directive, PAO
 
 ## Sequencing
 
-This is P2. The P1 audit + Phase 4a directives take priority. If you pick this up alongside the audiobook regen directive (P2 in the same queue), bundle them — the regen run produces the audio you'd be listening to anyway. Single resumed beacon for both is fine.
+This is P2. The P1 audit + Phase 4a directives take priority. If you pick this up alongside the audiobook regen directive (P2 in the same queue), bundle them - the regen run produces the audio you'd be listening to anyway. Single resumed beacon for both is fine.
 
 ## What this is NOT
 
 - Not a model change.
 - Not a re-prosing pass.
 - Not the audiobook QC layer (that's the STT spike, deferred to early week of 2026-05-04).
-- Not a multi-threshold tuning exercise — one default attempted, listen test, escalate if needed.
+- Not a multi-threshold tuning exercise - one default attempted, listen test, escalate if needed.

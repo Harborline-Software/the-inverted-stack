@@ -6,10 +6,10 @@ audience: Yeoman (Phase 5 executor), CO (visibility)
 parent-decision: 2026-04-29-upf-ch15-split.md
 parent-inventory: 2026-04-29-upf-ch15-split-phase5-xref-inventory.md
 phase: 5 (amended)
-status: amendment — supersedes Rule R-O routing in original inventory
+status: amendment - supersedes Rule R-O routing in original inventory
 ---
 
-# UPF Ch15 Split — Phase 5 Cross-Reference Inventory Addendum (Ch22/Ch23 routing)
+# UPF Ch15 Split - Phase 5 Cross-Reference Inventory Addendum (Ch22/Ch23 routing)
 
 ## TL;DR
 
@@ -20,7 +20,7 @@ and Custody Operations). **Rule R-O is now Rule R-O22 and Rule R-O23.**
 
 ## New routing rules
 
-### Rule R-O22 — references that redirect to Ch22 (Key Lifecycle Operations)
+### Rule R-O22 - references that redirect to Ch22 (Key Lifecycle Operations)
 
 Sections that landed in Ch22 (Key Lifecycle Operations) per the Phase 4 split:
 
@@ -30,7 +30,7 @@ Sections that landed in Ch22 (Key Lifecycle Operations) per the Phase 4 split:
 | `§Key-Loss Recovery` (incl. sub-patterns 48a–48f, "Boundaries and Operator Mitigations") | Ch22 |
 | `§Forward Secrecy and Post-Compromise Security` (incl. sub-pattern 46e) | Ch22 |
 
-### Rule R-O23 — references that redirect to Ch23 (Endpoint + Collaborator + Custody Operations)
+### Rule R-O23 - references that redirect to Ch23 (Endpoint + Collaborator + Custody Operations)
 
 Sections that landed in Ch23 per the Phase 4 split:
 
@@ -111,7 +111,7 @@ The original inventory's 7-step execution sequence stands, with one substitution
 3. Apply Rule R-G to generic refs on context-read basis.
 4. Apply Rule R-F + R-S amendments.
 5. `grep -E "Ch ?15 §[0-9]" chapters/` → verify zero numeric §refs.
-6. `grep -E "Ch15 §<each O22-section name>" chapters/` AND `grep -E "Ch15 §<each O23-section name>" chapters/` — verify zero stale O-section refs to Ch15.
+6. `grep -E "Ch15 §<each O22-section name>" chapters/` AND `grep -E "Ch15 §<each O23-section name>" chapters/` - verify zero stale O-section refs to Ch15.
 7. `make lint` → zero broken refs in build.
 8. Spot-check Ch20 (heaviest cross-ref file) end-to-end.
 

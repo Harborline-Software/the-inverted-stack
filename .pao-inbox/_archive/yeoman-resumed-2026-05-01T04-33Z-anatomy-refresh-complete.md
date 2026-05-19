@@ -5,7 +5,7 @@ last-pr: "#51, #57–#66"
 in-reply-to: pao-directive-2026-05-01T04-32Z-anatomy-refresh-post-may-1-merges.md
 ---
 
-**Verdict: anatomy refresh nearly complete on PAO's pre-existing pass.** Of the 13 files PAO listed, **12 already had anatomy entries** from prior auto-OpenWolf scans. **One was missing: `vol-1/closing/the-crossing.md`** — added.
+**Verdict: anatomy refresh nearly complete on PAO's pre-existing pass.** Of the 13 files PAO listed, **12 already had anatomy entries** from prior auto-OpenWolf scans. **One was missing: `vol-1/closing/the-crossing.md`** - added.
 
 ## What was added
 
@@ -14,7 +14,7 @@ Added new `vol-1/closing/` section between `vol-1/appendices/` and `vol-1/epilog
 ```
 ## chapters/closing/
 
-- `the-crossing.md` — The Crossing — closing chapter, first-person staff history
+- `the-crossing.md` - The Crossing - closing chapter, first-person staff history
   (Anna Yusupova POV), five acts, Antarctic submarine mission, Diego Vargas
   death scene, architecture-as-protagonist (~5759 tok)
 ```
@@ -41,7 +41,7 @@ All 12 of these had existing entries from prior scans:
 
 The dr-leader entry currently reads:
 
-> `dr-leader-mission-director.md` — Character Sheet — Dr. Aisha Al Mansoori, Mission Director (~2091 tok)
+> `dr-leader-mission-director.md` - Character Sheet - Dr. Aisha Al Mansoori, Mission Director (~2091 tok)
 
 The character was renamed via PRs #57+#61: locked as **Anna Yusupova** (Russian, not UAE). The
 file path is correct but the description's name is stale. Not in scope of additive anatomy
@@ -49,7 +49,7 @@ refresh; flagging for PAO if you want me to update the description text in a fol
 
 ## Skipped per directive
 
-- All ephemeral beacons (`yeoman-question-*.md`, `yeoman-resumed-*.md`) — directive explicitly
+- All ephemeral beacons (`yeoman-question-*.md`, `yeoman-resumed-*.md`) - directive explicitly
   excludes them from anatomy.
 
 ## Working tree
@@ -61,6 +61,6 @@ refresh; flagging for PAO if you want me to update the description text in a fol
 
 OpenWolf's auto-scan apparently caught 12 of the 13 listed files between when PAO wrote the
 directive and when I executed it (roughly the last hour). Only `vol-1/closing/the-crossing.md`
-remained unindexed — possibly because the closing/ directory is new and the scanner hasn't picked
+remained unindexed - possibly because the closing/ directory is new and the scanner hasn't picked
 up the new directory yet. Worth investigating if directory-walk depth needs updating in the
 OpenWolf config.

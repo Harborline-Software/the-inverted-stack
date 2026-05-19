@@ -4,11 +4,11 @@ chapter: ch07-security-lens
 date: 2026-04-30
 author: literary-board subagent (12 critics)
 audience: CO (final voice-pass), PAO (action items)
-verdict: POLISH (7.7/10 board consensus — strongest character-as-proof opener in Part II)
+verdict: POLISH (7.7/10 board consensus - strongest character-as-proof opener in Part II)
 council-member: Nia Okonkwo (Security Lens)
 ---
 
-# Literary Board Review — Ch07 (The Security Lens)
+# Literary Board Review - Ch07 (The Security Lens)
 
 ## Board scores
 
@@ -31,11 +31,11 @@ council-member: Nia Okonkwo (Security Lens)
 ## QC-9 verification
 
 **PASSES.** Two-act structure lands cleanly:
-- §Act 1: Round 1 — The Key Compromise Gap (L18–60) with explicit PROCEED WITH CONDITIONS verdict at L56–60 and the "this is a prerequisite, not a condition in the normal sense" framing at L58 that gives the verdict force
-- §What Changed Between Rounds (L64–92) — the structural hinge; mermaid key-hierarchy diagram at L70–85 is the chapter's load-bearing technical artifact
-- §Act 2: Round 2 — Four Remaining Conditions (L95–181) with PROCEED WITH CONDITIONS verdict at L165–181
+- §Act 1: Round 1 - The Key Compromise Gap (L18–60) with explicit PROCEED WITH CONDITIONS verdict at L56–60 and the "this is a prerequisite, not a condition in the normal sense" framing at L58 that gives the verdict force
+- §What Changed Between Rounds (L64–92) - the structural hinge; mermaid key-hierarchy diagram at L70–85 is the chapter's load-bearing technical artifact
+- §Act 2: Round 2 - Four Remaining Conditions (L95–181) with PROCEED WITH CONDITIONS verdict at L165–181
 
-The Round 1 axiom at L42 — "Security architectures are evaluated on their failure modes. The normal path is never the problem." — sits at the structural midpoint of Act 1 and may be the punchiest single sentence in any Part II chapter.
+The Round 1 axiom at L42 - "Security architectures are evaluated on their failure modes. The normal path is never the problem." - sits at the structural midpoint of Act 1 and may be the punchiest single sentence in any Part II chapter.
 
 ## Council member identification
 
@@ -45,26 +45,26 @@ The Round 1 axiom at L42 — "Security architectures are evaluated on their fail
 
 Ch7 has detectable spec-creep into Ch15 territory in §GDPR Article 17 stretch (L147–163) which respecifies the crypto-shredding mechanism that Ch15 §GDPR Article 17 and Crypto-Shredding (L171–183) already owns at full specification depth. Ch7 should compress to council-finding voice (the conflict is real, the architecture has an answer, see Ch15).
 
-Ch7 does NOT redundantly specify Ch22 territory — the compromise response procedure at L87 is at council-chapter altitude (what the architecture commits to), with the operational lifecycle correctly deferred to Ch22 §Key Compromise Incident Response.
+Ch7 does NOT redundantly specify Ch22 territory - the compromise response procedure at L87 is at council-chapter altitude (what the architecture commits to), with the operational lifecycle correctly deferred to Ch22 §Key Compromise Incident Response.
 
 ## Strengths to preserve
 
-- **L10 opener** — `strings` on the binary. Sharpest character-as-proof opener in Part II. Five short sentences, past action, specific tool name, specific number. Untouchable.
-- **L26 honeypot displacement framing** — "distributing data to endpoints does not eliminate the honeypot problem — it distributes it to the weakest endpoint."
-- **L38 senior-administrator-train scenario** — the most actionable threat-model paragraph in Part II
-- **L42 Round 1 axiom** — "Security architectures are evaluated on their failure modes. The normal path is never the problem."
-- **L58 prerequisite-not-condition framing** — gives the Round 1 verdict structural force
-- **L70–85 mermaid key-hierarchy diagram** — correctly placed at the structural hinge
-- **L123 Compelled Access paragraph** — bookmark-grade. Schrems II / 242-FZ / DIFC / DPDP/RBI / PIPL alignment in a single passage
-- **L189 honeypot displacement reprise** — "a genuine improvement — and a displacement of the problem rather than an elimination of it"
-- **L185–207 §Defense-in-Depth coda** — four declarative layers; the chapter's strongest sustained-argument architecture
-- **L213–222 Non-Negotiable Security Checklist** — eight ADR-pasteable bullets; HSM/multi-party-ceremony bullet at L218 is operationally rare
+- **L10 opener** - `strings` on the binary. Sharpest character-as-proof opener in Part II. Five short sentences, past action, specific tool name, specific number. Untouchable.
+- **L26 honeypot displacement framing** - "distributing data to endpoints does not eliminate the honeypot problem - it distributes it to the weakest endpoint."
+- **L38 senior-administrator-train scenario** - the most actionable threat-model paragraph in Part II
+- **L42 Round 1 axiom** - "Security architectures are evaluated on their failure modes. The normal path is never the problem."
+- **L58 prerequisite-not-condition framing** - gives the Round 1 verdict structural force
+- **L70–85 mermaid key-hierarchy diagram** - correctly placed at the structural hinge
+- **L123 Compelled Access paragraph** - bookmark-grade. Schrems II / 242-FZ / DIFC / DPDP/RBI / PIPL alignment in a single passage
+- **L189 honeypot displacement reprise** - "a genuine improvement - and a displacement of the problem rather than an elimination of it"
+- **L185–207 §Defense-in-Depth coda** - four declarative layers; the chapter's strongest sustained-argument architecture
+- **L213–222 Non-Negotiable Security Checklist** - eight ADR-pasteable bullets; HSM/multi-party-ceremony bullet at L218 is operationally rare
 
 ## Priority PAO action items (in priority order)
 
 ### 1. Compress §GDPR Article 17 (L147–163) by ~150 words; defer mechanism to Ch15
 
-Largest spec-creep into Ch15 territory and the largest contributor to the 4,385/3,500 word overage. Ch15 owns the mechanism specification. Ch7 owns the council finding: conflict is real, resolution is crypto-shredding (named, not specified), metadata residue is a known limitation, see Ch15 for the implementation. Cut from ~360 words to ~200. Multi-jurisdiction sentence at L163 stays — that's the regional-positioning load-bearing passage.
+Largest spec-creep into Ch15 territory and the largest contributor to the 4,385/3,500 word overage. Ch15 owns the mechanism specification. Ch7 owns the council finding: conflict is real, resolution is crypto-shredding (named, not specified), metadata residue is a known limitation, see Ch15 for the implementation. Cut from ~360 words to ~200. Multi-jurisdiction sentence at L163 stays - that's the regional-positioning load-bearing passage.
 
 ### 2. Close regional regulatory parity gap at L123 (Compelled Access paragraph)
 
@@ -80,18 +80,18 @@ Split into three paragraphs by jurisdictional cluster (Western, CIS/Russia, Asia
 
 ### 3. Add 2022 SaaS termination empirical anchor at L123 or L26
 
-Single largest documented demonstration of vendor jurisdictional dependency as a security threat model — missing from the chapter where it is most relevant. ~80-word addition. Add импортозамещение naming alongside.
+Single largest documented demonstration of vendor jurisdictional dependency as a security threat model - missing from the chapter where it is most relevant. ~80-word addition. Add импортозамещение naming alongside.
 
 ### 4. Add SaaS-competitor steelman at L123 (BYOK / CMK / Salesforce Shield / Box KeySafe)
 
-Customer-managed keys with Microsoft Purview / Salesforce Shield / Box KeySafe are partial answers — keep customer's key outside cloud provider's direct custody, but data still traverses third-party infrastructure, which makes the provider legally compellable through other means. ~80 words. Ch15 L201 has this paragraph; Ch7 should have its council-altitude version.
+Customer-managed keys with Microsoft Purview / Salesforce Shield / Box KeySafe are partial answers - keep customer's key outside cloud provider's direct custody, but data still traverses third-party infrastructure, which makes the provider legally compellable through other means. ~80 words. Ch15 L201 has this paragraph; Ch7 should have its council-altitude version.
 
 ### 5. Tighten conditions stretches; add Round 2 landing line; vary cadence
 
-- L46–53 four-question enumeration — pattern fatigue; cut to one paragraph or break parallel
-- C1–C6 condition list at L165–181 — needs a Ch5-style landing line at L181
-- L66 sentence break — break the four-clause em-dash sentence into two
-- L107 softening — Osei: "exactly as designed" reads as snark; soften to "as the protocol specifies"
+- L46–53 four-question enumeration - pattern fatigue; cut to one paragraph or break parallel
+- C1–C6 condition list at L165–181 - needs a Ch5-style landing line at L181
+- L66 sentence break - break the four-clause em-dash sentence into two
+- L107 softening - Osei: "exactly as designed" reads as snark; soften to "as the protocol specifies"
 
 ## Voice-pass status
 

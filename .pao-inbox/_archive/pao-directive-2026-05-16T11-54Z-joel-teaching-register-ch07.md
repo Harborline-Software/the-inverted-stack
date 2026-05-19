@@ -8,7 +8,7 @@ related:
   - vol-2/act-2/ch07-joels-sunfish.md
 ---
 
-# PAO Directive — Pilot Joel teaching-register extension on Ch 7
+# PAO Directive - Pilot Joel teaching-register extension on Ch 7
 
 ## What
 
@@ -27,14 +27,14 @@ Task #11 has been pending for 8 days. With Ch 2 reprocessed and Ch 17 pilot queu
 ## Scope of the pilot
 
 - **Ch 7 only.** No retroactive application to other chapters. Conditional scale post-CO-review.
-- **Deepen existing teaching beats** — do not add new scenes. Joel's existing teaching moments (Sunfish-naming disclosure, schema-migration-with-Priya callout, "gauge in front of you" register) are the load-bearing material. The pilot extends, doesn't invent.
+- **Deepen existing teaching beats** - do not add new scenes. Joel's existing teaching moments (Sunfish-naming disclosure, schema-migration-with-Priya callout, "gauge in front of you" register) are the load-bearing material. The pilot extends, doesn't invent.
 - **Anna remains POV.** Joel's teaching arrives through Anna's first-person registering of it ("He explained X, and I noted Y"), not through Joel direct-quotes alone. This is the canon doc's key constraint.
 
 ## Constraints
 
-- **No franchise imports.** Joel's register is engineering-fluent and discipline-rooted, not a sci-fi captain register. Cf. Janeway skill's first-person voice work — voice, not setting.
+- **No franchise imports.** Joel's register is engineering-fluent and discipline-rooted, not a sci-fi captain register. Cf. Janeway skill's first-person voice work - voice, not setting.
 - **Held-line continuity.** Run the ch07 held-lines.json after drafting (`vol-2/act-2/ch07-joels-sunfish.held-lines.json`). Joel's "muscle memory by the time I was thirty" line and similar canonical phrasings must survive intact.
-- **Telemetry check.** After draft, run galley verdict on Ch 7. Pre-pilot baseline is at `build/output/qa/ch07-joels-sunfish.lexical-fatigue.json` (note: `discipline` family was at 9.92/1k = 5.19× baseline pre-pilot — this is thematic, not fatigue; do not flatten it).
+- **Telemetry check.** After draft, run galley verdict on Ch 7. Pre-pilot baseline is at `build/output/qa/ch07-joels-sunfish.lexical-fatigue.json` (note: `discipline` family was at 9.92/1k = 5.19× baseline pre-pilot - this is thematic, not fatigue; do not flatten it).
 - **No word-count blowout.** Pilot should net +/-10% on Ch 7's current word count. The technique is register-deepening, not exposition-adding.
 
 ## Acceptance check

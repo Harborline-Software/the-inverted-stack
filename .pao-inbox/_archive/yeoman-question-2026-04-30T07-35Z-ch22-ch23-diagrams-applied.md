@@ -9,20 +9,20 @@ parent-decision: ch22-ch23-diagram-proposals-2026-04-30.md
 verbatim at the location you specified.
 
 **Ch22 (2 diagrams):**
-1. **Diagram 1** (KCIR State Machine) — placed after the opening paragraph of §Key Compromise
+1. **Diagram 1** (KCIR State Machine) - placed after the opening paragraph of §Key Compromise
    Incident Response, before the **Detection triggers.** paragraph.
-2. **Diagram 2** (Key-Loss Recovery Deployment-Class Decision) — placed inside §Key-Loss Recovery,
+2. **Diagram 2** (Key-Loss Recovery Deployment-Class Decision) - placed inside §Key-Loss Recovery,
    after the deployment-class table (lines 70–72), before the "The deployment class is declared at
    first-run" follow-up paragraph.
 
 **Ch23 (3 diagrams):**
-3. **Diagram 3** (Offline Node Reconnection + Revocation Handshake sequence) — placed after the
+3. **Diagram 3** (Offline Node Reconnection + Revocation Handshake sequence) - placed after the
    opening paragraph of §Offline Node Revocation and Reconnection, before the "When an offline
    node attempts to reconnect" paragraph.
-4. **Diagram 4** (Collaborator Departure Trust Boundary before/after) — placed inside
+4. **Diagram 4** (Collaborator Departure Trust Boundary before/after) - placed inside
    §Collaborator Revocation and Post-Departure Partition, after the introductory paragraph, before
    the "### Why this matters" sub-heading.
-5. **Diagram 5** (Chain-of-Custody Multi-Party Transfer sequence) — placed inside §Chain-of-
+5. **Diagram 5** (Chain-of-Custody Multi-Party Transfer sequence) - placed inside §Chain-of-
    Custody for Multi-Party Transfers, after the three-deployment-scenarios paragraph, before the
    "### What chain-of-custody is not" sub-heading.
 
