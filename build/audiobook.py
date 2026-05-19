@@ -723,14 +723,13 @@ VOL2_CHAPTER_FILES = [
 
 CHUNK_CHAR_BUDGET = 700  # target per-request size in characters (Kokoro default)
 
-# Engine-aware chunk budget. Chatterbox caps each request at ~100 sec /
-# ~2500 tokens; cloned voices + V12 dramatic recipe (cfg_weight=0.3
-# slows pacing) push longer chunks past the cap, producing trailing
-# silence. 400 char target keeps each chunk well under the limit even
-# with the slowest combinations.
+# Engine-aware chunk budget. Keyed by model_name (not engine alias) because
+# render_chapter() looks up by model_name. Chatterbox engine model_name is
+# "higgs"; kokoro engine model_name is "kokoro". Chunks always split at
+# sentence boundaries (never mid-sentence); budget is a max, not a target.
 CHUNK_BUDGETS_BY_ENGINE: dict[str, int] = {
-    "kokoro":     700,
-    "chatterbox": 400,
+    "kokoro": 700,
+    "higgs":  700,  # chatterbox engine; same budget as kokoro
 }
 # Lowered from 1400 (2026-04-28, bug-096/bug-097). Root cause is
 # *progressive* slowdown in the CPU Kokoro container — early chunks
@@ -1300,21 +1299,11 @@ def chunk_text_paired(tts_text: str, src_text: str,
                     continue
                 if len(tts_buf) + len(tts_sent) + 1 > budget and tts_buf:
                     flush()
-                # Pathological-sentence wrapping (TTS-only) collapses many
-                # word-chunks into one source sentence: rare in practice.
-                if len(tts_sent) > budget:
-                    words = tts_sent.split()
-                    cur = ""
-                    for w in words:
-                        if len(cur) + len(w) + 1 > budget and cur:
-                            flush()
-                            tts_chunks.append(cur.strip())
-                            src_chunks.append(src_sent)
-                            cur = ""
-                        cur = (cur + " " + w).strip()
-                    if cur:
-                        tts_buf = (tts_buf + " " + cur).strip()
-                        src_buf = (src_buf + " " + src_sent).strip()
+                if len(tts_sent) > budget and not tts_buf:
+                    # Oversized sentence — emit whole rather than splitting at
+                    # word boundaries, which would create mid-sentence pauses.
+                    tts_chunks.append(tts_sent.strip())
+                    src_chunks.append(src_sent.strip())
                 else:
                     tts_buf = (tts_buf + " " + tts_sent).strip()
                     src_buf = (src_buf + " " + src_sent).strip()
@@ -1356,20 +1345,10 @@ def chunk_text(text: str, budget: int = CHUNK_CHAR_BUDGET) -> list[str]:
                 if len(buf) + len(sent) + 1 > budget and buf:
                     chunks.append(buf.strip())
                     buf = ""
-                if len(sent) > budget:
-                    # Pathological sentence — hard-wrap on word boundaries
-                    words = sent.split()
-                    cur = ""
-                    for w in words:
-                        if len(cur) + len(w) + 1 > budget and cur:
-                            if buf:
-                                chunks.append(buf.strip())
-                                buf = ""
-                            chunks.append(cur.strip())
-                            cur = ""
-                        cur = (cur + " " + w).strip()
-                    if cur:
-                        buf = (buf + " " + cur).strip()
+                if len(sent) > budget and not buf:
+                    # Oversized sentence — emit whole rather than splitting at
+                    # word boundaries, which would create mid-sentence pauses.
+                    chunks.append(sent.strip())
                 else:
                     buf = (buf + " " + sent).strip()
         else:
