@@ -12,13 +12,13 @@ purpose: voice reference + epigraph source for the Sunfish Cycle
 
 # Sovereignty At Scale: Helvetia Trust And The Architecture Of Compliance-Friendly Local-First
 
-A Position Paper from Helvetia Trust SA — April 2026
+A Position Paper from Helvetia Trust SA - April 2026
 
 ---
 
 ## Why this paper exists
 
-The cloud era has ended for organizations whose data carries regulatory consequence. Five years of accelerating enterprise procurement scrutiny — driven by Schrems II's restrictions on transatlantic data transfer, by the Digital Markets Act's antitrust posture toward platform lock-in, by the Cyber Resilience Act's vulnerability-disclosure obligations, by the cumulative weight of jurisdictional sovereignty assertions across the EU, the United Kingdom, India, the GCC, and the broader Indo-Pacific — have made one fact operationally undeniable. *Where your data sits matters. Who controls the keys matters. Which jurisdiction's courts can compel disclosure matters.*
+The cloud era has ended for organizations whose data carries regulatory consequence. Five years of accelerating enterprise procurement scrutiny - driven by Schrems II's restrictions on transatlantic data transfer, by the Digital Markets Act's antitrust posture toward platform lock-in, by the Cyber Resilience Act's vulnerability-disclosure obligations, by the cumulative weight of jurisdictional sovereignty assertions across the EU, the United Kingdom, India, the GCC, and the broader Indo-Pacific - have made one fact operationally undeniable. *Where your data sits matters. Who controls the keys matters. Which jurisdiction's courts can compel disclosure matters.*
 
 Local-first architecture is the natural response to this reality. The principles are sound. The challenge that remains is the architecture's path to deployment in organizations whose compliance requirements cannot be satisfied by community-governed software alone.
 
@@ -52,7 +52,7 @@ Switzerland's neutrality posture, its long tradition of trust-service jurisdicti
 
 We ask one question. *What is the operational accountability path for your local-first architecture when the regulator calls?*
 
-If the answer is satisfying — if your community-governed codebase has a defined party of record, an SLA on vulnerability disclosure, an audit-chain attestation framework recognized in your customers' jurisdictions, and a key-management mechanism that survives device-level compromise without a centralized rotation authority — then federated trust is not the architecture you need.
+If the answer is satisfying - if your community-governed codebase has a defined party of record, an SLA on vulnerability disclosure, an audit-chain attestation framework recognized in your customers' jurisdictions, and a key-management mechanism that survives device-level compromise without a centralized rotation authority - then federated trust is not the architecture you need.
 
 If the answer is incomplete, we believe Helvetia Trust SA is the partner the architecture is missing.
 

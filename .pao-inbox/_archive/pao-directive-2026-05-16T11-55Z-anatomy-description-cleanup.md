@@ -6,7 +6,7 @@ related:
   - .wolf/anatomy.md
 ---
 
-# PAO Directive — Anatomy.md auto-generated description cleanup
+# PAO Directive - Anatomy.md auto-generated description cleanup
 
 ## What
 
@@ -14,7 +14,7 @@ Replace the poor auto-generated descriptions for Vol 2 chapter entries in `.wolf
 
 ## Why
 
-Several Vol 2 chapter entries currently read as fragments — "Declares of", "Declares GPU", "Declares register" — which fail the anatomy.md contract (2–3 line description so future sessions can decide whether to skip the full read). Token-discipline goal.
+Several Vol 2 chapter entries currently read as fragments - "Declares of", "Declares GPU", "Declares register" - which fail the anatomy.md contract (2–3 line description so future sessions can decide whether to skip the full read). Token-discipline goal.
 
 ## Scope
 
@@ -26,14 +26,14 @@ Several Vol 2 chapter entries currently read as fragments — "Declares of", "De
 ## Constraint
 
 - **Do not change file paths, sort order, or other anatomy structure.** Description column only.
-- **Do not touch Vol 1 anatomy entries** — out of scope for this pass.
+- **Do not touch Vol 1 anatomy entries** - out of scope for this pass.
 - **Run `openwolf anatomy refresh` first** if Yeoman wants the auto-generation baseline current before editing. Otherwise just hand-edit.
 
 ## Acceptance check
 
 - All `vol-2/act-*/ch*.md` entries in `.wolf/anatomy.md` have a description of 8–20 words naming the chapter event.
 - No fragment-style descriptions remain.
-- Commit message: `chore(openwolf): anatomy descriptions — Vol 2 chapters cleanup`.
+- Commit message: `chore(openwolf): anatomy descriptions - Vol 2 chapters cleanup`.
 - Beacon back: one-line resumed in `.pao-inbox/` naming the count of entries edited.
 
 ## Notes

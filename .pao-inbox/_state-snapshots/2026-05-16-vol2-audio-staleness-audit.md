@@ -1,7 +1,7 @@
 ---
 type: state-snapshot
 date: 2026-05-16
-subject: Vol 2 audio staleness audit — ch03–ch18
+subject: Vol 2 audio staleness audit - ch03–ch18
 auditor: Yeoman (PAO directive)
 ---
 
@@ -13,7 +13,7 @@ All 16 stale chapters (ch03–ch18) are classified **audio-current**. No re-rend
 pre-bobiverse pending rewrite") touched all 16 files, making them newer than the May 8
 `--af_alloy` MP3 renders. However, every change in that commit is audio-transparent:
 
-- `icm-stage: icm/draft` → `icm-stage: icm/pre-rewrite` (YAML frontmatter — stripped by
+- `icm-stage: icm/draft` → `icm-stage: icm/pre-rewrite` (YAML frontmatter - stripped by
   `narratable_text()` frontmatter regex before TTS)
 - Added `<!-- PRE-BOBIVERSE DRAFT... -->` HTML comment banner after closing `---` (stripped
   by `re.sub(r"<!--.*?-->", "", t)` at `build/audiobook.py` line 968–969)
@@ -49,7 +49,7 @@ every file's diff was limited to the YAML `icm-stage` field and the HTML banner 
 
 No paragraph-fusion artifacts were detected. These chapters are pre-bobiverse Janeway-register
 drafts that have not been touched since their migration into the repo (c2f0460). The c48204a
-commit adds banners and flips metadata only — no paste operations occurred.
+commit adds banners and flips metadata only - no paste operations occurred.
 
 ## Re-render queue
 
@@ -78,7 +78,7 @@ Existing `--af_alloy` renders (all dated 2026-05-08) remain valid against curren
 
 ## Note on ch02
 
-ch02 excluded from this audit per directive — PAO already handled with final-quality
+ch02 excluded from this audit per directive - PAO already handled with final-quality
 chatterbox render. The `--af_alloy` render exists at
 `ch02-recruitment-interview--af_alloy.mp3` (Dropbox) for reference.
 
@@ -86,5 +86,5 @@ chatterbox render. The `--af_alloy` render exists at
 
 These chapters carry `<!-- PRE-BOBIVERSE DRAFT -->` banners marking them as awaiting rewrite
 in the Anna-voice / Filchner register. The existing `--af_alloy` Kokoro renders are
-**listen-test drafts only** — not for assembly. When rewrite passes occur on a `draft/chXX`
+**listen-test drafts only** - not for assembly. When rewrite passes occur on a `draft/chXX`
 branch, each rewritten chapter will need a fresh render before assembly QC.

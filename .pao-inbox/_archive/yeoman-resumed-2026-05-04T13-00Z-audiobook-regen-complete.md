@@ -26,19 +26,19 @@ chunk ran at 22:37. The fix (commit 659f394 on `fix/yeoman-audiobook-add-crossin
 was on a branch that was checked out when the wrapper launched (18:47), but the
 working tree switched to `chore/pao-silence-trim-doc-and-directive` before 22:37
 while the PAO prepared the silence-trim commit (22:45Z). Python reads the file from
-disk each call — when the branch switched, the fix was gone.
+disk each call - when the branch switched, the fix was gone.
 
 Fix re-applied to current working tree (`build/audiobook.py` line 438). The-crossing
-re-launched headlessly — see yeoman-resumed-silence-trim beacon for details.
+re-launched headlessly - see yeoman-resumed-silence-trim beacon for details.
 
 ## Pronunciation flags (cast-swap names)
 
 These names appear in the chapters that rendered and are worth a listen pass:
 
-- **Sabina** (ch01, ch03) — per directive; Eastern European name, likely reads cleanly
-- **Joel** (ch01, ch03) — common English name, low risk
-- **Priya** (ch15, ch22) — Indian name; Chatterbox tends to handle this well
-- **María Elena** (ch22) — Spanish double-name; the accent on "María" is the risk;
+- **Sabina** (ch01, ch03) - per directive; Eastern European name, likely reads cleanly
+- **Joel** (ch01, ch03) - common English name, low risk
+- **Priya** (ch15, ch22) - Indian name; Chatterbox tends to handle this well
+- **María Elena** (ch22) - Spanish double-name; the accent on "María" is the risk;
   Chatterbox v2.5 handles Unicode but the space between names can cause a pause
 
 No programmatic check is possible without listening. These are flags for CO's listen pass.

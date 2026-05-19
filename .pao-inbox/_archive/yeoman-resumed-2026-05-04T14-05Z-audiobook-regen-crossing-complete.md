@@ -13,7 +13,7 @@ The-crossing regen re-run complete: exit 0.
   from disk on each call; when the branch switched, `closing/the-crossing.md` was gone from
   CHAPTER_FILES in the working tree.
 - **Fix applied:** `closing/the-crossing.md` added back to CHAPTER_FILES in working tree
-  (`build/audiobook.py`, line 438). Not committed — awaiting PAO commit per commit-authority
+  (`build/audiobook.py`, line 438). Not committed - awaiting PAO commit per commit-authority
   directive. The same fix also exists on branch `fix/yeoman-audiobook-add-crossing` (commit 659f394);
   PAO can squash or cherry-pick as preferred.
 

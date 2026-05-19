@@ -10,7 +10,7 @@ related:
   - .pao-inbox/_creative/vol-2-anchor-bridge-sync-mechanic.md
 ---
 
-# Series Arc — The Sunfish Trajectory
+# Series Arc - The Sunfish Trajectory
 
 > **Hard rule (CO directive 2026-05-05): this trajectory is canonical for series planning but is NEVER referenced explicitly from Vol 2 prose.** Anna does not write *the system would later learn*. Joel does not say *what we are building outlasts us*. Wanjiru does not foretell. The trajectory exists for drafters to plant *toward* without reaching. The reader who eventually has the cosmology will feel the weight retroactively. The Vol 2 reader gets a competent technical thriller about one mission. Both readings work; neither requires the other.
 
@@ -22,7 +22,7 @@ related:
 
 **Sunfish is the architectural ancestor of the Star Trek shipboard Computer.**
 
-Across the eight-book arc, Sunfish's UI form evolves while the architecture's invariants stay constant. The 2026 boat-app becomes the 2300+ Federation-era shipboard ambient-conversational substrate via continuous evolution — institutional, architectural, and technological — across centuries. The protocol's invariants persist. The institutional discipline (Wanjiru's standards body and its descendants) persists. The architecture's preservation, capture, and forensic properties persist. **The starship Computer is not a metaphor for Sunfish. The starship Computer *is* Sunfish, ten generations evolved.**
+Across the eight-book arc, Sunfish's UI form evolves while the architecture's invariants stay constant. The 2026 boat-app becomes the 2300+ Federation-era shipboard ambient-conversational substrate via continuous evolution - institutional, architectural, and technological - across centuries. The protocol's invariants persist. The institutional discipline (Wanjiru's standards body and its descendants) persists. The architecture's preservation, capture, and forensic properties persist. **The starship Computer is not a metaphor for Sunfish. The starship Computer *is* Sunfish, ten generations evolved.**
 
 This is not stated in Vol 2 prose. It is the destination Vol 2 plants toward.
 
@@ -31,12 +31,12 @@ This is not stated in Vol 2 prose. It is the destination Vol 2 plants toward.
 | Era | Books | UI form | Architectural state |
 |---|---|---|---|
 | **2026 (the Nansen's maiden voyage on MERIDIAN-7)** | Book 1 (Vol 2) | Anchor app: voice-augmented but screen-primary. Wake-word triggered. Local LLM transcribes, translates, indexes, monitors. Crew speaks when they want the system to act. | Local-first, partition-tolerant, hash-chained, KEK/DEK-encrypted, replicated to consortium ports |
-| **Late 2020s — 2040s** | Books 2-3 | Voice-primary in dedicated environments (research stations, hospitals, ports, ships). Ambient awareness limited. Still a screen + voice hybrid in offices. | Same protocol family; standards body governs federation + interop; Wanjiru chairs |
-| **2040s — 2080s** | Books 4-5 | Always-aware ambient voice in shipboard contexts. Conversation, not commands. Multiple Sunfish replicas distributed across continents/orbits diverge and re-merge (Bobiverse mechanic). | Same; the Pattern (Saidin/Saidar split between protocol and policy) becomes institutional doctrine |
+| **Late 2020s - 2040s** | Books 2-3 | Voice-primary in dedicated environments (research stations, hospitals, ports, ships). Ambient awareness limited. Still a screen + voice hybrid in offices. | Same protocol family; standards body governs federation + interop; Wanjiru chairs |
+| **2040s - 2080s** | Books 4-5 | Always-aware ambient voice in shipboard contexts. Conversation, not commands. Multiple Sunfish replicas distributed across continents/orbits diverge and re-merge (Bobiverse mechanic). | Same; the Pattern (Saidin/Saidar split between protocol and policy) becomes institutional doctrine |
 | **22XX** | Books 6-7 | Voice fully primary. The system answers natively in any language to anyone authorized. Holodeck-equivalent: archive replay (synthesizing past moments from sensor + voice + video archive). The architecture's *name* may be forgotten in popular usage; the discipline persists. | Same protocol family, ten generations forward |
-| **2300+** | Book 8 | "Computer, locate..." — the Trek interface is the descendant. The character on the bridge of an early Federation ship is talking to a Sunfish replica with centuries of accumulated state, governed by the institutional framework Wanjiru founded, encrypted under KEKs whose chain-of-custody traces back to the maiden voyage. | The architecture survived because each replication preserved the protocol invariants Joel specified; the institution Wanjiru established preserved the access-control discipline; no one centralized successfully because the Forsaken's repeated attempts (TrustMesh, the Bore eras) failed against the architecture's structural resistance |
+| **2300+** | Book 8 | "Computer, locate..." - the Trek interface is the descendant. The character on the bridge of an early Federation ship is talking to a Sunfish replica with centuries of accumulated state, governed by the institutional framework Wanjiru founded, encrypted under KEKs whose chain-of-custody traces back to the maiden voyage. | The architecture survived because each replication preserved the protocol invariants Joel specified; the institution Wanjiru established preserved the access-control discipline; no one centralized successfully because the Forsaken's repeated attempts (TrustMesh, the Bore eras) failed against the architecture's structural resistance |
 
-## 3. The recurring failure-mode — OSS-funding-asymmetry
+## 3. The recurring failure-mode - OSS-funding-asymmetry
 
 The same structural threat recurs at different scales across all eight books: **OSS architectures cannot vertically integrate.** They depend on vendors. Vendors get captured by capital. The captured vendors become the attack surface.
 
@@ -44,49 +44,49 @@ The same structural threat recurs at different scales across all eight books: **
 |---|---|
 | Vol 2 (2026) | Sensor-head firmware-update via Helvetia-aligned vendor. Forensic substrate detects after the fact; the architecture's response is not prevention but detection-and-disclosure. |
 | Books 2-3 | Wanjiru's standards body fights for vendor-attestation, firmware-transparency, supply-chain-audit standards. Compliance contested. Helvetia and successors fight standards adoption at regulatory and political layers. |
-| Books 4-5 | Sunfish replicates across continents/orbits. Each replica inherits the standards framework. Supply-chain capture moves to longer-game strategies (regulatory capture; standards-body capture; alliance fragmentation). The Bore opens — moments when central control re-emerges and the fabric breaks. |
+| Books 4-5 | Sunfish replicates across continents/orbits. Each replica inherits the standards framework. Supply-chain capture moves to longer-game strategies (regulatory capture; standards-body capture; alliance fragmentation). The Bore opens - moments when central control re-emerges and the fabric breaks. |
 | Books 6-7 | Hardware-attestation is part of the architectural canon. Vendor-capture institutionally harder. Forsaken adapt by working at deeper layers (legal frameworks, jurisdictional arbitrage, protocol-fork-by-political-fiat attempts). |
 | Book 8 | The Federation-equivalent's shipboard architecture inherits the full discipline. Supply-chain integrity is foundational. Forsaken still try, still fail, still adapt. Same shape. Same architectural defense. |
 
 **The Forsaken aren't recurring villains. They are the same architectural failure-mode recurring at different scales.** Capital concentrates; OSS depends on vendors; vendors get captured; forensic substrate catches some; institutional discipline catches more; the Pattern holds. This is the spine.
 
-## 4. The recurring corrective — the Pattern
+## 4. The recurring corrective - the Pattern
 
 The architecture's response across centuries:
 
-- **Saidin (Joel's layer)** — protocol invariants. What the architects wrote. Preserved by replication and forks that maintain compatibility. Reaches Book 8 as "the Computer's protocol kernel" — the same hash-chain, KEK/DEK, partition-tolerant primitives Joel specified, ten generations refined.
-- **Saidar (Wanjiru's layer)** — institutional discipline. Standards body. Vendor-attestation. Access controls. Forensic substrate. Disclosure rules. Reaches Book 8 as "the institutional framework Federation ships inherit" — the same vendor-attestation, supply-chain-audit, posthumous-disclosure framework Wanjiru founded, governing centuries of operation.
-- **The architecture-as-record** — the preservation, capture, and forensic properties. What persists across replications. Reaches Book 8 as "the ship's archive" — direct descendant of Anna's staff history; same property of *what reaches durability survives, contingent on the node's survival, governed by the framework*.
+- **Saidin (Joel's layer)** - protocol invariants. What the architects wrote. Preserved by replication and forks that maintain compatibility. Reaches Book 8 as "the Computer's protocol kernel" - the same hash-chain, KEK/DEK, partition-tolerant primitives Joel specified, ten generations refined.
+- **Saidar (Wanjiru's layer)** - institutional discipline. Standards body. Vendor-attestation. Access controls. Forensic substrate. Disclosure rules. Reaches Book 8 as "the institutional framework Federation ships inherit" - the same vendor-attestation, supply-chain-audit, posthumous-disclosure framework Wanjiru founded, governing centuries of operation.
+- **The architecture-as-record** - the preservation, capture, and forensic properties. What persists across replications. Reaches Book 8 as "the ship's archive" - direct descendant of Anna's staff history; same property of *what reaches durability survives, contingent on the node's survival, governed by the framework*.
 
 ## 5. Character-arc weight (silent through Vol 2)
 
 Three characters carry weight across the centuries that Vol 2 prose does not name:
 
-### 5.1 Joel Reyes — the architect
+### 5.1 Joel Reyes - the architect
 
-Joel built a sync protocol he understood as "submarine engineering applied to local-first software." He doesn't know — and Anna doesn't know, and Wanjiru doesn't know — that the discipline they encoded becomes the substrate of starship interface centuries later. **The reader, having the cosmology, knows.** This is Tolkien-grade dramatic irony: the architect didn't know what he was making. The protocol invariants he wrote on the boat persist into a future none of them foresaw.
+Joel built a sync protocol he understood as "submarine engineering applied to local-first software." He doesn't know - and Anna doesn't know, and Wanjiru doesn't know - that the discipline they encoded becomes the substrate of starship interface centuries later. **The reader, having the cosmology, knows.** This is Tolkien-grade dramatic irony: the architect didn't know what he was making. The protocol invariants he wrote on the boat persist into a future none of them foresaw.
 
-The character's *restraint* — the discipline he never described as more than engineering rigor — becomes the substrate's defining property. The chapter-drafter writes Joel as a man who builds quietly, with discipline beyond what the situation requires, without grandiosity. The trajectory will reward the discipline; **the character must never anticipate the reward.**
+The character's *restraint* - the discipline he never described as more than engineering rigor - becomes the substrate's defining property. The chapter-drafter writes Joel as a man who builds quietly, with discipline beyond what the situation requires, without grandiosity. The trajectory will reward the discipline; **the character must never anticipate the reward.**
 
-### 5.2 Wanjiru Kamau — the institution-builder
+### 5.2 Wanjiru Kamau - the institution-builder
 
 Wanjiru's standards-body work (Books 2-3) is the institutional substrate that lets Sunfish survive centralization attempts across centuries. In Vol 2 she's not just a relay-ops + security-architecture contributor; **she is the person whose institutional thinking will outlast the original Joel protocol because she designed the framework that persists when the protocol versions change.**
 
 Vol 2 plants this with: she is already thinking past the mission, past the boat, past the contemporary regulatory contest, toward the institution-shape that survives. *What survives the next regulatory cycle* is her register, not *what works on this mission*. The standards-body trajectory begins on Day 22, not on Day 56. The chapter-drafter writes her as already thinking institutionally before the mission ends.
 
-### 5.3 Anna Yusupova — the recorder
+### 5.3 Anna Yusupova - the recorder
 
-Anna's staff history (the book the reader is reading) is the artifact that survives because the architecture preserves it. **She's writing the founding document of what becomes a centuries-long literary tradition** — the Sunfish-mission staff history convention that institutions across centuries inherit. Mature-narrator restraint is the register; civilizational weight enters only via what she chooses to record.
+Anna's staff history (the book the reader is reading) is the artifact that survives because the architecture preserves it. **She's writing the founding document of what becomes a centuries-long literary tradition** - the Sunfish-mission staff history convention that institutions across centuries inherit. Mature-narrator restraint is the register; civilizational weight enters only via what she chooses to record.
 
-She does not know the literary tradition she is founding. She is writing because Wanjiru asked her to, and because writing is what comes after returning. The chapter-drafter writes her as a competent first-time author at the center of her own life's most consequential mission — not as a prophet of literary tradition.
+She does not know the literary tradition she is founding. She is writing because Wanjiru asked her to, and because writing is what comes after returning. The chapter-drafter writes her as a competent first-time author at the center of her own life's most consequential mission - not as a prophet of literary tradition.
 
-## 6. The Anchor-as-Trek-Computer continuity — concrete invariants that persist
+## 6. The Anchor-as-Trek-Computer continuity - concrete invariants that persist
 
 For the chapter-drafter aligning Vol 2 prose toward the destination without reaching:
 
 | Property | Vol 2 (2026) | Book 8 (2300+) | Continuity |
 |---|---|---|---|
-| Voice interface | Wake-word + commands; voice queries against the local archive | "Computer, locate..." — fully ambient | Anchor's voice-augmented design is the seed; the ambient form is the descendant |
+| Voice interface | Wake-word + commands; voice queries against the local archive | "Computer, locate..." - fully ambient | Anchor's voice-augmented design is the seed; the ambient form is the descendant |
 | Local archive | Each crew node's hash-chained store | Each ship's archive | Same architectural form; centuries of refinement |
 | Translation | Real-time across crew languages on local LLM | Universal translator on shipboard system | Same capability evolved |
 | Identity / authentication | Cryptographic per-node | Crypto-attested-Federation-citizen | Same primitive, institutional layer thickened |
@@ -121,7 +121,7 @@ The trajectory exists. The Vol 2 prose does not reach toward it. The reader feel
 
 ## 9. Cross-references
 
-- **WoT + Bobiverse mapping (existing series-arc artifact):** `.pao-inbox/_creative/vol-2-series-arc-wot-bobiverse-2026-05-04.md` — covers character role assignments (Anna/Moiraine, Joel/Rand, Priya/Nynaeve, Wanjiru/Egwene, etc.) and the Saidin/Saidar discipline split. This document complements that one with the architectural-trajectory dimension.
+- **WoT + Bobiverse mapping (existing series-arc artifact):** `.pao-inbox/_creative/vol-2-series-arc-wot-bobiverse-2026-05-04.md` - covers character role assignments (Anna/Moiraine, Joel/Rand, Priya/Nynaeve, Wanjiru/Egwene, etc.) and the Saidin/Saidar discipline split. This document complements that one with the architectural-trajectory dimension.
 - **Convention: archive + capture:** `vol-2-archive-and-capture-convention.md`
 - **Convention: sync mechanic:** `vol-2-anchor-bridge-sync-mechanic.md`
 - **Concept note + locked elements:** `.pao-inbox/_creative/vol-2-concept-note-2026-05-04.md`, `vol-2-concept-locked-elements-2026-05-04.md`

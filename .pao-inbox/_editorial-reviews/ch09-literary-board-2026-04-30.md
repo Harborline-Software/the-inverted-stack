@@ -4,12 +4,12 @@ chapter: ch09-local-first-practitioner-lens
 date: 2026-04-30
 author: literary-board subagent (12 critics)
 audience: CO (final voice-pass), PAO (action items)
-verdict: POLISH (7.7/10 board consensus — strongest opening paragraph in Part II; QC-9 model)
+verdict: POLISH (7.7/10 board consensus - strongest opening paragraph in Part II; QC-9 model)
 council-member: Tomás Ferreira (Local-First Practitioner Lens), male
 voice-pass-status: brown voice assigned per voice-plan.yaml L28; opening + close already in brown register; mid-chapter sections drift to list-voice
 ---
 
-# Literary Board Review — Ch09 (The Local-First Practitioner Lens)
+# Literary Board Review - Ch09 (The Local-First Practitioner Lens)
 
 ## Board scores
 
@@ -37,42 +37,42 @@ voice-pass-status: brown voice assigned per voice-plan.yaml L28; opening + close
 
 **PASSES.** Two-act structure lands cleanly:
 - §Act 1: Round 1 (L21–59) with PROCEED WITH CONDITIONS verdict
-- §What Changed Between Rounds (L63–73) — the structural hinge; each Round 2 fix maps onto a Round 1 condition with specificity
-- §Act 2: Round 2 (L77–153) ending in unconditional PROCEED — the only one in the council process
+- §What Changed Between Rounds (L63–73) - the structural hinge; each Round 2 fix maps onto a Round 1 condition with specificity
+- §Act 2: Round 2 (L77–153) ending in unconditional PROCEED - the only one in the council process
 
-**Ch10 L66 setup verification: PASSES cleanly.** Ferreira's lens claim — *the export button is the proof of the claim* (L190) — is committed to with enough force that Ch10's collision with Voss's enterprise data-governance custody constraints (DIFC DPL 2020, RBI BFSI localization) lands. Don't soften.
+**Ch10 L66 setup verification: PASSES cleanly.** Ferreira's lens claim - *the export button is the proof of the claim* (L190) - is committed to with enough force that Ch10's collision with Voss's enterprise data-governance custody constraints (DIFC DPL 2020, RBI BFSI localization) lands. Don't soften.
 
 ## Cross-chapter consistency
 
-- **L129 Production Analogues paragraph** overlaps Ch12 (CRDT engine survey) territory — keep Ferreira's verdict, cut the comparative tour
-- **L67 export format specification** approaches Ch16 territory — defer format-level detail to Ch16, keep structural commitment
-- **L143 telemetry/analytics ADR** approaches Ch15/Ch20 territory — Ch9 makes the right governance call but should defer the actual ADR
+- **L129 Production Analogues paragraph** overlaps Ch12 (CRDT engine survey) territory - keep Ferreira's verdict, cut the comparative tour
+- **L67 export format specification** approaches Ch16 territory - defer format-level detail to Ch16, keep structural commitment
+- **L143 telemetry/analytics ADR** approaches Ch15/Ch20 territory - Ch9 makes the right governance call but should defer the actual ADR
 - **L69 disaster recovery walkthrough** is appropriate for Ch9 (practitioner lens claim); Ch20 details the flow
 - **L83–99 Seven Ideals checklist** is appropriately Ch9 territory; no overlap
 
 ## Strengths to preserve
 
-- **L11 opener** — "He sat in the room while it ran" and "That is the kind of discovery that does not leave you" — Halvorsen rates as strongest paragraph in council chapters
-- **L45 thesis sentence** — "Custody is the lesser word. The architecture had to learn the difference." — Hollis suggests as section header / epigraph
-- **L29 "Hiding without lying is craft."** and **L57 "Clear is kind."** — compressed brown-register maxims
-- **L63–73 What Changed Between Rounds hinge** — QC-9 done correctly
-- **L83–99 Seven Ideals walkthrough** — Osei rates as right academic move
-- **L163 shared-device deployment recognition** — Krishnamurthy's strongest praise of any council chapter
-- **L159 2022 SaaS suspension empirical anchor** — Volkov rates as chapter's single strongest claim for CIS readers
-- **L135–143 implementation-drift framing** — Webb's most useful single piece
-- **L153 "first unconditional PROCEED is the hardest one to earn"** — sets up Ch10's score table reveal
-- **L184–190 export-button-as-proof principle** — load-bearing for Ch10 L66 Ferreira/Voss tension
+- **L11 opener** - "He sat in the room while it ran" and "That is the kind of discovery that does not leave you" - Halvorsen rates as strongest paragraph in council chapters
+- **L45 thesis sentence** - "Custody is the lesser word. The architecture had to learn the difference." - Hollis suggests as section header / epigraph
+- **L29 "Hiding without lying is craft."** and **L57 "Clear is kind."** - compressed brown-register maxims
+- **L63–73 What Changed Between Rounds hinge** - QC-9 done correctly
+- **L83–99 Seven Ideals walkthrough** - Osei rates as right academic move
+- **L163 shared-device deployment recognition** - Krishnamurthy's strongest praise of any council chapter
+- **L159 2022 SaaS suspension empirical anchor** - Volkov rates as chapter's single strongest claim for CIS readers
+- **L135–143 implementation-drift framing** - Webb's most useful single piece
+- **L153 "first unconditional PROCEED is the hardest one to earn"** - sets up Ch10's score table reveal
+- **L184–190 export-button-as-proof principle** - load-bearing for Ch10 L66 Ferreira/Voss tension
 
 ## Priority PAO action items (in priority order)
 
 ### 1. Resolve Round 1 verdict-mechanics inconsistency at L55–58
 
-Ferreira issued PROCEED WITH CONDITIONS per Ch10 L25, but Ch9 currently describes the export gap as "classified as a philosophical and practical blocker" inside that verdict. Pick one — either it was a CONDITION (heaviest of three) or it was the BLOCK that defines the verdict. Flagged by Chase, Webb, Osei, Krishnamurthy, Barker. Cross-chapter consistency requires this to match Ch10 L25.
+Ferreira issued PROCEED WITH CONDITIONS per Ch10 L25, but Ch9 currently describes the export gap as "classified as a philosophical and practical blocker" inside that verdict. Pick one - either it was a CONDITION (heaviest of three) or it was the BLOCK that defines the verdict. Flagged by Chase, Webb, Osei, Krishnamurthy, Barker. Cross-chapter consistency requires this to match Ch10 L25.
 
 ### 2. Cut 700–900 words to land at ~3,800–4,000
 
 Primary candidates:
-- L127–131 Production Analogues paragraph (Ch12 territory) — lead with Ferreira's verdict (Yjs via YDotNet today, Loro aspirational, ICrdtEngine reversibility play), demote comparative survey
+- L127–131 Production Analogues paragraph (Ch12 territory) - lead with Ferreira's verdict (Yjs via YDotNet today, Loro aspirational, ICrdtEngine reversibility play), demote comparative survey
 - One of two closing summary registers (Practitioner Checklist L171–178 or The Principle L182–196)
 - Compress Global Deployment Context (L157–163) to one tight paragraph
 
@@ -100,7 +100,7 @@ Ferreira's recovery walkthrough (L69) is single-user / single-device. Krishnamur
 ## Other findings (not priority-ordered)
 
 - **Webb:** Lead L129 with verdict (Yjs via YDotNet); convert L161 to first-person practitioner observation
-- **Nakamura:** Demote "first unconditional PROCEED is most meaningful" claim — let Ch10 make that claim; cut/reattribute commercial-model verdict at L131 (Kelsey/Ch8 territory)
+- **Nakamura:** Demote "first unconditional PROCEED is most meaningful" claim - let Ch10 make that claim; cut/reattribute commercial-model verdict at L131 (Kelsey/Ch8 territory)
 - **Osei:** Source or soften "hundreds of thousands of organizations" quantitative claim at L159; either cite survey or soften "only commercial model" claim at L131
 - **Krishnamurthy:** Add Indian or GCC product analogue (Zoho's offline-capable suite) to Production Analogues
 - **Hollis:** Make export-button thesis explicit at chapter open, not just closing section
@@ -113,7 +113,7 @@ Ferreira's recovery walkthrough (L69) is single-user / single-device. Krishnamur
 ## Word-count outcome target
 
 Before polish: 4,572 words (131% of 3,500 target).
-After priority-5 polish target: 3,800–4,000 words (109–114% of target — same band as Ch5/Ch6/Ch7 post-polish).
+After priority-5 polish target: 3,800–4,000 words (109–114% of target - same band as Ch5/Ch6/Ch7 post-polish).
 
 ---
 

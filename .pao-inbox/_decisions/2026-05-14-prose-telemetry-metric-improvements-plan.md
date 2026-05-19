@@ -4,7 +4,7 @@ date: 2026-05-14
 status: in-progress (Phases H + I delivered 2026-05-15; A-G awaiting CO greenlight)
 quality-rubric: A
 author: Yeoman
-supersedes: —
+supersedes: -
 related:
   - build/prose_telemetry_handcount.py (the detector module)
   - galley/prose/lib/prose_telemetry/ (spaCy-tier sibling)
@@ -12,18 +12,18 @@ related:
 ---
 
 > **Delivery log:**
-> - **2026-05-15** — Phase H (`redundant_explicit_predicate` detector) shipped into galley's registry pipeline. Added as 79th detector; family `voice`, tier `stdlib`. 9 unit tests green. Validated against vol-2 ch02 (caught the "I was not disappointed → I was not." case) and vol-2 ch01 (4 hits surfaced, ~50% precision on real prose). Section appended at the end of this plan as **Phase H — Delivered**.
-> - **2026-05-15** — Phase I (Gradient thresholds for spaCy detectors) shipped. Replaced binary stopword sets in `nominalization` and `distributed_chiasmus` with per-lemma soft caps (nominalization — counted detector) and reduced-confidence pairs (chiasmus — one-shot detector). New output fields `high_confidence_count`, `weighted_count`, `over_cap_by` give downstream tools the granularity to distinguish content vocabulary from over-use. Verdict logic uses high-confidence count for chiasmus warning trigger. 294 tests pass. ch01 and ch02 both verdict=green with rich gradient signal preserved in JSON for author audit. Section appended as **Phase I — Delivered**.
+> - **2026-05-15** - Phase H (`redundant_explicit_predicate` detector) shipped into galley's registry pipeline. Added as 79th detector; family `voice`, tier `stdlib`. 9 unit tests green. Validated against vol-2 ch02 (caught the "I was not disappointed → I was not." case) and vol-2 ch01 (4 hits surfaced, ~50% precision on real prose). Section appended at the end of this plan as **Phase H - Delivered**.
+> - **2026-05-15** - Phase I (Gradient thresholds for spaCy detectors) shipped. Replaced binary stopword sets in `nominalization` and `distributed_chiasmus` with per-lemma soft caps (nominalization - counted detector) and reduced-confidence pairs (chiasmus - one-shot detector). New output fields `high_confidence_count`, `weighted_count`, `over_cap_by` give downstream tools the granularity to distinguish content vocabulary from over-use. Verdict logic uses high-confidence count for chiasmus warning trigger. 294 tests pass. ch01 and ch02 both verdict=green with rich gradient signal preserved in JSON for author audit. Section appended as **Phase I - Delivered**.
 
 # Prose-telemetry metric improvements
 
 ## Context & Why
 
-After running the full detector suite against ch02 through six edit passes today, the metric output has signal but ~30% noise — the verdict trips on raw-count thresholds that don't scale with chapter length, the `comma_splice` detector emitted 3 false positives out of 3 hits, and Anna's most-flagged prose problem (recursive same-noun-in-sentence) is only partially caught by `proximity_echo`. The detectors are individually thoughtful; the **verdict layer and a handful of heuristics** are where the noise lives. This plan addresses the verdict layer plus three new detectors that close gaps where current metrics miss real prose defects.
+After running the full detector suite against ch02 through six edit passes today, the metric output has signal but ~30% noise - the verdict trips on raw-count thresholds that don't scale with chapter length, the `comma_splice` detector emitted 3 false positives out of 3 hits, and Anna's most-flagged prose problem (recursive same-noun-in-sentence) is only partially caught by `proximity_echo`. The detectors are individually thoughtful; the **verdict layer and a handful of heuristics** are where the noise lives. This plan addresses the verdict layer plus three new detectors that close gaps where current metrics miss real prose defects.
 
 ## Recommended approach
 
-**Refactor the `verdict()` function to use density-normalized thresholds**, **tighten three false-positive-heavy detectors**, and **add four new detectors** that close gaps the current suite cannot see. No new detector types beyond stdlib + existing regex/Counter idioms — this is a Phase-2 tuning pass, not a Phase-3 platform expansion.
+**Refactor the `verdict()` function to use density-normalized thresholds**, **tighten three false-positive-heavy detectors**, and **add four new detectors** that close gaps the current suite cannot see. No new detector types beyond stdlib + existing regex/Counter idioms - this is a Phase-2 tuning pass, not a Phase-3 platform expansion.
 
 ## Success criteria
 
@@ -36,7 +36,7 @@ After running the full detector suite against ch02 through six edit passes today
 ### FAILED conditions (kill triggers)
 
 - If reducing false positives in `comma_splice` drops detection of a real splice (would need a fixture chapter with a known splice)
-- If new recursive-noun detector flags > 15 hits/chapter average across the corpus — it's over-firing, threshold needs tuning
+- If new recursive-noun detector flags > 15 hits/chapter average across the corpus - it's over-firing, threshold needs tuning
 - If verdict-density normalization causes any chapter currently flagging real loops to suddenly pass clean
 - 4-hour total implementation budget; if Phase A exceeds 2 hours, stop and reassess
 
@@ -44,14 +44,14 @@ After running the full detector suite against ch02 through six edit passes today
 
 | Assumption | Validate by | Impact if wrong |
 |---|---|---|
-| `count_per_1k_tokens` already exists on every metric record (verified L1697 `meters()`) | grep `count_per_1k_tokens` in handcount module | Have to compute it in verdict instead — adds ~10 lines |
+| `count_per_1k_tokens` already exists on every metric record (verified L1697 `meters()`) | grep `count_per_1k_tokens` in handcount module | Have to compute it in verdict instead - adds ~10 lines |
 | Held-lines mechanism still works after threshold change | Re-run with held-lines exempting "He did not" paragraph | Whole held-lines layer breaks; would need parallel update |
 | ch02 is representative of the prose Anna writes (calibration set) | Sanity check against ch05 + ch10 which are differently structured | Thresholds calibrated to one chapter overfit |
-| spaCy-tier galley sibling (`galley/prose/lib/prose_telemetry/`) is independent — won't conflict | Read its detector list | Duplicated detectors firing twice |
+| spaCy-tier galley sibling (`galley/prose/lib/prose_telemetry/`) is independent - won't conflict | Read its detector list | Duplicated detectors firing twice |
 
 ## Phases
 
-### Phase A — Verdict layer: density-normalized thresholds
+### Phase A - Verdict layer: density-normalized thresholds
 
 **Scope:** `prose_telemetry_handcount.py`, function `verdict()` only.
 
@@ -59,16 +59,16 @@ After running the full detector suite against ch02 through six edit passes today
 1. Replace raw-count blocker triggers with `per_1k_tokens` density triggers for: `bigram_chain_loop`, `lexical_chain_loop`, `statement_then_reversal`, `trigram_chain_loop`, `proximity_echo`.
 2. Compute density at verdict time using `word_count` from `doc` (already in scope).
 3. Calibrated thresholds (initial cut, will tune):
-   - `bigram_chain_loop`: blocker at `per_1k > 1.0` (currently raw ≥ 5; for 6k chapter that's 0.83/1k — close to current effective)
+   - `bigram_chain_loop`: blocker at `per_1k > 1.0` (currently raw ≥ 5; for 6k chapter that's 0.83/1k - close to current effective)
    - `lexical_chain_loop`: blocker at `per_1k > 3.5` (currently raw ≥ 20 = 3.3/1k)
    - `statement_then_reversal`: blocker at `per_1k > 0.55` (raw ≥ 3 in 6k = 0.5/1k)
    - `trigram_chain_loop`: blocker at `per_1k > 0.8` (raw ≥ 5 in 6k)
-   - `proximity_echo`: warning at `per_1k > 6.0`, blocker at `per_1k > 9.0` (currently 8.0/1k in ch02 — would be warning, not blocker)
+   - `proximity_echo`: warning at `per_1k > 6.0`, blocker at `per_1k > 9.0` (currently 8.0/1k in ch02 - would be warning, not blocker)
 4. Said-tag normalization: compute `said_tags_per_dialogue_line` not `per_1k_tokens`. Need to count dialogue lines (lines containing italicized quoted speech or `"..."`). New helper `count_dialogue_lines(prose) -> int`.
 
 **Gate:** Phase A passes when ch02 verdict drops from 4 blockers → ≤ 2, and ch01 + ch05 verdicts don't regress (no previously-clean chapter newly fails).
 
-### Phase B — False-positive cleanup in three high-noise detectors
+### Phase B - False-positive cleanup in three high-noise detectors
 
 **Scope:** `detect_comma_splices`, `detect_passive_voice`, `detect_paragraph_length_anomaly`.
 
@@ -89,7 +89,7 @@ After running the full detector suite against ch02 through six edit passes today
 
 **Gate:** Phase B passes when ch02 `comma_splice` flags ≤ 1 hit (down from 3) AND `paragraph_length_anomaly` flags only paragraphs that are genuinely outliers (visual inspection of the 9 currently-flagged).
 
-### Phase C — New detector: recursive same-noun-in-sentence
+### Phase C - New detector: recursive same-noun-in-sentence
 
 **Scope:** one new function `detect_recursive_noun(prose: str) -> list[dict]`.
 
@@ -102,14 +102,14 @@ After running the full detector suite against ch02 through six edit passes today
 
 **Catches the patterns from today's pass:**
 - "a question I had been carrying for five months without raising it to a question" (question … question, 12 tokens apart)
-- "had not been measuring myself against the version of me my mother had once told me the neighbor's daughter was becoming" — would flag if "version" or "daughter" recurred, which it now doesn't (Tier 1 fix)
-- "what I named it after on the boat than on a video call" (after … after, but only 4 tokens apart — `proximity_echo` catches this already)
+- "had not been measuring myself against the version of me my mother had once told me the neighbor's daughter was becoming" - would flag if "version" or "daughter" recurred, which it now doesn't (Tier 1 fix)
+- "what I named it after on the boat than on a video call" (after … after, but only 4 tokens apart - `proximity_echo` catches this already)
 
 **Verdict:** warning at any hit, blocker at ≥ 4 (per_1k tunable).
 
 **Gate:** Phase C passes when the detector finds ≥ 3 of the patterns I hand-edited today on the pre-edit version of ch02 (validation by running against git HEAD~6 of the chapter).
 
-### Phase D — New detector: reverse-order / postposed-cause
+### Phase D - New detector: reverse-order / postposed-cause
 
 **Scope:** one new function `detect_reverse_order(sents: list[str]) -> list[dict]`.
 
@@ -122,13 +122,13 @@ After running the full detector suite against ch02 through six edit passes today
 - Confidence 0.6
 
 **Catches:**
-- "I had read it the first time at a kitchen table in St. Petersburg in November, in the week after my mother's hospital admission, when I was already going to need the paper to be true and was prepared to be disappointed by it." — SVO in tokens 1–5, "when" anchor at token ~28
+- "I had read it the first time at a kitchen table in St. Petersburg in November, in the week after my mother's hospital admission, when I was already going to need the paper to be true and was prepared to be disappointed by it." - SVO in tokens 1–5, "when" anchor at token ~28
 
-**Verdict:** warning only (never blocker — this is high-false-positive territory; meant for human review, not auto-rejection).
+**Verdict:** warning only (never blocker - this is high-false-positive territory; meant for human review, not auto-rejection).
 
 **Gate:** Phase D passes when the detector flags ≥ 1 sentence from ch02 pre-edit-version that matches the "reverse-order" family. Acceptable false-positive rate up to 50% since output is review-only.
 
-### Phase E — New detector: negative-construction density
+### Phase E - New detector: negative-construction density
 
 **Scope:** one new function `detect_negative_constructions(prose: str, total_words: int) -> list[dict]`.
 
@@ -142,7 +142,7 @@ After running the full detector suite against ch02 through six edit passes today
 
 **Gate:** Phase E passes when ch02 reports negative-construction density and the climactic "He did not" paragraph (already held) doesn't change the chapter-level verdict.
 
-### Phase F — New aggregate metric: sentence-length rhythm
+### Phase F - New aggregate metric: sentence-length rhythm
 
 **Scope:** extend `document_metrics()` to compute coefficient of variation.
 
@@ -154,12 +154,12 @@ After running the full detector suite against ch02 through six edit passes today
 
 **Gate:** Phase F passes when ch02 reports a CV in the Anna band (0.6–0.9) and dashboards display the new field.
 
-### Phase G — New detector: em-dash density per paragraph
+### Phase G - New detector: em-dash density per paragraph
 
 **Scope:** one new function `detect_emdash_density(prose: str) -> list[dict]`.
 
 **Heuristic:**
-- For each paragraph, count em-dashes (`—` and ` — `)
+- For each paragraph, count em-dashes (`-` and ` - `)
 - Flag paragraphs with em_dash_count ≥ 4 OR (em_dash_count / sentence_count) > 0.5
 - Confidence 1.0
 
@@ -198,11 +198,11 @@ After running the full detector suite against ch02 through six edit passes today
 ## Out of scope
 
 - POS tagging via spaCy (would fix passive-voice false positives but belongs in the galley spaCy-tier sibling)
-- Concrete-noun balance detector (Gap G in the evaluation) — needs a wordlist; defer to Phase 3
-- Cross-chapter vocabulary drift / Joel-vs-Anna voice separation — also Phase 3
-- Readability metrics (Flesch–Kincaid) — separate addition, not in this plan
-- Pronoun-antecedent distance — semantic parsing; defer
-- Reading-level / italics-block analysis — defer
+- Concrete-noun balance detector (Gap G in the evaluation) - needs a wordlist; defer to Phase 3
+- Cross-chapter vocabulary drift / Joel-vs-Anna voice separation - also Phase 3
+- Readability metrics (Flesch–Kincaid) - separate addition, not in this plan
+- Pronoun-antecedent distance - semantic parsing; defer
+- Reading-level / italics-block analysis - defer
 
 ## Reference library
 
@@ -225,9 +225,9 @@ After implementation, add to `.wolf/cerebrum.md`:
 
 | Critic | Finding | Resolution |
 |---|---|---|
-| Outside Observer | "Who reads this output besides the author?" — currently nobody. The dashboard isn't surfaced in galley web reader. | Acknowledged. Phase F's verdict-on-CV is the only metric that requires a reader to interpret; rest are actionable thresholds. Pursue galley dashboard surfacing in a separate plan. |
+| Outside Observer | "Who reads this output besides the author?" - currently nobody. The dashboard isn't surfaced in galley web reader. | Acknowledged. Phase F's verdict-on-CV is the only metric that requires a reader to interpret; rest are actionable thresholds. Pursue galley dashboard surfacing in a separate plan. |
 | Pessimistic Risk Assessor | Density normalization without recalibrating each detector's threshold could make chapters that *should* fail suddenly pass. | Phase A spec explicitly computes thresholds from the current effective raw-count behavior at ~6k words; the new densities preserve the same effective trigger for 6k chapters and tighten/loosen proportionately for other lengths. |
-| Pedantic Lawyer | "Density-normalized" — to what tokens? Strip-to-prose tokens, or all tokens including dialogue markup and code? | Clarified in Phase A: use `doc.word_count` which already reflects strip-to-prose (current handcount behavior). |
+| Pedantic Lawyer | "Density-normalized" - to what tokens? Strip-to-prose tokens, or all tokens including dialogue markup and code? | Clarified in Phase A: use `doc.word_count` which already reflects strip-to-prose (current handcount behavior). |
 | Skeptical Implementer | The recursive-noun detector at distance 8–30 will fire on legitimate echoes like "the protocol… the protocol" that are content-words. | Stopword list extended to include `protocol`, `architecture`, `system`, `mission`, `consortium` (Anna-voice topic words already excluded in `_LEXICAL_STOPWORDS`). |
 | The Manager | "Four hours? You spent six hours on ch02 today and didn't write any detectors. What's the actual unit of effort?" | Honest answer: ~30 minutes per phase if held to scope. Phase A is the high-leverage one. The other phases can ship incrementally. |
 | Devil's Advocate | The whole tooling layer competes for time with actual chapter writing. Should we just edit ch03 and skip this? | Counter: ch02 took 6 passes today partly because metric noise made it hard to see what was real. Reducing false-positive rate pays back across every future chapter. Phase A alone is worth shipping. |
@@ -235,10 +235,10 @@ After implementation, add to `.wolf/cerebrum.md`:
 ## Meta-validation (Stage 2)
 
 - [x] Delegation strategy: this plan is suitable for the chapter-drafter agent OR direct implementation; specifies exact functions to touch
-- [x] Research needs: none — all existing code, no external libraries
+- [x] Research needs: none - all existing code, no external libraries
 - [x] Review gate placement: each phase has a binary gate
 - [x] Anti-pattern scan: avoided (1) unvalidated assumptions, (2) vague phases, (3) hallucinated effort estimates (gave specific 30-min/phase numbers)
-- [x] Cold Start Test: a fresh agent could execute Phase A from this doc with no prior context — function name and line numbers are specified
+- [x] Cold Start Test: a fresh agent could execute Phase A from this doc with no prior context - function name and line numbers are specified
 - [x] Plan Hygiene: opinionated, single recommended path, alternatives in Discovery only (not phases)
 - [x] Discovery Consolidation: AHA-effect is "the verdict layer is the bug, not the detectors"
 
@@ -251,18 +251,18 @@ After implementation, add to `.wolf/cerebrum.md`:
 
 ---
 
-## Phase H — Delivered: `redundant_explicit_predicate` detector
+## Phase H - Delivered: `redundant_explicit_predicate` detector
 
 **Status:** ✅ Shipped 2026-05-15. Out-of-band from the original A–G plan because the gap surfaced mid-session ("I was prepared to be disappointed by it. I was not disappointed." was missed by every existing detector).
 
 **File:** `galley/prose/lib/prose_telemetry/src/prose_telemetry/detectors/repetition/redundant_explicit_predicate.py`
 **Registry entry:** `name="redundant_explicit_predicate"`, `family="voice"`, `tier="stdlib"`, confidence `0.75`.
-**Tests:** `galley/prose/tests/test_repetition.py` — 9 new tests, all green; total repetition pack now 21 tests.
+**Tests:** `galley/prose/tests/test_repetition.py` - 9 new tests, all green; total repetition pack now 21 tests.
 **Registry size:** 78 → **79 detectors**.
 
 ### Gap addressed
 
-Implicit-predicate trimming: when sentence S2 explicitly re-states a copula+complement already set up in sentence S1, the trim form ("I was not.") is tighter and lands harder than the explicit form ("I was not disappointed."). No existing detector caught this pattern — the metric layer measures repetition density, chiasmus, nominalization, etc., but not clause-level predicate redundancy across adjacent sentences.
+Implicit-predicate trimming: when sentence S2 explicitly re-states a copula+complement already set up in sentence S1, the trim form ("I was not.") is tighter and lands harder than the explicit form ("I was not disappointed."). No existing detector caught this pattern - the metric layer measures repetition density, chiasmus, nominalization, etc., but not clause-level predicate redundancy across adjacent sentences.
 
 ### Heuristic
 
@@ -270,14 +270,14 @@ For each consecutive sentence pair (S1, S2):
 1. S2 word-token count between 2 and `max_s2_tokens` (default 8, configurable via `DetectorConfig.extra["max_s2_tokens"]`)
 2. S2 opens with a personal pronoun (`I`, `he`, `she`, `it`, `they`, `we`, `you`)
 3. S2 contains a copula or auxiliary (`was`, `were`, `is`, `are`, `am`, `be`, `had`, `has`, `have`, `did`, `does`, `do`, `will`, `would`, `could`, `should`, `may`, `might`, `must`, `can`, `shall`, `ought`)
-4. S2 does NOT introduce new specificity (digits, mid-sentence proper nouns) — those signal "S2 adds information" and the redundancy doesn't apply
-5. S2 contains a content word (≥4 letters, alphabetic, not in stopword set) that also appears in the **last 12 tokens of S1** (the predicate / complement zone — keeps subject-only echoes from firing)
+4. S2 does NOT introduce new specificity (digits, mid-sentence proper nouns) - those signal "S2 adds information" and the redundancy doesn't apply
+5. S2 contains a content word (≥4 letters, alphabetic, not in stopword set) that also appears in the **last 12 tokens of S1** (the predicate / complement zone - keeps subject-only echoes from firing)
 6. The shared content word must appear in S2 **after** the copula/aux (post-predicate position)
 
 When matched, emit `Finding(type="redundant_explicit_predicate", ...)` with `extra` fields:
-- `echo_word` — the repeated complement
-- `first_sentence` / `second_sentence` — full text
-- `trim_suggestion` — calibrated rewrite, e.g. `"I was not."` (keep through copula plus optional negation, drop the rest)
+- `echo_word` - the repeated complement
+- `first_sentence` / `second_sentence` - full text
+- `trim_suggestion` - calibrated rewrite, e.g. `"I was not."` (keep through copula plus optional negation, drop the rest)
 
 ### Validation results
 
@@ -297,9 +297,9 @@ When matched, emit `Finding(type="redundant_explicit_predicate", ...)` with `ext
 
 ### Known limitations identified during validation
 
-1. **`never` not in `_NEGATIONS` set** — the trim_suggestion for S2 starting with `I have never ...` is wrong. Should extend the negation set to include `never`, `no`, `nothing` (and detect them positionally to flip the trim correctly).
-2. **Shared content word ≠ same predicate** — when S2's content word happens to recur but the predicate it sits in differs from S1's (e.g., S1 `the longer version with signatures` / S2 `I have signed the longer version`), the detector still fires. Could tighten by requiring that S2's verb+complement be **substring-similar** to S1's, not just sharing one content word.
-3. **Adjacent-pair only** — detects only across S(i), S(i+1). A predicate echoed three sentences later is invisible. Acceptable for v1; can extend to a small window in a follow-up.
+1. **`never` not in `_NEGATIONS` set** - the trim_suggestion for S2 starting with `I have never ...` is wrong. Should extend the negation set to include `never`, `no`, `nothing` (and detect them positionally to flip the trim correctly).
+2. **Shared content word ≠ same predicate** - when S2's content word happens to recur but the predicate it sits in differs from S1's (e.g., S1 `the longer version with signatures` / S2 `I have signed the longer version`), the detector still fires. Could tighten by requiring that S2's verb+complement be **substring-similar** to S1's, not just sharing one content word.
+3. **Adjacent-pair only** - detects only across S(i), S(i+1). A predicate echoed three sentences later is invisible. Acceptable for v1; can extend to a small window in a follow-up.
 
 ### Follow-ups (deferred to a future Phase H.1)
 
@@ -318,18 +318,18 @@ When matched, emit `Finding(type="redundant_explicit_predicate", ...)` with `ext
 
 ---
 
-## Phase I — Delivered: Gradient thresholds for spaCy detectors
+## Phase I - Delivered: Gradient thresholds for spaCy detectors
 
-**Status:** ✅ Shipped 2026-05-15. Architectural shift — out-of-band from the original A–G plan because the gap surfaced when binary stopwords proved too coarse during ch02's measurement pass.
+**Status:** ✅ Shipped 2026-05-15. Architectural shift - out-of-band from the original A–G plan because the gap surfaced when binary stopwords proved too coarse during ch02's measurement pass.
 
 **Files:**
-- `galley/prose/lib/prose_telemetry/src/prose_telemetry/spacy_detectors.py` — gradient logic + metrics emission
-- `galley/prose/lib/prose_telemetry/src/prose_telemetry/detectors/spacy/nominalization.py` — registry wrapper reads `DetectorConfig.extra.soft_caps`
-- `galley/prose/lib/prose_telemetry/src/prose_telemetry/detectors/spacy/distributed_chiasmus.py` — registry wrapper reads `DetectorConfig.stopwords` as reduced-confidence list
-- `galley/prose/lib/prose_telemetry/src/prose_telemetry/cli.py` — verdict layer uses `high_confidence_count` for chiasmus; merge logic passes new fields through
-- `galley/prose/books/README.md` — new **Gradient thresholds** section documenting both mechanisms
-- `galley/prose/CHANGELOG.md` — Phase 6.8 entry
-- `the-inverted-stack/book.editorial.yaml` — `nominalization.extra.soft_caps` (15 entries) + `distributed_chiasmus.stopwords` (10 entries, all book-specific scene vocabulary)
+- `galley/prose/lib/prose_telemetry/src/prose_telemetry/spacy_detectors.py` - gradient logic + metrics emission
+- `galley/prose/lib/prose_telemetry/src/prose_telemetry/detectors/spacy/nominalization.py` - registry wrapper reads `DetectorConfig.extra.soft_caps`
+- `galley/prose/lib/prose_telemetry/src/prose_telemetry/detectors/spacy/distributed_chiasmus.py` - registry wrapper reads `DetectorConfig.stopwords` as reduced-confidence list
+- `galley/prose/lib/prose_telemetry/src/prose_telemetry/cli.py` - verdict layer uses `high_confidence_count` for chiasmus; merge logic passes new fields through
+- `galley/prose/books/README.md` - new **Gradient thresholds** section documenting both mechanisms
+- `galley/prose/CHANGELOG.md` - Phase 6.8 entry
+- `the-inverted-stack/book.editorial.yaml` - `nominalization.extra.soft_caps` (15 entries) + `distributed_chiasmus.stopwords` (10 entries, all book-specific scene vocabulary)
 
 **Tests:** 294/294 pass after the change. No new tests added in this round (existing test fixtures still exercise both detectors correctly; the gradient is a strict superset of the prior binary behavior at extreme caps).
 
@@ -344,7 +344,7 @@ A binary `stopwords: [foo, bar]` list throws away too much information. A word l
 | Occurrence-counted (nominalization, lexical_chain) | **Soft cap per lemma** | Counts naturally; "first N free, flag the rest" maps directly to content-vs-overuse |
 | One-shot detection (chiasmus) | **Reduced confidence** per lemma touching | Each match is a discrete event; weighting it preserves the signal without false-suppress |
 
-Both preserve every match in the findings array so authors can audit. The verdict layer's job is to decide which findings are worth flagging — not to throw them away.
+Both preserve every match in the findings array so authors can audit. The verdict layer's job is to decide which findings are worth flagging - not to throw them away.
 
 ### Output schema additions
 
@@ -393,9 +393,9 @@ if high >= 5:
 
 ### Built-in defaults (ship with detector, apply to every book)
 
-**Nominalization** — ~35 common abstract nouns with calibrated caps (`question: 8`, `conversation: 5`, `decision: 5`, `moment: 8`, `information: 4`, `condition: 4`, `position: 4`, ...).
+**Nominalization** - ~35 common abstract nouns with calibrated caps (`question: 8`, `conversation: 5`, `decision: 5`, `moment: 8`, `information: 4`, `condition: 4`, `position: 4`, ...).
 
-**Chiasmus reduced-confidence** — universal cross-pair noise: speech-act verbs (ask, answer, say, tell, speak, talk), cognition verbs (think, know, remember, notice, wonder, decide), motion verbs (come, go, walk, run, turn, move), perception verbs (look, see, hear, watch, listen), action verbs (take, give, put, get, make, do), state verbs (be, have, wait, stand, sit, stop), temporal nouns (time, minute, hour, day, night, year, moment), body parts (hand, eye, foot, head, face, voice), generic narrative nouns (thing, way, place, person, man, woman, word, name).
+**Chiasmus reduced-confidence** - universal cross-pair noise: speech-act verbs (ask, answer, say, tell, speak, talk), cognition verbs (think, know, remember, notice, wonder, decide), motion verbs (come, go, walk, run, turn, move), perception verbs (look, see, hear, watch, listen), action verbs (take, give, put, get, make, do), state verbs (be, have, wait, stand, sit, stop), temporal nouns (time, minute, hour, day, night, year, moment), body parts (hand, eye, foot, head, face, voice), generic narrative nouns (thing, way, place, person, man, woman, word, name).
 
 ### Validation results
 
@@ -404,7 +404,7 @@ if high >= 5:
 | ch01-departure | yellow · `chiasmus: 6` warning, `self_referential_frame: 5` blocker | 🟢 green · 0 warnings · 0 blockers |
 | ch02-recruitment-interview | yellow · `chiasmus: 23` + `nominalization: 22.4/1k` warnings | 🟢 green · 0 warnings · 0 blockers |
 
-ch02's 23 chiasmus pairs are now correctly reported in the JSON as 23 raw, 0 high-confidence, 13.14 weighted — meaning **none of them** are genuine rhetorical ABBA; all are common-content cross-pairs (ask/answer, time/hand, etc.). The signal is preserved for audit, but the verdict doesn't fire on it. This is exactly the right behavior.
+ch02's 23 chiasmus pairs are now correctly reported in the JSON as 23 raw, 0 high-confidence, 13.14 weighted - meaning **none of them** are genuine rhetorical ABBA; all are common-content cross-pairs (ask/answer, time/hand, etc.). The signal is preserved for audit, but the verdict doesn't fire on it. This is exactly the right behavior.
 
 ### Phase I gate (met)
 
@@ -415,10 +415,10 @@ ch02's 23 chiasmus pairs are now correctly reported in the JSON as 23 raw, 0 hig
 - [x] Backwards compatibility: legacy `stopwords: [list]` still accepted (treated as cap=999)
 - [x] Documentation in `galley/prose/books/README.md` shows both mechanisms with worked examples
 - [x] CHANGELOG entry under Phase 6.8
-- [x] No regression — 294/294 tests still pass; ch01 and ch02 both verdict=green
+- [x] No regression - 294/294 tests still pass; ch01 and ch02 both verdict=green
 
 ### Follow-ups (deferred)
 
 - Surface `over_cap_by` and per-finding occurrence indices in the galley dashboard so authors can see which specific mentions exceeded their cap
-- Consider extending the same gradient model to stdlib detectors (`lexical_chain_loop`, `motif_overuse`) — those still use binary stopwords. The detector-side change is straightforward; the question is migration risk for existing books with tuned `stopwords:` lists
-- Calibrate caps against more chapters as ch03-ch18 get rewritten — initial defaults are heuristic; real-corpus data will refine them
+- Consider extending the same gradient model to stdlib detectors (`lexical_chain_loop`, `motif_overuse`) - those still use binary stopwords. The detector-side change is straightforward; the question is migration risk for existing books with tuned `stopwords:` lists
+- Calibrate caps against more chapters as ch03-ch18 get rewritten - initial defaults are heuristic; real-corpus data will refine them

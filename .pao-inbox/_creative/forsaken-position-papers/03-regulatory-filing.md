@@ -4,7 +4,7 @@ document-type: regulatory-body filing / standards-organization submission
 author-in-universe: Working Group on Compliance-Friendly Distributed Architectures (a multi-stakeholder body convened by the European Commission's Directorate-General for Communications Networks; signatory organizations include Helvetia Trust SA, four European banks, two healthcare consortia, the German Federal Office for Information Security observer-status, and several smaller federated-identity firms)
 publication-in-universe: filed with the European Commission DG-CNECT and copied to ENISA; published in the Commission's public consultation register
 publication-date-in-universe: February 2027 (post-the Nansen; positioning for the Book 2 regulatory-assault arc)
-title-in-universe: "Reference Architecture for Compliance-Friendly Distributed Systems — Working Group Recommendation"
+title-in-universe: "Reference Architecture for Compliance-Friendly Distributed Systems - Working Group Recommendation"
 length: ~720 words
 voice-reference: formal institutional; carefully bounded claims; legal-adjacent register
 purpose: voice reference + epigraph source; specifically positioned for the Book 2 regulatory testimony arc
@@ -40,10 +40,10 @@ The reference architecture comprises:
 
 The reference architecture is recommended because it satisfies, simultaneously:
 
-- **Sovereignty requirements** — customer data does not transit a cloud or external infrastructure
-- **Compliance requirements** — the audit trail is regulator-admissible without separate verification
-- **Operational requirements** — the federated identity service provides the contractual party of record that enterprise procurement and regulatory audit require
-- **Continuity requirements** — Swiss federal law (BGEID 2024) requires identity-record portability, ensuring no vendor lock-in for the federated-identity layer
+- **Sovereignty requirements** - customer data does not transit a cloud or external infrastructure
+- **Compliance requirements** - the audit trail is regulator-admissible without separate verification
+- **Operational requirements** - the federated identity service provides the contractual party of record that enterprise procurement and regulatory audit require
+- **Continuity requirements** - Swiss federal law (BGEID 2024) requires identity-record portability, ensuring no vendor lock-in for the federated-identity layer
 
 No other architectural pattern reviewed by the Working Group satisfied all four requirements simultaneously.
 
@@ -53,7 +53,7 @@ The Working Group reviewed three pure-OSS local-first architectures (one of whic
 
 The Working Group's findings on the technical merits of these architectures were positive. The architectures are well-designed; the cryptographic foundations are sound; the implementations are auditable.
 
-The Working Group's findings on the **operational accountability** of these architectures were that pure-OSS local-first architectures, as currently constituted, do not provide the contractual party of record that European regulatory proceedings require. The community-governance model of these architectures — while admirable in many respects — does not produce a defined party that can answer subpoenas, accept vulnerability-disclosure timelines binding under the Cyber Resilience Act, or sign off on audit-chain attestations admissible to financial-services regulators.
+The Working Group's findings on the **operational accountability** of these architectures were that pure-OSS local-first architectures, as currently constituted, do not provide the contractual party of record that European regulatory proceedings require. The community-governance model of these architectures - while admirable in many respects - does not produce a defined party that can answer subpoenas, accept vulnerability-disclosure timelines binding under the Cyber Resilience Act, or sign off on audit-chain attestations admissible to financial-services regulators.
 
 The Working Group recognizes that this finding is contested by some architects associated with pure-OSS local-first projects. The contested point is whether cryptographic accountability (verifiable audit chains; community-issued vulnerability disclosures; reproducible builds) can substitute for contractual accountability in regulated deployments. The Working Group's finding, after extensive consultation, is that current European regulatory practice does not accept the substitution.
 

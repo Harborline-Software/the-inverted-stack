@@ -32,7 +32,7 @@ commit-authority rule).
 PAO's Phase 5 mechanical pass on the 18 remaining files; will spot-check Ch20 once that lands.
 
 **Continuing research-class work this iteration** per CO directive (never voluntarily exit /loop):
-attempting Ch11 Cut 3 (§Process Boundaries Lagos/VSAT operational-context trim) — judgment-heavy
+attempting Ch11 Cut 3 (§Process Boundaries Lagos/VSAT operational-context trim) - judgment-heavy
 but bounded; surface is repetition of regional framing in subsequent paragraphs.
 
 Audiobook position: Ch16 chunk 44/152 (~29%); my Ch16 cuts are baked into the cached chunking from

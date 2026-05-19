@@ -4,10 +4,10 @@ chapter: ch06-distributed-systems-lens
 date: 2026-04-30
 author: literary-board subagent (12 critics)
 audience: CO (final voice-pass), PAO (action items)
-verdict: POLISH (7.6/10 board consensus — solid council-chapter, slightly below Ch5 exemplar)
+verdict: POLISH (7.6/10 board consensus - solid council-chapter, slightly below Ch5 exemplar)
 ---
 
-# Literary Board Review — Ch06 (The Distributed Systems Lens)
+# Literary Board Review - Ch06 (The Distributed Systems Lens)
 
 ## Board scores
 
@@ -30,9 +30,9 @@ verdict: POLISH (7.6/10 board consensus — solid council-chapter, slightly belo
 ## QC-9 verification
 
 **PASSES.** Ch6 delivers the two-act structure cleanly:
-- §Act 1: Round 1 — Two Correctness Failures (L20–53) with explicit BLOCK verdict at L48–52
-- §What Changed Between Rounds (L56–94) — the narrative gap; the chapter's structural hinge
-- §Act 2: Round 2 — Surviving the Correctness Audit (L98–144) with PROCEED WITH CONDITIONS verdict at L134
+- §Act 1: Round 1 - Two Correctness Failures (L20–53) with explicit BLOCK verdict at L48–52
+- §What Changed Between Rounds (L56–94) - the narrative gap; the chapter's structural hinge
+- §Act 2: Round 2 - Surviving the Correctness Audit (L98–144) with PROCEED WITH CONDITIONS verdict at L134
 
 The Round 1 → Round 2 score arc is set up at L22 (R1 = 7.1, BLOCK) and resolved at L100 (R2 = 6.8, PROCEED WITH CONDITIONS). The -0.3 narrative is established at L100 with the explanation that "A reviewer who finds a Round 2 architecture more objectionable than Round 1 is not saying it got worse. He is saying it became precise enough to critique at a deeper level."
 
@@ -40,19 +40,19 @@ The Round 1 → Round 2 score arc is set up at L22 (R1 = 7.1, BLOCK) and resolve
 
 ## Strengths to preserve
 
-- **L12 Shevchenko opener** — character through past action, "personally debugged five CRDT deployments that diverged in ways the academic literature said were impossible"; comparable to Ch5's Voss opener
-- **L34 "He was right"** — three-word concession that establishes author trust before the resolution arrives
-- **L37–46 split-write thought experiment** — architecture dramatized as scenario; reader runs it themselves
-- **L44 "the user trusts that the system will not quietly lie to them"** — moral stake of CP/AP distinction in ten words
-- **L86 Schrems II treatment** — second-best Schrems II passage in the manuscript; Tier 3 = direct structural answer
-- **L100 Round 2 score-drop framing** — load-bearing for Ch10 reuse; tighten but preserve the move
-- **L104 relay-as-Flease-quorum-participant** — small architectural elegance; "eliminates the threshold problem"
-- **L120 CRDT-store-as-durable-outbound-buffer** — "the correct design for a local-first architecture where offline duration is unbounded"
-- **L126–132 Byzantine-failure-by-software-bug** — most under-cited risk in CRDT systems, named precisely
-- **L150–157 Non-Negotiable Distributed Systems Checklist** — six-bullet ADR-pasteable artifact
-- **L161, L189 "Convergence is not correctness"** — the chapter's usable axiom
-- **L187 anaphora ("The split-write window arrives... The GC horizon arrives... The corrupt operation sequence arrives...")** — earns its repetition; each instance carries new information
-- **L82, L183 mermaid alt-text prose** — correct WCAG practice; preserve pattern
+- **L12 Shevchenko opener** - character through past action, "personally debugged five CRDT deployments that diverged in ways the academic literature said were impossible"; comparable to Ch5's Voss opener
+- **L34 "He was right"** - three-word concession that establishes author trust before the resolution arrives
+- **L37–46 split-write thought experiment** - architecture dramatized as scenario; reader runs it themselves
+- **L44 "the user trusts that the system will not quietly lie to them"** - moral stake of CP/AP distinction in ten words
+- **L86 Schrems II treatment** - second-best Schrems II passage in the manuscript; Tier 3 = direct structural answer
+- **L100 Round 2 score-drop framing** - load-bearing for Ch10 reuse; tighten but preserve the move
+- **L104 relay-as-Flease-quorum-participant** - small architectural elegance; "eliminates the threshold problem"
+- **L120 CRDT-store-as-durable-outbound-buffer** - "the correct design for a local-first architecture where offline duration is unbounded"
+- **L126–132 Byzantine-failure-by-software-bug** - most under-cited risk in CRDT systems, named precisely
+- **L150–157 Non-Negotiable Distributed Systems Checklist** - six-bullet ADR-pasteable artifact
+- **L161, L189 "Convergence is not correctness"** - the chapter's usable axiom
+- **L187 anaphora ("The split-write window arrives... The GC horizon arrives... The corrupt operation sequence arrives...")** - earns its repetition; each instance carries new information
+- **L82, L183 mermaid alt-text prose** - correct WCAG practice; preserve pattern
 
 ## Priority PAO action items (in priority order)
 
@@ -74,16 +74,16 @@ Apply the Ch5 polish pattern. Add to the L86 regulatory paragraph:
 
 Sharpen to a one-sentence formulation matching or exceeding Ch10 line 58's punch ("His score dropped. That did not signal a failure. It signaled the opposite"). Ch6 is the source chapter for this rhetorical move; it should own the line.
 
-### 4. Reframe reconnection-storm and durable-outbound-buffer passages — global baseline, not edge case
+### 4. Reframe reconnection-storm and durable-outbound-buffer passages - global baseline, not edge case
 
 Apply Ch5's power-interruption-durability reframing pattern. L92 (reconnection storm) and L120 (CRDT-store-as-buffer) handle the architecture correctly but write it as exotic.
-- L92 — name daily load-shed cycles in Lagos / Bogotá tier-2 / Mumbai tier-2 as the baseline pattern, relay outage as one variant
-- L120 — connect the unbounded-offline-duration property to extended-outage operating reality
+- L92 - name daily load-shed cycles in Lagos / Bogotá tier-2 / Mumbai tier-2 as the baseline pattern, relay outage as one variant
+- L120 - connect the unbounded-offline-duration property to extended-outage operating reality
 
 ### 5. Add state-mandated-infrastructure-access threat model and managed-CP-database steelman
 
 Two ~80-word additions, both in §The Principle: Convergence Is Not Correctness:
-- **State-mandated access (Volkov, Krishnamurthy):** pull from Ch10 line 96 phrasing — "state-mandated access at the infrastructure layer" — and connect to the architecture's local-keys/no-relay-plaintext property.
+- **State-mandated access (Volkov, Krishnamurthy):** pull from Ch10 line 96 phrasing - "state-mandated access at the infrastructure layer" - and connect to the architecture's local-keys/no-relay-plaintext property.
 - **Managed-CP-database steelman (Nakamura, Webb):** name Spanner / Fauna / CockroachDB and explain why the data-sovereignty constraint Part I established does not permit delegation to a managed CP system.
 
 ## Voice-pass status
@@ -92,9 +92,9 @@ Two ~80-word additions, both in §The Principle: Convergence Is Not Correctness:
 
 ## Other findings (not priority-ordered)
 
-- **Chase:** GC mermaid at L62–80 is decorative — prose at L60 does the teaching; either commit harder to the diagram or cut it
+- **Chase:** GC mermaid at L62–80 is decorative - prose at L60 does the teaching; either commit harder to the diagram or cut it
 - **Webb:** Add one sentence after L132 naming a real-world Yjs/Automerge example of the bug-propagation failure mode
-- **Halvorsen:** Vary cadence — one of the four bold-led paragraphs in §What Changed Between Rounds should break formation; cut "slowly and without flourish" decoration at L12; break L165 sentence into two
+- **Halvorsen:** Vary cadence - one of the four bold-led paragraphs in §What Changed Between Rounds should break formation; cut "slowly and without flourish" decoration at L12; break L165 sentence into two
 - **Nakamura:** Cut three-restatement closing at L185–187 to one
 - **Osei:** Footnote at L126 distinguishing classical Byzantine failure (Lamport 1982) from contemporary BFT-consensus usage; footnote at L189 grounding "convergence is not correctness" in Saltzer-Schroeder mechanism/policy separation; add non-commutativity-under-merge clause at L165
 - **Krishnamurthy:** Name 90-day-tier vs. RBI 8-10 year audit-retention binding explicitly; add SI-partner-led linearizable-operation enumeration acknowledgment at L106

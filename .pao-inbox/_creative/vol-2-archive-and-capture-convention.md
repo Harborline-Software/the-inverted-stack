@@ -11,7 +11,7 @@ related:
   - .claude/skills/crew-log-style-entry/SKILL.md
 ---
 
-# Vol 2 — Archive and Capture Convention
+# Vol 2 - Archive and Capture Convention
 
 > **What this is:** the canonical reference for how Sunfish operates *as a platform* on the MERIDIAN-7 mission, what the prose can and cannot claim about it, and how the archive-as-mechanism shapes Vol 2's voice and structural devices. Read this before drafting any Vol 2 chapter that touches the architecture in operation.
 
@@ -19,11 +19,11 @@ related:
 
 ---
 
-## 1. The premise — Sunfish is the boat's nervous system
+## 1. The premise - Sunfish is the boat's nervous system
 
 In a traditional submarine, communication and capture are bolted onto the boat: 1MC wire intercom (ephemeral), per-console sensor logging (local), formal-log narratives written from memory by the watch officer. The official record is whatever the captain remembers and chooses to write down. Most of what happened on the boat is gone the moment it stops happening.
 
-In the Nansen, **the boat is the archive.** The Anchor application is not "an app the crew uses for some things." It is the operational substrate. Every voice exchange (per opt-in), every sensor reading, every video frame from compartment cameras (per consent), every Anchor-routed message between crew, every command-and-response between control plane and instrument — all routed through Anchor, captured locally on each crew node, hash-chained, signed at capture, KEK-encrypted where appropriate, replicated to Bridge on surface windows.
+In the Nansen, **the boat is the archive.** The Anchor application is not "an app the crew uses for some things." It is the operational substrate. Every voice exchange (per opt-in), every sensor reading, every video frame from compartment cameras (per consent), every Anchor-routed message between crew, every command-and-response between control plane and instrument - all routed through Anchor, captured locally on each crew node, hash-chained, signed at capture, KEK-encrypted where appropriate, replicated to Bridge on surface windows.
 
 This is the architectural altitude shift Vol 2 is built on. The book is about **what it means to operate inside an architecture that records itself completely.**
 
@@ -59,19 +59,19 @@ The two registers' co-existence is what makes the differential device work: the 
 
 ## 3. The chapter-level patterns
 
-Three patterns are canonical for log-opener / log-inset placement. **Used only where they earn their place** — never as formula.
+Three patterns are canonical for log-opener / log-inset placement. **Used only where they earn their place** - never as formula.
 
-**Pattern A — formal-log opener only.** Chapter opens with the formal log; scene plays; chapter closes without further log artifact. Cheapest. Use for chapters where the orientation is the only structural lift the device adds.
+**Pattern A - formal-log opener only.** Chapter opens with the formal log; scene plays; chapter closes without further log artifact. Cheapest. Use for chapters where the orientation is the only structural lift the device adds.
 
-**Pattern B — formal-log frame.** Chapter opens with formal log A (pre-event); chapter closes with formal log B (post-event). The two logs differ in tone — log B knows what log A didn't. The differential is the chapter's quiet emotional arc. Use for routine-tempo chapters where the lived experience changes Anna's procedural assessment.
+**Pattern B - formal-log frame.** Chapter opens with formal log A (pre-event); chapter closes with formal log B (post-event). The two logs differ in tone - log B knows what log A didn't. The differential is the chapter's quiet emotional arc. Use for routine-tempo chapters where the lived experience changes Anna's procedural assessment.
 
-**Pattern C — formal log + diary inset.** Chapter opens with the formal log (clean, professional). Mid-chapter or end-chapter, a single italic diary entry surfaces. The formal log is what Anna recorded; the diary is what she didn't put on the record. The differential is the chapter's central truth. Use for the heaviest chapters — climactic moments, partition-realization beats, leak event, cumulative reveals.
+**Pattern C - formal log + diary inset.** Chapter opens with the formal log (clean, professional). Mid-chapter or end-chapter, a single italic diary entry surfaces. The formal log is what Anna recorded; the diary is what she didn't put on the record. The differential is the chapter's central truth. Use for the heaviest chapters - climactic moments, partition-realization beats, leak event, cumulative reveals.
 
 Per-chapter pattern assignments live in `vol-2/CHAPTER-OUTLINE.md`.
 
 ## 4. The 2026-grounded local-LLM stack
 
-Anchor's capabilities must remain **plausibly assemblable today on local-first hardware** — what an actual practitioner in 2026 could build with shipping or near-shipping components. Nothing speculative; nothing requiring "in five years." This is a hard register constraint.
+Anchor's capabilities must remain **plausibly assemblable today on local-first hardware** - what an actual practitioner in 2026 could build with shipping or near-shipping components. Nothing speculative; nothing requiring "in five years." This is a hard register constraint.
 
 ### 4.1 Hardware on the boat
 
@@ -87,12 +87,12 @@ All real today (2026); all documented elsewhere as shipping or imminent:
 
 | Capability | Stack |
 |---|---|
-| Voice transcription | faster-whisper / Whisper.cpp on Apple Silicon or NVIDIA — real-time on M-series, near-real-time on RTX 4070-class |
+| Voice transcription | faster-whisper / Whisper.cpp on Apple Silicon or NVIDIA - real-time on M-series, near-real-time on RTX 4070-class |
 | Translation | NLLB-200 for less-common pairs; local-LLM (Llama 3.x, Qwen 2.5) for common pairs |
 | Document indexing | BGE-M3 / Mxbai-embed-large embeddings; LanceDB or FAISS vector store |
 | RAG generation | Ollama / LM Studio / vLLM hosting; local-LLM 7B-70B class depending on hardware |
 | Wake-word + voice command | Porcupine, OpenWakeWord, Vosk |
-| TTS for accessibility | Kokoro, Piper, or XTTS — same family as the project's audiobook pipeline |
+| TTS for accessibility | Kokoro, Piper, or XTTS - same family as the project's audiobook pipeline |
 | Sensor anomaly detection | PyOD-style classical methods + small specialized models per sensor type |
 | Compartment camera tagging | YOLO / CLIP for selective tagging, on-device, only when activated by consent |
 | Agentic multi-step actions | LangGraph-style local frameworks bound to Sunfish CRDT store + KEK/DEK access controls |
@@ -100,7 +100,7 @@ All real today (2026); all documented elsewhere as shipping or imminent:
 
 ### 4.3 What Anchor explicitly does NOT do
 
-The prose must respect these boundaries — drift into any of them breaks the 2026-grounded register:
+The prose must respect these boundaries - drift into any of them breaks the 2026-grounded register:
 
 - **No continuous ambient interpretation** of arbitrary background conversation. Capture is opt-in per stream; speakers know when their voice is being transcribed; conversations not flagged for capture are ephemeral.
 - **No real-time synthesis of past events as video.** No holodeck-equivalent. Replay is verbatim playback only.
@@ -122,7 +122,7 @@ This is the protagonist position the book takes against Helvetia/TrustMesh's sel
 
 ## 6. Graceful degradation under hardware loss
 
-The compute hub is a single point of capability concentration. Sunfish's response to its loss is *graceful degradation* — capabilities scale down by tier rather than failing whole. This is a load-bearing local-first property the leak event in Ch 14 demonstrates operationally.
+The compute hub is a single point of capability concentration. Sunfish's response to its loss is *graceful degradation* - capabilities scale down by tier rather than failing whole. This is a load-bearing local-first property the leak event in Ch 14 demonstrates operationally.
 
 ### 6.1 What degrades when the hub is lost
 
@@ -130,7 +130,7 @@ The compute hub is a single point of capability concentration. Sunfish's respons
 - Real-time translation across all crew languages simultaneously (less-common pairs needed the 70B model)
 - Multi-step agentic compositions (slower; smaller models can't reliably chain tool use across many steps)
 - Compartment-camera video tagging at any depth (compute-bound)
-- Sensor anomaly detection at full coverage — some streams downgrade from continuous to sampled, or fall to threshold-only without LLM-assist
+- Sensor anomaly detection at full coverage - some streams downgrade from continuous to sampled, or fall to threshold-only without LLM-assist
 - Voice-cloning / TTS at the Bridge-equivalent quality
 
 ### 6.2 What survives on laptop-class
@@ -142,7 +142,7 @@ The compute hub is a single point of capability concentration. Sunfish's respons
 - Hash-chain integrity, KEK/DEK access control, signed audit log
 - Anomaly detection on critical sensor streams (sampling reduced from continuous)
 - Each crew member's local Anchor agent for personal queries
-- Forensic substrate (see § 8) — narrow targeted analysis is feasible on laptop-class even when broad indexing is not
+- Forensic substrate (see § 8) - narrow targeted analysis is feasible on laptop-class even when broad indexing is not
 
 ### 6.3 How the prose registers degradation
 
@@ -150,22 +150,22 @@ Anna's narration registers reduced capability without naming components. Not *th
 
 The crew adapts:
 - Multilingual conversation falls back to whoever speaks the relevant common language; some exchanges that used to be native-language fluid become halting English (or Spanish via Diego, Russian via Anna, depending on the pair)
-- Joel's schema-related work gets done with laptop-class only — slower, more careful, more verification by hand
+- Joel's schema-related work gets done with laptop-class only - slower, more careful, more verification by hand
 - Wanjiru's surface-window sync-triage happens with diminished LLM assistance; she does more of the prioritization manually
 - Anna's queries against the archive accumulate as a written list of *things to ask when we surface*
 
-## 7. The OSS-funding-asymmetry — the architecture's known weakness
+## 7. The OSS-funding-asymmetry - the architecture's known weakness
 
 This is the architectural-philosophical contest's hardest honest edge: **OSS architectures cannot vertically integrate.** They can't afford to design custom silicon; they can't afford to build their own sensor heads; they can't afford to maintain their own firmware fork. They source off-the-shelf, integrate, ship.
 
-The vendors they depend on are exactly the entities that well-funded centralizing actors can capture — through co-development partnerships, acquisitions, board-level influence, or supply-chain investments. **Helvetia Trust SA's strategy is to operate at this layer.** Their public-facing positions are about identity and federation; their structural reach is via vendors whose components OSS missions integrate by necessity.
+The vendors they depend on are exactly the entities that well-funded centralizing actors can capture - through co-development partnerships, acquisitions, board-level influence, or supply-chain investments. **Helvetia Trust SA's strategy is to operate at this layer.** Their public-facing positions are about identity and federation; their structural reach is via vendors whose components OSS missions integrate by necessity.
 
-Sunfish's response to this constraint is mature security thinking — defense in depth, not defense in promise:
+Sunfish's response to this constraint is mature security thinking - defense in depth, not defense in promise:
 
 - The architecture does NOT claim to prevent supply-chain compromise of off-the-shelf components.
 - The architecture DOES claim to detect compromise after the fact via the forensic substrate (§ 8).
-- Centralized architectures (TrustMesh) cannot detect at all — they don't preserve the full pre-failure timestream of every edge device; their selective-sync model discards the data that would surface tampering.
-- The institutional response — vendor-attestation requirements, firmware-transparency rules, supply-chain audit standards small projects can comply with at scale — is the standards-body work Wanjiru takes up after the mission.
+- Centralized architectures (TrustMesh) cannot detect at all - they don't preserve the full pre-failure timestream of every edge device; their selective-sync model discards the data that would surface tampering.
+- The institutional response - vendor-attestation requirements, firmware-transparency rules, supply-chain audit standards small projects can comply with at scale - is the standards-body work Wanjiru takes up after the mission.
 
 This is the **structural reason the Forsaken keep returning** across the series. Capital concentrates. OSS doesn't have equivalent capital. Vendor-capture is always available as an attack surface. The architecture's response is not to claim it has solved the problem; it is to claim *we detect what they cannot detect*.
 
@@ -173,14 +173,14 @@ This is the **structural reason the Forsaken keep returning** across the series.
 
 The Anchor archive is more than preservation. It is an **investigative tool**.
 
-Each capture event — sensor reading, voice transcription, video frame, configuration change, command-response, firmware update — is hash-chained, signed at capture, replicated across crew nodes, KEK-encrypted where appropriate. The archive's properties:
+Each capture event - sensor reading, voice transcription, video frame, configuration change, command-response, firmware update - is hash-chained, signed at capture, replicated across crew nodes, KEK-encrypted where appropriate. The archive's properties:
 
 - **Tamper-evident.** Modifying any historical event breaks the hash chain and is detectable.
 - **Replicated.** The boat-internal replication keeps the archive surviving single-node failures (including the leak event's compute-hub loss).
 - **Queryable across the full timeline.** Any past state can be reconstructed; any pre-failure pattern can be analyzed.
 - **Cryptographically attributable.** Signed-at-capture events tie data to the specific node and authority that produced them. Forging an event requires forging the signing key.
 
-When Wanjiru and Joel investigate the sensor head's pre-failure behavior in Ch 17 (Transit North), they have the **full firmware-update history, every configuration change, every command-response between the sensor head and control plane, and the full sensor reading stream — all hash-chained, signed at capture, undeniable.**
+When Wanjiru and Joel investigate the sensor head's pre-failure behavior in Ch 17 (Transit North), they have the **full firmware-update history, every configuration change, every command-response between the sensor head and control plane, and the full sensor reading stream - all hash-chained, signed at capture, undeniable.**
 
 TrustMesh missions cannot do this. Their selective-sync, corporate-retention model doesn't preserve the full pre-failure timestream of every edge device. Stefan's mission, if compromised in a similar way, **would not even know.**
 
@@ -202,19 +202,19 @@ Recommended forms (rotate across chapters; never identical twice):
 ```
 Crew log, 2026-04-02T14:42Z. Yusupova, Mission Director-designate. RV Nansen, MERIDIAN-7.
 
-[body — 80-200 words per crew-log-style-entry skill]
+[body - 80-200 words per crew-log-style-entry skill]
 
-— Filed to selection-archive; hash f3a4...90c2
+- Filed to selection-archive; hash f3a4...90c2
 ```
 
 Variants:
-- `Mission log, Mission Day 14, 0617 local.` — mission-day form
-- `Selection file entry, dated 2026-04-02.` — pre-departure record
-- `Daily duty log — Reyes, J., Principal Architect — Mission Day 30.` — engineer's log
-- `Recovered log — the Nansen archive; Anna Yusupova, Mission Director.` — retrospective recovery (used rarely)
-- `Staff history annotation, drafted 2026-12-XX.` — Anna's staff-history-era annotations on prior records
+- `Mission log, Mission Day 14, 0617 local.` - mission-day form
+- `Selection file entry, dated 2026-04-02.` - pre-departure record
+- `Daily duty log - Reyes, J., Principal Architect - Mission Day 30.` - engineer's log
+- `Recovered log - the Nansen archive; Anna Yusupova, Mission Director.` - retrospective recovery (used rarely)
+- `Staff history annotation, drafted 2026-12-XX.` - Anna's staff-history-era annotations on prior records
 
-The closing hash signature is **optional** — appears once or twice across Book 1 to install the diegetic-artifact convention; dropped on later chapters once the reader has the pattern. Include for chapters that turn on the artifact's authoritativeness (Ch 14 operational damage report; Ch 17 forensic-finding filing; Ch 18 regulatory filing).
+The closing hash signature is **optional** - appears once or twice across Book 1 to install the diegetic-artifact convention; dropped on later chapters once the reader has the pattern. Include for chapters that turn on the artifact's authoritativeness (Ch 14 operational damage report; Ch 17 forensic-finding filing; Ch 18 regulatory filing).
 
 ### 9.2 Diary header
 
@@ -223,13 +223,13 @@ Recommended forms (italicized in prose; appears within scene rather than as sect
 ```
 Personal file, 2026-10-31. Encrypted under author's key. Access: self only.
 
-[body in italics or plain — 80-200 words]
+[body in italics or plain - 80-200 words]
 ```
 
-Variants — the access-control framing varies slightly per author:
-- `Personal file, encrypted under author's key.` — Anna's default
-- `Engineer's notes, sealed.` — Joel's engineering-grounded variant
-- `Private.` — minimal; for short diary entries
+Variants - the access-control framing varies slightly per author:
+- `Personal file, encrypted under author's key.` - Anna's default
+- `Engineer's notes, sealed.` - Joel's engineering-grounded variant
+- `Private.` - minimal; for short diary entries
 
 Or fully prose-naturalized (no metadata header):
 - `I am writing this in my own file, where it will not be read.`

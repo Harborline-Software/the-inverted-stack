@@ -1,4 +1,4 @@
-# Sunfish Submarine Security & Key Management — Canon
+# Sunfish Submarine Security & Key Management - Canon
 
 **Date filed:** 2026-05-07
 **Author:** PAO (filing CO directive 2026-05-07)
@@ -17,13 +17,13 @@ When the chapter-drafter, voice-pass, or any prose-revision agent is working on 
 - What ceremonies are required for high-impact ops (§4 Access Control + Two-Person Rule)
 - How the boat operates during partition (§5 Local-First Operation)
 - What happens at surface windows (§6 Satellite Sync)
-- **Distress signaling and false codes (§7 — narrative-restraint applies; see below)**
+- **Distress signaling and false codes (§7 - narrative-restraint applies; see below)**
 - Panic levels (§8)
 - Audit and monitoring (§9)
 
 **§7 narrative-restraint advisory:** distress signaling, false codes, and the dedicated distress-only key (§7) are HOT canon for future-volume plot. They are *operationally present* in Vol 2 (the audit log signs distress fields when they fire; Wanjiru would know to look for them) but **must remain narratively un-named in Vol 2 prose**. Surface them only in Vol 3 or later. Reasons: (a) they are load-bearing for a future plot device that deserves to land fresh; (b) Anna's compressed-deliberate register doesn't naturally name covert-protocol details; (c) Wanjiru's forensic recognition (Ch 15) is more powerful when the reader doesn't yet know what she's recognizing.
 
-If a chapter-drafter is tempted to name the distress mechanism explicitly (e.g., "the false-code field in the audit log"), the right move is to imply rather than state — Wanjiru sees something in the log, registers it, and decides her next move; the reader feels the weight without knowing the mechanism. This restraint is not optional.
+If a chapter-drafter is tempted to name the distress mechanism explicitly (e.g., "the false-code field in the audit log"), the right move is to imply rather than state - Wanjiru sees something in the log, registers it, and decides her next move; the reader feels the weight without knowing the mechanism. This restraint is not optional.
 
 ---
 
@@ -34,7 +34,7 @@ Three categories of cryptographic identity exist on the boat. They are not inter
 ### Crew identities
 
 - Every crew member has a unique cryptographic identity: certificate + key pair, bound to their role (Mission Director, Principal Architect, Lead Instrumentation Engineer, Relay Operations, Medical Officer, Operations Lead, etc.).
-- Private keys reside on **controlled hardware** — smartcards, secure elements, hardware tokens.
+- Private keys reside on **controlled hardware** - smartcards, secure elements, hardware tokens.
 - A second factor (PIN or passphrase) protects each crew identity.
 - Crew identities are bound to the role at issuance; a Mission Director's identity does NOT grant the Lead Instrumentation Engineer's permissions.
 
@@ -65,7 +65,7 @@ Three categories of cryptographic identity exist on the boat. They are not inter
 
 - A **root CA** lives offline on shore. The root CA never travels. The root CA signs intermediate CAs (one or more per fleet or per command).
 - Submarines do NOT trust the root directly. They trust intermediate CAs.
-- Each intermediate CA covers a fleet or a command — multiple submarines share an intermediate.
+- Each intermediate CA covers a fleet or a command - multiple submarines share an intermediate.
 
 ### Per-vessel and per-service keys
 
@@ -102,7 +102,7 @@ Three categories of cryptographic identity exist on the boat. They are not inter
 
 - Platform and service private keys live in **tamper-responsive hardware** wherever possible.
 - Crew private keys live ONLY on personal tokens (smartcards / secure elements). Sunfish uses them via standard interfaces (PKCS#11, smartcard APIs); Sunfish does NOT read raw key material.
-- A laptop is never a key store. (Joel's bunk-laptop in Ch 1, Ch 7 holds his *personal* keys generated against his own root, not consortium-chain keys — explicitly outside this hierarchy.)
+- A laptop is never a key store. (Joel's bunk-laptop in Ch 1, Ch 7 holds his *personal* keys generated against his own root, not consortium-chain keys - explicitly outside this hierarchy.)
 
 ---
 
@@ -135,9 +135,9 @@ Three categories of cryptographic identity exist on the boat. They are not inter
 
 **In Vol 2 prose, TPI ceremonies the reader sees:**
 
-- **Ch 1 Wanjiru handoff** — Wanjiru as key-bearer; Anna as second authenticator signing in the watch log. The signature attestation + hash-chain + replication makes the dual-control durable.
-- **Ch 13 schema migration** — Anna files a refusal-of-record then a yes-with-conditions. Joel executes; Anna supervises. *Anna's hands do not touch the keyboard during the migration window.* This IS a TPI ceremony; the conditions she filed are the dual-control protocol.
-- **Ch 14 cascade (leak event)** — depending on what panic level is reached (§8), TPI may apply.
+- **Ch 1 Wanjiru handoff** - Wanjiru as key-bearer; Anna as second authenticator signing in the watch log. The signature attestation + hash-chain + replication makes the dual-control durable.
+- **Ch 13 schema migration** - Anna files a refusal-of-record then a yes-with-conditions. Joel executes; Anna supervises. *Anna's hands do not touch the keyboard during the migration window.* This IS a TPI ceremony; the conditions she filed are the dual-control protocol.
+- **Ch 14 cascade (leak event)** - depending on what panic level is reached (§8), TPI may apply.
 
 ---
 
@@ -152,7 +152,7 @@ Three categories of cryptographic identity exist on the boat. They are not inter
 ### Short-lived tokens from long-lived keys
 
 - Sunfish issues **short-lived tokens** (e.g., JWTs, session tokens) derived from long-lived service and crew credentials.
-- Token validation is entirely local — the boat does not need to call shore to know whether a token is valid.
+- Token validation is entirely local - the boat does not need to call shore to know whether a token is valid.
 - This is what makes the architecture's "fully itself under the ice" property real: the architecture's verification machinery doesn't degrade when the partition closes.
 
 ---
@@ -184,17 +184,17 @@ Three categories of cryptographic identity exist on the boat. They are not inter
 - All data encrypted with modern, approved algorithms + strong key sizes.
 - All commands and updates from shore are **signed**; Sunfish applies them only if signatures + versioning checks pass.
 
-**In Vol 2 prose:** Ch 6 first surface and Ch 11 second surface are the canonical satellite-sync scenes. Wanjiru's audit-log validation of the consortium-side counter-signatures (Ch 6 line 17 — *"the audit log accepted the pre-departure-to-Day-20 batch with no reordering and no rejected counter-signatures. Provenance through the partition transition is intact"*) is exactly the integrity property §6 specifies.
+**In Vol 2 prose:** Ch 6 first surface and Ch 11 second surface are the canonical satellite-sync scenes. Wanjiru's audit-log validation of the consortium-side counter-signatures (Ch 6 line 17 - *"the audit log accepted the pre-departure-to-Day-20 batch with no reordering and no rejected counter-signatures. Provenance through the partition transition is intact"*) is exactly the integrity property §6 specifies.
 
 ---
 
-## §7 Distress Signaling and False Codes — NARRATIVE RESTRAINT
+## §7 Distress Signaling and False Codes - NARRATIVE RESTRAINT
 
 ⚠ **§7 is HOT canon for future-volume plot. It is operationally present in Vol 2 but must remain narratively un-named in Vol 2 prose.** ⚠
 
 ### What §7 actually is
 
-- **Explicit distress flags:** application-level encrypted fields in Sunfish messages may carry distress status — *under duress*, *compromised*, *restricted communication only*. Visible only to shore systems that can decrypt + interpret Sunfish payloads.
+- **Explicit distress flags:** application-level encrypted fields in Sunfish messages may carry distress status - *under duress*, *compromised*, *restricted communication only*. Visible only to shore systems that can decrypt + interpret Sunfish payloads.
 - **Covert false-code signaling:** specific combinations of otherwise-normal fields and message types are interpreted by shore as distress / compromise signals but appear routine to an observer. Fully authenticated; indistinguishable from normal traffic without knowledge of the agreed semantics.
 - **Distress-only keys:** a dedicated, limited-scope key signs distress indicators / false codes, allowing shore to distinguish them from ordinary traffic. Access to this key is controlled separately and may require TPI.
 
@@ -206,8 +206,8 @@ Three categories of cryptographic identity exist on the boat. They are not inter
 
 ### What chapter-drafters can do (operationally implicit)
 
-- Wanjiru *can* check the audit log, register that something is consistent / inconsistent, decide her next move — without naming the field.
-- The audit log *can* sign and replicate distress-adjacent metadata — without the prose explaining what the metadata is.
+- Wanjiru *can* check the audit log, register that something is consistent / inconsistent, decide her next move - without naming the field.
+- The audit log *can* sign and replicate distress-adjacent metadata - without the prose explaining what the metadata is.
 - A character *can* feel the weight of a procedure without explaining the procedure.
 
 ### What chapter-drafters cannot do in Vol 2
@@ -234,7 +234,7 @@ Panic actions are **layered**:
 
 - **Level 1:** Disable / revoke external communications. Prevents impersonation to shore. The boat keeps operating internally; shore just stops trusting the boat-side until re-provisioning.
 - **Level 2:** Restrict local access to minimal safe operation. Most service identities revoked; only safety-critical paths remain.
-- **Level 3:** **Full cryptographic wipe.** All keys, all credentials, all encrypted data — gone. This is the irreversible step.
+- **Level 3:** **Full cryptographic wipe.** All keys, all credentials, all encrypted data - gone. This is the irreversible step.
 
 Panic levels are ordered by severity. Higher levels are not skipped *up*; the boat moves through L1 → L2 → L3 only as the situation escalates. TPI applies to Level 2 and Level 3 transitions; Level 1 may be authorized by the Mission Director alone in operational urgency.
 
@@ -277,20 +277,20 @@ Shore-based monitoring systems consume these for cross-boat correlation.
   - Log completeness (no gaps in the audit log)
   - Adherence to procedures (TPI was followed where required)
 
-**In Vol 2 prose:** the audit log is a recurring narrative artifact. Wanjiru manages its operational integrity. Anna files into it (Ch 1 watch log signature; Ch 13 refusal-of-record + yes-with-conditions; Ch 6 / Ch 11 surface-window filings). The hash-chain integrity property is what makes Wanjiru's forensic recognition (Ch 15) credible — she can prove what happened, in what order, without ambiguity.
+**In Vol 2 prose:** the audit log is a recurring narrative artifact. Wanjiru manages its operational integrity. Anna files into it (Ch 1 watch log signature; Ch 13 refusal-of-record + yes-with-conditions; Ch 6 / Ch 11 surface-window filings). The hash-chain integrity property is what makes Wanjiru's forensic recognition (Ch 15) credible - she can prove what happened, in what order, without ambiguity.
 
 ---
 
 ## Cross-references
 
-- **Joel-teaching-register canon** (`.pao-inbox/_creative/joel-teaching-register-canon.md`) — Joel can teach §1 (identity model), §2 (key hierarchy), §4 (TPI / MFA) in Ch 7's pilot. The pilot brief is updated to point at this canon for natural pedagogical content.
-- **Wanjiru character sheet** (`.pao-inbox/_creative/character-sheets/wanjiru-kamau-security-policy.md`) — Wanjiru is the operational owner of §1 (identity issuance), §2 (revocation list management), §6 (satellite sync), §7 (distress recognition; restraint applies), §8 (panic authority alongside Mission Director), §9 (audit-log review and shore export).
+- **Joel-teaching-register canon** (`.pao-inbox/_creative/joel-teaching-register-canon.md`) - Joel can teach §1 (identity model), §2 (key hierarchy), §4 (TPI / MFA) in Ch 7's pilot. The pilot brief is updated to point at this canon for natural pedagogical content.
+- **Wanjiru character sheet** (`.pao-inbox/_creative/character-sheets/wanjiru-kamau-security-policy.md`) - Wanjiru is the operational owner of §1 (identity issuance), §2 (revocation list management), §6 (satellite sync), §7 (distress recognition; restraint applies), §8 (panic authority alongside Mission Director), §9 (audit-log review and shore export).
 - **Workshop entries** that reference this canon:
-  - `keys.md` — §1 (crew + platform + service identities)
-  - `key-envelope.md` — §3 (storage), §1 (service identities)
-  - `audit-log.md` — §9 (monitoring, logging, audit)
-  - `custody.md` — §3 (provisioning + media transfer protocol), §9 (audit)
-  - `consortium-chain.md` — §2 (key hierarchy), §6 (mutual authentication)
+  - `keys.md` - §1 (crew + platform + service identities)
+  - `key-envelope.md` - §3 (storage), §1 (service identities)
+  - `audit-log.md` - §9 (monitoring, logging, audit)
+  - `custody.md` - §3 (provisioning + media transfer protocol), §9 (audit)
+  - `consortium-chain.md` - §2 (key hierarchy), §6 (mutual authentication)
 
 ---
 

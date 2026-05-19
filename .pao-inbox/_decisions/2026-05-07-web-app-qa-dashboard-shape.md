@@ -1,4 +1,4 @@
-# Web App QA Dashboard — Architectural Shape
+# Web App QA Dashboard - Architectural Shape
 
 **Date:** 2026-05-07
 **Author:** PAO (consolidating CO directive 2026-05-07T14-27Z + follow-up brainstorm)
@@ -12,9 +12,9 @@
 
 CO has built a web reader at `localhost:3080` covering: chapter reading, sticky audio player with whispersync, multi-track support, editorial-review toolbar that submits comments to `.pao-inbox/`, and a Chatterbox render queue UI with active-log-tail.
 
-CO has now reframed the app's purpose: **not just a reader — a QA tool for book artifacts**, including operational dashboard surfaces and a pre-publication preview pane. The reader UX is one of three axes, not the whole app.
+CO has now reframed the app's purpose: **not just a reader - a QA tool for book artifacts**, including operational dashboard surfaces and a pre-publication preview pane. The reader UX is one of three axes, not the whole app.
 
-This decision document consolidates the three QA axes — **operational, per-chapter, pre-publication** — into one coherent design so the engineering session has a single planning artifact.
+This decision document consolidates the three QA axes - **operational, per-chapter, pre-publication** - into one coherent design so the engineering session has a single planning artifact.
 
 ---
 
@@ -24,7 +24,7 @@ A unified web app where CO can:
 
 1. **Read and listen** to any chapter (current capability).
 2. **See the artifact-generation pipeline's health and progress** at a glance.
-3. **Find broken artifacts** — chapters that fail QA — without running ad-hoc CLI checks.
+3. **Find broken artifacts** - chapters that fail QA - without running ad-hoc CLI checks.
 4. **Preview final pre-published artifacts** (EPUB, M4B, per-format submission packages) before sending to Audible / Kindle / Apple Books / Kobo / Leanpub.
 5. **Route any QA finding** to PAO / Yeoman as a structured beacon, with click-to-fix for common cases.
 
@@ -34,13 +34,13 @@ Success: CO can decide *"this chapter is publish-ready"* or *"this chapter needs
 
 ## Three QA axes
 
-### Axis 1 — Operational dashboard (live pipeline visibility)
+### Axis 1 - Operational dashboard (live pipeline visibility)
 
 **Purpose:** When something in the rendering pipeline is broken, CO sees red within seconds. Today, the chunk-90 wedge took several hours to detect.
 
 **Surfaces:**
-- Server-health dot (top-right of every page) — green / yellow / red based on gateway reachability + last-success age.
-- Pipeline status strip (top of every page) — queue depth, active render's chunk progress, ETA.
+- Server-health dot (top-right of every page) - green / yellow / red based on gateway reachability + last-success age.
+- Pipeline status strip (top of every page) - queue depth, active render's chunk progress, ETA.
 - Active-log-tail panel (already exists; extends).
 - Render history with retry / poison markers.
 
@@ -52,7 +52,7 @@ Success: CO can decide *"this chapter is publish-ready"* or *"this chapter needs
 - Cache hit rate (sub-second chunks vs fresh-inference chunks)
 - Retry count per chunk; 4+ retries flags a yellow marker; 8/8 fail flags red
 
-### Axis 2 — Per-chapter QA card (artifact health)
+### Axis 2 - Per-chapter QA card (artifact health)
 
 **Purpose:** Every chapter has multiple artifacts; each can be broken independently. CO sees per-chapter status in the sidebar without opening each one.
 
@@ -61,13 +61,13 @@ Success: CO can decide *"this chapter is publish-ready"* or *"this chapter needs
 - Click chapter → detail view shows full QA breakdown.
 
 **Per-chapter chips:**
-- **Prose** — word-count vs target (±10%), ICM stage, open editorial reviews count.
-- **Voice / style** — voice-pass status (Pass 1 / Pass 2 / final), style-enforcer pass, anti-AI-tells flag count.
-- **Audio render** — chunks N/M complete, retry markers, poison flags.
-- **Audio quality** — loudness (LUFS, true peak vs spec), duration vs (words ÷ 150 WPM) sanity.
-- **Audio glossary** — substitutions applied count vs expected; flags missing-coverage chapters.
-- **Alignment** — staleness (mtime drift), word-count drift between MD and alignment JSON.
-- **Cross-references** — broken citations, missing Appendix entries.
+- **Prose** - word-count vs target (±10%), ICM stage, open editorial reviews count.
+- **Voice / style** - voice-pass status (Pass 1 / Pass 2 / final), style-enforcer pass, anti-AI-tells flag count.
+- **Audio render** - chunks N/M complete, retry markers, poison flags.
+- **Audio quality** - loudness (LUFS, true peak vs spec), duration vs (words ÷ 150 WPM) sanity.
+- **Audio glossary** - substitutions applied count vs expected; flags missing-coverage chapters.
+- **Alignment** - staleness (mtime drift), word-count drift between MD and alignment JSON.
+- **Cross-references** - broken citations, missing Appendix entries.
 
 **Color semantics:**
 - Green: passes the gate
@@ -75,9 +75,9 @@ Success: CO can decide *"this chapter is publish-ready"* or *"this chapter needs
 - Red: fails the gate (action required)
 - Gray: not yet rendered / not yet measured
 
-### Axis 3 — Pre-publication preview (per-format submission readiness)
+### Axis 3 - Pre-publication preview (per-format submission readiness)
 
-**Purpose:** Before submitting to an external platform (Audible, KDP, Apple Books), CO needs to verify the final artifact in the format that platform will receive — not the source markdown.
+**Purpose:** Before submitting to an external platform (Audible, KDP, Apple Books), CO needs to verify the final artifact in the format that platform will receive - not the source markdown.
 
 **Surfaces (new routes):**
 
@@ -91,12 +91,12 @@ Success: CO can decide *"this chapter is publish-ready"* or *"this chapter needs
 
 | Target | Format | Spec source |
 |---|---|---|
-| **Apple Books — EPUB** | EPUB 3 | `build/specs/apple-books-epub.yaml` (file-size limit 2 GB; SVG support; embedded-font policy; cover dimensions; iTunes Producer-compatible metadata) |
-| **Apple Books — Audiobook** | Per-chapter MP3 + manifest | `build/specs/apple-books-audiobook.yaml` (per-chapter MP3 with chapter-marker metadata, cover art ≥1400×1400; total runtime; total file size; iTunes Producer-compatible metadata) |
+| **Apple Books - EPUB** | EPUB 3 | `build/specs/apple-books-epub.yaml` (file-size limit 2 GB; SVG support; embedded-font policy; cover dimensions; iTunes Producer-compatible metadata) |
+| **Apple Books - Audiobook** | Per-chapter MP3 + manifest | `build/specs/apple-books-audiobook.yaml` (per-chapter MP3 with chapter-marker metadata, cover art ≥1400×1400; total runtime; total file size; iTunes Producer-compatible metadata) |
 
-**Future targets (deferred — flagged here so the spec system remains generalizable):** Kindle (KDP), Kobo, Leanpub, Audible (ACX). These can plug in later by adding new `build/specs/<target>.yaml` files; the dashboard's target-switcher accommodates new targets without architectural change.
+**Future targets (deferred - flagged here so the spec system remains generalizable):** Kindle (KDP), Kobo, Leanpub, Audible (ACX). These can plug in later by adding new `build/specs/<target>.yaml` files; the dashboard's target-switcher accommodates new targets without architectural change.
 
-**No switcher in v1** — single active target = no UI complexity. Switcher returns when a second target is approved.
+**No switcher in v1** - single active target = no UI complexity. Switcher returns when a second target is approved.
 
 ---
 
@@ -108,7 +108,7 @@ The web app is mostly view-binding. The harder work is on the writer side, emitt
 
 **New / extended files:**
 
-1. **`build/audiobook.py` — JSONL events stream**
+1. **`build/audiobook.py` - JSONL events stream**
    Replace ad-hoc log-line parsing with structured events written alongside the MP3:
    ```
    build/output/audiobook/_logs/<chapter>-<ts>.events.jsonl
@@ -122,7 +122,7 @@ The web app is mostly view-binding. The harder work is on the writer side, emitt
    ```
    Web app reads JSONL line-by-line via 1s file-watch; never grep.
 
-2. **`build/audiobook.py` — per-chapter metrics file**
+2. **`build/audiobook.py` - per-chapter metrics file**
    Emitted at chapter render completion:
    ```
    build/output/audiobook/<vol>/<chapter>.metrics.json
@@ -144,7 +144,7 @@ The web app is mostly view-binding. The harder work is on the writer side, emitt
    }
    ```
 
-3. **`build/verify_acx.py` — ACX submission scorecard (extends `verify_loudness.py`)**
+3. **`build/verify_acx.py` - ACX submission scorecard (extends `verify_loudness.py`)**
    Runs per-chapter ACX-spec checks, writes:
    ```
    build/output/audiobook/<vol>/<chapter>.acx.json
@@ -161,7 +161,7 @@ The web app is mostly view-binding. The harder work is on the writer side, emitt
    }
    ```
 
-4. **`build/m4b.py` — M4B with chapter markers + cover + metadata**
+4. **`build/m4b.py` - M4B with chapter markers + cover + metadata**
    Embed:
    - Chapter markers (one per chapter, with title)
    - Cover art (2400×2400 for ACX)
@@ -172,17 +172,17 @@ The web app is mostly view-binding. The harder work is on the writer side, emitt
    build/output/audiobook/the-inverted-stack.m4b.metrics.json
    ```
 
-5. **`build/build_epub.py` — EPUB build metrics + per-target spec validation**
+5. **`build/build_epub.py` - EPUB build metrics + per-target spec validation**
    Run epubcheck, validate against the selected target-format spec, emit:
    ```
    build/output/the-inverted-stack.epub.metrics.json
    build/output/the-inverted-stack.epub.<target>.scorecard.json
    ```
 
-6. **`build/specs/<target>.yaml` — per-target spec definitions**
+6. **`build/specs/<target>.yaml` - per-target spec definitions**
    Declarative, machine-readable, version-controlled. Web app reads these to render per-target checklists.
 
-7. **`build/qa.py` — per-chapter QA aggregator (NEW)**
+7. **`build/qa.py` - per-chapter QA aggregator (NEW)**
    Reads all the per-chapter metrics + alignment + ICM + word-count + substitutions and writes a single rollup:
    ```
    build/output/qa/<chapter>.qa.json
@@ -228,19 +228,19 @@ VRAM usage is bonus context for an ops-curious viewer.
 
 ### Worker reset endpoint (added 2026-05-07 from API spec discovery)
 
-`POST /api/v1/audio/workers/reset` — replaces manually restarting Chatterbox on the Windows GPU box when the inference worker wedges (the chunk-90 cascade pattern). The dashboard exposes a **"Reset workers"** button that hits this endpoint; the wedge-recovery cycle drops from ~5-10 min of context-switching to a single click. This is the cleanest action affordance the QA tool can offer — most operational, highest payoff per UI element.
+`POST /api/v1/audio/workers/reset` - replaces manually restarting Chatterbox on the Windows GPU box when the inference worker wedges (the chunk-90 cascade pattern). The dashboard exposes a **"Reset workers"** button that hits this endpoint; the wedge-recovery cycle drops from ~5-10 min of context-switching to a single click. This is the cleanest action affordance the QA tool can offer - most operational, highest payoff per UI element.
 
 ### Web-side (routes)
 
 ```
-/                          — chapter sidebar with per-chapter QA dots
-/read/<chapter>            — current reading view + audio player + editorial review toolbar
-/ops                       — render queue, server health, chunk progress, log tails, history
-/qa/<chapter>              — full per-chapter QA breakdown (drilldown from sidebar)
-/preview/epub              — EPUB preview + per-target checklist
-/preview/audiobook         — M4B preview + ACX scorecard
-/preview/whispersync       — alignment drift visualizer
-/inbox                     — open .pao-inbox/ files; submit beacons; resolve
+/                          - chapter sidebar with per-chapter QA dots
+/read/<chapter>            - current reading view + audio player + editorial review toolbar
+/ops                       - render queue, server health, chunk progress, log tails, history
+/qa/<chapter>              - full per-chapter QA breakdown (drilldown from sidebar)
+/preview/epub              - EPUB preview + per-target checklist
+/preview/audiobook         - M4B preview + ACX scorecard
+/preview/whispersync       - alignment drift visualizer
+/inbox                     - open .pao-inbox/ files; submit beacons; resolve
 ```
 
 Persistent UI across all routes:
@@ -265,26 +265,26 @@ Every QA finding is actionable. The dashboard isn't useful if CO has to context-
 
 ## Sequencing
 
-**Phase 0 — schema validation against Ch 1** (immediate, when Ch 1 render lands)
+**Phase 0 - schema validation against Ch 1** (immediate, when Ch 1 render lands)
 - Manual QA stack run on Ch 1: word-count, ICM stage, loudness, duration, substitutions, alignment freshness, open reviews. This produces the SCHEMA for `*.qa.json`.
 
-**Phase 1 — per-chapter QA card** (highest payoff)
+**Phase 1 - per-chapter QA card** (highest payoff)
 1. Add `build/qa.py` aggregator. Runs against every chapter; writes `*.qa.json`.
 2. Web side: extend chapter sidebar to read `*.qa.json` and render multi-chip status row.
 3. Add `/qa/<chapter>` drilldown route.
 
-**Phase 2 — operational dashboard** (depends on writer-side events stream)
+**Phase 2 - operational dashboard** (depends on writer-side events stream)
 1. Add JSONL events emission to `audiobook.py`.
 2. Add server-health endpoint to the local Node server (backed by `curl` to TTS server).
 3. Web side: build `/ops` route with queue, log tails, chunk progress, server-health dot.
 
-**Phase 3 — pre-publication preview** (Apple Books only; independent of Phase 1-2)
+**Phase 3 - pre-publication preview** (Apple Books only; independent of Phase 1-2)
 1. Add `build/specs/apple-books-epub.yaml` and `build/specs/apple-books-audiobook.yaml`.
 2. Add `build/verify_apple_books_epub.py` and `build/verify_apple_books_audiobook.py`.
-3. Web side: build `/preview/epub`, `/preview/audiobook`, `/preview/whispersync` routes — single-target rendering, no switcher.
-4. (Deferred — when a second target is approved): add `<target>.yaml` + `verify_<target>.py`; reintroduce target-format switcher.
+3. Web side: build `/preview/epub`, `/preview/audiobook`, `/preview/whispersync` routes - single-target rendering, no switcher.
+4. (Deferred - when a second target is approved): add `<target>.yaml` + `verify_<target>.py`; reintroduce target-format switcher.
 
-**Phase 4 — action affordances**
+**Phase 4 - action affordances**
 1. Local Node server endpoints for each "fix" button.
 2. Templated `co-review-*.md` generators per finding type.
 
@@ -305,7 +305,7 @@ Every QA finding is actionable. The dashboard isn't useful if CO has to context-
 CO engineering session reads this document end-to-end and decides:
 - Confirm the three-axis architecture
 - Confirm the writer-side metrics file emissions
-- Confirm Phase 0 — Ch 1 manual QA run produces the schema before any UI work
+- Confirm Phase 0 - Ch 1 manual QA run produces the schema before any UI work
 - Decide phase ordering vs CO's editorial calendar (if Vol 2 publication is the hot path, Phase 3 may jump priority; if Vol 1 audiobook is being actively re-rendered, Phase 2 may jump)
 
 Once confirmed, this document becomes the planning artifact for the next engineering session.

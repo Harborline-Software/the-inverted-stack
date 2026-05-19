@@ -2,12 +2,12 @@
 type: creative-planning / chapter-concept-state (SUPERSEDED in part)
 date: 2026-04-30
 audience: CO, future PAO sessions resuming this work
-status: PARTIALLY SUPERSEDED — Mission Director direction LOCKED as Dr. Anna Yusupova (Uzbek-Russian), NOT the UAE direction this doc describes. Canonical state: `.pao-inbox/_creative/the-crossing-concept-note-2026-04-30.md` and `.pao-inbox/_creative/character-sheets/dr-leader-mission-director.md`. The Aisha (UAE) sheet has been archived to `_archive/dr-leader-mission-director-uae-not-chosen.md`. This doc is preserved for design-process record.
-working-title: SUNFISH-1 (Antarctic vision chapter) — title still in play, working "The Crossing"
+status: PARTIALLY SUPERSEDED - Mission Director direction LOCKED as Dr. Anna Yusupova (Uzbek-Russian), NOT the UAE direction this doc describes. Canonical state: `.pao-inbox/_creative/the-crossing-concept-note-2026-04-30.md` and `.pao-inbox/_creative/character-sheets/dr-leader-mission-director.md`. The Aisha (UAE) sheet has been archived to `_archive/dr-leader-mission-director-uae-not-chosen.md`. This doc is preserved for design-process record.
+working-title: SUNFISH-1 (Antarctic vision chapter) - title still in play, working "The Crossing"
 intended-placement: Closing Chapter (between Part V and Epilogue)
 ---
 
-> **SUPERSEDED-BY NOTICE:** This document was written when the Mission Director direction was Dr. Aisha Al Mansoori (UAE oceanographer), with a planned UAE-friend cultural-authenticity outreach. Per CO directive 2026-04-30, the Mission Director is now LOCKED as **Dr. Anna Yusupova** (Uzbek-Russian climate oceanographer at AARI St. Petersburg, born in Tashkent). The UAE direction is archived. The Aisha-related content below — outreach plan, UAE friend questions, cultural pitfalls flagged for Emirati context — is preserved for design-process record but is NOT the live plan. For current canonical state see:
+> **SUPERSEDED-BY NOTICE:** This document was written when the Mission Director direction was Dr. Aisha Al Mansoori (UAE oceanographer), with a planned UAE-friend cultural-authenticity outreach. Per CO directive 2026-04-30, the Mission Director is now LOCKED as **Dr. Anna Yusupova** (Uzbek-Russian climate oceanographer at AARI St. Petersburg, born in Tashkent). The UAE direction is archived. The Aisha-related content below - outreach plan, UAE friend questions, cultural pitfalls flagged for Emirati context - is preserved for design-process record but is NOT the live plan. For current canonical state see:
 >
 > - `.pao-inbox/_creative/the-crossing-concept-note-2026-04-30.md` (concept note, updated for Anna)
 > - `.pao-inbox/_creative/character-sheets/dr-leader-mission-director.md` (Anna Yusupova full sheet)
@@ -15,37 +15,37 @@ intended-placement: Closing Chapter (between Part V and Epilogue)
 >
 > The non-Director portions of this doc (placement, voice register, connected cast, King critique items, Charlie/Ch22 boundary, council member cameos) remain valid.
 
-# Antarctic Vision Chapter — Concept State and Resume Instructions
+# Antarctic Vision Chapter - Concept State and Resume Instructions
 
 ## Why this document exists
 
-CO raised a structural concern with the manuscript: the book's narrative scaffolding is overwhelmingly cautionary. Every named character story (Maria Santos in Ch1, the construction PM, the BFSI loan officer, the GCC field engineer, the security breach in Ch3, the 2022 SaaS terminations) carries a negative stance — these are problems-to-justify the architecture. There is no vision-of-the-solution story.
+CO raised a structural concern with the manuscript: the book's narrative scaffolding is overwhelmingly cautionary. Every named character story (Maria Santos in Ch1, the construction PM, the BFSI loan officer, the GCC field engineer, the security breach in Ch3, the 2022 SaaS terminations) carries a negative stance - these are problems-to-justify the architecture. There is no vision-of-the-solution story.
 
 CO wants to add a vision chapter showing the architecture functioning in a high-stakes deployment. This document captures the concept work done in conversation on 2026-04-30 so the work can resume in any future session without losing context.
 
 ## Concept summary in one paragraph
 
-A multinational civilian climate research mission (codename **SUNFISH-1**, closing the project name loop) deploys a research submarine to the Antarctic ice shelf for ice-shelf monitoring and oceanographic instrumentation. The mission is led by a UAE oceanographer (CO). Crew composition draws from existing Part I characters (Maria Santos and others) reframed as the mission cast — their Part I stories become their professional backstories. Mid-mission, a senior crew member dies on bridge watch (brain aneurysm — fictional dramatic event); the body is preserved in the freezer until landfall. The architecture cannot prevent the death. The architecture preserves what the dead crew member did — his mission logs, photographs, observations, handoff documentation — and delivers them to his family when the next surface-relay window opens. The chapter is written in fictional first-person staff-history register from the CO's perspective, articulated as a post-mission reflection. The chapter does NOT reference Charlie by name; the reader carries the connection from Ch22's existing dedication.
+A multinational civilian climate research mission (codename **SUNFISH-1**, closing the project name loop) deploys a research submarine to the Antarctic ice shelf for ice-shelf monitoring and oceanographic instrumentation. The mission is led by a UAE oceanographer (CO). Crew composition draws from existing Part I characters (Maria Santos and others) reframed as the mission cast - their Part I stories become their professional backstories. Mid-mission, a senior crew member dies on bridge watch (brain aneurysm - fictional dramatic event); the body is preserved in the freezer until landfall. The architecture cannot prevent the death. The architecture preserves what the dead crew member did - his mission logs, photographs, observations, handoff documentation - and delivers them to his family when the next surface-relay window opens. The chapter is written in fictional first-person staff-history register from the CO's perspective, articulated as a post-mission reflection. The chapter does NOT reference Charlie by name; the reader carries the connection from Ch22's existing dedication.
 
 ## Why each design choice was made
 
 ### Antarctic submarine over Star Trek-style fiction or Artemis-2 lunar mission
 
-- **Submarine setting earns the architecture argument structurally.** A submarine sealed under ice is the canonical local-first environment — the architecture is the protagonist because the mission cannot call home.
+- **Submarine setting earns the architecture argument structurally.** A submarine sealed under ice is the canonical local-first environment - the architecture is the protagonist because the mission cannot call home.
 - **Sunfish project name closes a poetic loop.** The project is named after the USS Sunfish (Permit/Sturgeon-class submarines). The reader who has read "Sunfish" as placeholder noun for 80,000 words discovers the metaphor was load-bearing.
 - **Antarctic civilian climate research provides scientific prestige + plausible near-future setting + multinational crew demographics naturally.**
-- **Star Trek frame would risk the practitioner-credibility audience.** *The Martian* / *Project Hail Mary* register is the right tone — grounded science fiction that keeps the engineering-credibility voice the rest of the book has earned.
-- **Artemis 2 is real and historical — risky for shelf life.** Near-future fictional mission is preferable.
+- **Star Trek frame would risk the practitioner-credibility audience.** *The Martian* / *Project Hail Mary* register is the right tone - grounded science fiction that keeps the engineering-credibility voice the rest of the book has earned.
+- **Artemis 2 is real and historical - risky for shelf life.** Near-future fictional mission is preferable.
 
 ### UAE oceanographer as CO (not American, not author)
 
 - **CO's nationality is editorially load-bearing.** The book has spent 23 chapters arguing local-first matters globally. The protagonist of the vision chapter being from a market the architecture was always meant to serve is the strongest possible argument for the book's central claim.
 - **Krishnamurthy's reviews flagged DIFC vs ADGM vs UAE-federal DPL distinctions** as the regulatory complexity the book hasn't fully respected. An Emirati CO navigates that complexity as professional reality, not exposition.
-- **The compelled-access threat model becomes operationally real** — a UAE-led mission with multinational co-funders has genuine cross-border-jurisdictional exposure that the architecture's structure answers.
+- **The compelled-access threat model becomes operationally real** - a UAE-led mission with multinational co-funders has genuine cross-border-jurisdictional exposure that the architecture's structure answers.
 - **Emirates Mars Mission (Hope Probe, 2020)** established UAE capacity for ambitious multinational scientific missions led by a relatively small national program. A near-future UAE-led Antarctic submarine program is a credible projection.
 - **CO has personal motivation for tip-of-the-hat to UAE professional associates** (CO-private, not in book).
 
-### Connected cast — Part I victims as mission crew
+### Connected cast - Part I victims as mission crew
 
 The strongest move in the concept evolution. Each Part I character returns as a mission crew member; their Part I story becomes the professional backstory that credentials them for this mission. Reader's emotional investment compounds: characters who failed in Part I now succeed in the closing chapter because of the architecture.
 
@@ -58,15 +58,15 @@ The strongest move in the concept evolution. Each Part I character returns as a 
 | **Submarine Life-Support Engineer** | **GCC field engineer** (Ch1) renamed | Gulf-region; offshore-platform credentials transfer to sealed-environment ops |
 | **Chief Scientist** | New | Norwegian or French ice-shelf specialist (established polar research) |
 | **Communications & Data Officer** | New | Nigerian or Kenyan (closes Diallo's African enterprise IT market gap) |
-| **Senior Technical Specialist (dies on watch)** | New | Probably Norwegian polar veteran — death lands harder because it's "not supposed to happen" to someone with his background |
+| **Senior Technical Specialist (dies on watch)** | New | Probably Norwegian polar veteran - death lands harder because it's "not supposed to happen" to someone with his background |
 | Additional crew | New | scattered nationalities, brief mentions |
 
 ### Council member cameos
 
 1–2 sentence references, not full scenes:
-- **Voss** (Ch5 procurement) — flashback/citation as the procurement officer who cleared the architecture for the mission years earlier
-- **Shevchenko** (Ch6 distributed systems) — referenced as correctness reviewer who validated the data architecture during procurement
-- **Okonkwo / Kelsey / Ferreira** — passing references in dialogue or omitted to keep cast focused
+- **Voss** (Ch5 procurement) - flashback/citation as the procurement officer who cleared the architecture for the mission years earlier
+- **Shevchenko** (Ch6 distributed systems) - referenced as correctness reviewer who validated the data architecture during procurement
+- **Okonkwo / Kelsey / Ferreira** - passing references in dialogue or omitted to keep cast focused
 
 ### Charlie stays in Ch22 only
 
@@ -74,11 +74,11 @@ CO's directive: no autobiographical/personal details in the Antarctic chapter or
 - Charlie remains in Ch22's first-person Uncle Charlie passage, named, dedicated. **NOT referenced by name in the Antarctic chapter.**
 - The CO is NOT Charlie's nephew. CO is fictional, Emirati, unrelated to Charlie's family.
 - The reader who read Ch22 carries Charlie's story into the Antarctic chapter automatically; the CO's reflections about mortality and the long now resonate against Ch22 in the reader's head without any cross-reference.
-- This is the cleaner editorial choice — the connection is felt, not stated.
+- This is the cleaner editorial choice - the connection is felt, not stated.
 
 ### Bridge-death incident as fictional dramatic event
 
-Senior crew member dies on bridge watch — brain aneurysm. Body goes in the freezer until landfall (real naval-vessel procedure for on-duty deaths during transit). The architecture cannot prevent the death; the architecture preserves what the dead crew member did. CO writes the death notification under three hundred meters of ice, knowing it will queue until the next surface relay window.
+Senior crew member dies on bridge watch - brain aneurysm. Body goes in the freezer until landfall (real naval-vessel procedure for on-duty deaths during transit). The architecture cannot prevent the death; the architecture preserves what the dead crew member did. CO writes the death notification under three hundred meters of ice, knowing it will queue until the next surface relay window.
 
 **This is a fictional event in a fictional mission.** It is NOT framed as drawn from the author's experience or service. The detail reads as accurate because it's procedurally correct, not because it's autobiographical.
 
@@ -86,22 +86,22 @@ Senior crew member dies on bridge watch — brain aneurysm. Body goes in the fre
 
 The fictional CO's fear is the compound architect's terror: **mortality + the long now of the solution**. Specifically:
 
-1. **The architecture failing on his watch.** He designed this system; he commands this mission. If a relay window closes silent, if the data doesn't return, it's not just engineering failure — it's an indictment of his life's work.
-2. **Becoming the locked phone.** The CO is older now than he was when his work began. If he dies on this mission, his own data, his own handoff, his own family's wait. Mortality fear specific to the architect-as-user — the CO is afraid of being the test case for his own design.
+1. **The architecture failing on his watch.** He designed this system; he commands this mission. If a relay window closes silent, if the data doesn't return, it's not just engineering failure - it's an indictment of his life's work.
+2. **Becoming the locked phone.** The CO is older now than he was when his work began. If he dies on this mission, his own data, his own handoff, his own family's wait. Mortality fear specific to the architect-as-user - the CO is afraid of being the test case for his own design.
 3. **The historical pattern winning.** The fear that despite everything he built, the next family is going to make the same call somewhere. The mission isn't proof the architecture works; it's just one data point against a pattern that has been winning for a long time.
 
 ### The resolution the CO arrives at under the ice
 
 **The architecture does not solve mortality. The architecture queues against mortality.** Built today, intended to outlast its conditions, knowing the conditions will eventually outlast it. The system that runs in 2090 will not be this one. But the principle survives the system that taught it: *do not let the data die with the person.* The CO writes the staff history not because he expects to be read in 2090, but because he knows that someone in 2090 will be facing the same family at the same table, and that person will have a better chance of saying something useful if the lessons of this generation made it that far.
 
-**Resolution is arrived at through scene, not announced.** The CO carries the fear onto the boat at full intensity. The crew member's death makes it worse, not better. The architecture *appears to fail* at the dramatic peak (King's "drop the bottom out" critique) — relay window closes silent, notification queues without sending. The CO sits in his cabin and writes a letter to a wife he's never met, knowing it may not arrive. Then it does arrive. Not because the architecture is heroic. Because the architecture was built to wait — to hold data through silence, to survive windows that don't come, to deliver when delivery becomes possible. The queue becomes the metaphor for the work itself.
+**Resolution is arrived at through scene, not announced.** The CO carries the fear onto the boat at full intensity. The crew member's death makes it worse, not better. The architecture *appears to fail* at the dramatic peak (King's "drop the bottom out" critique) - relay window closes silent, notification queues without sending. The CO sits in his cabin and writes a letter to a wife he's never met, knowing it may not arrive. Then it does arrive. Not because the architecture is heroic. Because the architecture was built to wait - to hold data through silence, to survive windows that don't come, to deliver when delivery becomes possible. The queue becomes the metaphor for the work itself.
 
 ## King-style craft critiques the chapter must answer
 
 From conversation on 2026-04-30:
 
-1. **Antagonist must be material.** Not "probability" abstractly — the historical pattern that failed Charlie, made material through one mid-mission moment where it almost repeats.
-2. **Maria Santos is too healed.** Give her something she still can't get past — sleep that won't come when the sub goes quiet, a habit of checking her own data three times. Confident-and-recovered Maria is a poster, not a character. Her competence has to cost her something.
+1. **Antagonist must be material.** Not "probability" abstractly - the historical pattern that failed Charlie, made material through one mid-mission moment where it almost repeats.
+2. **Maria Santos is too healed.** Give her something she still can't get past - sleep that won't come when the sub goes quiet, a habit of checking her own data three times. Confident-and-recovered Maria is a poster, not a character. Her competence has to cost her something.
 3. **The CO is too rational.** Name one specific fear in his own voice. Not philosophical; specific.
 4. **The architecture must appear to fail before it succeeds.** Drop the bottom out for one full scene. Without it, the redemption isn't a redemption.
 5. **Scene the death in real time, not summary.** Present-tense set-piece inside the past-tense memoir frame (King did this in *11/22/63*). Light, sound, smell, the CO's hands.
@@ -109,9 +109,9 @@ From conversation on 2026-04-30:
 
 ## Three remaining structural questions to lock before drafting
 
-1. **First-person memoir voice throughout — confirmed.** CO Voice is fictional first-person staff history. Reader knows it's fiction (the book is non-fiction; this is a vision-of-solution chapter); the frame is accepted as thought experiment.
+1. **First-person memoir voice throughout - confirmed.** CO Voice is fictional first-person staff history. Reader knows it's fiction (the book is non-fiction; this is a vision-of-solution chapter); the frame is accepted as thought experiment.
 2. **The new chapter replaces the existing Epilogue, or sits before it?** PAO recommendation pending review of current Epilogue. Probably: this chapter becomes the new Epilogue, OR sits as a new chapter "The Crossing" / "SUNFISH-1: A Staff History" before a quieter philosophical Epilogue.
-3. **Death on mission — confirmed YES, fictionalized.** Senior crew member dies. Body in freezer until landfall. Architecture preserves his work. (Originally we had considered a near-miss; CO's input on real-world bridge death incident landed as the right narrative move.)
+3. **Death on mission - confirmed YES, fictionalized.** Senior crew member dies. Body in freezer until landfall. Architecture preserves his work. (Originally we had considered a near-miss; CO's input on real-world bridge death incident landed as the right narrative move.)
 
 ## Outreach plan for cultural authenticity (UAE)
 
@@ -119,7 +119,7 @@ CO will reach out to UAE professional associates for cultural input on the Emira
 
 ### Draft opener (CO can adapt)
 
-> *"Hey [Name], I've been working on a book about software architecture — a side project that's been a few years in the making. There's a chapter near the end where the protagonist is an Emirati oceanographer leading a near-future climate research mission. I want to write the character with respect and accuracy, and I know I only know UAE through our professional work together — which is its own register. Would you be willing to spend 15-20 minutes on a call sometime giving me your read on a few things? Totally fine if it's not your thing or if the timing's off. If you do help, I'd be glad to credit you in the acknowledgments however you prefer — by name, anonymously, or not at all. Just tell me what works."*
+> *"Hey [Name], I've been working on a book about software architecture - a side project that's been a few years in the making. There's a chapter near the end where the protagonist is an Emirati oceanographer leading a near-future climate research mission. I want to write the character with respect and accuracy, and I know I only know UAE through our professional work together - which is its own register. Would you be willing to spend 15-20 minutes on a call sometime giving me your read on a few things? Totally fine if it's not your thing or if the timing's off. If you do help, I'd be glad to credit you in the acknowledgments however you prefer - by name, anonymously, or not at all. Just tell me what works."*
 
 ### Questions to ask, grouped by purpose
 
@@ -162,7 +162,7 @@ CO will reach out to UAE professional associates for cultural input on the Emira
 
 ## Open decisions awaiting CO direction
 
-1. **CO gender** (male or female — both work; female lands the "UAE women lead big science" signal). Awaiting CO + UAE friend input.
+1. **CO gender** (male or female - both work; female lands the "UAE women lead big science" signal). Awaiting CO + UAE friend input.
 2. **CO emirate background** (Abu Dhabi, Dubai, Sharjah, RAK, Fujairah, etc.). Awaiting CO + UAE friend input.
 3. **Religious practice level** (default: moderately observant). Awaiting CO + UAE friend input.
 4. **CO name** (5 candidates listed above; awaiting friend's reaction or specific suggestion).
@@ -176,21 +176,21 @@ NOT YET DRAFTED. Concept note is the next deliverable once CO has UAE friend inp
 
 ## Next actions (in order)
 
-1. **CO reaches out to UAE professional associate(s)** — using draft opener above. Time-boxed; opt-out free of social cost.
-2. **CO + UAE friend conversation** — 15–20 minute call covering questions above.
-3. **CO returns with input** — locks decisions 1–5. Updates this document or supersedes with revised concept-state doc.
-4. **PAO drafts 600–800-word concept note** — reflecting UAE friend input, King critique, connected cast plan, fear thread, placement decision.
-5. **CO + (optional) UAE friend review concept note** — green light or revision.
-6. **PAO drafts chapter** — 4,000–6,000 words first-person staff history, fictional CO voice, Antarctic mission with bridge-death event, queue-against-mortality fear resolution.
-7. **CO + UAE friend review chapter draft** — for accuracy and authenticity.
-8. **Polish + lit-board review** — same workflow as other chapters.
-9. **Acknowledgments update** — UAE friend credited per their preference.
+1. **CO reaches out to UAE professional associate(s)** - using draft opener above. Time-boxed; opt-out free of social cost.
+2. **CO + UAE friend conversation** - 15–20 minute call covering questions above.
+3. **CO returns with input** - locks decisions 1–5. Updates this document or supersedes with revised concept-state doc.
+4. **PAO drafts 600–800-word concept note** - reflecting UAE friend input, King critique, connected cast plan, fear thread, placement decision.
+5. **CO + (optional) UAE friend review concept note** - green light or revision.
+6. **PAO drafts chapter** - 4,000–6,000 words first-person staff history, fictional CO voice, Antarctic mission with bridge-death event, queue-against-mortality fear resolution.
+7. **CO + UAE friend review chapter draft** - for accuracy and authenticity.
+8. **Polish + lit-board review** - same workflow as other chapters.
+9. **Acknowledgments update** - UAE friend credited per their preference.
 
 ## Other paused/parked work blocked behind this
 
-- **Ch12 polish (CRDT Engine and Data Layer)** — lit-board review saved at `.pao-inbox/_editorial-reviews/ch12-literary-board-2026-04-30.md`. Chapter edits NOT yet applied. Resume after creative direction concludes.
-- **CO-seat structural decisions** from PR #49 — Ch15 §Privacy-Preserving Aggregation placement and Ch11 §Performance Contracts placement still awaiting CO direction.
-- **Lit-board sweep continuation** — Ch16 (Persistence Beyond the Node), Ch17–Ch20 (Part IV playbooks), Epilogue, appendices still need lit-board reviews.
+- **Ch12 polish (CRDT Engine and Data Layer)** - lit-board review saved at `.pao-inbox/_editorial-reviews/ch12-literary-board-2026-04-30.md`. Chapter edits NOT yet applied. Resume after creative direction concludes.
+- **CO-seat structural decisions** from PR #49 - Ch15 §Privacy-Preserving Aggregation placement and Ch11 §Performance Contracts placement still awaiting CO direction.
+- **Lit-board sweep continuation** - Ch16 (Persistence Beyond the Node), Ch17–Ch20 (Part IV playbooks), Epilogue, appendices still need lit-board reviews.
 
 ## Resume instructions for future PAO sessions
 

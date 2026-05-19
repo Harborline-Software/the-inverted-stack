@@ -4,7 +4,7 @@ chapter: build/stt_spike.py + ch15 audio phase2
 last-pr: n/a
 ---
 
-# STT QC Spike Phase 2 — Verdict: FAIL
+# STT QC Spike Phase 2 - Verdict: FAIL
 
 ## Wall-time
 
@@ -35,25 +35,25 @@ systematic multi-chapter runs; each 48MB chapter would take ~30+ min.
 
 ## Example REAL errors
 
-1. **Region 154** — `λ 1 ε` → "deferrin" (Greek letter math notation → complete gibberish;
+1. **Region 154** - `λ 1 ε` → "deferrin" (Greek letter math notation → complete gibberish;
    medium shows no improvement on ε/λ/σ relative to base)
 
-2. **Region 81** — ~100-word KEK rotation paragraph → "thank you" (section-level hallucination;
+2. **Region 81** - ~100-word KEK rotation paragraph → "thank you" (section-level hallucination;
    TTS reads a block the model cannot transcribe and inserts a filler utterance)
 
-3. **Region 212** — ~500-word security-properties table + surrounding paragraphs → single word
+3. **Region 212** - ~500-word security-properties table + surrounding paragraphs → single word
    "book" (catastrophic section-level drop)
 
-4. **Regions 26–30** — "writes/write" → "rights/right" × 5 (homophone error; TTS pronounces
+4. **Regions 26–30** - "writes/write" → "rights/right" × 5 (homophone error; TTS pronounces
    correctly but STT conflates; not fixable by model upgrade)
 
-5. **Region 161** — `λ` → "w1 for query number1 per query number01 adding" (single Greek letter
+5. **Region 161** - `λ` → "w1 for query number1 per query number01 adding" (single Greek letter
    expanding to word-salad; illustrates that medium decodes false confidence around math)
 
 ## Phase 2 verdict: FAIL
 
 66 REAL errors against a 47-REAL LOWER-PASS threshold and a 19-REAL PASS threshold.
-Medium resolves 29.8% of base REALs — below the 50% threshold for even LOWER-PASS.
+Medium resolves 29.8% of base REALs - below the 50% threshold for even LOWER-PASS.
 
 The model-quality lever is not large enough. The primary failure classes (math notation,
 large section drops, systematic homophones) do not respond to model size in this domain.
