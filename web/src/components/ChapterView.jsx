@@ -67,7 +67,7 @@ function markExcerpt(root, excerpt, type, globalIdx) {
     return true
   }
 
-  // Excerpt not found — fall back to paragraph marker only
+  // Excerpt not found - fall back to paragraph marker only
   const fallbackNeedle = needle.slice(0, 50)
   for (const el of root.querySelectorAll('p, h1, h2, h3, h4, blockquote, li')) {
     if (el.textContent.toLowerCase().includes(fallbackNeedle)) {
@@ -106,7 +106,7 @@ function normText(t) {
 
 // Returns the best available text for chunk-to-DOM matching.
 // source_text can be missing or the literal string "None" (Python serialization bug
-// in regenerated alignment files) — fall back to the TTS-processed text in that case.
+// in regenerated alignment files) - fall back to the TTS-processed text in that case.
 function chunkMatchText(chunk) {
   const st = chunk.source_text
   if (!st || st === 'None') return chunk.text || ''
@@ -123,11 +123,11 @@ function scoreMatch(elText, chunkText) {
     let i = 0; while (i < len && a[i] === b[i]) i++; return i
   }
 
-  // Case 1: prefix match — chunk and element start with the same text
+  // Case 1: prefix match - chunk and element start with the same text
   const prefix = prefixLen(el, ch)
   if (prefix >= 8) return prefix
 
-  // Case 2: per-sentence audio — chunk is a single sentence inside a larger paragraph.
+  // Case 2: per-sentence audio - chunk is a single sentence inside a larger paragraph.
   // Take the first 20 chars of the chunk and search for them within the element text.
   const chunkNeedle = ch.slice(0, 20)
   if (chunkNeedle.length >= 10) {
@@ -199,64 +199,43 @@ function splitSentences(text) {
   }
 }
 
-// Wrap an element's content in sentence + word spans for three-layer highlighting.
-// Preserves child elements (links, bold, etc.) by moving — not cloning — them.
+// Wrap an element's content in sentence spans for two-layer highlighting.
+// Preserves child elements (links, bold, etc.) by moving - not cloning - them.
 function wrapWords(element) {
   const originalHTML = element.innerHTML
   const childNodes = Array.from(element.childNodes)
   const hasChildElements = childNodes.some(n => n.nodeType === Node.ELEMENT_NODE)
 
-  element.innerHTML = ''
+  while (element.firstChild) element.removeChild(element.firstChild)
 
-  const allWordSpans = []
-  const sentenceGroups = [] // [{ el: sentenceSpan, wordSpans: [] }]
-
-  const appendWordSpans = (container, text, target) => {
-    for (const part of text.split(/(\s+)/)) {
-      if (/\S/.test(part)) {
-        const span = document.createElement('span')
-        span.className = 'tts-word'
-        span.textContent = part
-        allWordSpans.push(span)
-        target.push(span)
-        container.appendChild(span)
-      } else if (part) {
-        container.appendChild(document.createTextNode(part))
-      }
-    }
-  }
+  const sentenceGroups = []
 
   if (hasChildElements) {
-    // Mixed content — wrap only top-level text nodes, leave child elements in place
+    // Mixed content - restore child nodes as-is; no sentence grouping
     for (const node of childNodes) {
-      if (node.nodeType === Node.TEXT_NODE) {
-        appendWordSpans(element, node.textContent, allWordSpans)
-      } else {
-        element.appendChild(node)
-      }
+      element.appendChild(node)
     }
   } else {
-    // Pure text — split into sentences, wrap each in a sentence span
+    // Pure text - split into sentences, wrap each in a sentence span
     const fullText = childNodes.map(n => n.textContent).join('')
     const sentences = splitSentences(fullText)
 
-    if (sentences.length <= 1) {
-      // Single sentence: just word spans, no sentence grouping
-      appendWordSpans(element, fullText, allWordSpans)
-    } else {
+    if (sentences.length > 1) {
       sentences.forEach((sentence, sIdx) => {
         const sentEl = document.createElement('span')
         sentEl.className = 'tts-sent'
-        const wordSpans = []
-        appendWordSpans(sentEl, sentence, wordSpans)
+        sentEl.textContent = sentence
         if (sIdx < sentences.length - 1) sentEl.appendChild(document.createTextNode(' '))
-        sentenceGroups.push({ el: sentEl, wordSpans })
+        sentenceGroups.push({ el: sentEl })
         element.appendChild(sentEl)
       })
+    } else {
+      // Single sentence: plain text; sentence highlight falls back to paragraph
+      element.appendChild(document.createTextNode(fullText))
     }
   }
 
-  return { allWordSpans, sentenceGroups, originalHTML }
+  return { sentenceGroups, originalHTML }
 }
 
 // ── Component ──────────────────────────────────────────────────────────────
@@ -292,8 +271,8 @@ export default function ChapterView({
   const activeElRef = useRef(null)
   const lastTRef = useRef(-1)
   const wordStateRef = useRef({
-    element: null, allWordSpans: [], sentenceGroups: [],
-    originalHTML: '', prevSentIdx: -1, prevWordSpanGroup: null, prevWordIdx: -1
+    element: null, sentenceGroups: [],
+    originalHTML: '', prevSentIdx: -1
   })
   const contentRef = useRef(null)
   const chapterViewRef = useRef(null)
@@ -320,7 +299,7 @@ export default function ChapterView({
     // Restore previous word wrapping
     const ws = wordStateRef.current
     if (ws.element && ws.originalHTML) { try { ws.element.innerHTML = ws.originalHTML } catch {} }
-    wordStateRef.current = { element: null, allWordSpans: [], sentenceGroups: [], originalHTML: '', prevWordIdx: -1, prevSentIdx: -1 }
+    wordStateRef.current = { element: null, sentenceGroups: [], originalHTML: '', prevSentIdx: -1 }
     if (activeElRef.current) { activeElRef.current.classList.remove('tts-active'); activeElRef.current = null }
     chunkMapRef.current = []
     lastTRef.current = -1
@@ -501,7 +480,7 @@ export default function ChapterView({
     chunkMapRef.current = buildChunkMap(alignedChunks, contentRef.current)
   }, [alignedChunks, content, loading])
 
-  // ── Time update — three-layer highlight ───────────────────────────────
+  // ── Time update - three-layer highlight ───────────────────────────────
 
   const scrollToActive = useCallback((el, instant) => {
     if (!el || !chapterViewRef.current) return
@@ -543,7 +522,7 @@ export default function ChapterView({
     // On seek to the same element: force rewrap + scroll to clear stale word state
     const forcedTransition = isSeeked && active !== null && active === activeElRef.current
 
-    // Layer 1 — paragraph
+    // Layer 1 - paragraph
     if (active !== activeElRef.current || forcedTransition) {
       if (activeElRef.current) {
         activeElRef.current.classList.remove('tts-active')
@@ -551,13 +530,13 @@ export default function ChapterView({
         if (ws.element === activeElRef.current && ws.originalHTML) {
           activeElRef.current.innerHTML = ws.originalHTML
         }
-        wordStateRef.current = { element: null, allWordSpans: [], sentenceGroups: [], originalHTML: '', prevSentIdx: -1, prevWordSpanGroup: null, prevWordIdx: -1 }
+        wordStateRef.current = { element: null, sentenceGroups: [], originalHTML: '', prevSentIdx: -1 }
       }
 
       if (active) {
         active.classList.add('tts-active')
         const wrapped = wrapWords(active)
-        wordStateRef.current = { element: active, ...wrapped, prevSentIdx: -1, prevWordSpanGroup: null, prevWordIdx: -1 }
+        wordStateRef.current = { element: active, ...wrapped, prevSentIdx: -1 }
         scrollToActive(active, isSeeked)
       }
 
@@ -567,12 +546,9 @@ export default function ChapterView({
     if (!activeChunk || !active) return
 
     const ws = wordStateRef.current
-    const elapsed = t - activeChunk.start_seconds
-    const duration = activeChunk.duration_seconds || 1
-    const progress = Math.min(elapsed / duration, 0.999)
 
-    // Layer 2 — sentence: match this chunk's text to the correct sentence span.
-    // For per-sentence audio, each chunk IS one sentence — scoreMatch finds it
+    // Layer 2 - sentence: match this chunk's text to the correct sentence span.
+    // For per-sentence audio, each chunk IS one sentence - scoreMatch finds it
     // precisely. For whole-paragraph chunks, sentence[0] wins on prefix score.
     if (ws.sentenceGroups.length >= 1) {
       let sentIdx = 0
@@ -587,26 +563,7 @@ export default function ChapterView({
       if (sentIdx !== ws.prevSentIdx) {
         if (ws.prevSentIdx >= 0) ws.sentenceGroups[ws.prevSentIdx]?.el.classList.remove('tts-sent-active')
         ws.sentenceGroups[sentIdx]?.el.classList.add('tts-sent-active')
-        // Sentence changed — clear word highlight from the previous sentence's spans
-        if (ws.prevWordIdx >= 0 && ws.prevWordSpanGroup) {
-          ws.prevWordSpanGroup[ws.prevWordIdx]?.classList.remove('tts-word-active')
-          ws.prevWordIdx = -1
-        }
         ws.prevSentIdx = sentIdx
-        ws.prevWordSpanGroup = ws.sentenceGroups[sentIdx]?.wordSpans || null
-      }
-    }
-
-    // Layer 3 — word: interpolate within the current sentence's spans only,
-    // so the highlight advances through one sentence at a time rather than
-    // looping across the entire paragraph on every chunk.
-    const wordSpans = ws.prevWordSpanGroup ?? ws.allWordSpans
-    if (wordSpans.length > 0) {
-      const wordIdx = Math.min(Math.floor(progress * wordSpans.length), wordSpans.length - 1)
-      if (wordIdx !== ws.prevWordIdx) {
-        if (ws.prevWordIdx >= 0) wordSpans[ws.prevWordIdx]?.classList.remove('tts-word-active')
-        wordSpans[wordIdx]?.classList.add('tts-word-active')
-        ws.prevWordIdx = wordIdx
       }
     }
   }, [save, scrollToActive])
@@ -672,7 +629,7 @@ export default function ChapterView({
         )}
       </div>
 
-      {/* ── Sticky player bar — always visible ──────────────────────────── */}
+      {/* ── Sticky player bar - always visible ──────────────────────────── */}
       <div className="sticky-player-bar">
         {audioAvailable ? (
           <div className="audio-player-row">
@@ -713,8 +670,8 @@ export default function ChapterView({
           <span><kbd>Shift</kbd>+<kbd>←→</kbd> ±30s</span>
           <span><kbd>↑</kbd><kbd>↓</kbd> volume</span>
           {alignmentStale && (
-            <span className="align-stale-warn" title="Audio was regenerated after alignment was built — re-run audiobook.py --force to fix sync">
-              ⚠ sync stale — re-render to fix
+            <span className="align-stale-warn" title="Audio was regenerated after alignment was built - re-run audiobook.py --force to fix sync">
+              ⚠ sync stale - re-render to fix
             </span>
           )}
         </div>

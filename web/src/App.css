@@ -677,7 +677,7 @@ body { font-family: var(--font); background: var(--bg); color: var(--text); font
 /* HTML comments in markdown (ICM stage markers) */
 .markdown-body .icm-comment { display: none; }
 
-/* ── TTS sync highlighting — three layers ─────────────────────────────────── */
+/* ── TTS sync highlighting - three layers ─────────────────────────────────── */
 
 /* Layer 1: Paragraph gutter + tint */
 .markdown-body.has-alignment p,
@@ -706,15 +706,6 @@ body { font-family: var(--font); background: var(--bg); color: var(--text); font
   padding: 1px 2px;
 }
 
-/* Layer 3: Word highlight */
-.tts-word {
-  border-radius: 2px;
-}
-
-.tts-word-active {
-  background: rgba(139, 127, 196, 0.42);
-  padding: 1px 1px;
-}
 
 /* ── Main top bar ─────────────────────────────────────────────────────────── */
 .main-topbar {
@@ -803,7 +794,7 @@ body { font-family: var(--font); background: var(--bg); color: var(--text); font
 .queue-resize-handle:hover,
 .queue-resize-handle:active { background: var(--accent); }
 
-/* ── Jobs area (active + staged + pending + history) — caps at 45vh ────────── */
+/* ── Jobs area (active + staged + pending + history) - caps at 45vh ────────── */
 .queue-panel-jobs {
   flex-shrink: 0;
   overflow-y: auto;
