@@ -1,20 +1,42 @@
-# Chapter 1 — Departure
+-
+title: "Departure"
+volume: 2
+act: 1
+chapter: 1
+mission-day: 0
+icm-stage: icm/prose-review
+word-count-target: 5000
+log-opener-pattern: none
+primary-rail: mission-as-survival
+narrator-frame: archive-conspiratorial
+plants-set:
+  - joel-93-days
+  - firmware-second-note
+  - diana-postcards
+  - mother-comparisons-pattern
+  - vatrushka-evaluation-standards
+plants-paid: []
+last-measured: 2026-05-17
+last-measurement-result: 79/79 passes, zero warnings (yeoman)
+stage-advance-ratified-by: CIC 2026-05-17
+-
+# Chapter 1 - Departure
 
 I took my last breakfast alone in Punta Arenas on the fourteenth of February, at a bakery on Avenida Colón that knew today was the day and had not made anything of it, which was as it should be.
 
-The bakery was called *Panadería La Pastora*. The smell at the door was butter and toasted sugar over a whisper of yeast that had been in the wall longer than the granddaughter had been alive. The woman behind the counter — not the one the place was named for, but a granddaughter once removed — brought my coffee and the kuchen de murta without my having to ask for either. I had been there nine days, and she had concluded that I was the kind of customer who took her coffee black, was not interested in conversation, and would order the best pastry in the case every morning until something better arrived, which had not yet happened. She was correct on all three counts. I respected her for them, and I had been tipping accordingly.
+The bakery was called *Panadería La Pastora*. The smell at the door was butter and toasted sugar over a whisper of yeast that had been in the wall longer than the granddaughter had been alive. The woman behind the counter - not the one the place was named for, but a granddaughter once removed - brought my coffee and the kuchen de murta without my having to ask for either. I had been there nine days, and she had concluded that I was the kind of customer who took her coffee black, was not interested in conversation, and would order the best pastry in the case every morning until something better arrived, which had not yet happened. She was correct on all three counts. I respected her for them, and I had been tipping accordingly.
 
-The kuchen de murta, on the fourteenth of February, had not been let down by its base. I had checked the underside with the side of the fork while the granddaughter was looking the other way — this is a thing I do, and I have stopped pretending I am sorry about it — and there was no soggy bottom. The crust was the correct kind of short — tender against the tooth, brittle at the edge, no hint of mealy. The cream had set without going stiff and would have held a peak if you had asked it to — which this dish does not require, but I, on principle, want to know. The murta — a small Patagonian berry the rest of the world has not yet figured out is the equal of the bilberry, possibly its superior — had been folded into the cream in proportions that respected the berry: enough to register its tartness against the cream's sweetness, not so much that the cream gave up being cream. Whoever had set that ratio had run the experiment more than once. The bake was confident. Two minutes longer in the oven and the crust would have crossed from short to mealy; two minutes shorter and the cream would have weeped, and we would have been having a different conversation about whether I came back the next morning. We were not. We had not had that conversation on any of the previous eight mornings either. The granddaughter and her grandmother had brought it across the line and held it there nine days running, which is, by Patagonian standards, miraculous, and by mine, the entire reason I had chosen this bakery and not any of the four others within walking distance.
+The kuchen de murta, on the fourteenth of February, had not been let down by its base. I had checked the underside with the side of the fork while the granddaughter was looking the other way - this is a thing I do, and I have stopped pretending I am sorry about it - and there was no soggy bottom. The crust was the correct kind of short - tender against the tooth, brittle at the edge, no hint of mealy. The cream had set without going stiff and would have held a peak if you had asked it to - which this dish does not require, but I, on principle, want to know. The murta - a small Patagonian berry the rest of the world has not yet figured out is the equal of the bilberry, possibly its superior - had been folded into the cream in proportions that respected the berry: enough to register its tartness against the cream's sweetness, not so much that the cream gave up being cream. Whoever had set that ratio had run the experiment more than once. The bake was confident. Two minutes longer in the oven and the crust would have crossed from short to mealy; two minutes shorter and the cream would have weeped, and we would have been having a different conversation about whether I came back the next morning. We were not. We had not had that conversation on any of the previous eight mornings either. The granddaughter and her grandmother had brought it across the line and held it there nine days running, which is, by Patagonian standards, miraculous, and by mine, the entire reason I had chosen this bakery and not any of the four others within walking distance.
 
 I do not have favorites in pastry, only standards. The case had met the standard nine days running, and the granddaughter knew this was why I kept coming back. If she had ever brought me something better, I would have ordered that instead. The drive to find the best at anything is something my mother taught me, and I have not, in any meaningful way, stopped applying it.
 
 I would have walked fifteen blocks for that morning's pastry. I had, on day three, walked seven, because there was, briefly, a rumor of a *better* one, and I will not embarrass the rumor by reporting its source.
 
-I read the news on my phone for thirty-six minutes — Chilean politics, the consortium's own press release about my own departure (which got two facts wrong and one fact aggressively right), and an article about a kindergarten teacher in Magadan who had won a national award for science education. Then I closed the phone and looked at the harbor through the window. The *Nansen* was the third hull from the left. From the bakery you could see her bow but not her name, which was, again, as it should be.
+I read the news on my phone for thirty-six minutes - Chilean politics, the consortium's own press release about my own departure (which got two facts wrong and one fact aggressively right), and an article about a kindergarten teacher in Magadan who had won a national award for science education. Then I closed the phone and looked at the harbor through the window. The *Nansen* was the third hull from the left. From the bakery you could see her bow but not her name, which was, again, as it should be.
 
 I do not write about my mornings in the staff history, which is for the consortium archive and for whoever commands the next mission. What I had for breakfast is none of their business. But that morning is where I became the one who would walk onto the *Nansen*. You should know who I was before I did.
 
-I was forty-seven. I had been at sea, off and on, for twenty-three years. My niece, **Diana**, was in kindergarten in Voronezh. Above her desk her father — my brother — had taped a newspaper clipping of the *Nansen* from the regional paper, and he had told Diana that her aunt was a captain. This was not technically true. I am a mission commander, which is a different thing in ways the consortium cares about and Diana does not, and I had decided some time ago not to correct her. In a scrapbook by her pillow, Diana kept the photographs I had been sending her: one from every bakery in every city I had passed through, taken on my phone, printed at a post office on the morning I left, sent in an envelope, no exceptions, for the entire four years she had been able to read her own name on the front of one. The scrapbook was what mattered to Diana. The newspaper clipping was what her father had taped up. There is, I think, a useful general principle in this, but I am going to leave it alone.
+I was forty-seven. I had been at sea, off and on, for twenty-three years. My niece, **Diana**, was in kindergarten in Voronezh. Above her desk her father - my brother - had taped a newspaper clipping of the *Nansen* from the regional paper, and he had told Diana that her aunt was a captain. This was not technically true. I am a mission commander, which is a different thing in ways the consortium cares about and Diana does not, and I had decided some time ago not to correct her. In a scrapbook by her pillow, Diana kept the photographs I had been sending her: one from every bakery in every city I had passed through, taken on my phone, printed on the small card printer I keep on my desk on the morning I left, sent in an envelope, no exceptions, for the entire four years she had been able to read her own name on the front of one. The scrapbook was what mattered to Diana. The newspaper clipping was what her father had taped up. There is, I think, a useful general principle in this, but I am going to leave it alone.
 
 There was an ex-husband, eleven years divorced, on cordial terms now that he had stopped waiting for me to come home and I had stopped pretending I would. And then there was **Joel Reyes**, whom I had not allowed myself to think about for ninety-three days. On the ninety-fourth I had thought about him exactly once. I had counted it, and I did not intend to do it again.
 
@@ -24,75 +46,77 @@ This is, I am told, what people mean when they say a person is composed. I find 
 
 The granddaughter brought a second cup at 07:14, which was four minutes earlier than I had asked for it, and I appreciated this so much that I left her a tip in two currencies.
 
-On my way to the door she handed me a white bakery box, three dozen kuchen de murta, for the crew — because I had mentioned on day three that we sailed on the fourteenth and she had not forgotten. She would not let me pay for it. I left the price of three days' breakfasts in the tip jar on the way out, which she pretended not to see.
+On my way to the door she handed me a white bakery box, three dozen kuchen de murta, for the crew - because I had mentioned on day three that we sailed on the fourteenth and she had not forgotten. She would not let me pay for it. I left the price of three days' breakfasts in the tip jar on the way out, which she pretended not to see.
 
----
+-
 
-The walk from the bakery to the harbor was eleven minutes by the inland route and fifteen by the seafront, and I always took the longer way. There is a particular thing the wind does in Punta Arenas in February — comes off the Strait at a heading you would not choose for yourself, smelling of cold metal and not at all of salt — and I had decided years ago that I would rather be cold for fifteen minutes than warm for eleven. The decision had outlasted any of the reasons I had originally given for it.
+The walk from the bakery to the harbor was eleven minutes by the inland route and fifteen by the seafront, and I always took the longer way. There is a particular thing the wind does in Punta Arenas in February - comes off the Strait at a heading you would not choose for yourself, smelling of cold metal and not at all of salt - and I had decided years ago that I would rather be cold for fifteen minutes than warm for eleven. The decision had outlasted any of the reasons I had originally given for it.
 
-I should say, since I have brought it up: I do not like cold. Never have. I prefer, when given the choice, to be warm — twenty-five degrees, sun on a wall, the air doing nothing in particular. I have spent twenty-three years going to the coldest places on Earth for a living, and the contradiction has stopped, at this point, embarrassing me. The fee for the cold is paid by the consortium. They do not know this is what they are paying for.
+I should say, since I have brought it up: I do not like cold. Never have. I prefer, when given the choice, to be warm - twenty-five degrees, sun on a wall, the air doing nothing in particular. I have spent twenty-three years going to the coldest places on Earth for a living, and the contradiction has stopped, at this point, embarrassing me. The fee for the cold is paid by the consortium. They do not know this is what they are paying for.
 
 I was wearing the parka the consortium had not paid for and the boots they had. I noted this as I walked. I had been thinking, on and off, about which expenses were mine and which were theirs, and the parka had become a small private symbol of the parts of the mission that were going to be mine alone whether they liked it or not. The granddaughter at the bakery had complimented the parka twice. I did not blame her.
 
 I passed three of my crew on the way to the dock. They did not see me. This was deliberate on their part and not on mine, and I appreciated it.
 
-The first was **Tomás Lindqvist** — chief engineer, second-generation Punta Arenas, bought his coffee from a stand near the fish market because he was loyal to the woman who ran it and not because the coffee was any good — who was already on the dock at 07:43, which put him there since at least 06:00. He was nervous — the signal, with Tomás, that he was about to be excellent. I had known him for seven years. The pattern held.
+The first was **Tomás Lindqvist** - chief engineer, second-generation Punta Arenas, bought his coffee from a stand near the fish market because he was loyal to the woman who ran it and not because the coffee was any good - who was already on the dock at 07:43, which put him there since at least 06:00. He was nervous - the signal, with Tomás, that he was about to be excellent. I had known him for seven years. The pattern held.
 
 The second was **Priya Iyer**, chemistry lead, walking up Pasaje O'Higgins with two reusable bags and a laptop case, looking at once like the postdoc she had stopped being a decade ago and the woman with a child at home. Priya was forty. Priya had grown up in Coimbatore and got her PhD at ETH Zürich and had spent the last six years quietly becoming the best dissolved-gas chemist I had ever worked with. Let me name this about Priya now, before what comes later defines her for you: on the morning of February fourteenth, in every way that mattered to me, she was the second-in-command of my science department, and I would have trusted her with a great many things. I did, in fact, trust her with them. You will need to keep that in mind.
 
 The third was Joel, on the seafront walking the other direction and pretending not to see me. The pretending was a courtesy. It was the only thing I had ever asked of him that he was reliably good at.
 
----
+-
 
 The *Nansen* was an under-ice research submarine of the Mark III class, ninety-one meters at the waterline, four hundred and eighty tons surfaced, rated to four hundred meters under continuous ice, and one of the four boats in the world that could do what the consortium needed done under the Filchner-Ronne ice shelf in the third week of February. I write the spec because the consortium archive expects it, and you can skim it. What you need to know is that the *Nansen*, from the dock, looked like a long matte-black ribbon laid against the water, with an ice-strengthened sail amidships, her diving planes folded vertical against it, and a tender already alongside her starboard quarter. When I walked up to her I felt the thing I always feel before taking command of a boat: *I am home, and the next three months are going to be cold, and both of these are true.*
 
 I did not say any of this out loud. I am not in the habit.
 
-I stepped over the gangway at 08:01. **Captain Mikael Halvorsen** — the *Nansen*'s ship master, Norwegian, sixty-one, the only man I have ever met who can drink a cup of coffee without breaking the conversation — met me at the sail with his hand out and a clipboard tucked under his arm in the way of men who do not actually need clipboards anymore but think they look right with them.
+I stepped over the gangway at 08:01. **Captain Mikael Halvorsen -** the *Nansen*'s ship master, Norwegian, sixty-one, the only man I have ever met who can drink a cup of coffee without breaking the conversation - met me at the sail with his hand out and a clipboard tucked under his arm in the way of men who do not actually need clipboards anymore but think they look right with them.
 
-"Doctor."
+"Welcome aboard, Captain."
 
-"Captain."
+"Good morning, Doctor." 
 
 We shook. He did not let go right away. This was not a romantic thing; this was Mikael's way of taking a person's pulse, which he did with everyone he respected and no one else, and I have decided over the years to be flattered by it rather than amused.
 
-"How was the bakery," he said.
+"How was the bakery," he said. 
 
-"The kuchen had not been let down by its base."
+"The pastry passed inspection and will be reporting for duty." 
 
-"Good."
+"Good." he said with a lick of his lips.
 
-"The kindergarten teacher in Magadan won her award."
+"The kindergarten teacher in Magadan won her award." 
 
-"She did."
+"She did, good to hear." 
 
-He let go of my hand. "Your bay is squared away. Joel has been on board since 05:30."
+He let go of my hand. "Your bay is squared away. Joel has been on board since 05:30." 
 
-"Of course he has."
+"Of course he has." 
 
-"He is in the chemistry rack."
+Which meant the man on the seafront had been someone else. I noted the correction. I did not name it aloud. I had been thinking about Joel for ninety-three days, and the mind does what the mind does.
 
-"Of course he is."
+"He is in the chemistry rack." 
 
-Mikael smiled, very slightly, in the way that Mikael smiles. "I am going to bring her out of the harbor and turn her over to you at the channel mouth. Is that still what you want."
+"Of course he is." 
 
-"It is what I want."
+Mikael smiled, very slightly. He has only the one smile. "I am going to bring her out of the harbor and turn her over to you at the channel mouth. Is that still what you want." 
 
-"All right then."
+"It is what I want." 
 
-This is how command of a research boat passes from the ship master to the mission commander, in the only navy I have ever served, which is to say my own — quietly, in the sail, in front of nobody, between two people who have agreed in advance about which one of them is going to be wrong if everything goes wrong. The consortium has a longer version with signatures. I have signed the longer version. The signing does not change what happens in the sail.
+"All right then." 
+
+This is how command of a research boat passes from the ship master to the mission commander, in the only navy I have ever served, which is to say my own - quietly, in the sail, in front of nobody, between two people who have agreed in advance about which one of them is going to be wrong if everything goes wrong. The consortium has a longer version with signatures. I have signed the longer version. The signing does not change what happens in the sail.
 
 I went below.
 
----
+-
 
 The *Nansen*'s wardroom is six meters by three, with a long bolted table and seating for ten, and on the morning of departure it had eleven people in it and a pot of coffee that was already mostly gone. They stood up when I came in. That was the wrong thing to do, and Mikael had probably told them to do it anyway. I waved them back down before anyone could finish the standing.
 
-I did the thing I do. I will not call it a speech. The consortium calls it a *mission inaugural address* and I refuse, in writing, to use the phrase. I gave them the next ninety-six days: the survey, the sample plan, the watch rotation — Priya, hearing it, did the small breath she always does when she has decided in advance to keep an objection to herself, and I made a note to ask her after the briefing, which I am writing here so that you know I made it, although the asking did not happen — the medical chain, the comms windows, the political situation that was about to be relevant in a small way. I told them that the consortium had altered the firmware on three of the racks during the final hold-down. The alteration notes were in the system if anyone wanted to see them. I had read all three and considered all three acceptable. If anyone had a different opinion I wanted to hear it before we cleared the channel and not after.
+I did the thing I do. I will not call it a speech. The consortium calls it a *mission inaugural address* and I refuse, in writing, to use the phrase. I gave them the next ninety-six days: the survey, the sample plan, the watch rotation - Priya, hearing it, did the small breath she always does when she has decided in advance to keep an objection to herself, and I made a note to ask her after the briefing, which I am writing here so that you know I made it, although the asking did not happen - the medical chain, the comms windows, the political situation that was about to be relevant in a small way. I told them that the consortium had altered the firmware on three of the racks during the final hold-down. The alteration notes were in the system if anyone wanted to see them. I had read all three and considered all three acceptable. If anyone had a different opinion I wanted to hear it before we cleared the channel and not after.
 
 With the benefit of what I learned later, I am leaving this on the page: I had read all three. I had considered all three acceptable. I am not going to pretend I caught something I did not catch.
 
-Nobody raised an objection. **Wanjiru Kamau**, my survey lead, asked a clarifying question about the watch rotation that was not really a clarifying question — the wardroom still smelled of diesel from the morning engine run, which meant the ventilation handover had not fully cycled, which meant someone had opened a hull fitting after 07:00, which I noted and did not yet ask about — she asked it because she asks one clarifying question at every briefing whether or not she has one, on the grounds that it makes everyone else feel less stupid for asking theirs. It is the kind of thing she does. I answered her. She nodded. She wrote something on a notepad I could not read from across the table.
+Nobody raised an objection. **Wanjiru Kamau**, my survey lead, asked a clarifying question about the watch rotation that was not really a clarifying question - the wardroom still smelled of diesel from the morning engine run, which meant the ventilation handover had not fully cycled, which meant someone had opened a hull fitting after 07:00, which I noted and did not yet ask about - she asked it because she asks one clarifying question at every briefing whether or not she has one, on the grounds that it makes everyone else feel less stupid for asking theirs. It is the kind of thing she does. I answered her. She nodded. She wrote something on a notepad I could not read from across the table.
 
 On the morning of February fourteenth I trusted Wanjiru Kamau the way you trust the second person you ever hired, which is differently from how you trust anyone else; this trust was earned over eleven years and was not, on the morning of departure, in any way conditional. I'm telling you for the same reason I told you about Priya. You should know what I thought of these women before what happened, happened. Otherwise the part where I figure out what they did is going to read like I was suspicious of them all along, and I was not. I was running my boat with the people I had trusted longest, and that is a thing I would do again with the same information.
 
@@ -102,63 +126,63 @@ And then I put the white bakery box on the wardroom table and told them to enjoy
 
 This is the part the archive does not get.
 
----
+-
 
-The chemistry rack is forward of frame thirty-six, port side, three steps down from the main passageway, and it has the only door on the boat that is not actually a hatch. I went there because Mikael had told me to, and because I always do. The honest reason was Joel Reyes. I had not seen him since the thirteenth of November in Bremerhaven, and ninety-three days is enough time to develop opinions about a man he has done nothing to deserve. I wanted to see him before we sailed. I wanted to confirm, with my own eyes, that he was the man I had decided ninety-three days ago not to think about, and not someone else.
+The chemistry rack is forward of frame thirty-six, port side, three steps down from the main passageway, and it has the only door on the boat that is not actually a hatch. I went there because Mikael had told me to, and because I always do. The honest reason was Joel Reyes. I had not spoken with him since the thirteenth of November in Bremerhaven, and ninety-three days is enough time to develop opinions about a man he has done nothing to deserve. I wanted to see him before we sailed. I wanted to confirm, with my own eyes, that he was the man I had decided ninety-three days ago not to think about, and not someone else.
 
 He was kneeling by the lower environmental sensor rack with a multimeter in his left hand and a coffee in his right. He had not heard me come in, or had heard me and was pretending. The cup was one I recognized. I noted this and did not remark on it.
 
-"Joel."
+"Joel." 
 
-He did not look up. "Doctor."
+He did not look up. "Doctor." 
 
-"You have been on the boat since 05:30."
+"You have been on the boat since 05:30." 
 
-"I have."
+"I have." 
 
-"Have you eaten."
+"Have you eaten." 
 
-"I have not."
+"I have not." 
 
-"Joel."
+"Joel." 
 
-"I will."
+"I will." 
 
-"When."
+"When?" 
 
-He looked up. He had the same face. He was wearing a fleece I did not recognize, which I noted in spite of myself, and he had a smudge of thermal paste on his jaw he did not know about, which I did not tell him about. He was forty-four. He had built the diagnostic system the consortium had almost not funded. He had not been on the *Nansen* during the consortium final review in Bremerhaven, which was not a place for engineers — except for the part of it, late on the thirteenth of November, that was, briefly, a place for one.
+He looked up. He had the same face. He was wearing a fleece I did not recognize, which I noted in spite of myself, and he had a smudge of thermal paste on his jaw he did not know about, which I did not tell him about. He was forty-four. He had built the diagnostic system the consortium had almost not funded. He had not been on the *Nansen* during the consortium final review in Bremerhaven, which was not a place for engineers - except for the part of it, late on the thirteenth of November, that was, briefly, a place for one.
 
-"When, Joel."
+"When, Joel?" 
 
-"After channel handover."
+"After channel handover." 
 
-"That is not when you are going to eat. That is when you would like me to believe you are going to eat."
+"That is not when you are going to eat. That is when you would like me to believe you are going to eat." 
 
-He almost smiled. "After channel handover. With you."
+He almost smiled. "After channel handover. With you." 
 
-"Wardroom. 11:30."
+"Wardroom. 11:30." 
 
-"All right."
+"All right." 
 
-I left.
+I left. 
 
 I closed the door of the chemistry rack and stood in the passageway for approximately four seconds and did not think about anything in particular, which was a kind of thinking, and then I went up to the sail.
 
----
+-
 
 Mikael brought the *Nansen* out of Punta Arenas harbor at 09:14 in a wind I would have called moderate and that the harbor pilot called *picado*, which is the Spanish word for *choppy* and also for *minced*, and which I have always thought captured the Strait better than either English word does. The pilot left us at the channel mouth at 09:41. The handover was done by 09:43. Mikael stepped back from the helm and put his hand on my shoulder once and said "She's yours, Doctor" in the tone of a man handing back a borrowed book, and I said "Thank you, Captain" in the tone of a woman receiving one, and that was that.
 
 I took her out into the Strait.
 
-The Strait of Magellan in February is the color of the inside of a slate and is not, contrary to what every consortium pamphlet I have ever read insists, *beautiful*. It is a serious piece of water. It does not require my appreciation. I have stopped giving it. We rode the surface for the first eleven hours. The survey plan called for a long initialization run on the cable instrumentation before submersion. Mikael had also told me, in the sail, that he wanted to see the boat handle in the wind one more time before he handed her off completely — a thing he was no longer entitled to want, and which I let him have anyway.
+The Strait of Magellan in February is the color of the inside of a slate and is not, contrary to what every consortium pamphlet I have ever read insists, *beautiful*. It is a serious piece of water. It does not require my appreciation. I have stopped giving it. We rode the surface for the first eleven hours. The survey plan called for a long initialization run on the cable instrumentation before submersion. Mikael had also told me, in the sail, that he wanted to see the boat handle in the wind one more time before he handed her off completely - a thing he was no longer entitled to want, and which I let him have anyway.
 
 I ate with Joel at 11:31 in the wardroom, with Priya and Wanjiru and Tomás and three others I am not going to name in this chapter, because they are going to matter later and I do not want to introduce them in a paragraph about a meal. Joel ate. I watched him eat. He noticed me watching him eat and did not say anything about it. He has gotten better, over the years, at not saying things about it.
 
 I went to my cabin at 22:40. I did not, technically, need to. My watch did not start until 02:00. But I had been awake since 04:30 and I had run a briefing and taken command of a research boat and walked through every major system on her with her ship master and her engineer and her science department, and I had eaten one meal in front of a man I had not seen in ninety-three days, and I was, by the standards I hold myself to, tired.
 
-The cabin was the cabin. It always is. Three prior missions in it, and I do not redecorate. There was the bunk, the desk, the small bolted bookshelf with the four reference manuals I bring everywhere, and the picture of Diana in the silver frame. I had taken her out of my duffel and put her on the desk before the briefing. If I do not put it out before the briefing I do not put it out at all, and then I am the kind of commander who does not have a picture on her desk. I am not interested in being that. There was also, on the desk, the photo-postcard I had made that morning — a picture I had taken at the bakery, printed onto card stock at the post office on the way to the harbor — addressed to Voronezh, not yet written on. It would go out in three days when we cleared the next mail packet.
+The cabin was the cabin. It always is. Three prior missions in it, and I do not redecorate. There was the bunk, the desk, the small bolted bookshelf with the four reference manuals I bring everywhere, and the picture of Diana in the silver frame. I had taken her out of my duffel and put her on the desk before the briefing. If I do not put it out before the briefing I do not put it out at all, and then I am the kind of commander who does not have a picture on her desk. I am not interested in being that. There was also, on the desk, the photo-postcard I had made that morning - a picture I had taken at the bakery, printed onto card stock on the small card printer at my own desk at home before I left for the harbor - addressed to Voronezh, not yet written on. It would go out in three days when we cleared the next mail packet.
 
-Above the desk, taped to the bulkhead in the place where Norwegian Navy guidance suggests I should have hung the emergency-procedures card, were Diana's seven most recent drawings. They had stickers — gold stars and unicorns and the occasional dolphin and one triangle whose presence I have never been able to account for — applied by Diana herself, in places Diana had judged appropriate, which were not the places I would have judged appropriate, and which Diana had not been asked to justify. The drawings traveled with me. The emergency-procedures card was in the drawer where it belonged, accessible — for the consortium safety office reading this. The drawings were where I could see them when I was working. The consortium safety office can work out the difference.
+Above the desk, taped to the bulkhead in the place where Norwegian Navy guidance suggests I should have hung the emergency-procedures card, were Diana's seven most recent drawings. They had stickers - gold stars and unicorns and the occasional dolphin and one triangle whose presence I have never been able to account for - applied by Diana herself, in places Diana had judged appropriate, which were not the places I would have judged appropriate, and which Diana had not been asked to justify. The drawings traveled with me. The emergency-procedures card was in the drawer where it belonged, accessible - for the consortium safety office reading this. The drawings were where I could see them when I was working. The consortium safety office can work out the difference.
 
 Diana in the picture was four. She was in kindergarten now, and the newspaper clipping above her desk was the one I had pretended, when I found out, to be irritated by. I sat down at the desk. I looked at the picture for the count of ten. I told her, silently, what I tell her at the start of every mission, which is none of your business and not for this page.
 
@@ -178,7 +202,7 @@ I read them again that night anyway. I do not know why. I am a person who reads 
 
 Here is what I do not tell the consortium archive: as I closed the laptop I had the smallest possible feeling about the second note. Not a thought. A feeling. The kind of thing a person who has been at sea for twenty-three years gets and then sets aside, because the alternative is to spend a career indulging every shadow at the periphery of competence. I set it aside. I went to sleep.
 
-I am leaving this on the page not because the feeling turned out to be correct — it did, and the correctness was useless. At 22:51 on the fourteenth of February I could not have done anything with it that I had not already done with the laptop open. The consortium archive has the firmware log and the timestamps and the official record. What it does not have is the feeling I had that night, and that is the part of this story I most want, looking back, to have respected.
+I am leaving this on the page not because the feeling turned out to be correct - it did, and the correctness was useless. At 22:51 on the fourteenth of February I could not have done anything with it that I had not already done with the laptop open. The consortium archive has the firmware log and the timestamps and the official record. What it does not have is the feeling I had that night, and that is the part of this story I most want, looking back, to have respected.
 
 I slept for three hours and forty minutes. I had a watch.
 
