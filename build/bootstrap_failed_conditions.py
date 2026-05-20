@@ -4,7 +4,7 @@ Heuristic: for each `must-implement` item, derive a "this is not enforced"
 failed-condition. Plus add a verification-not-passing failed-condition where
 verification field exists.
 
-Output is bootstrap-quality — each concept gets failed-conditions that are
+Output is bootstrap-quality - each concept gets failed-conditions that are
 mechanical negations of must-implement. A subagent enhancement pass can later
 refine to add more nuanced failed-conditions (e.g., partial-implementation
 detection, edge cases, common pitfall patterns).
@@ -13,7 +13,7 @@ Reads:  docs/reference-implementation/_per-chapter/*.yaml
 Writes: same files, in place, with failed-conditions added per concept.
 
 Skip rule: concepts with `must-implement: []` (purely conceptual / philosophical
-entries) get `failed-conditions: []` — there's nothing to fail against.
+entries) get `failed-conditions: []` - there's nothing to fail against.
 
 Verb-flip patterns:
   "Application reads/writes hit local storage as primary"

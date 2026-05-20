@@ -21,8 +21,8 @@ Usage (CLI):
     # Upload (or replace)
     python build/voice_upload.py put voss \\
       --audio references/voss-30s.wav \\
-      --transcript "Procurement isn't where compliance lives — it's where it dies." \\
-      --display-name "Council member — Voss (enterprise lens)" \\
+      --transcript "Procurement isn't where compliance lives - it's where it dies." \\
+      --display-name "Council member - Voss (enterprise lens)" \\
       --language en-US
 
     # Delete
@@ -102,7 +102,7 @@ def _validate_audio(path: Path) -> None:
 
 def list_voices(*, base_url: str | None = None, api_key: str | None = None,
                 refresh: bool = False) -> list[dict[str, Any]]:
-    """GET /v1/audio/voices — return the parsed `voices` list."""
+    """GET /v1/audio/voices - return the parsed `voices` list."""
     url = f"{_resolve_base_url(base_url)}/audio/voices"
     params = {"refresh": 1} if refresh else {}
     r = httpx.get(url, headers=_headers(_resolve_api_key(api_key)),
@@ -126,7 +126,7 @@ def put_voice(voice_id: str, audio_path: str | Path, transcript: str, *,
               display_name: str | None = None, language: str | None = None,
               notes: str | None = None, base_url: str | None = None,
               api_key: str | None = None) -> dict[str, Any]:
-    """PUT /v1/audio/voices/{voice_id} — create or replace.
+    """PUT /v1/audio/voices/{voice_id} - create or replace.
 
     Returns the server's response (id, transcript, sample_rate, etc.).
     Raises VoiceUploadError for client-side validation failures and
@@ -141,7 +141,7 @@ def put_voice(voice_id: str, audio_path: str | Path, transcript: str, *,
         raise VoiceUploadError(
             f"transcript too short ({len(transcript)} chars; min "
             f"{MIN_TRANSCRIPT_CHARS}). Chatterbox uses the transcript "
-            f"for cloning fidelity — don't skip it."
+            f"for cloning fidelity - don't skip it."
         )
 
     url = f"{_resolve_base_url(base_url)}/audio/voices/{voice_id}"
@@ -258,7 +258,7 @@ def _build_parser() -> argparse.ArgumentParser:
     p_put.add_argument("--transcript-file", default=None,
                        help="read transcript from a UTF-8 text file")
     p_put.add_argument("--display-name", default=None,
-                       help="human-friendly label, e.g. 'Council member — Voss'")
+                       help="human-friendly label, e.g. 'Council member - Voss'")
     p_put.add_argument("--language", default=None, help="BCP-47 tag (en-US, ru, pt-BR, …)")
     p_put.add_argument("--notes", default=None,
                        help="free-text provenance, e.g. 'recorded 2026-04-28, SM7B'")

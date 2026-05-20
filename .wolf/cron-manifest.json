@@ -57,7 +57,7 @@
       "id": "cerebrum-reflection",
       "name": "Cerebrum reflection",
       "schedule": "0 3 * * 0",
-      "description": "Weekly AI review of cerebrum.md — prune stale entries, consolidate duplicates",
+      "description": "Weekly AI review of cerebrum.md - prune stale entries, consolidate duplicates",
       "action": {
         "type": "ai_task",
         "params": {

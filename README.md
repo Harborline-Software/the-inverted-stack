@@ -3,15 +3,15 @@
 A practitioner book for software architects, technical founders, and senior engineers
 building production-grade local-first systems.
 
-**Status:** In active development — Part I drafting
+**Status:** In active development - Part I drafting
 
 ---
 
 ## What This Book Is
 
 Modern SaaS puts the database in someone else's cloud and calls it a feature. *The Inverted
-Stack* argues for a different default: a full-capability node on the user's machine — UI,
-business logic, sync daemon, and encrypted local storage — with the cloud reduced to a
+Stack* argues for a different default: a full-capability node on the user's machine - UI,
+business logic, sync daemon, and encrypted local storage - with the cloud reduced to a
 relay and backup peer.
 
 This is not a toy sync demo. It is a complete architecture for production software:
@@ -27,18 +27,18 @@ Part II of the book documents what failed on first inspection and what changed t
 **Sunfish** (`github.com/ctwoodwa/Sunfish`) is the open-source reference implementation
 developed alongside this book.
 
-- **Anchor** — Zone A local-first desktop (.NET MAUI Blazor Hybrid)
-- **Bridge** — Zone C hybrid multi-tenant SaaS (.NET Aspire, Blazor Server)
+- **Anchor** - Zone A local-first desktop (.NET MAUI Blazor Hybrid)
+- **Bridge** - Zone C hybrid multi-tenant SaaS (.NET Aspire, Blazor Server)
 
 ## Structure
 
 | Part | Chapters | Words |
 |---|---|---|
-| I — The Thesis and the Pain | 1–4 | ~15,000 |
-| II — The Council Reads the Paper | 5–10 | ~20,000 |
-| III — The Reference Architecture | 11–16 | ~22,000 |
-| IV — Implementation Playbooks | 17–20 | ~14,000 |
-| Epilogue + Appendices | — | ~10,500 |
+| I - The Thesis and the Pain | 1–4 | ~15,000 |
+| II - The Council Reads the Paper | 5–10 | ~20,000 |
+| III - The Reference Architecture | 11–16 | ~22,000 |
+| IV - Implementation Playbooks | 17–20 | ~14,000 |
+| Epilogue + Appendices | - | ~10,500 |
 | **Total** | **20 chapters** | **~83,500** |
 
 See `book-structure.md` for the full chapter-by-chapter outline.
@@ -62,7 +62,7 @@ export TTS_API_KEY=<bearer-token>            # required, from the TTS server adm
 ./build/render-chapter.sh ch01-departure      # Vol 2 chapter slug
 ```
 
-The chapter slug is the MP3 filename without the extension — the same slug that
+The chapter slug is the MP3 filename without the extension - the same slug that
 appears under `build/output/audiobook/vol-1/` or `vol-2/`. List existing
 renders to find slugs:
 
@@ -79,7 +79,7 @@ What the wrapper does (and why):
 - Defaults the preset to `ciufi-galeazzi` (the cloned voice currently used for
   Vol 2). Override with `--preset <name>` if needed.
 - Wraps the python process in `caffeinate -disu` so display sleep, idle sleep,
-  and system sleep cannot kill the render — chapter renders take 30-90 minutes
+  and system sleep cannot kill the render - chapter renders take 30-90 minutes
   wall-clock with the cloned voice and per-sentence chunking.
 - Detaches via `nohup &` so closing the launching shell does not terminate the
   render. The script exits in ~1 second; the render keeps running.
@@ -103,7 +103,7 @@ Higgs Audio, voice cloning), see `build/AUDIO-DOCKER.md` and run
 
 ## Contributing
 
-This book is CC-BY 4.0. Contributions welcome — see `CONTRIBUTING.md`.
+This book is CC-BY 4.0. Contributions welcome - see `CONTRIBUTING.md`.
 Technical corrections, improved examples, and additional war stories are especially valuable.
 
 ## License

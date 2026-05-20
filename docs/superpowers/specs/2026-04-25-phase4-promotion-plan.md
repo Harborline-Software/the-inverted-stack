@@ -11,15 +11,15 @@ After Phase 3 completes, every chapter (except those promoted early) will have a
 Before touching individual chapters, run the integrity checks:
 
 ```bash
-# 1. Reference integrity — every jurisdiction inline appears in Appendix F
+# 1. Reference integrity - every jurisdiction inline appears in Appendix F
 python build/check_audit.py
 # Expected: PASS (or list of orphans to add to Appendix F)
 
-# 2. Stale-draft check — no source edited after Phase 3 began
+# 2. Stale-draft check - no source edited after Phase 3 began
 python build/check_stale.py
 # Expected: OK (or list of stale chapters to re-run via voice-pass --only --force)
 
-# 3. Word counts (Phase 0 closure deferred this — informational only)
+# 3. Word counts (Phase 0 closure deferred this - informational only)
 python build/word-count.py
 ```
 
@@ -68,7 +68,7 @@ Per `vol-1/voice-plan.yaml`, the remaining 26 chapters and their voice mappings.
 | 25 | appendix-d-testing-the-inverted-stack | sinek | [ ] PROMOTE / REJECT | |
 | 26 | appendix-e-citation-style | sinek | [ ] PROMOTE / REJECT | |
 
-(appendix-f-regulatory-coverage is intentionally omitted — pure tabular reference content)
+(appendix-f-regulatory-coverage is intentionally omitted - pure tabular reference content)
 
 ---
 
@@ -157,8 +157,8 @@ python build/audiobook.py --force --all
 
 After all 26 promote/reject decisions:
 
-- **If ≥3 chapters required REJECT** — recycle through the literary-board agent for those chapters
-- **Else** — decide between professional copyedit pass (~$2-4k) and ship-as-is
+- **If ≥3 chapters required REJECT** - recycle through the literary-board agent for those chapters
+- **Else** - decide between professional copyedit pass (~$2-4k) and ship-as-is
 - **First-use rule remediation** (567 violations from `check_first_use.py`) is queued for post-voice-pass cleanup; do it before the copyedit pass
 
 ---
@@ -171,4 +171,4 @@ After Phase 4 closure, append to `.wolf/cerebrum.md` `## Key Learnings`:
 - Which voice mappings produced the highest-quality output
 - Whether single-mode vs polish/normalize tier proved necessary (Phase 2 evidence pointed to single-mode sufficient)
 - Which agent rules earned their place vs. were over-engineered
-- Total cost (token spend across Phase 3) — confirms or revises §9 budget estimate
+- Total cost (token spend across Phase 3) - confirms or revises §9 budget estimate

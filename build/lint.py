@@ -152,7 +152,7 @@ for rel_path, key in EXPECTED_CHAPTERS:
         n = int(m.group(1))
         if n < 1 or n > 23:
             errors.append(
-                f"  ERROR [{key}] Cross-reference to Chapter {n} — out of range (1–23)"
+                f"  ERROR [{key}] Cross-reference to Chapter {n} - out of range (1–23)"
             )
             xref_errors += 1
 
@@ -211,12 +211,12 @@ print("LINT SUMMARY")
 print("=" * 60)
 
 if errors:
-    print(f"\nERRORS ({len(errors)}) — must fix before assembly:")
+    print(f"\nERRORS ({len(errors)}) - must fix before assembly:")
     for e in errors:
         print(e)
 
 if warnings:
-    print(f"\nWARNINGS ({len(warnings)}) — review before publishing:")
+    print(f"\nWARNINGS ({len(warnings)}) - review before publishing:")
     for w in warnings:
         print(w)
 

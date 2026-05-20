@@ -1,12 +1,12 @@
-"""STT QC spike — Phase 1 word-level diff between source markdown and Whisper transcript.
+"""STT QC spike - Phase 1 word-level diff between source markdown and Whisper transcript.
 
 Usage:
     python3 build/stt_spike.py <chapter.mp3> <chapter.md>
     python3 build/stt_spike.py --model base build/output/audiobook/ch01-*.mp3 vol-1/.../ch01-*.md
 
 Output:
-    build/output/stt_spike/<chapter-stem>_diff.md  — word-level diff report
-    build/output/stt_spike/<chapter-stem>_transcript.txt — raw Whisper output
+    build/output/stt_spike/<chapter-stem>_diff.md  - word-level diff report
+    build/output/stt_spike/<chapter-stem>_transcript.txt - raw Whisper output
 
 The report leaves a blank CLASSIFICATION column for human review:
     REAL | VARIANT | NOISE | FOREIGN | STALE
@@ -48,7 +48,7 @@ def _strip_inline_code(text: str) -> str:
     TTS reads code refs (`Sunfish.Kernel.Security`) and STT transcribes the
     spoken form ('sunfish kernel security'). If we removed the content
     entirely, the transcript words would appear as REAL insertions in the
-    diff — that was the false-positive cluster Phase 1 surfaced (8 sites in
+    diff - that was the false-positive cluster Phase 1 surfaced (8 sites in
     ch15). Preserving content lets the downstream punctuation-strip
     normalization align 'Sunfish.Kernel.Security' source with 'sunfish
     kernel security' transcript (dots become whitespace; lowercase matches).
@@ -82,7 +82,7 @@ def _strip_punctuation(text: str) -> str:
     """Strip punctuation but keep word boundaries and spaces."""
     # Keep apostrophes inside words (don't → dont)
     text = re.sub(r"(?<!\w)'(?!\w)", " ", text)
-    text = re.sub(r"[.,;:!?\"'—–\-()[\]{}|/\\@#$%^&*+=<>~`]", " ", text)
+    text = re.sub(r"[.,;:!?\"'-–\-()[\]{}|/\\@#$%^&*+=<>~`]", " ", text)
     return text
 
 
@@ -171,7 +171,7 @@ def write_report(
     elapsed_s: float,
 ) -> None:
     lines = []
-    lines.append(f"# STT Spike Report — {chapter_stem}")
+    lines.append(f"# STT Spike Report - {chapter_stem}")
     lines.append(f"")
     lines.append(f"| Field | Value |")
     lines.append(f"|---|---|")
@@ -185,11 +185,11 @@ def write_report(
     lines.append(f"")
     lines.append(f"## Classification key")
     lines.append(f"")
-    lines.append(f"- **REAL** — TTS dropped, duplicated, or audibly mispronounced")
-    lines.append(f"- **VARIANT** — TTS correct, STT transcribed differently (e.g. proper noun phonetic rendering)")
-    lines.append(f"- **NOISE** — Punctuation / formatting artifact that survived normalisation")
-    lines.append(f"- **FOREIGN** — Non-English passage (Bangla, Spanish, Korean, etc.); low STT confidence expected")
-    lines.append(f"- **STALE** — Cast-swap residue: old character name in audio that is now different in source")
+    lines.append(f"- **REAL** - TTS dropped, duplicated, or audibly mispronounced")
+    lines.append(f"- **VARIANT** - TTS correct, STT transcribed differently (e.g. proper noun phonetic rendering)")
+    lines.append(f"- **NOISE** - Punctuation / formatting artifact that survived normalisation")
+    lines.append(f"- **FOREIGN** - Non-English passage (Bangla, Spanish, Korean, etc.); low STT confidence expected")
+    lines.append(f"- **STALE** - Cast-swap residue: old character name in audio that is now different in source")
     lines.append(f"")
     lines.append(f"## Diff regions")
     lines.append(f"")
@@ -199,8 +199,8 @@ def write_report(
     for n, r in enumerate(regions, 1):
         ctx_before = " ".join(r["ctx_before"][-5:])  # last 5 words of before-context
         ctx_after = " ".join(r["ctx_after"][:5])    # first 5 words of after-context
-        src_rm = " ".join(r["src_removed"]) if r["src_removed"] else "—"
-        tts_add = " ".join(r["tts_added"]) if r["tts_added"] else "—"
+        src_rm = " ".join(r["src_removed"]) if r["src_removed"] else "-"
+        tts_add = " ".join(r["tts_added"]) if r["tts_added"] else "-"
         # Escape pipe chars in content
         for s in (ctx_before, ctx_after, src_rm, tts_add):
             s = s.replace("|", "\\|")

@@ -64,16 +64,16 @@ CHAPTER_ORDER = [
 ]
 
 KLEPPMANN_PROPERTIES = {
-    "P1": "No spinners — fast, work happens locally",
+    "P1": "No spinners - fast, work happens locally",
     "P2": "Your work is not trapped on one device",
     "P3": "The network is optional",
     "P4": "Seamless collaboration with colleagues",
-    "P5": "The Long Now — data outlives vendor and subscription",
+    "P5": "The Long Now - data outlives vendor and subscription",
     "P6": "Security and privacy by default",
     "P7": "You retain ultimate ownership and control",
 }
 
-# Kill-triggers per Kleppmann property — escalation criteria when conformance
+# Kill-triggers per Kleppmann property - escalation criteria when conformance
 # regresses. Surfaced by universal-planning Stage 0 Check 0.11 (zombie-project
 # anti-pattern defense). Lives in metadata, not per-concept.
 KILL_TRIGGERS = {
@@ -105,9 +105,9 @@ KILL_TRIGGERS = {
         "Conformance regresses below 90% for 3 consecutive sprints",
     ],
     "P6": [
-        "Discovery of architectural backdoor in design — full architectural review",
+        "Discovery of architectural backdoor in design - full architectural review",
         "Any content readable by relay (zero-knowledge violation)",
-        "Cryptographic primitive discovered with known weakness — algorithm migration triggered",
+        "Cryptographic primitive discovered with known weakness - algorithm migration triggered",
         "Endpoint compromise scope undocumented for any major data class",
         "Conformance regresses below 95% for 3 consecutive sprints",
     ],
@@ -203,12 +203,12 @@ def main() -> int:
             {
                 "synthesizer": "ch14-sync-daemon-protocol",
                 "sources": ["appendix-a-sync-daemon-wire-protocol"],
-                "note": "Ch14 SYNC-* concepts describe the daemon at the protocol/architecture level; Appendix A WIRE-* concepts specify the byte-level wire format. Both are normative — Ch14 owns semantics, Appendix A owns format.",
+                "note": "Ch14 SYNC-* concepts describe the daemon at the protocol/architecture level; Appendix A WIRE-* concepts specify the byte-level wire format. Both are normative - Ch14 owns semantics, Appendix A owns format.",
             },
             {
                 "synthesizer": "ch15-security-architecture",
                 "sources": ["appendix-b-threat-model-worksheets"],
-                "note": "Ch15 KEY-*/SEC-* concepts define security primitives and architecture; Appendix B THREAT-*/SEC-*/MITIG-* concepts define threat-model worksheet methodology + named actors + per-actor mitigations. Complementary — Ch15 owns mechanism, Appendix B owns runbook.",
+                "note": "Ch15 KEY-*/SEC-* concepts define security primitives and architecture; Appendix B THREAT-*/SEC-*/MITIG-* concepts define threat-model worksheet methodology + named actors + per-actor mitigations. Complementary - Ch15 owns mechanism, Appendix B owns runbook.",
             },
             {
                 "synthesizer": "appendix-d-testing-the-inverted-stack",
@@ -229,7 +229,7 @@ def main() -> int:
                     "ch15-security-architecture",
                     "ch16-persistence-beyond-the-node",
                 ],
-                "note": "Epilogue EPI-* concepts are obligation contracts — each names what a Part III chapter must deliver to qualify as local-first under this book's definition.",
+                "note": "Epilogue EPI-* concepts are obligation contracts - each names what a Part III chapter must deliver to qualify as local-first under this book's definition.",
             },
         ],
         "chapters": chapters_meta,
@@ -237,7 +237,7 @@ def main() -> int:
             p: KLEPPMANN_PROPERTIES[p] for p in sorted(KLEPPMANN_PROPERTIES.keys())
         },
         "kill-triggers-by-property": KILL_TRIGGERS,
-        "schema-version-note": "v1.1 — added security-axis, applies-to-roles, failed-conditions per concept; kill-triggers per primitive cluster (this metadata field). See SCHEMA.md.",
+        "schema-version-note": "v1.1 - added security-axis, applies-to-roles, failed-conditions per concept; kill-triggers per primitive cluster (this metadata field). See SCHEMA.md.",
     }
 
     master = {
@@ -276,7 +276,7 @@ def main() -> int:
             "schema-version": "1.0",
             "view": "Foundational concepts grouped by Kleppmann property (P1-P7)",
             "purpose": "Feeds the local-first-properties Claude skill (any local-first repo can be scored against P1-P7 from this subset)",
-            "scope-filter": "foundational only — inverted-stack-specific concepts excluded so this view is portable to non-Inverted-Stack local-first implementations",
+            "scope-filter": "foundational only - inverted-stack-specific concepts excluded so this view is portable to non-Inverted-Stack local-first implementations",
             "concepts-per-property": {
                 p: len(foundational_by_property.get(p, []))
                 for p in sorted(KLEPPMANN_PROPERTIES.keys())

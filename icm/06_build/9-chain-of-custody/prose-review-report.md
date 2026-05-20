@@ -1,4 +1,4 @@
-# Prose-review report — #9 Chain-of-Custody for Multi-Party Transfers
+# Prose-review report - #9 Chain-of-Custody for Multi-Party Transfers
 
 **Iteration:** iter-0027
 **Date:** 2026-04-28
@@ -11,16 +11,16 @@
 
 Strict scope per dispatch:
 
-- `vol-1/part-3-reference-architecture/ch15-security-architecture.md` — §Chain-of-Custody for Multi-Party Transfers (H2 starting line 583, ending before §GDPR Article 17 and Crypto-Shredding at line 674). ~2,394 words.
-- `vol-1/appendices/appendix-b-threat-model-worksheets.md` — §Section 5 — Chain-of-Custody Worksheet (lines 237–300). ~548 words.
+- `vol-1/part-3-reference-architecture/ch15-security-architecture.md` - §Chain-of-Custody for Multi-Party Transfers (H2 starting line 583, ending before §GDPR Article 17 and Crypto-Shredding at line 674). ~2,394 words.
+- `vol-1/appendices/appendix-b-threat-model-worksheets.md` - §Section 5 - Chain-of-Custody Worksheet (lines 237–300). ~548 words.
 
 Out of scope (sealed): §Forward Secrecy (refs [14]–[19]); §Endpoint Compromise (refs [20]–[27]); §Supply Chain Security; refs [1]–[27] in the Ch15 reference list; the HTML annotation header at Ch15:585.
 
 ---
 
-## 1. Edits applied — Ch15
+## 1. Edits applied - Ch15
 
-### Edit 1 — Line 621 paragraph split (paragraph length cap)
+### Edit 1 - Line 621 paragraph split (paragraph length cap)
 
 **Before:** Single paragraph, 7 sentences (over 6-sentence cap).
 
@@ -30,7 +30,7 @@ Out of scope (sealed): §Forward Secrecy (refs [14]–[19]); §Endpoint Compromi
 
 **Preservation honored:** eIDAS Article 41 / Article 42 sentence preserved verbatim per tech-review preservation flag; design-decisions annotation preserved verbatim.
 
-### Edit 2 — Line 633 weak-verb / passive-victim phrasing
+### Edit 2 - Line 633 weak-verb / passive-victim phrasing
 
 **Before:**
 > As each event is appended to the export log, its hash incorporates into a running Merkle root. The root signs and exports alongside each event batch. ... Any omission or reordering breaks the Merkle chain and is detectable on the regulator's side without requiring any cooperation from the operator.
@@ -40,17 +40,17 @@ Out of scope (sealed): §Forward Secrecy (refs [14]–[19]); §Endpoint Compromi
 
 **Categories addressed:**
 
-- **Active voice / agency vocabulary** — "the export pipeline folds" replaces "incorporates into" (passive-victim, no agent). "The pipeline signs the root and emits it" replaces "The root signs and exports alongside" (the root cannot sign itself; the pipeline performs both acts).
-- **Strong verbs** — `lands`, `folds`, `emits` over `is appended`, `incorporates into`, `exports alongside`.
-- **Active voice on detection clause** — "the regulator detects the gap" replaces "is detectable on the regulator's side."
+- **Active voice / agency vocabulary** - "the export pipeline folds" replaces "incorporates into" (passive-victim, no agent). "The pipeline signs the root and emits it" replaces "The root signs and exports alongside" (the root cannot sign itself; the pipeline performs both acts).
+- **Strong verbs** - `lands`, `folds`, `emits` over `is appended`, `incorporates into`, `exports alongside`.
+- **Active voice on detection clause** - "the regulator detects the gap" replaces "is detectable on the regulator's side."
 
 **Preservation honored:** The Crosby–Wallach [30] + RFC 9162 [31] citations sit on the prior sentence and remain untouched; technical content (Merkle-tree commitment, append-only construction, root chain consistency) is unchanged.
 
 ---
 
-## 2. Edits applied — App B
+## 2. Edits applied - App B
 
-### Edit 3 — Line 280 passive-victim phrasing
+### Edit 3 - Line 280 passive-victim phrasing
 
 **Before:** "Record the TSA certificate fingerprint locally so a substituted endpoint is detectable."
 
@@ -62,7 +62,7 @@ Out of scope (sealed): §Forward Secrecy (refs [14]–[19]); §Endpoint Compromi
 
 ## 3. Edits considered but not applied
 
-### Ch15:645 honesty-bound — TSA absence
+### Ch15:645 honesty-bound - TSA absence
 
 **Sentence:** "Deployments without a TSA anchor have no defense against local-clock manipulation, and the compliance posture must declare this honestly."
 
@@ -72,11 +72,11 @@ Out of scope (sealed): §Forward Secrecy (refs [14]–[19]); §Endpoint Compromi
 
 **Sentence:** "...under EU deployments, a qualified trust service provider (QTSP) issuing qualified electronic time stamps to which eIDAS Article 41 [29] attaches the legal presumption of accuracy and integrity (the technical requirements for qualified time stamps live in Article 42)..."
 
-**Decision:** Not touched. Tech-reviewer just corrected this at iter-0026 to fix a material factual issue (Article 41 governs legal effect; Article 42 holds the technical requirements). The phrasing is now technically precise and load-bearing. Prose-reviewer scope is structural (the surrounding paragraph break) — not the sentence's content. Honored.
+**Decision:** Not touched. Tech-reviewer just corrected this at iter-0026 to fix a material factual issue (Article 41 governs legal effect; Article 42 holds the technical requirements). The phrasing is now technically precise and load-bearing. Prose-reviewer scope is structural (the surrounding paragraph break) - not the sentence's content. Honored.
 
 ### Ch15:621 design-decisions annotation
 
-**Annotation:** `<!-- design-decisions: §5 #9 + §8.2 — two-signature transfer receipt + RFC 3161 TSA anchoring is the architectural commitment surfaced at design-decisions §5 entry #9 ("multi-party signed transfer receipts, evidence-class temporal attestation"); §8.2 explicitly defers the formalization of multi-party signed transfer receipts to this writing task. -->`
+**Annotation:** `<!-- design-decisions: §5 #9 + §8.2 - two-signature transfer receipt + RFC 3161 TSA anchoring is the architectural commitment surfaced at design-decisions §5 entry #9 ("multi-party signed transfer receipts, evidence-class temporal attestation"); §8.2 explicitly defers the formalization of multi-party signed transfer receipts to this writing task. -->`
 
 **Decision:** Preserved verbatim. The annotation is the resolution of the prior CLAIM marker and documents the design-decisions provenance for the construction. Moved with the second paragraph in the split (the protocol mechanics paragraph) since the annotation documents the architectural commitment that paragraph specifies. Honored.
 
@@ -94,7 +94,7 @@ Out of scope (sealed): §Forward Secrecy (refs [14]–[19]); §Endpoint Compromi
 
 ### Ch15:623 AdES inline phrase
 
-**Sentence:** "Regulated deployments — those that produce evidence in legal proceedings, satisfy eIDAS AdES (Advanced Electronic Signature) requirements for evidence preservation, or comply with sector-specific record-keeping standards — declare a qualified TSA in their compliance posture."
+**Sentence:** "Regulated deployments - those that produce evidence in legal proceedings, satisfy eIDAS AdES (Advanced Electronic Signature) requirements for evidence preservation, or comply with sector-specific record-keeping standards - declare a qualified TSA in their compliance posture."
 
 **Decision:** Not touched. Tech-reviewer flagged this as "non-blocking" optional tightening (AdES is technically Articles 26–34; preservation services are Article 34). Three considered rewrites:
 
@@ -126,13 +126,13 @@ None sharpens the sentence. The current phrasing communicates the load-bearing t
 | Hedging as default | None found | "must declare this honestly" is intentional honesty-bound, not hedge. |
 | Synonym cycling | None found | TSA / QTSP are distinct technical terms; transferor/recipient are roles, not synonyms; Merkle commitment / root / chain / tree are technically distinct usages. |
 | Anti-AI tells §1 (puffery) | None found | No "stands as", "pivotal", "indelible". |
-| Anti-AI tells §3 (-ing tail-phrases) | None load-bearing-free | Line 633 "without requiring any cooperation from the operator" is load-bearing — names the structural property of the Merkle proof. Kept. |
+| Anti-AI tells §3 (-ing tail-phrases) | None load-bearing-free | Line 633 "without requiring any cooperation from the operator" is load-bearing - names the structural property of the Merkle proof. Kept. |
 | Anti-AI tells §8 (copula avoidance) | None | No "serves as a", "stands as a", "marks a", "boasts" misuse. |
 | Anti-AI tells §16 (significance puffery) | None | |
 | Anti-AI tells §17 (title case in headings) | H3/H4 sentence case ✓ | H2 title case is chapter-wide house style for Ch15 (cf. all peer H2s). Not flagged. |
 | Anti-AI tells §27 (persuasive authority tropes) | None | Line 609 "is not stylistic" is the **good** version: declarative claim, not "what really matters." |
 | Anti-AI tells §29 (fragmented headers) | None | Every H3 is followed by substantive first sentence, not a restatement of the heading. |
-| Internal extension number leaks | None | Section uses named cross-references (`§Key-Loss Recovery sub-pattern 48f`, `§Collaborator Revocation sub-pattern 45f`, `§Endpoint Compromise`). No bare `(#9)`/`(#48)`/`(#45)`/`(#47)` parentheticals. Sub-pattern labels (§9a/§9b/§9c) are intra-section labels per house style — preserved. |
+| Internal extension number leaks | None | Section uses named cross-references (`§Key-Loss Recovery sub-pattern 48f`, `§Collaborator Revocation sub-pattern 45f`, `§Endpoint Compromise`). No bare `(#9)`/`(#48)`/`(#45)`/`(#47)` parentheticals. Sub-pattern labels (§9a/§9b/§9c) are intra-section labels per house style - preserved. |
 | Restatements | None | Section economical. |
 
 ---
@@ -141,12 +141,12 @@ None sharpens the sentence. The current phrasing communicates the load-bearing t
 
 **Ch15 (Part III specification voice):** confirmed on-voice.
 
-- Opens with the dashcam scenario (one concrete grounding case before snapping to spec voice — house pattern).
+- Opens with the dashcam scenario (one concrete grounding case before snapping to spec voice - house pattern).
 - "What chain-of-custody is not" subsection establishes negative space crisply.
 - Sub-patterns 9a/9b/9c each open with a one-sentence statement of what the sub-pattern is, then enumerate fields/mechanics, then close with a behavior or consequence.
-- FAILED conditions and kill trigger are specification-grade — bullet enumeration with named failure modes.
+- FAILED conditions and kill trigger are specification-grade - bullet enumeration with named failure modes.
 - Implementation surfaces names four event contracts and explicitly marks them illustrative ("the concrete schema lands when `Sunfish.Kernel.Custody` reaches its first milestone").
-- Closes with the cross-reference to App B §Section 5 — round-trip preserved.
+- Closes with the cross-reference to App B §Section 5 - round-trip preserved.
 
 **App B §Section 5 (worksheet/checklist register):** confirmed on-voice.
 
@@ -164,14 +164,14 @@ None sharpens the sentence. The current phrasing communicates the load-bearing t
 
 | Flag | Source | Honored? |
 |---|---|---|
-| Ch15:645 honesty-bound (TSA-absence declaration) | Tech-review §9 | YES — sentence preserved verbatim. |
-| Ch15:621 eIDAS Article 41 / Article 42 framing | Tech-review §3 | YES — content preserved verbatim; only paragraph break introduced. |
-| Ch15:621 `<!-- design-decisions: §5 #9 + §8.2 -->` annotation | Tech-review §1 | YES — preserved verbatim; moved with second paragraph in split. |
-| Sub-pattern labels §9a / §9b / §9c | Dispatch | YES — not renumbered or relabeled. |
-| Ch15:585 HTML annotation header | Dispatch | YES — out-of-scope, untouched. |
-| Refs [1]–[27] in Ch15 reference list | Dispatch | YES — untouched. |
-| §Forward Secrecy and §Endpoint Compromise | Dispatch | YES — untouched. |
-| App B §Section 5 worksheet register | Dispatch | YES — only one micro-edit (App B line 280 active-voice fix); register intact. |
+| Ch15:645 honesty-bound (TSA-absence declaration) | Tech-review §9 | YES - sentence preserved verbatim. |
+| Ch15:621 eIDAS Article 41 / Article 42 framing | Tech-review §3 | YES - content preserved verbatim; only paragraph break introduced. |
+| Ch15:621 `<!-- design-decisions: §5 #9 + §8.2 -->` annotation | Tech-review §1 | YES - preserved verbatim; moved with second paragraph in split. |
+| Sub-pattern labels §9a / §9b / §9c | Dispatch | YES - not renumbered or relabeled. |
+| Ch15:585 HTML annotation header | Dispatch | YES - out-of-scope, untouched. |
+| Refs [1]–[27] in Ch15 reference list | Dispatch | YES - untouched. |
+| §Forward Secrecy and §Endpoint Compromise | Dispatch | YES - untouched. |
+| App B §Section 5 worksheet register | Dispatch | YES - only one micro-edit (App B line 280 active-voice fix); register intact. |
 
 ---
 
@@ -190,7 +190,7 @@ Total: 3 edits across 2 files. No technical content changed. No citations change
 
 **Prose-review → voice-check PASSES.**
 
-Section advances to voice-check (Stage 6 — human only) with:
+Section advances to voice-check (Stage 6 - human only) with:
 
 - 0 paragraph-length violations remaining (1 found, 1 fixed).
 - 0 active-voice violations remaining (2 found, 2 fixed).

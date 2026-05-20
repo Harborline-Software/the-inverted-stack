@@ -61,14 +61,14 @@ ET.register_namespace("", NS["opf"])
 ET.register_namespace("dc", NS["dc"])
 
 OVERLAY_ACTIVE_CSS = """
-/* EPUB 3 Media Overlay highlight — applied by the reading system to the
+/* EPUB 3 Media Overlay highlight - applied by the reading system to the
    currently-narrated text fragment. Subtle yellow that works in light + dark. */
 .overlay-active {
     background-color: rgba(255, 235, 59, 0.4);
     transition: background-color 200ms ease-in-out;
 }
 .overlay-fragment {
-    /* No default styling — only highlighted when active. */
+    /* No default styling - only highlighted when active. */
 }
 """
 
@@ -113,7 +113,7 @@ def _paragraph_text(html_body: str) -> str:
 
 
 def _is_omission_chunk(source_text: str) -> bool:
-    """A chunk that announces an omitted code listing/diagram/table — has no
+    """A chunk that announces an omitted code listing/diagram/table - has no
     matching <p> in the XHTML (Pandoc emits <pre>/<figure>/<table>)."""
     norm = normalize_text(source_text)
     return any(stub in norm for stub in _OMISSION_TEXT)
@@ -123,7 +123,7 @@ def inject_fragment_ids(xhtml_path: Path, alignment: dict
                          ) -> dict[str, list[str]]:
     """Walk <p> elements in document order and assign each paragraph a unique
     fragment ID derived from the matching chapter chunk. Chunks come from
-    chunk_text_paired() which packs by char budget — a single chunk may cover
+    chunk_text_paired() which packs by char budget - a single chunk may cover
     several adjacent paragraphs, so each paragraph in a chunk gets a unique
     suffix (chunk_id, chunk_id-p2, chunk_id-p3, ...) to keep XHTML IDs unique.
 
@@ -211,7 +211,7 @@ def generate_smil(alignment: dict, xhtml_filename: str,
     Emits one <par> per fragment ID. Chunks that span multiple paragraphs
     get one <par> per paragraph with the chunk's audio time range divided
     evenly across them. Chunks with no fragment IDs (chapter titles, code
-    omissions, etc. that didn't match any <p>) are omitted from SMIL — the
+    omissions, etc. that didn't match any <p>) are omitted from SMIL - the
     audio still plays as part of the continuous MP3, just without a
     text-highlight cue during that span.
     """

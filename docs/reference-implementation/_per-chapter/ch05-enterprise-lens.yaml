@@ -353,7 +353,7 @@ concepts:
   name: Administrative tooling for capability revocation
   source: ch05 §"The Deprovisioning Gap"
   source-paper: null
-  definition: An IT administrator interface — Admin Console, CLI, or REST endpoint — exists for triggering
+  definition: An IT administrator interface - Admin Console, CLI, or REST endpoint - exists for triggering
     capability revocation, monitoring propagation across the sync mesh, and confirming completion when
     a user is deprovisioned.
   must-implement:
@@ -390,7 +390,7 @@ concepts:
   source: ch05 §"The Migration Path"
   source-paper: v13 §16
   definition: Organizations transition from hosted tools to the local node through a four-phase model
-    — shadow mode, partial offline editing, new-project authority, full historical migration — where each
+    - shadow mode, partial offline editing, new-project authority, full historical migration - where each
     phase is independently reversible and admits indefinite pause.
   must-implement:
   - Phase one runs the local node in shadow mode with no authoritative writes

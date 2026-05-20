@@ -102,7 +102,7 @@ concepts:
   source-paper: v13 §3
   definition: A failure mode in which a SaaS application reduces to a read-only cache, queued submissions
     of uncertain success, or total inoperability when network connectivity is intermittent, weak, restricted,
-    or absent — disproportionately affecting field, rural, clinical, industrial, air-gapped, and majority-world
+    or absent - disproportionately affecting field, rural, clinical, industrial, air-gapped, and majority-world
     users whose baseline operating environment is non-continuous connectivity.
   must-implement:
   - All core operations including create, update, search, and report execute against local storage with
@@ -202,8 +202,8 @@ concepts:
   name: Third-party veto over vendor-custodied data
   source: ch01 §"The Third-Party Veto"
   source-paper: v13 §3
-  definition: A failure mode in which an external authority — sanctions regime, data residency regulator,
-    court order, or national security designation — compels the vendor to suspend service or compels the
+  definition: A failure mode in which an external authority - sanctions regime, data residency regulator,
+    court order, or national security designation - compels the vendor to suspend service or compels the
     customer to cease use, ending the relationship regardless of either party's preferences because data
     custody at the vendor concentrates the exposure surface there.
   must-implement:
@@ -279,7 +279,7 @@ concepts:
   source: ch01 §"The Connectivity That Wasn't There"
   source-paper: v13 §3
   definition: An architectural commitment that the application exposes no reduced-capability operating
-    mode under offline, partitioned, or vendor-unreachable conditions — every core capability behaves
+    mode under offline, partitioned, or vendor-unreachable conditions - every core capability behaves
     identically whether the network is present or absent.
   must-implement:
   - No feature presents an offline-only read-only state
@@ -353,7 +353,7 @@ concepts:
   definition: The observation that organizations under SaaS outage continue operating via analog fallbacks
     (paper charts, whiteboards, fax, manual reconciliation) demonstrates that the SaaS layer was largely
     mediating work that continued to happen, while the digital affordances (search, cross-history pattern
-    detection, analytic queries) were the genuine value lost — value that a local-first node preserves
+    detection, analytic queries) were the genuine value lost - value that a local-first node preserves
     through the outage.
   must-implement:
   - Local node retains full digital affordances (search, reporting, cross-record analytics) during vendor

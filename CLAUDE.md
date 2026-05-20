@@ -5,11 +5,11 @@
 This project uses OpenWolf for context management. Read and follow .wolf/OPENWOLF.md every session. Check .wolf/cerebrum.md before generating code. Check .wolf/anatomy.md before reading files.
 
 
-# The Inverted Stack — Book Authoring Instructions
+# The Inverted Stack - Book Authoring Instructions
 
 ## What This Repo Is
 
-*The Inverted Stack: Local-First Nodes in a SaaS World* — a ~83,500-word self-published
+*The Inverted Stack: Local-First Nodes in a SaaS World* - a ~83,500-word self-published
 practitioner book. Chapters live under `vol-1/`. The writing plan is
 `inverted-stack-book-plan.md`. The approved structure is `book-structure.md`.
 
@@ -18,8 +18,8 @@ practitioner book. Chapters live under `vol-1/`. The writing plan is
 | Path | Role |
 |---|---|
 | `vol-1/`, `vol-2/` | Canonical prose. The story is here; everything else serves it. |
-| `_series/` | Shared series bible — world canon, tech canon, characters, chapter registry. Cross-volume continuity. |
-| `_production/` | Format outputs — ebook, audiobook, web reader, print, comic, video. Story-agnostic build chain. |
+| `_series/` | Shared series bible - world canon, tech canon, characters, chapter registry. Cross-volume continuity. |
+| `_production/` | Format outputs - ebook, audiobook, web reader, print, comic, video. Story-agnostic build chain. |
 | `icm/` | Story-change pipeline. Eight stages (intake → release) carry in-flight work from idea to canon + production. See `icm/CONTEXT.md`. |
 | `.pao-inbox/` | Short-form coordination beacons between sessions (Yeoman ↔ PAO). Long-form artifacts live in `icm/`. |
 | `build/`, `web/`, `assets/` | Active production code (audiobook pipeline, web reader, cover art). Incremental migration into `_production/` is planned. |
@@ -32,8 +32,8 @@ distributed systems vocabulary but do not need proofs.
 **Voice:** Governed by `docs/style/style-guide.md`.
 Key constraints:
 - **Purpose before process.** Every section opens with why it exists, not what it does.
-- **Active voice. Strong verbs.** "The gateway routes requests" — not "requests are routed."
-- **Agency vocabulary.** "The service fails when X" — not "this issue may be encountered."
+- **Active voice. Strong verbs.** "The gateway routes requests" - not "requests are routed."
+- **Agency vocabulary.** "The service fails when X" - not "this issue may be encountered."
 - **No hedging as default register.** Replace "could potentially" with a specific claim.
 - **No synonym cycling.** Name a concept once; use that name everywhere.
 - **Narrative for persuasion.** Part I uses scenario-driven Story Spine structure (Luhn).
@@ -48,18 +48,18 @@ Key constraints:
 
 ## Source Material
 
-All source files live in `source/` at the repo root (gitignored — not committed to the public repo):
+All source files live in `source/` at the repo root (gitignored - not committed to the public repo):
 
 | Alias | File | Role |
 |---|---|---|
-| **v13** | `source/local_node_saas_v13.md` | Primary architecture paper — main source of truth |
-| **v5** | `source/inverted-stack-v5.md` | Companion paper — .NET/MAUI/Loro specifics |
+| **v13** | `source/local_node_saas_v13.md` | Primary architecture paper - main source of truth |
+| **v5** | `source/inverted-stack-v5.md` | Companion paper - .NET/MAUI/Loro specifics |
 | **R1** | `source/kleppmann_council_review.md` | Round 1 adversarial review (6 blocks) |
 | **R2** | `source/kleppmann_council_review2.md` | Round 2 review (all blocks cleared, 15 conditions) |
 
 **Reference implementation:** `/Users/christopherwood/Projects/SunfishSoftware/Sunfish/` (sibling directory under shared `SunfishSoftware/` parent)
-- `accelerators/anchor/` — Zone A local-first desktop
-- `accelerators/bridge/` — Zone C hybrid SaaS
+- `accelerators/anchor/` - Zone A local-first desktop
+- `accelerators/bridge/` - Zone C hybrid SaaS
 
 ---
 
@@ -67,10 +67,10 @@ All source files live in `source/` at the repo root (gitignored — not committe
 
 The repo runs two parallel ICM tracks:
 
-1. **GitHub label track** — per-chapter status labels applied to PRs/issues. Tracks the *state* of a chapter as it moves through reviews.
-2. **`icm/` filesystem track** — the story-change pipeline. Tracks the *artifacts* of in-flight work (intake briefs, discovery notes, plans, drafts, review reports) until they land in canon (`vol-1/`, `vol-2/`) and trigger `_production/` regeneration.
+1. **GitHub label track** - per-chapter status labels applied to PRs/issues. Tracks the *state* of a chapter as it moves through reviews.
+2. **`icm/` filesystem track** - the story-change pipeline. Tracks the *artifacts* of in-flight work (intake briefs, discovery notes, plans, drafts, review reports) until they land in canon (`vol-1/`, `vol-2/`) and trigger `_production/` regeneration.
 
-Read `icm/CONTEXT.md` for the filesystem pipeline orientation. Each stage folder (`00_intake/` through `08_release/`) has its own README defining inputs, artifacts, and exit criteria. Reusable pipeline definitions live in `icm/pipelines/` — start with `icm/pipelines/chapter.yaml` for a new chapter.
+Read `icm/CONTEXT.md` for the filesystem pipeline orientation. Each stage folder (`00_intake/` through `08_release/`) has its own README defining inputs, artifacts, and exit criteria. Reusable pipeline definitions live in `icm/pipelines/` - start with `icm/pipelines/chapter.yaml` for a new chapter.
 
 ### GitHub label track
 
@@ -111,9 +111,9 @@ Templates in `templates/` match the voice requirements for each part:
 | Template | For | Apply with |
 |---|---|---|
 | `chapter-standard.md` | Part I (Ch 1–4) and epilogue | `make template type=standard ch=ch01` |
-| `chapter-council.md` | Part II (Ch 5–10) — two-act structure | `make template type=council ch=ch05` |
-| `chapter-reference.md` | Part III (Ch 11–16) — specification voice | `make template type=reference ch=ch11` |
-| `chapter-playbook.md` | Part IV (Ch 17–20) — tutorial voice | `make template type=playbook ch=ch17` |
+| `chapter-council.md` | Part II (Ch 5–10) - two-act structure | `make template type=council ch=ch05` |
+| `chapter-reference.md` | Part III (Ch 11–16) - specification voice | `make template type=reference ch=ch11` |
+| `chapter-playbook.md` | Part IV (Ch 17–20) - tutorial voice | `make template type=playbook ch=ch17` |
 
 ---
 
@@ -126,10 +126,10 @@ the chapter's GitHub issue before drafting.
 
 ### Draft (Stage 2)
 Write prose against the outline. Check word count: `make word-count`. Commit at the end
-of each writing session — never leave an uncommitted draft.
+of each writing session - never leave an uncommitted draft.
 
 ### Code Check (Stage 3)
-Every code snippet must compile or be explicitly marked `// illustrative — not runnable`.
+Every code snippet must compile or be explicitly marked `// illustrative - not runnable`.
 Validate Sunfish package names against `/Users/christopherwood/Projects/SunfishSoftware/Sunfish/` (no invented APIs).
 Run: `make code-check CHAPTER=ch01`
 
@@ -142,7 +142,7 @@ before moving to Stage 5.
 Read aloud. Cut every sentence that restates the previous sentence. Cut every word that
 does not earn its place. Target: no paragraph longer than 6 sentences.
 
-### Voice Check (Stage 6 — human only)
+### Voice Check (Stage 6 - human only)
 Claude cannot do this step. The author adds personal context, field anecdotes, and the
 connective tissue that makes the book a book rather than a report. This is the step that
 makes it yours.
@@ -157,7 +157,7 @@ Apply before every chapter PR merge. All items must pass.
 [ ] QC-1  Word count within ±10% of target
 [ ] QC-2  Every topic in book-structure.md for this chapter is addressed
 [ ] QC-3  Source sections cited inline (v13 §X, v5 §Y, R1/R2 where applicable)
-[ ] QC-4  Sunfish packages referenced by name only (Sunfish.Kernel.Sync) — no class APIs
+[ ] QC-4  Sunfish packages referenced by name only (Sunfish.Kernel.Sync) - no class APIs
 [ ] QC-5  No academic scaffolding ("this paper argues", "as we have seen")
 [ ] QC-6  No re-introducing the architecture (body chapters assume Part I is read)
 [ ] QC-7  Part III voice: specification (what it is, how it works fully)
@@ -171,7 +171,7 @@ Apply before every chapter PR merge. All items must pass.
 
 ## Writing Discipline Rules
 
-1. **Part III is specification; Part IV is tutorial.** Part IV references Part III — does not
+1. **Part III is specification; Part IV is tutorial.** Part IV references Part III - does not
    rewrite it.
 2. **Ch 2 is opinionated, not encyclopedic.** One paragraph per existing approach, ends with
    a crisp statement of what this book adds.
@@ -201,17 +201,17 @@ Naval-org: **CO** (Chris, BDFL) → **XO** (research session in `/Users/christop
 
 ## Two-tier inbox protocol
 
-### Tier 1 — book-internal (Yeoman ↔ PAO): `.pao-inbox/`
+### Tier 1 - book-internal (Yeoman ↔ PAO): `.pao-inbox/`
 
-Filesystem inbox at `.pao-inbox/` in the book repo root. Yeoman writes `yeoman-question-*.md` when blocked on style / pacing / structural calls; PAO scans and resolves inline. Archived beacons go to `.pao-inbox/_archive/`. State snapshots (PAO's authoritative read of book status) go to `.pao-inbox/_state-snapshots/`. **Snapshots and beacons MUST be committed + pushed to the book repo** — leaving them in the working tree alone defeats persistence across session restarts.
+Filesystem inbox at `.pao-inbox/` in the book repo root. Yeoman writes `yeoman-question-*.md` when blocked on style / pacing / structural calls; PAO scans and resolves inline. Archived beacons go to `.pao-inbox/_archive/`. State snapshots (PAO's authoritative read of book status) go to `.pao-inbox/_state-snapshots/`. **Snapshots and beacons MUST be committed + pushed to the book repo** - leaving them in the working tree alone defeats persistence across session restarts.
 
 **File naming:** `yeoman-{question|resumed}-YYYY-MM-DDTHH-MMZ-{slug}.md`. **Body:** 3-line YAML frontmatter (`type`, `chapter`, `last-pr`) + ≤2 lines context + ≤2 lines "what would unblock me." Tight; signal, not narrative.
 
-### Tier 2 — cross-repo (any session ↔ any session): `SunfishSoftware/coordination/inbox/`
+### Tier 2 - cross-repo (any session ↔ any session): `SunfishSoftware/coordination/inbox/`
 
 When chapter progress is gated on a Sunfish-side question (ADR status, workstream timing, foundational-paper alignment) PAO can't resolve from the book + Sunfish docs alone, **PAO writes** `pao-question-*.md` directly into the parent-folder coordination inbox. PAO is the cross-repo funnel for the book side. **Yeoman does NOT write directly to Sunfish** unless PAO is offline AND the question is critical (PAO-bypass fallback; flag in body).
 
-The parent `SunfishSoftware/` folder houses both `Sunfish/` and `the-inverted-stack/` and is **not a git repo** — it is a neutral coordination surface. No worktree, no PR, no commit needed. Just write the file:
+The parent `SunfishSoftware/` folder houses both `Sunfish/` and `the-inverted-stack/` and is **not a git repo** - it is a neutral coordination surface. No worktree, no PR, no commit needed. Just write the file:
 
 ```bash
 cat > /Users/christopherwood/Projects/SunfishSoftware/coordination/inbox/pao-question-$(date -u +%Y-%m-%dT%H-%MZ)-<slug>.md <<'EOF'
@@ -255,5 +255,5 @@ make lint                # Check for broken cross-references
 
 - Branch naming: `draft/ch01`, `draft/prospectus`, `draft/appendix-a`
 - Commit message prefix: `draft:`, `outline:`, `review:`, `fix:`, `build:`
-- Do not commit source papers (`local_node_saas_v13.md` etc.) — they live in `source/` which is gitignored
-- Chapter files are committed even when incomplete — no dark drafts
+- Do not commit source papers (`local_node_saas_v13.md` etc.) - they live in `source/` which is gitignored
+- Chapter files are committed even when incomplete - no dark drafts

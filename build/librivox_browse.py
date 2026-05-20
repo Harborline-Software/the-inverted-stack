@@ -14,7 +14,7 @@ Workflow:
     python build/librivox_browse.py sections --book 47
 
     # Preview a 30-sec window from a section (writes to /tmp; tells you
-    # the path to play yourself — this script can't open Audio.app for you)
+    # the path to play yourself - this script can't open Audio.app for you)
     python build/librivox_browse.py preview --book 47 --section 1 \\
       --start 1:30 --length 30
 
@@ -216,7 +216,7 @@ def _ffmpeg_extract(url: str, out_path: Path, *, start_sec: float,
     suffix = out_path.suffix.lower()
 
     # -ss BEFORE -i = seek by HTTP range when the source supports it
-    # (archive.org does). Saves bandwidth — ~250 KB instead of ~14 MB.
+    # (archive.org does). Saves bandwidth - ~250 KB instead of ~14 MB.
     cmd = [
         ffmpeg, "-hide_banner", "-loglevel", "warning", "-y",
         "-ss", f"{start_sec:.3f}",
@@ -308,7 +308,7 @@ def _build_parser() -> argparse.ArgumentParser:
     p_prev.add_argument("--book", required=True)
     p_prev.add_argument("--section", type=int, required=True)
     p_prev.add_argument("--start", default="1:00",
-                        help="start timecode SS / MM:SS / HH:MM:SS (default 1:00 — skip boilerplate intro)")
+                        help="start timecode SS / MM:SS / HH:MM:SS (default 1:00 - skip boilerplate intro)")
     p_prev.add_argument("--length", type=int, default=30,
                         help="clip length in seconds (default 30)")
     p_prev.add_argument("--out", default=None, help="output path (default: /tmp/...)")
@@ -320,13 +320,13 @@ def _build_parser() -> argparse.ArgumentParser:
     p_ext.add_argument("--start", default="1:00",
                        help="start timecode SS / MM:SS / HH:MM:SS")
     p_ext.add_argument("--length", type=int, default=28,
-                       help="clip length in seconds (default 28 — Chatterbox sweet spot)")
+                       help="clip length in seconds (default 28 - Chatterbox sweet spot)")
     p_ext.add_argument("--out", required=True,
                        help="output path; .wav / .mp3 / .flac inferred from suffix")
     p_ext.add_argument("--sample-rate", type=int, default=24000,
-                       help="target sample rate for WAV/FLAC (default 24000 — Chatterbox native)")
+                       help="target sample rate for WAV/FLAC (default 24000 - Chatterbox native)")
     p_ext.add_argument("--stereo", action="store_true",
-                       help="keep stereo (default mono — Chatterbox doesn't use stereo)")
+                       help="keep stereo (default mono - Chatterbox doesn't use stereo)")
     p_ext.set_defaults(func=_cmd_extract)
 
     return ap

@@ -1,4 +1,4 @@
-# Chapter N — The [Domain] Lens
+# Chapter N - The [Domain] Lens
 
 <!-- Target: ~3,500 words -->
 <!-- Source: R1 [council member], R2 [council member], vNN §X -->
@@ -7,7 +7,7 @@
 
 ---
 
-*One-paragraph introduction of the council member and their specific lens — not a bio, just what they're watching for and why it matters for this architecture.*
+*One-paragraph introduction of the council member and their specific lens - not a bio, just what they're watching for and why it matters for this architecture.*
 
 ---
 
@@ -17,7 +17,7 @@
 
 ### [The First Blocking Issue]
 
-*[Explain the issue in the council member's voice — what exactly fails, for what type of user, under what condition.]*
+*[Explain the issue in the council member's voice - what exactly fails, for what type of user, under what condition.]*
 
 ### [The Second Blocking Issue, if applicable]
 
@@ -31,7 +31,7 @@
 
 ## What Changed
 
-*The gap between rounds. This is a short narrative paragraph — not a changelog. What decision was made? What was redesigned? Who made the call and why?*
+*The gap between rounds. This is a short narrative paragraph - not a changelog. What decision was made? What was redesigned? Who made the call and why?*
 
 Key changes:
 - [Specific change 1]
@@ -42,12 +42,12 @@ Key changes:
 
 ## Round 2: The Verdict
 
-*What did [Name] see in Round 2? The blocks are cleared. What conditions remain — not blocks, but things the architecture still has to earn.*
+*What did [Name] see in Round 2? The blocks are cleared. What conditions remain - not blocks, but things the architecture still has to earn.*
 
 ### Remaining Conditions
 
-- **[Condition 1]** — [one sentence on what's required and why it wasn't a block]
-- **[Condition 2]** — [one sentence]
+- **[Condition 1]** - [one sentence on what's required and why it wasn't a block]
+- **[Condition 2]** - [one sentence]
 
 **Verdict: PROCEED WITH CONDITIONS** *(or PROCEED if unconditional)*
 
@@ -55,7 +55,7 @@ Key changes:
 
 ## The Takeaway
 
-*What should a practitioner extract from this chapter? Not a summary of what happened — a principle they can apply when building their own system.*
+*What should a practitioner extract from this chapter? Not a summary of what happened - a principle they can apply when building their own system.*
 
 [One to three paragraphs. The practitioner takeaway is the reason this chapter exists.]
 

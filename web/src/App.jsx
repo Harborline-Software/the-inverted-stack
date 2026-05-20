@@ -87,7 +87,7 @@ export default function App() {
 
   useEffect(() => { fetchReviewSession() }, [fetchReviewSession])
 
-  // Initial load — restore last session after chapters arrive
+  // Initial load - restore last session after chapters arrive
   useEffect(() => {
     fetch('/api/chapters')
       .then(r => r.json())
@@ -124,10 +124,10 @@ export default function App() {
   const handleSelectChapter = useCallback((id) => {
     const state = loadReaderState()
     if (state.chapterId === id) {
-      // Same chapter — restore saved position
+      // Same chapter - restore saved position
       setSavedChapterState({ audioTime: state.audioTime || 0, scrollTop: state.scrollTop || 0 })
     } else {
-      // Different chapter — start fresh
+      // Different chapter - start fresh
       setSavedChapterState({ audioTime: 0, scrollTop: 0 })
       saveReaderState({ chapterId: id, audioTime: 0, scrollTop: 0 })
     }
@@ -232,8 +232,8 @@ export default function App() {
               <h2>Select a chapter to begin</h2>
               <p>
                 {volume === 'vol-1'
-                  ? 'Volume 1 — The Inverted Stack: Local-First Nodes in a SaaS World'
-                  : 'Volume 2 — Sunfish-1 Mission Narrative'}
+                  ? 'Volume 1 - The Inverted Stack: Local-First Nodes in a SaaS World'
+                  : 'Volume 2 - Sunfish-1 Mission Narrative'}
               </p>
               <p className="welcome-stats">
                 {chapters.filter(c => c.volume === volume).length} chapters •{' '}
@@ -272,7 +272,7 @@ export default function App() {
         <div className="render-progress-footer">
           <div className="render-progress-label">
             Rendering {queue.batch.done}/{queue.batch.total} chapters
-            {queue.active && <span className="render-progress-current"> — {queue.active.chapter_title}</span>}
+            {queue.active && <span className="render-progress-current"> - {queue.active.chapter_title}</span>}
           </div>
           <div className="render-progress-track">
             <div

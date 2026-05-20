@@ -120,9 +120,9 @@ def volume_for_chapter(rel_path: str) -> str:
 
 # Conservative: only acronyms/proper nouns that espeak demonstrably mangles.
 # Capitalized common acronyms (CRDT, JWT, OAuth, HTTP, JSON, etc.) spell out
-# correctly in Kokoro by default — leave them alone to avoid over-correction.
+# correctly in Kokoro by default - leave them alone to avoid over-correction.
 ACRONYM_FIXES = {
-    # Vol 2 mission designations — hyphen-number forms that TTS otherwise
+    # Vol 2 mission designations - hyphen-number forms that TTS otherwise
     # reads as "minus N" (subtraction). Force the spoken form. (Boat name
     # "Nansen" is a clean single word; no fix needed for it.)
     r"\bMERIDIAN-7\b": "MERIDIAN seven",
@@ -241,7 +241,7 @@ ACRONYM_FIXES = {
     # Plurals of CRDT, APIs (defined above)
     r"\bCRDTs\b":  "C-R-D-T-s",
 
-    # Roman numerals after "Part" — espeak mispronounces these as
+    # Roman numerals after "Part" - espeak mispronounces these as
     # "eye", "eye-eye", "triple-eye" etc. Spell them as Arabic digits.
     # Word boundaries prevent shorter forms from matching inside longer
     # ones (e.g. \bPart I\b does not match inside "Part II").
@@ -325,13 +325,13 @@ ACRONYM_FIXES = {
 
 # Chatterbox-only acronym expansions. The neural model handles most
 # acronyms (CRDT, GDPR, HIPAA, API, etc.) by spelling them out
-# letter-by-letter naturally. But word-LIKE acronyms — those that look
-# pronounceable as a syllable — get misread as fake words. "SaaS"
+# letter-by-letter naturally. But word-LIKE acronyms - those that look
+# pronounceable as a syllable - get misread as fake words. "SaaS"
 # becomes "saaars"; "IaaS" / "PaaS" / "IoT" have the same failure mode.
 #
 # Two patterns per term, in order:
 #   1. First-use parenthetical pattern: "SaaS (Software as a Service)"
-#      collapses to just "Software as a Service" — avoids the doubled
+#      collapses to just "Software as a Service" - avoids the doubled
 #      phrasing the naive expansion would produce.
 #   2. Standalone form: bare "SaaS" expands to the full phrase.
 #
@@ -340,7 +340,7 @@ ACRONYM_FIXES = {
 #
 # Add entries by listening for misread acronyms in a render. Don't add
 # acronyms Chatterbox already handles correctly (CRDT, GDPR, HIPAA,
-# API, KEK, DEK, HSM, TPM, etc.) — over-expanding makes the audio
+# API, KEK, DEK, HSM, TPM, etc.) - over-expanding makes the audio
 # longer without improving intelligibility. Verify with --scripts-only
 # + a short render before locking in.
 CHATTERBOX_EXPANSIONS: list[tuple[str, str]] = [
@@ -368,9 +368,9 @@ PROPER_NOUN_FIXES = {
     r"\bOkonkwo\b":       "oh-KONK-woh",
     r"\bFerreira\b":      "feh-RAY-rah",
     r"\bTomás\b":         "toh-MAHS",
-    # Tomas without accent — fallback if the diacritic is stripped upstream
+    # Tomas without accent - fallback if the diacritic is stripped upstream
     r"\bTomas\b":         "toh-MAHS",
-    # Voss / Kelsey / Voss read correctly by default — no override needed.
+    # Voss / Kelsey / Voss read correctly by default - no override needed.
 
     # Technical and legal proper nouns the book cites repeatedly.
     r"\bSchrems\b":       "shrems",
@@ -400,47 +400,47 @@ ABBREVIATION_FIXES = {
 # Named voice + speed presets. --preset selects one; --voice/--speed override.
 # Rationale for each is documented in the audiobook research notes.
 #
-# Two engine catalogs share the same preset KEY space — "sinek", "british",
-# "fenrir", etc. — so CHAPTER_PRESET_MAP works across both engines without
+# Two engine catalogs share the same preset KEY space - "sinek", "british",
+# "fenrir", etc. - so CHAPTER_PRESET_MAP works across both engines without
 # rewiring. The VOICE values differ because Kokoro and Higgs have different
 # voice catalogs. resolve_preset() picks the right catalog based on --engine.
 PRESETS_KOKORO: dict[str, dict] = {
-    # Female — HH-hour trained voices. Bella = professional core, Nicole = breath texture.
+    # Female - HH-hour trained voices. Bella = professional core, Nicole = breath texture.
     "female":      {"voice": "af_bella+af_nicole", "speed": 0.92},
     "female-solo": {"voice": "af_alloy",           "speed": 0.92},   # CO directive 2026-05-09: af_alloy default for fast Kokoro generation (was af_bella)
 
-    # Male — all C+ / H-hour. Michael = lower-pitch non-fiction register;
+    # Male - all C+ / H-hour. Michael = lower-pitch non-fiction register;
     # Fenrir adds "velvety texture" to counter Michael's known dryness.
     "male":        {"voice": "am_michael+am_fenrir", "speed": 0.92},
     "male-solo":   {"voice": "am_michael",           "speed": 0.92},
 
-    # Sinek — am_michael has the lowest pitch (~125 Hz) and warmest register
+    # Sinek - am_michael has the lowest pitch (~125 Hz) and warmest register
     # in the male lineup. Slow speed (0.88) approximates Sinek's signature
     # deliberate, emphatic cadence. Pauses already injected at section breaks.
     "sinek":       {"voice": "am_michael",           "speed": 0.88},
 
-    # Practitioner — am_michael at 0.95 (slightly faster than the male/sinek
-    # body cadences). Used for Ferreira (Ch09 — Lusophone practitioner). The
+    # Practitioner - am_michael at 0.95 (slightly faster than the male/sinek
+    # body cadences). Used for Ferreira (Ch09 - Lusophone practitioner). The
     # speed shift differentiates Ferreira from the narrator (who uses sinek
-    # 0.88 and male 0.92) without changing the base voice — Kokoro has no
+    # 0.88 and male 0.92) without changing the base voice - Kokoro has no
     # Lusophone-accented English voice, so the prose carries the accent work
     # via first-person register. If listening tests show narrator confusion,
     # switch to bm_george for a clearer voice break.
     "practitioner":{"voice": "am_michael",           "speed": 0.95},
 
-    # British — bf_emma is the only B-grade UK voice. bm_george for male
-    # British is C/MM — expect lower quality, use only if accent matters.
+    # British - bf_emma is the only B-grade UK voice. bm_george for male
+    # British is C/MM - expect lower quality, use only if accent matters.
     "british":     {"voice": "bf_emma",              "speed": 0.92},
     "british-male":{"voice": "bm_george",            "speed": 0.92},
 
-    # Fry — Stephen Fry-adjacent: British RP, theatrical warmth, measured
+    # Fry - Stephen Fry-adjacent: British RP, theatrical warmth, measured
     # narrator cadence. bm_fable is the community's go-to British male for
     # storytelling (name aside, it's the most narrator-like). Caveat: C-grade
-    # MM-minutes training — expect audibly lower quality than female presets.
+    # MM-minutes training - expect audibly lower quality than female presets.
     "fry":         {"voice": "bm_fable",             "speed": 0.92},
     "fry-blend":   {"voice": "bm_fable+bm_george",   "speed": 0.92},
 
-    # Fenrir — am_fenrir solo. Higher pitch (144 Hz), "velvety texture,
+    # Fenrir - am_fenrir solo. Higher pitch (144 Hz), "velvety texture,
     # tech-savvy." Polished corporate confident register.
     "fenrir":      {"voice": "am_fenrir",            "speed": 0.92},
 
@@ -448,7 +448,7 @@ PRESETS_KOKORO: dict[str, dict] = {
     # Italian-cadenced cloned voice on the higgs-audio server. Reserved
     # for the canonical FINAL rendering of Vol 2 audiobook after CO's
     # editorial pass completes. Draft renders during the loop used
-    # `female-solo` (af_bella) for the listen-test workflow — those
+    # `female-solo` (af_bella) for the listen-test workflow - those
     # outputs are draft, not final.
     #
     # Invocation for final-render pass:
@@ -463,7 +463,7 @@ PRESETS_KOKORO: dict[str, dict] = {
     "ciufi-galeazzi": {"voice": "ciufi-galeazzi",    "speed": 0.92},
 }
 
-# Chatterbox preset voices. Chatterbox is voice-cloning native — non-stock
+# Chatterbox preset voices. Chatterbox is voice-cloning native - non-stock
 # voice IDs are reference-clip uploads, queried via `GET /v1/audio/voices`
 # (auth required). Stock voices that ship with the model are used for
 # the universal narrator slot (broom_salesman per author decision
@@ -472,10 +472,10 @@ PRESETS_KOKORO: dict[str, dict] = {
 # Stock catalog (verified 2026-04-28 against the Windows server):
 #   en_man, en_woman, broom_salesman (Ollivander/British male older),
 #   mabel (warm British-leaning female). The other ~12 stock voices are
-#   sitcom characters, child voices, or non-English — not narrator-fit.
+#   sitcom characters, child voices, or non-English - not narrator-fit.
 #
 # UNIVERSAL NARRATOR DECISION 2026-04-28: the author selected
-# `broom_salesman` as the single narrator for the entire book — Parts I,
+# `broom_salesman` as the single narrator for the entire book - Parts I,
 # III, IV, the Epilogue, the Preface, AND all Part II council chapters.
 # All preset slots route to broom_salesman. Cloned LibriVox voices for
 # the council members (ferreira-trial-rogeriom, shevchenko-trial-yakovlev,
@@ -484,7 +484,7 @@ PRESETS_KOKORO: dict[str, dict] = {
 # `--voice <id>` CLI override; they are not wired into the preset map.
 #
 # NOTE: Chatterbox renders at 24 kHz mono. Speed values are kept as hints;
-# the server clamps to a sane range. broom_salesman is a stock voice — pair
+# the server clamps to a sane range. broom_salesman is a stock voice - pair
 # with V12 dramatic recipe (--exaggeration 0.7 --cfg-weight 0.3) for the
 # narrative-driven Part I and Epilogue chapters.
 PRESETS_CHATTERBOX: dict[str, dict] = {
@@ -501,14 +501,14 @@ PRESETS_CHATTERBOX: dict[str, dict] = {
     "fenrir":      {"voice": "broom_salesman", "speed": 1.0},   # universal narrator (Kelsey clone available as kelsey-trial-smith for per-chapter regen)
 
     # Vol 2 final-render voice (CO directive 2026-05-06): ciufi-galeazzi.
-    # Mirror of PRESETS_KOKORO entry — keeps the preset key resolvable
+    # Mirror of PRESETS_KOKORO entry - keeps the preset key resolvable
     # if --engine chatterbox is selected at render-time. Voice is
     # canonically a Kokoro-side cloned voice; chatterbox engine routes
     # would need server-side equivalent registration.
     "ciufi-galeazzi": {"voice": "ciufi-galeazzi", "speed": 1.0},
 }
 
-# Backwards-compat alias — old code paths may import PRESETS_HIGGS.
+# Backwards-compat alias - old code paths may import PRESETS_HIGGS.
 # Removable once the rest of the tree is swept; harmless until then.
 PRESETS_HIGGS = PRESETS_CHATTERBOX
 
@@ -553,7 +553,7 @@ ENGINES: dict[str, dict] = {
         # Override at the CLI with --base-url. Default is the direct backend
         # port on the Tailscale hostname for the Windows GPU box.
         # NOTE (2026-05-07 bug-189): The Inference Studio reverse proxy at
-        # port 8881 routes TTS under /api/v1/{path} — NOT /v1/{path}. Use
+        # port 8881 routes TTS under /api/v1/{path} - NOT /v1/{path}. Use
         # http://desktop-umt08rn:8881/api/v1 for the proxy path, or
         # http://desktop-umt08rn:8883/api/v1 to hit the backend directly
         # (no 30-second proxy gateway timeout on port 8883). For long
@@ -565,11 +565,11 @@ ENGINES: dict[str, dict] = {
         "default_base_url": "http://desktop-umt08rn:8883/api/v1",
         "model_name": "higgs",
         "requires_auth": True,
-        "description": "Chatterbox/higgs (Resemble AI) on the Windows GPU box — voice-cloning, high-quality path",
+        "description": "Chatterbox/higgs (Resemble AI) on the Windows GPU box - voice-cloning, high-quality path",
     },
 }
 
-# Backwards-compatibility alias — older callers (tests, external scripts)
+# Backwards-compatibility alias - older callers (tests, external scripts)
 # may import PRESETS directly. Defaults to the Kokoro catalog.
 PRESETS = PRESETS_KOKORO
 
@@ -588,18 +588,18 @@ PRESETS = PRESETS_KOKORO
 # applies as originally designed. Per-chapter Chatterbox voicing can be
 # resurrected later by pointing individual preset slots back at the
 # uploaded cloned voices (ferreira-trial-rogeriom, shevchenko-trial-yakovlev,
-# voss-trial-savage, okonkwo-trial-klett, kelsey-trial-smith) — those
+# voss-trial-savage, okonkwo-trial-klett, kelsey-trial-smith) - those
 # voices remain on the TTS server and in references/CREDITS.md.
 CHAPTER_PRESET_MAP: dict[str, str] = {
     "preface":                             "sinek",        # author's voice, deliberate cadence
-    "ch05-enterprise-lens":                "female-solo",  # Voss — F, professional/authoritative (af_bella)
-    "ch06-distributed-systems-lens":       "fry",          # Shevchenko — M, academic researcher (bm_fable)
-    "ch07-security-lens":                  "british",      # Okonkwo — F, international serious-security (bf_emma)
-    "ch08-product-economic-lens":          "fenrir",       # Kelsey — M, polished corporate confident (am_fenrir)
-    "ch09-local-first-practitioner-lens":  "practitioner", # Ferreira — M, am_michael at 0.95 (warm, faster than narrator)
+    "ch05-enterprise-lens":                "female-solo",  # Voss - F, professional/authoritative (af_bella)
+    "ch06-distributed-systems-lens":       "fry",          # Shevchenko - M, academic researcher (bm_fable)
+    "ch07-security-lens":                  "british",      # Okonkwo - F, international serious-security (bf_emma)
+    "ch08-product-economic-lens":          "fenrir",       # Kelsey - M, polished corporate confident (am_fenrir)
+    "ch09-local-first-practitioner-lens":  "practitioner", # Ferreira - M, am_michael at 0.95 (warm, faster than narrator)
     "ch10-synthesis":                      "sinek",        # main narrator returns
     "epilogue":                            "sinek",        # closing, deliberate
-    # Vol 2 — Anna Yusupova first-person narration (mid-50s, Uzbek-Russian).
+    # Vol 2 - Anna Yusupova first-person narration (mid-50s, Uzbek-Russian).
     # female-solo (af_bella @ 0.92) matches the professional-authoritative
     # register Voss carries in Ch5; Anna's narration register is similar.
     # Apply to the Vol 2 listen-test pair; will extend to remaining Vol 2
@@ -658,7 +658,7 @@ CHAPTER_FILES = [
     "vol-1/appendices/appendix-e-citation-style.md",
     "vol-1/appendices/appendix-f-regulatory-coverage.md",
     "vol-1/appendices/appendix-g-glossary.md",
-    # Vol 2 — chapters activated as each reaches icm/draft. See
+    # Vol 2 - chapters activated as each reaches icm/draft. See
     # vol-2/CHAPTER-OUTLINE.md for the full 18-chapter spec;
     # remaining inactive paths are staged in VOL2_CHAPTER_FILES below.
     # 2026-05-04: Ch 02 + Ch 05 (listen-test pair)
@@ -688,39 +688,39 @@ CHAPTER_FILES = [
     "vol-2/act-3/ch18-punta-arenas-surfacing.md",
 ]
 
-# Vol 2 (Book 1 of the Sunfish series) — story-first restructure narrated by
+# Vol 2 (Book 1 of the Sunfish series) - story-first restructure narrated by
 # Anna Yusupova. Outline at vol-2/CHAPTER-OUTLINE.md; concept
 # artifact at .pao-inbox/_creative/vol-2-concept-note-2026-05-04.md.
 #
 # Paths below are PLACEHOLDERS matching the planned 18-chapter structure
 # (Act I Ch 1-6 / Act II Ch 7-12 / Act III Ch 13-18). They are NOT yet wired
-# into CHAPTER_FILES — the rendering pipeline would error on missing files.
+# into CHAPTER_FILES - the rendering pipeline would error on missing files.
 # The activation pattern: when a Vol 2 chapter reaches icm/draft, append its
 # entry from VOL2_CHAPTER_FILES into CHAPTER_FILES (or render selectively via
 # `--only chXX` once the file exists). The listen-test pair (Ch 5 + Ch 2)
 # will be the first two activations per concept note §9.
 VOL2_CHAPTER_FILES = [
-    # Act I — Departure and the first under-ice realization (Days 1-21)
-    # ch01-departure.md — ACTIVATED in CHAPTER_FILES (2026-05-05)
-    # ch02-recruitment-interview.md — ACTIVATED in CHAPTER_FILES (2026-05-04)
-    # ch03-drake-passage-ice-edge.md — ACTIVATED in CHAPTER_FILES (2026-05-06)
-    # ch04-first-submersion.md — ACTIVATED in CHAPTER_FILES (2026-05-06)
-    # ch05-day-twenty-realization.md — ACTIVATED in CHAPTER_FILES (2026-05-04)
-    # ch06-first-surface-first-forsaken-reveal.md — ACTIVATED in CHAPTER_FILES (2026-05-06)
-    # Act II — Subsystems hold; the contest sharpens (Days 22-42)
-    # ch07-joels-sunfish.md — ACTIVATED in CHAPTER_FILES (2026-05-06)
-    # ch08-second-submersion.md — ACTIVATED in CHAPTER_FILES (2026-05-06)
-    # ch09-sync-daemon-under-drift.md — ACTIVATED in CHAPTER_FILES (2026-05-06)
-    # ch10-aftermath-mission-that-once-was.md — ACTIVATED in CHAPTER_FILES (2026-05-06)
-    # ch11-second-surface-second-forsaken-reveal.md — ACTIVATED in CHAPTER_FILES (2026-05-06)
-    # ch12-beginning-of-the-end.md — ACTIVATED in CHAPTER_FILES (2026-05-06)
-    # Act III — Cascade, ascent, and the cumulative reveal (Days 43-56)
-    # ch13-schema-that-should-not-migrate.md — ACTIVATED in CHAPTER_FILES (2026-05-06)
-    # ch14-the-crossing.md — ACTIVATED in CHAPTER_FILES (2026-05-06)
-    # ch15-compromised-relay-holds.md — ACTIVATED in CHAPTER_FILES (2026-05-06)
-    # ch16-final-ascent.md — ACTIVATED in CHAPTER_FILES (2026-05-06)
-    # ch17-transit-north.md — ACTIVATED in CHAPTER_FILES (2026-05-06)
-    # ch18-punta-arenas-surfacing.md — ACTIVATED in CHAPTER_FILES (2026-05-06)
+    # Act I - Departure and the first under-ice realization (Days 1-21)
+    # ch01-departure.md - ACTIVATED in CHAPTER_FILES (2026-05-05)
+    # ch02-recruitment-interview.md - ACTIVATED in CHAPTER_FILES (2026-05-04)
+    # ch03-drake-passage-ice-edge.md - ACTIVATED in CHAPTER_FILES (2026-05-06)
+    # ch04-first-submersion.md - ACTIVATED in CHAPTER_FILES (2026-05-06)
+    # ch05-day-twenty-realization.md - ACTIVATED in CHAPTER_FILES (2026-05-04)
+    # ch06-first-surface-first-forsaken-reveal.md - ACTIVATED in CHAPTER_FILES (2026-05-06)
+    # Act II - Subsystems hold; the contest sharpens (Days 22-42)
+    # ch07-joels-sunfish.md - ACTIVATED in CHAPTER_FILES (2026-05-06)
+    # ch08-second-submersion.md - ACTIVATED in CHAPTER_FILES (2026-05-06)
+    # ch09-sync-daemon-under-drift.md - ACTIVATED in CHAPTER_FILES (2026-05-06)
+    # ch10-aftermath-mission-that-once-was.md - ACTIVATED in CHAPTER_FILES (2026-05-06)
+    # ch11-second-surface-second-forsaken-reveal.md - ACTIVATED in CHAPTER_FILES (2026-05-06)
+    # ch12-beginning-of-the-end.md - ACTIVATED in CHAPTER_FILES (2026-05-06)
+    # Act III - Cascade, ascent, and the cumulative reveal (Days 43-56)
+    # ch13-schema-that-should-not-migrate.md - ACTIVATED in CHAPTER_FILES (2026-05-06)
+    # ch14-the-crossing.md - ACTIVATED in CHAPTER_FILES (2026-05-06)
+    # ch15-compromised-relay-holds.md - ACTIVATED in CHAPTER_FILES (2026-05-06)
+    # ch16-final-ascent.md - ACTIVATED in CHAPTER_FILES (2026-05-06)
+    # ch17-transit-north.md - ACTIVATED in CHAPTER_FILES (2026-05-06)
+    # ch18-punta-arenas-surfacing.md - ACTIVATED in CHAPTER_FILES (2026-05-06)
 ]
 
 CHUNK_CHAR_BUDGET = 700  # target per-request size in characters (Kokoro default)
@@ -728,14 +728,14 @@ CHUNK_CHAR_BUDGET = 700  # target per-request size in characters (Kokoro default
 # Engine-aware chunk budget. Chatterbox caps each request at ~100 sec /
 # ~2500 tokens; cloned voices + V12 dramatic recipe (cfg_weight=0.3
 # slows pacing) push longer chunks past the cap, producing trailing
-# silence. 400 char target keeps each chunk well under the limit even
-# with the slowest combinations.
+# silence. Lowered to 200 (from 400) so ciufi-galeazzi cloned voice
+# stays under the InferenceStudioService proxy's 30s gateway timeout.
 CHUNK_BUDGETS_BY_ENGINE: dict[str, int] = {
-    "kokoro":     700,
-    "chatterbox": 400,
+    "kokoro": 700,
+    "higgs":  700,  # model_name for chatterbox engine; keyed by model_name not engine alias
 }
 # Lowered from 1400 (2026-04-28, bug-096/bug-097). Root cause is
-# *progressive* slowdown in the CPU Kokoro container — early chunks
+# *progressive* slowdown in the CPU Kokoro container - early chunks
 # render in ~3-5s, but after ~70 chunks the same-sized chunk takes
 # 30-60s and the worker eventually hangs (memory leak / thermal /
 # worker degradation). Lowering chunk size is a partial mitigation,
@@ -746,22 +746,22 @@ CHUNK_BUDGETS_BY_ENGINE: dict[str, int] = {
 
 # Mapping from dot count to silence duration (seconds). Empirically, Kokoro
 # treats consecutive periods as ~one sentence terminator regardless of count
-# — six dots produce ~0.7s, the same as one period. To get the long pauses
+# - six dots produce ~0.7s, the same as one period. To get the long pauses
 # the prose design intended (H1 chapter break, H2 section break, em-dash
 # apposition), we render dot-only chunks as explicit silence MP3 segments
 # rather than sending them to the TTS.
 PAUSE_DURATIONS = {
     2: 0.30,   # rare; treat as a beat
-    3: 0.70,   # ... — em-dash apposition
-    4: 1.20,   # .... — H2 section break
+    3: 0.70,   # ... - em-dash apposition
+    4: 1.20,   # .... - H2 section break
     5: 1.50,
-    6: 1.80,   # ...... — H1 chapter break
+    6: 1.80,   # ...... - H1 chapter break
     7: 2.00,
     8: 2.20,
 }
 
 # Cache silence MP3 segments by duration (in 100ms buckets). 24kHz mono
-# 128kbps to match Kokoro's raw output format — concatenation requires
+# 128kbps to match Kokoro's raw output format - concatenation requires
 # identical sample rate and channel layout.
 _SILENCE_CACHE: dict[int, bytes] = {}
 
@@ -817,13 +817,13 @@ def _ordinal_word(n: int) -> str:
 def _expand_numbers(t: str) -> str:
     """Expand currency and percentage shorthand that espeak mishandles.
 
-    Conservative scope — only the patterns that demonstrably misread:
+    Conservative scope - only the patterns that demonstrably misread:
     - N%       -> "N percent"        (espeak: "N percent" ok but inconsistent)
     - $NK/M/B  -> "N thousand/million/billion dollars"
     - NK/NM    -> left alone (ambiguous: K could be Kelvin, M could be mega)
 
     Plain integers, decimals, and comma-grouped numbers (10,000) are left
-    to espeak's default reader — it handles those cleanly.
+    to espeak's default reader - it handles those cleanly.
     """
     # Percentages: "20%" -> "20 percent"; preserve the integer for espeak
     # to read normally. Decimals like "3.5%" are also handled.
@@ -860,7 +860,7 @@ def _expand_numbers(t: str) -> str:
 
     # Prepositions / verbs / quantifiers that, when they PRECEDE the amount,
     # make the amount predicative regardless of what follows. "Revenue of
-    # $10 billion last year" — the "of" makes "$10 billion" a quantity,
+    # $10 billion last year" - the "of" makes "$10 billion" a quantity,
     # not an adjective modifying "last year."
     _PRECEDED_BY_PREDICATIVE = {
         "of", "for", "with", "at", "by", "to", "in", "on", "from",
@@ -935,12 +935,12 @@ def narratable_text(md: str, source_only: bool = False,
     original prose words and sentence boundaries, so the per-sentence chunk
     count matches the TTS chunking exactly. Used by render_chapter() to
     capture a ``source_text`` field on each alignment chunk for EPUB 3 Media
-    Overlay fragment ID injection — the source text matches what Pandoc
+    Overlay fragment ID injection - the source text matches what Pandoc
     emits in the XHTML, while the TTS-rendered text does not.
 
     The ``engine`` parameter gates espeak-specific transforms that hurt
     quality on neural TTS engines like Chatterbox. Chatterbox handles
-    foreign names, acronyms, and em-dash pacing natively — the
+    foreign names, acronyms, and em-dash pacing natively - the
     PROPER_NOUN_FIXES / ACRONYM_FIXES / em-dash → comma passes were
     designed around espeak's mispronunciations and force unnecessary
     letter-by-letter enunciation on Chatterbox. Default is "kokoro"
@@ -950,11 +950,12 @@ def narratable_text(md: str, source_only: bool = False,
     is_neural = engine == "chatterbox"
     t = md
 
-    # Strip YAML front-matter (--- delimited block at the very start of the file).
-    # The horizontal-rule strip below only removes the `---` delimiter lines, leaving
-    # the key: value content (title, icm-stage, etc.) as spoken text — which causes
+    # Strip YAML front-matter (--- or - delimited block at the very start of the file).
+    # The horizontal-rule strip below only removes the delimiter lines, leaving
+    # the key: value content (title, icm-stage, etc.) as spoken text - which causes
     # slow inference on cloned TTS voices (pathological for the 30-second proxy timeout).
-    t = re.sub(r"\A---\n.*?\n---\n", "", t, flags=re.DOTALL)
+    # Vol-2 files use a single `-` delimiter; vol-1 files use `---`. Both are handled.
+    t = re.sub(r"\A-{1,3}\n.*?\n-{1,3}\n", "", t, flags=re.DOTALL)
 
     # Strip Vol 2 log-opener block (Pattern A artifact): italicized "filed log"
     # paragraphs between the YAML front-matter and the first prose paragraph,
@@ -1000,7 +1001,7 @@ def narratable_text(md: str, source_only: bool = False,
     t = re.sub(r"\s*https?://\S+\s*", " ", t)
 
     # Strip IEEE bracketed citation markers like [1], [2], [1, 2], [1-3].
-    # These point to numbered references at the end of each chapter — useful
+    # These point to numbered references at the end of each chapter - useful
     # in print, gibberish in audio. The lookahead optionally consumes ", "
     # when another citation follows immediately, so "[2], [4]" becomes ""
     # not ",". Run twice to handle three-or-more chained citations like "[1], [2], [3]".
@@ -1011,23 +1012,23 @@ def narratable_text(md: str, source_only: bool = False,
     # Headings: drop the hashes so they read as plain sentences.
     # H1 chapter titles get the longest trailing beat; H2 gets a medium
     # beat; H3+ get no dot-pause (the period alone is enough). Kokoro's
-    # espeak backend treats consecutive `.` as additive silence — six
+    # espeak backend treats consecutive `.` as additive silence - six
     # dots is audibly longer than three, four is between the two.
-    # "# Chapter 1 — Foo" -> "\n\nChapter 1, Foo.\n\n......\n\n"
+    # "# Chapter 1 - Foo" -> "\n\nChapter 1, Foo.\n\n......\n\n"
     def _heading_sub(match: re.Match) -> str:
         level = len(match.group(1))
         body = match.group(2).strip().rstrip(".")
         # Em-dash in titles reads cleaner as a comma pause for headings.
-        body = body.replace("—", ",").replace("–", ",")
+        body = body.replace("-", ",").replace("–", ",")
         if level == 1:
             return f"\n\n{body}.\n\n......\n\n"  # long pause after chapter title
         if level == 2:
             return f"\n\n{body}.\n\n....\n\n"    # medium pause after section
-        return f"\n\n{body}.\n\n"                # subsection — no dot pause
+        return f"\n\n{body}.\n\n"                # subsection - no dot pause
 
     t = re.sub(r"(?m)^(#{1,6})\s+(.+?)\s*$", _heading_sub, t)
 
-    # Blockquote markers. Match horizontal whitespace only — `\s*` would
+    # Blockquote markers. Match horizontal whitespace only - `\s*` would
     # consume the preceding `\n` and collapse the paragraph break, joining
     # the blockquote into the prior paragraph as a single sentence.
     t = re.sub(r"(?m)^[ \t]*>[ \t]?", "", t)
@@ -1040,14 +1041,14 @@ def narratable_text(md: str, source_only: bool = False,
     t = re.sub(r"(?m)^\s*\d+\.\s+", "", t)
 
     # Em-dash / en-dash handling. For espeak-backed engines (Kokoro), the
-    # em-dash is unreliable as a pause cue — collapsed to a comma for
+    # em-dash is unreliable as a pause cue - collapsed to a comma for
     # consistent micro-pauses. Neural engines (Chatterbox) handle em-dash
     # pacing natively and the V12 dramatic recipe relies on em-dashes for
     # rhythmic structure; converting to comma kills that structure and
     # forces a faster, more clipped delivery. Skip for chatterbox.
     if not source_only and not is_neural:
-        t = t.replace(" — ", ", ").replace(" – ", ", ")
-        t = t.replace("—", ", ").replace("–", ", ")
+        t = t.replace(" - ", ", ").replace(" – ", ", ")
+        t = t.replace("-", ", ").replace("–", ", ")
 
     # Smart-quote normalization. Espeak handles curly quotes inconsistently;
     # straight ASCII quotes are reliably ignored (they don't introduce
@@ -1097,12 +1098,12 @@ def narratable_text(md: str, source_only: bool = False,
             # Chatterbox-only: word-like acronyms (SaaS, IaaS, IoT, etc.)
             # get misread as fake words. Expand to the full phrase. The
             # first-use parenthetical patterns must run BEFORE the
-            # standalone forms — see CHATTERBOX_EXPANSIONS docstring.
+            # standalone forms - see CHATTERBOX_EXPANSIONS docstring.
             for pat, repl in CHATTERBOX_EXPANSIONS:
                 t = re.sub(pat, repl, t)
 
         # ISO 8601 timestamp normalization for neural engines.
-        # Chatterbox's phonemizer stalls on "2026-09-15T11:18" — the
+        # Chatterbox's phonemizer stalls on "2026-09-15T11:18" - the
         # T-separator and colon-less time cause inference to run >30s,
         # busting the proxy gateway timeout. Convert to a spoken form:
         # "2026-09-15T11:18" → "September 15, 2026, at 11:18"
@@ -1131,15 +1132,98 @@ def narratable_text(md: str, source_only: bool = False,
             _expand_iso_ts, t
         )
 
+        # Bare HH:MM military-time normalization for both engines (added
+        # 2026-05-19 after CO ear-flagged neural mishandling on vol-2
+        # ch01 times "07:43" / "06:00" around the Tomás introduction).
+        # Espeak reads "07:43" as "zero seven colon four three"; Higgs/
+        # Chatterbox tokenizes the colon-separated digit pair as letters
+        # in some surface forms. The HH:MM digit form is canonical in
+        # the prose, but the spoken form must match Anna's narrator
+        # convention ("oh seven forty-three" / "eleven thirty-one" /
+        # "oh six hundred"). Apply BEFORE proper-noun fixes so the
+        # times aren't accidentally caught by a name regex.
+        #
+        # Pattern: bare HH:MM not preceded by a digit or letter (so we
+        # don't catch parts of larger numeric strings or words like
+        # "X:Y" inside file paths). Matches 00:00 through 23:59.
+        _DIGIT_WORDS = {
+            "0": "oh", "1": "one", "2": "two", "3": "three", "4": "four",
+            "5": "five", "6": "six", "7": "seven", "8": "eight", "9": "nine",
+        }
+        _TENS_WORDS = {
+            10: "ten", 11: "eleven", 12: "twelve", 13: "thirteen",
+            14: "fourteen", 15: "fifteen", 16: "sixteen", 17: "seventeen",
+            18: "eighteen", 19: "nineteen", 20: "twenty", 30: "thirty",
+            40: "forty", 50: "fifty",
+        }
+
+        def _say_two_digit(n: int) -> str:
+            """Convert 0-59 to spoken form. 7 -> 'seven'; 43 -> 'forty-three'."""
+            if n < 10:
+                return _DIGIT_WORDS[str(n)]
+            if n in _TENS_WORDS:
+                return _TENS_WORDS[n]
+            tens, ones = divmod(n, 10)
+            return f"{_TENS_WORDS[tens * 10]}-{_DIGIT_WORDS[str(ones)]}"
+
+        def _expand_bare_time(m: re.Match) -> str:
+            hh_str, mm_str = m.group(1), m.group(2)
+            hh, mm = int(hh_str), int(mm_str)
+            if not (0 <= hh <= 23 and 0 <= mm <= 59):
+                return m.group(0)  # not a valid time; leave alone
+            # Hours: 0-9 prefixed with "oh"; 10+ spoken normally
+            if hh < 10:
+                hh_spoken = f"oh {_DIGIT_WORDS[str(hh)]}"
+            elif hh in _TENS_WORDS:
+                hh_spoken = _TENS_WORDS[hh]
+            else:
+                tens, ones = divmod(hh, 10)
+                hh_spoken = f"{_TENS_WORDS[tens * 10]}-{_DIGIT_WORDS[str(ones)]}"
+            # Minutes: "00" → "hundred" (military convention: oh-six-hundred);
+            # 01-09 → "oh one" / "oh two" etc. (military convention preserves
+            # the leading-zero); 10+ → spoken pair ("forty-three" / "twenty").
+            if mm == 0:
+                mm_spoken = "hundred"
+            elif mm < 10:
+                mm_spoken = f"oh {_DIGIT_WORDS[str(mm)]}"
+            else:
+                mm_spoken = _say_two_digit(mm)
+            return f"{hh_spoken} {mm_spoken}"
+
+        # Negative lookbehind: not preceded by digit, letter, or colon.
+        # Negative lookahead: not followed by another colon (to avoid HH:MM:SS).
+        t = re.sub(
+            r"(?<![\w:])(\d{1,2}):(\d{2})(?![\d:])",
+            _expand_bare_time, t
+        )
+
         # Proper-noun pronunciation lexicon. Espeak mispronounces foreign
         # names ("Tomás Ferreira" → "tomas ferrera"); the dashed
         # pronunciations ("toh-MAHS feh-RAY-rah") fix that. Chatterbox's
-        # neural model handles foreign names natively from training data;
-        # the dashed forms force unnatural letter-stress patterns. Skip
-        # for neural engines.
+        # neural model handles MOST foreign names natively from training
+        # data; the dashed forms force unnatural letter-stress patterns,
+        # so the espeak dictionary is skipped for neural.
+        #
+        # HOWEVER: certain accented names trigger letter-spelling mode in
+        # the Higgs/Chatterbox tokenizer (CO ear-flagged Tomás reading as
+        # "T-O-M-A-S" on 2026-05-19). For neural engines, strip combining
+        # diacritics so accented forms tokenize as their plain ASCII
+        # equivalents ("Tomás" → "Tomas"). The plain form pronounces
+        # correctly via the neural model's training data; the dashed
+        # espeak forms remain unused on neural.
         if not is_neural:
             for pat, repl in PROPER_NOUN_FIXES.items():
                 t = re.sub(pat, repl, t)
+        else:
+            import unicodedata
+            # Strip diacritics from accented Latin characters. NFD
+            # decomposes combined characters (á → a + combining-acute);
+            # filter out the combining marks; recompose. Affects only
+            # characters with a decomposition; ASCII passes through.
+            t = "".join(
+                c for c in unicodedata.normalize("NFD", t)
+                if unicodedata.category(c) != "Mn"
+            )
 
     # Collapse soft newlines (single newlines inside a paragraph) into
     # spaces before guaranteeing terminal punctuation. Markdown soft-wraps
@@ -1162,7 +1246,7 @@ def narratable_text(md: str, source_only: bool = False,
             return line
         if stripped[-1] in ".!?:,;":
             return line
-        # Lines ending in a closing quote (straight or curly) — check
+        # Lines ending in a closing quote (straight or curly) - check
         # the character just inside the quote for terminal punctuation.
         if stripped[-1] in '"”\'’' and len(stripped) >= 2 and stripped[-2] in ".!?:,;":
             return line
@@ -1182,41 +1266,34 @@ def narratable_text(md: str, source_only: bool = False,
     t = re.sub(r"[ \t]+", " ", t)
     t = re.sub(r"\n{3,}", "\n\n", t)
 
-    # Dialogue pauses: insert a short beat (..) between consecutive
-    # paragraphs that BOTH start with a quotation mark — but ONLY when
-    # at least one of the two lines is substantive (>= 6 words). For
-    # short alternating exchanges ("Joel." / "Doctor." / "Have you eaten."
-    # / "I have not."), the natural sentence-end prosody handles the
-    # speaker beat; injecting silence MP3s every line stacks frame-
-    # boundary artifacts and produces audible clicks in Kokoro output
-    # (CO ear-flagged 2026-05-13).
+    # Dialogue pauses: insert a beat (...) between every pair of
+    # consecutive paragraphs that BOTH start with a quotation mark.
+    # Beat duration: `...` (3 dots = ~0.7s) per PAUSE_DURATIONS.
     #
-    # The rule:
-    #   short / short → no injected pause (natural prosody is enough)
-    #   short / long  → inject pause (gives long line breathing room)
-    #   long / short  → inject pause (separates substantive line from response)
-    #   long / long   → inject pause (default case for most non-rapid dialogue)
-    import re as _re_dpause
-    def _word_count(text: str) -> int:
-        return len(_re_dpause.findall(r"\b[A-Za-z]+\b", text))
-    SHORT_DIALOGUE_THRESHOLD = 6
-
+    # History:
+    # - 2026-05-13: original rule skipped short/short pairs ("Joel." /
+    #   "Doctor.") on the theory that natural sentence-end prosody was
+    #   enough and that injecting silence MP3s every line could stack
+    #   frame-boundary artifacts in Kokoro output.
+    # - 2026-05-18: CIC ear-flagged short/short pairs as still feeling
+    #   rushed in practice (e.g. "Doctor." / "Captain." opening the
+    #   Anna-Mikael exchange). Removed the short/short exemption; every
+    #   consecutive-dialogue pair now gets the beat. The earlier Kokoro
+    #   click concern is subordinated to pacing fidelity, and Chatterbox
+    #   (the current default for vol-2) handles the inserted silence
+    #   cleanly.
+    # - 2026-05-18: beat duration bumped from `..` (0.3s) to `...` (0.7s)
+    #   in the same review pass for the same reason.
     paragraphs = t.split("\n\n")
     out_paras: list[str] = []
     prev_is_dialogue = False
-    prev_words = 0
     for para in paragraphs:
         stripped = para.strip()
         is_dialogue = bool(stripped) and stripped[0] == '"'
-        cur_words = _word_count(stripped) if is_dialogue else 0
         if prev_is_dialogue and is_dialogue:
-            both_short = (prev_words < SHORT_DIALOGUE_THRESHOLD and
-                          cur_words < SHORT_DIALOGUE_THRESHOLD)
-            if not both_short:
-                out_paras.append("..")
+            out_paras.append("...")
         out_paras.append(para)
         prev_is_dialogue = is_dialogue
-        prev_words = cur_words
     t = "\n\n".join(out_paras)
 
     return t.strip()
@@ -1227,7 +1304,7 @@ _SENT_SPLIT = re.compile(r"(?<=[.!?])\s+(?=[A-Z0-9\"'(])")
 
 def chunk_sentences(text: str) -> list[str]:
     """Split into one chunk per sentence, preserving dot-only chunks
-    (`...`, `....`, `......`) as pause markers — the render layer detects
+    (`...`, `....`, `......`) as pause markers - the render layer detects
     these via _is_pause_only() and emits silence MP3 instead of calling TTS.
     Used by --per-sentence synthesis. Speech chunks are small (~50-300
     chars typical), giving Kokoro fresh prosody on every utterance at the
@@ -1268,7 +1345,7 @@ def chunk_text_paired(tts_text: str, src_text: str,
     src_paras = re.split(r"\n{2,}", src_text)
     if len(tts_paras) != len(src_paras):
         raise ValueError(f"paragraph count mismatch: tts={len(tts_paras)} "
-                         f"src={len(src_paras)} — narratable_text paragraph "
+                         f"src={len(src_paras)} - narratable_text paragraph "
                          f"structure should be identical between TTS and source")
 
     tts_chunks: list[str] = []
@@ -1298,7 +1375,7 @@ def chunk_text_paired(tts_text: str, src_text: str,
             tts_sents = _SENT_SPLIT.split(tts_para)
             src_sents = _SENT_SPLIT.split(src_para)
             if len(tts_sents) != len(src_sents):
-                # Sentence splits diverged — keep the whole paragraph as one
+                # Sentence splits diverged - keep the whole paragraph as one
                 # source slice and let multiple TTS sentence-chunks share it.
                 src_sents = [src_para] * len(tts_sents)
             for tts_sent, src_sent in zip(tts_sents, src_sents):
@@ -1308,21 +1385,12 @@ def chunk_text_paired(tts_text: str, src_text: str,
                     continue
                 if len(tts_buf) + len(tts_sent) + 1 > budget and tts_buf:
                     flush()
-                # Pathological-sentence wrapping (TTS-only) collapses many
-                # word-chunks into one source sentence: rare in practice.
-                if len(tts_sent) > budget:
-                    words = tts_sent.split()
-                    cur = ""
-                    for w in words:
-                        if len(cur) + len(w) + 1 > budget and cur:
-                            flush()
-                            tts_chunks.append(cur.strip())
-                            src_chunks.append(src_sent)
-                            cur = ""
-                        cur = (cur + " " + w).strip()
-                    if cur:
-                        tts_buf = (tts_buf + " " + cur).strip()
-                        src_buf = (src_buf + " " + src_sent).strip()
+                # Oversized sentence: emit as its own chunk rather than
+                # splitting at word boundaries, which would produce an
+                # unnatural mid-sentence pause in the audio.
+                if len(tts_sent) > budget and not tts_buf:
+                    tts_chunks.append(tts_sent.strip())
+                    src_chunks.append(src_sent.strip())
                 else:
                     tts_buf = (tts_buf + " " + tts_sent).strip()
                     src_buf = (src_buf + " " + src_sent).strip()
@@ -1341,7 +1409,7 @@ def chunk_text(text: str, budget: int = CHUNK_CHAR_BUDGET) -> list[str]:
     Dot-only paragraphs (pause markers) are preserved as standalone chunks
     so the render layer can emit explicit silence instead of sending them
     to Kokoro. This makes chunk and sentence modes produce the same pause
-    structure — the only difference is speech-chunk granularity."""
+    structure - the only difference is speech-chunk granularity."""
     chunks: list[str] = []
     buf = ""
     for para in re.split(r"\n{2,}", text):
@@ -1349,7 +1417,7 @@ def chunk_text(text: str, budget: int = CHUNK_CHAR_BUDGET) -> list[str]:
         if not para:
             continue
         if _is_pause_only(para):
-            # Pause marker — flush buffer, then append the marker on its own.
+            # Pause marker - flush buffer, then append the marker on its own.
             if buf:
                 chunks.append(buf.strip())
                 buf = ""
@@ -1364,20 +1432,11 @@ def chunk_text(text: str, budget: int = CHUNK_CHAR_BUDGET) -> list[str]:
                 if len(buf) + len(sent) + 1 > budget and buf:
                     chunks.append(buf.strip())
                     buf = ""
-                if len(sent) > budget:
-                    # Pathological sentence — hard-wrap on word boundaries
-                    words = sent.split()
-                    cur = ""
-                    for w in words:
-                        if len(cur) + len(w) + 1 > budget and cur:
-                            if buf:
-                                chunks.append(buf.strip())
-                                buf = ""
-                            chunks.append(cur.strip())
-                            cur = ""
-                        cur = (cur + " " + w).strip()
-                    if cur:
-                        buf = (buf + " " + cur).strip()
+                # Oversized sentence: emit as its own chunk rather than
+                # splitting at word boundaries, which would produce an
+                # unnatural mid-sentence pause in the audio.
+                if len(sent) > budget and not buf:
+                    chunks.append(sent.strip())
                 else:
                     buf = (buf + " " + sent).strip()
         else:
@@ -1405,7 +1464,7 @@ def embed_tts_tags(out_path: Path, *, engine: str, preset: str, voice: str,
                    exaggeration=None, cfg_weight=None, temperature=None) -> None:
     """Write TTS generation parameters as TXXX ID3 frames into the MP3 in-place.
 
-    Uses imageio_ffmpeg (already a project dep) — no extra system ffmpeg needed.
+    Uses imageio_ffmpeg (already a project dep) - no extra system ffmpeg needed.
     Silently skips on any error so a tagging failure never aborts a render.
     """
     try:
@@ -1484,7 +1543,7 @@ def synth_chunk(client: OpenAI, voice: str, text: str, speed: float,
         extra["speed"] = speed
     # V12 emotion knobs (Chatterbox); silently no-op for engines that
     # ignore unknown body fields (e.g. Kokoro). The wrapper validates
-    # bounds — Mac side only forwards the values.
+    # bounds - Mac side only forwards the values.
     if exaggeration is not None:
         extra["exaggeration"] = exaggeration
     if cfg_weight is not None:
@@ -1614,12 +1673,12 @@ def apply_vol2_audio_substitutions(text: str, source_path: Path) -> str:
 def build_script(md_path: Path, engine: str = "kokoro") -> str:
     """Build the narration script from a chapter markdown file."""
     raw = md_path.read_text(encoding="utf-8")
-    # Vol 2 audio-glossary preprocessor — applies before narratable_text()
+    # Vol 2 audio-glossary preprocessor - applies before narratable_text()
     # so engine-aware text normalization runs on the substituted text.
     # Vol 1 paths pass through unchanged.
     raw = apply_vol2_audio_substitutions(raw, md_path)
     script = narratable_text(raw, engine=engine)
-    # Chapter lead-in pause — gives listener a beat before the chapter title.
+    # Chapter lead-in pause - gives listener a beat before the chapter title.
     script = "... \n\n" + script
     return script
 
@@ -1695,7 +1754,7 @@ def render_chapter(
 
     # Chunk TTS + source in lockstep so source_text on each alignment entry
     # matches the Pandoc XHTML for EPUB Media Overlay fragment ID injection.
-    # Engine-aware budget — see CHUNK_BUDGETS_BY_ENGINE for rationale.
+    # Engine-aware budget - see CHUNK_BUDGETS_BY_ENGINE for rationale.
     chunk_budget = CHUNK_BUDGETS_BY_ENGINE.get(model_name, CHUNK_CHAR_BUDGET)
     if per_sentence:
         chunks = chunk_sentences(script)
@@ -1785,7 +1844,7 @@ def out_name_for(src_rel: str) -> str:
     return f"{stem}.mp3"
 
 
-# Dropbox auto-sync — copy each rendered MP3 to the matching vol-N/ folder
+# Dropbox auto-sync - copy each rendered MP3 to the matching vol-N/ folder
 # under the user's Dropbox path. Disabled if the Dropbox path doesn't exist
 # (e.g., running in CI / on a different machine) or if --no-dropbox-sync
 # is passed. Override the base via DROPBOX_AUDIOBOOK_BASE env var.
@@ -1801,7 +1860,7 @@ def _sync_to_dropbox(out_path: Path, rel_md_path: str, *, verbose: bool = True) 
     Returns True on success, False on skip/failure. Volume is computed
     via volume_for_chapter(). If the Dropbox path doesn't exist (no
     Dropbox client; different machine), silently skips. Errors during
-    copy are logged but do not raise — render success is independent.
+    copy are logged but do not raise - render success is independent.
     """
     base = Path(os.environ.get("DROPBOX_AUDIOBOOK_BASE", str(DROPBOX_AUDIOBOOK_BASE_DEFAULT)))
     if not base.exists():
@@ -1845,7 +1904,7 @@ def main() -> None:
                          "with --base-url.")
     ap.add_argument("--preset", default="male",
                     help="default voice preset. Default: male (Kokoro: am_michael+am_fenrir "
-                         "blend at 0.92 — less stylized than sinek, better for straight "
+                         "blend at 0.92 - less stylized than sinek, better for straight "
                          "technical non-fiction across Parts I/III/IV). Part II chapters "
                          "and ch10/preface override via CHAPTER_PRESET_MAP unless "
                          "--no-chapter-map is set. Preset KEYS are shared across engines; "
@@ -1862,7 +1921,7 @@ def main() -> None:
     ap.add_argument("--speed", type=float, default=None,
                     help="TTS speed multiplier (0.5-2.0). Overrides --preset.")
     ap.add_argument("--base-url", default=None,
-                    help="HTTP base URL for the engine API (default: per-engine default — "
+                    help="HTTP base URL for the engine API (default: per-engine default - "
                          "Kokoro localhost:8880, Chatterbox desktop-umt08rn:8881). "
                          "Override for remote GPU server, Tailscale FQDN, or stage-vs-prod "
                          "swaps.")
@@ -1895,7 +1954,7 @@ def main() -> None:
     ap.add_argument("--max-paragraphs", type=int, default=None,
                     help="render only the first N body paragraphs of each chapter "
                          "(after the chapter title). Used with --output-suffix for "
-                         "fast voice/preset iteration — typically 3-5 paragraphs "
+                         "fast voice/preset iteration - typically 3-5 paragraphs "
                          "renders in ~30s and produces ~30-60s of audio.")
     ap.add_argument("--output-suffix", default="",
                     help="append this suffix to the output MP3 stem (e.g. '_sample'). "
@@ -1910,7 +1969,7 @@ def main() -> None:
 
     if args.list_presets:
         for name, cfg in presets.items():
-            voice_str = cfg["voice"] if cfg["voice"] is not None else "(unset — TODO)"
+            voice_str = cfg["voice"] if cfg["voice"] is not None else "(unset - TODO)"
             print(f"{name:<14} voice={voice_str:<28} speed={cfg['speed']}")
         sys.exit(0)
 
@@ -1937,7 +1996,7 @@ def main() -> None:
         v = args.voice or cfg["voice"]
         if v is None:
             raise RuntimeError(
-                f"Engine {args.engine!r} preset {name!r} has voice=None — "
+                f"Engine {args.engine!r} preset {name!r} has voice=None - "
                 f"the catalog entry hasn't been filled in yet. Either set "
                 f"PRESETS_{args.engine.upper()}[{name!r}]['voice'] to a real "
                 f"voice ID (query GET {base_url}/audio/voices to list "

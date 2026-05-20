@@ -1,8 +1,8 @@
-# Chapter N — Component Name
+# Chapter N - Component Name
 
 <!-- Target: ~X,000 words -->
 <!-- Source: vNN §X, vNN §Y -->
-<!-- Part: III — specification voice -->
+<!-- Part: III - specification voice -->
 
 ---
 
@@ -16,7 +16,7 @@
 
 ## [First Major Concept]
 
-*Specification voice: "The [component] does X" not "you should configure X". Complete — a developer reading this section should be able to implement it. Cross-reference Part IV for the tutorial path.*
+*Specification voice: "The [component] does X" not "you should configure X". Complete - a developer reading this section should be able to implement it. Cross-reference Part IV for the tutorial path.*
 
 ### [Sub-concept]
 
@@ -36,7 +36,7 @@
 
 ## Failure Modes and Edge Cases
 
-*What breaks? Under what conditions? How does the system recover? This is not optional — specification without failure modes is incomplete.*
+*What breaks? Under what conditions? How does the system recover? This is not optional - specification without failure modes is incomplete.*
 
 | Scenario | Behavior | Recovery |
 |---|---|---|
@@ -47,7 +47,7 @@
 
 ## Sunfish Package Reference
 
-*Which packages implement this component. Reference by package name only — no class APIs.*
+*Which packages implement this component. Reference by package name only - no class APIs.*
 
 | Package | Responsibility |
 |---|---|

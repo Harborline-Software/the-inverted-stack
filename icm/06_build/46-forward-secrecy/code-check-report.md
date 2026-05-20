@@ -1,4 +1,4 @@
-# Code-check report — #46 Forward Secrecy and Post-Compromise Security
+# Code-check report - #46 Forward Secrecy and Post-Compromise Security
 
 **Iteration:** iter-0017 (post-migration resume)
 **Date:** 2026-04-27
@@ -29,7 +29,7 @@ Two distinct Sunfish namespace references, both in current canon:
 - Method signatures in prose: 0
 - Constructor parameters in prose: 0
 
-The section is pure prose-level specification. The illustrative-code marker (`// illustrative — not runnable`) is therefore unused.
+The section is pure prose-level specification. The illustrative-code marker (`// illustrative - not runnable`) is therefore unused.
 
 ## Placeholder / marker audit
 
@@ -82,15 +82,15 @@ Kill trigger present (line 473): a FAILED condition recurring across three conse
 
 The following items are accepted for code-check but require @technical-reviewer verification against authoritative cryptographic sources:
 
-1. **X25519 / Curve25519 ephemeral exchange framing** — verify standard usage and that "Diffie-Hellman function over Curve25519" parenthetical is accurate per RFC 7748.
-2. **HKDF-SHA256 derivation chain framing** — verify the per-message-key chain construction described in §46a matches the standard ratchet construction (HKDF as PRF, salt rotation per step).
-3. **Double Ratchet faithfulness** — verify §46b description of symmetric ratchet (per-message advance) and DH ratchet (advance on new public key from peer) matches the Marlinspike-Perrin Nov. 2016 spec [14].
-4. **X3DH asynchronous-prekey framing** — verify §46b description of prekey-based async session establishment matches [15].
-5. **Noise KK pattern fit** — verify the claim that Noise KK (both parties have known static keypairs) is the closer fit to the architecture's enrolled-device model, per [16].
-6. **MLS / TreeKEM extension to group sessions** — verify [17] describes TreeKEM-based group ratcheting and that the §46b parenthetical "deployments with large role groups may adopt MLS in place of pairwise Double Ratchet" is accurate.
-7. **OTR provenance** — verify [19] citation metadata (Borisov, Goldberg, Brewer, WPES 2004, pp. 77-84) and that the §46e claim "Off-The-Record Messaging established the precedent — naming these properties in the protocol spec itself" is supportable.
-8. **WhatsApp at billion-user scale** — verify [18] describes Double Ratchet deployment at billion-user scale, not a different protocol.
-9. **Conformance test framing** — verify that the §46e conformance test descriptions (recorded session state at time T cannot decrypt T-1; captured ratchet state at T after one DH advance cannot decrypt T+2) are correct cryptographic property statements.
+1. **X25519 / Curve25519 ephemeral exchange framing** - verify standard usage and that "Diffie-Hellman function over Curve25519" parenthetical is accurate per RFC 7748.
+2. **HKDF-SHA256 derivation chain framing** - verify the per-message-key chain construction described in §46a matches the standard ratchet construction (HKDF as PRF, salt rotation per step).
+3. **Double Ratchet faithfulness** - verify §46b description of symmetric ratchet (per-message advance) and DH ratchet (advance on new public key from peer) matches the Marlinspike-Perrin Nov. 2016 spec [14].
+4. **X3DH asynchronous-prekey framing** - verify §46b description of prekey-based async session establishment matches [15].
+5. **Noise KK pattern fit** - verify the claim that Noise KK (both parties have known static keypairs) is the closer fit to the architecture's enrolled-device model, per [16].
+6. **MLS / TreeKEM extension to group sessions** - verify [17] describes TreeKEM-based group ratcheting and that the §46b parenthetical "deployments with large role groups may adopt MLS in place of pairwise Double Ratchet" is accurate.
+7. **OTR provenance** - verify [19] citation metadata (Borisov, Goldberg, Brewer, WPES 2004, pp. 77-84) and that the §46e claim "Off-The-Record Messaging established the precedent - naming these properties in the protocol spec itself" is supportable.
+8. **WhatsApp at billion-user scale** - verify [18] describes Double Ratchet deployment at billion-user scale, not a different protocol.
+9. **Conformance test framing** - verify that the §46e conformance test descriptions (recorded session state at time T cannot decrypt T-1; captured ratchet state at T after one DH advance cannot decrypt T+2) are correct cryptographic property statements.
 
 ## Quality gate
 

@@ -446,11 +446,11 @@ concepts:
     trail and an open-question note for ANPD review'
 - id: COMP-14
   name: US sector-specific frameworks (HIPAA, FedRAMP, ITAR)
-  source: appendix-f §"United States — Sector-Specific Frameworks"
+  source: appendix-f §"United States - Sector-Specific Frameworks"
   source-paper: null
-  definition: The absence of a US omnibus privacy law leaves sector-specific regimes — HIPAA for PHI,
+  definition: The absence of a US omnibus privacy law leaves sector-specific regimes - HIPAA for PHI,
     FedRAMP for federal cloud authorization, ITAR/EAR for export-controlled technology, CCPA/CPRA for
-    California consumer rights — each addressed by on-device encryption and sovereign deployment patterns.
+    California consumer rights - each addressed by on-device encryption and sovereign deployment patterns.
   must-implement:
   - HIPAA-scoped PHI is encrypted at rest using the same per-record DEK pattern as GDPR-scoped data
   - ITAR-scoped or EAR-scoped deployments restrict node residency to authorized jurisdictions and personnel

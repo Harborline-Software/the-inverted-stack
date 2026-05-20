@@ -14,13 +14,13 @@
 # Front matter
 preface:                                sinek
 
-# Part I — thesis and pain
+# Part I - thesis and pain
 ch01-when-saas-fights-reality:          gladwell
 ch02-local-first-serious-stack:         grant
 ch03-inverted-stack-one-diagram:        sinek
 ch04-choosing-your-architecture:        godin
 
-# Part II — Kleppmann Council two-act
+# Part II - Kleppmann Council two-act
 ch05-enterprise-lens:                   lencioni
 ch06-distributed-systems-lens:          lencioni
 ch07-security-lens:                     lencioni
@@ -28,7 +28,7 @@ ch08-product-economic-lens:             grant
 ch09-local-first-practitioner-lens:     brown
 ch10-synthesis:                         sinek
 
-# Part III — reference architecture
+# Part III - reference architecture
 ch11-node-architecture:                 sinek
 ch12-crdt-engine-data-layer:            grant
 ch13-schema-migration-evolution:        sinek
@@ -36,13 +36,13 @@ ch14-sync-daemon-protocol:              sinek
 ch15-security-architecture:             sinek
 ch16-persistence-beyond-the-node:       sinek
 
-# Part IV — implementation playbooks
+# Part IV - implementation playbooks
 ch17-building-first-node:               godin
 ch18-migrating-existing-saas:           lencioni
 ch19-shipping-to-enterprise:            sinek
 ch20-ux-sync-conflict:                  brown
 
-# Part V — operational concerns
+# Part V - operational concerns
 ch21-operating-a-fleet:                 sinek
 ch22-security-operations:               sinek  # scope: Key Lifecycle Operations (post UPF Ch22-Ch23 split)
 ch23-endpoint-collaborator-ops:         sinek
@@ -54,6 +54,6 @@ appendix-b-threat-model-worksheets:     sinek
 appendix-c-further-reading:             sinek
 appendix-d-testing-the-inverted-stack:  sinek
 appendix-e-citation-style:              sinek
-# appendix-f-regulatory-coverage         INTENTIONALLY OMITTED — coverage-map
+# appendix-f-regulatory-coverage         INTENTIONALLY OMITTED - coverage-map
 #   appendix; pure tabular reference content with no narrative prose for voice
 #   agents to operate on. Per spec §4.3 (Phase 3 code-changes section).

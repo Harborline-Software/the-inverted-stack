@@ -78,7 +78,7 @@ concepts:
   - 'Verification check does not pass: System diagram shows aggregated surfaces as downstream consumers
     of node-sourced data; integration test confirms primary...'
 - id: FILT-01
-  name: Filter 1 — Consistency requirements (hard stop)
+  name: Filter 1 - Consistency requirements (hard stop)
   source: 'ch04 §"Filter 1: Consistency Requirements (Hard Stop)"'
   source-paper: v13 §20.3
   definition: A disqualifying check that rejects local-first architecture when the domain requires atomic
@@ -115,11 +115,11 @@ concepts:
   - 'Verification check does not pass: Architecture decision record answers all four Filter 1 questions
     in writing; any "yes" to atomic cross-user transactions...'
 - id: FILT-02
-  name: Filter 2 — Data ownership profile
+  name: Filter 2 - Data ownership profile
   source: 'ch04 §"Filter 2: Data Ownership Profile"'
   source-paper: v13 §20.4
   definition: A check that classifies the natural owner of the primary records by who creates them, who
-    uses them, and who suffers loss when access is severed — distinguishing user-owned, vendor-aggregated,
+    uses them, and who suffers loss when access is severed - distinguishing user-owned, vendor-aggregated,
     and regulator-custodied profiles.
   must-implement:
   - Architecture decision record names the natural owner of each primary record type
@@ -153,7 +153,7 @@ concepts:
   - 'Verification check does not pass: Architecture decision record cites the data-ownership profile per
     primary record type; regulator-custodian flows referen...'
 - id: FILT-03
-  name: Filter 3 — Connectivity and operational environment
+  name: Filter 3 - Connectivity and operational environment
   source: 'ch04 §"Filter 3: Connectivity and Operational Environment"'
   source-paper: v13 §20.5
   definition: A check that names the actual deployment environment and routes to local-first when users
@@ -164,7 +164,7 @@ concepts:
     cloud provider's SLA
   - Field, air-gapped, MDM-governed, residency-regulated, and chronically-intermittent environments route
     to local-first as mandatory or strongly preferred
-  - The product treats absence of network as a normal operating mode, not a degraded one — input is accepted
+  - The product treats absence of network as a normal operating mode, not a degraded one - input is accepted
     and writes are queued without network access
   - Always-online browser-only zero-install scenarios are the only category routed to traditional SaaS
     at this filter
@@ -189,14 +189,14 @@ concepts:
     user, not the cloud provider''s SLA'
   - 'Fails to satisfy: Field, air-gapped, MDM-governed, residency-regulated, and chronically-intermittent
     environments route to local-first as mandatory or strongly preferred'
-  - The product treats absence of network as a normal operating mode, not a degraded one — input is not
+  - The product treats absence of network as a normal operating mode, not a degraded one - input is not
     accepted and writes are queued without network access
   - Always-online browser-only zero-install scenarios are not the only category routed to traditional
     SaaS at this filter
   - 'Verification check does not pass: Architecture decision record names the actual environments; behavioral
     test confirms the application accepts input and p...'
 - id: FILT-04
-  name: Filter 4 — Business model alignment
+  name: Filter 4 - Business model alignment
   source: 'ch04 §"Filter 4: Business Model Alignment"'
   source-paper: v13 §20.6
   definition: A check that rejects local-first when revenue depends on controlling user access to their
@@ -206,7 +206,7 @@ concepts:
   - Architecture decision record states the revenue model and confirms it does not require gating user
     access to user-owned data
   - Revenue paths that depend on data-custody lock-in are explicitly disqualified
-  - Managed relay is specified as replaceable infrastructure, not a data custodian — relay failure degrades
+  - Managed relay is specified as replaceable infrastructure, not a data custodian - relay failure degrades
     sync but never local operation or data access
   - Dual-licensing patterns (open-source core plus commercial managed offering) are recognized as the
     strongest alignment for this architecture
@@ -229,14 +229,14 @@ concepts:
   - 'Fails to satisfy: Architecture decision record states the revenue model and confirms it does not
     require gating user access to user-owned data'
   - Revenue paths that depend on data-custody lock-in are not explicitly disqualified
-  - Managed relay is not specified as replaceable infrastructure, not a data custodian — relay failure
+  - Managed relay is not specified as replaceable infrastructure, not a data custodian - relay failure
     degrades sync but never local operation or data access
   - Dual-licensing patterns (open-source core plus commercial managed offering) are not recognized as
     the strongest alignment for this architecture
   - 'Verification check does not pass: Business model document names the revenue path; relay-failure test
     confirms local operation and data access continue una...'
 - id: FILT-05
-  name: Filter 5 — Team capability and timeline
+  name: Filter 5 - Team capability and timeline
   source: 'ch04 §"Filter 5: Team Capability and Timeline"'
   source-paper: v13 §20.7
   definition: A check that governs when and how to adopt local-first by honestly assessing whether the
@@ -280,7 +280,7 @@ concepts:
   - 'Verification check does not pass: Project plan documents the four-skill capability assessment, the
     CRDT/sync and key-management budgets, and the resulting...'
 - id: DEC-03
-  name: Zone A — Local-first node outcome
+  name: Zone A - Local-first node outcome
   source: ch04 §"The Three Outcome Zones"
   source-paper: v13 §20.8
   definition: The outcome when all five filters clear and the team has timeline and capability to build
@@ -318,7 +318,7 @@ concepts:
   - 'Verification check does not pass: Integration test confirms the application provides full functionality
     with no relay reachable; reference implementation ...'
 - id: DEC-04
-  name: Zone B — Centralized SaaS outcome (when local-first is wrong)
+  name: Zone B - Centralized SaaS outcome (when local-first is wrong)
   source: ch04 §"The Three Outcome Zones"
   source-paper: v13 §20.8
   definition: The outcome when Filter 1 or Filter 2 returns a hard "centralized only" verdict, applying
@@ -329,7 +329,7 @@ concepts:
     to centralized
   - Local-first is not retrofitted onto a domain whose primary value is aggregated state or whose core
     loop requires CP-class consistency
-  - The architecture serves the domain — building financial trading infrastructure on a local-node architecture
+  - The architecture serves the domain - building financial trading infrastructure on a local-node architecture
     is recognized as wrong for the domain
   verification: Architecture decision record names which filter forced Zone B and identifies the aggregated
     value or consistency invariant that justifies centralization.
@@ -347,12 +347,12 @@ concepts:
     routed the product to centralized'
   - Local-first is not retrofitted onto a domain whose primary value is not aggregated state or whose
     core loop requires CP-class consistency
-  - The architecture serves the domain — building financial trading infrastructure on a local-node architecture
+  - The architecture serves the domain - building financial trading infrastructure on a local-node architecture
     is not recognized as wrong for the domain
   - 'Verification check does not pass: Architecture decision record names which filter forced Zone B and
     identifies the aggregated value or consistency invaria...'
 - id: DEC-05
-  name: Zone C — Hybrid outcome
+  name: Zone C - Hybrid outcome
   source: ch04 §"The Three Outcome Zones"
   source-paper: v13 §20.8
   definition: The outcome when filters pass for user-scoped primary records but fail for specific coordination
@@ -395,8 +395,8 @@ concepts:
   name: The Practical Shortcut (three-question prefilter)
   source: ch04 §"The Practical Shortcut"
   source-paper: v13 §20.8
-  definition: A three-question prefilter — primary-record ownership, sustained-offline requirement, vendor-outlive
-    requirement — that determines whether a full five-filter evaluation is worth the time for a project
+  definition: A three-question prefilter - primary-record ownership, sustained-offline requirement, vendor-outlive
+    requirement - that determines whether a full five-filter evaluation is worth the time for a project
     in early discovery.
   must-implement:
   - Discovery-stage projects answer the three shortcut questions before committing to a full filter evaluation
@@ -434,7 +434,7 @@ concepts:
   source: ch04 §"The Practical Shortcut"
   source-paper: v13 §20.8
   definition: The requirement that the product keep working regardless of whether the vendor survives,
-    is acquired, changes pricing, or is directed to stop serving a given jurisdiction — making vendor-independent
+    is acquired, changes pricing, or is directed to stop serving a given jurisdiction - making vendor-independent
     authoritative data custody a structural, not contractual, property.
   must-implement:
   - Authoritative data lives on infrastructure under the user's or customer's control
@@ -468,7 +468,7 @@ concepts:
   source: 'ch04 §"Filter 3: Connectivity and Operational Environment"'
   source-paper: v13 §20.5
   definition: An operational distinction that treats an application loading stale data and queueing writes
-    as degraded (still working) and an application showing a spinner and refusing input as broken — establishing
+    as degraded (still working) and an application showing a spinner and refusing input as broken - establishing
     absence-tolerance, not graceful-degradation, as the local-first acceptance criterion.
   must-implement:
   - The application accepts user input with no network present
@@ -499,7 +499,7 @@ concepts:
   source: 'ch04 §"Filter 5: Team Capability and Timeline"'
   source-paper: v13 §20.7
   definition: The four engineering skills that separate local-node development from standard web application
-    development — CRDT debugging, distributed state management, multi-version schema migration, and key
+    development - CRDT debugging, distributed state management, multi-version schema migration, and key
     management.
   must-implement:
   - Team has practitioners who can reason about CRDT type semantics and merge order under uncertainty

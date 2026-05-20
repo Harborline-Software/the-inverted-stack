@@ -4,14 +4,14 @@ If any chapter source under vol-1/ or vol-2/ has mtime newer than its
 corresponding <vol>/_voice-drafts/final/<ch>.md, the draft is stale
 and voice-pass needs to re-run for that chapter (council finding C8).
 
-Sources without a corresponding draft are NOT stale — they simply have
+Sources without a corresponding draft are NOT stale - they simply have
 not been voice-passed yet (e.g., a new chapter, or a chapter the user
 chose to skip).
 
 Promoted chapters are NOT stale either: a Phase 4 promotion overwrites
 the source with the draft content (updating mtime), but content-wise
 they are equivalent. We detect this via the sidecar manifest at
-`<source>.manifest.json` — its presence means the chapter is post-promotion
+`<source>.manifest.json` - its presence means the chapter is post-promotion
 and the mtime inversion is expected.
 
 Usage:
@@ -36,7 +36,7 @@ def find_stale_drafts(chapters_root: Path) -> list[str]:
     """Return the stems of chapter drafts that are stale relative to source.
 
     A draft is stale when its source file's mtime is greater than the draft's
-    mtime — meaning the source was edited after the draft was generated.
+    mtime - meaning the source was edited after the draft was generated.
 
     Exception: if a sidecar manifest exists at <source>.manifest.json AND
     the source SHA matches the manifest's promoted_sha256, the chapter has
@@ -54,7 +54,7 @@ def find_stale_drafts(chapters_root: Path) -> list[str]:
             continue  # No draft = not stale, just not voice-passed yet
         if source.stat().st_mtime <= draft.stat().st_mtime:
             continue  # Draft is fresh (or contemporaneous)
-        # Source is newer than draft — check whether the chapter was promoted.
+        # Source is newer than draft - check whether the chapter was promoted.
         manifest = source.with_suffix(".manifest.json")
         if manifest.exists():
             try:
@@ -62,7 +62,7 @@ def find_stale_drafts(chapters_root: Path) -> list[str]:
                 if data.get("promoted_sha256") == _sha256(source):
                     continue  # Promoted; mtime inversion is expected.
             except (OSError, json.JSONDecodeError):
-                pass  # Manifest unreadable — fall through to stale.
+                pass  # Manifest unreadable - fall through to stale.
         stale.append(source.stem)
     return stale
 
@@ -80,7 +80,7 @@ def main() -> int:
         for s in stale:
             print(f"  python build/voice-pass.py --only {s} --force")
         return 1
-    print("OK — all drafts are at-or-newer than their source.")
+    print("OK - all drafts are at-or-newer than their source.")
     return 0
 
 

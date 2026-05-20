@@ -1,5 +1,5 @@
 <!--
-Universal Planning Framework (UPF) — Sunfish integration
+Universal Planning Framework (UPF) - Sunfish integration
 Source:   https://github.com/primeline-ai/universal-planning-framework
 License:  MIT
 Version:  1.2 (fetched 2026-04-20)
@@ -26,7 +26,7 @@ This framework addresses a critical gap: major discoveries happen *during* execu
 
 ### **Stage 0: Before Planning** (Discovery & Sparring)
 
-Twelve contextual checks operationalize the DSV principle: "Decompose-Suspend-Validate." Not all checks apply to every plan—the framework is intelligence-driven.
+Twelve contextual checks operationalize the DSV principle: "Decompose-Suspend-Validate." Not all checks apply to every plan-the framework is intelligence-driven.
 
 **Priority tiers guide which checks to run:**
 - Always consider (non-trivial plans): Existing Work, Feasibility, Better Alternatives
@@ -34,7 +34,7 @@ Twelve contextual checks operationalize the DSV principle: "Decompose-Suspend-Va
 - Usually relevant: Factual Verification, ROI analysis
 - Context-dependent: Updates, Constraints, People Risk
 
-The "AHA Effect" (Check 0.9) identifies fundamentally simpler approaches—the single highest-value discovery activity.
+The "AHA Effect" (Check 0.9) identifies fundamentally simpler approaches-the single highest-value discovery activity.
 
 **Skip Stage 0** only when all apply: <3 phases, <2 hours effort, fully reversible changes, or explicit user override.
 
@@ -44,11 +44,11 @@ The "AHA Effect" (Check 0.9) identifies fundamentally simpler approaches—the s
 
 **5 CORE sections (always required):**
 
-1. **Context & Why** — Problem definition (max 3 sentences)
-2. **Success Criteria** — Measurable outcomes + FAILED conditions (kill triggers + timeouts)
-3. **Assumptions & Validation** — "Assumption → VALIDATE BY → IMPACT IF WRONG" format
-4. **Phases** — Binary gates (PASS/FAIL only), scope-based for coding, observable deliverables
-5. **Verification** — Automated (tests), Manual (reviews), Ongoing Observability (production monitoring)
+1. **Context & Why** - Problem definition (max 3 sentences)
+2. **Success Criteria** - Measurable outcomes + FAILED conditions (kill triggers + timeouts)
+3. **Assumptions & Validation** - "Assumption → VALIDATE BY → IMPACT IF WRONG" format
+4. **Phases** - Binary gates (PASS/FAIL only), scope-based for coding, observable deliverables
+5. **Verification** - Automated (tests), Manual (reviews), Ongoing Observability (production monitoring)
 
 **Key principle:** Phase sizing in coding domains uses scope (files touched, features delivered) rather than hours, since AI execution removes false precision from time estimates.
 

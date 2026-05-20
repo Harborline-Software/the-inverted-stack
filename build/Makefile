@@ -1,4 +1,4 @@
-# The Inverted Stack — Build Targets
+# The Inverted Stack - Build Targets
 # Requires: pandoc, python3 (for word-count)
 
 # Repo-local environment overrides. .env is gitignored; see .env.example for
@@ -97,7 +97,7 @@ audiobook-hd:
 	$(PYTHON) build/audiobook.py --per-sentence
 
 # audiobook-sample: render the first N body paragraphs of a single chapter
-# to <stem>_sample.mp3. Fast voice/preset iteration loop — typically ~30s
+# to <stem>_sample.mp3. Fast voice/preset iteration loop - typically ~30s
 # of compute for ~30-60s of audio. Override defaults inline:
 #
 #   make audiobook-sample ch=ch01
@@ -118,7 +118,7 @@ endif
 audiobook-sample:
 	$(PYTHON) build/audiobook.py $(sample_args)
 
-# Chatterbox-engine variants — render against the Windows GPU box's
+# Chatterbox-engine variants - render against the Windows GPU box's
 # Chatterbox (Resemble AI) server. Auth via Bearer token in TTS_API_KEY.
 # CHATTERBOX_URL points at the Tailscale hostname (default) or LAN IP.
 # Override per-render or once per shell session:
@@ -147,17 +147,17 @@ audiobook-voices-chatterbox:
 
 # audiobook-voice-upload: upload (or replace) a single voice via the
 # multipart PUT API. Args:
-#   id=<voice_id>          required — slug (lowercase alphanumeric/_/-)
-#   audio=<path>           required — wav/mp3/flac
-#   transcript=<text>      required — exact text spoken in the clip
-#   display_name=<text>    optional — human label
-#   language=<bcp47>       optional — en-US, ru, pt-BR, …
-#   notes=<text>           optional — provenance
+#   id=<voice_id>          required - slug (lowercase alphanumeric/_/-)
+#   audio=<path>           required - wav/mp3/flac
+#   transcript=<text>      required - exact text spoken in the clip
+#   display_name=<text>    optional - human label
+#   language=<bcp47>       optional - en-US, ru, pt-BR, …
+#   notes=<text>           optional - provenance
 #
 # Example:
 #   make audiobook-voice-upload id=voss audio=references/voss-30s.wav \
 #     transcript="Procurement isn't where compliance lives." \
-#     display_name="Council member — Voss" language=en-US
+#     display_name="Council member - Voss" language=en-US
 .PHONY: audiobook-voice-upload
 audiobook-voice-upload:
 	@test -n "$(id)"          || (echo "id=<voice_id> required" && exit 2)
@@ -202,7 +202,7 @@ librivox-sections:
 
 # librivox-preview: extract a clip to /tmp/ for listening. Args:
 #   book=<id>     required
-#   section=<n>   required — section number (1-indexed)
+#   section=<n>   required - section number (1-indexed)
 #   start=<tc>    default 1:00 (skip LibriVox boilerplate intro)
 #   length=<sec>  default 30
 .PHONY: librivox-preview
@@ -214,7 +214,7 @@ librivox-preview:
 
 # librivox-extract: extract a clean reference clip to disk for upload.
 # Args same as preview, plus:
-#   out=<path>    required — .wav (preferred) / .mp3 / .flac
+#   out=<path>    required - .wav (preferred) / .mp3 / .flac
 .PHONY: librivox-extract
 librivox-extract:
 	@test -n "$(book)"    || (echo "book=<id> required" && exit 2)
@@ -230,7 +230,7 @@ m4b:
 # normalize: EBU R128 loudness normalization. Default target is `podcast`
 # spec (-16 LUFS / -1.5 dBTP / 96 kbps) for Apple Books / Leanpub. Use
 # `make normalize-acx` for ACX submission spec (-19 LUFS / -3 dBTP / 192 kbps).
-# Two-pass mode is the default for both — single-pass not recommended for ACX.
+# Two-pass mode is the default for both - single-pass not recommended for ACX.
 .PHONY: normalize
 normalize:
 	$(PYTHON) build/normalize.py
@@ -245,7 +245,7 @@ normalize-fast:
 
 # verify-loudness: re-measure each normalized MP3 against its target spec
 # and exit non-zero if any chapter is out of spec. Run after `make normalize`
-# (or `make normalize-acx`) to confirm the output actually landed in spec —
+# (or `make normalize-acx`) to confirm the output actually landed in spec -
 # ACX rejects ~30% of submissions for loudness/peak issues that two-pass
 # loudnorm should have caught but didn't (silent drift on long files).
 .PHONY: verify-loudness
@@ -266,7 +266,7 @@ embed-cover:
 # Pass 1 applies the guest voice (Gladwell, Brown, Grant, Godin, Lencioni)
 # per the plan; Pass 2 normalizes everything through Sinek (the house voice).
 # Outputs go to vol-1/_voice-drafts/{pass1,final}/<chapter>.md (gitignored).
-# Review and merge selectively — does not overwrite source chapters.
+# Review and merge selectively - does not overwrite source chapters.
 .PHONY: voice-pass
 voice-pass:
 	$(PYTHON) build/voice-pass.py
@@ -320,7 +320,7 @@ audiobook-deploy-mp3: audiobook normalize embed-cover
 epub-deploy: epub
 	$(PYTHON) build/copy-to-dropbox.py --include-epub --no-stability-check
 
-# book-deploy: ship everything — audiobook (regen + normalize + per-chapter
+# book-deploy: ship everything - audiobook (regen + normalize + per-chapter
 # cover + .m4b) AND .epub. Canonical "ship the entire book in every
 # format" target.
 .PHONY: book-deploy

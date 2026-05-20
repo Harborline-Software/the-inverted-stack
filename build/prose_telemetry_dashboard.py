@@ -206,7 +206,7 @@ def render_comparison_table(metrics_list: list[dict]) -> str:
                 per_1k = by_dev[key].get("count_per_1k_tokens", 0)
                 cells.append(f'<td class="num">{n}<small> ({per_1k:.1f}/1k)</small>{(" <span class=held>+" + str(held) + "h</span>") if held else ""}</td>')
             else:
-                cells.append('<td class="num">—</td>')
+                cells.append('<td class="num">-</td>')
         rows.append(f"<tr><th class='rowhead'>{_esc(key)}</th>{''.join(cells)}</tr>")
     # Aggregate metric rows
     rows.append("<tr><td colspan='99'><hr></td></tr>")

@@ -58,7 +58,7 @@ concepts:
   - Reference shell wires kernel, encrypted store, security, and sync without requiring domain code
   - Reference shell ships no opinionated domain model
   - Domain features are added as plugins on top of the shell, not by modifying the shell
-  verification: Inspect a freshly-cloned accelerator — kernel security and sync are functional, no business-domain
+  verification: Inspect a freshly-cloned accelerator - kernel security and sync are functional, no business-domain
     types are present in the shell project.
   kleppmann-properties:
   - P5
@@ -73,14 +73,14 @@ concepts:
     domain code'
   - 'Fails to satisfy: Reference shell ships no opinionated domain model'
   - Domain features are not added as plugins on top of the shell, not by modifying the shell
-  - 'Verification check does not pass: Inspect a freshly-cloned accelerator — kernel security and sync
+  - 'Verification check does not pass: Inspect a freshly-cloned accelerator - kernel security and sync
     are functional, no business-domain types are present in ...'
 - id: BUILD-03
   name: Three-call kernel composition root
   source: ch17 §"Wiring the Kernel Stack"
   source-paper: v13 §5
   definition: The local-first kernel is wired in the application composition root with three ordered DI
-    calls — encrypted store first, runtime second, security third — because each layer depends on the
+    calls - encrypted store first, runtime second, security third - because each layer depends on the
     layer registered before it.
   must-implement:
   - Composition root registers the encrypted store before the kernel runtime
@@ -113,9 +113,9 @@ concepts:
   name: Deterministic kernel startup sequence
   source: ch17 §"Wiring the Kernel Stack"
   source-paper: v13 §5
-  definition: After DI registration, the node startup sequence runs in a fixed order — open encrypted
+  definition: After DI registration, the node startup sequence runs in a fixed order - open encrypted
     database, initialize runtime (sync daemon, mDNS, CRDT engine), load or generate device keypair, evaluate
-    onboarding state, render shell — and the UI shell branch is determined by the persisted onboarding
+    onboarding state, render shell - and the UI shell branch is determined by the persisted onboarding
     state.
   must-implement:
   - Encrypted database opens before the runtime initializes
@@ -151,7 +151,7 @@ concepts:
     been applied, so the UI cannot present application surface that the security layer has not authorized.
   must-implement:
   - Workspace routes are unreachable while the session reports not-onboarded
-  - The kernel — not the UI — is the authority that gates workspace access
+  - The kernel - not the UI - is the authority that gates workspace access
   - UI shell selection reflects the kernel-reported onboarding state
   verification: Attempt to navigate to a workspace route on a not-onboarded node; navigation is refused
     at the kernel layer rather than only at the route guard.
@@ -168,7 +168,7 @@ concepts:
   - authenticity
   failed-conditions:
   - Workspace routes are not unreachable while the session reports not-onboarded
-  - The kernel — not the UI — is not the authority that gates workspace access
+  - The kernel - not the UI - is not the authority that gates workspace access
   - 'Fails to satisfy: UI shell selection reflects the kernel-reported onboarding state'
   - 'Verification check does not pass: Attempt to navigate to a workspace route on a not-onboarded node;
     navigation is refused at the kernel layer rather than ...'
@@ -299,7 +299,7 @@ concepts:
   source: ch17 §"Your First CRDT Document and Two-Device Sync"
   source-paper: v13 §13
   definition: When a documented subsystem ships ahead of its specification, the chapter and the running
-    build must explicitly disclose the gap — naming the stub component, what guarantees do not yet hold,
+    build must explicitly disclose the gap - naming the stub component, what guarantees do not yet hold,
     and which roadmap milestone closes the gap.
   must-implement:
   - Stub or placeholder components carry a runtime marker identifying them as not-production-ready
@@ -325,7 +325,7 @@ concepts:
   source: ch17 §"The QR-Code Onboarding Flow"
   source-paper: v13 §13
   definition: Every onboarding payload is a length-prefixed binary envelope containing exactly two sections
-    — a CBOR-encoded attestation bundle and a raw CRDT snapshot — each preceded by a little-endian uint32
+    - a CBOR-encoded attestation bundle and a raw CRDT snapshot - each preceded by a little-endian uint32
     byte length.
   must-implement:
   - Payload begins with a 4-byte little-endian uint32 specifying CBOR bundle length
@@ -366,7 +366,7 @@ concepts:
   - The bundle embeds the founder device's Ed25519 public key as IssuerPublicKey
   - Joiner verification checks signature against the embedded public key
   - No external CA or third-party issuer is consulted
-  verification: Generate a founder bundle and inspect it — issuer equals subject, IssuerPublicKey is present,
+  verification: Generate a founder bundle and inspect it - issuer equals subject, IssuerPublicKey is present,
     verification succeeds against the embedded key alone.
   kleppmann-properties:
   - P6
@@ -385,7 +385,7 @@ concepts:
   - 'Fails to satisfy: The bundle embeds the founder device''s Ed25519 public key as IssuerPublicKey'
   - 'Fails to satisfy: Joiner verification checks signature against the embedded public key'
   - No external CA or third-party issuer is not consulted
-  - 'Verification check does not pass: Generate a founder bundle and inspect it — issuer equals subject,
+  - 'Verification check does not pass: Generate a founder bundle and inspect it - issuer equals subject,
     IssuerPublicKey is present, verification succeeds agai...'
 - id: BUILD-13
   name: Founder-issued joiner attestation with embedded subject key
@@ -487,8 +487,8 @@ concepts:
   name: Always-visible three-indicator status bar
   source: ch17 §"Local-First UX Basics"
   source-paper: v13 §18
-  definition: A local-first node renders a permanently-visible status bar with three indicators — Node
-    Health, Link Status, and Data Freshness — so the user can always perceive how the node's behavior
+  definition: A local-first node renders a permanently-visible status bar with three indicators - Node
+    Health, Link Status, and Data Freshness - so the user can always perceive how the node's behavior
     depends on its current network and sync state.
   must-implement:
   - Status bar is rendered on every screen, never hidden behind a settings panel
@@ -521,8 +521,8 @@ concepts:
   source: ch17 §"Local-First UX Basics"
   source-paper: v13 §18
   definition: The staleness threshold that flips Data Freshness from healthy to stale is a configurable
-    product decision (default five minutes) chosen per application context — short for high-frequency
-    collaborative writing, long for intermittent-connectivity field deployments — and fixed before the
+    product decision (default five minutes) chosen per application context - short for high-frequency
+    collaborative writing, long for intermittent-connectivity field deployments - and fixed before the
     first user-facing release.
   must-implement:
   - Staleness threshold is configurable per deployment
@@ -549,8 +549,8 @@ concepts:
   name: Three-state optimistic write button
   source: ch17 §"Optimistic Write Button States"
   source-paper: v13 §18
-  definition: Every write surface in a local-first application reflects three local-write states — pending
-    (in-flight to local store), confirmed (durable on local device), failed (local-store error only) —
+  definition: Every write surface in a local-first application reflects three local-write states - pending
+    (in-flight to local store), confirmed (durable on local device), failed (local-store error only) -
     without conflating sync delay with write failure.
   must-implement:
   - UI distinguishes pending, confirmed, and failed states for every write surface
@@ -609,7 +609,7 @@ concepts:
   source: ch17 §"The Full Extension-Point Map"
   source-paper: v13 §5
   definition: The complete plugin surface for a domain feature consists of exactly five extension points
-    — ILocalNodePlugin (lifecycle), IStreamDefinition (CRDT streams and sync buckets), IProjectionBuilder
+    - ILocalNodePlugin (lifecycle), IStreamDefinition (CRDT streams and sync buckets), IProjectionBuilder
     (read-model projections), ISchemaVersion (schema versions and upcasters), and IUiBlockManifest (UI
     blocks).
   must-implement:
@@ -701,7 +701,7 @@ concepts:
   name: Recursive declare-project-add-extend feature loop
   source: ch17 §"The Minimal Loop"
   source-paper: v13 §13
-  definition: The development loop for every new domain feature is the same five-step cycle — declare
+  definition: The development loop for every new domain feature is the same five-step cycle - declare
     the IStreamDefinition, build the IProjectionBuilder, add the UI surface, run two instances on LAN
     to validate sync, then implement the next feature as another ILocalNodePlugin returning to step one.
   must-implement:

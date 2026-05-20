@@ -121,7 +121,7 @@ concepts:
   source: appendix-a §"A.2 Message Framing"
   source-paper: null
   definition: Any CBOR encoding of fields that appear in signed contexts must use Deterministic Encoding
-    per RFC 8949 §4.2 — definite-length arrays and maps, lexicographically sorted map keys, shortest-form
+    per RFC 8949 §4.2 - definite-length arrays and maps, lexicographically sorted map keys, shortest-form
     integers, and shortest exact floating-point representation.
   must-implement:
   - Signed CBOR uses definite-length arrays and maps only
@@ -675,7 +675,7 @@ concepts:
   name: Long-absence reconnect treated as new node
   source: appendix-a §"A.4.2 GOSSIP_PING"
   source-paper: null
-  definition: A node returning after long absence is treated as a new connection — prior session state
+  definition: A node returning after long absence is treated as a new connection - prior session state
     is discarded, CAPABILITY_NEG reacquires leases and subscriptions, and catch-up proceeds via DELTA_STREAM
     replay rather than session resume.
   must-implement:
@@ -733,7 +733,7 @@ concepts:
   name: Error retry semantics catalogue
   source: appendix-a §"A.5 Error Codes"
   source-paper: null
-  definition: Each defined error code carries a normative retry policy — exponential backoff with jitter
+  definition: Each defined error code carries a normative retry policy - exponential backoff with jitter
     for ERR_RATE_LIMIT_EXCEEDED and ERR_THROTTLE, no-retry for ERR_VERSION_INCOMPATIBLE and ERR_BUCKET_NOT_AUTHORIZED,
     IdP re-authentication for ERR_ATTESTATION_REQUIRED and ERR_KEY_REVOKED, and epoch snapshot fetch for
     ERR_EPOCH_MISMATCH.

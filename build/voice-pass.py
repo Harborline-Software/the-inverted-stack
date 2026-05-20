@@ -108,7 +108,7 @@ TASK
 3. Apply your calibration self-check before producing the rewrite.
 4. Write the rewritten markdown to {rel_dst} (create parent directories if needed).
 
-PRESERVATION RULES (do not rewrite these — copy them through verbatim):
+PRESERVATION RULES (do not rewrite these - copy them through verbatim):
 - YAML frontmatter at the top of the file IF AND ONLY IF the source already has it.
   Do NOT invent or add YAML frontmatter when the source has none. The presence of
   HTML comments at the top is not frontmatter.
@@ -133,7 +133,7 @@ DISCIPLINE RULES (these apply on top of the agent's voice instructions):
    NOT change list formats, paragraph order within a section, or heading
    levels. The structure the author built is intentional. STRICT.
 
-2. NO NEW ARGUMENTS — BUT NEW IMAGERY IS WELCOME.
+2. NO NEW ARGUMENTS - BUT NEW IMAGERY IS WELCOME.
 
    What you may NOT do:
    - Introduce a genuinely new opening hook or closing kicker for the
@@ -149,14 +149,14 @@ DISCIPLINE RULES (these apply on top of the agent's voice instructions):
      clarity-bridging metaphors INSIDE existing paragraphs to make an
      existing claim land more vividly. (Example: if the source says
      "vendors share infrastructure," you may add "all four sitting on
-     the same physical concrete floor" as illustration — the claim is
+     the same physical concrete floor" as illustration - the claim is
      unchanged, the imagery is new.)
    - Add a new memorable beat (a short emphatic sentence, a parallel
      triplet, an em-dash apposition) inside a section, where it serves
      the existing argument and does not displace the author's own
      beats.
 
-3. PRESERVE THE AUTHOR'S PROSE PATTERNS WHEN PRESENT — ADD YOUR OWN ON
+3. PRESERVE THE AUTHOR'S PROSE PATTERNS WHEN PRESENT - ADD YOUR OWN ON
    TOP, NEVER IN PLACE OF.
 
    If the source already uses parallel construction ("not X, not Y, but
@@ -371,7 +371,7 @@ def main() -> None:
             continue
         sources[ch] = src
 
-    # Pass 1 — guest voices over original sources.
+    # Pass 1 - guest voices over original sources.
     if args.pass_n in (None, 1):
         print("\n=== PASS 1 (guest voices) ===")
         ran = 0
@@ -404,7 +404,7 @@ def main() -> None:
         if not args.dry_run:
             print(f"  pass 1: {ran} ran, {skipped} skipped")
 
-    # Pass 2 — Sinek over pass-1 output (or original, for sinek-mapped).
+    # Pass 2 - Sinek over pass-1 output (or original, for sinek-mapped).
     if args.pass_n in (None, 2):
         print("\n=== PASS 2 (Sinek house voice) ===")
         ran = 0

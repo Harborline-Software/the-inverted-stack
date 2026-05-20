@@ -44,7 +44,7 @@ concepts:
   name: Plain-language register for all user-visible state
   source: ch20 §"The Complexity Hiding Standard"
   source-paper: v13 §13
-  definition: Every string a user reads must pass a plain-language test — a practitioner with no knowledge
+  definition: Every string a user reads must pass a plain-language test - a practitioner with no knowledge
     of distributed systems understands it without training.
   must-implement:
   - String catalog excludes infrastructure terminology in any user-visible surface
@@ -73,8 +73,8 @@ concepts:
   name: Three always-visible status indicators
   source: ch20 §"The Three Always-Visible Indicators"
   source-paper: v13 §13
-  definition: The application status bar displays three indicators at all times — node health, link status,
-    and data freshness — non-intrusive under normal conditions and expanding to plain-language labels
+  definition: The application status bar displays three indicators at all times - node health, link status,
+    and data freshness - non-intrusive under normal conditions and expanding to plain-language labels
     under degraded conditions.
   must-implement:
   - Status bar persists across all application screens
@@ -140,7 +140,7 @@ concepts:
   source: ch20 §"The Three Always-Visible Indicators"
   source-paper: v13 §13
   definition: The link status indicator signals connectivity to the team using green (peer reachable,
-    gossip flowing), amber (relay-only), and grey (fully offline) — and never red, because connectivity
+    gossip flowing), amber (relay-only), and grey (fully offline) - and never red, because connectivity
     failure is not an error condition for a local-first node.
   must-implement:
   - Indicator distinguishes peer-reachable, relay-only, and offline states
@@ -276,9 +276,9 @@ concepts:
   name: Three-state optimistic write lifecycle
   source: ch20 §"Optimistic UI and Confirmed States"
   source-paper: v13 §13
-  definition: An AP-class write moves through three explicit visual states — pending (applied locally,
+  definition: An AP-class write moves through three explicit visual states - pending (applied locally,
     not yet seen by any peer), confirmed (received by at least one peer), and failed (circuit breaker
-    rejected on reconnect) — with the failed state opening the conflict inbox.
+    rejected on reconnect) - with the failed state opening the conflict inbox.
   must-implement:
   - Writes apply locally on user confirmation and surface a pending visual state immediately
   - Confirmation state is reached when at least one peer has acknowledged the write
@@ -341,7 +341,7 @@ concepts:
   name: Conflict inbox as single resolution surface
   source: ch20 §"The Conflict Inbox and Bulk Resolution"
   source-paper: v13 §13
-  definition: All conflict resolution occurs in a dedicated panel — not a modal, not an interstitial —
+  definition: All conflict resolution occurs in a dedicated panel - not a modal, not an interstitial -
     accessible from the status bar and any failed-write indicator.
   must-implement:
   - Application exposes one canonical conflict inbox surface, not multiple per-feature dialogs
@@ -402,7 +402,7 @@ concepts:
   source: ch20 §"The Conflict Inbox and Bulk Resolution"
   source-paper: v13 §13
   definition: Per-conflict-group resolution offers prefer-mine, prefer-remote, or a configurable merge
-    rule chosen from rules declared per record type — end users cannot select arbitrary merge strategies
+    rule chosen from rules declared per record type - end users cannot select arbitrary merge strategies
     the data model does not support.
   must-implement:
   - Merge rules are declared per record type in application configuration
@@ -527,7 +527,7 @@ concepts:
   source: ch20 §"Designing for Failure Modes"
   source-paper: v13 §13
   definition: When the node reconnects with offline writes pending validation, the quarantine count is
-    surfaced as a one-sentence courtesy with a single review action before sync completes — not as a modal
+    surfaced as a one-sentence courtesy with a single review action before sync completes - not as a modal
     blocker, and not after the fact.
   must-implement:
   - Reconnect surfaces the pending-validation count before sync completion
@@ -560,7 +560,7 @@ concepts:
   source-paper: v13 §13
   definition: After a power-loss or OS-kill termination the node validates the last write-ahead checkpoint,
     replays pending writes from the CRDT log, and surfaces a single short status only when replay takes
-    more than two seconds — never a crash dialog.
+    more than two seconds - never a crash dialog.
   must-implement:
   - Relaunch validates the WAL checkpoint and replays the CRDT log automatically
   - Workspace opens as soon as replay completes
@@ -593,8 +593,8 @@ concepts:
   name: First-run two-choice gate
   source: ch20 §"The First-Run Experience"
   source-paper: v5 §6
-  definition: A new user sees exactly two options on first run — Start a new team and Join an existing
-    team — with no onboarding tour, no feature callouts, and no auxiliary links.
+  definition: A new user sees exactly two options on first run - Start a new team and Join an existing
+    team - with no onboarding tour, no feature callouts, and no auxiliary links.
   must-implement:
   - First-run screen presents exactly the two named options
   - No tour, callout, or auxiliary action is presented before the choice
@@ -624,7 +624,7 @@ concepts:
   source: ch20 §"The First-Run Experience"
   source-paper: v13 §13
   definition: Choosing "Start a new team" prompts for the first BYOC backup configuration before the application
-    opens, framed in plain language with concrete target choices (local folder, OneDrive, Dropbox) — not
+    opens, framed in plain language with concrete target choices (local folder, OneDrive, Dropbox) - not
     as a later step.
   must-implement:
   - New-team flow blocks workspace open until a backup target is configured
@@ -690,9 +690,9 @@ concepts:
   name: QR-based peer-assisted onboarding
   source: ch20 §"The First-Run Experience"
   source-paper: v13 §13
-  definition: Choosing "Join an existing team" runs the three-step onboarding flow — scan a QR code on
+  definition: Choosing "Join an existing team" runs the three-step onboarding flow - scan a QR code on
     an existing team member's device (or paste the bundle), transfer the role attestation, then sync eager
-    buckets in the background — and shows a sync progress indicator until enough data has landed for a
+    buckets in the background - and shows a sync progress indicator until enough data has landed for a
     meaningful state.
   must-implement:
   - Join flow accepts QR scan and a paste-bundle fallback
@@ -729,8 +729,8 @@ concepts:
   name: Accessibility as a Tier-1 contract
   source: ch20 §"Accessibility as a Contract"
   source-paper: v13 §13
-  definition: Every UX surface in the application carries an accessibility contract — semantic ARIA roles,
-    keyboard reachability, declared component metadata, and plain-language assistive-technology text —
+  definition: Every UX surface in the application carries an accessibility contract - semantic ARIA roles,
+    keyboard reachability, declared component metadata, and plain-language assistive-technology text -
     enforced as rigorously as the write path.
   must-implement:
   - Status surfaces use role="status" with aria-live="polite" for ambient changes and role="alert" with

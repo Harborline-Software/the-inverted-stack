@@ -1,9 +1,9 @@
-# Appendix E — Citation Style
+# Appendix E - Citation Style
 
 <!-- icm/approved -->
 <!-- Target: ~500 words -->
 
-This book uses IEEE numeric citation style — the standard in engineering, computer science, and related technical disciplines. Sources appear as bracketed numbers in the text. Full details live in a numbered reference list at the end of the book.
+This book uses IEEE numeric citation style - the standard in engineering, computer science, and related technical disciplines. Sources appear as bracketed numbers in the text. Full details live in a numbered reference list at the end of the book.
 
 ---
 
@@ -27,13 +27,13 @@ When quoting or referring to a specific part of a source, include page numbers:
 
 ## Reference List
 
-All cited works appear in a "References" section, ordered numerically by citation number — not alphabetically.
+All cited works appear in a "References" section, ordered numerically by citation number - not alphabetically.
 
 Each entry begins with its bracketed number: [1], [2], etc.
 
 Use author initials followed by last name (e.g., A. B. Smith).
 
-Include enough information — title, publisher or journal, year — for readers to locate the source.
+Include enough information - title, publisher or journal, year - for readers to locate the source.
 
 ---
 
@@ -75,9 +75,9 @@ For IETF RFCs specifically: `[n] A. A. Author, "Title," IETF RFC NNNN, Month Yea
 
 **Legal Decision**
 
-> [n] Court Name, "Case name — short form," Case No. XXX/YY, Judgment, Month Day, Year.
+> [n] Court Name, "Case name - short form," Case No. XXX/YY, Judgment, Month Day, Year.
 
-Example: CJEU Schrems II is cited as `[n] Court of Justice of the European Union, "Case C-311/18 — Data Protection Commissioner v. Facebook Ireland Ltd and Maximillian Schrems," Judgment, Jul. 16, 2020.`
+Example: CJEU Schrems II is cited as `[n] Court of Justice of the European Union, "Case C-311/18 - Data Protection Commissioner v. Facebook Ireland Ltd and Maximillian Schrems," Judgment, Jul. 16, 2020.`
 
 **Statute or Regulation**
 
@@ -91,10 +91,10 @@ For EU regulations specifically: `[n] Regulation (EU) NNNN/YYYY of the European 
 
 ## Consistency Rules
 
-- Use IEEE style throughout the book — same in-text format, same reference patterns, everywhere.
+- Use IEEE style throughout the book - same in-text format, same reference patterns, everywhere.
 - Maintain consistent capitalization of titles and abbreviations, especially journal and conference names.
 - When citing multiple sources at once, list each number separately in its own bracket: [1], [3], [5].
-- Do not merge multiple citations into a single bracket. Not [1,3,5] — use [1], [3], [5].
+- Do not merge multiple citations into a single bracket. Not [1,3,5] - use [1], [3], [5].
 
 ---
 
@@ -110,7 +110,7 @@ The in-text citations below illustrate the range of source types cited across th
 | [4] | arXiv pre-print | H. Howard, D. Malkhi, and A. Spiegelman, "Flexible Paxos: Quorum intersection revisited," *arXiv:1608.06696*, Aug. 2016. |
 | [5] | IETF RFC | S. Josefsson and I. Liusvaara, "Edwards-Curve Digital Signature Algorithm (EdDSA)," IETF RFC 8032, Jan. 2017. |
 | [6] | Online source | T. Perrin, "The Noise Protocol Framework," Revision 34, Jul. 2018. [Online]. Available: https://noiseprotocol.org/noise.html |
-| [7] | Legal decision | Court of Justice of the European Union, "Case C-311/18 — Data Protection Commissioner v. Facebook Ireland Ltd and Maximillian Schrems," Judgment, Jul. 16, 2020. |
+| [7] | Legal decision | Court of Justice of the European Union, "Case C-311/18 - Data Protection Commissioner v. Facebook Ireland Ltd and Maximillian Schrems," Judgment, Jul. 16, 2020. |
 | [8] | EU Regulation | Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 on the protection of natural persons with regard to the processing of personal data and on the free movement of such data (General Data Protection Regulation), *Official Journal of the European Union*, L 119/1, May 2016. |
 | [9] | National statute | Government of India, The Digital Personal Data Protection Act, 2023 (Act No. 22 of 2023), Aug. 11, 2023. |
 | [10] | Engineering blog | T. Palmer, "Scaling the Linear sync engine to 100M+ records," *Linear Engineering Blog*, 2023. [Online]. Available: https://linear.app/blog/scaling-the-linear-sync-engine |

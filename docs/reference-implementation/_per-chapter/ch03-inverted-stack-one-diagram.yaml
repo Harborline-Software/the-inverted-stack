@@ -47,8 +47,8 @@ concepts:
   name: Five-layer reference model
   source: ch03 §"The Five Layers"
   source-paper: v13 §5
-  definition: The inverted stack decomposes into five layers — Presentation, Application Logic, Sync Daemon,
-    Storage, and Relay/Discovery — each with a single owner, a single boundary, and an explicit answer
+  definition: The inverted stack decomposes into five layers - Presentation, Application Logic, Sync Daemon,
+    Storage, and Relay/Discovery - each with a single owner, a single boundary, and an explicit answer
     to the network-unavailable question.
   must-implement:
   - Each layer has one owner and a documented boundary
@@ -100,8 +100,8 @@ concepts:
   name: Four-state node health indicator
   source: 'ch03 §"Layer 1: Presentation"'
   source-paper: v5 §2.1
-  definition: The presentation layer surfaces sync state as four named states — sync-healthy, stale, offline,
-    and conflict-pending — each communicated through more than color and announced to assistive technology
+  definition: The presentation layer surfaces sync state as four named states - sync-healthy, stale, offline,
+    and conflict-pending - each communicated through more than color and announced to assistive technology
     on transition.
   must-implement:
   - Health indicator exposes sync-healthy, stale, offline, and conflict-pending states
@@ -164,7 +164,7 @@ concepts:
   name: Per-record-class CAP positioning
   source: 'ch03 §"Layer 2: Application Logic"'
   source-paper: v13 §5
-  definition: CAP trade-offs are made per record class rather than per application — documents and notes
+  definition: CAP trade-offs are made per record class rather than per application - documents and notes
     are AP via CRDT merge, identity facts are AP with deferred merge, reservations and slots are CP via
     distributed lease, and financial transactions are CP under lease plus ledger ordering.
   must-implement:
@@ -226,7 +226,7 @@ concepts:
   name: Three-tier peer discovery hierarchy
   source: 'ch03 §"Layer 3: Sync Daemon"'
   source-paper: v13 §5
-  definition: Peer discovery follows a fixed hierarchy — mDNS on the local network, mesh-VPN (WireGuard-based)
+  definition: Peer discovery follows a fixed hierarchy - mDNS on the local network, mesh-VPN (WireGuard-based)
     for NAT traversal across networks, and the managed relay as the final fallback.
   must-implement:
   - Daemon attempts mDNS discovery on the local network first
@@ -258,7 +258,7 @@ concepts:
   name: Gossip anti-entropy with vector clocks
   source: 'ch03 §"Layer 3: Sync Daemon"'
   source-paper: v13 §5
-  definition: The daemon converges peer state through periodic gossip — every 30 seconds it selects two
+  definition: The daemon converges peer state through periodic gossip - every 30 seconds it selects two
     random peers, exchanges deltas based on vector-clock divergence, and streams missing CRDT operations
     using CBOR encoding.
   must-implement:
@@ -323,8 +323,8 @@ concepts:
   name: Storage layer with CRDT store, event log, and read-model projections
   source: 'ch03 §"Layer 4: Storage"'
   source-paper: v13 §5
-  definition: The storage layer holds three coexisting structures — a typed CRDT document store, an append-only
-    event log as the ground truth, and rebuildable read-model projections — all backed by SQLite encrypted
+  definition: The storage layer holds three coexisting structures - a typed CRDT document store, an append-only
+    event log as the ground truth, and rebuildable read-model projections - all backed by SQLite encrypted
     with SQLCipher and a key derived via Argon2id and held in the OS keystore.
   must-implement:
   - All AP-class data is stored as typed CRDT documents (map, list, text)
@@ -422,10 +422,10 @@ concepts:
   - 'Verification check does not pass: Relay process inspection confirms no key material is present; protocol
     fuzz test confirms the relay rejects any request ...'
 - id: INV-14
-  name: Two relay trust levels — relay-only and attested hosted peer
+  name: Two relay trust levels - relay-only and attested hosted peer
   source: 'ch03 §"Layer 5: Relay and Discovery"'
   source-paper: v13 §5
-  definition: The relay operates at one of two declared trust levels — relay-only ciphertext routing as
+  definition: The relay operates at one of two declared trust levels - relay-only ciphertext routing as
     the default, or attested hosted peer that participates in CP-class quorum via an explicit administrator-issued
     role attestation.
   must-implement:
@@ -459,9 +459,9 @@ concepts:
   name: Mirror-inversion of Ch01 failure modes
   source: ch03 §"How This Changes Failure Modes"
   source-paper: v13 §5
-  definition: The inversion specifically resolves each of Ch01's six named SaaS failure modes — The Outage
+  definition: The inversion specifically resolves each of Ch01's six named SaaS failure modes - The Outage
     and The Dependency Chain, The Vendor, The Connectivity, The Data, The Price, and The Third-Party Veto
-    — by removing the vendor's data custody as the load-bearing dependency.
+    - by removing the vendor's data custody as the load-bearing dependency.
   must-implement:
   - Local authoritative state survives any upstream cloud-region outage
   - Vendor business changes do not interrupt access to user data
@@ -498,8 +498,8 @@ concepts:
   name: The Security Breach as hidden-exposure reveal
   source: ch03 §"How This Changes Failure Modes"
   source-paper: v13 §5
-  definition: SaaS exposes users to a structurally invisible failure mode — vendor-side breach of decryptable
-    copies — that the inverted architecture neutralizes by ensuring the relay only ever holds ciphertext
+  definition: SaaS exposes users to a structurally invisible failure mode - vendor-side breach of decryptable
+    copies - that the inverted architecture neutralizes by ensuring the relay only ever holds ciphertext
     sealed under per-document DEKs wrapped by role KEKs whose keys never leave the originating node.
   must-implement:
   - Per-document data encryption keys (DEKs) are generated and held only on originating nodes
@@ -533,9 +533,9 @@ concepts:
   name: Honest new failure modes introduced by the architecture
   source: ch03 §"How This Changes Failure Modes"
   source-paper: v13 §5
-  definition: The inversion introduces three categorically new operational concerns — endpoint-compromise
+  definition: The inversion introduces three categorically new operational concerns - endpoint-compromise
     expansion of the attack surface, schema migration across independently-updating nodes, and CRDT garbage-collection
-    debt across long-lived peers — each of which the architecture addresses but does not eliminate.
+    debt across long-lived peers - each of which the architecture addresses but does not eliminate.
   must-implement:
   - Endpoint defense uses layered controls (encryption at rest, field-level encryption, sync-layer minimization,
     circuit-breaker quarantine)
@@ -567,10 +567,10 @@ concepts:
   - 'Verification check does not pass: Threat model documents endpoint compromise scenarios and the four-layer
     defense mapping; migration test runs five concur...'
 - id: ZONE-01
-  name: Anchor as Zone A — offline-by-default local-first deployment shape
+  name: Anchor as Zone A - offline-by-default local-first deployment shape
   source: 'ch03 §"The Two Canonical Shapes: Anchor and Bridge"'
   source-paper: v5 §2.2
-  definition: Anchor is the Zone A canonical shape — a .NET MAUI Blazor Hybrid native application running
+  definition: Anchor is the Zone A canonical shape - a .NET MAUI Blazor Hybrid native application running
     on Windows and macOS desktops with data in a local SQLCipher SQLite database, an Ed25519 device-identity
     keypair generated at first run, and opt-in sync.
   must-implement:
@@ -604,10 +604,10 @@ concepts:
   - 'Verification check does not pass: Fresh install with networking disabled completes setup and supports
     all core workflows; keystore inspection confirms a p...'
 - id: ZONE-02
-  name: Bridge as Zone C — hybrid multi-tenant SaaS deployment shape
+  name: Bridge as Zone C - hybrid multi-tenant SaaS deployment shape
   source: 'ch03 §"The Two Canonical Shapes: Anchor and Bridge"'
   source-paper: v5 §2.2
-  definition: Bridge is the Zone C canonical shape — a .NET Aspire / Blazor Server hosted application
+  definition: Bridge is the Zone C canonical shape - a .NET Aspire / Blazor Server hosted application
     that runs a dedicated local-node host process and dedicated SQLCipher database per tenant, defaulting
     to ciphertext-only relay participation in the tenant's gossip scope.
   must-implement:
@@ -673,7 +673,7 @@ concepts:
   name: Three developer-habit shifts under the inversion
   source: ch03 §"What Changes for the Developer"
   source-paper: v13 §5
-  definition: Building under the inversion shifts three habits — writes succeed on local durability rather
+  definition: Building under the inversion shifts three habits - writes succeed on local durability rather
     than remote acknowledgement, business logic owns its correctness independently of the network, and
     failure modes are explicit rather than papered over.
   must-implement:

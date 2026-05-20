@@ -1,4 +1,4 @@
-# Appendix B — Threat Model Worksheets
+# Appendix B - Threat Model Worksheets
 
 <!-- icm/prose-review -->
 
@@ -9,11 +9,11 @@
 
 ## Introduction
 
-Build your deployment threat model with these four worksheets. Fill them in before your first production deployment. Update them when the asset inventory changes. Run the incident response template the moment a key compromise is suspected — not the moment it is confirmed. Chapter 15 carries the security architecture: the DEK (Data Encryption Key)/KEK (Key Encryption Key) key hierarchy, the role attestation flow, and the compelled-access resistance model. Chapter 22 carries the key compromise incident response procedure. Complete Chapter 19's compliance checklist before you start this exercise. The checklist names the regulatory ground these worksheets stand on.
+Build your deployment threat model with these four worksheets. Fill them in before your first production deployment. Update them when the asset inventory changes. Run the incident response template the moment a key compromise is suspected - not the moment it is confirmed. Chapter 15 carries the security architecture: the DEK (Data Encryption Key)/KEK (Key Encryption Key) key hierarchy, the role attestation flow, and the compelled-access resistance model. Chapter 22 carries the key compromise incident response procedure. Complete Chapter 19's compliance checklist before you start this exercise. The checklist names the regulatory ground these worksheets stand on.
 
 ---
 
-## Section 1 — Asset Inventory Template
+## Section 1 - Asset Inventory Template
 
 Fill this table before you start the threat model exercise. Every row is an asset that, if compromised, lost, or corrupted, would cause material harm to the team or to a person who trusted you with their data.
 
@@ -29,7 +29,7 @@ Fill this table before you start the threat model exercise. Every row is an asse
 | MDM (Mobile Device Management) configuration | Internal | MDM system (Intune / Jamf / SOTI MobiControl / IBM MaaS360 / Ivanti Endpoint Manager); node-config.json on endpoint | IT admin | Medium |
 | Audit log completeness record | Compliance-grade | Local SQLCipher DB; exported to regulatory package | Compliance officer | Critical (Japan PIPA (Personal Information Protection Act) / Korea ISMS-P (Information Security Management System – Personal) / PIPL (Personal Information Protection Law) regulated deployments) |
 
-**Customization guidance:** Add domain-specific rows. HIPAA (Health Insurance Portability and Accountability Act)-covered entities must treat patient identifiers as Critical. HIPAA, SOX, ITAR (International Traffic in Arms Regulations), GDPR (General Data Protection Regulation) (data minimization and purpose limitation), DPDP (Digital Personal Data Protection) Act Section 8 (purpose specification), and comparable frameworks set minimum classification floors. Set those floors before you fill in the Sensitivity column. Before you treat any Node-secret or Team-secret row as structurally isolated, write down which OS keystore protects it: Windows Credential Manager with TPM (Trusted Platform Module), macOS Keychain with Secure Enclave, Linux libsecret with the kernel keyring, Android Keystore, iOS Data Protection. These keystores have meaningfully different security boundaries — verify your platform's actual properties, not its marketing.
+**Customization guidance:** Add domain-specific rows. HIPAA (Health Insurance Portability and Accountability Act)-covered entities must treat patient identifiers as Critical. HIPAA, SOX, ITAR (International Traffic in Arms Regulations), GDPR (General Data Protection Regulation) (data minimization and purpose limitation), DPDP (Digital Personal Data Protection) Act Section 8 (purpose specification), and comparable frameworks set minimum classification floors. Set those floors before you fill in the Sensitivity column. Before you treat any Node-secret or Team-secret row as structurally isolated, write down which OS keystore protects it: Windows Credential Manager with TPM (Trusted Platform Module), macOS Keychain with Secure Enclave, Linux libsecret with the kernel keyring, Android Keystore, iOS Data Protection. These keystores have meaningfully different security boundaries - verify your platform's actual properties, not its marketing.
 
 **Classification definitions for this template:**
 
@@ -43,9 +43,9 @@ Fill this table before you start the threat model exercise. Every row is an asse
 
 ---
 
-## Section 2 — Actor Taxonomy Template
+## Section 2 - Actor Taxonomy Template
 
-List every actor who interacts with your system, or who could realistically interact with it, including adversarial actors. For each one, write down the realistic motivation. Then write down the capability level you must plan for — not the capability level you wish you only had to plan for.
+List every actor who interacts with your system, or who could realistically interact with it, including adversarial actors. For each one, write down the realistic motivation. Then write down the capability level you must plan for - not the capability level you wish you only had to plan for.
 
 | Actor | Access level | Likely motivation | Capability level |
 |---|---|---|---|
@@ -54,12 +54,12 @@ List every actor who interacts with your system, or who could realistically inte
 | Malicious insider (role access) | Team member with authorized role | Data exfiltration within role scope | Medium |
 | Compromised relay operator | Transport layer (ciphertext) | Traffic analysis, availability attack | Limited (no plaintext) |
 | Relay service termination by policy | Service withdrawal | Jurisdiction restriction, sanctions, commercial decision | Total relay unavailability; local node continues, peer-to-peer sync continues where reachable |
-| Former team member | None after rotation for future access | Historical data retention, post-revocation exfiltration attempt | Low for future access (blocked by key rotation). Historical exposure scope is determined by the data-at-risk calculation in Section 4 — key rotation does not remediate prior exfiltration |
-| Compromised IdP (Identity Provider) | Authentication layer | Issue fraudulent role attestations | High — bypasses the attestation trust anchor. Requires IdP-level detection and rotation of the IdP signing key |
+| Former team member | None after rotation for future access | Historical data retention, post-revocation exfiltration attempt | Low for future access (blocked by key rotation). Historical exposure scope is determined by the data-at-risk calculation in Section 4 - key rotation does not remediate prior exfiltration |
+| Compromised IdP (Identity Provider) | Authentication layer | Issue fraudulent role attestations | High - bypasses the attestation trust anchor. Requires IdP-level detection and rotation of the IdP signing key |
 | Supply chain attacker | Build pipeline | Backdoor via malicious package or binary | High if signing key compromised |
-| Government authority / regulatory body | Statutory — legal compulsion | Data access under warrant, subpoena, or administrative order; device seizure; regulatory inspection | Statutory. Mitigation: end-to-end encryption with local key management (keys never transmitted to relay) means ciphertext-only exposure on compelled relay inspection. Device seizure exposes whatever is decryptable with device-present credentials. This is the Schrems II, PIPL, 242-FZ, DIFC (Dubai International Financial Centre), UAE DPL (Data Protection Law), RBI (Reserve Bank of India), POPIA (Protection of Personal Information Act), NDPR (Nigeria Data Protection Regulation), and Japan PIPA regulatory-access threat model |
+| Government authority / regulatory body | Statutory - legal compulsion | Data access under warrant, subpoena, or administrative order; device seizure; regulatory inspection | Statutory. Mitigation: end-to-end encryption with local key management (keys never transmitted to relay) means ciphertext-only exposure on compelled relay inspection. Device seizure exposes whatever is decryptable with device-present credentials. This is the Schrems II, PIPL, 242-FZ, DIFC (Dubai International Financial Centre), UAE DPL (Data Protection Law), RBI (Reserve Bank of India), POPIA (Protection of Personal Information Act), NDPR (Nigeria Data Protection Regulation), and Japan PIPA regulatory-access threat model |
 
-**Customization guidance:** Add the actors specific to your vertical. Healthcare deployments add "unauthorized staff member with workstation access" and "patient with provider relationship." Legal deployments add "opposing counsel seeking discovery advantage." Government and defense deployments add nation-state actors and insider threat programs as distinct entries with capability levels that match. Deployments in regulated markets — DIFC, RBI-supervised BFSI (Banking, Financial Services, and Insurance), PIPL-scoped, POPIA-scoped, GDPR-scoped — extend the statutory-access actor with jurisdiction-specific inspection rights. Document the regulatory basis in the capability notes so a future reader knows the law you were planning against.
+**Customization guidance:** Add the actors specific to your vertical. Healthcare deployments add "unauthorized staff member with workstation access" and "patient with provider relationship." Legal deployments add "opposing counsel seeking discovery advantage." Government and defense deployments add nation-state actors and insider threat programs as distinct entries with capability levels that match. Deployments in regulated markets - DIFC, RBI-supervised BFSI (Banking, Financial Services, and Insurance), PIPL-scoped, POPIA-scoped, GDPR-scoped - extend the statutory-access actor with jurisdiction-specific inspection rights. Document the regulatory basis in the capability notes so a future reader knows the law you were planning against.
 
 **Capability level definitions:**
 
@@ -68,9 +68,9 @@ List every actor who interacts with your system, or who could realistically inte
 | Low | Script kiddie; uses published exploits; no novel capability |
 | Medium | Competent attacker; adapts existing tools; targeted but not sophisticated |
 | High | Sophisticated attacker; zero-day capability; nation-state or well-funded criminal |
-| Limited | Access is structurally constrained (e.g., ciphertext only — no key material) |
+| Limited | Access is structurally constrained (e.g., ciphertext only - no key material) |
 
-### THREAT-10 — Compromised Endpoint
+### THREAT-10 - Compromised Endpoint
 
 Subsequent threat entries follow the same THREAT-NN format used here.
 
@@ -87,19 +87,19 @@ Most real-world compromises are Medium. High capability changes the calculus for
 
 **Attack surface.** OS keychain, in-memory key material during active session, application database (decryptable with the locally-held DEKs), session tokens, biometric authentication flow.
 
-**Architecture protects.** Other devices in the user's fleet (per-device keypair isolation). Other users' data on the relay (role-scoped access). Future state after revocation propagates. Transaction-log integrity — backdate attacks blocked by the append-only log and per-device signing.
+**Architecture protects.** Other devices in the user's fleet (per-device keypair isolation). Other users' data on the relay (role-scoped access). Future state after revocation propagates. Transaction-log integrity - backdate attacks blocked by the append-only log and per-device signing.
 
 **Architecture does not protect.** Local cached data that was decryptable before compromise. Current-session plaintext in memory. Keys held in the OS keychain on non-enclave devices.
 
 **Residual risk.** Scoped to the compromised device's cached copy. On enclave-class devices (Secure Enclave, Titan M, Pluton), the KEK is protected even under OS compromise; in-memory plaintext remains exposed. On non-enclave devices, the KEK is exposed and all locally-cached ciphertext is decryptable.
 
-#### Attack tree — primary branch: mobile zero-click compromise
+#### Attack tree - primary branch: mobile zero-click compromise
 
 1. **Attacker delivers zero-click exploit.** No user interaction. Targets the OS messaging stack or browser engine. Device is compromised silently.
 2. **Attacker reads OS keychain.** Non-enclave devices: KEK is extracted; locally-cached ciphertext is decryptable. Attack succeeds at the data-access goal.
 3. **Enclave check.** Enclave-class devices: KEK is inaccessible via OS API. Attack contained to in-memory plaintext during active session only.
-4. **Attacker reads in-memory plaintext.** Whatever the application has decrypted for display is accessible. Re-authentication interval (Ch15 §In-Memory Key Handling) limits the window — four hours consumer, sixty minutes regulated.
-5. **Attacker attempts relay impersonation.** Captured session token used to forge writes. Blocked when the token is bound to the device keypair and the relay enforces keypair-session binding. Bearer-only tokens succeed — that is an architectural failure against §47e.
+4. **Attacker reads in-memory plaintext.** Whatever the application has decrypted for display is accessible. Re-authentication interval (Ch15 §In-Memory Key Handling) limits the window - four hours consumer, sixty minutes regulated.
+5. **Attacker attempts relay impersonation.** Captured session token used to forge writes. Blocked when the token is bound to the device keypair and the relay enforces keypair-session binding. Bearer-only tokens succeed - that is an architectural failure against §47e.
 6. **Operator issues remote-wipe broadcast.** Revocation plus crypto-shred propagates. The device evicts key material on next connection. An attacker who keeps the device offline defers the wipe; MDM (parallel channel) catches that case for enterprise deployments.
 
 #### Mitigation summary
@@ -114,7 +114,7 @@ Cross-references: Ch23 §Endpoint Compromise (full specification); Ch15 §In-Mem
 
 ---
 
-## Section 3 — Worked Example: Construction PM Vertical
+## Section 3 - Worked Example: Construction PM Vertical
 
 **Scenario:** A five-person construction project management team is running the inverted stack. The primary workflows are RFI tracking, punch lists, and change orders. Nodes run on Windows 11 laptops. The team works from job sites with intermittent connectivity. The relay is operator-managed and cloud-hosted. There is no self-hosted relay.
 
@@ -138,7 +138,7 @@ Add these rows to the standard asset inventory table:
 | Disgruntled subcontractor | Evidence deletion | Insider with partial role access; attempt to modify change order log |
 | Relay operator | Traffic analysis | Observe which teams are active during a bid period |
 
-### Attack Tree — Primary Branch: Laptop Theft at Job Site
+### Attack Tree - Primary Branch: Laptop Theft at Job Site
 
 This is the highest-probability threat for this vertical. Project managers carry laptops to job sites. Vehicles get broken into. Walk through the branches one at a time:
 
@@ -149,7 +149,7 @@ This is the highest-probability threat for this vertical. Project managers carry
 5. **Attacker targets OS keychain.** The role KEK and the device keypair sit in the Windows Credential Manager. To get to them you need the device PIN or the biometric. An attacker without the credential cannot extract key material from a locked device. Mitigation: enforce a 6-digit minimum PIN through MDM. Disable USB boot. Lock down BIOS settings changes.
 6. **Attacker copies SQLCipher DB offline.** Without the KEK and the SQLCipher passphrase, the ciphertext is unreadable. The attack fails.
 
-**Residual risk: communication pattern analysis.** The relay operator cannot read document content — every sync payload is encrypted before it leaves the node. The operator can still observe which nodes are active and when. In a five-person team, heavy sync activity between the project manager node and the estimator node in the 72 hours before a bid deadline tells the operator that an active bid is in preparation. The content is protected. The fact of activity is not.
+**Residual risk: communication pattern analysis.** The relay operator cannot read document content - every sync payload is encrypted before it leaves the node. The operator can still observe which nodes are active and when. In a five-person team, heavy sync activity between the project manager node and the estimator node in the 72 hours before a bid deadline tells the operator that an active bid is in preparation. The content is protected. The fact of activity is not.
 
 **Mitigation for residual risk:** Deploy a self-hosted relay for projects with high competitive sensitivity. A self-hosted relay moves the traffic analysis capability from an external operator to internal IT, which is inside your trust boundary. See Ch 15 for relay deployment options.
 
@@ -157,7 +157,7 @@ This is the highest-probability threat for this vertical. Project managers carry
 
 ---
 
-## Section 4 — Key Compromise Incident Response Template
+## Section 4 - Key Compromise Incident Response Template
 
 Use this template when a KEK compromise is detected or suspected. The triggers are familiar: a stolen device, a reported credential leak, an anomalous access pattern in the audit log. Do not wait for confirmation before you start the re-keying procedure. A suspected compromise is enough to begin.
 
@@ -174,7 +174,7 @@ Run through this list whenever an employee reports a security event:
 - [ ] Unplanned device shutdown during sync operation in a region with unreliable grid power (Lagos, Karachi, parts of SE Asia). Distinguish this from a security event. A node that resumes cleanly from WAL (Write-Ahead Log) replay is an infrastructure failure. A node that cannot complete WAL replay, or that shows sync-daemon state inconsistent with the local database, is a potential security event until the sync mesh confirms consistency.
 - [ ] Government authority or regulatory body presents a lawful access demand (subpoena, warrant, administrative order, inspection notice). Engage legal counsel before any response. The architectural response is specified in Chapter 15. The incident response below still applies to any credentials exposed during compliance with such orders.
 
-Any checked item triggers the re-keying procedure below. Multiple checked items mean elevated severity — consider notifying affected users immediately rather than waiting until the procedure is complete.
+Any checked item triggers the re-keying procedure below. Multiple checked items mean elevated severity - consider notifying affected users immediately rather than waiting until the procedure is complete.
 
 ### Re-Keying Procedure
 
@@ -196,7 +196,7 @@ Execute these steps in order. Do not skip steps. Each step has a named owner and
 - **Start date:** The date the compromised KEK was created. Check the keystore creation timestamp. Do not rely on employee recollection.
 - **End date:** The date the revocation broadcast was confirmed at the relay.
 - **Scope:** Every document the compromised KEK protected between the start date and the end date.
-- **Excluded from scope:** Documents in roles not protected by the compromised KEK. Documents created after the revocation date — those are protected under the new KEK.
+- **Excluded from scope:** Documents in roles not protected by the compromised KEK. Documents created after the revocation date - those are protected under the new KEK.
 
 ### User Notification Template
 
@@ -210,9 +210,9 @@ Send this message to every team member in the affected role. Adjust the brackete
 >
 > Contact [IT contact name] at [IT contact email or phone] with questions.
 
-**Logging requirement — retention floor:** Record the timestamp of each notification, the channel used (email, SMS, in-app), and the recipient. Retain this record for a minimum of 90 days. This is an audit-log retention floor. It is not a breach notification deadline.
+**Logging requirement - retention floor:** Record the timestamp of each notification, the channel used (email, SMS, in-app), and the recipient. Retain this record for a minimum of 90 days. This is an audit-log retention floor. It is not a breach notification deadline.
 
-**Breach notification deadlines — separate and faster.** Retention and notification are distinct obligations. The deadlines below are notification-to-regulator windows — and in some jurisdictions, notification-to-affected-data-subjects windows — that run from the moment the organization becomes aware of the breach. Verify the jurisdiction-specific window before you set an incident response SLA (Service Level Agreement):
+**Breach notification deadlines - separate and faster.** Retention and notification are distinct obligations. The deadlines below are notification-to-regulator windows - and in some jurisdictions, notification-to-affected-data-subjects windows - that run from the moment the organization becomes aware of the breach. Verify the jurisdiction-specific window before you set an incident response SLA (Service Level Agreement):
 
 | Jurisdiction | Notification to supervisor | Notification to data subjects |
 |---|---|---|
@@ -228,27 +228,27 @@ Send this message to every team member in the affected role. Adjust the brackete
 | Nigeria (NDPR) | Within 72 hours | "expeditiously" |
 | South Africa (POPIA) | "as soon as reasonably possible" to the Regulator | "as soon as reasonably possible" |
 | USA (HIPAA) | 60 days from discovery for reportable breaches | 60 days |
-| USA (state laws — CCPA (California Consumer Privacy Act), etc.) | Varies | Varies |
+| USA (state laws - CCPA (California Consumer Privacy Act), etc.) | Varies | Varies |
 
 Verify the jurisdictional obligations for every market the team operates in before the first incident occurs.
 
 ---
 
-## Section 5 — Chain-of-Custody Worksheet
+## Section 5 - Chain-of-Custody Worksheet
 
 Use this worksheet when the deployment transfers sensitive data to a third party (insurer, regulator, auditor, legal counsel, successor entity), handles evidence-class data (dashcam footage, healthcare records, financial audit logs), or operates a mandated regulatory-export stream (MDS-style telemetry, financial reporting, healthcare event reporting). Fill it in before the first evidence-class transfer; revisit when regulatory scope changes. Architectural specification: Ch23 §Chain-of-Custody for Multi-Party Transfers.
 
-### Field 1 — Parties
+### Field 1 - Parties
 
 | Role | Identity | Device key fingerprint | Jurisdiction |
 |---|---|---|---|
 | Transferor (originating custodian) | | | |
 | Recipient (receiving custodian) | | | |
-| External authority (regulator, TSA, court) — if applicable | | | |
+| External authority (regulator, TSA, court) - if applicable | | | |
 
 Record fingerprints from the published key hierarchy, not informal channels.
 
-### Field 2 — Data class
+### Field 2 - Data class
 
 | Data class | Evidence-class? | Retention floor | Crypto-shred eligible? |
 |---|---|---|---|
@@ -256,18 +256,18 @@ Record fingerprints from the published key hierarchy, not informal channels.
 
 Under-designation saves setup cost until the first legal dispute exposes the gap.
 
-### Field 3 — Transfer trigger
+### Field 3 - Transfer trigger
 
-Name the event that initiates transfer (scheduled regulatory export, insurer claim request, auditor engagement, departure partition under Ch23 §Collaborator Revocation sub-pattern 45e, subpoena, warrant) and the authorization gate — who signs off before a `CustodyTransferInitiated` event emits.
+Name the event that initiates transfer (scheduled regulatory export, insurer claim request, auditor engagement, departure partition under Ch23 §Collaborator Revocation sub-pattern 45e, subpoena, warrant) and the authorization gate - who signs off before a `CustodyTransferInitiated` event emits.
 
-### Field 4 — Signing requirements
+### Field 4 - Signing requirements
 
 - [ ] Both transferor and recipient device keys are in the published key hierarchy with valid attestation at transfer time.
 - [ ] Transferor signing role grants `re-transfer` scope (onward custody) or excludes it (custody terminal at recipient).
 - [ ] One-sided `transfer-initiated` records are flagged incomplete and excluded from any artifact represented as completed.
 - [ ] Audit-log validation rejects `CustodyTransferConfirmed` events lacking both signatures.
 
-### Field 5 — Timestamping
+### Field 5 - Timestamping
 
 | Item | Decision |
 |---|---|
@@ -279,13 +279,13 @@ Name the event that initiates transfer (scheduled regulatory export, insurer cla
 
 Record the TSA certificate fingerprint locally so the verifier detects a substituted endpoint.
 
-### Field 6 — Verification
+### Field 6 - Verification
 
-- [ ] Merkle-chain verification documented for streaming exports — root cadence, hash function (SHA-256 default), proof format.
-- [ ] Receipt-verification documented for bilateral transfers — signature check, version-vector match, TSA-token validation.
+- [ ] Merkle-chain verification documented for streaming exports - root cadence, hash function (SHA-256 default), proof format.
+- [ ] Receipt-verification documented for bilateral transfers - signature check, version-vector match, TSA-token validation.
 - [ ] Attestation artifacts (TSA tokens, Merkle proofs, signed receipts) retained alongside the data they attest. Lost artifacts reduce the transfer to `transfer-initiated` retroactively.
 
-### Field 7 — Escalation paths
+### Field 7 - Escalation paths
 
 On `CustodyTransferDisputed` (recipient version mismatches transferor assertion):
 
@@ -297,7 +297,7 @@ On `CustodyTransferDisputed` (recipient version mismatches transferor assertion)
 
 On TSA outages exceeding the declared pending duration, escalate to the compliance officer. On Merkle-chain verification failures recipient-side, treat as a stream-omission incident before responding to the regulator.
 
-The worksheet is deployment-time. Per-transfer enforcement happens in `Sunfish.Kernel.Custody` through the four event contracts named in Ch23 §Chain-of-Custody.
+The worksheet is deployment-time. Per-transfer enforcement happens in `Harborline.Kernel.Custody` through the four event contracts named in Ch23 §Chain-of-Custody.
 
 ---
 
@@ -306,7 +306,7 @@ The worksheet is deployment-time. Per-transfer enforcement happens in `Sunfish.K
 *Applicable regulatory frameworks by region (non-exhaustive):*
 
 - *North America: HIPAA, ITAR, FedRAMP (Federal Risk and Authorization Management Program), SOC 2, CMMC (Cybersecurity Maturity Model Certification), CCPA, PIPEDA (Personal Information Protection and Electronic Documents Act)*
-- *European Economic Area / UK: GDPR (Article 33 — 72-hour supervisor notification; Article 34 — affected-party notification when high-risk), UK GDPR, Schrems II (case C-311/18 — data-transfer compliance driver), BSI (Bundesamt für Sicherheit in der Informationstechnik) TR-02102 and BSI C5 (Germany)*
+- *European Economic Area / UK: GDPR (Article 33 - 72-hour supervisor notification; Article 34 - affected-party notification when high-risk), UK GDPR, Schrems II (case C-311/18 - data-transfer compliance driver), BSI (Bundesamt für Sicherheit in der Informationstechnik) TR-02102 and BSI C5 (Germany)*
 - *GCC (Gulf Cooperation Council): UAE Federal Data Protection Law 2022, DIFC Data Protection Law 2020, Saudi Arabia Personal Data Protection Law*
 - *South Asia: India Digital Personal Data Protection Act 2023 (DPDP), RBI data localization circular (BFSI), Bangladesh DPA*
 - *East Asia / APAC (Asia-Pacific): China PIPL (2021), Japan PIPA (revised 2022), South Korea PIPA + ISMS-P certification, Taiwan PDPA, Singapore PDPA*

@@ -1,10 +1,10 @@
-# Stage 0 — Intake
+# Stage 0 - Intake
 
-Entry point for new work. Anyone — author, editor, reader feedback, errata, format request — files a brief here.
+Entry point for new work. Anyone - author, editor, reader feedback, errata, format request - files a brief here.
 
 **Input:** A change idea, bug report, errata, new chapter request, adaptation brief, or stakeholder note.
 
-**Artifact:** `NN-short-slug.md` — one file per item, frontmatter + ≤1 page body.
+**Artifact:** `NN-short-slug.md` - one file per item, frontmatter + ≤1 page body.
 
 **Frontmatter template:**
 

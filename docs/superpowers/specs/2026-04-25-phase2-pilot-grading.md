@@ -1,14 +1,14 @@
 # Phase 2 Pilot Grading
 
-**Background run ID:** `bzduwnh42` — 4 pilots serial, ~40 min wall-clock.
+**Background run ID:** `bzduwnh42` - 4 pilots serial, ~40 min wall-clock.
 
 **Order of execution:** Ch04 → Ch05 → Ch11 → Ch01 (Ch01 last so the chapter with original reader feedback gets the freshest read).
 
 **Files to read per pilot:**
-- Pass 1 (guest voice only): `vol-1/_voice-drafts/pass1/<chapter>.md` (skipped for Ch11 — sinek-direct, no pass-1)
+- Pass 1 (guest voice only): `vol-1/_voice-drafts/pass1/<chapter>.md` (skipped for Ch11 - sinek-direct, no pass-1)
 - Pass 2 (after Sinek polish): `vol-1/_voice-drafts/final/<chapter>.md`
 
-**Baseline for comparison (Ch01 only):** `vol-1/_voice-drafts/_archive/<ts>-pre-phase2/final/ch01-when-saas-fights-reality.md` — the pre-tune output that received "too mechanical, fatiguing" feedback.
+**Baseline for comparison (Ch01 only):** `vol-1/_voice-drafts/_archive/<ts>-pre-phase2/final/ch01-when-saas-fights-reality.md` - the pre-tune output that received "too mechanical, fatiguing" feedback.
 
 ---
 
@@ -24,7 +24,7 @@ If G1, G2, G3 all PASS → proceed to Phase 3. If any FAIL → return to Task 16
 
 ---
 
-## Pilot 1 — Ch04: Choosing Your Architecture
+## Pilot 1 - Ch04: Choosing Your Architecture
 
 **Pipeline:** godin → sinek
 **Map of what each pass should do:**
@@ -42,7 +42,7 @@ If G1, G2, G3 all PASS → proceed to Phase 3. If any FAIL → return to Task 16
 
 ---
 
-## Pilot 2 — Ch05: The Enterprise Lens
+## Pilot 2 - Ch05: The Enterprise Lens
 
 **Pipeline:** lencioni → sinek
 **Map of what each pass should do:**
@@ -60,7 +60,7 @@ If G1, G2, G3 all PASS → proceed to Phase 3. If any FAIL → return to Task 16
 
 ---
 
-## Pilot 3 — Ch11: Node Architecture
+## Pilot 3 - Ch11: Node Architecture
 
 **Pipeline:** sinek-direct (only pass-2 effectively)
 **Map of what should happen:**
@@ -76,7 +76,7 @@ If G1, G2, G3 all PASS → proceed to Phase 3. If any FAIL → return to Task 16
 
 ---
 
-## Pilot 4 — Ch01: When SaaS Fights Reality (the bellwether)
+## Pilot 4 - Ch01: When SaaS Fights Reality (the bellwether)
 
 **Pipeline:** gladwell → sinek
 **Map of what each pass should do:**
@@ -103,11 +103,11 @@ diff -u chapters/_voice-drafts/_archive/<ts>-pre-phase2/final/ch01-when-saas-fig
 
 ## Audiobook listener test (G2)
 
-**Workflow constraint:** `build/audiobook.py` reads chapter source paths from a hardcoded `CHAPTER_FILES` list — it does not have a `--source` flag and cannot read a voice-pass draft directly. Three options:
+**Workflow constraint:** `build/audiobook.py` reads chapter source paths from a hardcoded `CHAPTER_FILES` list - it does not have a `--source` flag and cannot read a voice-pass draft directly. Three options:
 
-- **A. Modify `audiobook.py` to accept `--source <path>`** — small code change, lets you point the audiobook builder at any markdown file. Cleanest for repeated Phase 2 listener tests across multiple pilots.
-- **B. Temporarily promote one pilot chapter (Ch01) early** — run `python build/promote.py --chapter ch01-when-saas-fights-reality`, then `python build/audiobook.py --only ch01`, then if it fails revert the promotion via `git revert <promotion-sha>`. Uses the Phase 4 machinery one chapter early.
-- **C. Manually overwrite source** — `cp chapters/_voice-drafts/final/ch01-when-saas-fights-reality.md chapters/part-1-thesis-and-pain/`, run audiobook, then `git checkout chapters/part-1-thesis-and-pain/ch01-when-saas-fights-reality.md` to revert. Crude but no code changes.
+- **A. Modify `audiobook.py` to accept `--source <path>`** - small code change, lets you point the audiobook builder at any markdown file. Cleanest for repeated Phase 2 listener tests across multiple pilots.
+- **B. Temporarily promote one pilot chapter (Ch01) early** - run `python build/promote.py --chapter ch01-when-saas-fights-reality`, then `python build/audiobook.py --only ch01`, then if it fails revert the promotion via `git revert <promotion-sha>`. Uses the Phase 4 machinery one chapter early.
+- **C. Manually overwrite source** - `cp chapters/_voice-drafts/final/ch01-when-saas-fights-reality.md chapters/part-1-thesis-and-pain/`, run audiobook, then `git checkout chapters/part-1-thesis-and-pain/ch01-when-saas-fights-reality.md` to revert. Crude but no code changes.
 
 **Default path: B** (uses Phase 4's promote.py and the manifest/hash machinery; the early-promotion is reversible). After promote.py lands (subagent in progress), run:
 
@@ -151,13 +151,13 @@ After grading all 4 pilots + audiobook + external reader:
 - **G2 (audiobook PASS):** [ ✅ / ❌ ]
 - **G3 (external reader PASS):** [ ✅ / ❌ ]
 
-**Phase 2 verdict:** [ PASS — proceed to Phase 3 / FAIL — return to Phase 1 retune / KILL — invoke Alternative A ]
+**Phase 2 verdict:** [ PASS - proceed to Phase 3 / FAIL - return to Phase 1 retune / KILL - invoke Alternative A ]
 
 **If proceeding to Phase 3, also decide:**
 
 - **Mode dispatch needed?** Per spec A4, if polish and normalize would produce indistinguishable output, collapse to single mode and skip Tasks 25–26.
-  - [ Single-mode is fine — skip Tasks 25–26 ]
-  - [ Need both modes — implement mode dispatch in Phase 3 ]
+  - [ Single-mode is fine - skip Tasks 25–26 ]
+  - [ Need both modes - implement mode dispatch in Phase 3 ]
 
 ---
 

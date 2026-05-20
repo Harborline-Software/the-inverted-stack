@@ -217,8 +217,8 @@ concepts:
   name: Additive change classes that skip upcasters
   source: ch13 §"Event Versioning and Upcasters"
   source-paper: v13 §8
-  definition: Two classes of schema change require no upcaster — adding a new optional field to an existing
-    event type, and adding a new event variant — because absence is a defined default and unknown variants
+  definition: Two classes of schema change require no upcaster - adding a new optional field to an existing
+    event type, and adding a new event variant - because absence is a defined default and unknown variants
     are quarantined.
   must-implement:
   - Optional field absence is treated as the field's declared default
@@ -636,7 +636,7 @@ concepts:
   source: ch13 §"What Cannot Be Migrated"
   source-paper: v13 §7
   definition: Three classes of change cannot be expressed as a bidirectional lens and require introducing
-    a new document type rather than migrating the existing one — field removal with no semantic equivalent,
+    a new document type rather than migrating the existing one - field removal with no semantic equivalent,
     CRDT type change, and field split with no deterministic inverse merge.
   must-implement:
   - Schema-change linter rejects field removals lacking a backward lens with no information loss

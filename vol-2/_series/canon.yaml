@@ -1,4 +1,4 @@
-# The Filchner Dark — story canon
+# The Filchner Dark - story canon
 #
 # Locked facts about characters, dates, objects, and places. The
 # story-canon validator (galley/prose/lib/story_canon) reads this file and
@@ -85,10 +85,20 @@ characters:
 
   astrid:
     full_name: Astrid Hansen
-    role: rival mission commander
+    age: 38                    # added 2026-05-19 via PAO Ch 18 Astrid present-tense beat
+    role: rival mission commander (Helvetia-2)
     relationship_to_anna: former apprentice
+    boats_with_anna_prior_to_mission_cycle: 3   # added 2026-05-19
+    discipline_inherited_from_anna:
+      - reading list
+      - watch-rotation discipline
+      - "the conviction that the boat is the way one earns one's right to a longer mission"
     sponsor: Stefan Reinhardt
     plot_role: external antagonist
+    ch18_present_tense: |
+      Anna observes Astrid at the rival-platform delegation beside Stefan at the consortium
+      reception. Reciprocal no-approach choreography. The institutional-register registration only.
+      The "other register" (personal/grief/anger) is explicitly withheld from the room.
 
   stefan:
     full_name: Stefan Reinhardt
@@ -188,3 +198,28 @@ events:
   - id: pre_departure_bremerhaven
     date: 2025-11-13
     description: consortium final review of Joel's paper; Anna and Joel's brief encounter
+
+# Cross-volume forward plants — plants set in one volume that pay in a later
+# volume. Tracked here so future-volume drafters know what they inherit.
+# Per series-arc § 8: drafters do NOT reach toward these in current-volume prose;
+# they plant toward them.
+forward_plants:
+  - id: hiroshi-unfinished-line
+    set_in: vol-2/ch18 (Punta Arenas Surfacing)
+    set_date: 2026-05-19 (PAO)
+    description: |
+      Hiroshi's notebook at the gangway scene — the curved stroke under his
+      thumb, "the moment before something becomes the next thing." He did not
+      draw for the medium; he drew for the impulse.
+    payoff_target: vol-3 (Wanjiru's standards-body founding period; Hiroshi
+      delivers the finished drawing at a standards-body conference)
+    cic_decision_date: 2026-05-19
+    cic_decision: leave as open vol-3 plant (per PAO UPF cross-chapter analysis
+      + CIC ratification 2026-05-19)
+  - id: astrid-redemption-signal
+    set_in: vol-3 (planned — Astrid sends a single letter to Wanjiru)
+    description: |
+      Astrid's first written communication to Wanjiru since the 2026 mission.
+      Neither accepted nor refused in vol-3.
+    payoff_target: vol-4 (Astrid as narrator; Wanjiru's response letter is the
+      inciting beat for the Belyana mission)

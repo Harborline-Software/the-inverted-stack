@@ -2,7 +2,7 @@
 
 Default destination is the author's local Dropbox; override via --dest or the
 INVERTED_STACK_AUDIO_DEST environment variable. The script is skip-if-newer
-by default — only copies files whose source mtime is newer than the
+by default - only copies files whose source mtime is newer than the
 destination, so re-runs are cheap.
 
 Usage:
@@ -12,7 +12,7 @@ Usage:
     python build/copy-to-dropbox.py --dest D:/elsewhere # override path
     python build/copy-to-dropbox.py --dry-run           # report only
 
-Run after build/audiobook.py finishes — the script does not detect
+Run after build/audiobook.py finishes - the script does not detect
 in-flight renders. Files modified within the last 5 seconds are
 considered unstable and skipped (use --no-stability-check to override).
 """

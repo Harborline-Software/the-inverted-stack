@@ -126,8 +126,8 @@ concepts:
   name: Three-tier peer discovery
   source: ch14 §"Three-Tier Peer Discovery"
   source-paper: v13 §6
-  definition: The daemon discovers peers concurrently across three mechanisms — mDNS for LAN, mesh VPN
-    for cross-network, and managed relay for restricted networks — with no tier acting as a fallback that
+  definition: The daemon discovers peers concurrently across three mechanisms - mDNS for LAN, mesh VPN
+    for cross-network, and managed relay for restricted networks - with no tier acting as a fallback that
     disables another.
   must-implement:
   - Daemon runs all three discovery mechanisms concurrently when configured
@@ -275,8 +275,8 @@ concepts:
   name: Five-step handshake (HELLO, CAPABILITY_NEG, ACK, DELTA_STREAM, GOSSIP_PING)
   source: ch14 §"Five-Step Handshake"
   source-paper: v13 §6
-  definition: Every peer connection follows a fixed five-step sequence — HELLO, CAPABILITY_NEG, ACK, DELTA_STREAM,
-    GOSSIP_PING — that establishes identity, negotiates capabilities, and confirms subscription grants
+  definition: Every peer connection follows a fixed five-step sequence - HELLO, CAPABILITY_NEG, ACK, DELTA_STREAM,
+    GOSSIP_PING - that establishes identity, negotiates capabilities, and confirms subscription grants
     before any CRDT operations flow.
   must-implement:
   - No DELTA_STREAM frames flow before ACK is received
@@ -462,7 +462,7 @@ concepts:
     GOSSIP_PING transitively forwarding it.'
 - id: SYNC-16
   name: CBOR canonical wire encoding with length prefix
-  source: ch14 §"Wire Format — Message Field Reference"
+  source: ch14 §"Wire Format - Message Field Reference"
   source-paper: v13 §6
   definition: All wire messages use CBOR (RFC 8949) canonical encoding, length-prefixed with a 4-byte
     big-endian frame length, with individual frames capped at 16 MiB and unknown fields ignored for forward
@@ -490,7 +490,7 @@ concepts:
     frame and processes the known fields.'
 - id: SYNC-17
   name: Replay-window-bounded signed HELLO
-  source: ch14 §"Wire Format — Message Field Reference"
+  source: ch14 §"Wire Format - Message Field Reference"
   source-paper: v13 §6
   definition: HELLO is signed with the sender's Ed25519 key over (node_id, schema_version, public_key,
     sent_at) and accepted only within a ±30-second replay window of receiver clock.
@@ -551,7 +551,7 @@ concepts:
     on high-degree nodes.
   must-implement:
   - Daemon selects k random peers (default k=2) per gossip tick
-  - Exchange is symmetric — each side sends operations the other lacks
+  - Exchange is symmetric - each side sends operations the other lacks
   - 30-second default interval is configurable per deployment
   verification: Run a 10-node simulation; confirm convergence in O(log N) rounds and even per-node send/receive
     distribution.
@@ -566,7 +566,7 @@ concepts:
   - convergence
   failed-conditions:
   - 'Fails to satisfy: Daemon selects k random peers (default k=2) per gossip tick'
-  - Exchange is not symmetric — each side sends operations the other lacks
+  - Exchange is not symmetric - each side sends operations the other lacks
   - 30-second default interval is not configurable per deployment
   - 'Verification check does not pass: Run a 10-node simulation; confirm convergence in O(log N) rounds
     and even per-node send/receive distribution.'
@@ -603,7 +603,7 @@ concepts:
   source: ch14 §"Data Minimization at the Stream Level"
   source-paper: v13 §6
   definition: The sync daemon enforces subscription scope at the stream level before operations leave
-    the node, ensuring unauthorized data never reaches the receiving device — application-layer filtering
+    the node, ensuring unauthorized data never reaches the receiving device - application-layer filtering
     is not a substitute.
   must-implement:
   - Subscription eligibility is checked on the sender prior to transmission
@@ -987,8 +987,8 @@ concepts:
   name: Sunfish.Kernel.Sync as protocol entry point
   source: ch14 §"Integration with Sunfish"
   source-paper: v13 §6
-  definition: The sync daemon's full protocol lifecycle — discovery, handshake, delta computation, gossip,
-    lease coordination, reconnection backoff — is exposed to the application via the Sunfish.Kernel.Sync
+  definition: The sync daemon's full protocol lifecycle - discovery, handshake, delta computation, gossip,
+    lease coordination, reconnection backoff - is exposed to the application via the Sunfish.Kernel.Sync
     package, with stream definitions registered there declaring the field-level access rules the daemon
     enforces.
   must-implement:
@@ -1021,8 +1021,8 @@ concepts:
   name: Uniform protocol guarantees across all transport tiers
   source: ch14 §"Protocol Invariants"
   source-paper: v13 §6
-  definition: The protocol invariants — source-side subscription scope, quorum-required CP writes, handshake-before-data-flow,
-    rate-controlled reconnection — hold uniformly across mDNS, mesh VPN, and managed relay, with no trusted-network
+  definition: The protocol invariants - source-side subscription scope, quorum-required CP writes, handshake-before-data-flow,
+    rate-controlled reconnection - hold uniformly across mDNS, mesh VPN, and managed relay, with no trusted-network
     mode that relaxes rules for LAN peers.
   must-implement:
   - No code path bypasses scope enforcement on LAN peers

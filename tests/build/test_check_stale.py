@@ -49,7 +49,7 @@ def test_no_stale_when_draft_newer(tmp_path):
 
 
 def test_skips_sources_without_corresponding_drafts(tmp_path):
-    """A source with no draft is not 'stale' — it just hasn't been voice-passed yet."""
+    """A source with no draft is not 'stale' - it just hasn't been voice-passed yet."""
     src = tmp_path / "chapters" / "part-1" / "ch99-orphan.md"
     src.parent.mkdir(parents=True)
     src.write_text("source", encoding="utf-8")

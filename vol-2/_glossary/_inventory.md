@@ -1,4 +1,4 @@
-# Vol 2 Translation Workshop — Term Inventory
+# Vol 2 Translation Workshop - Term Inventory
 
 Generated 2026-05-06 by ripgrep across `vol-2/act-{1,2,3}/`. Each term shows total occurrences across the 18 Vol 2 chapters and a classification that drives whether a workshop entry is needed.
 
@@ -6,11 +6,11 @@ Generated 2026-05-06 by ripgrep across `vol-2/act-{1,2,3}/`. Each term shows tot
 
 | Code | Meaning |
 |---|---|
-| **W** | Workshop entry needed — technical jargon a non-technical reader will miss or mistake |
+| **W** | Workshop entry needed - technical jargon a non-technical reader will miss or mistake |
 | **W-DRAFTED** | Workshop entry already written (pilot set) |
-| **K** | Keep-as-is across the book — proper noun, character/place name, mission designation, or canonical product name. No replacement; no workshop entry. |
-| **C** | Context-dependent — the word is technical in some contexts and ordinary English in others. Workshop entry needed but with strong *Keep when* rules. |
-| **D** | Drop from scope — appears mostly in non-technical senses; not worth a workshop entry. |
+| **K** | Keep-as-is across the book - proper noun, character/place name, mission designation, or canonical product name. No replacement; no workshop entry. |
+| **C** | Context-dependent - the word is technical in some contexts and ordinary English in others. Workshop entry needed but with strong *Keep when* rules. |
+| **D** | Drop from scope - appears mostly in non-technical senses; not worth a workshop entry. |
 
 ## Triage table (sorted by occurrence count)
 
@@ -35,7 +35,7 @@ Generated 2026-05-06 by ripgrep across `vol-2/act-{1,2,3}/`. Each term shows tot
 | 42 | Anchor | K | Sunfish accelerator proper name + boat anchor. Capitalization disambiguates in prose. |
 | 36 | stream | C | *Salinity stream, instrumentation stream* (technical) + ordinary stream. |
 | 35 | pre-mission | D | Ordinary compound; not jargon. |
-| 35 | manifest | W | *Probe firmware manifest, signed manifest* — technical; non-technical reader hears *cargo manifest*. |
+| 35 | manifest | W | *Probe firmware manifest, signed manifest* - technical; non-technical reader hears *cargo manifest*. |
 | 34 | rollback | W | Technical; non-technical reader may guess but the precise meaning matters in Ch 13. |
 | 32 | Sunfish | K | Project name. |
 | 31 | replication | W | Technical; *replicate* is also ordinary English so disambiguation matters. |
@@ -50,20 +50,20 @@ Generated 2026-05-06 by ripgrep across `vol-2/act-{1,2,3}/`. Each term shows tot
 | 18 | daemon | W-DRAFTED | Folded into `sync-daemon.md`. |
 | 16 | hash chain | W | Folded into a forthcoming `audit-log.md` or stands alone? Decide at draft time. |
 | 16 | checkpoint | W | Technical; ordinary reader's guess is roughly right but exact meaning matters. |
-| 15 | telemetry | W | Technical; non-technical reader may know it from spaceflight context — partial transfer. |
+| 15 | telemetry | W | Technical; non-technical reader may know it from spaceflight context - partial transfer. |
 | 15 | field-map | W | Vol-2 specific (Ch 13 schema migration). Folded into `schema-migration.md` likely. |
 | 14 | skew | C | Mostly *clock-skew* (technical); some ordinary *skew*. |
 | 14 | Forsaken | K | Vol 2 canon name (Stefan's platform / capability). Proper noun. |
 | 13 | field map | W | Spelling variant of *field-map*. |
 | 13 | encrypted | W | Technical adjective; non-technical reader has folk understanding. Light entry. |
-| 12 | supply-chain | W | *Supply-chain attack, supply-chain compromise* — technical; non-technical reader hears logistics. |
-| 12 | quorum | W | Distributed-systems term; non-technical reader may know parliamentary sense — partial transfer but not exact. |
-| 12 | compromised | W | *Compromised relay* — security sense. Non-technical reader's *compromise* = political deal. |
+| 12 | supply-chain | W | *Supply-chain attack, supply-chain compromise* - technical; non-technical reader hears logistics. |
+| 12 | quorum | W | Distributed-systems term; non-technical reader may know parliamentary sense - partial transfer but not exact. |
+| 12 | compromised | W | *Compromised relay* - security sense. Non-technical reader's *compromise* = political deal. |
 | 11 | sync daemon | W-DRAFTED | Pilot complete. |
 | 11 | schema-evolution | W | Adjacent to schema-migration; may fold in. |
 | 10 | schema-version | W | Adjacent. |
 | 10 | hash-chain | W | Spelling variant of *hash chain*. |
-| 10 | failure-mode | W | Engineer term (*failure-mode flag, failure-mode reporting*) — non-technical reader will guess but imprecisely. |
+| 10 | failure-mode | W | Engineer term (*failure-mode flag, failure-mode reporting*) - non-technical reader will guess but imprecisely. |
 | 9 | compromise | W | See *compromised*. |
 | 7 | watch log | W | Vol-2 specific artifact term. |
 | 7 | procurement chain | W | Vol-2 specific (Ch 1 Joel disclosure). |
@@ -102,10 +102,10 @@ Generated 2026-05-06 by ripgrep across `vol-2/act-{1,2,3}/`. Each term shows tot
 
 Priority is **occurrence count × collision risk × story-significance**, not raw count. A high-count proper noun like *Bridge* needs no entry; a low-count term like *quorum* or *KEK* needs one because the reader has no anchor at all.
 
-### Tier 1 — Highest priority (drives the most reader confusion)
-1. ~~`keys.md`~~ — DONE (pilot)
-2. ~~`sync-daemon.md`~~ — DONE (pilot)
-3. ~~`schema-migration.md`~~ — DONE (pilot)
+### Tier 1 - Highest priority (drives the most reader confusion)
+1. ~~`keys.md`~~ - DONE (pilot)
+2. ~~`sync-daemon.md`~~ - DONE (pilot)
+3. ~~`schema-migration.md`~~ - DONE (pilot)
 4. `key-envelope.md` (folds in KEK + DEK + envelope encryption + integrity-key)
 5. `relay.md` (Sunfish architecture component; high Vol-2 count)
 6. `gossip-protocol.md` (strong collision with social gossip)
@@ -114,7 +114,7 @@ Priority is **occurrence count × collision risk × story-significance**, not ra
 9. `node.md` (zero non-technical anchor)
 10. `audit-log.md` (folds in hash-chain / hash chain / watch log)
 
-### Tier 2 — Mid priority
+### Tier 2 - Mid priority
 11. `data-class.md` (folds in instrumentation-data-class, failure-mode, field-map)
 12. `surface-window.md` (Vol-2 operational; folds in surface comms)
 13. `manifest.md` (folds in manifest signature)
@@ -126,7 +126,7 @@ Priority is **occurrence count × collision risk × story-significance**, not ra
 19. `compromise.md` (folds in compromised, supply-chain)
 20. `custody.md`
 
-### Tier 3 — Light / fold-into-others
+### Tier 3 - Light / fold-into-others
 21. `pass-log.md` + `deviation-plot.md` (Vol-2 artifacts; may fold into a single `mission-log-artifacts.md`)
 22. `consortium-chain.md` (folds in procurement chain)
 23. `model-weights.md` (folds in anchor model)
@@ -136,11 +136,11 @@ Priority is **occurrence count × collision risk × story-significance**, not ra
 27. `telemetry.md`
 28. `timestamp.md`
 29. `encrypted.md`
-30. `forsaken.md` *(reader-orientation entry, even though it's a proper noun — readers need to know what the in-universe term refers to)*
+30. `forsaken.md` *(reader-orientation entry, even though it's a proper noun - readers need to know what the in-universe term refers to)*
 
 ### Out of scope
 - `Bridge`, `Anchor`, `Sunfish`, `Nansen`, `Punta Arenas`, `MERIDIAN`, `HELVETICA`, `Forsaken` (proper nouns; *Forsaken* gets a brief reader-orientation note only).
-- `pre-mission`, `push`, `pull`, `rail`, `drift`, `stream`, `cache`, `snapshot`, `metric`, `trace`, `transcript`, `third-party`, `skew` — most occurrences are ordinary English; the technical occurrences fold into the entries that surround them (e.g., *clock-skew* → `quorum.md` or its own minor entry).
+- `pre-mission`, `push`, `pull`, `rail`, `drift`, `stream`, `cache`, `snapshot`, `metric`, `trace`, `transcript`, `third-party`, `skew` - most occurrences are ordinary English; the technical occurrences fold into the entries that surround them (e.g., *clock-skew* → `quorum.md` or its own minor entry).
 
 ## Estimated effort
 

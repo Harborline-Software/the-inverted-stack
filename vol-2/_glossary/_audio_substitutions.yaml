@@ -143,7 +143,7 @@ substitutions:
     workshop_entry: forsaken.md
     notes: Pacing cue for narrator; hyphenation prompts pause-reading of the proper noun
 
-  # ─── Acronyms — full first-name expansion (listener has zero anchor) ───
+  # ─── Acronyms - full first-name expansion (listener has zero anchor) ───
 
   - pattern: '\bKEK\b'
     replacement: 'key encryption key'
@@ -155,7 +155,7 @@ substitutions:
     case_sensitive: true
     workshop_entry: key-envelope.md
 
-  # ─── Single-word proper-noun expansions (case-sensitive — preserve everyday lowercase) ───
+  # ─── Single-word proper-noun expansions (case-sensitive - preserve everyday lowercase) ───
 
   - pattern: '\bBridge\b'
     replacement: 'Bridge service'
@@ -169,12 +169,12 @@ substitutions:
     workshop_entry: anchor.md
     notes: Capital A = Sunfish accelerator. Lowercase "anchor" (boat anchor at pier) untouched.
 
-  # ─── Tier 2 — print-confusion priority (added 2026-05-06) ───
+  # ─── Tier 2 - print-confusion priority (added 2026-05-06) ───
   #
   # These substitutions handle compound technical terms whose components
   # are everyday-readable but whose combined sense is jargon. Single-word
   # substitutions for Tier 2 terms (handshake, node, replication, custody,
-  # etc.) are deliberately omitted in v1 — the bare words appear in too
+  # etc.) are deliberately omitted in v1 - the bare words appear in too
   # many non-technical contexts and would over-substitute. Print-side
   # lightening pass handles those occurrences with explicit modifiers.
 
@@ -323,7 +323,7 @@ substitutions:
     replacement: '\1 \2'
     case_sensitive: false
     workshop_entry: military-time.md
-    notes: twenty-two-thirty (22:30) — the 20-24-hour band
+    notes: twenty-two-thirty (22:30) - the 20-24-hour band
 
   - pattern: '\b[oO]h-([a-z]+)-([a-z]+)\b'
     replacement: 'oh \1 \2'

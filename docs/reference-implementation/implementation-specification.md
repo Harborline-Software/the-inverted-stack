@@ -1,4 +1,4 @@
-# Implementation Specification — The Inverted Stack
+# Implementation Specification - The Inverted Stack
 
 **Generated** from `concept-index.yaml` schema v1.0.
   **Total concepts:** 562 across 28 chapters.
@@ -10,9 +10,9 @@
 This document is the human-readable view of `concept-index.yaml`. Each *concept* is a discrete architectural commitment the book makes. Concepts group into *chapter epics*, which group into *parts* matching the book structure.
 
 Each concept entry shows:
-- **Canonical reference**: `<chapter-stem>:<local-id>` — the stable ID downstream skills and scorecards use.
+- **Canonical reference**: `<chapter-stem>:<local-id>` - the stable ID downstream skills and scorecards use.
 - **Definition**: one sentence stating what the concept IS.
-- **Kleppmann tag**: which of the seven properties (P1–P7) the concept serves. `—` if it serves no Kleppmann property directly (e.g., a build-tooling or business-model concept).
+- **Kleppmann tag**: which of the seven properties (P1–P7) the concept serves. `-` if it serves no Kleppmann property directly (e.g., a build-tooling or business-model concept).
 - **Scope tag**: `foundational` (applies to any local-first repo) or `inverted-stack-specific` (requires this book's architectural choices).
 - **Failure modes**: named failure modes the concept addresses, where applicable.
 - **Must implement**: imperative requirements an implementation must satisfy to claim coverage. Empty for purely philosophical concepts.
@@ -20,30 +20,30 @@ Each concept entry shows:
 
 ## Two consumer audiences
 
-1. **Generic local-first repos** (Loro-, Yjs-, Automerge-, custom-engine implementations) score themselves against the `foundational`-scoped concepts grouped by Kleppmann property — see `concept-index-by-property.yaml` and the future `local-first-properties` Claude skill.
-2. **Inverted Stack-aligned repos** (Sunfish's Anchor and Bridge today; future implementations of this book's architecture) score themselves against the FULL concept index — see the future `inverted-stack-conformance` Claude skill.
+1. **Generic local-first repos** (Loro-, Yjs-, Automerge-, custom-engine implementations) score themselves against the `foundational`-scoped concepts grouped by Kleppmann property - see `concept-index-by-property.yaml` and the future `local-first-properties` Claude skill.
+2. **Inverted Stack-aligned repos** (Sunfish's Anchor and Bridge today; future implementations of this book's architecture) score themselves against the FULL concept index - see the future `inverted-stack-conformance` Claude skill.
 
-**Sunfish-specific glue** (mapping concept IDs to Sunfish package paths, ICM pipeline variants for conformance review) lives in `C:\Projects\Sunfish\icm\` — not in this repo.
+**Sunfish-specific glue** (mapping concept IDs to Sunfish package paths, ICM pipeline variants for conformance review) lives in `C:\Projects\Sunfish\icm\` - not in this repo.
 
 ## Kleppmann property glossary
 
-- **P1** — No spinners — fast, work happens locally
-- **P2** — Your work is not trapped on one device
-- **P3** — The network is optional
-- **P4** — Seamless collaboration with colleagues
-- **P5** — The Long Now — data outlives vendor and subscription
-- **P6** — Security and privacy by default
-- **P7** — You retain ultimate ownership and control
+- **P1** - No spinners - fast, work happens locally
+- **P2** - Your work is not trapped on one device
+- **P3** - The network is optional
+- **P4** - Seamless collaboration with colleagues
+- **P5** - The Long Now - data outlives vendor and subscription
+- **P6** - Security and privacy by default
+- **P7** - You retain ultimate ownership and control
 
 ## Property coverage summary
 
 | Property | Concept count |
 |---|---|
-| P1: No spinners — fast, work happens locally | 61 |
+| P1: No spinners - fast, work happens locally | 61 |
 | P2: Your work is not trapped on one device | 22 |
 | P3: The network is optional | 158 |
 | P4: Seamless collaboration with colleagues | 138 |
-| P5: The Long Now — data outlives vendor and subscription | 181 |
+| P5: The Long Now - data outlives vendor and subscription | 181 |
 | P6: Security and privacy by default | 199 |
 | P7: You retain ultimate ownership and control | 216 |
 
@@ -63,13 +63,13 @@ Several chapters synthesize or reference concepts from other chapters. Downstrea
 - **ch10-synthesis** ← ch05-enterprise-lens, ch06-distributed-systems-lens, ch07-security-lens, ch08-product-economic-lens, ch09-local-first-practitioner-lens
   - Ch10 LENS-* concepts are the survivors of cross-lens review; Ch05-Ch09 LENS-{E,D,S,P,LF}-* concepts are the per-lens sources. Downstream consumers may treat Ch10 entries as canonical and per-lens entries as supporting derivations.
 - **ch14-sync-daemon-protocol** ← appendix-a-sync-daemon-wire-protocol
-  - Ch14 SYNC-* concepts describe the daemon at the protocol/architecture level; Appendix A WIRE-* concepts specify the byte-level wire format. Both are normative — Ch14 owns semantics, Appendix A owns format.
+  - Ch14 SYNC-* concepts describe the daemon at the protocol/architecture level; Appendix A WIRE-* concepts specify the byte-level wire format. Both are normative - Ch14 owns semantics, Appendix A owns format.
 - **ch15-security-architecture** ← appendix-b-threat-model-worksheets
-  - Ch15 KEY-*/SEC-* concepts define security primitives and architecture; Appendix B THREAT-*/SEC-*/MITIG-* concepts define threat-model worksheet methodology + named actors + per-actor mitigations. Complementary — Ch15 owns mechanism, Appendix B owns runbook.
+  - Ch15 KEY-*/SEC-* concepts define security primitives and architecture; Appendix B THREAT-*/SEC-*/MITIG-* concepts define threat-model worksheet methodology + named actors + per-actor mitigations. Complementary - Ch15 owns mechanism, Appendix B owns runbook.
 - **appendix-d-testing-the-inverted-stack** ← ch12-crdt-engine-data-layer, ch13-schema-migration-evolution, ch14-sync-daemon-protocol, ch15-security-architecture
   - Appendix D TEST-* concepts operationalize Part III architectural concepts as test patterns. Each TEST-* references one or more body-chapter concepts.
 - **epilogue-what-the-stack-owes-you** ← ch11-node-architecture, ch12-crdt-engine-data-layer, ch14-sync-daemon-protocol, ch15-security-architecture, ch16-persistence-beyond-the-node
-  - Epilogue EPI-* concepts are obligation contracts — each names what a Part III chapter must deliver to qualify as local-first under this book's definition.
+  - Epilogue EPI-* concepts are obligation contracts - each names what a Part III chapter must deliver to qualify as local-first under this book's definition.
 
 ## Cross-chapter ID collisions
 
@@ -103,7 +103,7 @@ The following local IDs appear in more than one chapter. The canonical reference
 
 # The catalog
 
-## Part 0 — Front matter
+## Part 0 - Front matter
 
 ### Epic: Preface (preface)
 
@@ -111,7 +111,7 @@ The following local IDs appear in more than one chapter. The canonical reference
 
 **Concept count:** 8
 
-#### `preface:PREF-01` — The architectural thesis — local node as primary, vendor as optional
+#### `preface:PREF-01` - The architectural thesis - local node as primary, vendor as optional
 
 The book's central thesis is the inversion of the SaaS dependency relationship: the local node is the primary data plane and the vendor relay is an optional accelerator, so the application survives vendor withdrawal.
 
@@ -128,17 +128,17 @@ The book's central thesis is the inversion of the SaaS dependency relationship: 
 
 > This is the book's defining concept; every later concept either implements it or stress-tests it.
 
-#### `preface:PREF-02` — SaaS tenancy as a withdrawable dependency
+#### `preface:PREF-02` - SaaS tenancy as a withdrawable dependency
 
 SaaS tenancy is an external dependency that can be withdrawn unilaterally by the vendor, evidenced by the 2022 Adobe/Autodesk/Microsoft/Figma suspensions across Russia and the CIS that locked organizations out of their own data on infrastructure they had paid for.
 
 **Kleppmann:** `P5, P7` · **Scope:** `foundational` · **Failure modes:** `data-residency-objection, vendor-acquisition, vendor-outage`
 
-*Conceptual / philosophical — no direct implementation requirement.*
+*Conceptual / philosophical - no direct implementation requirement.*
 
 > Canonical real-world evidence cited throughout the book for the vendor-withdrawal failure mode.
 
-#### `preface:PREF-03` — Offline as daily operating condition, not edge case
+#### `preface:PREF-03` - Offline as daily operating condition, not edge case
 
 Intermittent or absent connectivity is the baseline operating condition for enterprise users across Sub-Saharan Africa, rural India, tier-3 Latin American cities, and much of Southeast Asia, so offline-first is a primary requirement rather than a degraded mode.
 
@@ -151,17 +151,17 @@ Intermittent or absent connectivity is the baseline operating condition for ente
 
 **Verification:** Run the application on a connection that drops for hours at a time; user can complete every core workflow during the disconnected windows with no behavioral difference from connected operation.
 
-#### `preface:PREF-04` — Three-audience scope (architects, enterprise evaluators, founders/contributors)
+#### `preface:PREF-04` - Three-audience scope (architects, enterprise evaluators, founders/contributors)
 
-The book is scoped for three audiences — software architects and senior engineers (Parts III/IV technical specification), enterprise IT and decision-makers (Chapters 5, 7, 15, 19 governance and compliance), and open-source contributors, technical founders, and product teams (Chapters 8, 10, 16 commercial viability) — and a reference implementation must serve all three audience needs simultaneously.
+The book is scoped for three audiences - software architects and senior engineers (Parts III/IV technical specification), enterprise IT and decision-makers (Chapters 5, 7, 15, 19 governance and compliance), and open-source contributors, technical founders, and product teams (Chapters 8, 10, 16 commercial viability) - and a reference implementation must serve all three audience needs simultaneously.
 
 **Scope:** `inverted-stack-specific`
 
-*Conceptual / philosophical — no direct implementation requirement.*
+*Conceptual / philosophical - no direct implementation requirement.*
 
 > Book-meta concept; informs which audience constraints downstream chapters address.
 
-#### `preface:PREF-05` — Council adversarial-review framing (two rounds, five lenses)
+#### `preface:PREF-05` - Council adversarial-review framing (two rounds, five lenses)
 
 The architecture in this book has been stress-tested through two rounds of adversarial review by five domain experts (enterprise IT, distributed systems research, security, product management, local-first practitioner), with Round 1 producing two BLOCK verdicts that forced a partial rewrite and Round 2 clearing all five lenses under fifteen documented conditions named in the epilogue.
 
@@ -176,7 +176,7 @@ The architecture in this book has been stress-tested through two rounds of adver
 
 > Structures Part II of the book and the conformance contract for any reference implementation.
 
-#### `preface:PREF-06` — Sunfish reference-implementation policy (packages not class APIs)
+#### `preface:PREF-06` - Sunfish reference-implementation policy (packages not class APIs)
 
 The book references the Sunfish reference implementation by package name (e.g., Sunfish.Kernel.Sync, Sunfish.Foundation.LocalFirst) rather than by class, method, or constructor signature, because package contracts are stable while pre-1.0 method signatures are not.
 
@@ -189,7 +189,7 @@ The book references the Sunfish reference implementation by package name (e.g., 
 
 **Verification:** Search the manuscript for class-name or method-signature references to Sunfish packages; references must be at package or namespace granularity only.
 
-#### `preface:PREF-07` — Engine-agnostic CRDT architecture via ICrdtEngine
+#### `preface:PREF-07` - Engine-agnostic CRDT architecture via ICrdtEngine
 
 The CRDT engine is pluggable through a single ICrdtEngine adapter, with YDotNet as the current implementation and Loro as the aspirational target, so the engine choice is reversible by design.
 
@@ -203,20 +203,20 @@ The CRDT engine is pluggable through a single ICrdtEngine adapter, with YDotNet 
 
 **Verification:** Replace the YDotNet adapter implementation with a stub or alternate engine; the rest of the system compiles and core CRDT operations route through the adapter without source changes outside the adapter package.
 
-#### `preface:PREF-08` — AI-collaboration disclosure (production transparency)
+#### `preface:PREF-08` - AI-collaboration disclosure (production transparency)
 
 The book discloses that Claude and Claude Code were collaborators in research, drafting, technical review, editing, the Kleppmann Council reviews, the literary-board review cycle, and the audiobook production pipeline, with the author retaining full responsibility for architectural arguments, conclusions, and remaining errors.
 
 **Scope:** `inverted-stack-specific`
 
-*Conceptual / philosophical — no direct implementation requirement.*
+*Conceptual / philosophical - no direct implementation requirement.*
 
 > Production-transparency concept; not architectural but cited as a framing precedent for the Council disclosure in Part II.
 
 
 ---
 
-## Part I — Thesis and pain
+## Part I - Thesis and pain
 
 ### Epic: When SaaS Fights Reality (ch01-when-saas-fights-reality)
 
@@ -224,17 +224,17 @@ The book discloses that Claude and Claude Code were collaborators in research, d
 
 **Concept count:** 11
 
-#### `ch01-when-saas-fights-reality:THESIS-01` — The SaaS bundle as conjoined value-and-cost
+#### `ch01-when-saas-fights-reality:THESIS-01` - The SaaS bundle as conjoined value-and-cost
 
 SaaS packages three desirable properties (real-time collaboration, multi-device access, zero maintenance) inseparably with three undesirable conditions (data on vendor infrastructure, vendor-discretion pricing, vendor-contingent service continuity), accepted as a single take-it-or-leave-it deal because the technology of the time made the conditions appear structurally required to deliver the properties.
 
 **Kleppmann:** `P5, P7` · **Scope:** `foundational` · **Failure modes:** `data-residency-objection, vendor-acquisition, vendor-outage`
 
-*Conceptual / philosophical — no direct implementation requirement.*
+*Conceptual / philosophical - no direct implementation requirement.*
 
 > The bundle frame is the organizing thesis Ch01 establishes; the rest of the book argues the bundle is now separable.
 
-#### `ch01-when-saas-fights-reality:THESIS-02` — Vendor outage as deadline-coincident failure
+#### `ch01-when-saas-fights-reality:THESIS-02` - Vendor outage as deadline-coincident failure
 
 A failure mode in which the SaaS provider's infrastructure becomes unavailable (full outage or undisclosed degraded performance) and renders user data inaccessible at the moment of greatest operational need, with cascading exposure when many vendors share the same underlying cloud region.
 
@@ -248,7 +248,7 @@ A failure mode in which the SaaS provider's infrastructure becomes unavailable (
 
 **Verification:** Disconnect network from the device; application performs all core read, write, search, and submission operations identically to the connected case.
 
-#### `ch01-when-saas-fights-reality:THESIS-03` — Vendor disappearance as routine product end-state
+#### `ch01-when-saas-fights-reality:THESIS-03` - Vendor disappearance as routine product end-state
 
 A failure mode in which the SaaS provider is acquired, sunset, pivoted, or runs out of runway, terminating service on a vendor-controlled timeline and leaving users with whatever export the vendor chooses to provide in whatever format the vendor chooses to emit.
 
@@ -262,9 +262,9 @@ A failure mode in which the SaaS provider is acquired, sunset, pivoted, or runs 
 
 **Verification:** Remove all vendor-side services; application launches, reads historical data, and continues normal operation against the local store.
 
-#### `ch01-when-saas-fights-reality:THESIS-04` — Capability degradation under offline conditions
+#### `ch01-when-saas-fights-reality:THESIS-04` - Capability degradation under offline conditions
 
-A failure mode in which a SaaS application reduces to a read-only cache, queued submissions of uncertain success, or total inoperability when network connectivity is intermittent, weak, restricted, or absent — disproportionately affecting field, rural, clinical, industrial, air-gapped, and majority-world users whose baseline operating environment is non-continuous connectivity.
+A failure mode in which a SaaS application reduces to a read-only cache, queued submissions of uncertain success, or total inoperability when network connectivity is intermittent, weak, restricted, or absent - disproportionately affecting field, rural, clinical, industrial, air-gapped, and majority-world users whose baseline operating environment is non-continuous connectivity.
 
 **Kleppmann:** `P1, P3` · **Scope:** `foundational` · **Failure modes:** `vendor-outage`
 
@@ -276,7 +276,7 @@ A failure mode in which a SaaS application reduces to a read-only cache, queued 
 
 **Verification:** Place device in airplane mode for the duration of a complete representative workflow; confirm every action completes locally and converges on later reconnect with no user intervention.
 
-#### `ch01-when-saas-fights-reality:THESIS-05` — Data inaccessibility despite nominal ownership
+#### `ch01-when-saas-fights-reality:THESIS-05` - Data inaccessibility despite nominal ownership
 
 A failure mode in which user data is contractually owned by the user but operationally inaccessible due to export rate limits, proprietary formats that strip semantic structure, feature-gated export behind paid tiers, or short post-cancellation retrieval windows.
 
@@ -291,7 +291,7 @@ A failure mode in which user data is contractually owned by the user but operati
 
 **Verification:** Run a documented export procedure on a representative dataset; confirm the export round-trips into a third-party tool with attachments, threading, and field semantics intact.
 
-#### `ch01-when-saas-fights-reality:THESIS-06` — Post-adoption pricing capture
+#### `ch01-when-saas-fights-reality:THESIS-06` - Post-adoption pricing capture
 
 A failure mode in which switching costs accumulated through training, integrations, historical data, and learned workflows allow vendors to raise prices, move features behind higher tiers, or change contractual terms after the customer has lost realistic exit leverage, with per-seat pricing and integration ecosystems compounding the lock-in as teams grow.
 
@@ -305,9 +305,9 @@ A failure mode in which switching costs accumulated through training, integratio
 
 **Verification:** Cancel any optional vendor relay or sync service; confirm the application retains all core functionality on the local node alone.
 
-#### `ch01-when-saas-fights-reality:THESIS-07` — Third-party veto over vendor-custodied data
+#### `ch01-when-saas-fights-reality:THESIS-07` - Third-party veto over vendor-custodied data
 
-A failure mode in which an external authority — sanctions regime, data residency regulator, court order, or national security designation — compels the vendor to suspend service or compels the customer to cease use, ending the relationship regardless of either party's preferences because data custody at the vendor concentrates the exposure surface there.
+A failure mode in which an external authority - sanctions regime, data residency regulator, court order, or national security designation - compels the vendor to suspend service or compels the customer to cease use, ending the relationship regardless of either party's preferences because data custody at the vendor concentrates the exposure surface there.
 
 **Kleppmann:** `P5, P6, P7` · **Scope:** `foundational` · **Failure modes:** `data-residency-objection, vendor-acquisition`
 
@@ -321,7 +321,7 @@ A failure mode in which an external authority — sanctions regime, data residen
 
 > Distinct from the first five failure modes in originating outside the vendor-customer relationship; addressed in Appendix F regulatory coverage.
 
-#### `ch01-when-saas-fights-reality:THESIS-08` — Architectural reversal of data custody
+#### `ch01-when-saas-fights-reality:THESIS-08` - Architectural reversal of data custody
 
 The thesis-level architectural inversion that moves authoritative state from vendor infrastructure to user infrastructure, demoting the vendor's role from primary data plane to optional relay peer, made feasible by three independently matured technology shifts (production CRDTs, edge gossip protocols, the local service pattern).
 
@@ -335,9 +335,9 @@ The thesis-level architectural inversion that moves authoritative state from ven
 
 **Verification:** Architecture documents identify the device-resident authoritative store; sync protocol documents identify any cloud component as relay or peer rather than primary; component inventory cites mature open implementations for each substrate.
 
-#### `ch01-when-saas-fights-reality:THESIS-09` — No-degraded-mode commitment
+#### `ch01-when-saas-fights-reality:THESIS-09` - No-degraded-mode commitment
 
-An architectural commitment that the application exposes no reduced-capability operating mode under offline, partitioned, or vendor-unreachable conditions — every core capability behaves identically whether the network is present or absent.
+An architectural commitment that the application exposes no reduced-capability operating mode under offline, partitioned, or vendor-unreachable conditions - every core capability behaves identically whether the network is present or absent.
 
 **Kleppmann:** `P1, P3` · **Scope:** `foundational` · **Failure modes:** `vendor-outage`
 
@@ -352,7 +352,7 @@ An architectural commitment that the application exposes no reduced-capability o
 
 > Specifically named for accessibility-technology users for whom degraded mode is functionally equivalent to inaccessibility.
 
-#### `ch01-when-saas-fights-reality:THESIS-10` — Asymmetric exposure of small-and-medium organizations
+#### `ch01-when-saas-fights-reality:THESIS-10` - Asymmetric exposure of small-and-medium organizations
 
 The observation that the SaaS bundle's undesirable conditions fall hardest on small and medium professional service firms because they sign standard terms without negotiated SLA, escrow, or portability clauses, while bearing direct professional, regulatory, and client-relationship consequences from any of the six failure modes.
 
@@ -365,9 +365,9 @@ The observation that the SaaS bundle's undesirable conditions fall hardest on sm
 
 **Verification:** Default deployment of the architecture passes a representative SMB compliance checklist (HIPAA, professional responsibility, jurisdictional residency) without enterprise-tier features enabled.
 
-#### `ch01-when-saas-fights-reality:THESIS-11` — Paper-fallback as evidence of mediation rather than value
+#### `ch01-when-saas-fights-reality:THESIS-11` - Paper-fallback as evidence of mediation rather than value
 
-The observation that organizations under SaaS outage continue operating via analog fallbacks (paper charts, whiteboards, fax, manual reconciliation) demonstrates that the SaaS layer was largely mediating work that continued to happen, while the digital affordances (search, cross-history pattern detection, analytic queries) were the genuine value lost — value that a local-first node preserves through the outage.
+The observation that organizations under SaaS outage continue operating via analog fallbacks (paper charts, whiteboards, fax, manual reconciliation) demonstrates that the SaaS layer was largely mediating work that continued to happen, while the digital affordances (search, cross-history pattern detection, analytic queries) were the genuine value lost - value that a local-first node preserves through the outage.
 
 **Kleppmann:** `P1, P3, P4` · **Scope:** `foundational` · **Failure modes:** `vendor-outage`
 
@@ -386,7 +386,7 @@ The observation that organizations under SaaS outage continue operating via anal
 
 **Concept count:** 14
 
-#### `ch02-local-first-serious-stack:LF-01` — No spinners, no waiting
+#### `ch02-local-first-serious-stack:LF-01` - No spinners, no waiting
 
 The software responds instantly because it reads from local state rather than from a network request, with no perceptible round-trip latency for any user-visible operation.
 
@@ -400,7 +400,7 @@ The software responds instantly because it reads from local state rather than fr
 
 **Verification:** Disconnect network; instrument all user-visible reads and writes; confirm zero network calls and sub-frame latency for every core operation.
 
-#### `ch02-local-first-serious-stack:LF-02` — Work is not trapped on one device
+#### `ch02-local-first-serious-stack:LF-02` - Work is not trapped on one device
 
 User data is structurally accessible across all the user's devices and to designated collaborators without depending on a vendor account or subscription to remain accessible.
 
@@ -414,7 +414,7 @@ User data is structurally accessible across all the user's devices and to design
 
 **Verification:** Cancel the vendor subscription or simulate vendor disappearance; confirm data remains accessible and syncable across devices the user controls.
 
-#### `ch02-local-first-serious-stack:LF-03` — The network is optional
+#### `ch02-local-first-serious-stack:LF-03` - The network is optional
 
 The full application works without any network connection indefinitely and syncs when a connection becomes available, with the local node holding an authoritative copy of all data it is allowed to act on.
 
@@ -429,7 +429,7 @@ The full application works without any network connection indefinitely and syncs
 
 **Verification:** Disconnect network indefinitely; perform all core operations; confirm identical behavior to online mode and successful convergence after reconnection.
 
-#### `ch02-local-first-serious-stack:LF-04` — Seamless collaboration
+#### `ch02-local-first-serious-stack:LF-04` - Seamless collaboration
 
 Multiple people can edit the same data simultaneously without explicit locking, checkout workflows, or a designated human conflict resolver, with convergence guaranteed by merge semantics rather than by a coordinating server.
 
@@ -444,7 +444,7 @@ Multiple people can edit the same data simultaneously without explicit locking, 
 
 **Verification:** Multi-peer concurrent-edit test under partition; confirm byte-identical state on all peers after partition heal without server adjudication.
 
-#### `ch02-local-first-serious-stack:LF-05` — The long now
+#### `ch02-local-first-serious-stack:LF-05` - The long now
 
 User data outlives the vendor, the subscription, the company's strategic priorities, and the political conditions under which the service operates, by virtue of being stored in an open format on user-controlled hardware.
 
@@ -459,7 +459,7 @@ User data outlives the vendor, the subscription, the company's strategic priorit
 
 **Verification:** Confirm data file format has a public specification readable by at least one independent tool; confirm continued read/write access works after simulated vendor shutdown and after simulated jurisdictional service withdrawal.
 
-#### `ch02-local-first-serious-stack:LF-06` — Security and privacy by default
+#### `ch02-local-first-serious-stack:LF-06` - Security and privacy by default
 
 Data is encrypted end-to-end at rest and in transit by default, with key control held by the user rather than the vendor, raising the cost of compromise from one breach exposing all users to one breach exposing one user.
 
@@ -474,9 +474,9 @@ Data is encrypted end-to-end at rest and in transit by default, with key control
 
 **Verification:** Confirm relay or vendor infrastructure handles ciphertext only; confirm key material does not leave user-controlled hardware; threat-model worksheet demonstrates one-node-compromise containment.
 
-#### `ch02-local-first-serious-stack:LF-07` — You retain ultimate ownership and control
+#### `ch02-local-first-serious-stack:LF-07` - You retain ultimate ownership and control
 
-The user structurally — not contractually — decides where data lives, who can access it, and when to delete it, because the bits live on hardware the user controls in a format the user can read under encryption the user can manage.
+The user structurally - not contractually - decides where data lives, who can access it, and when to delete it, because the bits live on hardware the user controls in a format the user can read under encryption the user can manage.
 
 **Kleppmann:** `P7` · **Scope:** `foundational` · **Failure modes:** `data-residency-objection, vendor-acquisition`
 
@@ -489,7 +489,7 @@ The user structurally — not contractually — decides where data lives, who ca
 
 **Verification:** Confirm user can copy, back up, and read data files independently of the vendor application; confirm key material is held only on user-controlled hardware.
 
-#### `ch02-local-first-serious-stack:THESIS-01` — Seven properties as a minimum bar, not a wishlist
+#### `ch02-local-first-serious-stack:THESIS-01` - Seven properties as a minimum bar, not a wishlist
 
 The seven Kleppmann properties function as a calibrated filter that fails any system satisfying only a subset, not as a menu from which an implementer may select.
 
@@ -503,7 +503,7 @@ The seven Kleppmann properties function as a calibrated filter that fails any sy
 
 **Verification:** Conformance scorecard reports per-property pass/fail in addition to any gradient score; overall conformance requires all seven to pass.
 
-#### `ch02-local-first-serious-stack:THESIS-02` — Full node versus smart cache
+#### `ch02-local-first-serious-stack:THESIS-02` - Full node versus smart cache
 
 A full node runs presentation, application logic, sync daemon, storage, and security primitives locally with the cloud serving as another peer for relay and backup, whereas a smart cache holds a recent copy of server-authoritative state and defers to the server for write authority and business logic.
 
@@ -518,7 +518,7 @@ A full node runs presentation, application logic, sync daemon, storage, and secu
 
 **Verification:** Disconnect from any vendor-operated infrastructure; confirm new records can be created, business automations fire, and concurrent edits converge against local state alone.
 
-#### `ch02-local-first-serious-stack:THESIS-03` — Composition as the contribution
+#### `ch02-local-first-serious-stack:THESIS-03` - Composition as the contribution
 
 This book's contribution is the integration of existing proven primitives (CRDT libraries, gossip anti-entropy, desktop-shell-plus-local-server, declarative partial sync, container background services, bidirectional schema lenses) into a coherent enterprise-deployable system, not the invention of new primitives.
 
@@ -532,7 +532,7 @@ This book's contribution is the integration of existing proven primitives (CRDT 
 
 **Verification:** For every primitive in the architecture, a production analogue is named in the chapter or appendix; integration ADRs document how invariants compose across primitive boundaries.
 
-#### `ch02-local-first-serious-stack:THESIS-04` — No-novel-cryptography discipline
+#### `ch02-local-first-serious-stack:THESIS-04` - No-novel-cryptography discipline
 
 Property 6 is feasible only when audited cryptographic primitives (libsodium, age, Argon2id reference) are used opaquely and a DEK/KEK hierarchy composes them against a specification reviewed by a cryptographic engineer, never when novel cryptography is invented.
 
@@ -546,7 +546,7 @@ Property 6 is feasible only when audited cryptographic primitives (libsodium, ag
 
 **Verification:** SBOM lists cryptographic dependencies; design review record names the cryptographic engineer who approved the key hierarchy; no in-house cipher implementations are present in the codebase.
 
-#### `ch02-local-first-serious-stack:THESIS-05` — Adopt-don't-invent wire format discipline
+#### `ch02-local-first-serious-stack:THESIS-05` - Adopt-don't-invent wire format discipline
 
 Property 5 (the long now) is preserved by adopting an existing portable CRDT format (Yjs or Automerge) rather than inventing a proprietary wire format, because invented formats repeat the Anytype Any-Block portability failure.
 
@@ -560,7 +560,7 @@ Property 5 (the long now) is preserved by adopting an existing portable CRDT for
 
 **Verification:** Wire format documentation cites the upstream specification; an independent reference implementation parses sample documents; ADR records the adopt-don't-invent decision.
 
-#### `ch02-local-first-serious-stack:THESIS-06` — Disaggregated managed relay
+#### `ch02-local-first-serious-stack:THESIS-06` - Disaggregated managed relay
 
 A managed relay is a residual vendor dependency that holds ciphertext only and can be self-hosted without protocol changes, distinguishing it structurally from a SaaS vendor that holds decryptable data.
 
@@ -575,7 +575,7 @@ A managed relay is a residual vendor dependency that holds ciphertext only and c
 
 **Verification:** Wire-protocol specification confirms ciphertext-only relay payloads; deploy a self-hosted relay using the public protocol and confirm interoperability with the managed relay; threat model documents relay as untrusted.
 
-#### `ch02-local-first-serious-stack:THESIS-07` — Per-record CAP positioning
+#### `ch02-local-first-serious-stack:THESIS-07` - Per-record CAP positioning
 
 The architecture treats CRDT-merge records and lease-coordinated records as first-class distinct classes with a defined boundary and handoff between them, rather than forcing all data into a single consistency model.
 
@@ -596,7 +596,7 @@ The architecture treats CRDT-merge records and lease-coordinated records as firs
 
 **Concept count:** 21
 
-#### `ch03-inverted-stack-one-diagram:INV-01` — Local node as primary; cloud relay as optional peer
+#### `ch03-inverted-stack-one-diagram:INV-01` - Local node as primary; cloud relay as optional peer
 
 The architectural inversion replaces SaaS's cloud-primary / device-cache topology with a topology where the local node holds the authoritative copy and any cloud relay participates only as an optional sync peer.
 
@@ -611,9 +611,9 @@ The architectural inversion replaces SaaS's cloud-primary / device-cache topolog
 
 **Verification:** Disconnect all network interfaces; the application performs every core operation identically and the relay role can be unplugged without rebuilding the application.
 
-#### `ch03-inverted-stack-one-diagram:INV-02` — Five-layer reference model
+#### `ch03-inverted-stack-one-diagram:INV-02` - Five-layer reference model
 
-The inverted stack decomposes into five layers — Presentation, Application Logic, Sync Daemon, Storage, and Relay/Discovery — each with a single owner, a single boundary, and an explicit answer to the network-unavailable question.
+The inverted stack decomposes into five layers - Presentation, Application Logic, Sync Daemon, Storage, and Relay/Discovery - each with a single owner, a single boundary, and an explicit answer to the network-unavailable question.
 
 **Kleppmann:** `P3` · **Scope:** `inverted-stack-specific`
 
@@ -625,7 +625,7 @@ The inverted stack decomposes into five layers — Presentation, Application Log
 
 **Verification:** Architecture documentation enumerates five layers, each with owner, boundary, and offline-behavior statements; the reference implementation contains a separate component per layer.
 
-#### `ch03-inverted-stack-one-diagram:INV-03` — Presentation layer owns no state
+#### `ch03-inverted-stack-one-diagram:INV-03` - Presentation layer owns no state
 
 The presentation layer renders directly from the local store, owns no independent state, caches nothing on its own, and makes no data decisions.
 
@@ -639,9 +639,9 @@ The presentation layer renders directly from the local store, owns no independen
 
 **Verification:** UI integration test renders the same component tree against an Anchor instance and a Bridge instance and asserts identical output for the same store state.
 
-#### `ch03-inverted-stack-one-diagram:INV-04` — Four-state node health indicator
+#### `ch03-inverted-stack-one-diagram:INV-04` - Four-state node health indicator
 
-The presentation layer surfaces sync state as four named states — sync-healthy, stale, offline, and conflict-pending — each communicated through more than color and announced to assistive technology on transition.
+The presentation layer surfaces sync state as four named states - sync-healthy, stale, offline, and conflict-pending - each communicated through more than color and announced to assistive technology on transition.
 
 **Kleppmann:** `P1, P3` · **Scope:** `inverted-stack-specific` · **Failure modes:** `partition, peer-discovery-failure`
 
@@ -653,7 +653,7 @@ The presentation layer surfaces sync state as four named states — sync-healthy
 
 **Verification:** Component test confirms accessibility-tree exposure of each state name and live-region announcement on transition; visual test confirms a non-color cue per state.
 
-#### `ch03-inverted-stack-one-diagram:INV-05` — Application logic writes locally without network awareness
+#### `ch03-inverted-stack-one-diagram:INV-05` - Application logic writes locally without network awareness
 
 Domain command handlers translate user intent into CRDT operations against the local store and contain no network-aware code paths, except for explicit consultation of the lease coordinator for CP-class records.
 
@@ -667,9 +667,9 @@ Domain command handlers translate user intent into CRDT operations against the l
 
 **Verification:** Static analysis confirms application-logic modules import no network client; unit tests pass with the sync daemon socket disabled for AP-class operations.
 
-#### `ch03-inverted-stack-one-diagram:INV-06` — Per-record-class CAP positioning
+#### `ch03-inverted-stack-one-diagram:INV-06` - Per-record-class CAP positioning
 
-CAP trade-offs are made per record class rather than per application — documents and notes are AP via CRDT merge, identity facts are AP with deferred merge, reservations and slots are CP via distributed lease, and financial transactions are CP under lease plus ledger ordering.
+CAP trade-offs are made per record class rather than per application - documents and notes are AP via CRDT merge, identity facts are AP with deferred merge, reservations and slots are CP via distributed lease, and financial transactions are CP under lease plus ledger ordering.
 
 **Kleppmann:** `P3, P4` · **Scope:** `foundational` · **Failure modes:** `clock-skew, partition`
 
@@ -682,7 +682,7 @@ CAP trade-offs are made per record class rather than per application — documen
 
 **Verification:** Schema definition enumerates CAP class per record type; integration test demonstrates AP-class writes succeed under partition while CP-class writes block until quorum returns.
 
-#### `ch03-inverted-stack-one-diagram:INV-07` — Sync daemon as separate long-running process
+#### `ch03-inverted-stack-one-diagram:INV-07` - Sync daemon as separate long-running process
 
 The sync daemon runs as a separate OS-managed long-running process that survives application restarts and communicates with the application shell over a Unix-domain socket.
 
@@ -696,9 +696,9 @@ The sync daemon runs as a separate OS-managed long-running process that survives
 
 **Verification:** Process listing confirms the daemon runs independently of the app; restart test confirms deltas received during app downtime are present when the app reconnects.
 
-#### `ch03-inverted-stack-one-diagram:INV-08` — Three-tier peer discovery hierarchy
+#### `ch03-inverted-stack-one-diagram:INV-08` - Three-tier peer discovery hierarchy
 
-Peer discovery follows a fixed hierarchy — mDNS on the local network, mesh-VPN (WireGuard-based) for NAT traversal across networks, and the managed relay as the final fallback.
+Peer discovery follows a fixed hierarchy - mDNS on the local network, mesh-VPN (WireGuard-based) for NAT traversal across networks, and the managed relay as the final fallback.
 
 **Kleppmann:** `P3, P4, P7` · **Scope:** `inverted-stack-specific` · **Failure modes:** `peer-discovery-failure`
 
@@ -711,9 +711,9 @@ Peer discovery follows a fixed hierarchy — mDNS on the local network, mesh-VPN
 
 **Verification:** Daemon trace shows the three-tier order on cold start; LAN-only test confirms two devices on the same Wi-Fi sync with no relay traffic.
 
-#### `ch03-inverted-stack-one-diagram:INV-09` — Gossip anti-entropy with vector clocks
+#### `ch03-inverted-stack-one-diagram:INV-09` - Gossip anti-entropy with vector clocks
 
-The daemon converges peer state through periodic gossip — every 30 seconds it selects two random peers, exchanges deltas based on vector-clock divergence, and streams missing CRDT operations using CBOR encoding.
+The daemon converges peer state through periodic gossip - every 30 seconds it selects two random peers, exchanges deltas based on vector-clock divergence, and streams missing CRDT operations using CBOR encoding.
 
 **Kleppmann:** `P3, P4` · **Scope:** `foundational` · **Failure modes:** `partition`
 
@@ -726,7 +726,7 @@ The daemon converges peer state through periodic gossip — every 30 seconds it 
 
 **Verification:** Wire trace confirms CBOR-encoded delta exchange on the configured interval; multi-peer convergence test demonstrates byte-identical state across peers after gossip rounds.
 
-#### `ch03-inverted-stack-one-diagram:INV-10` — Write buffering with durable local commit before peer delivery
+#### `ch03-inverted-stack-one-diagram:INV-10` - Write buffering with durable local commit before peer delivery
 
 When no peers are reachable, the daemon accepts writes from the application logic layer and buffers them to the durable local event log before acknowledgement, then drains the buffer when any peer becomes reachable.
 
@@ -741,9 +741,9 @@ When no peers are reachable, the daemon accepts writes from the application logi
 
 **Verification:** Durability test interrupts power after buffering and before delivery, then asserts the write replays from the event log on restart and reaches peers when reconnected.
 
-#### `ch03-inverted-stack-one-diagram:INV-11` — Storage layer with CRDT store, event log, and read-model projections
+#### `ch03-inverted-stack-one-diagram:INV-11` - Storage layer with CRDT store, event log, and read-model projections
 
-The storage layer holds three coexisting structures — a typed CRDT document store, an append-only event log as the ground truth, and rebuildable read-model projections — all backed by SQLite encrypted with SQLCipher and a key derived via Argon2id and held in the OS keystore.
+The storage layer holds three coexisting structures - a typed CRDT document store, an append-only event log as the ground truth, and rebuildable read-model projections - all backed by SQLite encrypted with SQLCipher and a key derived via Argon2id and held in the OS keystore.
 
 **Kleppmann:** `P5, P6, P7` · **Scope:** `inverted-stack-specific` · **Failure modes:** `key-compromise, key-loss`
 
@@ -756,7 +756,7 @@ The storage layer holds three coexisting structures — a typed CRDT document st
 
 **Verification:** Storage layer exposes the three structures as separate APIs; recovery test rebuilds projections from the event log; key-extraction test confirms physical storage extraction without credentials yields ciphertext only.
 
-#### `ch03-inverted-stack-one-diagram:INV-12` — Engine-agnostic CRDT abstraction
+#### `ch03-inverted-stack-one-diagram:INV-12` - Engine-agnostic CRDT abstraction
 
 The CRDT engine is consumed through an abstraction (`ICrdtEngine`) so that the choice between YDotNet (current) and Loro (aspirational target) is reversible without changes to the application layer.
 
@@ -770,7 +770,7 @@ The CRDT engine is consumed through an abstraction (`ICrdtEngine`) so that the c
 
 **Verification:** Test suite runs the same convergence scenarios against multiple engine implementations and asserts byte-identical merged state.
 
-#### `ch03-inverted-stack-one-diagram:INV-13` — Relay as ciphertext-only optional peer
+#### `ch03-inverted-stack-one-diagram:INV-13` - Relay as ciphertext-only optional peer
 
 The relay is an optional component that receives, fans out, and rendezvous-routes encrypted CRDT deltas without ever holding decryption keys, decrypted content, or authoritative data.
 
@@ -785,9 +785,9 @@ The relay is an optional component that receives, fans out, and rendezvous-route
 
 **Verification:** Relay process inspection confirms no key material is present; protocol fuzz test confirms the relay rejects any request that requires plaintext access; replacing the managed relay with a self-hosted relay requires no node configuration change.
 
-#### `ch03-inverted-stack-one-diagram:INV-14` — Two relay trust levels — relay-only and attested hosted peer
+#### `ch03-inverted-stack-one-diagram:INV-14` - Two relay trust levels - relay-only and attested hosted peer
 
-The relay operates at one of two declared trust levels — relay-only ciphertext routing as the default, or attested hosted peer that participates in CP-class quorum via an explicit administrator-issued role attestation.
+The relay operates at one of two declared trust levels - relay-only ciphertext routing as the default, or attested hosted peer that participates in CP-class quorum via an explicit administrator-issued role attestation.
 
 **Kleppmann:** `P6, P7` · **Scope:** `inverted-stack-specific` · **Failure modes:** `key-compromise, vendor-acquisition`
 
@@ -799,9 +799,9 @@ The relay operates at one of two declared trust levels — relay-only ciphertext
 
 **Verification:** Configuration audit confirms default relay deployment lacks any role attestation; integration test confirms an unattested relay is excluded from quorum decisions.
 
-#### `ch03-inverted-stack-one-diagram:INV-15` — Mirror-inversion of Ch01 failure modes
+#### `ch03-inverted-stack-one-diagram:INV-15` - Mirror-inversion of Ch01 failure modes
 
-The inversion specifically resolves each of Ch01's six named SaaS failure modes — The Outage and The Dependency Chain, The Vendor, The Connectivity, The Data, The Price, and The Third-Party Veto — by removing the vendor's data custody as the load-bearing dependency.
+The inversion specifically resolves each of Ch01's six named SaaS failure modes - The Outage and The Dependency Chain, The Vendor, The Connectivity, The Data, The Price, and The Third-Party Veto - by removing the vendor's data custody as the load-bearing dependency.
 
 **Kleppmann:** `P3, P5, P7` · **Scope:** `foundational` · **Failure modes:** `data-residency-objection, partition, vendor-acquisition, vendor-outage`
 
@@ -816,9 +816,9 @@ The inversion specifically resolves each of Ch01's six named SaaS failure modes 
 
 **Verification:** Failure-mode regression tests for each named mode confirm continued local function and data accessibility; export test produces a standard-format archive without vendor API calls.
 
-#### `ch03-inverted-stack-one-diagram:INV-16` — The Security Breach as hidden-exposure reveal
+#### `ch03-inverted-stack-one-diagram:INV-16` - The Security Breach as hidden-exposure reveal
 
-SaaS exposes users to a structurally invisible failure mode — vendor-side breach of decryptable copies — that the inverted architecture neutralizes by ensuring the relay only ever holds ciphertext sealed under per-document DEKs wrapped by role KEKs whose keys never leave the originating node.
+SaaS exposes users to a structurally invisible failure mode - vendor-side breach of decryptable copies - that the inverted architecture neutralizes by ensuring the relay only ever holds ciphertext sealed under per-document DEKs wrapped by role KEKs whose keys never leave the originating node.
 
 **Kleppmann:** `P6, P7` · **Scope:** `foundational` · **Failure modes:** `data-residency-objection, key-compromise`
 
@@ -831,9 +831,9 @@ SaaS exposes users to a structurally invisible failure mode — vendor-side brea
 
 **Verification:** Threat-model audit demonstrates no key material crosses the node boundary; relay breach simulation produces only ciphertext payloads with no path to plaintext.
 
-#### `ch03-inverted-stack-one-diagram:INV-17` — Honest new failure modes introduced by the architecture
+#### `ch03-inverted-stack-one-diagram:INV-17` - Honest new failure modes introduced by the architecture
 
-The inversion introduces three categorically new operational concerns — endpoint-compromise expansion of the attack surface, schema migration across independently-updating nodes, and CRDT garbage-collection debt across long-lived peers — each of which the architecture addresses but does not eliminate.
+The inversion introduces three categorically new operational concerns - endpoint-compromise expansion of the attack surface, schema migration across independently-updating nodes, and CRDT garbage-collection debt across long-lived peers - each of which the architecture addresses but does not eliminate.
 
 **Kleppmann:** `P5, P6` · **Scope:** `inverted-stack-specific` · **Failure modes:** `key-compromise, partition, schema-skew`
 
@@ -845,9 +845,9 @@ The inversion introduces three categorically new operational concerns — endpoi
 
 **Verification:** Threat model documents endpoint compromise scenarios and the four-layer defense mapping; migration test runs five concurrent schema versions to convergence; GC test reintegrates a peer offline for longer than the active retention window.
 
-#### `ch03-inverted-stack-one-diagram:ZONE-01` — Anchor as Zone A — offline-by-default local-first deployment shape
+#### `ch03-inverted-stack-one-diagram:ZONE-01` - Anchor as Zone A - offline-by-default local-first deployment shape
 
-Anchor is the Zone A canonical shape — a .NET MAUI Blazor Hybrid native application running on Windows and macOS desktops with data in a local SQLCipher SQLite database, an Ed25519 device-identity keypair generated at first run, and opt-in sync.
+Anchor is the Zone A canonical shape - a .NET MAUI Blazor Hybrid native application running on Windows and macOS desktops with data in a local SQLCipher SQLite database, an Ed25519 device-identity keypair generated at first run, and opt-in sync.
 
 **Kleppmann:** `P1, P3, P5, P7` · **Scope:** `inverted-stack-specific` · **Failure modes:** `data-residency-objection, vendor-outage`
 
@@ -860,9 +860,9 @@ Anchor is the Zone A canonical shape — a .NET MAUI Blazor Hybrid native applic
 
 **Verification:** Fresh install with networking disabled completes setup and supports all core workflows; keystore inspection confirms a per-device Ed25519 keypair was generated locally.
 
-#### `ch03-inverted-stack-one-diagram:ZONE-02` — Bridge as Zone C — hybrid multi-tenant SaaS deployment shape
+#### `ch03-inverted-stack-one-diagram:ZONE-02` - Bridge as Zone C - hybrid multi-tenant SaaS deployment shape
 
-Bridge is the Zone C canonical shape — a .NET Aspire / Blazor Server hosted application that runs a dedicated local-node host process and dedicated SQLCipher database per tenant, defaulting to ciphertext-only relay participation in the tenant's gossip scope.
+Bridge is the Zone C canonical shape - a .NET Aspire / Blazor Server hosted application that runs a dedicated local-node host process and dedicated SQLCipher database per tenant, defaulting to ciphertext-only relay participation in the tenant's gossip scope.
 
 **Kleppmann:** `P6, P7` · **Scope:** `inverted-stack-specific` · **Failure modes:** `data-residency-objection, key-compromise`
 
@@ -875,7 +875,7 @@ Bridge is the Zone C canonical shape — a .NET Aspire / Blazor Server hosted ap
 
 **Verification:** Multi-tenant deployment audit confirms one host process and one database per tenant; default deployment lacks any role attestation; integration test confirms cross-tenant data is unreachable.
 
-#### `ch03-inverted-stack-one-diagram:ZONE-03` — One architecture, two deployment shapes
+#### `ch03-inverted-stack-one-diagram:ZONE-03` - One architecture, two deployment shapes
 
 Anchor and Bridge use the same Sunfish component surface, sync protocol, CAP positioning model, and storage architecture; they differ only in where the authoritative data location lives.
 
@@ -889,9 +889,9 @@ Anchor and Bridge use the same Sunfish component surface, sync protocol, CAP pos
 
 **Verification:** Reference implementation builds both shapes from the same kernel packages; protocol conformance tests pass identically against an Anchor peer and a Bridge tenant peer.
 
-#### `ch03-inverted-stack-one-diagram:INV-18` — Three developer-habit shifts under the inversion
+#### `ch03-inverted-stack-one-diagram:INV-18` - Three developer-habit shifts under the inversion
 
-Building under the inversion shifts three habits — writes succeed on local durability rather than remote acknowledgement, business logic owns its correctness independently of the network, and failure modes are explicit rather than papered over.
+Building under the inversion shifts three habits - writes succeed on local durability rather than remote acknowledgement, business logic owns its correctness independently of the network, and failure modes are explicit rather than papered over.
 
 **Kleppmann:** `P1, P3, P4` · **Scope:** `foundational` · **Failure modes:** `partition, vendor-outage`
 
@@ -911,7 +911,7 @@ Building under the inversion shifts three habits — writes succeed on local dur
 
 **Concept count:** 15
 
-#### `ch04-choosing-your-architecture:DEC-01` — The One Question (user-owned vs aggregated value)
+#### `ch04-choosing-your-architecture:DEC-01` - The One Question (user-owned vs aggregated value)
 
 The architecture-determining question is whether the primary value of the software comes from the user's own data or from data aggregated across many users.
 
@@ -925,7 +925,7 @@ The architecture-determining question is whether the primary value of the softwa
 
 **Verification:** Architecture decision record names the primary records, identifies their natural owner, and cites the One Question answer as the basis for selecting Zone A, B, or C.
 
-#### `ch04-choosing-your-architecture:DEC-02` — Mixed-ownership architecture pattern
+#### `ch04-choosing-your-architecture:DEC-02` - Mixed-ownership architecture pattern
 
 A product whose primary records are user-owned but which also exposes aggregated surfaces routes the primary records through the local-node data plane and treats aggregated surfaces as optional read models on a separate service layer.
 
@@ -939,7 +939,7 @@ A product whose primary records are user-owned but which also exposes aggregated
 
 **Verification:** System diagram shows aggregated surfaces as downstream consumers of node-sourced data; integration test confirms primary records remain readable and writable after the aggregation service is stopped.
 
-#### `ch04-choosing-your-architecture:FILT-01` — Filter 1 — Consistency requirements (hard stop)
+#### `ch04-choosing-your-architecture:FILT-01` - Filter 1 - Consistency requirements (hard stop)
 
 A disqualifying check that rejects local-first architecture when the domain requires atomic cross-user transactions, intolerance for stale data, or millisecond-identical truth across all peers.
 
@@ -953,9 +953,9 @@ A disqualifying check that rejects local-first architecture when the domain requ
 
 **Verification:** Architecture decision record answers all four Filter 1 questions in writing; any "yes" to atomic cross-user transactions, dangerous stale data, or millisecond-identical truth requirements documents the centralized routing for that subsystem.
 
-#### `ch04-choosing-your-architecture:FILT-02` — Filter 2 — Data ownership profile
+#### `ch04-choosing-your-architecture:FILT-02` - Filter 2 - Data ownership profile
 
-A check that classifies the natural owner of the primary records by who creates them, who uses them, and who suffers loss when access is severed — distinguishing user-owned, vendor-aggregated, and regulator-custodied profiles.
+A check that classifies the natural owner of the primary records by who creates them, who uses them, and who suffers loss when access is severed - distinguishing user-owned, vendor-aggregated, and regulator-custodied profiles.
 
 **Kleppmann:** `P5, P7` · **Scope:** `foundational` · **Failure modes:** `data-residency-objection, vendor-acquisition`
 
@@ -968,7 +968,7 @@ A check that classifies the natural owner of the primary records by who creates 
 
 **Verification:** Architecture decision record cites the data-ownership profile per primary record type; regulator-custodian flows reference the specific regulation (HIPAA, FINRA, ITAR, etc.) and the custodial mechanism used.
 
-#### `ch04-choosing-your-architecture:FILT-03` — Filter 3 — Connectivity and operational environment
+#### `ch04-choosing-your-architecture:FILT-03` - Filter 3 - Connectivity and operational environment
 
 A check that names the actual deployment environment and routes to local-first when users operate in field, air-gapped, regulated-residency, clinical, or chronically intermittent-connectivity conditions.
 
@@ -978,12 +978,12 @@ A check that names the actual deployment environment and routes to local-first w
 
 - Architecture decision record names the physical deployment environment of the primary user, not the cloud provider's SLA
 - Field, air-gapped, MDM-governed, residency-regulated, and chronically-intermittent environments route to local-first as mandatory or strongly preferred
-- The product treats absence of network as a normal operating mode, not a degraded one — input is accepted and writes are queued without network access
+- The product treats absence of network as a normal operating mode, not a degraded one - input is accepted and writes are queued without network access
 - Always-online browser-only zero-install scenarios are the only category routed to traditional SaaS at this filter
 
 **Verification:** Architecture decision record names the actual environments; behavioral test confirms the application accepts input and persists writes with no network present, distinguished from a degraded-but-online state.
 
-#### `ch04-choosing-your-architecture:FILT-04` — Filter 4 — Business model alignment
+#### `ch04-choosing-your-architecture:FILT-04` - Filter 4 - Business model alignment
 
 A check that rejects local-first when revenue depends on controlling user access to their own data, and confirms it when revenue derives from service quality, managed relay, support, tooling, or dual-licensed open-core offerings.
 
@@ -993,12 +993,12 @@ A check that rejects local-first when revenue depends on controlling user access
 
 - Architecture decision record states the revenue model and confirms it does not require gating user access to user-owned data
 - Revenue paths that depend on data-custody lock-in are explicitly disqualified
-- Managed relay is specified as replaceable infrastructure, not a data custodian — relay failure degrades sync but never local operation or data access
+- Managed relay is specified as replaceable infrastructure, not a data custodian - relay failure degrades sync but never local operation or data access
 - Dual-licensing patterns (open-source core plus commercial managed offering) are recognized as the strongest alignment for this architecture
 
 **Verification:** Business model document names the revenue path; relay-failure test confirms local operation and data access continue unaffected; user data export is supported without vendor mediation.
 
-#### `ch04-choosing-your-architecture:FILT-05` — Filter 5 — Team capability and timeline
+#### `ch04-choosing-your-architecture:FILT-05` - Filter 5 - Team capability and timeline
 
 A check that governs when and how to adopt local-first by honestly assessing whether the team has CRDT, distributed-state, multi-version schema, and key-management skills, and whether the timeline accommodates the required investment.
 
@@ -1014,7 +1014,7 @@ A check that governs when and how to adopt local-first by honestly assessing whe
 
 **Verification:** Project plan documents the four-skill capability assessment, the CRDT/sync and key-management budgets, and the resulting Zone selection; production date is not set before the key-management budget elapses.
 
-#### `ch04-choosing-your-architecture:DEC-03` — Zone A — Local-first node outcome
+#### `ch04-choosing-your-architecture:DEC-03` - Zone A - Local-first node outcome
 
 The outcome when all five filters clear and the team has timeline and capability to build the full local-first node from the start, where every user runs a complete local node and the relay is optional infrastructure.
 
@@ -1029,7 +1029,7 @@ The outcome when all five filters clear and the team has timeline and capability
 
 **Verification:** Integration test confirms the application provides full functionality with no relay reachable; reference implementation is the Anchor accelerator under Sunfish.
 
-#### `ch04-choosing-your-architecture:DEC-04` — Zone B — Centralized SaaS outcome (when local-first is wrong)
+#### `ch04-choosing-your-architecture:DEC-04` - Zone B - Centralized SaaS outcome (when local-first is wrong)
 
 The outcome when Filter 1 or Filter 2 returns a hard "centralized only" verdict, applying to multi-tenant aggregation as core value, anonymous public access, millisecond global consistency requirements, and pure content delivery.
 
@@ -1039,11 +1039,11 @@ The outcome when Filter 1 or Filter 2 returns a hard "centralized only" verdict,
 
 - Architecture decision record cites the specific Filter 1 or Filter 2 result that routed the product to centralized
 - Local-first is not retrofitted onto a domain whose primary value is aggregated state or whose core loop requires CP-class consistency
-- The architecture serves the domain — building financial trading infrastructure on a local-node architecture is recognized as wrong for the domain
+- The architecture serves the domain - building financial trading infrastructure on a local-node architecture is recognized as wrong for the domain
 
 **Verification:** Architecture decision record names which filter forced Zone B and identifies the aggregated value or consistency invariant that justifies centralization.
 
-#### `ch04-choosing-your-architecture:DEC-05` — Zone C — Hybrid outcome
+#### `ch04-choosing-your-architecture:DEC-05` - Zone C - Hybrid outcome
 
 The outcome when filters pass for user-scoped primary records but fail for specific coordination features, or when Filter 5 indicates a timeline incompatible with full Zone A investment, where the local node handles user-owned data and a cloud relay handles sync, cross-organization collaboration, payments, and compliance reporting.
 
@@ -1058,9 +1058,9 @@ The outcome when filters pass for user-scoped primary records but fail for speci
 
 **Verification:** Architecture decision record documents which features run on the relay versus the node; reference implementation is the Bridge accelerator under Sunfish; periodic review confirms server-side logic has not re-centralized authoritative state.
 
-#### `ch04-choosing-your-architecture:DEC-06` — The Practical Shortcut (three-question prefilter)
+#### `ch04-choosing-your-architecture:DEC-06` - The Practical Shortcut (three-question prefilter)
 
-A three-question prefilter — primary-record ownership, sustained-offline requirement, vendor-outlive requirement — that determines whether a full five-filter evaluation is worth the time for a project in early discovery.
+A three-question prefilter - primary-record ownership, sustained-offline requirement, vendor-outlive requirement - that determines whether a full five-filter evaluation is worth the time for a project in early discovery.
 
 **Kleppmann:** `P3, P5, P7` · **Scope:** `foundational` · **Failure modes:** `vendor-acquisition, vendor-outage`
 
@@ -1073,9 +1073,9 @@ A three-question prefilter — primary-record ownership, sustained-offline requi
 
 **Verification:** Discovery-stage architecture note records the three shortcut answers and either cites the resulting Zone or names the filter requiring full evaluation.
 
-#### `ch04-choosing-your-architecture:DEC-07` — Vendor-outlive requirement
+#### `ch04-choosing-your-architecture:DEC-07` - Vendor-outlive requirement
 
-The requirement that the product keep working regardless of whether the vendor survives, is acquired, changes pricing, or is directed to stop serving a given jurisdiction — making vendor-independent authoritative data custody a structural, not contractual, property.
+The requirement that the product keep working regardless of whether the vendor survives, is acquired, changes pricing, or is directed to stop serving a given jurisdiction - making vendor-independent authoritative data custody a structural, not contractual, property.
 
 **Kleppmann:** `P5, P7` · **Scope:** `foundational` · **Failure modes:** `vendor-acquisition, vendor-outage`
 
@@ -1088,9 +1088,9 @@ The requirement that the product keep working regardless of whether the vendor s
 
 **Verification:** Behavioral test simulates vendor service permanently unavailable; the application continues to function on local data and a documented procedure exists for replacing vendor-provided relay infrastructure without data migration.
 
-#### `ch04-choosing-your-architecture:DEC-08` — Degraded-vs-absent network distinction
+#### `ch04-choosing-your-architecture:DEC-08` - Degraded-vs-absent network distinction
 
-An operational distinction that treats an application loading stale data and queueing writes as degraded (still working) and an application showing a spinner and refusing input as broken — establishing absence-tolerance, not graceful-degradation, as the local-first acceptance criterion.
+An operational distinction that treats an application loading stale data and queueing writes as degraded (still working) and an application showing a spinner and refusing input as broken - establishing absence-tolerance, not graceful-degradation, as the local-first acceptance criterion.
 
 **Kleppmann:** `P1, P3` · **Scope:** `foundational` · **Failure modes:** `vendor-outage`
 
@@ -1103,9 +1103,9 @@ An operational distinction that treats an application loading stale data and que
 
 **Verification:** Behavioral test disables all network interfaces and exercises the application's primary write and read paths; no spinner appears on network absence and no input is refused.
 
-#### `ch04-choosing-your-architecture:DEC-09` — Four required local-first engineering skills
+#### `ch04-choosing-your-architecture:DEC-09` - Four required local-first engineering skills
 
-The four engineering skills that separate local-node development from standard web application development — CRDT debugging, distributed state management, multi-version schema migration, and key management.
+The four engineering skills that separate local-node development from standard web application development - CRDT debugging, distributed state management, multi-version schema migration, and key management.
 
 **Kleppmann:** `P4, P5, P6` · **Scope:** `foundational` · **Failure modes:** `key-compromise, key-loss, partition, schema-skew`
 
@@ -1118,7 +1118,7 @@ The four engineering skills that separate local-node development from standard w
 
 **Verification:** Capability matrix documents named owners for each of the four skills; key compromise recovery procedure exists in writing before the first production deployment date is set.
 
-#### `ch04-choosing-your-architecture:DEC-10` — Replaceable-relay invariant
+#### `ch04-choosing-your-architecture:DEC-10` - Replaceable-relay invariant
 
 The structural property that the managed relay is replaceable infrastructure rather than a data custodian, such that relay failure degrades sync and cross-organization collaboration but never affects local operation or data access.
 
@@ -1136,7 +1136,7 @@ The structural property that the managed relay is replaceable infrastructure rat
 
 ---
 
-## Part II — Council perspectives
+## Part II - Council perspectives
 
 ### Epic: The Enterprise Lens (ch05-enterprise-lens)
 
@@ -1144,7 +1144,7 @@ The structural property that the managed relay is replaceable infrastructure rat
 
 **Concept count:** 15
 
-#### `ch05-enterprise-lens:LENS-E-01` — MDM compliance attestation at capability negotiation
+#### `ch05-enterprise-lens:LENS-E-01` - MDM compliance attestation at capability negotiation
 
 Before a node joins the sync mesh and exchanges data, it must present a valid compliance attestation from the organization's Mobile Device Management platform during capability negotiation, with non-compliant nodes rejected at the gate rather than after data exchange.
 
@@ -1159,7 +1159,7 @@ Before a node joins the sync mesh and exchanges data, it must present a valid co
 
 **Verification:** Sync daemon protocol specification defines a pre-capability MDM compliance phase; behavioral test confirms a node with revoked or expired MDM attestation is rejected at handshake before receiving any record payload.
 
-#### `ch05-enterprise-lens:LENS-E-02` — Platform-agnostic MDM integration with regional coverage
+#### `ch05-enterprise-lens:LENS-E-02` - Platform-agnostic MDM integration with regional coverage
 
 The MDM compliance attestation protocol is platform-agnostic at the architecture level and ships with documented integration patterns for at least the dominant Western and non-Western enterprise MDM platforms used in target markets.
 
@@ -1174,7 +1174,7 @@ The MDM compliance attestation protocol is platform-agnostic at the architecture
 
 **Verification:** Architecture documentation enumerates the supported MDM platforms with per-platform integration guides; protocol specification shows the attestation interface accepts attestations from any conforming MDM source.
 
-#### `ch05-enterprise-lens:LENS-E-03` — Build-time SBOM generation in CycloneDX format
+#### `ch05-enterprise-lens:LENS-E-03` - Build-time SBOM generation in CycloneDX format
 
 A Software Bill of Materials is generated at build time from source by the CI pipeline in CycloneDX format, scanned against vulnerability databases before release, and published with each release artifact.
 
@@ -1189,7 +1189,7 @@ A Software Bill of Materials is generated at build time from source by the CI pi
 
 **Verification:** CI pipeline configuration shows Syft (or equivalent) producing CycloneDX SBOM at build, Grype (or equivalent) scanning before release; release artifact directory contains the SBOM file for the corresponding binary.
 
-#### `ch05-enterprise-lens:LENS-E-04` — Signed and notarized installer with trusted-publisher compatibility
+#### `ch05-enterprise-lens:LENS-E-04` - Signed and notarized installer with trusted-publisher compatibility
 
 Installers are code-signed and notarized using each platform's enterprise-grade signing path so that the software can be added to organizational trusted-publisher lists and deployed via MDM without disabling endpoint security policies.
 
@@ -1204,7 +1204,7 @@ Installers are code-signed and notarized using each platform's enterprise-grade 
 
 **Verification:** Release artifact passes platform notarization checks; deployment dry run via Intune or equivalent silently installs the software on a managed endpoint with default security policies enabled.
 
-#### `ch05-enterprise-lens:LENS-E-05` — CVE response service-level commitment
+#### `ch05-enterprise-lens:LENS-E-05` - CVE response service-level commitment
 
 The project commits to a public service-level agreement on vulnerability response, with critical CVEs addressed within fourteen days of disclosure and a public advisory posted within forty-eight hours of patch release.
 
@@ -1219,7 +1219,7 @@ The project commits to a public service-level agreement on vulnerability respons
 
 **Verification:** Project security policy publishes the CVE response SLA; historical advisories show patch-to-disclosure intervals within the committed window.
 
-#### `ch05-enterprise-lens:LENS-E-06` — Defined incident response runbook
+#### `ch05-enterprise-lens:LENS-E-06` - Defined incident response runbook
 
 A formal incident response runbook accompanies the architecture, specifying triggering events, artifact collection sequence, chain of custody requirements, escalation path, and jurisdiction-specific regulatory notification windows, distinct from and complementary to the CRDT audit trail.
 
@@ -1235,7 +1235,7 @@ A formal incident response runbook accompanies the architecture, specifying trig
 
 **Verification:** Companion runbook document exists alongside architecture spec; runbook contains each enumerated section; tabletop exercise executes the runbook end-to-end against a simulated incident.
 
-#### `ch05-enterprise-lens:LENS-E-07` — CRDT audit trail as forensic asset distinct from procedure
+#### `ch05-enterprise-lens:LENS-E-07` - CRDT audit trail as forensic asset distinct from procedure
 
 The tamper-evident append-only CRDT operation log is positioned and documented as a forensic asset that supports incident response, not as a substitute for a defined incident response procedure.
 
@@ -1250,7 +1250,7 @@ The tamper-evident append-only CRDT operation log is positioned and documented a
 
 **Verification:** Architecture documentation explicitly separates audit-trail capability from incident response procedure; runbook references audit-trail extraction as a defined collection step.
 
-#### `ch05-enterprise-lens:LENS-E-08` — Zero-downtime rolling update with health-gated rollback
+#### `ch05-enterprise-lens:LENS-E-08` - Zero-downtime rolling update with health-gated rollback
 
 Container updates apply via a rolling update that promotes a new image to one replica, runs a defined health-check sequence, and only rotates remaining replicas on success, with automatic rollback to the prior image on health-check failure.
 
@@ -1265,7 +1265,7 @@ Container updates apply via a rolling update that promotes a new image to one re
 
 **Verification:** Deployment manifests define the rolling-update strategy and health-check sequence; failure-injection test confirms automatic rollback when the health check fails on the updated replica.
 
-#### `ch05-enterprise-lens:LENS-E-09` — Enterprise network footprint and proxy compatibility
+#### `ch05-enterprise-lens:LENS-E-09` - Enterprise network footprint and proxy compatibility
 
 The node exposes no inbound ports on external interfaces, routes all relay traffic exclusively over port 443 with TLS 1.3, and respects system proxy configuration including PAC files, authenticating proxies, and TLS-inspecting corporate proxies via documented bypass-list format.
 
@@ -1281,7 +1281,7 @@ The node exposes no inbound ports on external interfaces, routes all relay traff
 
 **Verification:** Network audit on a managed endpoint confirms zero inbound listeners and port-443-only outbound; proxy compatibility test passes the daemon through a PAC-configured authenticating proxy and through a TLS-inspecting proxy with a documented bypass entry.
 
-#### `ch05-enterprise-lens:LENS-E-10` — Documented Podman substrate choice for Windows
+#### `ch05-enterprise-lens:LENS-E-10` - Documented Podman substrate choice for Windows
 
 For Windows deployments, the architecture documents the choice between WSL2 and Hyper-V as the Podman substrate with recommended defaults and known compatibility constraints with existing virtualization products.
 
@@ -1297,9 +1297,9 @@ For Windows deployments, the architecture documents the choice between WSL2 and 
 
 **Verification:** Windows deployment guide contains the substrate selection section with both options, recommended defaults, and the named compatibility caveats.
 
-#### `ch05-enterprise-lens:LENS-E-11` — Administrative tooling for capability revocation
+#### `ch05-enterprise-lens:LENS-E-11` - Administrative tooling for capability revocation
 
-An IT administrator interface — Admin Console, CLI, or REST endpoint — exists for triggering capability revocation, monitoring propagation across the sync mesh, and confirming completion when a user is deprovisioned.
+An IT administrator interface - Admin Console, CLI, or REST endpoint - exists for triggering capability revocation, monitoring propagation across the sync mesh, and confirming completion when a user is deprovisioned.
 
 **Kleppmann:** `P6, P7` · **Scope:** `inverted-stack-specific` · **Failure modes:** `key-compromise`
 
@@ -1313,9 +1313,9 @@ An IT administrator interface — Admin Console, CLI, or REST endpoint — exist
 
 **Verification:** Admin tooling specification documents the revocation workflow with screens or CLI invocations; integration test confirms revocation propagates and is acknowledged across a multi-peer mesh within one capability cycle.
 
-#### `ch05-enterprise-lens:LENS-E-12` — Four-phase reversible migration model
+#### `ch05-enterprise-lens:LENS-E-12` - Four-phase reversible migration model
 
-Organizations transition from hosted tools to the local node through a four-phase model — shadow mode, partial offline editing, new-project authority, full historical migration — where each phase is independently reversible and admits indefinite pause.
+Organizations transition from hosted tools to the local node through a four-phase model - shadow mode, partial offline editing, new-project authority, full historical migration - where each phase is independently reversible and admits indefinite pause.
 
 **Kleppmann:** `P5, P7` · **Scope:** `inverted-stack-specific` · **Failure modes:** `vendor-acquisition, vendor-outage`
 
@@ -1330,7 +1330,7 @@ Organizations transition from hosted tools to the local node through a four-phas
 
 **Verification:** Migration playbook documents each phase with entry, exit, and rollback procedures plus rough timing heuristics (e.g., four to eight weeks shadow-mode with sync error rate below 0.1 percent before phase two).
 
-#### `ch05-enterprise-lens:LENS-E-13` — Dual-license structure with CLA for enterprise customization
+#### `ch05-enterprise-lens:LENS-E-13` - Dual-license structure with CLA for enterprise customization
 
 The codebase ships under AGPLv3 with a parallel commercial license available for enterprise customers whose legal policy prohibits AGPLv3 in production, supported by a Contributor License Agreement that preserves the right to issue the commercial license.
 
@@ -1345,7 +1345,7 @@ The codebase ships under AGPLv3 with a parallel commercial license available for
 
 **Verification:** Repository contains LICENSE (AGPLv3), a documented commercial license path, and a CLA process; sales documentation references the commercial license option.
 
-#### `ch05-enterprise-lens:LENS-E-14` — Power-interruption durability as baseline property
+#### `ch05-enterprise-lens:LENS-E-14` - Power-interruption durability as baseline property
 
 Local writes commit to durable storage before acknowledgment so that abrupt power loss does not corrupt the local data store, and the sync daemon recovers cleanly from cold restart after unexpected shutdown.
 
@@ -1360,7 +1360,7 @@ Local writes commit to durable storage before acknowledgment so that abrupt powe
 
 **Verification:** Crash-injection test cuts power mid-write across many trials; on restart the data store opens cleanly with no corruption and the sync daemon resumes operation.
 
-#### `ch05-enterprise-lens:LENS-E-15` — Structural data residency by jurisdiction
+#### `ch05-enterprise-lens:LENS-E-15` - Structural data residency by jurisdiction
 
 Local-first data custody satisfies data-residency requirements across major regulatory regimes (GDPR/Schrems II, India DPDP, UAE DIFC DPL 2020, Russian import-substitution, and the full Appendix F matrix) as a structural property of the deployment rather than as a configuration option.
 
@@ -1382,7 +1382,7 @@ Local-first data custody satisfies data-residency requirements across major regu
 
 **Concept count:** 16
 
-#### `ch06-distributed-systems-lens:LENS-D-01` — Convergence is not correctness
+#### `ch06-distributed-systems-lens:LENS-D-01` - Convergence is not correctness
 
 CRDT convergence guarantees that all peers reach the same state but does not guarantee that the converged state satisfies application-level correctness or domain invariants.
 
@@ -1396,7 +1396,7 @@ CRDT convergence guarantees that all peers reach the same state but does not gua
 
 **Verification:** Specification document explicitly separates convergence (data-structure property) from correctness (application property) and identifies the validation boundary.
 
-#### `ch06-distributed-systems-lens:LENS-D-02` — CRDT applicability boundary by record class
+#### `ch06-distributed-systems-lens:LENS-D-02` - CRDT applicability boundary by record class
 
 CRDT merge semantics are appropriate for AP-class records where concurrent writes can be deterministically reconciled but are insufficient for CP-class records where concurrent writes produce double-bookings, oversold inventory, or duplicate sequential IDs.
 
@@ -1410,7 +1410,7 @@ CRDT merge semantics are appropriate for AP-class records where concurrent write
 
 **Verification:** Schema definitions tag each record type with its CAP class; classification is enforceable at code-review time and at runtime by the sync daemon.
 
-#### `ch06-distributed-systems-lens:LENS-D-03` — Monotonic CRDT growth as structural property
+#### `ch06-distributed-systems-lens:LENS-D-03` - Monotonic CRDT growth as structural property
 
 An operation-based CRDT must retain enough operation history to deterministically merge concurrent changes from peers that have not yet seen each other's operations, causing internal state to grow monotonically with edits regardless of visible content size.
 
@@ -1424,9 +1424,9 @@ An operation-based CRDT must retain enough operation history to deterministicall
 
 **Verification:** CRDT engine documentation states the retention guarantee in operation-history terms; storage growth observable in long-running test deployment matches the stated retention policy.
 
-#### `ch06-distributed-systems-lens:LENS-D-04` — Three-tier GC policy by data class
+#### `ch06-distributed-systems-lens:LENS-D-04` - Three-tier GC policy by data class
 
-Operation-history garbage collection is differentiated by data class — aggressive GC for ephemeral data, a 90-day retention window for business records, and no GC at all for compliance records.
+Operation-history garbage collection is differentiated by data class - aggressive GC for ephemeral data, a 90-day retention window for business records, and no GC at all for compliance records.
 
 **Kleppmann:** `P3, P5, P7` · **Scope:** `inverted-stack-specific` · **Failure modes:** `partition`
 
@@ -1440,7 +1440,7 @@ Operation-history garbage collection is differentiated by data class — aggress
 
 **Verification:** Schema definitions tag every record type with a GC tier; integration test confirms business-tier records are not compacted before the 90-day horizon and compliance-tier records are never compacted.
 
-#### `ch06-distributed-systems-lens:LENS-D-05` — Stale peer recovery via full-state snapshot transfer
+#### `ch06-distributed-systems-lens:LENS-D-05` - Stale peer recovery via full-state snapshot transfer
 
 When a reconnecting peer's vector clock predates the current GC horizon, the sync daemon detects the incompatibility at CAPABILITY_NEG, abandons incremental sync, and initiates a full-state snapshot transfer that becomes the peer's new gossip baseline.
 
@@ -1455,7 +1455,7 @@ When a reconnecting peer's vector clock predates the current GC horizon, the syn
 
 **Verification:** Sync daemon protocol specifies the vector-clock-vs-horizon check at CAPABILITY_NEG; integration test simulates a peer offline past the GC horizon and confirms snapshot transfer rather than silent failure.
 
-#### `ch06-distributed-systems-lens:LENS-D-06` — Stale peer recovery gap when no online peer holds required history
+#### `ch06-distributed-systems-lens:LENS-D-06` - Stale peer recovery gap when no online peer holds required history
 
 When a peer reconnects past the GC horizon and no currently online peer can serve a complete incremental stream from that peer's last vector clock, business-tier records may have an unrecoverable gap while compliance-tier records remain fully recoverable.
 
@@ -1469,7 +1469,7 @@ When a peer reconnects past the GC horizon and no currently online peer can serv
 
 **Verification:** Specification document includes a named edge-case section enumerating affected data classes; behavioral test confirms compliance-tier records survive the scenario while business-tier gaps are surfaced explicitly.
 
-#### `ch06-distributed-systems-lens:LENS-D-07` — Flease lease protocol for CP-class records
+#### `ch06-distributed-systems-lens:LENS-D-07` - Flease lease protocol for CP-class records
 
 Flease provides leader-free distributed mutual exclusion via message-passing quorum, used to serialize linearizable writes for CP-class records such as sequential IDs, global unique constraints, and financial transaction totals.
 
@@ -1483,7 +1483,7 @@ Flease provides leader-free distributed mutual exclusion via message-passing quo
 
 **Verification:** Architecture decision record names Flease as the chosen lease protocol; sync daemon implementation includes a lease-acquisition path gated on quorum acknowledgment for tagged CP-class operations.
 
-#### `ch06-distributed-systems-lens:LENS-D-08` — Two-node Flease quorum with managed relay as participant
+#### `ch06-distributed-systems-lens:LENS-D-08` - Two-node Flease quorum with managed relay as participant
 
 A managed relay serves as a Flease quorum participant for two-person teams, providing CP-class write guarantees without requiring a third physical node and resolving the threshold problem that affects small-team consensus.
 
@@ -1497,7 +1497,7 @@ A managed relay serves as a Flease quorum participant for two-person teams, prov
 
 **Verification:** Sync daemon protocol specification documents the relay-as-quorum-participant role; integration test demonstrates a two-node team performing CP-class writes through node + relay quorum and failing safely when the relay is partitioned.
 
-#### `ch06-distributed-systems-lens:LENS-D-09` — Flease split-write fence for unmergeable CP records
+#### `ch06-distributed-systems-lens:LENS-D-09` - Flease split-write fence for unmergeable CP records
 
 For CP-class records where two concurrent writes cannot be merged at all (sequential IDs, unique constraints), a new lease holder must receive acknowledgment from all reachable peers that the previous lease has expired and no in-flight write is pending before accepting the first new write.
 
@@ -1511,7 +1511,7 @@ For CP-class records where two concurrent writes cannot be merged at all (sequen
 
 **Verification:** Sync daemon protocol specification documents the lease-fence handshake; behavioral test confirms a new lease holder rejects writes until fence acknowledgments from all reachable peers are received.
 
-#### `ch06-distributed-systems-lens:LENS-D-10` — Post-merge invariant validation for AP-backed CP constraints
+#### `ch06-distributed-systems-lens:LENS-D-10` - Post-merge invariant validation for AP-backed CP constraints
 
 For records where a CP constraint is a domain invariant layered on top of an AP data structure, CRDT merge resolves concurrent writes into a deterministic state and the domain invariant is enforced as a post-merge validation step rather than via lease coordination.
 
@@ -1525,7 +1525,7 @@ For records where a CP constraint is a domain invariant layered on top of an AP 
 
 **Verification:** Schema definition identifies hybrid AP-with-domain-invariant record types; semantic-layer code includes post-merge validation hooks for these types; behavioral test confirms invariant violations after concurrent merges are surfaced rather than silently committed.
 
-#### `ch06-distributed-systems-lens:LENS-D-11` — Enumerate linearizable operations before development
+#### `ch06-distributed-systems-lens:LENS-D-11` - Enumerate linearizable operations before development
 
 Implementers must identify every operation in their domain model that requires CP-class linearizable semantics before committing to an implementation strategy, treating the architecture's named examples as illustrative rather than exhaustive.
 
@@ -1539,7 +1539,7 @@ Implementers must identify every operation in their domain model that requires C
 
 **Verification:** Project template includes a linearizable-operation inventory artifact; chapter checklists or playbooks reference the inventory step before any record-type implementation begins.
 
-#### `ch06-distributed-systems-lens:LENS-D-12` — CRDT store as durable outbound buffer
+#### `ch06-distributed-systems-lens:LENS-D-12` - CRDT store as durable outbound buffer
 
 The local CRDT store itself serves as the durable outbound operation buffer during partition, so operations are persisted across process restarts and re-read by the sync daemon on reconnection rather than queued in a separate in-memory buffer.
 
@@ -1553,7 +1553,7 @@ The local CRDT store itself serves as the durable outbound operation buffer duri
 
 **Verification:** Sync daemon implementation reads pending outbound operations from the CRDT store on startup; integration test confirms operations survive process restart during partition and are transmitted on reconnect.
 
-#### `ch06-distributed-systems-lens:LENS-D-13` — Schema-validation gate at CRDT store entry
+#### `ch06-distributed-systems-lens:LENS-D-13` - Schema-validation gate at CRDT store entry
 
 Before an operation is applied locally and queued for gossip, the sync daemon validates it against the current schema definition for the operation's record type, quarantining structurally valid but semantically incorrect operations rather than letting them propagate.
 
@@ -1567,7 +1567,7 @@ Before an operation is applied locally and queued for gossip, the sync daemon va
 
 **Verification:** Sync daemon code path shows schema validation between deserialization and CRDT store apply; behavioral test injects a structurally valid but schema-violating operation and confirms it is quarantined rather than applied or propagated.
 
-#### `ch06-distributed-systems-lens:LENS-D-14` — Break-glass recovery for corrupt operation sequences
+#### `ch06-distributed-systems-lens:LENS-D-14` - Break-glass recovery for corrupt operation sequences
 
 When a buggy client version produces structurally valid but semantically incorrect operations that have already replicated to peers, recovery requires documented tooling and human judgment rather than a clean rollback because CRDT convergence makes the corruption durable.
 
@@ -1581,9 +1581,9 @@ When a buggy client version produces structurally valid but semantically incorre
 
 **Verification:** Operations runbook includes a break-glass section for corrupt-sequence remediation; tooling for issuing compensating operations exists and is tested independently of any specific incident.
 
-#### `ch06-distributed-systems-lens:LENS-D-15` — Required test categories for sync protocol correctness
+#### `ch06-distributed-systems-lens:LENS-D-15` - Required test categories for sync protocol correctness
 
-Sync protocol verification requires a defined set of test categories — network partition simulation, clock skew injection, concurrent edit generation, GC boundary conditions, Byzantine operation injection, and long-partition reconnect scenarios.
+Sync protocol verification requires a defined set of test categories - network partition simulation, clock skew injection, concurrent edit generation, GC boundary conditions, Byzantine operation injection, and long-partition reconnect scenarios.
 
 **Kleppmann:** `P3, P4` · **Scope:** `foundational` · **Failure modes:** `clock-skew, partition, schema-skew`
 
@@ -1595,7 +1595,7 @@ Sync protocol verification requires a defined set of test categories — network
 
 **Verification:** Test directory includes labeled fixtures for partition, clock-skew, concurrent-edit, GC-boundary, Byzantine-injection, and long-partition-reconnect scenarios; CI configuration enforces presence of each.
 
-#### `ch06-distributed-systems-lens:LENS-D-16` — Reconnection storm bandwidth governance
+#### `ch06-distributed-systems-lens:LENS-D-16` - Reconnection storm bandwidth governance
 
 When many nodes reconnect simultaneously after a relay outage, a resource governor throttles per-tick bandwidth consumption so each gossip cycle processes a bounded number of exchanges rather than exhausting network or relay capacity.
 
@@ -1616,7 +1616,7 @@ When many nodes reconnect simultaneously after a relay outage, a resource govern
 
 **Concept count:** 17
 
-#### `ch07-security-lens:LENS-S-01` — Send-tier subscription filtering
+#### `ch07-security-lens:LENS-S-01` - Send-tier subscription filtering
 
 Subscription filtering is enforced at the sync daemon's send tier so that a node lacking the required role attestation never receives the operations, eliminating any reliance on the application or UI to discard data it should not have.
 
@@ -1630,7 +1630,7 @@ Subscription filtering is enforced at the sync daemon's send tier so that a node
 
 **Verification:** Black-box test in which a node without a role attestation observes zero matching operations on the wire and zero matching rows in local storage
 
-#### `ch07-security-lens:LENS-S-02` — Distributed attack surface acknowledgment
+#### `ch07-security-lens:LENS-S-02` - Distributed attack surface acknowledgment
 
 Distributing data to endpoints does not eliminate the honeypot problem; it relocates the honeypot to the weakest endpoint in a heterogeneous fleet whose security posture sets the effective bound for any data that endpoint holds.
 
@@ -1643,7 +1643,7 @@ Distributing data to endpoints does not eliminate the honeypot problem; it reloc
 
 **Verification:** Threat-model document enumerates endpoint compromise as in-scope and states that the weakest endpoint sets the data-at-risk bound for that endpoint's roles
 
-#### `ch07-security-lens:LENS-S-03` — DEK/KEK envelope encryption hierarchy
+#### `ch07-security-lens:LENS-S-03` - DEK/KEK envelope encryption hierarchy
 
 A four-level hierarchy in which the root organization key wraps role KEKs, role KEKs are wrapped per authorized node with each node's public key, role KEKs wrap per-record DEKs, and DEKs encrypt ciphertext using a symmetric cipher.
 
@@ -1658,7 +1658,7 @@ A four-level hierarchy in which the root organization key wraps role KEKs, role 
 
 **Verification:** Key hierarchy diagram and code path demonstrate that decrypting any document requires unwrapping in the documented order from node key to role KEK to DEK to plaintext
 
-#### `ch07-security-lens:LENS-S-04` — Key compromise response procedure
+#### `ch07-security-lens:LENS-S-04` - Key compromise response procedure
 
 A specified sequence triggered by detection of KEK compromise that generates a fresh KEK not derived from the compromised key, re-wraps every DEK owned by the affected role, discards old KEK copies, broadcasts revocation through the relay, and notifies affected users with the data-at-risk window.
 
@@ -1675,7 +1675,7 @@ A specified sequence triggered by detection of KEK compromise that generates a f
 
 **Verification:** Compromise drill executes the documented procedure end-to-end and produces revocation broadcast, re-wrapped DEKs, discarded prior key material, and a user-visible notification within a measurable interval
 
-#### `ch07-security-lens:LENS-S-05` — Historical data-at-risk window
+#### `ch07-security-lens:LENS-S-05` - Historical data-at-risk window
 
 A compromised KEK exposes every document that KEK ever protected from the moment of key creation to the moment of revocation, so the data-at-risk window is bounded by KEK age rather than by detection latency.
 
@@ -1689,7 +1689,7 @@ A compromised KEK exposes every document that KEK ever protected from the moment
 
 **Verification:** Incident drill produces a user notification containing a concrete data-at-risk window derived from KEK metadata
 
-#### `ch07-security-lens:LENS-S-06` — Offline node revocation reconnection
+#### `ch07-security-lens:LENS-S-06` - Offline node revocation reconnection
 
 When an offline node reconnects, the sync daemon presents its current attestation bundle to the relay, which checks the revocation log and rejects the handshake with a specific revocation error code if any key in the bundle has been revoked.
 
@@ -1705,7 +1705,7 @@ When an offline node reconnects, the sync daemon presents its current attestatio
 
 **Verification:** Offline-reconnect test against a node whose key has been revoked produces the documented error code, blocks sync, and surfaces the re-authentication prompt
 
-#### `ch07-security-lens:LENS-S-07` — In-memory key material protection
+#### `ch07-security-lens:LENS-S-07` - In-memory key material protection
 
 Key material in process memory is protected by locked memory pages that prevent OS swap-out and is zeroed on process exit, treated as implementation constraints on the security kernel rather than as recommendations.
 
@@ -1719,7 +1719,7 @@ Key material in process memory is protected by locked memory pages that prevent 
 
 **Verification:** Process inspection confirms that pages containing key material are mlock-equivalent and that exit handlers overwrite key buffers
 
-#### `ch07-security-lens:LENS-S-08` — Re-authentication interval
+#### `ch07-security-lens:LENS-S-08` - Re-authentication interval
 
 A configurable interval at which the application re-requests credentials from the OS keychain, narrowing the window in which an attacker with live-system access can extract decryption keys from running process memory.
 
@@ -1733,7 +1733,7 @@ A configurable interval at which the application re-requests credentials from th
 
 **Verification:** Configuration test confirms that after the interval expires the application requires fresh credentials before any further decryption operation
 
-#### `ch07-security-lens:LENS-S-09` — Supply chain signing custody and transparency
+#### `ch07-security-lens:LENS-S-09` - Supply chain signing custody and transparency
 
 Release artifact integrity rests on three layered controls: documented custody for the release signing key, reproducible builds that allow independent verification of binary against source, and a publicly auditable transparency log such as Sigstore that records every signing event.
 
@@ -1748,7 +1748,7 @@ Release artifact integrity rests on three layered controls: documented custody f
 
 **Verification:** Independent rebuild matches the published artifact byte-for-byte and the signature appears in the public transparency log
 
-#### `ch07-security-lens:LENS-S-10` — Ciphertext-only relay
+#### `ch07-security-lens:LENS-S-10` - Ciphertext-only relay
 
 The relay is treated as untrusted transport that handles only end-to-end encrypted payloads, so a relay operator who reads everything on the wire obtains operation identifiers and timestamps but no plaintext content.
 
@@ -1762,7 +1762,7 @@ The relay is treated as untrusted transport that handles only end-to-end encrypt
 
 **Verification:** Inspection of relay process memory and storage finds no key material capable of decrypting any routed payload
 
-#### `ch07-security-lens:LENS-S-11` — Relay traffic-analysis disclosure
+#### `ch07-security-lens:LENS-S-11` - Relay traffic-analysis disclosure
 
 A ciphertext-only relay still observes the communication graph, timing, and volume between nodes, and the architecture must disclose this metadata exposure rather than leave it for security teams to discover at deployment.
 
@@ -1775,7 +1775,7 @@ A ciphertext-only relay still observes the communication graph, timing, and volu
 
 **Verification:** Relay documentation lists each observable metadata channel and identifies the deployment topology that removes each
 
-#### `ch07-security-lens:LENS-S-12` — Compelled-access threat model
+#### `ch07-security-lens:LENS-S-12` - Compelled-access threat model
 
 A jurisdictional threat in which infrastructure operators are subject to mandatory government access requirements, addressed structurally because the relay holds only ciphertext and the keys never leave the originating device, so the operator cannot produce decryptable content under compulsion.
 
@@ -1790,7 +1790,7 @@ A jurisdictional threat in which infrastructure operators are subject to mandato
 
 **Verification:** Threat-model worksheet for compelled access lists the relay operator as unable to produce plaintext and references the supporting key custody and ciphertext-only properties
 
-#### `ch07-security-lens:LENS-S-13` — Crypto-shredding for right-to-erasure
+#### `ch07-security-lens:LENS-S-13` - Crypto-shredding for right-to-erasure
 
 A pattern that satisfies right-to-erasure obligations against an immutable CRDT log by destroying the DEK that protects the targeted operation's content, leaving the operation entry in the log structurally intact while rendering its ciphertext permanently unreadable.
 
@@ -1805,9 +1805,9 @@ A pattern that satisfies right-to-erasure obligations against an immutable CRDT 
 
 **Verification:** Erasure drill destroys the targeted DEK, confirms ciphertext is no longer decryptable on any replica, and produces a documentation artifact stating the metadata residue
 
-#### `ch07-security-lens:LENS-S-14` — Credential recovery paths
+#### `ch07-security-lens:LENS-S-14` - Credential recovery paths
 
-A required set of artifact-based recovery options — recovery-key file, administrator-held wrapped KEK escrow, MDM re-enrollment plus relay-assisted re-sync — from which every deployment must select and test at least one before production, with the no-artifact case explicitly disclosed as permanent loss.
+A required set of artifact-based recovery options - recovery-key file, administrator-held wrapped KEK escrow, MDM re-enrollment plus relay-assisted re-sync - from which every deployment must select and test at least one before production, with the no-artifact case explicitly disclosed as permanent loss.
 
 **Kleppmann:** `P5, P6, P7` · **Scope:** `foundational` · **Failure modes:** `key-loss`
 
@@ -1821,9 +1821,9 @@ A required set of artifact-based recovery options — recovery-key file, adminis
 
 **Verification:** Recovery drill executes each enabled path end-to-end and restores access; onboarding flow surfaces the no-artifact disclosure
 
-#### `ch07-security-lens:LENS-S-15` — Defense-in-depth four-layer model
+#### `ch07-security-lens:LENS-S-15` - Defense-in-depth four-layer model
 
-A non-optional composition of four enforcement layers — encryption at rest, field-level envelope encryption, stream-level send-tier data minimization, and circuit-breaker quarantine of offline writes — each built from independently audited primitives and specified before use.
+A non-optional composition of four enforcement layers - encryption at rest, field-level envelope encryption, stream-level send-tier data minimization, and circuit-breaker quarantine of offline writes - each built from independently audited primitives and specified before use.
 
 **Kleppmann:** `P6, P7` · **Scope:** `foundational` · **Failure modes:** `key-compromise`
 
@@ -1836,7 +1836,7 @@ A non-optional composition of four enforcement layers — encryption at rest, fi
 
 **Verification:** Architecture conformance test confirms presence and engagement of each of the four layers and that primitives in use are from the approved list
 
-#### `ch07-security-lens:LENS-S-16` — Quarantine of reconnected offline writes
+#### `ch07-security-lens:LENS-S-16` - Quarantine of reconnected offline writes
 
 A circuit-breaker mechanism in which writes accumulated by a long-offline node enter a quarantine queue on reconnection and are validated against current team policy before being promoted into the merged state, preventing a compromised offline node from injecting malicious writes at reconnection.
 
@@ -1850,7 +1850,7 @@ A circuit-breaker mechanism in which writes accumulated by a long-offline node e
 
 **Verification:** Reconnect test from a node with stale attestations confirms that queued writes remain in quarantine and are rejected if current policy disallows them
 
-#### `ch07-security-lens:LENS-S-17` — Root key custody via HSM or multi-party ceremony
+#### `ch07-security-lens:LENS-S-17` - Root key custody via HSM or multi-party ceremony
 
 The root organization key is custodied either inside a Hardware Security Module or under a documented multi-party key ceremony, with a domestic equivalent permitted in jurisdictions where Western HSM hardware is not approved.
 
@@ -1871,7 +1871,7 @@ The root organization key is custodied either inside a Hardware Security Module 
 
 **Concept count:** 15
 
-#### `ch08-product-economic-lens:LENS-P-01` — OSS public-good positioning as commercial strategy
+#### `ch08-product-economic-lens:LENS-P-01` - OSS public-good positioning as commercial strategy
 
 Because locally installed software cannot enforce a license server for proprietary features, the commercial model treats the open-source release as the strategic asset and competes on relay quality and support depth rather than feature gating.
 
@@ -1883,11 +1883,11 @@ Because locally installed software cannot enforce a license server for proprieta
 - Revenue mechanisms target managed-relay quality, support depth, and compliance amortization rather than feature access
 - Project positioning is documented as infrastructure rather than as a product with locked features
 
-**Verification:** Repository at first public release contains the full application source under an open-source license; pricing page describes the commercial offer in terms of relay, support, and compliance — not feature unlock.
+**Verification:** Repository at first public release contains the full application source under an open-source license; pricing page describes the commercial offer in terms of relay, support, and compliance - not feature unlock.
 
-#### `ch08-product-economic-lens:LENS-P-02` — First-customer archetype with named acquisition channel
+#### `ch08-product-economic-lens:LENS-P-02` - First-customer archetype with named acquisition channel
 
-A specified first customer is recorded as a tuple of job title, company size, problem, and acquisition channel — not as a demographic descriptor — so the customer development plan has an executable first step.
+A specified first customer is recorded as a tuple of job title, company size, problem, and acquisition channel - not as a demographic descriptor - so the customer development plan has an executable first step.
 
 **Scope:** `foundational`
 
@@ -1899,9 +1899,9 @@ A specified first customer is recorded as a tuple of job title, company size, pr
 
 **Verification:** Go-to-market document contains the four required fields (title, size, problem, channel) for the first customer archetype; reviewer can identify the next ten outreach targets without further interpretation.
 
-#### `ch08-product-economic-lens:LENS-P-03` — Named OSS-to-paid conversion trigger
+#### `ch08-product-economic-lens:LENS-P-03` - Named OSS-to-paid conversion trigger
 
-The commercial model names a specific user-observable event — not a need — that converts a free user into a paying customer, and the product is built so that event predictably occurs.
+The commercial model names a specific user-observable event - not a need - that converts a free user into a paying customer, and the product is built so that event predictably occurs.
 
 **Scope:** `foundational`
 
@@ -1913,9 +1913,9 @@ The commercial model names a specific user-observable event — not a need — t
 
 **Verification:** Product analytics define the conversion event as a measurable funnel step; the paid offer is presented in-product at the moment the trigger fires.
 
-#### `ch08-product-economic-lens:LENS-P-04` — Vertical-first market selection on documented downtime cost
+#### `ch08-product-economic-lens:LENS-P-04` - Vertical-first market selection on documented downtime cost
 
-The initial target vertical is selected on three specific properties — documented connectivity failures, customer-owned legally significant data, and a measurable downtime cost — rather than on founder affinity or addressable market size.
+The initial target vertical is selected on three specific properties - documented connectivity failures, customer-owned legally significant data, and a measurable downtime cost - rather than on founder affinity or addressable market size.
 
 **Kleppmann:** `P3, P5` · **Scope:** `inverted-stack-specific` · **Failure modes:** `vendor-outage`
 
@@ -1928,9 +1928,9 @@ The initial target vertical is selected on three specific properties — documen
 
 **Verification:** Go-to-market document records the three named selection properties for the chosen vertical; the construction-PM choice cites RFI tracking and punch lists as the candidate workflows.
 
-#### `ch08-product-economic-lens:LENS-P-05` — Five-step customer development path
+#### `ch08-product-economic-lens:LENS-P-05` - Five-step customer development path
 
-A repeatable customer development sequence — identify ten target operators through industry channels, conduct discovery interviews on a single cost-of-failure question, locate the workflow with measurable repeated cost, build directly to that scenario, then measure ninety-day relay activation on one live team.
+A repeatable customer development sequence - identify ten target operators through industry channels, conduct discovery interviews on a single cost-of-failure question, locate the workflow with measurable repeated cost, build directly to that scenario, then measure ninety-day relay activation on one live team.
 
 **Scope:** `foundational`
 
@@ -1944,7 +1944,7 @@ A repeatable customer development sequence — identify ten target operators thr
 
 **Verification:** Customer development plan in repository or product wiki contains all five named steps with owners and dates; the ninety-day activation review is on the calendar before step 4 begins.
 
-#### `ch08-product-economic-lens:LENS-P-06` — Relay unit economics at three scale tiers
+#### `ch08-product-economic-lens:LENS-P-06` - Relay unit economics at three scale tiers
 
 The commercial model is validated against a worked unit-economics model at 100, 1,000, and 10,000 paying teams, with per-team infrastructure cost held under two dollars per month and per-team pricing in the fifteen-to-twenty-five-dollar range, yielding gross margin above ninety percent at the 1,000-team tier.
 
@@ -1959,7 +1959,7 @@ The commercial model is validated against a worked unit-economics model at 100, 
 
 **Verification:** Financial model spreadsheet contains rows for each tier with revenue, infrastructure, and margin columns; relay capacity test demonstrates approximately 500 concurrent team connections on a single commodity instance.
 
-#### `ch08-product-economic-lens:LENS-P-07` — Tier-by-tier staffing model
+#### `ch08-product-economic-lens:LENS-P-07` - Tier-by-tier staffing model
 
 A staffing plan is recorded at each of the 100, 1,000, and 10,000-team tiers showing which roles each tier's revenue can fund, with external capital named explicitly as the bridge for any tier where revenue cannot fund the team required to reach the next tier.
 
@@ -1973,7 +1973,7 @@ A staffing plan is recorded at each of the 100, 1,000, and 10,000-team tiers sho
 
 **Verification:** Operating plan contains a staffing table by tier; investor or board review confirms the bridge financing is named for any non-self-funding tier.
 
-#### `ch08-product-economic-lens:LENS-P-08` — Dual-license structure established at repository founding
+#### `ch08-product-economic-lens:LENS-P-08` - Dual-license structure established at repository founding
 
 The codebase ships under AGPLv3 by default with a parallel commercial license available for organizations that cannot accept the AGPL network use clause, and the dual-license structure plus contributor license agreement is in place before the public repository opens to external contribution.
 
@@ -1989,7 +1989,7 @@ The codebase ships under AGPLv3 by default with a parallel commercial license av
 
 **Verification:** Repository at first public release contains LICENSE (AGPLv3), a documented commercial license path, and a CLA enforcement step in CI; release notes show no retroactive CLA collection in git history.
 
-#### `ch08-product-economic-lens:LENS-P-09` — Project-entity copyright assignment via CLA
+#### `ch08-product-economic-lens:LENS-P-09` - Project-entity copyright assignment via CLA
 
 The contributor license agreement assigns copyright in contributed code to the project entity, preserving the entity's authority to offer the commercial license exception over the entire codebase including community contributions.
 
@@ -2003,9 +2003,9 @@ The contributor license agreement assigns copyright in contributed code to the p
 
 **Verification:** CLA text in repository assigns inbound rights to a named project entity; CI configuration enforces a CLA-check status before any merge.
 
-#### `ch08-product-economic-lens:LENS-P-10` — Relay defensibility through three named moats
+#### `ch08-product-economic-lens:LENS-P-10` - Relay defensibility through three named moats
 
-Because the relay protocol is published and the relay binary is open-source, the managed-relay business is defended by three explicit moats — product-integrated onboarding, full-stack support depth, and amortized regulatory and compliance certification — that operate at non-infrastructure margins where commodity providers cannot compete.
+Because the relay protocol is published and the relay binary is open-source, the managed-relay business is defended by three explicit moats - product-integrated onboarding, full-stack support depth, and amortized regulatory and compliance certification - that operate at non-infrastructure margins where commodity providers cannot compete.
 
 **Kleppmann:** `P5, P6, P7` · **Scope:** `inverted-stack-specific` · **Failure modes:** `vendor-acquisition, vendor-outage`
 
@@ -2018,7 +2018,7 @@ Because the relay protocol is published and the relay binary is open-source, the
 
 **Verification:** Onboarding test confirms a relay is configured in seconds without exposing infrastructure UI; support runbook covers cross-layer escalation paths; compliance register lists the named certifications with renewal dates; self-host migration path is documented.
 
-#### `ch08-product-economic-lens:LENS-P-11` — Self-serve and enterprise tier separation
+#### `ch08-product-economic-lens:LENS-P-11` - Self-serve and enterprise tier separation
 
 The pricing structure separates a self-serve tier priced at the per-team SaaS rate from an enterprise tier with negotiated pricing, contractual terms, and security-review cadence, with a documented headcount or revenue threshold marking the boundary.
 
@@ -2033,9 +2033,9 @@ The pricing structure separates a self-serve tier priced at the per-team SaaS ra
 
 **Verification:** Pricing documentation lists both tiers with the boundary criterion; an enterprise master services agreement template exists; self-serve flow requires no sales touch through purchase.
 
-#### `ch08-product-economic-lens:LENS-P-12` — Documented project governance model
+#### `ch08-product-economic-lens:LENS-P-12` - Documented project governance model
 
-A governance model — BDFL, contributor council, or lightweight stewardship — is documented publicly before the first external pull request so the first significant disagreement has a defined resolution path rather than producing a community crisis.
+A governance model - BDFL, contributor council, or lightweight stewardship - is documented publicly before the first external pull request so the first significant disagreement has a defined resolution path rather than producing a community crisis.
 
 **Kleppmann:** `P5` · **Scope:** `foundational`
 
@@ -2048,9 +2048,9 @@ A governance model — BDFL, contributor council, or lightweight stewardship —
 
 **Verification:** GOVERNANCE document is present in repository at first public commit; document names PR-approval authority, protocol-change authority, and dispute-resolution path.
 
-#### `ch08-product-economic-lens:LENS-P-13` — Region-specific go-to-market channel matrix
+#### `ch08-product-economic-lens:LENS-P-13` - Region-specific go-to-market channel matrix
 
-The commercial plan names a distinct acquisition channel per major region — product-led for US and European small teams, relationship-led with system integrators for GCC and India BFSI, agritech and fintech network distribution for Sub-Saharan Africa and Latin America, and import-substitution channels for CIS — rather than assuming a single global motion.
+The commercial plan names a distinct acquisition channel per major region - product-led for US and European small teams, relationship-led with system integrators for GCC and India BFSI, agritech and fintech network distribution for Sub-Saharan Africa and Latin America, and import-substitution channels for CIS - rather than assuming a single global motion.
 
 **Scope:** `inverted-stack-specific` · **Failure modes:** `data-residency-objection`
 
@@ -2063,9 +2063,9 @@ The commercial plan names a distinct acquisition channel per major region — pr
 
 **Verification:** Regional go-to-market document contains per-region channel and partner entries for the named regions; procurement-enablement assets are tracked per region.
 
-#### `ch08-product-economic-lens:LENS-P-14` — Vendor-continuity risk as commercial purchasing argument
+#### `ch08-product-economic-lens:LENS-P-14` - Vendor-continuity risk as commercial purchasing argument
 
-The architecture's structural ability to keep operating after vendor commercial relationship is severed — empirically anchored by the 2022 Western SaaS withdrawal from Russia and CIS markets — is positioned in procurement materials as a structural commercial claim that cloud-dependent competitors cannot make without re-architecture.
+The architecture's structural ability to keep operating after vendor commercial relationship is severed - empirically anchored by the 2022 Western SaaS withdrawal from Russia and CIS markets - is positioned in procurement materials as a structural commercial claim that cloud-dependent competitors cannot make without re-architecture.
 
 **Kleppmann:** `P3, P5, P7` · **Scope:** `foundational` · **Failure modes:** `data-residency-objection, vendor-acquisition, vendor-outage`
 
@@ -2078,7 +2078,7 @@ The architecture's structural ability to keep operating after vendor commercial 
 
 **Verification:** Sales collateral contains the vendor-continuity claim with the 2022 anchor citation; tabletop exercise demonstrates continued local operation after simulated vendor severance.
 
-#### `ch08-product-economic-lens:LENS-P-15` — Business-model precedence over repository opening
+#### `ch08-product-economic-lens:LENS-P-15` - Business-model precedence over repository opening
 
 Because some commercial-model elements (CLA, dual-license, governance) are expensive or impossible to introduce after a community forms, the business model is specified before the repository goes public and repository-opening day is treated as a commercial event rather than only an engineering one.
 
@@ -2099,9 +2099,9 @@ Because some commercial-model elements (CLA, dual-license, governance) are expen
 
 **Concept count:** 16
 
-#### `ch09-local-first-practitioner-lens:LENS-LF-01` — Plain-file application-independent export path
+#### `ch09-local-first-practitioner-lens:LENS-LF-01` - Plain-file application-independent export path
 
-A user-owned local-first application must provide a single command that produces user data in durable application-independent formats — JSON for structured records, CSV for tabular data, Markdown for long-form documents — readable by any other competent software without vendor cooperation, active subscription, or network connectivity.
+A user-owned local-first application must provide a single command that produces user data in durable application-independent formats - JSON for structured records, CSV for tabular data, Markdown for long-form documents - readable by any other competent software without vendor cooperation, active subscription, or network connectivity.
 
 **Kleppmann:** `P5, P7` · **Scope:** `foundational` · **Failure modes:** `vendor-acquisition, vendor-outage`
 
@@ -2116,7 +2116,7 @@ A user-owned local-first application must provide a single command that produces
 
 > Distinguished from rclone-style backup, which preserves only the internal database format and therefore delivers custody rather than ownership.
 
-#### `ch09-local-first-practitioner-lens:LENS-LF-02` — Non-technical disaster recovery walkthrough
+#### `ch09-local-first-practitioner-lens:LENS-LF-02` - Non-technical disaster recovery walkthrough
 
 Recovery from total device loss is a documented step-by-step path that a non-technical user can complete unaided in under thirty minutes, ending with a working node that resumes from BYOC backup without exposing any technical surface such as bucket URLs or rclone paths.
 
@@ -2124,14 +2124,14 @@ Recovery from total device loss is a documented step-by-step path that a non-tec
 
 **Must implement:**
 
-- Recovery flow is specified as a sequenced user-facing walkthrough — buy device, install application, enter recovery code or scan team-member QR, confirm BYOC target, restore runs in background
+- Recovery flow is specified as a sequenced user-facing walkthrough - buy device, install application, enter recovery code or scan team-member QR, confirm BYOC target, restore runs in background
 - Recovery substitutes a recovery code or peer-attestation QR for the lost device's original attestation bundle
 - Eager-sync buckets populate first so the user resumes role-relevant work immediately while remaining records hydrate in the background
 - No step in the recovery flow requires the user to type a bucket URL, an rclone destination, or any other technical identifier
 
 **Verification:** A non-technical tester completes end-to-end restore from a destroyed device to a working node in under thirty minutes without consulting documentation beyond in-application prompts.
 
-#### `ch09-local-first-practitioner-lens:LENS-LF-03` — Symmetric NAT plus relay outage as documented failure mode
+#### `ch09-local-first-practitioner-lens:LENS-LF-03` - Symmetric NAT plus relay outage as documented failure mode
 
 When both peers sit behind carrier-grade NAT and the managed relay is unavailable, direct peer-to-peer communication is impossible and the architecture documents this as a named local-only failure mode with a self-hosted-relay fallback rather than concealing it.
 
@@ -2145,9 +2145,9 @@ When both peers sit behind carrier-grade NAT and the managed relay is unavailabl
 
 **Verification:** Architecture documentation contains a section naming the symmetric NAT plus relay outage failure mode and the self-hosted-relay remediation; integration test exercises the local-only mode and confirms reads/writes succeed against local storage.
 
-#### `ch09-local-first-practitioner-lens:LENS-LF-04` — Engine-agnostic CRDT abstraction for ecosystem reversibility
+#### `ch09-local-first-practitioner-lens:LENS-LF-04` - Engine-agnostic CRDT abstraction for ecosystem reversibility
 
-The application layer interacts with the CRDT engine through a stable abstraction such as ICrdtEngine that prevents lock-in to any specific CRDT ecosystem — Yjs, Automerge, or Loro — so the engine can be replaced without rewriting the application as the field continues to evolve.
+The application layer interacts with the CRDT engine through a stable abstraction such as ICrdtEngine that prevents lock-in to any specific CRDT ecosystem - Yjs, Automerge, or Loro - so the engine can be replaced without rewriting the application as the field continues to evolve.
 
 **Kleppmann:** `P5, P7` · **Scope:** `foundational` · **Failure modes:** `vendor-acquisition`
 
@@ -2159,7 +2159,7 @@ The application layer interacts with the CRDT engine through a stable abstractio
 
 **Verification:** Source tree contains an ICrdtEngine-equivalent interface; a second engine adapter (test stub or alternate implementation) exists and the application test suite passes against both.
 
-#### `ch09-local-first-practitioner-lens:LENS-LF-05` — Peer-attestation QR onboarding bundle
+#### `ch09-local-first-practitioner-lens:LENS-LF-05` - Peer-attestation QR onboarding bundle
 
 A new device joins an existing workspace by scanning a QR-encoded attestation bundle from an existing peer that transfers credentials, workspace identity, and gossip-bootstrap parameters in a single out-of-band step, eliminating the credentials-require-peer chicken-and-egg failure mode of naive multi-device onboarding.
 
@@ -2173,7 +2173,7 @@ A new device joins an existing workspace by scanning a QR-encoded attestation bu
 
 **Verification:** Pair a new device to a workspace by scanning a peer-generated QR; confirm the new device authenticates and begins receiving CRDT updates without contacting a centralized credential service.
 
-#### `ch09-local-first-practitioner-lens:LENS-LF-06` — Container cold-start hidden behind health-gated UI
+#### `ch09-local-first-practitioner-lens:LENS-LF-06` - Container cold-start hidden behind health-gated UI
 
 Local-first desktop applications shipped as containerized stacks must hide cold-start latency behind a persistent background service plus a health-check gate that holds the UI until the daemon is ready, eliminating the launch-pause that signals to users that the software is waiting on something remote.
 
@@ -2187,9 +2187,9 @@ Local-first desktop applications shipped as containerized stacks must hide cold-
 
 **Verification:** Cold-launch the application from a fresh boot and confirm the UI either appears with the daemon ready or presents a deterministic loading state until readiness, with no point at which the user can interact with stale or partial data.
 
-#### `ch09-local-first-practitioner-lens:LENS-LF-07` — Three-state backup status with dismissible at-risk banner
+#### `ch09-local-first-practitioner-lens:LENS-LF-07` - Three-state backup status with dismissible at-risk banner
 
-Backup health surfaces to the user through three escalating states — Protected (subtle), Attention (amber badge), At Risk (persistent non-blocking banner dismissible only with explicit acknowledgment) — so users do not think about working backups but cannot accidentally ignore failing ones.
+Backup health surfaces to the user through three escalating states - Protected (subtle), Attention (amber badge), At Risk (persistent non-blocking banner dismissible only with explicit acknowledgment) - so users do not think about working backups but cannot accidentally ignore failing ones.
 
 **Kleppmann:** `P5, P7` · **Scope:** `foundational`
 
@@ -2201,9 +2201,9 @@ Backup health surfaces to the user through three escalating states — Protected
 
 **Verification:** Force each of the three backup states in a test build and confirm the visual treatment matches specification; confirm the At Risk dismissal records an acknowledgment event in the local log.
 
-#### `ch09-local-first-practitioner-lens:LENS-LF-08` — Recovery UX parity with backup status design
+#### `ch09-local-first-practitioner-lens:LENS-LF-08` - Recovery UX parity with backup status design
 
-The restore experience receives the same non-technical design attention as backup status — a guided reconnection to the BYOC target, a restore-progress indicator that mirrors the three-state backup model in restore context, and zero exposure of bucket URLs or rclone paths at the moment the user is most stressed about lost work.
+The restore experience receives the same non-technical design attention as backup status - a guided reconnection to the BYOC target, a restore-progress indicator that mirrors the three-state backup model in restore context, and zero exposure of bucket URLs or rclone paths at the moment the user is most stressed about lost work.
 
 **Kleppmann:** `P5, P7` · **Scope:** `foundational` · **Failure modes:** `key-loss`
 
@@ -2215,23 +2215,23 @@ The restore experience receives the same non-technical design attention as backu
 
 **Verification:** A non-technical tester completes restore using only in-application prompts; UI inspection confirms no bucket URL or rclone path appears anywhere in the restore flow.
 
-#### `ch09-local-first-practitioner-lens:LENS-LF-09` — Zero-state first-run experience as product specification
+#### `ch09-local-first-practitioner-lens:LENS-LF-09` - Zero-state first-run experience as product specification
 
-The first thirty seconds after install for a brand-new solo user with no prior data and no existing peers is specified as a product requirement that walks the user from blank state to first project, first backup configuration, and first invite — closing the most common 30-day abandonment path for local-first applications.
+The first thirty seconds after install for a brand-new solo user with no prior data and no existing peers is specified as a product requirement that walks the user from blank state to first project, first backup configuration, and first invite - closing the most common 30-day abandonment path for local-first applications.
 
 **Kleppmann:** `P1, P2, P4` · **Scope:** `foundational`
 
 **Must implement:**
 
-- The application specifies the zero-state screen explicitly — what the user sees, the first action surfaced, and the path to first project
+- The application specifies the zero-state screen explicitly - what the user sees, the first action surfaced, and the path to first project
 - The first-run flow guides the user to configure a backup target before significant data is created
 - The first-run flow surfaces the invite path so the workspace is not silently single-user by default
 
 **Verification:** Install the application on a fresh device with no prior workspace; confirm the user reaches a first project, a configured backup target, and an invite surface within the first session without consulting external documentation.
 
-#### `ch09-local-first-practitioner-lens:LENS-LF-10` — Conflict-inbox grouping with auto-resolve and resolve-all-similar
+#### `ch09-local-first-practitioner-lens:LENS-LF-10` - Conflict-inbox grouping with auto-resolve and resolve-all-similar
 
-When two offline nodes reconnect, surfaced conflicts are grouped by record type and cause, auto-resolved where predefined rules clearly apply, and offer a resolve-all-similar action for the remainder — converting the undifferentiated conflict list that breaks most collaborative local-first applications into a manageable inbox.
+When two offline nodes reconnect, surfaced conflicts are grouped by record type and cause, auto-resolved where predefined rules clearly apply, and offer a resolve-all-similar action for the remainder - converting the undifferentiated conflict list that breaks most collaborative local-first applications into a manageable inbox.
 
 **Kleppmann:** `P3, P4` · **Scope:** `foundational` · **Failure modes:** `partition`
 
@@ -2243,7 +2243,7 @@ When two offline nodes reconnect, surfaced conflicts are grouped by record type 
 
 **Verification:** Generate a synthetic conflict set covering at least three record types and two cause classes after a partition heal; confirm the UI groups by type and cause, auto-resolves rule-matching conflicts, and exposes resolve-all-similar.
 
-#### `ch09-local-first-practitioner-lens:LENS-LF-11` — Three-tier sync status indicator with degradation escalation
+#### `ch09-local-first-practitioner-lens:LENS-LF-11` - Three-tier sync status indicator with degradation escalation
 
 Sync state surfaces to the user through three persistent but unobtrusive status-bar indicators that escalate from silent to informative to persistent-banner as connectivity and sync health degrade, giving the user accurate situational awareness without alarm fatigue.
 
@@ -2257,9 +2257,9 @@ Sync state surfaces to the user through three persistent but unobtrusive status-
 
 **Verification:** Simulate healthy, degraded, and failed sync conditions in a test build and confirm the indicator transitions through the three levels at the documented thresholds.
 
-#### `ch09-local-first-practitioner-lens:LENS-LF-12` — Default-deny telemetry with named privacy model
+#### `ch09-local-first-practitioner-lens:LENS-LF-12` - Default-deny telemetry with named privacy model
 
-Product analytics in a local-first architecture must be specified before the first analytics request arrives — opt-in telemetry disabled by default, aggregate-through-relay privacy-preserving statistics as the only permitted centralized collection — and the chosen model is documented in an ADR mapped to GDPR Article 25 privacy-by-design so the line stays durable under future product pressure.
+Product analytics in a local-first architecture must be specified before the first analytics request arrives - opt-in telemetry disabled by default, aggregate-through-relay privacy-preserving statistics as the only permitted centralized collection - and the chosen model is documented in an ADR mapped to GDPR Article 25 privacy-by-design so the line stays durable under future product pressure.
 
 **Kleppmann:** `P6, P7` · **Scope:** `foundational`
 
@@ -2271,7 +2271,7 @@ Product analytics in a local-first architecture must be specified before the fir
 
 **Verification:** Confirm a fresh install reports no telemetry; confirm an ADR exists naming the telemetry model with the GDPR Article 25 mapping; confirm centralized collection paths in the codebase emit only aggregate metadata.
 
-#### `ch09-local-first-practitioner-lens:LENS-LF-13` — Implementation drift prohibition on server-side feature gating
+#### `ch09-local-first-practitioner-lens:LENS-LF-13` - Implementation drift prohibition on server-side feature gating
 
 A local-first architecture explicitly prohibits server-side feature flag checks, server-side A/B tests, and server-coordinated business logic that would re-introduce the network as a runtime dependency, naming this as the primary drift path that erodes local-first commitments one reasonable-sounding decision at a time.
 
@@ -2285,9 +2285,9 @@ A local-first architecture explicitly prohibits server-side feature flag checks,
 
 **Verification:** Disconnect the network, launch the application, and confirm all features behave identically to a connected launch; code review checklist includes a server-side-feature-gate prohibition.
 
-#### `ch09-local-first-practitioner-lens:LENS-LF-14` — Intermittent connectivity as architectural baseline
+#### `ch09-local-first-practitioner-lens:LENS-LF-14` - Intermittent connectivity as architectural baseline
 
-The architecture treats intermittent connectivity as the operational baseline for hundreds of millions of enterprise workers across Sub-Saharan Africa, South and Southeast Asia, and rural Latin America — not as a carrier-grade NAT edge case — so all sync, conflict, and recovery flows are designed for sessions that span many disconnected intervals.
+The architecture treats intermittent connectivity as the operational baseline for hundreds of millions of enterprise workers across Sub-Saharan Africa, South and Southeast Asia, and rural Latin America - not as a carrier-grade NAT edge case - so all sync, conflict, and recovery flows are designed for sessions that span many disconnected intervals.
 
 **Kleppmann:** `P3, P4, P7` · **Scope:** `foundational` · **Failure modes:** `partition, peer-discovery-failure`
 
@@ -2299,9 +2299,9 @@ The architecture treats intermittent connectivity as the operational baseline fo
 
 **Verification:** Run a multi-day partition simulation across the test fleet; confirm reconnect catch-up completes without manual intervention and the conflict inbox remains within the documented usability envelope.
 
-#### `ch09-local-first-practitioner-lens:LENS-LF-15` — Sanctions-grade availability as design anchor
+#### `ch09-local-first-practitioner-lens:LENS-LF-15` - Sanctions-grade availability as design anchor
 
-The architecture is anchored against the empirical case of the 2022 sanctions-driven SaaS suspensions across Russia and CIS markets — hundreds of thousands of organizations losing vendor access on days of notice — establishing that surviving vendor suspension is not a theoretical improvement but a property the architecture has already had to provide.
+The architecture is anchored against the empirical case of the 2022 sanctions-driven SaaS suspensions across Russia and CIS markets - hundreds of thousands of organizations losing vendor access on days of notice - establishing that surviving vendor suspension is not a theoretical improvement but a property the architecture has already had to provide.
 
 **Kleppmann:** `P3, P5, P7` · **Scope:** `foundational` · **Failure modes:** `vendor-acquisition, vendor-outage`
 
@@ -2313,9 +2313,9 @@ The architecture is anchored against the empirical case of the 2022 sanctions-dr
 
 **Verification:** Block all vendor-controlled domains at the network layer and confirm the application performs all core operations identically; confirm a self-hosted relay deployment guide exists in the public documentation.
 
-#### `ch09-local-first-practitioner-lens:LENS-LF-16` — Shared-device role-scoped recovery
+#### `ch09-local-first-practitioner-lens:LENS-LF-16` - Shared-device role-scoped recovery
 
-Recovery must support shared-device deployments — a single tablet rotated across a team of field workers — by targeting the role and the workspace rather than the device and its sole user, with BYOC backup configured against role-scoped workspace targets so any team member can restore from any device.
+Recovery must support shared-device deployments - a single tablet rotated across a team of field workers - by targeting the role and the workspace rather than the device and its sole user, with BYOC backup configured against role-scoped workspace targets so any team member can restore from any device.
 
 **Kleppmann:** `P2, P4, P7` · **Scope:** `foundational` · **Failure modes:** `key-loss`
 
@@ -2334,7 +2334,7 @@ Recovery must support shared-device deployments — a single tablet rotated acro
 
 **Concept count:** 17
 
-#### `ch10-synthesis:LENS-01` — Block-vs-condition verdict semantics
+#### `ch10-synthesis:LENS-01` - Block-vs-condition verdict semantics
 
 Council review distinguishes BLOCK verdicts (correctness or commercial gaps that prevent proceeding regardless of average score) from CONDITION verdicts (specific changes required before sign-off but compatible with proceeding).
 
@@ -2348,7 +2348,7 @@ Council review distinguishes BLOCK verdicts (correctness or commercial gaps that
 
 **Verification:** Review-cycle artifact lists per-reviewer verdicts and conditions; any BLOCK present prevents the artifact from advancing to specification stage.
 
-#### `ch10-synthesis:LENS-02` — Send-tier subscription filtering as data minimization invariant
+#### `ch10-synthesis:LENS-02` - Send-tier subscription filtering as data minimization invariant
 
 Subscription filtering enforces role-scoped data minimization at the sending node before transmission, not at the receiver or in the application layer.
 
@@ -2362,7 +2362,7 @@ Subscription filtering enforces role-scoped data minimization at the sending nod
 
 **Verification:** Sync daemon trace shows that data outside a peer's subscription scope is never serialized for that peer; integration test asserts a peer with a restricted role never receives out-of-scope ciphertext on the wire.
 
-#### `ch10-synthesis:LENS-03` — MDM compliance gate at capability negotiation
+#### `ch10-synthesis:LENS-03` - MDM compliance gate at capability negotiation
 
 A node must pass an MDM compliance check during the sync daemon handshake before any data exchange or capability negotiation completes.
 
@@ -2376,9 +2376,9 @@ A node must pass an MDM compliance check during the sync daemon handshake before
 
 **Verification:** Sync daemon protocol specification defines a pre-capability compliance phase; behavioral test confirms a non-compliant node is rejected at handshake before any data frame is transmitted.
 
-#### `ch10-synthesis:LENS-04` — Three-tier CRDT applicability model
+#### `ch10-synthesis:LENS-04` - Three-tier CRDT applicability model
 
-Data is partitioned into three tiers — AP CRDT-merged content, CP single-writer operations under lease coordination, and append-only ledger entries outside the CRDT — based on whether automatic merge is semantically valid.
+Data is partitioned into three tiers - AP CRDT-merged content, CP single-writer operations under lease coordination, and append-only ledger entries outside the CRDT - based on whether automatic merge is semantically valid.
 
 **Kleppmann:** `P3, P4` · **Scope:** `foundational` · **Failure modes:** `partition`
 
@@ -2390,7 +2390,7 @@ Data is partitioned into three tiers — AP CRDT-merged content, CP single-write
 
 **Verification:** Architecture documents the tier classification per data type; tier-violating writes (e.g., concurrent CRDT merge of a CP-tier counter) are rejected by the data layer.
 
-#### `ch10-synthesis:LENS-05` — DEK/KEK envelope encryption with role-scoped rotation
+#### `ch10-synthesis:LENS-05` - DEK/KEK envelope encryption with role-scoped rotation
 
 Each document holds a Data Encryption Key wrapped by role-scoped Key Encryption Keys, organized as a four-level hierarchy (root org key to role KEKs to per-node wrapped keys to per-record DEKs) such that role revocation rotates the affected KEK and re-wraps in-scope DEKs.
 
@@ -2406,7 +2406,7 @@ Each document holds a Data Encryption Key wrapped by role-scoped Key Encryption 
 
 **Verification:** Security architecture chapter specifies the four-level hierarchy; revocation test confirms that after rotation the old KEK no longer decrypts in-scope documents and never decrypted out-of-scope documents.
 
-#### `ch10-synthesis:LENS-06` — Dual-license structure established at founding
+#### `ch10-synthesis:LENS-06` - Dual-license structure established at founding
 
 The codebase ships under AGPLv3 with a parallel commercial license available for organizations that cannot accept the AGPLv3 network use clause, and the dual-license structure plus contributor license agreement is in place before the public repository opens.
 
@@ -2421,7 +2421,7 @@ The codebase ships under AGPLv3 with a parallel commercial license available for
 
 **Verification:** Repository at first public release contains LICENSE (AGPLv3), a documented commercial license path, and a CLA process; git history shows the license files present at the initial commit.
 
-#### `ch10-synthesis:LENS-07` — Non-technical disaster recovery path
+#### `ch10-synthesis:LENS-07` - Non-technical disaster recovery path
 
 A non-technical user can recover their complete data after total device failure without contacting support and without developer-only tooling.
 
@@ -2435,7 +2435,7 @@ A non-technical user can recover their complete data after total device failure 
 
 **Verification:** Documented walkthrough exists; usability test with a non-technical participant completes restore on a fresh device without developer assistance.
 
-#### `ch10-synthesis:LENS-08` — Plain-file export without vendor cooperation
+#### `ch10-synthesis:LENS-08` - Plain-file export without vendor cooperation
 
 A user can export all of their data to standard plain-file formats (CSV, JSON, plain files) using only a standard file manager, with no vendor service call and no special tooling.
 
@@ -2450,7 +2450,7 @@ A user can export all of their data to standard plain-file formats (CSV, JSON, p
 
 **Verification:** Disconnect node from network; trigger export; verify produced files open in standard tools and contain the user's full record set; verify any withheld categories are listed with the regulatory basis.
 
-#### `ch10-synthesis:LENS-09` — Pre-GA blocker classification of cross-lens conflicts
+#### `ch10-synthesis:LENS-09` - Pre-GA blocker classification of cross-lens conflicts
 
 When security and commercial timelines conflict over readiness, both requirements are classified as pre-GA blockers rather than allowing one lens to defer to a post-GA roadmap.
 
@@ -2464,7 +2464,7 @@ When security and commercial timelines conflict over readiness, both requirement
 
 **Verification:** Release-readiness checklist names both items as gating conditions for GA; release artifact records both as satisfied.
 
-#### `ch10-synthesis:LENS-10` — Documented-gap shipping discipline
+#### `ch10-synthesis:LENS-10` - Documented-gap shipping discipline
 
 Where correctness rigor and unit-economics pressure conflict, the protocol ships with known rough edges named explicitly in the public specification rather than being silently deferred or perfected before release.
 
@@ -2478,7 +2478,7 @@ Where correctness rigor and unit-economics pressure conflict, the protocol ships
 
 **Verification:** Public spec contains a named "Known Gaps" section enumerating each documented limitation with remediation status.
 
-#### `ch10-synthesis:LENS-11` — Intermittent connectivity as baseline operating condition
+#### `ch10-synthesis:LENS-11` - Intermittent connectivity as baseline operating condition
 
 The architecture treats intermittent connectivity as the default operating environment for the target user population, not as an edge case the system gracefully degrades into.
 
@@ -2492,7 +2492,7 @@ The architecture treats intermittent connectivity as the default operating envir
 
 **Verification:** Disconnect network for an extended period; full feature set executes against the local node with no functional regression versus the online state.
 
-#### `ch10-synthesis:LENS-12` — Sanctions-grade availability as design anchor
+#### `ch10-synthesis:LENS-12` - Sanctions-grade availability as design anchor
 
 The architecture treats the documented 2022 Western SaaS withdrawal from Russia and CIS markets as the empirical anchor against which availability, encryption, and ownership invariants are validated, not as a hypothetical threat model.
 
@@ -2506,7 +2506,7 @@ The architecture treats the documented 2022 Western SaaS withdrawal from Russia 
 
 **Verification:** Tabletop exercise simulating sudden vendor withdrawal demonstrates continued local operation, retained data, and standalone software availability.
 
-#### `ch10-synthesis:LENS-13` — Crypto-shredding as erasure-rights resolution with documented limits
+#### `ch10-synthesis:LENS-13` - Crypto-shredding as erasure-rights resolution with documented limits
 
 Erasure rights against CRDT full-history retention are resolved by destroying the per-document DEK, rendering the data cryptographically inaccessible, and the architecture documents that cryptographic inaccessibility is not the same as physical erasure under every regulatory regime.
 
@@ -2520,7 +2520,7 @@ Erasure rights against CRDT full-history retention are resolved by destroying th
 
 **Verification:** Compliance documentation maps each named jurisdiction (GDPR, LGPD, POPIA, NDPR, DPDP, PIPA, PIPL, etc.) to its treatment of crypto-shredding; behavioral test confirms DEK destruction on erasure request.
 
-#### `ch10-synthesis:LENS-14` — Per-deployment relay residency as regulatory contract
+#### `ch10-synthesis:LENS-14` - Per-deployment relay residency as regulatory contract
 
 The managed relay's legal residency is a per-deployment choice driven by the buyer's jurisdictional regime (Schrems II for EU, 242-FZ for Russia, DIFC 2020 for UAE financial firms, PIPL for China), and a self-hosted relay path exists for deployments where managed residency cannot satisfy the regime.
 
@@ -2534,7 +2534,7 @@ The managed relay's legal residency is a per-deployment choice driven by the buy
 
 **Verification:** Deployment documentation lists supported relay residency options per jurisdiction; self-hosted relay package is published with operator documentation.
 
-#### `ch10-synthesis:LENS-15` — Local key custody as architectural answer to compelled disclosure
+#### `ch10-synthesis:LENS-15` - Local key custody as architectural answer to compelled disclosure
 
 Encryption keys never leave the user-controlled device, so a relay or cloud operator served with a compelled-disclosure order cannot produce decryptable content because no decryptable content is in their custody.
 
@@ -2548,7 +2548,7 @@ Encryption keys never leave the user-controlled device, so a relay or cloud oper
 
 **Verification:** Audit of relay storage and logs confirms no key material is present; cryptographic protocol specification documents that relay never receives a private key.
 
-#### `ch10-synthesis:LENS-16` — Domain-invariant validation as deployment responsibility
+#### `ch10-synthesis:LENS-16` - Domain-invariant validation as deployment responsibility
 
 Structural validity of a CRDT operation does not imply semantic correctness, and each deployment is responsible for specifying and enforcing its own domain-level merge invariants on top of the architecture's structural validation layer.
 
@@ -2562,7 +2562,7 @@ Structural validity of a CRDT operation does not imply semantic correctness, and
 
 **Verification:** Validation layer rejects an operation that violates a registered domain invariant; multi-peer test demonstrates that domain-invariant violation at one peer does not propagate as accepted state to other peers.
 
-#### `ch10-synthesis:LENS-17` — Default-no analytics with deliberate model selection
+#### `ch10-synthesis:LENS-17` - Default-no analytics with deliberate model selection
 
 Local-first architecture has no server-side analytics endpoint by default, and the analytics model (opt-in telemetry only, aggregate via relay metadata, or none) must be selected and specified before implementation teams face delivery pressure to add one.
 
@@ -2579,7 +2579,7 @@ Local-first architecture has no server-side analytics endpoint by default, and t
 
 ---
 
-## Part III — Reference architecture (the specification)
+## Part III - Reference architecture (the specification)
 
 ### Epic: Node Architecture (ch11-node-architecture)
 
@@ -2587,7 +2587,7 @@ Local-first architecture has no server-side analytics endpoint by default, and t
 
 **Concept count:** 31
 
-#### `ch11-node-architecture:NODE-01` — Microkernel monolith pattern
+#### `ch11-node-architecture:NODE-01` - Microkernel monolith pattern
 
 A small stable kernel owns infrastructure concerns while domain plugins implementing well-defined extension-point contracts run in-process within the same monolith.
 
@@ -2601,7 +2601,7 @@ A small stable kernel owns infrastructure concerns while domain plugins implemen
 
 **Verification:** Sunfish.Kernel.Runtime package exists exposing INodeHost and IPluginRegistry; plugin-to-kernel calls occur via in-process method dispatch with no serialization layer.
 
-#### `ch11-node-architecture:NODE-02` — Kernel-plugin boundary by change cadence
+#### `ch11-node-architecture:NODE-02` - Kernel-plugin boundary by change cadence
 
 Concerns are assigned to the kernel when changes require coordinated updates across all plugins, and to plugins when they encode independently-evolving domain knowledge.
 
@@ -2615,7 +2615,7 @@ Concerns are assigned to the kernel when changes require coordinated updates acr
 
 **Verification:** Static analysis of kernel namespaces shows no references to specific domain types (scheduling, ledger, billing, etc.); kernel package set matches the eight named infrastructure concerns.
 
-#### `ch11-node-architecture:NODE-03` — Topological plugin load with version contracts
+#### `ch11-node-architecture:NODE-03` - Topological plugin load with version contracts
 
 The plugin registry loads plugins in topological dependency order, deterministic by plugin ID at equal depth, and rejects cycles or missing dependencies before any load phase executes.
 
@@ -2631,7 +2631,7 @@ The plugin registry loads plugins in topological dependency order, deterministic
 
 **Verification:** IPluginRegistry implementation rejects a test fixture containing a dependency cycle; integration test confirms reverse-order unload.
 
-#### `ch11-node-architecture:NODE-04` — One-shot plugin load surface
+#### `ch11-node-architecture:NODE-04` - One-shot plugin load surface
 
 The plugin registry rejects a second load call until the prior loaded set has been fully unloaded, preventing partial state from a failed swap from contaminating the running plugin set.
 
@@ -2644,7 +2644,7 @@ The plugin registry rejects a second load call until the prior loaded set has be
 
 **Verification:** Behavioral test attempts a second load before unload completes and observes rejection.
 
-#### `ch11-node-architecture:NODE-05` — Five-state node lifecycle with terminal Faulted
+#### `ch11-node-architecture:NODE-05` - Five-state node lifecycle with terminal Faulted
 
 INodeHost transitions through Stopped, Starting, Running, Stopping, and Faulted states, with Faulted as a terminal state that does not auto-restart on unrecoverable error.
 
@@ -2660,7 +2660,7 @@ INodeHost transitions through Stopped, Starting, Running, Stopping, and Faulted 
 
 > Faulted is terminal because automatic restart can mask data integrity problems requiring operator diagnosis.
 
-#### `ch11-node-architecture:NODE-06` — Three-tier peer discovery
+#### `ch11-node-architecture:NODE-06` - Three-tier peer discovery
 
 Peer discovery operates across mDNS for LAN-local zero-configuration discovery, a WireGuard mesh VPN for cross-segment intra-organization discovery, and a managed relay for cross-organization or relay-assisted connectivity.
 
@@ -2675,7 +2675,7 @@ Peer discovery operates across mDNS for LAN-local zero-configuration discovery, 
 
 **Verification:** Behavioral test on isolated LAN demonstrates peer discovery and sync with no relay reachable.
 
-#### `ch11-node-architecture:NODE-07` — ICrdtEngine abstraction
+#### `ch11-node-architecture:NODE-07` - ICrdtEngine abstraction
 
 Sunfish.Kernel.Crdt exposes ICrdtEngine as the single contract for creating and opening CRDT documents, allowing engine swaps without changes to kernel or plugin code.
 
@@ -2692,7 +2692,7 @@ Sunfish.Kernel.Crdt exposes ICrdtEngine as the single contract for creating and 
 
 > Overlaps with Ch12 CRDT engine and data layer specification.
 
-#### `ch11-node-architecture:NODE-08` — Schema registry with upcaster chain
+#### `ch11-node-architecture:NODE-08` - Schema registry with upcaster chain
 
 Sunfish.Kernel.SchemaRegistry maintains event schema versions and pure-function upcasters, coordinates schema epochs across peers, and enables nodes at different plugin versions to interoperate.
 
@@ -2710,7 +2710,7 @@ Sunfish.Kernel.SchemaRegistry maintains event schema versions and pure-function 
 
 > Overlaps with Ch13 schema migration.
 
-#### `ch11-node-architecture:NODE-09` — Capability-gated bucket subscription
+#### `ch11-node-architecture:NODE-09` - Capability-gated bucket subscription
 
 Sunfish.Kernel.Buckets evaluates sync-bucket eligibility against attestation bundles received during peer handshake, refusing non-attested peers before any bucket data is transferred.
 
@@ -2724,7 +2724,7 @@ Sunfish.Kernel.Buckets evaluates sync-bucket eligibility against attestation bun
 
 **Verification:** Integration test confirms a peer lacking the required attestation receives zero events from the protected bucket on the wire.
 
-#### `ch11-node-architecture:NODE-10` — Send-side subscription filtering invariant
+#### `ch11-node-architecture:NODE-10` - Send-side subscription filtering invariant
 
 Bucket eligibility filtering occurs at the send tier before events leave the originating daemon, never at the receive tier where the data has already traveled.
 
@@ -2739,7 +2739,7 @@ Bucket eligibility filtering occurs at the send tier before events leave the ori
 
 > Council review identified as a non-negotiable.
 
-#### `ch11-node-architecture:NODE-11` — Flease distributed lease coordinator for CP records
+#### `ch11-node-architecture:NODE-11` - Flease distributed lease coordinator for CP records
 
 Sunfish.Kernel.Lease implements a Flease-inspired distributed lease coordinator that requires strict-majority quorum acknowledgment before a CP-class record write proceeds.
 
@@ -2756,7 +2756,7 @@ Sunfish.Kernel.Lease implements a Flease-inspired distributed lease coordinator 
 
 > Overlaps with Ch14 sync daemon partition recovery protocol.
 
-#### `ch11-node-architecture:NODE-12` — Three-tier CRDT resolution model
+#### `ch11-node-architecture:NODE-12` - Three-tier CRDT resolution model
 
 The kernel routes writes to one of three coordinators based on tier classification: ICrdtEngine for AP-class records with deterministic merge, Flease coordinator for CP-class records requiring linearizable writes, and an append-only ledger engine for records not subject to merge.
 
@@ -2771,7 +2771,7 @@ The kernel routes writes to one of three coordinators based on tier classificati
 
 **Verification:** Plugin manifest schema enforces tier declaration; load-time test rejects manifests missing tier classifications; behavioral test confirms a CP-declared record never bypasses the lease coordinator.
 
-#### `ch11-node-architecture:NODE-13` — Append-only durable event log
+#### `ch11-node-architecture:NODE-13` - Append-only durable event log
 
 Sunfish.Kernel.EventBus exposes IEventBus for in-process publication and IEventLog for durable append-only persistence, with the event log as the authoritative record from which projections are rebuilt.
 
@@ -2787,7 +2787,7 @@ Sunfish.Kernel.EventBus exposes IEventBus for in-process publication and IEventL
 
 > Overlaps with Ch16 durability.
 
-#### `ch11-node-architecture:NODE-14` — ILocalNodePlugin contract
+#### `ch11-node-architecture:NODE-14` - ILocalNodePlugin contract
 
 Every domain plugin implements ILocalNodePlugin and registers stream definitions, projections, schema versions, and UI block manifests via the IPluginContext surface during the load phase.
 
@@ -2801,7 +2801,7 @@ Every domain plugin implements ILocalNodePlugin and registers stream definitions
 
 **Verification:** Sunfish.Kernel.Runtime exposes ILocalNodePlugin and IPluginContext; reference plugin demonstrates registration of all four extension-point types.
 
-#### `ch11-node-architecture:NODE-15` — IStreamDefinition contract
+#### `ch11-node-architecture:NODE-15` - IStreamDefinition contract
 
 IStreamDefinition declares a CRDT stream contributed by a plugin, carrying a stable stream identifier, schema version, emitted event type names, and the sync-bucket IDs the stream contributes to.
 
@@ -2814,7 +2814,7 @@ IStreamDefinition declares a CRDT stream contributed by a plugin, carrying a sta
 
 **Verification:** IStreamDefinition interface present; reference stream with empty bucket list demonstrates no gossip-layer propagation.
 
-#### `ch11-node-architecture:NODE-16` — IProjectionBuilder contract with idempotent rebuild
+#### `ch11-node-architecture:NODE-16` - IProjectionBuilder contract with idempotent rebuild
 
 IProjectionBuilder registers a derived read-model projection that reads from a source stream, holds no authoritative state, and exposes an idempotent rebuild safe to call repeatedly during schema migration and CRDT compaction.
 
@@ -2828,7 +2828,7 @@ IProjectionBuilder registers a derived read-model projection that reads from a s
 
 **Verification:** Test invokes projection rebuild twice consecutively and observes byte-identical resulting state.
 
-#### `ch11-node-architecture:NODE-17` — ISchemaVersion contract with pure upcasters
+#### `ch11-node-architecture:NODE-17` - ISchemaVersion contract with pure upcasters
 
 ISchemaVersion declares the event types a plugin produces and provides a pure-function upcaster that lifts older event payloads to the current in-memory shape.
 
@@ -2842,7 +2842,7 @@ ISchemaVersion declares the event types a plugin produces and provides a pure-fu
 
 **Verification:** Test passes an N-2 event payload through the upcaster chain and observes deterministic lift to current shape.
 
-#### `ch11-node-architecture:NODE-18` — IUiBlockManifest with attestation-gated visibility
+#### `ch11-node-architecture:NODE-18` - IUiBlockManifest with attestation-gated visibility
 
 IUiBlockManifest registers a UI block with stable identifier, display name, category, source stream IDs, and required role attestations, suppressing the block when the current user lacks the attestations required for its underlying streams.
 
@@ -2857,7 +2857,7 @@ IUiBlockManifest registers a UI block with stable identifier, display name, cate
 
 **Verification:** Behavioral test loads a manifest requiring attestation A; user without A observes the block absent from both rendered surface and block picker.
 
-#### `ch11-node-architecture:NODE-19` — SyncState alignment invariant
+#### `ch11-node-architecture:NODE-19` - SyncState alignment invariant
 
 Every infrastructure state visible to the data layer has a corresponding component-level visual state in the UI layer, structurally enforced through the SyncState enumeration with values Healthy, Stale, Offline, ConflictPending, and Quarantine.
 
@@ -2872,7 +2872,7 @@ Every infrastructure state visible to the data layer has a corresponding compone
 
 **Verification:** Static check confirms only the five SyncState values; behavioral test forces ConflictPending in the kernel and observes UI surface reflects it within one render cycle.
 
-#### `ch11-node-architecture:NODE-20` — Four-tier UI layering
+#### `ch11-node-architecture:NODE-20` - Four-tier UI layering
 
 The UI kernel is organized as Foundation (design tokens and base contracts), Framework-Agnostic Contracts (renderer and provider interfaces), Adapters and Blocks (Blazor and React implementations plus domain blocks), and Compatibility Layer (third-party-API-shape wrappers).
 
@@ -2887,7 +2887,7 @@ The UI kernel is organized as Foundation (design tokens and base contracts), Fra
 
 **Verification:** Sunfish.UICore package has no Blazor or React dependencies; assembly inspection confirms the four layered packages exist with the correct dependency direction.
 
-#### `ch11-node-architecture:NODE-21` — Accessibility as Tier 1 contract
+#### `ch11-node-architecture:NODE-21` - Accessibility as Tier 1 contract
 
 Accessibility is enforced at the foundation tier rather than as a Tier 3 polish, requiring sync-state components to communicate state through more than color and to pair every icon with a text equivalent.
 
@@ -2903,7 +2903,7 @@ Accessibility is enforced at the foundation tier rather than as a Tier 3 polish,
 
 > Local-first architecture preserves AT user data access during connectivity loss; full AT treatment in Ch20.
 
-#### `ch11-node-architecture:NODE-22` — Sync daemon as separate long-running process
+#### `ch11-node-architecture:NODE-22` - Sync daemon as separate long-running process
 
 The sync daemon runs as a separate long-running process from the host (MAUI or Blazor shell) so that in-flight gossip rounds, peer connections, peer membership, and the CRDT document store survive host restarts and process cycling.
 
@@ -2920,7 +2920,7 @@ The sync daemon runs as a separate long-running process from the host (MAUI or B
 
 > Overlaps with Ch14 sync daemon specification.
 
-#### `ch11-node-architecture:NODE-23` — Circuit-breaker quarantine queue
+#### `ch11-node-architecture:NODE-23` - Circuit-breaker quarantine queue
 
 A queue inside Sunfish.Kernel.Sync buffers inbound and outbound operations through interruptions and holds unverified writes pending re-attestation on the next clean daemon start.
 
@@ -2934,7 +2934,7 @@ A queue inside Sunfish.Kernel.Sync buffers inbound and outbound operations throu
 
 **Verification:** Simulated power-loss test confirms buffered ops resume after restart with no double-apply.
 
-#### `ch11-node-architecture:NODE-24` — Length-prefixed CBOR IPC channel
+#### `ch11-node-architecture:NODE-24` - Length-prefixed CBOR IPC channel
 
 The host-to-daemon channel uses Unix domain sockets on POSIX and named pipes on Windows, framed as CBOR payloads preceded by a 4-byte big-endian length prefix with frames capped at 16 MiB.
 
@@ -2950,7 +2950,7 @@ The host-to-daemon channel uses Unix domain sockets on POSIX and named pipes on 
 
 **Verification:** Wire-format test inspects an IPC frame and confirms the prefix-then-CBOR layout; oversize-frame test confirms rejection.
 
-#### `ch11-node-architecture:NODE-25` — Authenticated five-phase IPC handshake
+#### `ch11-node-architecture:NODE-25` - Authenticated five-phase IPC handshake
 
 The daemon enforces a five-phase handshake (HELLO, CAPABILITY_NEG, ACK, DELTA_STREAM, GOSSIP_PING) against every connecting host process, with HELLO carrying an Ed25519 signature over a canonical CBOR array and a +/-30-second replay-protection window.
 
@@ -2966,7 +2966,7 @@ The daemon enforces a five-phase handshake (HELLO, CAPABILITY_NEG, ACK, DELTA_ST
 
 **Verification:** Replay test resends a captured HELLO outside the 30-second window and observes rejection; tampered-signature test observes rejection.
 
-#### `ch11-node-architecture:NODE-26` — Push-based daemon-to-host change notifications
+#### `ch11-node-architecture:NODE-26` - Push-based daemon-to-host change notifications
 
 After capability negotiation, the daemon pushes change notifications to the host as CRDT deltas arrive from peers and the host does not poll, while command traffic flows host-to-daemon as user-intent operations the daemon translates into CRDT mutations.
 
@@ -2981,7 +2981,7 @@ After capability negotiation, the daemon pushes change notifications to the host
 
 **Verification:** Behavioral test confirms zero polling traffic on idle channel; command-to-mutation translation test demonstrates conflict-free composition with concurrent peer edits.
 
-#### `ch11-node-architecture:NODE-27` — Ciphertext-only managed relay
+#### `ch11-node-architecture:NODE-27` - Ciphertext-only managed relay
 
 The managed relay observes and routes ciphertext only, holds no decryption keys, and is required only when nodes on different networks lack a direct IP path.
 
@@ -2996,7 +2996,7 @@ The managed relay observes and routes ciphertext only, holds no decryption keys,
 
 **Verification:** Inspect relay process: confirm no key material is provisioned; wire-trace at relay confirms only ciphertext frames pass through.
 
-#### `ch11-node-architecture:NODE-28` — Strict layered package dependency direction
+#### `ch11-node-architecture:NODE-28` - Strict layered package dependency direction
 
 Sunfish package dependencies flow strictly from upper layers (plugins) through kernel to foundation, with no lower-layer package importing from a higher layer.
 
@@ -3011,7 +3011,7 @@ Sunfish package dependencies flow strictly from upper layers (plugins) through k
 
 **Verification:** Static dependency analysis across the Sunfish package set confirms acyclic dependency graph in the documented direction.
 
-#### `ch11-node-architecture:NODE-29` — Sunfish.Kernel facade via type forwarding
+#### `ch11-node-architecture:NODE-29` - Sunfish.Kernel facade via type forwarding
 
 The Sunfish.Kernel package re-exports the seven kernel primitives via assembly type forwarding so a consuming package takes a single dependency rather than listing individual Foundation sub-packages, while the live stateful services remain in Sunfish.Kernel.Runtime and other runtime packages.
 
@@ -3024,7 +3024,7 @@ The Sunfish.Kernel package re-exports the seven kernel primitives via assembly t
 
 **Verification:** Assembly inspection of Sunfish.Kernel confirms type-forwarded references; runtime packages own concrete service implementations.
 
-#### `ch11-node-architecture:NODE-30` — TryAddSingleton DI override convention
+#### `ch11-node-architecture:NODE-30` - TryAddSingleton DI override convention
 
 Each AddSunfish* DI extension uses TryAddSingleton internally so a preceding registration (test double, stub backend, custom transport) takes precedence without modifying the extension method.
 
@@ -3038,7 +3038,7 @@ Each AddSunfish* DI extension uses TryAddSingleton internally so a preceding reg
 
 **Verification:** Source review of AddSunfish* extensions confirms TryAddSingleton; integration test registers a stub before AddSunfishCrdtEngine() and observes the stub is used.
 
-#### `ch11-node-architecture:NODE-31` — Local-first encrypted store foundation
+#### `ch11-node-architecture:NODE-31` - Local-first encrypted store foundation
 
 Sunfish.Foundation.LocalFirst provides the local encrypted store (SQLCipher-backed), the IOfflineStore contract, and the circuit-breaker quarantine queue as foundational primitives every node depends on.
 
@@ -3061,9 +3061,9 @@ Sunfish.Foundation.LocalFirst provides the local encrypted store (SQLCipher-back
 
 **Concept count:** 32
 
-#### `ch12-crdt-engine-data-layer:CRDT-01` — Three-layer CRDT architecture (data, semantic, view)
+#### `ch12-crdt-engine-data-layer:CRDT-01` - Three-layer CRDT architecture (data, semantic, view)
 
-The data layer's CRDT foundation is decomposed into three layers — data (raw CRDT types), semantic (domain interpretation/invariants), and view (projections for query) — where each layer extends rather than overrides the guarantees beneath it.
+The data layer's CRDT foundation is decomposed into three layers - data (raw CRDT types), semantic (domain interpretation/invariants), and view (projections for query) - where each layer extends rather than overrides the guarantees beneath it.
 
 **Kleppmann:** `P4, P5` · **Scope:** `inverted-stack-specific`
 
@@ -3075,9 +3075,9 @@ The data layer's CRDT foundation is decomposed into three layers — data (raw C
 
 **Verification:** Architecture review confirms separate modules/namespaces for CRDT primitives, domain interpretation, and projections, with no domain types referenced from the data layer.
 
-#### `ch12-crdt-engine-data-layer:CRDT-02` — CRDT merge mathematical properties (commutativity, associativity, idempotency)
+#### `ch12-crdt-engine-data-layer:CRDT-02` - CRDT merge mathematical properties (commutativity, associativity, idempotency)
 
-A CRDT merge function must satisfy commutativity, associativity, and idempotency so that any two peers applying the same set of operations in any order — including duplicate application — converge to identical state.
+A CRDT merge function must satisfy commutativity, associativity, and idempotency so that any two peers applying the same set of operations in any order - including duplicate application - converge to identical state.
 
 **Kleppmann:** `P3, P4` · **Scope:** `foundational` · **Failure modes:** `partition`
 
@@ -3089,9 +3089,9 @@ A CRDT merge function must satisfy commutativity, associativity, and idempotency
 
 **Verification:** Property-based test applies randomized operation sequences in different orders and with duplicates, asserting byte-identical convergent state.
 
-#### `ch12-crdt-engine-data-layer:CRDT-03` — CRDT data layer primitives (map, list, text, counter)
+#### `ch12-crdt-engine-data-layer:CRDT-03` - CRDT data layer primitives (map, list, text, counter)
 
-The data layer exposes four raw CRDT types — map (concurrent key insertions), list (insertion-order-preserving), text (human-legible character-merge), and counter (additive across peers) — none of which carry domain semantics.
+The data layer exposes four raw CRDT types - map (concurrent key insertions), list (insertion-order-preserving), text (human-legible character-merge), and counter (additive across peers) - none of which carry domain semantics.
 
 **Kleppmann:** `P4` · **Scope:** `foundational` · **Failure modes:** `partition`
 
@@ -3104,9 +3104,9 @@ The data layer exposes four raw CRDT types — map (concurrent key insertions), 
 
 **Verification:** Per-type convergence tests under concurrent edits assert deterministic output across peers for each primitive.
 
-#### `ch12-crdt-engine-data-layer:CRDT-04` — Semantic layer enforces domain invariants
+#### `ch12-crdt-engine-data-layer:CRDT-04` - Semantic layer enforces domain invariants
 
-The semantic layer interprets CRDT data-layer changes as domain events and enforces invariants that CRDT merge cannot enforce structurally — for example, turning a concurrent posting-amount mutation into a compensating ledger entry rather than a silent corruption.
+The semantic layer interprets CRDT data-layer changes as domain events and enforces invariants that CRDT merge cannot enforce structurally - for example, turning a concurrent posting-amount mutation into a compensating ledger entry rather than a silent corruption.
 
 **Kleppmann:** `P4, P7` · **Scope:** `foundational` · **Failure modes:** `partition`
 
@@ -3118,7 +3118,7 @@ The semantic layer interprets CRDT data-layer changes as domain events and enfor
 
 **Verification:** Test injects a CRDT-merged state that violates a domain invariant; assertion confirms semantic layer flags or compensates rather than accepting silently.
 
-#### `ch12-crdt-engine-data-layer:CRDT-05` — View layer as derived projections
+#### `ch12-crdt-engine-data-layer:CRDT-05` - View layer as derived projections
 
 The view layer projects current CRDT state into indexes and read models (balance tables, task boards, aging reports) that hold no authoritative state and must be idempotently rebuildable from the data and semantic layers at any time.
 
@@ -3132,9 +3132,9 @@ The view layer projects current CRDT state into indexes and read models (balance
 
 **Verification:** Delete projection store, trigger rebuild, assert resulting projections are byte-identical to pre-deletion state.
 
-#### `ch12-crdt-engine-data-layer:CRDT-06` — Per-record CAP positioning
+#### `ch12-crdt-engine-data-layer:CRDT-06` - Per-record CAP positioning
 
-CAP is not a global setting — each record class is explicitly assigned to AP (CRDT merge, divergence tolerated) or CP (distributed lease, no divergence) based on whether merge convergence is acceptable for that record's domain semantics.
+CAP is not a global setting - each record class is explicitly assigned to AP (CRDT merge, divergence tolerated) or CP (distributed lease, no divergence) based on whether merge convergence is acceptable for that record's domain semantics.
 
 **Kleppmann:** `P3, P4, P7` · **Scope:** `inverted-stack-specific` · **Failure modes:** `partition`
 
@@ -3146,7 +3146,7 @@ CAP is not a global setting — each record class is explicitly assigned to AP (
 
 **Verification:** Inspect stream definitions for explicit AP/CP designation; verify CP writes traverse the lease coordinator before the CRDT document store.
 
-#### `ch12-crdt-engine-data-layer:CRDT-07` — AP records — CRDT merge with tolerated divergence
+#### `ch12-crdt-engine-data-layer:CRDT-07` - AP records - CRDT merge with tolerated divergence
 
 AP records (documents, notes, task descriptions, team membership) tolerate concurrent offline divergence because deterministic CRDT merge produces a result the user can review, and the domain consequence of temporary inconsistency is acceptable.
 
@@ -3160,9 +3160,9 @@ AP records (documents, notes, task descriptions, team membership) tolerate concu
 
 **Verification:** Two-peer offline divergence test for an AP stream confirms reconnect produces deterministic merged state with no manual intervention.
 
-#### `ch12-crdt-engine-data-layer:CRDT-08` — CP records — distributed lease serialization
+#### `ch12-crdt-engine-data-layer:CRDT-08` - CP records - distributed lease serialization
 
-CP records (resource reservations, financial transactions, audit/governance records) prohibit divergence because concurrent writes produce conflicting domain state unrecoverable by merge — they require lease acquisition before any write proceeds.
+CP records (resource reservations, financial transactions, audit/governance records) prohibit divergence because concurrent writes produce conflicting domain state unrecoverable by merge - they require lease acquisition before any write proceeds.
 
 **Kleppmann:** `P4, P7` · **Scope:** `inverted-stack-specific` · **Failure modes:** `partition`
 
@@ -3174,7 +3174,7 @@ CP records (resource reservations, financial transactions, audit/governance reco
 
 **Verification:** Two-peer offline test for a CP reservation stream confirms only one node's reservation commits and the other surfaces a lease-conflict requiring user resolution.
 
-#### `ch12-crdt-engine-data-layer:CRDT-09` — Circuit breaker quarantine queue for offline CP writes
+#### `ch12-crdt-engine-data-layer:CRDT-09` - Circuit breaker quarantine queue for offline CP writes
 
 CP-class writes attempted while a node is offline are held in a circuit-breaker quarantine queue and, on reconnect, the breaker attempts to acquire each required lease in submission order before promoting the write to the shared event log.
 
@@ -3188,7 +3188,7 @@ CP-class writes attempted while a node is offline are held in a circuit-breaker 
 
 **Verification:** Submit CP writes while offline, reconnect, assert each enters the lease acquisition path and that conflicting writes surface to the conflict inbox.
 
-#### `ch12-crdt-engine-data-layer:CRDT-10` — ICrdtEngine adapter abstraction
+#### `ch12-crdt-engine-data-layer:CRDT-10` - ICrdtEngine adapter abstraction
 
 ICrdtEngine in Sunfish.Kernel.Crdt is the engine-agnostic abstraction exposing only the surface the sync protocol and migration infrastructure need (create/open documents, produce/apply deltas, snapshot/restore, advance version vector), so that no kernel package, plugin, or sync daemon depends on a specific engine implementation.
 
@@ -3202,7 +3202,7 @@ ICrdtEngine in Sunfish.Kernel.Crdt is the engine-agnostic abstraction exposing o
 
 **Verification:** Static analysis confirms zero references to YDotNet (or any concrete engine) outside the engine adapter package; engine-name string appears in CAPABILITY_NEG advertisements.
 
-#### `ch12-crdt-engine-data-layer:CRDT-11` — Engine swap reversibility via event log as source of truth
+#### `ch12-crdt-engine-data-layer:CRDT-11` - Engine swap reversibility via event log as source of truth
 
 Swapping the CRDT engine (e.g., YDotNet to Loro) does not require a schema epoch bump because the event log stores domain events rather than CRDT wire format, allowing the live CRDT working surface to be rebuilt from the engine-independent log under the new engine.
 
@@ -3216,7 +3216,7 @@ Swapping the CRDT engine (e.g., YDotNet to Loro) does not require a schema epoch
 
 **Verification:** Test rebuilds CRDT working state from event log under a stub engine, confirming the log replay produces equivalent semantic state independent of original engine.
 
-#### `ch12-crdt-engine-data-layer:CRDT-12` — Engine selection criteria (YDotNet default, Loro aspirational, Automerge excluded)
+#### `ch12-crdt-engine-data-layer:CRDT-12` - Engine selection criteria (YDotNet default, Loro aspirational, Automerge excluded)
 
 YDotNet is the default production backend for its mature .NET bindings to yrs; Loro is the aspirational primary for its first-class compaction and shallow snapshot model; Automerge is excluded only because no .NET binding currently covers the required sync surface.
 
@@ -3230,9 +3230,9 @@ YDotNet is the default production backend for its mature .NET bindings to yrs; L
 
 **Verification:** ADR exists naming chosen engine and its trade-offs; backend implementations exist behind the ICrdtEngine abstraction.
 
-#### `ch12-crdt-engine-data-layer:CRDT-13` — Monotonic CRDT growth requires bounded mitigation
+#### `ch12-crdt-engine-data-layer:CRDT-13` - Monotonic CRDT growth requires bounded mitigation
 
-CRDT documents grow monotonically because tombstones, historical operations, and version-vector metadata accumulate as the document is used — this is a structural property of coordinator-free deterministic merge, not a flaw, and growth must be bounded rather than eliminated.
+CRDT documents grow monotonically because tombstones, historical operations, and version-vector metadata accumulate as the document is used - this is a structural property of coordinator-free deterministic merge, not a flaw, and growth must be bounded rather than eliminated.
 
 **Kleppmann:** `P5` · **Scope:** `foundational`
 
@@ -3243,7 +3243,7 @@ CRDT documents grow monotonically because tombstones, historical operations, and
 
 **Verification:** Long-running soak test on a high-churn document confirms growth is bounded by the configured GC policy rather than unbounded.
 
-#### `ch12-crdt-engine-data-layer:CRDT-14` — Library-level compaction
+#### `ch12-crdt-engine-data-layer:CRDT-14` - Library-level compaction
 
 Library-level compaction is the engine's built-in pruning of tombstones and superseded operations, treated as a primary engine evaluation criterion because emergent-GC engines (YDotNet) require all-peer acknowledgment before pruning while shallow-snapshot engines (Loro) avoid that dependency.
 
@@ -3256,7 +3256,7 @@ Library-level compaction is the engine's built-in pruning of tombstones and supe
 
 **Verification:** Engine compaction runs in an integration test and confirms operations older than the acknowledgment watermark are pruned without breaking convergence.
 
-#### `ch12-crdt-engine-data-layer:CRDT-15` — Application-level document sharding
+#### `ch12-crdt-engine-data-layer:CRDT-15` - Application-level document sharding
 
 Document sharding splits a large logical document into sub-documents under named map keys (e.g., per-week log entries under a project map) so that archiving a key garbage-collects the sub-document independently, with the semantic layer declaring shard keys and the data layer executing transparently.
 
@@ -3270,9 +3270,9 @@ Document sharding splits a large logical document into sub-documents under named
 
 **Verification:** High-churn domain test creates many shard keys, archives older ones, and confirms older shards are GC'd independently while newer shards remain intact.
 
-#### `ch12-crdt-engine-data-layer:CRDT-16` — Periodic shallow snapshots
+#### `ch12-crdt-engine-data-layer:CRDT-16` - Periodic shallow snapshots
 
-A shallow snapshot captures current visible state plus a version vector encoding which operations are included, discards operations older than the snapshot boundary, and becomes the new base for subsequent deltas — opt-in per document type, with full-state transfer required for peers whose vector predates the boundary.
+A shallow snapshot captures current visible state plus a version vector encoding which operations are included, discards operations older than the snapshot boundary, and becomes the new base for subsequent deltas - opt-in per document type, with full-state transfer required for peers whose vector predates the boundary.
 
 **Kleppmann:** `P5` · **Scope:** `foundational` · **Failure modes:** `partition`
 
@@ -3284,9 +3284,9 @@ A shallow snapshot captures current visible state plus a version vector encoding
 
 **Verification:** Trigger shallow snapshot on opt-in stream; reconnect a stale peer and assert full-state transfer activates rather than incremental delta.
 
-#### `ch12-crdt-engine-data-layer:CRDT-17` — Three-tier GC policy (ephemeral, standard, compliance)
+#### `ch12-crdt-engine-data-layer:CRDT-17` - Three-tier GC policy (ephemeral, standard, compliance)
 
-Each document type is assigned to one of three GC tiers — ephemeral (aggressive GC, no durability), standard (90/180-day retention with peer-acknowledgment gating), or compliance (no GC, indefinite retention) — based on durability requirements and acknowledgment characteristics.
+Each document type is assigned to one of three GC tiers - ephemeral (aggressive GC, no durability), standard (90/180-day retention with peer-acknowledgment gating), or compliance (no GC, indefinite retention) - based on durability requirements and acknowledgment characteristics.
 
 **Kleppmann:** `P5, P7` · **Scope:** `inverted-stack-specific`
 
@@ -3299,9 +3299,9 @@ Each document type is assigned to one of three GC tiers — ephemeral (aggressiv
 
 **Verification:** Inspect stream definitions for explicit tier assignment; soak tests for each tier confirm correct retention and pruning behavior.
 
-#### `ch12-crdt-engine-data-layer:CRDT-18` — AckVector and active peer set semantics
+#### `ch12-crdt-engine-data-layer:CRDT-18` - AckVector and active peer set semantics
 
-AckVector is a compact per-document per-peer acknowledgment watermark persisted alongside the Layer 2 event log, and the "active peer set" is the set of peers that authenticated a CAPABILITY_NEG handshake within a configurable peer-staleness window (30 days default) — GC proceeds only after all active peers have acknowledged.
+AckVector is a compact per-document per-peer acknowledgment watermark persisted alongside the Layer 2 event log, and the "active peer set" is the set of peers that authenticated a CAPABILITY_NEG handshake within a configurable peer-staleness window (30 days default) - GC proceeds only after all active peers have acknowledged.
 
 **Kleppmann:** `P5` · **Scope:** `foundational` · **Failure modes:** `partition, peer-discovery-failure`
 
@@ -3314,7 +3314,7 @@ AckVector is a compact per-document per-peer acknowledgment watermark persisted 
 
 **Verification:** Multi-peer simulation confirms GC blocks until all active peers ack; dropping a stale peer unblocks GC; returning peer enters stale-peer recovery.
 
-#### `ch12-crdt-engine-data-layer:CRDT-19` — Stale peer recovery via full-state snapshot transfer
+#### `ch12-crdt-engine-data-layer:CRDT-19` - Stale peer recovery via full-state snapshot transfer
 
 When a reconnecting peer's vector clock predates the local compaction watermark, incremental sync is impossible, so the sync daemon abandons delta exchange and initiates full-state snapshot transfer with source-selection preference, concurrency limits, idempotent resume on interruption, and per-tier behavior.
 
@@ -3326,13 +3326,13 @@ When a reconnecting peer's vector clock predates the local compaction watermark,
 - Snapshot source preference favors most recent successful sync partner
 - Snapshot transfer resumes from byte offset on interruption and verifies integrity hash before commit
 - Snapshot is applied atomically (full replace or no change)
-- Per-tier behavior — compliance tier never needs transfer; ephemeral tier rebuilds from next broadcast
+- Per-tier behavior - compliance tier never needs transfer; ephemeral tier rebuilds from next broadcast
 
 **Verification:** Force a peer's clock to predate the GC horizon; reconnect and assert full-state transfer activates with correct source selection, resume on disconnect, and atomic application.
 
-#### `ch12-crdt-engine-data-layer:CRDT-20` — Schema-on-write CRDT operation validation at store entry
+#### `ch12-crdt-engine-data-layer:CRDT-20` - Schema-on-write CRDT operation validation at store entry
 
-Every CRDT operation — locally produced or peer-received — passes through schema-level validation before insertion into the local CRDT store, gating insertion by record-type check, field constraints, and minimum-supported schema version, with failures quarantined rather than applied.
+Every CRDT operation - locally produced or peer-received - passes through schema-level validation before insertion into the local CRDT store, gating insertion by record-type check, field constraints, and minimum-supported schema version, with failures quarantined rather than applied.
 
 **Kleppmann:** `P4, P6` · **Scope:** `foundational` · **Failure modes:** `schema-skew`
 
@@ -3345,7 +3345,7 @@ Every CRDT operation — locally produced or peer-received — passes through sc
 
 **Verification:** Inject a malformed operation via the sync path and assert it is quarantined and surfaced to the conflict inbox without modifying CRDT state.
 
-#### `ch12-crdt-engine-data-layer:CRDT-21` — Schema version negotiation at CAPABILITY_NEG
+#### `ch12-crdt-engine-data-layer:CRDT-21` - Schema version negotiation at CAPABILITY_NEG
 
 Each peer declares its minimum-supported schema version per stream at the CAPABILITY_NEG handshake, the pair converges on the highest mutually-supported version, and operations outside the negotiated compatibility window are rejected with a diagnostic pointing to the upcast path.
 
@@ -3359,9 +3359,9 @@ Each peer declares its minimum-supported schema version per stream at the CAPABI
 
 **Verification:** Two peers with disparate schema versions complete handshake; assert negotiated version equals the highest common version and out-of-window ops produce diagnostics.
 
-#### `ch12-crdt-engine-data-layer:CRDT-22` — Compliance tier required by data sovereignty regimes
+#### `ch12-crdt-engine-data-layer:CRDT-22` - Compliance tier required by data sovereignty regimes
 
-The no-GC compliance tier is a mandatory (not preferred) classification for record types subject to fourteen named data sovereignty regimes across six geographic regions, ensuring growth is bounded only by business volume — the activity the records exist to document.
+The no-GC compliance tier is a mandatory (not preferred) classification for record types subject to fourteen named data sovereignty regimes across six geographic regions, ensuring growth is bounded only by business volume - the activity the records exist to document.
 
 **Kleppmann:** `P5, P7` · **Scope:** `inverted-stack-specific` · **Failure modes:** `data-residency-objection`
 
@@ -3373,9 +3373,9 @@ The no-GC compliance tier is a mandatory (not preferred) classification for reco
 
 **Verification:** Audit confirms regulated streams (e.g. financial postings, audit records) are assigned compliance tier and never have operations pruned.
 
-#### `ch12-crdt-engine-data-layer:CRDT-23` — Double-entry ledger as canonical CP subsystem
+#### `ch12-crdt-engine-data-layer:CRDT-23` - Double-entry ledger as canonical CP subsystem
 
-The double-entry ledger is the correct model for value records — not a CRDT workaround — because its append-only, immutable, strictly-ordered, balanced-postings structure aligns directly with what CP positioning requires for audit integrity.
+The double-entry ledger is the correct model for value records - not a CRDT workaround - because its append-only, immutable, strictly-ordered, balanced-postings structure aligns directly with what CP positioning requires for audit integrity.
 
 **Kleppmann:** `P5, P7` · **Scope:** `foundational`
 
@@ -3387,7 +3387,7 @@ The double-entry ledger is the correct model for value records — not a CRDT wo
 
 **Verification:** Attempt to mutate a committed posting and confirm the operation is rejected; verify ledger integrity check confirms balanced postings per transaction.
 
-#### `ch12-crdt-engine-data-layer:CRDT-24` — Posting engine with idempotency keys
+#### `ch12-crdt-engine-data-layer:CRDT-24` - Posting engine with idempotency keys
 
 Sunfish.Kernel.Ledger's posting engine converts domain events into ledger entries under distributed lease coordination, and uses idempotency keys carried on domain events so that processing the same event multiple times produces at most one set of postings.
 
@@ -3401,9 +3401,9 @@ Sunfish.Kernel.Ledger's posting engine converts domain events into ledger entrie
 
 **Verification:** Submit the same idempotency-keyed event twice; assert the ledger contains exactly one posting set and the second call returns identical results.
 
-#### `ch12-crdt-engine-data-layer:CRDT-25` — CQRS write/read split for ledger
+#### `ch12-crdt-engine-data-layer:CRDT-25` - CQRS write/read split for ledger
 
-The ledger applies CQRS — the immutable posting event stream is the write side, while balance tables, statements, aging reports, and period summaries are derived read-side projections that hold no data unrebuildable by replaying the event stream.
+The ledger applies CQRS - the immutable posting event stream is the write side, while balance tables, statements, aging reports, and period summaries are derived read-side projections that hold no data unrebuildable by replaying the event stream.
 
 **Kleppmann:** `P5` · **Scope:** `foundational`
 
@@ -3415,9 +3415,9 @@ The ledger applies CQRS — the immutable posting event stream is the write side
 
 **Verification:** Delete projection store, replay event log, and confirm rebuilt projections match original; assert no business rule reads from projection-only state.
 
-#### `ch12-crdt-engine-data-layer:CRDT-26` — Period close and rollup snapshots
+#### `ch12-crdt-engine-data-layer:CRDT-26` - Period close and rollup snapshots
 
-At period close, the projection engine computes account balances, P&L, and cash flow as rollup snapshots committed as closing events to the append-only log, and any subsequent postings affecting a closed period are directed to adjustment accounts in the next open period — the closed-period log is never rewritten.
+At period close, the projection engine computes account balances, P&L, and cash flow as rollup snapshots committed as closing events to the append-only log, and any subsequent postings affecting a closed period are directed to adjustment accounts in the next open period - the closed-period log is never rewritten.
 
 **Kleppmann:** `P5, P7` · **Scope:** `foundational`
 
@@ -3429,9 +3429,9 @@ At period close, the projection engine computes account balances, P&L, and cash 
 
 **Verification:** Close a period, attempt a backdated posting, assert it is recorded as an adjustment in the current period and the closed-period log is unchanged.
 
-#### `ch12-crdt-engine-data-layer:CRDT-27` — Five-layer storage architecture
+#### `ch12-crdt-engine-data-layer:CRDT-27` - Five-layer storage architecture
 
-The storage architecture places five concerns in five distinct layers — Layer 1 local encrypted database, Layer 2 CRDT and event log, Layer 3 user-controlled cloud backup (always present), Layer 4 content-addressed distribution (opt-in), Layer 5 decentralized archival (opt-in enterprise) — each with independent durability semantics.
+The storage architecture places five concerns in five distinct layers - Layer 1 local encrypted database, Layer 2 CRDT and event log, Layer 3 user-controlled cloud backup (always present), Layer 4 content-addressed distribution (opt-in), Layer 5 decentralized archival (opt-in enterprise) - each with independent durability semantics.
 
 **Kleppmann:** `P3, P5, P7` · **Scope:** `inverted-stack-specific`
 
@@ -3443,9 +3443,9 @@ The storage architecture places five concerns in five distinct layers — Layer 
 
 **Verification:** Architecture review confirms five-layer separation; failure injection in any layer demonstrates independent failure modes.
 
-#### `ch12-crdt-engine-data-layer:CRDT-28` — Layer 1 — local encrypted database (SQLCipher)
+#### `ch12-crdt-engine-data-layer:CRDT-28` - Layer 1 - local encrypted database (SQLCipher)
 
-Layer 1 is the primary operational store — Sunfish.Foundation.LocalFirst's SQLCipher-backed IOfflineStore — applying AES-256 page-level encryption with the key derived from the device's OS-native keystore via Sunfish.Kernel.Security, never stored in plaintext alongside the database.
+Layer 1 is the primary operational store - Sunfish.Foundation.LocalFirst's SQLCipher-backed IOfflineStore - applying AES-256 page-level encryption with the key derived from the device's OS-native keystore via Sunfish.Kernel.Security, never stored in plaintext alongside the database.
 
 **Kleppmann:** `P1, P3, P6` · **Scope:** `inverted-stack-specific` · **Failure modes:** `key-compromise, key-loss`
 
@@ -3458,9 +3458,9 @@ Layer 1 is the primary operational store — Sunfish.Foundation.LocalFirst's SQL
 
 **Verification:** Inspect database file confirms encryption-at-rest; key material is absent from filesystem; corruption test rebuilds from Layer 2.
 
-#### `ch12-crdt-engine-data-layer:CRDT-29` — Layer 2 — append-only event log as source of truth
+#### `ch12-crdt-engine-data-layer:CRDT-29` - Layer 2 - append-only event log as source of truth
 
-Layer 2 is the append-only CRDT and event log — the source of truth — to which every CRDT operation, domain event, and ledger posting is durably written (fsync on POSIX, FlushFileBuffers on Windows) before the application receives confirmation, with the only mutating operation being compaction under the three-tier GC policy.
+Layer 2 is the append-only CRDT and event log - the source of truth - to which every CRDT operation, domain event, and ledger posting is durably written (fsync on POSIX, FlushFileBuffers on Windows) before the application receives confirmation, with the only mutating operation being compaction under the three-tier GC policy.
 
 **Kleppmann:** `P3, P5` · **Scope:** `foundational`
 
@@ -3473,7 +3473,7 @@ Layer 2 is the append-only CRDT and event log — the source of truth — to whi
 
 **Verification:** Power-loss simulation confirms acknowledged writes survive recovery; static analysis confirms no in-place mutation API on the log; compaction test confirms snapshot equivalence.
 
-#### `ch12-crdt-engine-data-layer:CRDT-30` — Layer 3 — user-controlled cloud backup
+#### `ch12-crdt-engine-data-layer:CRDT-30` - Layer 3 - user-controlled cloud backup
 
 Layer 3 streams the event log to object storage under the user's own credentials and chosen jurisdiction, with the provider adapter supporting any S3-compatible endpoint (sovereign clouds, EU-resident providers, on-premise MinIO/Ceph) so the user controls credentials, bucket, residency, and retention.
 
@@ -3488,9 +3488,9 @@ Layer 3 streams the event log to object storage under the user's own credentials
 
 **Verification:** Configure backup against multiple S3 endpoints (AWS, Hetzner, MinIO); destroy local node; restore from backup credentials only and confirm full state recovery.
 
-#### `ch12-crdt-engine-data-layer:CRDT-31` — Layer 4 — content-addressed binary distribution (opt-in)
+#### `ch12-crdt-engine-data-layer:CRDT-31` - Layer 4 - content-addressed binary distribution (opt-in)
 
-Layer 4 synchronizes binary assets across nodes using content-hash addressing as the storage key, providing integrity verification and deduplication as structural properties — opt-in because text-and-structured-data nodes do not need the infrastructure overhead.
+Layer 4 synchronizes binary assets across nodes using content-hash addressing as the storage key, providing integrity verification and deduplication as structural properties - opt-in because text-and-structured-data nodes do not need the infrastructure overhead.
 
 **Kleppmann:** `P4, P5` · **Scope:** `foundational`
 
@@ -3502,9 +3502,9 @@ Layer 4 synchronizes binary assets across nodes using content-hash addressing as
 
 **Verification:** Two nodes independently receive the same binary; hash comparison confirms identity and no redundant transfer occurs.
 
-#### `ch12-crdt-engine-data-layer:CRDT-32` — Layer 5 — decentralized archival with proof-of-storage (opt-in enterprise)
+#### `ch12-crdt-engine-data-layer:CRDT-32` - Layer 5 - decentralized archival with proof-of-storage (opt-in enterprise)
 
-Layer 5 commits signed archive segments from the event log to a decentralized storage network that issues cryptographic proofs of storage and integrity, satisfying regulated-industry audit requirements where self-attesting archives would not pass scrutiny — opt-in and never an operational dependency.
+Layer 5 commits signed archive segments from the event log to a decentralized storage network that issues cryptographic proofs of storage and integrity, satisfying regulated-industry audit requirements where self-attesting archives would not pass scrutiny - opt-in and never an operational dependency.
 
 **Kleppmann:** `P5, P7` · **Scope:** `inverted-stack-specific`
 
@@ -3523,7 +3523,7 @@ Layer 5 commits signed archive segments from the event log to a decentralized st
 
 **Concept count:** 25
 
-#### `ch13-schema-migration-evolution:SCH-01` — Multi-version schema skew across nodes
+#### `ch13-schema-migration-evolution:SCH-01` - Multi-version schema skew across nodes
 
 A team's nodes simultaneously run multiple schema versions because no central authority can force coordinated upgrade and the sync daemon cannot know a peer's schema version until handshake.
 
@@ -3537,7 +3537,7 @@ A team's nodes simultaneously run multiple schema versions because no central au
 
 **Verification:** Multi-peer test runs three nodes at v1, v2, v3 simultaneously and verifies bidirectional sync produces convergent state for shared record types.
 
-#### `ch13-schema-migration-evolution:SCH-02` — Expand-contract migration pattern
+#### `ch13-schema-migration-evolution:SCH-02` - Expand-contract migration pattern
 
 A schema modification divided into an expand phase (additive, dual-write, both old and new fields present) and a contract phase (removal of old field) separated by a compatibility window.
 
@@ -3551,7 +3551,7 @@ A schema modification divided into an expand phase (additive, dual-write, both o
 
 **Verification:** Migration runbook in source control documents the expand-contract decomposition for each schema change; CI rejects schema changes lacking a registered expand and contract step.
 
-#### `ch13-schema-migration-evolution:SCH-03` — Dual-write during expand phase
+#### `ch13-schema-migration-evolution:SCH-03` - Dual-write during expand phase
 
 During the expand phase, every write path produces records carrying both the old and the new field, so that nodes on either schema version can interpret the record without information loss.
 
@@ -3565,7 +3565,7 @@ During the expand phase, every write path produces records carrying both the old
 
 **Verification:** Static analysis or grep-based check enumerates all write sites for the record type and confirms each writes both fields; integration test produces a record on a v2 node and reads it correctly on a v1 peer.
 
-#### `ch13-schema-migration-evolution:SCH-04` — Unknown-field tolerance in CRDT maps
+#### `ch13-schema-migration-evolution:SCH-04` - Unknown-field tolerance in CRDT maps
 
 CRDT map types preserve unknown keys received from peers running newer schemas, storing them rather than rejecting the operation.
 
@@ -3579,7 +3579,7 @@ CRDT map types preserve unknown keys received from peers running newer schemas, 
 
 **Verification:** Test sends a CRDT map operation containing a field absent from the local schema; node stores the field and re-emits it on subsequent sync to a third peer that recognizes it.
 
-#### `ch13-schema-migration-evolution:SCH-05` — Compatibility window minimum duration
+#### `ch13-schema-migration-evolution:SCH-05` - Compatibility window minimum duration
 
 The expand phase must remain active long enough that all realistically deployed nodes have had the opportunity to upgrade, governed by the slowest-connecting node in the deployment.
 
@@ -3593,7 +3593,7 @@ The expand phase must remain active long enough that all realistically deployed 
 
 **Verification:** Kernel exposes a per-peer oldest-schema-version metric queryable by the epoch coordinator; coordinator refuses to advance epoch if any acknowledged peer is below threshold.
 
-#### `ch13-schema-migration-evolution:SCH-06` — Schema version registry
+#### `ch13-schema-migration-evolution:SCH-06` - Schema version registry
 
 A kernel-level registry of declared schema versions, each carrying its upcasting logic and registered through a versioning interface.
 
@@ -3609,7 +3609,7 @@ A kernel-level registry of declared schema versions, each carrying its upcasting
 
 > ISchemaVersion lives in Sunfish.Kernel.Runtime per the package reference table.
 
-#### `ch13-schema-migration-evolution:SCH-07` — Event upcaster as pure read-path transform
+#### `ch13-schema-migration-evolution:SCH-07` - Event upcaster as pure read-path transform
 
 A pure function that transforms an event of an older type into the equivalent current-version event, applied on read by the semantic layer before domain logic sees the event.
 
@@ -3623,9 +3623,9 @@ A pure function that transforms an event of an older type into the equivalent cu
 
 **Verification:** Upcaster registry test feeds a stored V1 event to the read path and confirms domain logic receives a V2-shaped event while the on-disk V1 event is unchanged.
 
-#### `ch13-schema-migration-evolution:SCH-08` — Additive change classes that skip upcasters
+#### `ch13-schema-migration-evolution:SCH-08` - Additive change classes that skip upcasters
 
-Two classes of schema change require no upcaster — adding a new optional field to an existing event type, and adding a new event variant — because absence is a defined default and unknown variants are quarantined.
+Two classes of schema change require no upcaster - adding a new optional field to an existing event type, and adding a new event variant - because absence is a defined default and unknown variants are quarantined.
 
 **Kleppmann:** `P3, P4, P5` · **Scope:** `foundational` · **Failure modes:** `schema-skew`
 
@@ -3637,7 +3637,7 @@ Two classes of schema change require no upcaster — adding a new optional field
 
 **Verification:** Test introduces a new optional field and a new event variant, sends both to an old node, and confirms the optional field is defaulted and the new variant lands in the circuit breaker queue.
 
-#### `ch13-schema-migration-evolution:SCH-09` — New event type for non-additive change
+#### `ch13-schema-migration-evolution:SCH-09` - New event type for non-additive change
 
 Non-additive changes such as field renames must introduce a new event type alongside the unmodified original, registered with an upcaster that promotes the old type to the new on read.
 
@@ -3651,7 +3651,7 @@ Non-additive changes such as field renames must introduce a new event type along
 
 **Verification:** Audit test enumerates registered event types and confirms no event type's schema definition has been mutated since its first commit; SHA of each event type's definition is pinned.
 
-#### `ch13-schema-migration-evolution:SCH-10` — Upcaster chain accumulation problem
+#### `ch13-schema-migration-evolution:SCH-10` - Upcaster chain accumulation problem
 
 Each new schema version adds an upcaster to the chain, producing maintenance and read-path complexity that grows linearly with version history unless explicitly bounded.
 
@@ -3665,7 +3665,7 @@ Each new schema version adds an upcaster to the chain, producing maintenance and
 
 **Verification:** Telemetry exposes per-event-type upcaster chain depth; alert fires when depth exceeds configured threshold.
 
-#### `ch13-schema-migration-evolution:SCH-11` — Mandatory stream compaction
+#### `ch13-schema-migration-evolution:SCH-11` - Mandatory stream compaction
 
 A background copy-transform job that replays the original event stream, applies all current upcasters in sequence, and writes a new compacted stream where every event is in current-version shape.
 
@@ -3680,7 +3680,7 @@ A background copy-transform job that replays the original event stream, applies 
 
 **Verification:** Test interrupts a compaction job mid-run and confirms restart resumes from the last checkpoint with byte-identical output to an uninterrupted run.
 
-#### `ch13-schema-migration-evolution:SCH-12` — Bidirectional schema lens
+#### `ch13-schema-migration-evolution:SCH-12` - Bidirectional schema lens
 
 A pair of forward and backward transformation functions between two schema versions, where forward and backward must be mutual inverses up to information loss.
 
@@ -3696,7 +3696,7 @@ A pair of forward and backward transformation functions between two schema versi
 
 > Architecture follows Ink and Switch Cambria reference design.
 
-#### `ch13-schema-migration-evolution:SCH-13` — Lens application on transmission and receipt
+#### `ch13-schema-migration-evolution:SCH-13` - Lens application on transmission and receipt
 
 The sync daemon applies the backward lens before transmitting a delta to an older-schema peer and the forward lens on receipt of a delta from an older-schema peer, so neither node stores data in the wrong version shape.
 
@@ -3710,7 +3710,7 @@ The sync daemon applies the backward lens before transmitting a delta to an olde
 
 **Verification:** Sync test between a v1 and v2 node confirms each node's local store contains records in its own schema version after bidirectional sync.
 
-#### `ch13-schema-migration-evolution:SCH-14` — Lens version graph and shortest-path composition
+#### `ch13-schema-migration-evolution:SCH-14` - Lens version graph and shortest-path composition
 
 Lenses form a directed graph between schema versions; non-adjacent translations are produced by composing lenses along the shortest path through the graph.
 
@@ -3724,7 +3724,7 @@ Lenses form a directed graph between schema versions; non-adjacent translations 
 
 **Verification:** Lens engine exposes a query returning the composition path between any two registered versions; cache hit-rate metric is observable.
 
-#### `ch13-schema-migration-evolution:SCH-15` — Missing lens edge suspends sync
+#### `ch13-schema-migration-evolution:SCH-15` - Missing lens edge suspends sync
 
 When the lens version graph contains no path between a peer's schema version and the local schema version for a given record type, synchronization for that record type is suspended until a lens is installed or the peer upgrades.
 
@@ -3738,7 +3738,7 @@ When the lens version graph contains no path between a peer's schema version and
 
 **Verification:** Test removes a lens edge between v2 and v3, connects a v1 and v3 peer, and confirms only the affected record types are suspended while unaffected types continue to sync.
 
-#### `ch13-schema-migration-evolution:SCH-16` — Schema epoch with minimum supported version
+#### `ch13-schema-migration-evolution:SCH-16` - Schema epoch with minimum supported version
 
 A versioned, gossiped administrative boundary that carries a minimum supported peer version, below which the sync daemon refuses to synchronize the record types governed by the epoch.
 
@@ -3752,7 +3752,7 @@ A versioned, gossiped administrative boundary that carries a minimum supported p
 
 **Verification:** Test announces epoch E+1 with minimum version v3; v2 peer attempting to sync a governed record type receives a version-gate error and does not receive partial data; non-governed types continue to sync.
 
-#### `ch13-schema-migration-evolution:SCH-17` — Epoch coordinator role
+#### `ch13-schema-migration-evolution:SCH-17` - Epoch coordinator role
 
 A statically assigned but transferable team role responsible for announcing epochs, accumulating peer acknowledgments, and committing the epoch when quorum is reached.
 
@@ -3766,7 +3766,7 @@ A statically assigned but transferable team role responsible for announcing epoc
 
 **Verification:** Test confirms an unauthenticated node cannot assume coordinator role; role transfer event is signed and verifiable.
 
-#### `ch13-schema-migration-evolution:SCH-18` — Epoch quorum acknowledgment
+#### `ch13-schema-migration-evolution:SCH-18` - Epoch quorum acknowledgment
 
 An epoch becomes active only when a strict majority of the currently reachable peer set has acknowledged the announcement, matching the CP-class lease quorum from Chapter 12.
 
@@ -3780,7 +3780,7 @@ An epoch becomes active only when a strict majority of the currently reachable p
 
 **Verification:** Test with 5-node team confirms epoch activation requires 3 acknowledgments and not just announcement broadcast; activation is denied below threshold.
 
-#### `ch13-schema-migration-evolution:SCH-19` — Couch device snapshot recovery
+#### `ch13-schema-migration-evolution:SCH-19` - Couch device snapshot recovery
 
 A node returning after an absence so long that the lens graph no longer spans its version recovers by discarding its local event log for affected record types and downloading a current-version snapshot from a reachable peer.
 
@@ -3795,7 +3795,7 @@ A node returning after an absence so long that the lens graph no longer spans it
 
 **Verification:** Test simulates a peer offline across two epoch boundaries; on reconnect, daemon reports snapshot-required, snapshot resumes after connection interruption, and offline edits to governed types appear in the circuit breaker queue.
 
-#### `ch13-schema-migration-evolution:SCH-20` — Copy-transform background migration
+#### `ch13-schema-migration-evolution:SCH-20` - Copy-transform background migration
 
 An idempotent, checkpointed background job that reads the existing event log for governed record types, applies all registered lenses and upcasters in sequence, and writes the result to a new epoch stream while sync continues uninterrupted.
 
@@ -3810,7 +3810,7 @@ An idempotent, checkpointed background job that reads the existing event log for
 
 **Verification:** Test interrupts the copy-transform job, restarts it, and confirms the resulting new-epoch stream is byte-identical to an uninterrupted run; concurrent writes during the job land in the new stream.
 
-#### `ch13-schema-migration-evolution:SCH-21` — Eight-step migration runbook with reversibility gate
+#### `ch13-schema-migration-evolution:SCH-21` - Eight-step migration runbook with reversibility gate
 
 A sequenced operational procedure of eight steps from epoch announcement through copy-transform completion, where every step before the contract phase commit is fully reversible.
 
@@ -3825,9 +3825,9 @@ A sequenced operational procedure of eight steps from epoch announcement through
 
 **Verification:** Runbook test simulates abort at each step 1-6 and confirms full state restoration; abort at step 7 requires forward-recovery via new epoch.
 
-#### `ch13-schema-migration-evolution:SCH-22` — Non-migratable change classes
+#### `ch13-schema-migration-evolution:SCH-22` - Non-migratable change classes
 
-Three classes of change cannot be expressed as a bidirectional lens and require introducing a new document type rather than migrating the existing one — field removal with no semantic equivalent, CRDT type change, and field split with no deterministic inverse merge.
+Three classes of change cannot be expressed as a bidirectional lens and require introducing a new document type rather than migrating the existing one - field removal with no semantic equivalent, CRDT type change, and field split with no deterministic inverse merge.
 
 **Kleppmann:** `P5` · **Scope:** `foundational` · **Failure modes:** `schema-skew`
 
@@ -3839,7 +3839,7 @@ Three classes of change cannot be expressed as a bidirectional lens and require 
 
 **Verification:** Schema linter test attempts each of the three forbidden change classes against an existing schema and confirms each is rejected with an explanation pointing to the new-document-type alternative.
 
-#### `ch13-schema-migration-evolution:SCH-23` — HELLO handshake schema version negotiation
+#### `ch13-schema-migration-evolution:SCH-23` - HELLO handshake schema version negotiation
 
 The sync daemon's HELLO handshake exchanges schema versions per record type so each side can determine whether a lens path exists before transmitting any operations.
 
@@ -3855,7 +3855,7 @@ The sync daemon's HELLO handshake exchanges schema versions per record type so e
 
 > Wire-format details belong to Ch14 / Appendix A; this concept is the schema-side contract.
 
-#### `ch13-schema-migration-evolution:SCH-24` — Local-only archival of retired epoch streams
+#### `ch13-schema-migration-evolution:SCH-24` - Local-only archival of retired epoch streams
 
 Retired epoch streams remain on the node operator's storage and are not replicated to the managed relay by default, so archival retention does not trigger a cross-border data transfer event.
 
@@ -3869,7 +3869,7 @@ Retired epoch streams remain on the node operator's storage and are not replicat
 
 **Verification:** Configuration audit confirms archived streams are not enumerated in default replication targets; opt-in requires a signed administrative event.
 
-#### `ch13-schema-migration-evolution:SCH-25` — Crypto-shred deletion bridge to right-to-erasure
+#### `ch13-schema-migration-evolution:SCH-25` - Crypto-shred deletion bridge to right-to-erasure
 
 The tension between immutable archival history and storage-limitation or erasure-rights regulation is resolved by deleting the per-record DEK rather than rewriting the archive, rendering the historical record cryptographically unreadable.
 
@@ -3892,7 +3892,7 @@ The tension between immutable archival history and storage-limitation or erasure
 
 **Concept count:** 35
 
-#### `ch14-sync-daemon-protocol:SYNC-01` — Sync daemon as separate OS process
+#### `ch14-sync-daemon-protocol:SYNC-01` - Sync daemon as separate OS process
 
 The sync daemon runs as a distinct OS-level process from the application, decoupling network and replication lifecycle from application lifecycle.
 
@@ -3907,7 +3907,7 @@ The sync daemon runs as a distinct OS-level process from the application, decoup
 
 **Verification:** Kill the application process while peers are streaming; confirm daemon process retains peer connections and queues inbound deltas for next application startup.
 
-#### `ch14-sync-daemon-protocol:SYNC-02` — IPC over Unix domain socket / named pipe
+#### `ch14-sync-daemon-protocol:SYNC-02` - IPC over Unix domain socket / named pipe
 
 The application communicates with the daemon over a Unix domain socket on Linux/macOS and a named pipe on Windows, with file-permission/ACL controls scoping access to the same user.
 
@@ -3921,7 +3921,7 @@ The application communicates with the daemon over a Unix domain socket on Linux/
 
 **Verification:** Inspect socket path permissions; confirm only same-user processes (or explicit ACL grantees) can connect.
 
-#### `ch14-sync-daemon-protocol:SYNC-03` — Device-key authentication on the IPC channel
+#### `ch14-sync-daemon-protocol:SYNC-03` - Device-key authentication on the IPC channel
 
 All messages on the daemon's IPC channel are authenticated with a device key, so processes that can reach the socket cannot inject operations without a valid key.
 
@@ -3934,7 +3934,7 @@ All messages on the daemon's IPC channel are authenticated with a device key, so
 
 **Verification:** Connect a process without a device key to the socket and confirm the daemon refuses session establishment.
 
-#### `ch14-sync-daemon-protocol:SYNC-04` — Daemon ownership of four responsibilities
+#### `ch14-sync-daemon-protocol:SYNC-04` - Daemon ownership of four responsibilities
 
 The daemon owns the local CRDT document store, peer/relay connections, per-peer capability and subscription enforcement, and background tasks (compaction, archival), and the application never touches the document store directly.
 
@@ -3949,9 +3949,9 @@ The daemon owns the local CRDT document store, peer/relay connections, per-peer 
 
 **Verification:** Inspect the application binary; confirm no code paths read or mutate the document store outside the daemon command channel.
 
-#### `ch14-sync-daemon-protocol:SYNC-05` — Three-tier peer discovery
+#### `ch14-sync-daemon-protocol:SYNC-05` - Three-tier peer discovery
 
-The daemon discovers peers concurrently across three mechanisms — mDNS for LAN, mesh VPN for cross-network, and managed relay for restricted networks — with no tier acting as a fallback that disables another.
+The daemon discovers peers concurrently across three mechanisms - mDNS for LAN, mesh VPN for cross-network, and managed relay for restricted networks - with no tier acting as a fallback that disables another.
 
 **Kleppmann:** `P3, P4` · **Scope:** `inverted-stack-specific` · **Failure modes:** `peer-discovery-failure`
 
@@ -3963,7 +3963,7 @@ The daemon discovers peers concurrently across three mechanisms — mDNS for LAN
 
 **Verification:** With a peer reachable via mDNS and mesh VPN, observe the daemon selecting mDNS as primary while keeping VPN as hot standby.
 
-#### `ch14-sync-daemon-protocol:SYNC-06` — mDNS LAN discovery
+#### `ch14-sync-daemon-protocol:SYNC-06` - mDNS LAN discovery
 
 On a local network segment, the daemon announces node ID, schema version, and IPC endpoint via multicast DNS, removing peers from the candidate list after three missed heartbeat intervals.
 
@@ -3977,7 +3977,7 @@ On a local network segment, the daemon announces node ID, schema version, and IP
 
 **Verification:** Two daemons on the same LAN segment discover each other within one mDNS announcement interval with zero configuration.
 
-#### `ch14-sync-daemon-protocol:SYNC-07` — Mesh VPN cross-network discovery
+#### `ch14-sync-daemon-protocol:SYNC-07` - Mesh VPN cross-network discovery
 
 Peers on different networks connect through a WireGuard-based mesh VPN that handles NAT traversal and provides in-transit encryption independent of protocol-layer authentication.
 
@@ -3991,7 +3991,7 @@ Peers on different networks connect through a WireGuard-based mesh VPN that hand
 
 **Verification:** Two daemons behind separate NATs establish a session through the mesh VPN with no per-endpoint port forwarding.
 
-#### `ch14-sync-daemon-protocol:SYNC-08` — Managed relay for restricted networks
+#### `ch14-sync-daemon-protocol:SYNC-08` - Managed relay for restricted networks
 
 For deployments where direct peer-to-peer connectivity is not viable, the daemon connects through a managed relay that forwards delta streams without decrypting them and cannot inject or modify operations.
 
@@ -4005,7 +4005,7 @@ For deployments where direct peer-to-peer connectivity is not viable, the daemon
 
 **Verification:** Run a relay with logging instrumented; confirm no plaintext payload visibility and that mutated frames are rejected by the receiving daemon's signature check.
 
-#### `ch14-sync-daemon-protocol:SYNC-09` — Lowest-latency path selection with hot standby
+#### `ch14-sync-daemon-protocol:SYNC-09` - Lowest-latency path selection with hot standby
 
 The daemon selects the lowest-latency reachable path to each known peer and dynamically updates path selection as network conditions change, retaining alternate paths as hot standby.
 
@@ -4019,9 +4019,9 @@ The daemon selects the lowest-latency reachable path to each known peer and dyna
 
 **Verification:** Sever the primary path between two peers; observe the daemon promoting the standby within one gossip interval without a fresh CAPABILITY_NEG.
 
-#### `ch14-sync-daemon-protocol:SYNC-10` — Five-step handshake (HELLO, CAPABILITY_NEG, ACK, DELTA_STREAM, GOSSIP_PING)
+#### `ch14-sync-daemon-protocol:SYNC-10` - Five-step handshake (HELLO, CAPABILITY_NEG, ACK, DELTA_STREAM, GOSSIP_PING)
 
-Every peer connection follows a fixed five-step sequence — HELLO, CAPABILITY_NEG, ACK, DELTA_STREAM, GOSSIP_PING — that establishes identity, negotiates capabilities, and confirms subscription grants before any CRDT operations flow.
+Every peer connection follows a fixed five-step sequence - HELLO, CAPABILITY_NEG, ACK, DELTA_STREAM, GOSSIP_PING - that establishes identity, negotiates capabilities, and confirms subscription grants before any CRDT operations flow.
 
 **Kleppmann:** `P4, P6` · **Scope:** `inverted-stack-specific` · **Failure modes:** `replay, schema-skew`
 
@@ -4033,7 +4033,7 @@ Every peer connection follows a fixed five-step sequence — HELLO, CAPABILITY_N
 
 **Verification:** Capture wire trace of a fresh session; confirm the five message types appear in the specified order and no operations precede ACK.
 
-#### `ch14-sync-daemon-protocol:SYNC-11` — HELLO message and schema-version negotiation
+#### `ch14-sync-daemon-protocol:SYNC-11` - HELLO message and schema-version negotiation
 
 HELLO carries node ID, current schema epoch, public key, signed timestamp, and supported protocol versions; the session proceeds on the highest mutually supported version, and incompatible epochs result in SCHEMA_VERSION_INCOMPATIBLE and session close.
 
@@ -4048,7 +4048,7 @@ HELLO carries node ID, current schema epoch, public key, signed timestamp, and s
 
 **Verification:** Connect two daemons with non-overlapping supported_versions; confirm SCHEMA_VERSION_INCOMPATIBLE is sent and the session closes.
 
-#### `ch14-sync-daemon-protocol:SYNC-12` — CAPABILITY_NEG with role-attestation tokens
+#### `ch14-sync-daemon-protocol:SYNC-12` - CAPABILITY_NEG with role-attestation tokens
 
 The requesting node declares CRDT streams, CP leases, and bucket subscriptions, with each requested subscription accompanied by a role attestation signed by the node's device key that the receiving node verifies before granting.
 
@@ -4062,7 +4062,7 @@ The requesting node declares CRDT streams, CP leases, and bucket subscriptions, 
 
 **Verification:** Submit a CAPABILITY_NEG with an expired attestation; confirm the corresponding subscription is rejected with EXPIRED_ATTESTATION.
 
-#### `ch14-sync-daemon-protocol:SYNC-13` — ACK with granted_subscriptions and typed rejections
+#### `ch14-sync-daemon-protocol:SYNC-13` - ACK with granted_subscriptions and typed rejections
 
 The accepting node responds with granted_subscriptions[] and a rejected[] list using typed reason codes (MISSING_ATTESTATION, EXPIRED_ATTESTATION, INVALID_SIGNATURE), and silently omits streams the requester has no attestation for to prevent stream enumeration.
 
@@ -4076,7 +4076,7 @@ The accepting node responds with granted_subscriptions[] and a rejected[] list u
 
 **Verification:** Request a stream the receiver does not publish to the requester; confirm it appears in neither granted nor rejected arrays.
 
-#### `ch14-sync-daemon-protocol:SYNC-14` — DELTA_STREAM continuous CRDT operation flow
+#### `ch14-sync-daemon-protocol:SYNC-14` - DELTA_STREAM continuous CRDT operation flow
 
 After ACK, both nodes emit a continuous append-only stream of compact binary CRDT deltas computed from the difference between sender state and receiver vector clock, with out-of-scope operations dropped at the send tier.
 
@@ -4090,7 +4090,7 @@ After ACK, both nodes emit a continuous append-only stream of compact binary CRD
 
 **Verification:** Observe wire trace; confirm deltas contain only operations the receiver has not seen and only for granted subscriptions.
 
-#### `ch14-sync-daemon-protocol:SYNC-15` — GOSSIP_PING for membership and clock summary
+#### `ch14-sync-daemon-protocol:SYNC-15` - GOSSIP_PING for membership and clock summary
 
 Every 30 seconds each node emits GOSSIP_PING carrying its current vector clock summary and known-peer membership list, enabling drift detection, peer discovery via transitive knowledge, and network healing without a central directory.
 
@@ -4104,7 +4104,7 @@ Every 30 seconds each node emits GOSSIP_PING carrying its current vector clock s
 
 **Verification:** Three-node test where C learns of B's new address only via A's GOSSIP_PING transitively forwarding it.
 
-#### `ch14-sync-daemon-protocol:SYNC-16` — CBOR canonical wire encoding with length prefix
+#### `ch14-sync-daemon-protocol:SYNC-16` - CBOR canonical wire encoding with length prefix
 
 All wire messages use CBOR (RFC 8949) canonical encoding, length-prefixed with a 4-byte big-endian frame length, with individual frames capped at 16 MiB and unknown fields ignored for forward compatibility.
 
@@ -4119,7 +4119,7 @@ All wire messages use CBOR (RFC 8949) canonical encoding, length-prefixed with a
 
 **Verification:** Send a frame with an unknown field; confirm receiver accepts the frame and processes the known fields.
 
-#### `ch14-sync-daemon-protocol:SYNC-17` — Replay-window-bounded signed HELLO
+#### `ch14-sync-daemon-protocol:SYNC-17` - Replay-window-bounded signed HELLO
 
 HELLO is signed with the sender's Ed25519 key over (node_id, schema_version, public_key, sent_at) and accepted only within a ±30-second replay window of receiver clock.
 
@@ -4133,7 +4133,7 @@ HELLO is signed with the sender's Ed25519 key over (node_id, schema_version, pub
 
 **Verification:** Replay a captured HELLO 60 seconds later; confirm receiver rejects it on replay-window grounds.
 
-#### `ch14-sync-daemon-protocol:SYNC-18` — Membership list with tier-aware addressing
+#### `ch14-sync-daemon-protocol:SYNC-18` - Membership list with tier-aware addressing
 
 Each node maintains a membership list recording peer node ID, last-known address per discovery tier, current reachability state (active/suspected/failed), and last-received vector clock per peer.
 
@@ -4147,7 +4147,7 @@ Each node maintains a membership list recording peer node ID, last-known address
 
 **Verification:** Inspect daemon membership store; confirm presence of all four fields per peer.
 
-#### `ch14-sync-daemon-protocol:SYNC-19` — Random-peer-selection gossip anti-entropy
+#### `ch14-sync-daemon-protocol:SYNC-19` - Random-peer-selection gossip anti-entropy
 
 Every 30 seconds each node selects two peers at random from its active membership list and initiates a symmetric delta exchange, ensuring O(log N) propagation and preventing load concentration on high-degree nodes.
 
@@ -4156,12 +4156,12 @@ Every 30 seconds each node selects two peers at random from its active membershi
 **Must implement:**
 
 - Daemon selects k random peers (default k=2) per gossip tick
-- Exchange is symmetric — each side sends operations the other lacks
+- Exchange is symmetric - each side sends operations the other lacks
 - 30-second default interval is configurable per deployment
 
 **Verification:** Run a 10-node simulation; confirm convergence in O(log N) rounds and even per-node send/receive distribution.
 
-#### `ch14-sync-daemon-protocol:SYNC-20` — Vector-clock-driven delta computation
+#### `ch14-sync-daemon-protocol:SYNC-20` - Vector-clock-driven delta computation
 
 Each CRDT operation carries a vector clock entry identifying the originating node and logical time, and deltas include all operations causally ahead of the remote peer's last known clock.
 
@@ -4175,9 +4175,9 @@ Each CRDT operation carries a vector clock entry identifying the originating nod
 
 **Verification:** Two-peer convergence test under partition heal; confirm byte-identical state after exchange.
 
-#### `ch14-sync-daemon-protocol:SYNC-21` — Send-tier subscription scope enforcement
+#### `ch14-sync-daemon-protocol:SYNC-21` - Send-tier subscription scope enforcement
 
-The sync daemon enforces subscription scope at the stream level before operations leave the node, ensuring unauthorized data never reaches the receiving device — application-layer filtering is not a substitute.
+The sync daemon enforces subscription scope at the stream level before operations leave the node, ensuring unauthorized data never reaches the receiving device - application-layer filtering is not a substitute.
 
 **Kleppmann:** `P6, P7` · **Scope:** `inverted-stack-specific` · **Failure modes:** `data-residency-objection, key-compromise`
 
@@ -4189,7 +4189,7 @@ The sync daemon enforces subscription scope at the stream level before operation
 
 **Verification:** Capture wire trace from sender; confirm operations for out-of-scope streams/fields never appear on the wire.
 
-#### `ch14-sync-daemon-protocol:SYNC-22` — Field-level scope stripping within streams
+#### `ch14-sync-daemon-protocol:SYNC-22` - Field-level scope stripping within streams
 
 Stream definitions specify the minimum field set required per role, and the daemon strips operations for out-of-scope fields when constructing outbound deltas even within streams the receiver is authorized to receive.
 
@@ -4203,7 +4203,7 @@ Stream definitions specify the minimum field set required per role, and the daem
 
 **Verification:** Two-role test where Role A receives a stream with field set {x, y} and Role B receives the same stream with {x}; confirm Role B's wire trace contains no operations for field y.
 
-#### `ch14-sync-daemon-protocol:SYNC-23` — Re-eligibility check on reconnect
+#### `ch14-sync-daemon-protocol:SYNC-23` - Re-eligibility check on reconnect
 
 When a node reconnects after offline, the daemon re-runs eligibility checks during the handshake before replaying buffered deltas, and excludes streams whose attestations expired during the offline period.
 
@@ -4217,7 +4217,7 @@ When a node reconnects after offline, the daemon re-runs eligibility checks duri
 
 **Verification:** Expire a node's attestation while offline; reconnect and confirm no buffered deltas for that stream are delivered post-handshake.
 
-#### `ch14-sync-daemon-protocol:SYNC-24` — Distributed quorum lease for CP-class records
+#### `ch14-sync-daemon-protocol:SYNC-24` - Distributed quorum lease for CP-class records
 
 Before a node writes to a CP-class record it must acquire a distributed lease requiring acknowledgement by ceil(N/2)+1 of the active membership, with a default 30-second lease duration.
 
@@ -4231,7 +4231,7 @@ Before a node writes to a CP-class record it must acquire a distributed lease re
 
 **Verification:** Attempt a CP-class write with N=3 and only 1 peer reachable; confirm the write blocks rather than proceeding.
 
-#### `ch14-sync-daemon-protocol:SYNC-25` — No-fallback semantics for blocked CP writes
+#### `ch14-sync-daemon-protocol:SYNC-25` - No-fallback semantics for blocked CP writes
 
 When quorum is unreachable, the daemon blocks the CP-class write rather than degrading to a best-effort write, surfacing a definitive failure signal to the application UI.
 
@@ -4245,7 +4245,7 @@ When quorum is unreachable, the daemon blocks the CP-class write rather than deg
 
 **Verification:** Force a partition; attempt a CP-class write; confirm explicit failure signal reaches the application within the configured timeout.
 
-#### `ch14-sync-daemon-protocol:SYNC-26` — Lease expiry via missed renewal pings
+#### `ch14-sync-daemon-protocol:SYNC-26` - Lease expiry via missed renewal pings
 
 Leases expire automatically at the configured duration; a node that goes offline without explicit release loses the lease, and other nodes detect expiry through absence of a renewal GOSSIP_PING.
 
@@ -4259,7 +4259,7 @@ Leases expire automatically at the configured duration; a node that goes offline
 
 **Verification:** Acquire a lease, kill the holding daemon mid-write; confirm a different node acquires the lease after expiry without manual intervention.
 
-#### `ch14-sync-daemon-protocol:SYNC-27` — Early lease-conflict surfacing in CAPABILITY_NEG
+#### `ch14-sync-daemon-protocol:SYNC-27` - Early lease-conflict surfacing in CAPABILITY_NEG
 
 CAPABILITY_NEG carries the cp_leases[] field so peer handshakes immediately surface lease conflicts on shared records rather than deferring detection until the write attempt.
 
@@ -4272,7 +4272,7 @@ CAPABILITY_NEG carries the cp_leases[] field so peer handshakes immediately surf
 
 **Verification:** Two nodes hold conflicting lease intentions; confirm the conflict is reported during handshake, not at first write attempt.
 
-#### `ch14-sync-daemon-protocol:SYNC-28` — Exponential backoff with jitter on reconnect
+#### `ch14-sync-daemon-protocol:SYNC-28` - Exponential backoff with jitter on reconnect
 
 When a previously unavailable network path becomes reachable, the daemon waits a random interval drawn from an exponential distribution bounded at 60 seconds before initiating handshake, ensuring simultaneously disconnected nodes do not reconnect simultaneously.
 
@@ -4286,7 +4286,7 @@ When a previously unavailable network path becomes reachable, the daemon waits a
 
 **Verification:** Simulate 100 nodes reconnecting after a partition heal; confirm reconnection events are spread across the 60-second window.
 
-#### `ch14-sync-daemon-protocol:SYNC-29` — Relay-enforced per-node delta rate limiting
+#### `ch14-sync-daemon-protocol:SYNC-29` - Relay-enforced per-node delta rate limiting
 
 The managed relay enforces a per-node rate limit on delta submissions with a bounded queue that drops the oldest queued submission on overflow, signalling flow control via the next handshake ACK.
 
@@ -4301,7 +4301,7 @@ The managed relay enforces a per-node rate limit on delta submissions with a bou
 
 **Verification:** Submit deltas faster than the rate limit through the relay; confirm queue behavior and ACK-borne flow-control signal.
 
-#### `ch14-sync-daemon-protocol:SYNC-30` — Three-to-five interval failure detection
+#### `ch14-sync-daemon-protocol:SYNC-30` - Three-to-five interval failure detection
 
 A peer that misses three consecutive GOSSIP_PINGs transitions from active to suspected, and after five total missed intervals transitions from suspected to failed and is removed from the active membership list.
 
@@ -4316,7 +4316,7 @@ A peer that misses three consecutive GOSSIP_PINGs transitions from active to sus
 
 **Verification:** Block GOSSIP_PINGs to one peer; observe state transitions at the 3rd and 5th missed intervals.
 
-#### `ch14-sync-daemon-protocol:SYNC-31` — Suspected-peer recovery without re-handshake
+#### `ch14-sync-daemon-protocol:SYNC-31` - Suspected-peer recovery without re-handshake
 
 A suspected peer that responds to a GOSSIP_PING transitions immediately back to active and resumes delta exchange on the existing session without requiring a fresh handshake.
 
@@ -4330,7 +4330,7 @@ A suspected peer that responds to a GOSSIP_PING transitions immediately back to 
 
 **Verification:** Drive a peer to suspected state, then resume responses; confirm session continues without re-handshake and accumulated deltas exchange.
 
-#### `ch14-sync-daemon-protocol:SYNC-32` — Address-change reconnect on same node ID
+#### `ch14-sync-daemon-protocol:SYNC-32` - Address-change reconnect on same node ID
 
 A new peer presenting the same node ID as a previously failed peer is treated as a reconnect, triggering a fresh handshake including full CAPABILITY_NEG and resetting the failure counter.
 
@@ -4344,7 +4344,7 @@ A new peer presenting the same node ID as a previously failed peer is treated as
 
 **Verification:** Have a node move from Wi-Fi to cellular, presenting the same node ID at a new address; confirm fresh handshake completes and old address is replaced.
 
-#### `ch14-sync-daemon-protocol:SYNC-33` — Transitive address propagation via gossip
+#### `ch14-sync-daemon-protocol:SYNC-33` - Transitive address propagation via gossip
 
 Stale addresses are cleaned through explicit removal at failed-state and through address updates carried in incoming GOSSIP_PING messages, allowing transitive learning of new addresses without direct contact.
 
@@ -4358,9 +4358,9 @@ Stale addresses are cleaned through explicit removal at failed-state and through
 
 **Verification:** Three-node test where A learns of B's new address from C without A having pinged B directly at the new address.
 
-#### `ch14-sync-daemon-protocol:SYNC-34` — Sunfish.Kernel.Sync as protocol entry point
+#### `ch14-sync-daemon-protocol:SYNC-34` - Sunfish.Kernel.Sync as protocol entry point
 
-The sync daemon's full protocol lifecycle — discovery, handshake, delta computation, gossip, lease coordination, reconnection backoff — is exposed to the application via the Sunfish.Kernel.Sync package, with stream definitions registered there declaring the field-level access rules the daemon enforces.
+The sync daemon's full protocol lifecycle - discovery, handshake, delta computation, gossip, lease coordination, reconnection backoff - is exposed to the application via the Sunfish.Kernel.Sync package, with stream definitions registered there declaring the field-level access rules the daemon enforces.
 
 **Kleppmann:** `P3, P4, P6, P7` · **Scope:** `inverted-stack-specific`
 
@@ -4372,9 +4372,9 @@ The sync daemon's full protocol lifecycle — discovery, handshake, delta comput
 
 **Verification:** Inspect application code; confirm all sync operations go through Sunfish.Kernel.Sync and stream definitions are the sole source of access rules.
 
-#### `ch14-sync-daemon-protocol:SYNC-35` — Uniform protocol guarantees across all transport tiers
+#### `ch14-sync-daemon-protocol:SYNC-35` - Uniform protocol guarantees across all transport tiers
 
-The protocol invariants — source-side subscription scope, quorum-required CP writes, handshake-before-data-flow, rate-controlled reconnection — hold uniformly across mDNS, mesh VPN, and managed relay, with no trusted-network mode that relaxes rules for LAN peers.
+The protocol invariants - source-side subscription scope, quorum-required CP writes, handshake-before-data-flow, rate-controlled reconnection - hold uniformly across mDNS, mesh VPN, and managed relay, with no trusted-network mode that relaxes rules for LAN peers.
 
 **Kleppmann:** `P6, P7` · **Scope:** `inverted-stack-specific` · **Failure modes:** `key-compromise`
 
@@ -4394,7 +4394,7 @@ The protocol invariants — source-side subscription scope, quorum-required CP w
 
 **Concept count:** 36
 
-#### `ch15-security-architecture:SEC-01` — Distributed honeypot threat model
+#### `ch15-security-architecture:SEC-01` - Distributed honeypot threat model
 
 Distributing data to endpoints does not eliminate the honeypot problem but spreads it across many smaller perimeters whose weakest device sets the attacker's minimum viable entry cost.
 
@@ -4407,7 +4407,7 @@ Distributing data to endpoints does not eliminate the honeypot problem but sprea
 
 **Verification:** Threat model document explicitly enumerates endpoint compromise as in-scope and states the bounded blast radius as a design property
 
-#### `ch15-security-architecture:SEC-02` — Three blast-radius bounding properties
+#### `ch15-security-architecture:SEC-02` - Three blast-radius bounding properties
 
 Each node holds only data its role subscriptions permit, per-role keys are absent from non-member nodes, and key compromise does not expose historical data encrypted under previously rotated keys.
 
@@ -4421,7 +4421,7 @@ Each node holds only data its role subscriptions permit, per-role keys are absen
 
 **Verification:** Compromise simulation test confirms that seizing one node's full disk and memory exposes only data for that node's current role keys
 
-#### `ch15-security-architecture:SEC-03` — Zero-knowledge relay
+#### `ch15-security-architecture:SEC-03` - Zero-knowledge relay
 
 The relay is treated as an untrusted intermediary that routes ciphertext only and never holds decryption keys, so a relay operator cannot read payload plaintext.
 
@@ -4435,9 +4435,9 @@ The relay is treated as an untrusted intermediary that routes ciphertext only an
 
 **Verification:** Relay process memory and storage contain no key material capable of decrypting any payload it routes
 
-#### `ch15-security-architecture:SEC-04` — Relay metadata visibility
+#### `ch15-security-architecture:SEC-04` - Relay metadata visibility
 
-The relay observes the communication graph — which node identifiers communicate with which, when, in what volume, and with what burst pattern — even though it cannot read payload content.
+The relay observes the communication graph - which node identifiers communicate with which, when, in what volume, and with what burst pattern - even though it cannot read payload content.
 
 **Kleppmann:** `P6` · **Scope:** `foundational`
 
@@ -4448,9 +4448,9 @@ The relay observes the communication graph — which node identifiers communicat
 
 **Verification:** Relay observability documentation lists every metadata channel and identifies which deployment topology eliminates each
 
-#### `ch15-security-architecture:SEC-05` — Defense in depth — four independent layers
+#### `ch15-security-architecture:SEC-05` - Defense in depth - four independent layers
 
-Security applies four independent layers — encryption at rest, field-level encryption, stream-level data minimization, and circuit breaker quarantine — where defeating one layer yields no advantage on the next.
+Security applies four independent layers - encryption at rest, field-level encryption, stream-level data minimization, and circuit breaker quarantine - where defeating one layer yields no advantage on the next.
 
 **Kleppmann:** `P6` · **Scope:** `inverted-stack-specific` · **Failure modes:** `key-compromise`
 
@@ -4461,7 +4461,7 @@ Security applies four independent layers — encryption at rest, field-level enc
 
 **Verification:** Static analysis confirms no shared trust assumption between the four layer implementations
 
-#### `ch15-security-architecture:SEC-06` — SQLCipher encryption at rest with OS keystore root
+#### `ch15-security-architecture:SEC-06` - SQLCipher encryption at rest with OS keystore root
 
 Local databases use SQLCipher with the database key derived via HKDF-SHA256 from a 256-bit root seed stored in the OS-native keystore (Keychain, DPAPI, or Linux Secret Service).
 
@@ -4477,7 +4477,7 @@ Local databases use SQLCipher with the database key derived via HKDF-SHA256 from
 
 **Verification:** Disk forensic capture of the database file without OS keystore access yields no plaintext; process memory inspection after database close finds no residual key bytes
 
-#### `ch15-security-architecture:SEC-07` — Field-level encryption with per-role keys
+#### `ch15-security-architecture:SEC-07` - Field-level encryption with per-role keys
 
 Records in high-sensitivity buckets carry per-field encryption under per-role symmetric keys distinct from the database key, so opening the database does not grant access to fields the node lacks the role for.
 
@@ -4491,7 +4491,7 @@ Records in high-sensitivity buckets carry per-field encryption under per-role sy
 
 **Verification:** Test demonstrates a node with database access but without a role key cannot read field-encrypted records for that role
 
-#### `ch15-security-architecture:SEC-08` — Send-tier subscription filtering invariant
+#### `ch15-security-architecture:SEC-08` - Send-tier subscription filtering invariant
 
 The sync daemon enforces subscription filtering before any event leaves the originating node, so non-subscribed nodes never receive events regardless of relay state or administrator misconfiguration.
 
@@ -4504,7 +4504,7 @@ The sync daemon enforces subscription filtering before any event leaves the orig
 
 **Verification:** Wire-protocol test confirms that events outside a peer's declared subscription set are never observed entering the relay from the originating node
 
-#### `ch15-security-architecture:SEC-09` — Circuit breaker quarantine for offline writes
+#### `ch15-security-architecture:SEC-09` - Circuit breaker quarantine for offline writes
 
 Writes from a reconnecting node that conflict with current authorization policy are held in quarantine pending administrator review rather than discarded or auto-applied.
 
@@ -4519,9 +4519,9 @@ Writes from a reconnecting node that conflict with current authorization policy 
 
 **Verification:** Quarantine review test produces an audit record containing offered write, reviewer identity, decision, and reason
 
-#### `ch15-security-architecture:KEY-01` — Four-tier key hierarchy
+#### `ch15-security-architecture:KEY-01` - Four-tier key hierarchy
 
-Keys are organized in four independently rotatable tiers — root organization key, role KEKs, node-level wrapped KEK copies, and per-document DEKs.
+Keys are organized in four independently rotatable tiers - root organization key, role KEKs, node-level wrapped KEK copies, and per-document DEKs.
 
 **Kleppmann:** `P6, P7` · **Scope:** `inverted-stack-specific` · **Failure modes:** `key-compromise`
 
@@ -4532,7 +4532,7 @@ Keys are organized in four independently rotatable tiers — root organization k
 
 **Verification:** Rotation procedure for each tier exists and is independently exercisable in isolation tests
 
-#### `ch15-security-architecture:KEY-02` — KEK/DEK envelope encryption
+#### `ch15-security-architecture:KEY-02` - KEK/DEK envelope encryption
 
 Each document is encrypted under a freshly generated 256-bit DEK using AES-256-GCM, and the DEK is itself wrapped under the role's current KEK so KEK rotation re-wraps DEKs without re-encrypting document bodies.
 
@@ -4549,7 +4549,7 @@ Each document is encrypted under a freshly generated 256-bit DEK using AES-256-G
 
 **Verification:** Encryption library test confirms nonces are randomly generated per encryption event and never reused under the same key
 
-#### `ch15-security-architecture:KEY-03` — Argon2id parameters for credential-derived keys
+#### `ch15-security-architecture:KEY-03` - Argon2id parameters for credential-derived keys
 
 When user credentials derive an OS keystore password, Argon2id runs with memory cost 64 MiB, iteration count 3, parallelism 4 for standard deployments and 128 MiB / 4 / 4 for the high-security tier.
 
@@ -4564,7 +4564,7 @@ When user credentials derive an OS keystore password, Argon2id runs with memory 
 
 **Verification:** Configuration file inspection confirms Argon2id parameters match the standard or high-security tier values exactly
 
-#### `ch15-security-architecture:KEY-04` — Node-level wrapped KEK custody
+#### `ch15-security-architecture:KEY-04` - Node-level wrapped KEK custody
 
 Each node holds wrapped copies of its role KEKs that are decryptable only with the node's device private key, so revocation by withholding new bundles renders existing wrapped copies useless after rotation.
 
@@ -4578,7 +4578,7 @@ Each node holds wrapped copies of its role KEKs that are decryptable only with t
 
 **Verification:** Test confirms a captured wrapped KEK blob cannot be unwrapped without the originating device's private key
 
-#### `ch15-security-architecture:KEY-05` — Role attestations distinct from role keys
+#### `ch15-security-architecture:KEY-05` - Role attestations distinct from role keys
 
 Role attestations prove role membership for subscription decisions while role keys enable decryption, with key possession verified separately before field-encrypted content is delivered.
 
@@ -4592,7 +4592,7 @@ Role attestations prove role membership for subscription decisions while role ke
 
 **Verification:** Test confirms a node presenting an attestation but lacking the role key cannot decrypt delivered field-encrypted content
 
-#### `ch15-security-architecture:KEY-06` — Administrator-signed key bundle distribution
+#### `ch15-security-architecture:KEY-06` - Administrator-signed key bundle distribution
 
 Per-role KEKs are wrapped per-member with the member's device public key and published as administrator-signed administrative events in the CRDT log, with nodes verifying the signature before accepting any bundle.
 
@@ -4608,7 +4608,7 @@ Per-role KEKs are wrapped per-member with the member's device public key and pub
 
 **Verification:** Test confirms an unsigned or invalidly signed bundle is rejected and never written to the OS keystore
 
-#### `ch15-security-architecture:KEY-07` — KEK rotation without document re-encryption
+#### `ch15-security-architecture:KEY-07` - KEK rotation without document re-encryption
 
 KEK rotation re-wraps DEKs under the new KEK without touching document ciphertext, so rotation work is proportional to document count rather than cumulative document size.
 
@@ -4621,7 +4621,7 @@ KEK rotation re-wraps DEKs under the new KEK without touching document ciphertex
 
 **Verification:** Rotation benchmark confirms work scales with document count, not cumulative document byte size
 
-#### `ch15-security-architecture:KEY-08` — Key compromise incident response procedure
+#### `ch15-security-architecture:KEY-08` - Key compromise incident response procedure
 
 On compromise, the administrator generates a new KEK from fresh entropy (never derived from the compromised key), re-wraps all affected DEKs, distributes new bundles, then triggers discard of the old KEK and a revocation broadcast.
 
@@ -4637,7 +4637,7 @@ On compromise, the administrator generates a new KEK from fresh entropy (never d
 
 **Verification:** Incident-response runbook is exercised end-to-end and produces an audit log showing each step in order
 
-#### `ch15-security-architecture:KEY-09` — Detection triggers for key compromise
+#### `ch15-security-architecture:KEY-09` - Detection triggers for key compromise
 
 Compromise detection arrives from physical loss reports, anomalous access patterns in the audit log, or explicit administrator reports of suspected credential exposure.
 
@@ -4652,7 +4652,7 @@ Compromise detection arrives from physical loss reports, anomalous access patter
 
 **Verification:** Each of the three trigger types produces an incident-response activation in test
 
-#### `ch15-security-architecture:KEY-10` — Handshake-layer revocation enforcement
+#### `ch15-security-architecture:KEY-10` - Handshake-layer revocation enforcement
 
 The relay enforces key revocation at the connection handshake by rejecting any node presenting a revoked key identifier with the specific error code ERR_KEY_REVOKED rather than a generic failure.
 
@@ -4667,7 +4667,7 @@ The relay enforces key revocation at the connection handshake by rejecting any n
 
 **Verification:** Reconnection test with a revoked key receives ERR_KEY_REVOKED specifically
 
-#### `ch15-security-architecture:KEY-11` — Re-attestation via IdP after revocation
+#### `ch15-security-architecture:KEY-11` - Re-attestation via IdP after revocation
 
 A revocation-rejected node cannot resume sync until the user re-authenticates through the IdP, after which the administrator's device issues new wrapped KEK copies for the user's current roles.
 
@@ -4681,7 +4681,7 @@ A revocation-rejected node cannot resume sync until the user re-authenticates th
 
 **Verification:** End-to-end test exercises revocation, IdP re-authentication, KEK redelivery, and sync resumption
 
-#### `ch15-security-architecture:KEY-12` — Offline compromise window
+#### `ch15-security-architecture:KEY-12` - Offline compromise window
 
 A node offline during a KEK discard broadcast continues to use the compromised KEK until reconnection, bounded by configurable rotation schedule (default 90 days) and relay-enforced revocation on reconnect.
 
@@ -4695,7 +4695,7 @@ A node offline during a KEK discard broadcast continues to use the compromised K
 
 **Verification:** Configuration documents the rotation schedule and the exposure window is named in security documentation
 
-#### `ch15-security-architecture:SEC-10` — Locked memory pages for key material
+#### `ch15-security-architecture:SEC-10` - Locked memory pages for key material
 
 Key material is allocated in pages marked non-swappable using mlock on POSIX or VirtualLock on Windows so the OS cannot page key bytes to disk under memory pressure.
 
@@ -4708,7 +4708,7 @@ Key material is allocated in pages marked non-swappable using mlock on POSIX or 
 
 **Verification:** Source review confirms every key allocation uses the locked-page allocator
 
-#### `ch15-security-architecture:SEC-11` — Compiler-resistant zeroing on exit
+#### `ch15-security-architecture:SEC-11` - Compiler-resistant zeroing on exit
 
 Key material is zeroed before process exit using a function the compiler cannot optimize away, including under abnormal exit via registered signal handlers.
 
@@ -4723,7 +4723,7 @@ Key material is zeroed before process exit using a function the compiler cannot 
 
 **Verification:** Process memory inspection after exit (including SIGTERM and SIGABRT) finds no residual key bytes
 
-#### `ch15-security-architecture:SEC-12` — Re-authentication interval
+#### `ch15-security-architecture:SEC-12` - Re-authentication interval
 
 A configurable re-authentication interval (default four hours, sixty minutes for highly regulated deployments) evicts in-memory key material and prompts re-authentication to bound cold-boot and memory-forensics exposure.
 
@@ -4738,7 +4738,7 @@ A configurable re-authentication interval (default four hours, sixty minutes for
 
 **Verification:** Session test confirms key material is evicted after the configured interval and re-authentication is required to resume key-using operations
 
-#### `ch15-security-architecture:SEC-13` — Content-addressed update verification
+#### `ch15-security-architecture:SEC-13` - Content-addressed update verification
 
 Each update package is identified by a content identifier (CID) computed from package contents and distributed via a signed release manifest separate from the CDN, with the client verifying the computed CID before installation.
 
@@ -4753,7 +4753,7 @@ Each update package is identified by a content identifier (CID) computed from pa
 
 **Verification:** Tampered-binary test produces a CID mismatch and aborts installation
 
-#### `ch15-security-architecture:SEC-14` — Hardware-custodied release signing key
+#### `ch15-security-architecture:SEC-14` - Hardware-custodied release signing key
 
 The release signing key is held in a hardware security module under multi-party authorization, with signing operations requiring quorum approval and the key never present in CI/CD environments.
 
@@ -4767,7 +4767,7 @@ The release signing key is held in a hardware security module under multi-party 
 
 **Verification:** Audit confirms HSM custody, quorum policy, and absence of the key from CI/CD secret stores
 
-#### `ch15-security-architecture:SEC-15` — Sigstore transparency log enforcement
+#### `ch15-security-architecture:SEC-15` - Sigstore transparency log enforcement
 
 All signing events are logged to Rekor, and clients reject any signed package whose signing event is absent from the transparency log beyond a short propagation hold period.
 
@@ -4781,7 +4781,7 @@ All signing events are logged to Rekor, and clients reject any signed package wh
 
 **Verification:** Test with a signed-but-unlogged package is rejected by the client
 
-#### `ch15-security-architecture:SEC-16` — Reproducible builds
+#### `ch15-security-architecture:SEC-16` - Reproducible builds
 
 Independent parties can reproduce the published binary from published source and verify the computed CID matches, providing an independent verification path beyond the signing key.
 
@@ -4794,7 +4794,7 @@ Independent parties can reproduce the published binary from published source and
 
 **Verification:** An independent party reproduces the binary and confirms CID equality with the published manifest
 
-#### `ch15-security-architecture:SEC-17` — Crypto-shredding for GDPR Article 17
+#### `ch15-security-architecture:SEC-17` - Crypto-shredding for GDPR Article 17
 
 Erasure requests destroy the DEK for the targeted record, leaving the operation entry in the immutable log while making its ciphertext permanently unreadable.
 
@@ -4809,7 +4809,7 @@ Erasure requests destroy the DEK for the targeted record, leaving the operation 
 
 **Verification:** After crypto-shredding, the targeted record's ciphertext is recoverable but no key path exists to decrypt it
 
-#### `ch15-security-architecture:SEC-18` — Residual metadata limitation
+#### `ch15-security-architecture:SEC-18` - Residual metadata limitation
 
 Operation identifier, timestamp, and DAG position are not erasable without breaking log structure and constitute residual metadata whose Article 17 sufficiency is jurisdiction-dependent.
 
@@ -4822,7 +4822,7 @@ Operation identifier, timestamp, and DAG position are not erasable without break
 
 **Verification:** Compliance documentation explicitly names the residual metadata fields and the legal-review prerequisite
 
-#### `ch15-security-architecture:SEC-19` — Compelled-access structural defense
+#### `ch15-security-architecture:SEC-19` - Compelled-access structural defense
 
 The relay cannot produce decryptable content under legal compulsion because it does not possess decryptable content, providing a structural answer to compelled-access threat models that customer-managed-key cloud patterns cannot match.
 
@@ -4835,7 +4835,7 @@ The relay cannot produce decryptable content under legal compulsion because it d
 
 **Verification:** Legal-process simulation confirms relay can only produce ciphertext and metadata, never plaintext
 
-#### `ch15-security-architecture:SEC-20` — Self-hosted relay for metadata-sensitive deployments
+#### `ch15-security-architecture:SEC-20` - Self-hosted relay for metadata-sensitive deployments
 
 Deployments where the communication graph itself is sensitive replace the third-party relay with a self-hosted relay running the same codebase under the organization's operational custody.
 
@@ -4849,7 +4849,7 @@ Deployments where the communication graph itself is sensitive replace the third-
 
 **Verification:** Self-hosted deployment guide exists and the relay binary runs identically against the standard wire protocol
 
-#### `ch15-security-architecture:SEC-21` — Break-glass corrupt-sequence quarantine
+#### `ch15-security-architecture:SEC-21` - Break-glass corrupt-sequence quarantine
 
 When a CRDT sequence arrives in a structurally invalid state (signature mismatch, unknown reference, or unresolved schema-version violation), the sync daemon quarantines the full sequence and requires explicit administrator action to dispose of it.
 
@@ -4864,7 +4864,7 @@ When a CRDT sequence arrives in a structurally invalid state (signature mismatch
 
 **Verification:** Test injecting a signature-mismatch sequence produces full quarantine and an audit record on disposition
 
-#### `ch15-security-architecture:SEC-22` — Traffic-analysis limitation
+#### `ch15-security-architecture:SEC-22` - Traffic-analysis limitation
 
 The architecture does not implement constant-rate padding between nodes, so deployments with traffic-analysis adversaries must apply application-layer obfuscation or route through a mixnet outside the kernel scope.
 
@@ -4877,7 +4877,7 @@ The architecture does not implement constant-rate padding between nodes, so depl
 
 **Verification:** Security documentation lists traffic-analysis as a named limitation with a documented mitigation path
 
-#### `ch15-security-architecture:SEC-23` — Long-lived Ed25519 device keypairs for non-repudiation
+#### `ch15-security-architecture:SEC-23` - Long-lived Ed25519 device keypairs for non-repudiation
 
 Every write is signed by a long-lived Ed25519 device keypair stored in a hardware-backed OS keystore where available, so a node cannot deny authorship of an operation it signed.
 
@@ -4891,7 +4891,7 @@ Every write is signed by a long-lived Ed25519 device keypair stored in a hardwar
 
 **Verification:** Audit log entry for any write resolves to a device public key whose signature validates the operation bytes
 
-#### `ch15-security-architecture:SEC-24` — Administrator device as trust anchor
+#### `ch15-security-architecture:SEC-24` - Administrator device as trust anchor
 
 The administrator device is the system's trust anchor whose compromise enables fraudulent key distribution, and its protection is an organizational responsibility outside the scope of the security kernel.
 
@@ -4912,7 +4912,7 @@ The administrator device is the system's trust anchor whose compromise enables f
 
 **Concept count:** 29
 
-#### `ch16-persistence-beyond-the-node:DUR-01` — Node as authority over data it holds
+#### `ch16-persistence-beyond-the-node:DUR-01` - Node as authority over data it holds
 
 Local-first does not mean data lives only on one machine; it means the node is the authority over the data it holds, and persistence beyond the node is composed from explicit additional tiers.
 
@@ -4925,9 +4925,9 @@ Local-first does not mean data lives only on one machine; it means the node is t
 
 **Verification:** Architecture document specifies persistence tiers and names the authority for each tier as the node, not a vendor service.
 
-#### `ch16-persistence-beyond-the-node:DUR-02` — Five-layer storage architecture
+#### `ch16-persistence-beyond-the-node:DUR-02` - Five-layer storage architecture
 
-Persistence is composed of five specialized tiers — local encrypted database, CRDT and event log, user-controlled cloud backup, content-addressed distribution (opt-in), and decentralized archival (opt-in) — rather than a single database system.
+Persistence is composed of five specialized tiers - local encrypted database, CRDT and event log, user-controlled cloud backup, content-addressed distribution (opt-in), and decentralized archival (opt-in) - rather than a single database system.
 
 **Kleppmann:** `P3, P5, P7` · **Scope:** `inverted-stack-specific` · **Failure modes:** `vendor-outage`
 
@@ -4939,7 +4939,7 @@ Persistence is composed of five specialized tiers — local encrypted database, 
 
 **Verification:** Architecture document enumerates the five tiers with named subsystems for each; an implementation that omits Tiers 4-5 is documented as a standard configuration.
 
-#### `ch16-persistence-beyond-the-node:DUR-03` — Event log as source of truth
+#### `ch16-persistence-beyond-the-node:DUR-03` - Event log as source of truth
 
 An append-only log of all CRDT operations and domain events is the system's source of truth for sync and audit; the local database is a derived projection of the log.
 
@@ -4953,7 +4953,7 @@ An append-only log of all CRDT operations and domain events is the system's sour
 
 **Verification:** Deleting the local database file and replaying the event log reproduces equivalent application state.
 
-#### `ch16-persistence-beyond-the-node:DUR-04` — Declarative sync buckets
+#### `ch16-persistence-beyond-the-node:DUR-04` - Declarative sync buckets
 
 A bucket is a named, declaratively specified subset of the team dataset whose membership is tied to role attestations and enforced by the sync daemon at capability negotiation, not by application-layer filtering after data arrives.
 
@@ -4967,9 +4967,9 @@ A bucket is a named, declaratively specified subset of the team dataset whose me
 
 **Verification:** A peer presenting only `team_member` attestation receives only buckets whose `required_attestation` matches; financial buckets are never forwarded to it on the wire.
 
-#### `ch16-persistence-beyond-the-node:DUR-05` — Eager versus lazy bucket replication
+#### `ch16-persistence-beyond-the-node:DUR-05` - Eager versus lazy bucket replication
 
-Each bucket declares a replication mode — eager buckets sync immediately on connect; lazy buckets use demand-driven fetch and represent records locally as stubs.
+Each bucket declares a replication mode - eager buckets sync immediately on connect; lazy buckets use demand-driven fetch and represent records locally as stubs.
 
 **Kleppmann:** `P1, P2` · **Scope:** `inverted-stack-specific`
 
@@ -4981,7 +4981,7 @@ Each bucket declares a replication mode — eager buckets sync immediately on co
 
 **Verification:** A bucket configured `replication: lazy` produces stub records on subscribing peers; opening a record triggers a content fetch.
 
-#### `ch16-persistence-beyond-the-node:DUR-06` — Stub records with content hash
+#### `ch16-persistence-beyond-the-node:DUR-06` - Stub records with content hash
 
 A stub is a local representation of a lazy or evicted record containing identifier, display metadata, and content hash but no payload, sufficient to render navigation, search, and lists without fetching content.
 
@@ -4995,7 +4995,7 @@ A stub is a local representation of a lazy or evicted record containing identifi
 
 **Verification:** Disconnect network; navigation and search over lazy buckets render using stub metadata only.
 
-#### `ch16-persistence-beyond-the-node:DUR-07` — Configurable local storage budget with LRU eviction
+#### `ch16-persistence-beyond-the-node:DUR-07` - Configurable local storage budget with LRU eviction
 
 Nodes enforce a configurable local storage budget (default 10 GB); when approaching the ceiling, the sync daemon evicts least-recently-used records from lazy buckets back to stubs without deleting them.
 
@@ -5009,7 +5009,7 @@ Nodes enforce a configurable local storage budget (default 10 GB); when approach
 
 **Verification:** Set storage budget below current footprint; eviction reduces local storage and converts evicted records to stubs that remain accessible on demand.
 
-#### `ch16-persistence-beyond-the-node:DUR-08` — Mandatory content hash verification on fetch
+#### `ch16-persistence-beyond-the-node:DUR-08` - Mandatory content hash verification on fetch
 
 Every fetched record must have its content hash verified against the stub's stored hash before being written to the local database; mismatched fetches are rejected and re-requested from an alternate peer.
 
@@ -5023,7 +5023,7 @@ Every fetched record must have its content hash verified against the stub's stor
 
 **Verification:** Inject a corrupted content payload from a peer; the receiving node rejects the fetch and re-requests from an alternate peer.
 
-#### `ch16-persistence-beyond-the-node:DUR-09` — Snapshot as performance optimization over event log
+#### `ch16-persistence-beyond-the-node:DUR-09` - Snapshot as performance optimization over event log
 
 A snapshot captures the current state of an aggregate at a point in time indexed to the last event it incorporates; snapshots are deletable and regenerable without affecting correctness because the event log remains the source of truth.
 
@@ -5037,7 +5037,7 @@ A snapshot captures the current state of an aggregate at a point in time indexed
 
 **Verification:** Delete the snapshot store; aggregate rehydration replays from the beginning of the event log and reproduces identical state.
 
-#### `ch16-persistence-beyond-the-node:DUR-10` — Epoch- and schema-scoped snapshot rehydration
+#### `ch16-persistence-beyond-the-node:DUR-10` - Epoch- and schema-scoped snapshot rehydration
 
 Rehydration loads the most recent snapshot, verifies its epoch and schema version match current values, replays subsequent events with upcasters applied for older schema versions, and discards snapshots that do not match.
 
@@ -5051,7 +5051,7 @@ Rehydration loads the most recent snapshot, verifies its epoch and schema versio
 
 **Verification:** Force a snapshot's schema_version to a stale value; rehydration discards it and replays from the log without producing incorrect state.
 
-#### `ch16-persistence-beyond-the-node:DUR-11` — Snapshot scheduling policy
+#### `ch16-persistence-beyond-the-node:DUR-11` - Snapshot scheduling policy
 
 New snapshots are written after rehydration, after a configurable per-document-type operation-count threshold (default 5,000 operations), and on explicit request at application shutdown.
 
@@ -5065,9 +5065,9 @@ New snapshots are written after rehydration, after a configurable per-document-t
 
 **Verification:** Apply 5,001 operations to an aggregate of a type with default threshold; a new snapshot is written within bounded time.
 
-#### `ch16-persistence-beyond-the-node:DUR-12` — CRDT garbage collection strategies
+#### `ch16-persistence-beyond-the-node:DUR-12` - CRDT garbage collection strategies
 
-CRDT documents grow monotonically under naive storage; the architecture mitigates this with three named strategies — library-level compaction, application-level document sharding, and periodic shallow snapshots — with full-history retention as the conservative default.
+CRDT documents grow monotonically under naive storage; the architecture mitigates this with three named strategies - library-level compaction, application-level document sharding, and periodic shallow snapshots - with full-history retention as the conservative default.
 
 **Kleppmann:** `P5` · **Scope:** `foundational`
 
@@ -5079,7 +5079,7 @@ CRDT documents grow monotonically under naive storage; the architecture mitigate
 
 **Verification:** Document schema configuration accepts opt-in flags for sharding and shallow-snapshot policies; defaults retain full history.
 
-#### `ch16-persistence-beyond-the-node:DUR-13` — Shallow-snapshot mergeability tradeoff
+#### `ch16-persistence-beyond-the-node:DUR-13` - Shallow-snapshot mergeability tradeoff
 
 A shallow snapshot captures current document state without history required to merge with older versions; nodes that discard history below the shallow snapshot cannot merge with peers retaining that older history.
 
@@ -5093,9 +5093,9 @@ A shallow snapshot captures current document state without history required to m
 
 **Verification:** Schema documentation for shallow-snapshot-enabled types names the lost-mergeability constraint explicitly.
 
-#### `ch16-persistence-beyond-the-node:DUR-14` — Three-state backup UX
+#### `ch16-persistence-beyond-the-node:DUR-14` - Three-state backup UX
 
-Backup status is exposed to the user as one of three states — Protected, Attention, At Risk — each mapping to a single user action (none, back up now, acknowledge), with no exposure of internal replication factors or vector clocks.
+Backup status is exposed to the user as one of three states - Protected, Attention, At Risk - each mapping to a single user action (none, back up now, acknowledge), with no exposure of internal replication factors or vector clocks.
 
 **Kleppmann:** `P5` · **Scope:** `inverted-stack-specific`
 
@@ -5107,7 +5107,7 @@ Backup status is exposed to the user as one of three states — Protected, Atten
 
 **Verification:** Force backup lag past the policy window; UI transitions to Attention and offers "Back up now"; force lag past the escalation threshold; UI transitions to At Risk with a non-dismissible warning.
 
-#### `ch16-persistence-beyond-the-node:DUR-15` — Backup state as typed contract, not prescribed UI
+#### `ch16-persistence-beyond-the-node:DUR-15` - Backup state as typed contract, not prescribed UI
 
 The backup state machine is exposed as a typed state by the foundation package; the host application provides the presentation, so the package contract is the state model rather than any specific UI.
 
@@ -5121,7 +5121,7 @@ The backup state machine is exposed as a typed state by the foundation package; 
 
 **Verification:** `Sunfish.Foundation` exposes a backup state type; no UI components ship in the package.
 
-#### `ch16-persistence-beyond-the-node:DUR-16` — BYOC user-controlled backup destination
+#### `ch16-persistence-beyond-the-node:DUR-16` - BYOC user-controlled backup destination
 
 The Tier 3 backup adapter accepts any S3-API-compatible endpoint configured by the operator (hyperscaler, EU-resident, sovereign-cloud, on-premise MinIO/Ceph), not a vendor-bound destination.
 
@@ -5135,7 +5135,7 @@ The Tier 3 backup adapter accepts any S3-API-compatible endpoint configured by t
 
 **Verification:** Configure backup destination to a self-hosted MinIO instance; full backup-and-restore cycle completes without invoking any vendor-specific API.
 
-#### `ch16-persistence-beyond-the-node:DUR-17` — Backup encryption under user key hierarchy
+#### `ch16-persistence-beyond-the-node:DUR-17` - Backup encryption under user key hierarchy
 
 Backup objects contain a full encrypted snapshot of the node's CRDT event log encrypted under a key derived via HKDF-SHA256 from the same DEK/KEK hierarchy that protects the local database; the storage provider cannot read the backup.
 
@@ -5151,7 +5151,7 @@ Backup objects contain a full encrypted snapshot of the node's CRDT event log en
 
 > Cross-references Ch15 key hierarchy.
 
-#### `ch16-persistence-beyond-the-node:DUR-18` — Ciphertext-only relay invariant
+#### `ch16-persistence-beyond-the-node:DUR-18` - Ciphertext-only relay invariant
 
 The relay routes encrypted CRDT operation frames between authenticated peers without holding decryption keys; it sees peer identities, workspace identifiers, and frame envelopes but no plaintext payload.
 
@@ -5165,7 +5165,7 @@ The relay routes encrypted CRDT operation frames between authenticated peers wit
 
 **Verification:** Static analysis of relay binary confirms no key material is accepted or stored; integration test confirms forwarded frames are opaque ciphertext to the relay process.
 
-#### `ch16-persistence-beyond-the-node:DUR-19` — Self-hostable relay binary
+#### `ch16-persistence-beyond-the-node:DUR-19` - Self-hostable relay binary
 
 The relay is distributed as a single binary (native executable and OCI container image) deployable on operator-controlled infrastructure with a small resource profile (512 MiB RAM, 2 vCPU, 10 GiB disk for fifty-person teams), implementing the same protocol as the managed relay.
 
@@ -5179,7 +5179,7 @@ The relay is distributed as a single binary (native executable and OCI container
 
 **Verification:** Deploy self-hosted relay; nodes configured to it complete sync identically to nodes connected to the managed relay.
 
-#### `ch16-persistence-beyond-the-node:DUR-20` — Open relay protocol prevents vendor lock-in
+#### `ch16-persistence-beyond-the-node:DUR-20` - Open relay protocol prevents vendor lock-in
 
 The relay protocol is specified in Chapter 14 with sufficient precision for third-party implementation; there is no proprietary wire format or vendor-specific handshake extension, so any compliant relay is indistinguishable from the first-party relay.
 
@@ -5193,9 +5193,9 @@ The relay protocol is specified in Chapter 14 with sufficient precision for thir
 
 **Verification:** A third-party relay implementation built from the published specification interoperates with first-party nodes in convergence tests.
 
-#### `ch16-persistence-beyond-the-node:DUR-21` — Relay compelled-access immunity
+#### `ch16-persistence-beyond-the-node:DUR-21` - Relay compelled-access immunity
 
-A subpoena or compulsion order to the relay operator yields connection logs and message envelopes only — never payload plaintext — because the relay structurally does not possess decryptable content.
+A subpoena or compulsion order to the relay operator yields connection logs and message envelopes only - never payload plaintext - because the relay structurally does not possess decryptable content.
 
 **Kleppmann:** `P6, P7` · **Scope:** `foundational` · **Failure modes:** `key-compromise`
 
@@ -5206,7 +5206,7 @@ A subpoena or compulsion order to the relay operator yields connection logs and 
 
 **Verification:** Architecture document and threat model state the compelled-access invariant; implementation review confirms no key escrow path exists at the relay layer.
 
-#### `ch16-persistence-beyond-the-node:DUR-22` — Peer-assisted device recovery via QR attestation transfer
+#### `ch16-persistence-beyond-the-node:DUR-22` - Peer-assisted device recovery via QR attestation transfer
 
 A new device recovers by authenticating against the IdP and receiving a one-time QR-encoded key exchange from an existing team member's device that transfers the role attestation bundle and an initial CRDT snapshot of authorized eager-bucket records.
 
@@ -5221,7 +5221,7 @@ A new device recovers by authenticating against the IdP and receiving a one-time
 
 **Verification:** Provision a new device; an existing member's QR scan brings the new device to working state with eager-bucket access in minutes, without contacting a central server beyond the IdP.
 
-#### `ch16-persistence-beyond-the-node:DUR-23` — Backup-only recovery without peer assistance
+#### `ch16-persistence-beyond-the-node:DUR-23` - Backup-only recovery without peer assistance
 
 When no team member is available for QR exchange, a new device authenticates against the IdP, retrieves the most recent backup snapshot from user-controlled object storage, applies it locally, and re-synchronizes with peers to incorporate post-backup changes.
 
@@ -5235,7 +5235,7 @@ When no team member is available for QR exchange, a new device authenticates aga
 
 **Verification:** Disable peer-assisted path; recovery from backup alone restores the node to working state synchronized with peers.
 
-#### `ch16-persistence-beyond-the-node:DUR-24` — Offline recovery bundle
+#### `ch16-persistence-beyond-the-node:DUR-24` - Offline recovery bundle
 
 Each node optionally generates at onboarding a one-time-use cryptographic blob containing a wrapped recovery key and minimum bootstrap attestation, stored out-of-band by the user, that restores the node from backup without IdP availability and expires on use or on a configurable wall-clock timeout (default 12 months).
 
@@ -5252,7 +5252,7 @@ Each node optionally generates at onboarding a one-time-use cryptographic blob c
 
 > Touches Ch15 key recovery; this concept is the persistence-layer mechanism, distinct from key-hierarchy concepts owned by Ch15.
 
-#### `ch16-persistence-beyond-the-node:DUR-25` — Plain-file export as architectural requirement
+#### `ch16-persistence-beyond-the-node:DUR-25` - Plain-file export as architectural requirement
 
 All user data must be exportable as standard formats (SQLite, JSON, CSV, original-format binaries, Markdown) without running the application, as a first-class architectural feature rather than a compliance afterthought.
 
@@ -5267,9 +5267,9 @@ All user data must be exportable as standard formats (SQLite, JSON, CSV, origina
 
 **Verification:** Run export with network disconnected; resulting directory opens in third-party tools (SQLite client, text editor, spreadsheet) without application software.
 
-#### `ch16-persistence-beyond-the-node:DUR-26` — Export determinism and completeness guarantees
+#### `ch16-persistence-beyond-the-node:DUR-26` - Export determinism and completeness guarantees
 
-The export process emits no telemetry, requires no network, produces deterministic output (identical state yields identical export), and includes every record the local node holds — full records as content, stubs as metadata-plus-hash.
+The export process emits no telemetry, requires no network, produces deterministic output (identical state yields identical export), and includes every record the local node holds - full records as content, stubs as metadata-plus-hash.
 
 **Kleppmann:** `P5, P7` · **Scope:** `foundational`
 
@@ -5282,7 +5282,7 @@ The export process emits no telemetry, requires no network, produces determinist
 
 **Verification:** Run export twice over identical state; diff confirms identical contents. Capture network traffic during export; confirm zero outbound requests.
 
-#### `ch16-persistence-beyond-the-node:DUR-27` — Versioned export manifest
+#### `ch16-persistence-beyond-the-node:DUR-27` - Versioned export manifest
 
 A machine-readable `manifest.json` at the export root records format version, export timestamp, node identifier, included document types, and the count of stubs versus full records, enabling future readers to determine compatibility before parsing data files.
 
@@ -5296,7 +5296,7 @@ A machine-readable `manifest.json` at the export root records format version, ex
 
 **Verification:** Inspect any export directory; `manifest.json` parses with the documented schema and reports a format version.
 
-#### `ch16-persistence-beyond-the-node:DUR-28` — Markdown as long-now format
+#### `ch16-persistence-beyond-the-node:DUR-28` - Markdown as long-now format
 
 Markdown is included as an export format for long-form document content because it is simultaneously human-readable in any text editor, machine-parseable by any competent library, and version-control friendly without specialized tooling.
 
@@ -5309,7 +5309,7 @@ Markdown is included as an export format for long-form document content because 
 
 **Verification:** Open any Markdown export file in a plain text editor; content is human-readable without rendering.
 
-#### `ch16-persistence-beyond-the-node:DUR-29` — Layer 5 decentralized archival as deferred extension point
+#### `ch16-persistence-beyond-the-node:DUR-29` - Layer 5 decentralized archival as deferred extension point
 
 Layer 5 is an optional enterprise tier providing cryptographic proof-of-storage for regulated long-term retention; the operational mechanism (Filecoin, Arweave, Merkle-challenge) is deferred to v2.0 and current deployments satisfy retention obligations through Tier 3 BYOC backup with retention policies.
 
@@ -5326,7 +5326,7 @@ Layer 5 is an optional enterprise tier providing cryptographic proof-of-storage 
 
 ---
 
-## Part IV — Implementation playbooks
+## Part IV - Implementation playbooks
 
 ### Epic: Building Your First Node (ch17-building-first-node)
 
@@ -5334,7 +5334,7 @@ Layer 5 is an optional enterprise tier providing cryptographic proof-of-storage 
 
 **Concept count:** 23
 
-#### `ch17-building-first-node:BUILD-01` — Minimum-viable node deliverable checklist
+#### `ch17-building-first-node:BUILD-01` - Minimum-viable node deliverable checklist
 
 A first-node implementation is complete only when every item on a fixed eight-point checklist (build runs, keypair generated, founder bundle generated, joiner bundle verified, NodeHealth Healthy, document persists across restart, two-instance LAN discovery, status bar visible) passes.
 
@@ -5353,7 +5353,7 @@ A first-node implementation is complete only when every item on a fixed eight-po
 
 **Verification:** Run the eight-item checklist on a freshly-cloned build; every item passes before the chapter is considered complete.
 
-#### `ch17-building-first-node:BUILD-02` — Accelerator-shell-vs-domain-code split
+#### `ch17-building-first-node:BUILD-02` - Accelerator-shell-vs-domain-code split
 
 The reference accelerator delivers the security and sync infrastructure as wired primitives while the application domain (report catalog, document views, sync UI, packaging, auto-update) is left to the implementer to build on top.
 
@@ -5365,11 +5365,11 @@ The reference accelerator delivers the security and sync infrastructure as wired
 - Reference shell ships no opinionated domain model
 - Domain features are added as plugins on top of the shell, not by modifying the shell
 
-**Verification:** Inspect a freshly-cloned accelerator — kernel security and sync are functional, no business-domain types are present in the shell project.
+**Verification:** Inspect a freshly-cloned accelerator - kernel security and sync are functional, no business-domain types are present in the shell project.
 
-#### `ch17-building-first-node:BUILD-03` — Three-call kernel composition root
+#### `ch17-building-first-node:BUILD-03` - Three-call kernel composition root
 
-The local-first kernel is wired in the application composition root with three ordered DI calls — encrypted store first, runtime second, security third — because each layer depends on the layer registered before it.
+The local-first kernel is wired in the application composition root with three ordered DI calls - encrypted store first, runtime second, security third - because each layer depends on the layer registered before it.
 
 **Scope:** `inverted-stack-specific`
 
@@ -5382,9 +5382,9 @@ The local-first kernel is wired in the application composition root with three o
 
 **Verification:** Composition root contains the three named registrations in the prescribed order; reordering causes a deterministic startup failure in the test suite.
 
-#### `ch17-building-first-node:BUILD-04` — Deterministic kernel startup sequence
+#### `ch17-building-first-node:BUILD-04` - Deterministic kernel startup sequence
 
-After DI registration, the node startup sequence runs in a fixed order — open encrypted database, initialize runtime (sync daemon, mDNS, CRDT engine), load or generate device keypair, evaluate onboarding state, render shell — and the UI shell branch is determined by the persisted onboarding state.
+After DI registration, the node startup sequence runs in a fixed order - open encrypted database, initialize runtime (sync daemon, mDNS, CRDT engine), load or generate device keypair, evaluate onboarding state, render shell - and the UI shell branch is determined by the persisted onboarding state.
 
 **Kleppmann:** `P6, P7` · **Scope:** `inverted-stack-specific`
 
@@ -5397,7 +5397,7 @@ After DI registration, the node startup sequence runs in a fixed order — open 
 
 **Verification:** Trace startup logs of a fresh install and an onboarded install; ordering and shell-branch selection match the documented sequence.
 
-#### `ch17-building-first-node:BUILD-05` — Onboarding-gated workspace access
+#### `ch17-building-first-node:BUILD-05` - Onboarding-gated workspace access
 
 The kernel refuses to render or operate the main workspace until a valid attestation has been applied, so the UI cannot present application surface that the security layer has not authorized.
 
@@ -5406,12 +5406,12 @@ The kernel refuses to render or operate the main workspace until a valid attesta
 **Must implement:**
 
 - Workspace routes are unreachable while the session reports not-onboarded
-- The kernel — not the UI — is the authority that gates workspace access
+- The kernel - not the UI - is the authority that gates workspace access
 - UI shell selection reflects the kernel-reported onboarding state
 
 **Verification:** Attempt to navigate to a workspace route on a not-onboarded node; navigation is refused at the kernel layer rather than only at the route guard.
 
-#### `ch17-building-first-node:BUILD-06` — First-document development loop
+#### `ch17-building-first-node:BUILD-06` - First-document development loop
 
 The canonical first-feature loop is to obtain the CRDT engine from DI, create a document by ID, apply a typed update, and subscribe to update events that distinguish local from remote origin.
 
@@ -5426,7 +5426,7 @@ The canonical first-feature loop is to obtain the CRDT engine from DI, create a 
 
 **Verification:** A worked example in the accelerator's tests creates a document, applies an update, and asserts the subscriber receives the change with the correct origin tag.
 
-#### `ch17-building-first-node:BUILD-07` — Engine-owned persistence (no explicit save)
+#### `ch17-building-first-node:BUILD-07` - Engine-owned persistence (no explicit save)
 
 The CRDT engine persists every applied update automatically into the encrypted store, so application code never issues a save call and a reopened document returns with all prior updates intact.
 
@@ -5440,7 +5440,7 @@ The CRDT engine persists every applied update automatically into the encrypted s
 
 **Verification:** Apply an update, kill the process before any user-initiated save, restart, and confirm the update is present.
 
-#### `ch17-building-first-node:BUILD-08` — Zero-config two-instance LAN sync
+#### `ch17-building-first-node:BUILD-08` - Zero-config two-instance LAN sync
 
 Two instances of the node started on the same LAN discover each other via mDNS within seconds and complete a peer handshake without any configured IP address, port, or peer list.
 
@@ -5455,7 +5455,7 @@ Two instances of the node started on the same LAN discover each other via mDNS w
 
 **Verification:** Run two instances with separate data directories on one LAN; confirm link status reaches healthy and a one-side update is observable on the other side without explicit peer configuration.
 
-#### `ch17-building-first-node:BUILD-09` — Per-instance data directory isolation for multi-run
+#### `ch17-building-first-node:BUILD-09` - Per-instance data directory isolation for multi-run
 
 Multiple instances on a single machine require explicit per-instance data directory paths so that each instance owns a distinct encrypted store and a distinct mDNS service record.
 
@@ -5469,9 +5469,9 @@ Multiple instances on a single machine require explicit per-instance data direct
 
 **Verification:** Launch two instances with the same data directory and observe a deterministic startup refusal; launch them with distinct directories and observe both running concurrently.
 
-#### `ch17-building-first-node:BUILD-10` — Implementation-status disclosure obligation
+#### `ch17-building-first-node:BUILD-10` - Implementation-status disclosure obligation
 
-When a documented subsystem ships ahead of its specification, the chapter and the running build must explicitly disclose the gap — naming the stub component, what guarantees do not yet hold, and which roadmap milestone closes the gap.
+When a documented subsystem ships ahead of its specification, the chapter and the running build must explicitly disclose the gap - naming the stub component, what guarantees do not yet hold, and which roadmap milestone closes the gap.
 
 **Scope:** `inverted-stack-specific`
 
@@ -5483,9 +5483,9 @@ When a documented subsystem ships ahead of its specification, the chapter and th
 
 **Verification:** Inventory of accelerator components labels each as production, beta, or stub; documentation cross-references the corresponding specification chapter and roadmap entry.
 
-#### `ch17-building-first-node:BUILD-11` — Length-prefixed dual-section onboarding payload
+#### `ch17-building-first-node:BUILD-11` - Length-prefixed dual-section onboarding payload
 
-Every onboarding payload is a length-prefixed binary envelope containing exactly two sections — a CBOR-encoded attestation bundle and a raw CRDT snapshot — each preceded by a little-endian uint32 byte length.
+Every onboarding payload is a length-prefixed binary envelope containing exactly two sections - a CBOR-encoded attestation bundle and a raw CRDT snapshot - each preceded by a little-endian uint32 byte length.
 
 **Kleppmann:** `P2, P4` · **Scope:** `inverted-stack-specific`
 
@@ -5499,7 +5499,7 @@ Every onboarding payload is a length-prefixed binary envelope containing exactly
 
 **Verification:** Round-trip encode and decode an onboarding payload; assert the byte layout matches the four-field specification exactly.
 
-#### `ch17-building-first-node:BUILD-12` — Founder bundle as self-signed trust root
+#### `ch17-building-first-node:BUILD-12` - Founder bundle as self-signed trust root
 
 A founder bundle is self-signed (issuer and subject are the same device key) and embeds the founder's Ed25519 public key, establishing the trust root for the team without any external certificate authority.
 
@@ -5512,9 +5512,9 @@ A founder bundle is self-signed (issuer and subject are the same device key) and
 - Joiner verification checks signature against the embedded public key
 - No external CA or third-party issuer is consulted
 
-**Verification:** Generate a founder bundle and inspect it — issuer equals subject, IssuerPublicKey is present, verification succeeds against the embedded key alone.
+**Verification:** Generate a founder bundle and inspect it - issuer equals subject, IssuerPublicKey is present, verification succeeds against the embedded key alone.
 
-#### `ch17-building-first-node:BUILD-13` — Founder-issued joiner attestation with embedded subject key
+#### `ch17-building-first-node:BUILD-13` - Founder-issued joiner attestation with embedded subject key
 
 A joiner bundle is signed by the founder's Ed25519 private key, embeds the joining device's public key as the subject, and is verified against the founder's public key at decode time before any state is mutated.
 
@@ -5529,7 +5529,7 @@ A joiner bundle is signed by the founder's Ed25519 private key, embeds the joini
 
 **Verification:** Tamper one byte of a joiner bundle; decode aborts with a signature-mismatch typed exception and the node remains not-onboarded.
 
-#### `ch17-building-first-node:BUILD-14` — Side-channel-agnostic bundle transport
+#### `ch17-building-first-node:BUILD-14` - Side-channel-agnostic bundle transport
 
 Onboarding payload transport is independent of the bundle's security guarantees because trust derives from signature verification rather than channel confidentiality, so paste, QR scan, and deep link are interchangeable transports.
 
@@ -5544,7 +5544,7 @@ Onboarding payload transport is independent of the bundle's security guarantees 
 
 **Verification:** Repeat the onboarding flow with paste, QR scan, and deep link transports; the cryptographic verification path is identical in all three cases.
 
-#### `ch17-building-first-node:BUILD-15` — Typed onboarding decode errors surfaced to UI
+#### `ch17-building-first-node:BUILD-15` - Typed onboarding decode errors surfaced to UI
 
 The onboarding decoder throws a distinct typed exception per failure mode (malformed length prefix, CBOR parse error, signature mismatch) so the UI can render a specific actionable error rather than a generic failure message.
 
@@ -5558,9 +5558,9 @@ The onboarding decoder throws a distinct typed exception per failure mode (malfo
 
 **Verification:** Inject one of each failure into the decoder; assert each surfaces a distinct typed exception and a distinct UI message.
 
-#### `ch17-building-first-node:BUILD-16` — Always-visible three-indicator status bar
+#### `ch17-building-first-node:BUILD-16` - Always-visible three-indicator status bar
 
-A local-first node renders a permanently-visible status bar with three indicators — Node Health, Link Status, and Data Freshness — so the user can always perceive how the node's behavior depends on its current network and sync state.
+A local-first node renders a permanently-visible status bar with three indicators - Node Health, Link Status, and Data Freshness - so the user can always perceive how the node's behavior depends on its current network and sync state.
 
 **Kleppmann:** `P3, P4` · **Scope:** `foundational` · **Failure modes:** `partition, peer-discovery-failure`
 
@@ -5573,9 +5573,9 @@ A local-first node renders a permanently-visible status bar with three indicator
 
 **Verification:** Walk every UI route in the application; the status bar is present on each one with all three indicators rendered.
 
-#### `ch17-building-first-node:BUILD-17` — Configurable data-freshness threshold as product decision
+#### `ch17-building-first-node:BUILD-17` - Configurable data-freshness threshold as product decision
 
-The staleness threshold that flips Data Freshness from healthy to stale is a configurable product decision (default five minutes) chosen per application context — short for high-frequency collaborative writing, long for intermittent-connectivity field deployments — and fixed before the first user-facing release.
+The staleness threshold that flips Data Freshness from healthy to stale is a configurable product decision (default five minutes) chosen per application context - short for high-frequency collaborative writing, long for intermittent-connectivity field deployments - and fixed before the first user-facing release.
 
 **Kleppmann:** `P3` · **Scope:** `foundational`
 
@@ -5587,9 +5587,9 @@ The staleness threshold that flips Data Freshness from healthy to stale is a con
 
 **Verification:** Configuration surface exposes the threshold; an integration test asserts the indicator transitions to stale at the configured boundary.
 
-#### `ch17-building-first-node:BUILD-18` — Three-state optimistic write button
+#### `ch17-building-first-node:BUILD-18` - Three-state optimistic write button
 
-Every write surface in a local-first application reflects three local-write states — pending (in-flight to local store), confirmed (durable on local device), failed (local-store error only) — without conflating sync delay with write failure.
+Every write surface in a local-first application reflects three local-write states - pending (in-flight to local store), confirmed (durable on local device), failed (local-store error only) - without conflating sync delay with write failure.
 
 **Kleppmann:** `P1, P3` · **Scope:** `foundational` · **Failure modes:** `partition`
 
@@ -5602,7 +5602,7 @@ Every write surface in a local-first application reflects three local-write stat
 
 **Verification:** Disconnect network and submit a write; the button reaches confirmed and the Data Freshness indicator transitions to stale, but the write does not enter the failed state.
 
-#### `ch17-building-first-node:BUILD-19` — Plugin contract as platform stability boundary
+#### `ch17-building-first-node:BUILD-19` - Plugin contract as platform stability boundary
 
 Domain features attach to the node only through the plugin extension-point contract, which is the stability boundary between the platform and the application; pre-1.0 kernel services beneath the contract may change without notice.
 
@@ -5616,9 +5616,9 @@ Domain features attach to the node only through the plugin extension-point contr
 
 **Verification:** Static analysis confirms application code references only the documented extension-point types; references to internal kernel services from application code raise a build warning.
 
-#### `ch17-building-first-node:BUILD-20` — Five-extension-point plugin surface
+#### `ch17-building-first-node:BUILD-20` - Five-extension-point plugin surface
 
-The complete plugin surface for a domain feature consists of exactly five extension points — ILocalNodePlugin (lifecycle), IStreamDefinition (CRDT streams and sync buckets), IProjectionBuilder (read-model projections), ISchemaVersion (schema versions and upcasters), and IUiBlockManifest (UI blocks).
+The complete plugin surface for a domain feature consists of exactly five extension points - ILocalNodePlugin (lifecycle), IStreamDefinition (CRDT streams and sync buckets), IProjectionBuilder (read-model projections), ISchemaVersion (schema versions and upcasters), and IUiBlockManifest (UI blocks).
 
 **Kleppmann:** `P5` · **Scope:** `inverted-stack-specific`
 
@@ -5632,7 +5632,7 @@ The complete plugin surface for a domain feature consists of exactly five extens
 
 **Verification:** A plugin that uses all five extension points loads cleanly; omitting one of the five does not break the others (each is independently optional except ILocalNodePlugin).
 
-#### `ch17-building-first-node:BUILD-21` — Reverse-DNS plugin identifier with semver version
+#### `ch17-building-first-node:BUILD-21` - Reverse-DNS plugin identifier with semver version
 
 Each plugin declares a reverse-DNS-style Id (used by the dependency resolver) and a semantic-version Version (logged at load time for diagnostics) so that startup logs uniquely identify the running plugin build.
 
@@ -5647,7 +5647,7 @@ Each plugin declares a reverse-DNS-style Id (used by the dependency resolver) an
 
 **Verification:** Inspect a node's startup logs; every loaded plugin is identified by reverse-DNS Id and a semver string.
 
-#### `ch17-building-first-node:BUILD-22` — Single-team-per-install v1 scope decision
+#### `ch17-building-first-node:BUILD-22` - Single-team-per-install v1 scope decision
 
 The first-shipped node supports exactly one team per installation by design, with the multi-team workspace-switcher model deferred to v2 because the v2 migration path is additive (per-team HKDF subkeys, per-workspace state isolation) rather than a rewrite.
 
@@ -5661,9 +5661,9 @@ The first-shipped node supports exactly one team per installation by design, wit
 
 **Verification:** Install the node; only one team can be onboarded; attempting a second team-onboard returns a deterministic refusal with a v2 forward-reference message.
 
-#### `ch17-building-first-node:BUILD-23` — Recursive declare-project-add-extend feature loop
+#### `ch17-building-first-node:BUILD-23` - Recursive declare-project-add-extend feature loop
 
-The development loop for every new domain feature is the same five-step cycle — declare the IStreamDefinition, build the IProjectionBuilder, add the UI surface, run two instances on LAN to validate sync, then implement the next feature as another ILocalNodePlugin returning to step one.
+The development loop for every new domain feature is the same five-step cycle - declare the IStreamDefinition, build the IProjectionBuilder, add the UI surface, run two instances on LAN to validate sync, then implement the next feature as another ILocalNodePlugin returning to step one.
 
 **Kleppmann:** `P1, P3, P4, P5` · **Scope:** `inverted-stack-specific`
 
@@ -5683,7 +5683,7 @@ The development loop for every new domain feature is the same five-step cycle �
 
 **Concept count:** 24
 
-#### `ch18-migrating-existing-saas:MIG-01` — Reversible four-phase migration model
+#### `ch18-migrating-existing-saas:MIG-01` - Reversible four-phase migration model
 
 A SaaS-to-local-first migration runs in four sequential phases where every gate below the final phase is reversible without data loss, replacing rewrite-everything cutover with phase-bounded engineering investment.
 
@@ -5698,9 +5698,9 @@ A SaaS-to-local-first migration runs in four sequential phases where every gate 
 
 **Verification:** Migration runbook exists naming the four phases with per-phase rollback procedure; rollback procedures for Phases 1 through 3 are exercised in a staging environment without invoking a data migration job.
 
-#### `ch18-migrating-existing-saas:MIG-02` — Five migration triggers
+#### `ch18-migrating-existing-saas:MIG-02` - Five migration triggers
 
-A team justifies migrating a hosted SaaS to local-first only when at least one of five named business triggers applies — compliance mandate, data-residency objection in enterprise sales, vendor reliability or termination event, churn driven by data sovereignty, or procurement review blocking adoption.
+A team justifies migrating a hosted SaaS to local-first only when at least one of five named business triggers applies - compliance mandate, data-residency objection in enterprise sales, vendor reliability or termination event, churn driven by data sovereignty, or procurement review blocking adoption.
 
 **Kleppmann:** `P5, P7` · **Scope:** `foundational` · **Failure modes:** `data-residency-objection, vendor-acquisition, vendor-outage`
 
@@ -5711,7 +5711,7 @@ A team justifies migrating a hosted SaaS to local-first only when at least one o
 
 **Verification:** Migration kickoff document names the triggering condition with linked customer or regulatory evidence, reviewed by a non-engineering stakeholder before engineering investment begins.
 
-#### `ch18-migrating-existing-saas:MIG-03` — Five-filter eligibility framework applied per record class
+#### `ch18-migrating-existing-saas:MIG-03` - Five-filter eligibility framework applied per record class
 
 Migration eligibility is determined by running each record class through five filters covering ownership, staleness tolerance, conflict resolvability, offline value, and compliance posture, with the result selecting Zone B, Zone C, or no migration at all.
 
@@ -5726,9 +5726,9 @@ Migration eligibility is determined by running each record class through five fi
 
 **Verification:** A filter-result table exists with one row per record class and five filter columns, archived in the migration plan.
 
-#### `ch18-migrating-existing-saas:MIG-04` — AP-class versus CP-class record separation
+#### `ch18-migrating-existing-saas:MIG-04` - AP-class versus CP-class record separation
 
-Records are classified as AP-class — user-owned, eventually consistent, suitable for CRDT replication — or CP-class — server-coordinated, requiring linearizable writes — and the two classes never share a backing table.
+Records are classified as AP-class - user-owned, eventually consistent, suitable for CRDT replication - or CP-class - server-coordinated, requiring linearizable writes - and the two classes never share a backing table.
 
 **Kleppmann:** `P3, P4` · **Scope:** `foundational` · **Failure modes:** `partition`
 
@@ -5742,9 +5742,9 @@ Records are classified as AP-class — user-owned, eventually consistent, suitab
 
 **Verification:** Schema audit script enumerates tables and asserts each is labeled AP or CP; CI rejects schema changes that introduce mixed-class tables.
 
-#### `ch18-migrating-existing-saas:MIG-05` — Three-plane Bridge separation
+#### `ch18-migrating-existing-saas:MIG-05` - Three-plane Bridge separation
 
-The Zone C hybrid architecture separates concerns into three logical planes — a shared control plane for signup and billing, a per-tenant data plane holding workspace data, and a shared stateless relay tier transporting encrypted deltas — with no team data permitted in the control or relay tiers.
+The Zone C hybrid architecture separates concerns into three logical planes - a shared control plane for signup and billing, a per-tenant data plane holding workspace data, and a shared stateless relay tier transporting encrypted deltas - with no team data permitted in the control or relay tiers.
 
 **Kleppmann:** `P5, P6, P7` · **Scope:** `inverted-stack-specific` · **Failure modes:** `data-residency-objection`
 
@@ -5758,7 +5758,7 @@ The Zone C hybrid architecture separates concerns into three logical planes — 
 
 **Verification:** Bridge audit tooling enumerates control-plane tables and confirms only the registry shape; relay process inspection shows no persistent storage attached for content.
 
-#### `ch18-migrating-existing-saas:MIG-06` — Hosted-node peer as ciphertext-only participant
+#### `ch18-migrating-existing-saas:MIG-06` - Hosted-node peer as ciphertext-only participant
 
 The server-side hosted-node peer participates in sync as a ciphertext-only peer that holds encrypted deltas for catch-up-on-reconnect but cannot decrypt without a team-issued role attestation.
 
@@ -5773,9 +5773,9 @@ The server-side hosted-node peer participates in sync as a ciphertext-only peer 
 
 **Verification:** Bridge audit job inspects the hosted-node process key store and confirms absence of plaintext keys for any tenant; integration test attempts decryption without attestation and observes failure.
 
-#### `ch18-migrating-existing-saas:MIG-07` — Three Bridge tenant trust levels
+#### `ch18-migrating-existing-saas:MIG-07` - Three Bridge tenant trust levels
 
-Bridge supports three tenant trust levels — relay-only as the default with no operator plaintext access, attested hosted peer as opt-in for backup verification and admin-assisted recovery, and self-hosted nodes that use Bridge only for the control plane.
+Bridge supports three tenant trust levels - relay-only as the default with no operator plaintext access, attested hosted peer as opt-in for backup verification and admin-assisted recovery, and self-hosted nodes that use Bridge only for the control plane.
 
 **Kleppmann:** `P6, P7` · **Scope:** `inverted-stack-specific`
 
@@ -5788,7 +5788,7 @@ Bridge supports three tenant trust levels — relay-only as the default with no 
 
 **Verification:** Tenant provisioning workflow exposes the three trust levels as named options; per-tenant audit query returns the active trust level.
 
-#### `ch18-migrating-existing-saas:MIG-08` — Per-tenant data isolation as first decision
+#### `ch18-migrating-existing-saas:MIG-08` - Per-tenant data isolation as first decision
 
 Migration begins by separating a shared-schema multi-tenant database into per-tenant data planes, wired through a single tenant-context interface that becomes the migration seam between the prior projection and a CRDT-backed projection.
 
@@ -5803,7 +5803,7 @@ Migration begins by separating a shared-schema multi-tenant database into per-te
 
 **Verification:** Static analysis confirms no query bypasses ITenantContext; schema inspection shows per-tenant database paths rather than a shared schema with tenant-ID columns.
 
-#### `ch18-migrating-existing-saas:MIG-09` — Append-only event tables as migration seam
+#### `ch18-migrating-existing-saas:MIG-09` - Append-only event tables as migration seam
 
 Domain state is stored as append-only event rows for mutable aggregates rather than last-write-wins field mutations, providing a mechanical replay path from server events to equivalent CRDT operations.
 
@@ -5817,7 +5817,7 @@ Domain state is stored as append-only event rows for mutable aggregates rather t
 
 **Verification:** Schema review identifies aggregate tables and confirms append-only event-row structure; replay job transforms event rows into CRDT operations and asserts projection equivalence.
 
-#### `ch18-migrating-existing-saas:MIG-10` — Block-contract UI wiring
+#### `ch18-migrating-existing-saas:MIG-10` - Block-contract UI wiring
 
 UI components consume block contracts whose data shape is identical whether backed by a server-side projection or a CRDT-backed local document, so the storage layer can swap underneath without UI rewrites.
 
@@ -5831,7 +5831,7 @@ UI components consume block contracts whose data shape is identical whether back
 
 **Verification:** Component-level dependency scan confirms UI imports reference block contracts only; integration test swaps the backing store for a single block and observes no UI code change.
 
-#### `ch18-migrating-existing-saas:MIG-11` — Business logic out of stored procedures
+#### `ch18-migrating-existing-saas:MIG-11` - Business logic out of stored procedures
 
 Validation, computation, and workflow logic moves from database stored procedures to application-layer domain services so it can replicate to local nodes that execute in the application process.
 
@@ -5845,7 +5845,7 @@ Validation, computation, and workflow logic moves from database stored procedure
 
 **Verification:** Audit script enumerates stored procedures and classifies each as set-operation-only or violation; violations are zero before Phase 3 begins.
 
-#### `ch18-migrating-existing-saas:MIG-12` — Phase 1 shadow mode with feature-flag rollback
+#### `ch18-migrating-existing-saas:MIG-12` - Phase 1 shadow mode with feature-flag rollback
 
 A local node is deployed alongside the existing SaaS, mirroring data read-only and serving UI reads while writes still flow through the server API, with a standard feature flag providing instant deployment-free rollback.
 
@@ -5861,7 +5861,7 @@ A local node is deployed alongside the existing SaaS, mirroring data read-only a
 
 **Verification:** Production toggle of the flag from on to off restores server-API reads within one configuration-refresh interval and without redeploying the application.
 
-#### `ch18-migrating-existing-saas:MIG-13` — Phase 1 read-latency and consistency success criteria
+#### `ch18-migrating-existing-saas:MIG-13` - Phase 1 read-latency and consistency success criteria
 
 Phase 1 is judged successful only when P95 read latency drops by at least 20% with no write-consistency regression and the local replica stays within the declared AP staleness window.
 
@@ -5876,9 +5876,9 @@ Phase 1 is judged successful only when P95 read latency drops by at least 20% wi
 
 **Verification:** Phase 1 exit report includes the three measurements with pre- and post-deployment values; CAB sign-off references the report.
 
-#### `ch18-migrating-existing-saas:MIG-14` — Phase 2 local writes for AP-class only
+#### `ch18-migrating-existing-saas:MIG-14` - Phase 2 local writes for AP-class only
 
-Phase 2 routes AP-class block writes through the CRDT engine for instant local feedback while CP-class records — billing, subscription limits, role membership, audit logs — remain server-authoritative.
+Phase 2 routes AP-class block writes through the CRDT engine for instant local feedback while CP-class records - billing, subscription limits, role membership, audit logs - remain server-authoritative.
 
 **Kleppmann:** `P1, P3, P4` · **Scope:** `foundational` · **Failure modes:** `partition`
 
@@ -5892,7 +5892,7 @@ Phase 2 routes AP-class block writes through the CRDT engine for instant local f
 
 **Verification:** Convergence test against AP-class aggregates demonstrates byte-identical state after concurrent edits; CP-class regression suite passes unchanged.
 
-#### `ch18-migrating-existing-saas:MIG-15` — Phase 2 reversibility via CRDT log preservation
+#### `ch18-migrating-existing-saas:MIG-15` - Phase 2 reversibility via CRDT log preservation
 
 Phase 2 is reversible per domain by disabling CRDT writes, returning authority to the server API while preserving the CRDT event log so local authority can be re-enabled later by replay.
 
@@ -5907,9 +5907,9 @@ Phase 2 is reversible per domain by disabling CRDT writes, returning authority t
 
 **Verification:** Per-domain rollback procedure is exercised on a staging tenant; re-enable replay produces the expected projection without loss.
 
-#### `ch18-migrating-existing-saas:MIG-16` — Phase 3 full local authority for new workspaces
+#### `ch18-migrating-existing-saas:MIG-16` - Phase 3 full local authority for new workspaces
 
-Newly provisioned workspaces start with the full local-node stack — gossip sync daemon, per-workspace SQLCipher database, device keypair issuance, role attestations — while existing workspaces remain at Phase 2 until opting into Phase 4.
+Newly provisioned workspaces start with the full local-node stack - gossip sync daemon, per-workspace SQLCipher database, device keypair issuance, role attestations - while existing workspaces remain at Phase 2 until opting into Phase 4.
 
 **Kleppmann:** `P1, P2, P3, P4, P6` · **Scope:** `inverted-stack-specific` · **Failure modes:** `partition, vendor-outage`
 
@@ -5924,7 +5924,7 @@ Newly provisioned workspaces start with the full local-node stack — gossip syn
 
 **Verification:** New-workspace integration test runs offline end-to-end and confirms full feature fidelity; topology test measures convergence within the configured gossip interval.
 
-#### `ch18-migrating-existing-saas:MIG-17` — BYOC backup mandatory at Phase 3 provisioning
+#### `ch18-migrating-existing-saas:MIG-17` - BYOC backup mandatory at Phase 3 provisioning
 
 New workspaces configure Bring-Your-Own-Cloud backup at provisioning time because the hosted-node peer is a relay cache that evicts and does not guarantee retention.
 
@@ -5938,7 +5938,7 @@ New workspaces configure Bring-Your-Own-Cloud backup at provisioning time becaus
 
 **Verification:** Provisioning UI test confirms BYOC configuration is required by default; tenant audit query returns the backup destination per workspace.
 
-#### `ch18-migrating-existing-saas:MIG-18` — Phase 4 copy-transform-validate with projection diff
+#### `ch18-migrating-existing-saas:MIG-18` - Phase 4 copy-transform-validate with projection diff
 
 Phase 4 migrates an existing workspace by reading its server-side domain events, transforming each into a CRDT operation, projecting both stores, and asserting projection equivalence under a declared comparison contract before switching the write path.
 
@@ -5956,7 +5956,7 @@ Phase 4 migrates an existing workspace by reading its server-side domain events,
 
 **Verification:** A pilot workspace migration produces a clean projection diff and the diff report is archived; chaos test injects a transformer bug and confirms fail-fast hold at Phase 2.
 
-#### `ch18-migrating-existing-saas:MIG-19` — Phase 4 per-workspace one-way door with 30-day stabilization
+#### `ch18-migrating-existing-saas:MIG-19` - Phase 4 per-workspace one-way door with 30-day stabilization
 
 Phase 4 is opt-in per workspace, runs incrementally one workspace at a time, holds each migrated workspace for 30 days on Phase 3 before treating the migration as stable, and is not reversible without re-running the copy-transform in reverse.
 
@@ -5972,9 +5972,9 @@ Phase 4 is opt-in per workspace, runs incrementally one workspace at a time, hol
 
 **Verification:** Migration runbook documents the per-workspace cadence and the 30-day hold; rollout dashboard tracks per-workspace days-since-cutover.
 
-#### `ch18-migrating-existing-saas:MIG-20` — Phase transition gates with hard stops
+#### `ch18-migrating-existing-saas:MIG-20` - Phase transition gates with hard stops
 
-Each phase transition is governed by an explicit gate question with a named hard-stop condition — CP-class write regression blocks Phase 1 to 2, merge data loss blocks Phase 2 to 3, projection-diff failure blocks fleet rollout from Phase 3 to 4.
+Each phase transition is governed by an explicit gate question with a named hard-stop condition - CP-class write regression blocks Phase 1 to 2, merge data loss blocks Phase 2 to 3, projection-diff failure blocks fleet rollout from Phase 3 to 4.
 
 **Kleppmann:** `P5` · **Scope:** `foundational`
 
@@ -5986,7 +5986,7 @@ Each phase transition is governed by an explicit gate question with a named hard
 
 **Verification:** CAB record exists per transition with the gate question, evidence, and decision; hard-stop simulation in staging confirms the transition is blocked.
 
-#### `ch18-migrating-existing-saas:MIG-21` — Failure mode — server-side feature gates re-centralizing the architecture
+#### `ch18-migrating-existing-saas:MIG-21` - Failure mode - server-side feature gates re-centralizing the architecture
 
 A drift pattern in which feature flag evaluation, analytics, A/B testing, or rate limiting routes AP-class decisions through server calls, gradually re-centralizing the architecture under the appearance of harmless individual additions.
 
@@ -6001,7 +6001,7 @@ A drift pattern in which feature flag evaluation, analytics, A/B testing, or rat
 
 **Verification:** Static analysis enumerates server-call sites on AP-class write paths and asserts the count is zero; periodic architecture audit confirms feature-flag evaluation remains local.
 
-#### `ch18-migrating-existing-saas:MIG-22` — Failure mode — relay mistaken for backup
+#### `ch18-migrating-existing-saas:MIG-22` - Failure mode - relay mistaken for backup
 
 An operational failure mode in which teams skip BYOC backup configuration on the assumption that the hosted-node peer holds their data durably, then discover during a device-loss incident that the relay is a cache that evicts rather than a guaranteed-retention store.
 
@@ -6015,7 +6015,7 @@ An operational failure mode in which teams skip BYOC backup configuration on the
 
 **Verification:** Tenant onboarding documents declare the relay-as-cache contract; recovery drill is run and restores from the BYOC destination.
 
-#### `ch18-migrating-existing-saas:MIG-23` — Per-phase Sunfish package availability matrix
+#### `ch18-migrating-existing-saas:MIG-23` - Per-phase Sunfish package availability matrix
 
 Each Sunfish package becomes appropriate at a specific migration phase and reaching for a package before its phase is an architectural anti-pattern, with Sunfish.Foundation.FeatureManagement wired first and kernel packages introduced only as their phase arrives.
 
@@ -6031,7 +6031,7 @@ Each Sunfish package becomes appropriate at a specific migration phase and reach
 
 **Verification:** Build inspection per phase confirms package set matches the matrix; CI rule rejects pull requests that introduce kernel packages before their declared phase.
 
-#### `ch18-migrating-existing-saas:MIG-24` — Greenfield Zone C bypasses migration path
+#### `ch18-migrating-existing-saas:MIG-24` - Greenfield Zone C bypasses migration path
 
 A greenfield product whose five-filter framework returns Zone C clones the Bridge accelerator directly rather than running the migration phases, because the control plane, relay tier, per-tenant data plane, and ciphertext-only hosted peer ship pre-separated.
 
@@ -6052,7 +6052,7 @@ A greenfield product whose five-filter framework returns Zone C clones the Bridg
 
 **Concept count:** 23
 
-#### `ch19-shipping-to-enterprise:ENT-01` — Dual-license structure with commercial exception
+#### `ch19-shipping-to-enterprise:ENT-01` - Dual-license structure with commercial exception
 
 The open-source core ships under AGPLv3 by default with a parallel commercial license offered to organizations that cannot accept the network-use clause.
 
@@ -6066,7 +6066,7 @@ The open-source core ships under AGPLv3 by default with a parallel commercial li
 
 **Verification:** Repository inspection finds both license texts under LICENSES/ and a top-level NOTICE or README pointer to the commercial exception
 
-#### `ch19-shipping-to-enterprise:ENT-02` — Contributor License Agreement precondition
+#### `ch19-shipping-to-enterprise:ENT-02` - Contributor License Agreement precondition
 
 An inbound-equals-outbound CLA is in place before any external contribution is accepted, preserving the legal authority to offer the commercial license exception.
 
@@ -6080,7 +6080,7 @@ An inbound-equals-outbound CLA is in place before any external contribution is a
 
 **Verification:** Repository CI configuration enforces a CLA-check status before merge; a signed CLA record exists for every author in git history
 
-#### `ch19-shipping-to-enterprise:ENT-03` — Managed-endpoint packaging contract
+#### `ch19-shipping-to-enterprise:ENT-03` - Managed-endpoint packaging contract
 
 The product ships as a signed MSIX/MSI on Windows and a signed and notarized .pkg or .dmg on macOS, with no archive-and-script delivery path offered to enterprise customers.
 
@@ -6095,9 +6095,9 @@ The product ships as a signed MSIX/MSI on Windows and a signed and notarized .pk
 
 **Verification:** Release artifacts include both Windows and macOS installers; silent install completes without UI on a clean managed-endpoint test image
 
-#### `ch19-shipping-to-enterprise:ENT-04` — System-context daemon registration
+#### `ch19-shipping-to-enterprise:ENT-04` - System-context daemon registration
 
-The sync daemon is installed at system scope — Windows Service or /Library/LaunchDaemons launch agent — so it starts before user login and runs under MDM supervision rather than as a user-context process.
+The sync daemon is installed at system scope - Windows Service or /Library/LaunchDaemons launch agent - so it starts before user login and runs under MDM supervision rather than as a user-context process.
 
 **Kleppmann:** `P3` · **Scope:** `inverted-stack-specific`
 
@@ -6109,7 +6109,7 @@ The sync daemon is installed at system scope — Windows Service or /Library/Lau
 
 **Verification:** Post-install inspection on each platform confirms the daemon is registered at system scope and is restarted by the OS service manager after a forced kill
 
-#### `ch19-shipping-to-enterprise:ENT-05` — macOS Developer ID signing and Apple notarization
+#### `ch19-shipping-to-enterprise:ENT-05` - macOS Developer ID signing and Apple notarization
 
 Every shipped macOS binary is signed with a Developer ID certificate under the hardened runtime and submitted to Apple notarization, with the notarization ticket stapled into the distributable package.
 
@@ -6124,7 +6124,7 @@ Every shipped macOS binary is signed with a Developer ID certificate under the h
 
 **Verification:** spctl --assess --type execute on the published artifact returns accepted with notarized status on a clean macOS endpoint
 
-#### `ch19-shipping-to-enterprise:ENT-06` — Windows Authenticode signing for App Control
+#### `ch19-shipping-to-enterprise:ENT-06` - Windows Authenticode signing for App Control
 
 Every Windows executable and DLL is Authenticode-signed with an organization-owned certificate chained to a trusted commercial CA so that App Control for Business publisher-trust rules cover the product.
 
@@ -6139,7 +6139,7 @@ Every Windows executable and DLL is Authenticode-signed with an organization-own
 
 **Verification:** signtool verify /pa /v on any shipped binary returns success with a chain to a trusted commercial root
 
-#### `ch19-shipping-to-enterprise:ENT-07` — MDM-platform-agnostic attestation core
+#### `ch19-shipping-to-enterprise:ENT-07` - MDM-platform-agnostic attestation core
 
 Sunfish.Kernel.Security verifies the enterprise attestation issuer public key from node-config.json regardless of which MDM platform deployed the configuration, so adding a new MDM is a packaging-and-detection-rule exercise rather than a kernel change.
 
@@ -6153,7 +6153,7 @@ Sunfish.Kernel.Security verifies the enterprise attestation issuer public key fr
 
 **Verification:** Code review confirms no MDM-platform identifier influences attestation verification; integration tests pass identical attestation flows under at least Intune and Jamf packaging
 
-#### `ch19-shipping-to-enterprise:ENT-08` — Six-MDM coverage matrix
+#### `ch19-shipping-to-enterprise:ENT-08` - Six-MDM coverage matrix
 
 The product ships deployment recipes for Intune, Jamf, SOTI MobiControl, IBM MaaS360, Ivanti Endpoint Manager, and SCCM so that GCC, Indian BFSI, APAC, and African enterprise fleets can deploy via their existing MDM platform.
 
@@ -6167,7 +6167,7 @@ The product ships deployment recipes for Intune, Jamf, SOTI MobiControl, IBM Maa
 
 **Verification:** docs/ contains a per-MDM deployment runbook for each of the six platforms and each recipe references the same node-config.json schema
 
-#### `ch19-shipping-to-enterprise:ENT-09` — Pre-seeded node-config.json schema
+#### `ch19-shipping-to-enterprise:ENT-09` - Pre-seeded node-config.json schema
 
 A versioned JSON configuration schema delivered to a platform-specific path before first run that supplies team identity, relay endpoint, allowed buckets, data directory, log level, internal update server URL, and the enterprise attestation issuer public key.
 
@@ -6182,7 +6182,7 @@ A versioned JSON configuration schema delivered to a platform-specific path befo
 
 **Verification:** Starting the host with a malformed or incomplete node-config.json produces a logged validation error and a non-zero exit; integration test asserts no default-fallback behavior
 
-#### `ch19-shipping-to-enterprise:ENT-10` — Compliance check at every capability negotiation
+#### `ch19-shipping-to-enterprise:ENT-10` - Compliance check at every capability negotiation
 
 MDM compliance is re-evaluated at every capability-negotiation handshake rather than once at install, so revocation of MDM compliance propagates to data access within minutes of the next handshake boundary.
 
@@ -6196,7 +6196,7 @@ MDM compliance is re-evaluated at every capability-negotiation handshake rather 
 
 **Verification:** Integration test marks a node non-compliant mid-session and asserts the next handshake returns ERR_ATTESTATION_REQUIRED within the documented propagation window
 
-#### `ch19-shipping-to-enterprise:ENT-11` — Build-time CycloneDX SBOM generation
+#### `ch19-shipping-to-enterprise:ENT-11` - Build-time CycloneDX SBOM generation
 
 A CycloneDX-format SBOM is generated from source at build time as a required CI gate and published alongside every release artifact at a predictable URL.
 
@@ -6211,7 +6211,7 @@ A CycloneDX-format SBOM is generated from source at build time as a required CI 
 
 **Verification:** Release pipeline log shows SBOM generation as a required gate; the published mirror serves the SBOM and its SHA-256 at the documented URL
 
-#### `ch19-shipping-to-enterprise:ENT-12` — CVE scan as release gate
+#### `ch19-shipping-to-enterprise:ENT-12` - CVE scan as release gate
 
 A vulnerability scan runs the generated SBOM against a known-CVE database during CI and fails the release on any high or critical finding without a documented suppression entry.
 
@@ -6226,7 +6226,7 @@ A vulnerability scan runs the generated SBOM against a known-CVE database during
 
 **Verification:** Release pipeline configuration shows --fail-on high (or equivalent) wired in; suppression file contains expiry dates and justifications for every entry
 
-#### `ch19-shipping-to-enterprise:ENT-13` — Published CVE response SLA
+#### `ch19-shipping-to-enterprise:ENT-13` - Published CVE response SLA
 
 A written, severity-tiered CVE response commitment specifying advisory and patch timelines is published before procurement asks and demonstrably met in practice.
 
@@ -6241,9 +6241,9 @@ A written, severity-tiered CVE response commitment specifying advisory and patch
 
 **Verification:** A SECURITY.md or equivalent document contains the severity-tiered SLA table; release records show actual response times meeting the published commitments
 
-#### `ch19-shipping-to-enterprise:ENT-14` — Pre-rehearsed critical-CVE patch drill
+#### `ch19-shipping-to-enterprise:ENT-14` - Pre-rehearsed critical-CVE patch drill
 
-The full critical-patch release sequence — fix, rebuild, regenerate SBOM, rescan, sign and notarize, mirror, and canary push — is rehearsed end-to-end during the first sprint after general availability and the elapsed time measured against the published SLA.
+The full critical-patch release sequence - fix, rebuild, regenerate SBOM, rescan, sign and notarize, mirror, and canary push - is rehearsed end-to-end during the first sprint after general availability and the elapsed time measured against the published SLA.
 
 **Scope:** `foundational`
 
@@ -6255,7 +6255,7 @@ The full critical-patch release sequence — fix, rebuild, regenerate SBOM, resc
 
 **Verification:** Engineering records contain a dated dry-fire patch report with per-step elapsed times and remediation actions for any step exceeding budget
 
-#### `ch19-shipping-to-enterprise:ENT-15` — Named admin revocation command with audit trail
+#### `ch19-shipping-to-enterprise:ENT-15` - Named admin revocation command with audit trail
 
 Revoking a user is a single named CLI command that rotates the affected role's KEK, re-wraps DEKs excluding the revoked user, broadcasts a signed revocation through the relay, and writes a revocation record to the audit log.
 
@@ -6272,9 +6272,9 @@ Revoking a user is a single named CLI command that rotates the affected role's K
 
 **Verification:** Running the revocation command against a test team produces a new KEK, an audit log entry with operator identity, and ERR_KEY_REVOKED on the revoked node's next handshake
 
-#### `ch19-shipping-to-enterprise:ENT-16` — Air-gap-strict deployment posture
+#### `ch19-shipping-to-enterprise:ENT-16` - Air-gap-strict deployment posture
 
-The same binary supports a strict air-gap posture configured by pointing updateServerUrl and relayEndpoint at internal infrastructure, omitting telemetry, and applying egress firewall rules — without a separate build artifact.
+The same binary supports a strict air-gap posture configured by pointing updateServerUrl and relayEndpoint at internal infrastructure, omitting telemetry, and applying egress firewall rules - without a separate build artifact.
 
 **Kleppmann:** `P3, P5, P7` · **Scope:** `inverted-stack-specific` · **Failure modes:** `vendor-outage`
 
@@ -6287,7 +6287,7 @@ The same binary supports a strict air-gap posture configured by pointing updateS
 
 **Verification:** A binary identical to the public release runs in an isolated test network with internal mirror and internal relay only; no outbound public-internet connections are observed
 
-#### `ch19-shipping-to-enterprise:ENT-17` — Internal update server REST contract
+#### `ch19-shipping-to-enterprise:ENT-17` - Internal update server REST contract
 
 The internal update server exposes a minimal REST surface for latest-version metadata, versioned artifact downloads, and per-release SBOM with SHA-256 digest, allowing offline mirrors to satisfy the same client expectations as the public update feed.
 
@@ -6304,9 +6304,9 @@ The internal update server exposes a minimal REST surface for latest-version met
 
 **Verification:** Conformance test pulls latest.json, downloads the artifact, validates the SHA-256 match, fetches and digest-verifies the SBOM, and rejects any artifact whose digest fails to match
 
-#### `ch19-shipping-to-enterprise:ENT-18` — OCSP and CRL connectivity preservation
+#### `ch19-shipping-to-enterprise:ENT-18` - OCSP and CRL connectivity preservation
 
-Air-gap egress policy must preserve a path to OCSP and CRL responders — internal mirror, certificate pinning with long-lived certs, or open egress to public responders — because blocking revocation checking breaks TLS chain validation across the entire node, not just update checks.
+Air-gap egress policy must preserve a path to OCSP and CRL responders - internal mirror, certificate pinning with long-lived certs, or open egress to public responders - because blocking revocation checking breaks TLS chain validation across the entire node, not just update checks.
 
 **Kleppmann:** `P6` · **Scope:** `foundational`
 
@@ -6318,9 +6318,9 @@ Air-gap egress policy must preserve a path to OCSP and CRL responders — intern
 
 **Verification:** Air-gap deployment validation includes a TLS handshake to the relay endpoint succeeding without OCSP soft-fail; deployment runbook lists OCSP/CRL on the do-not-block list
 
-#### `ch19-shipping-to-enterprise:ENT-19` — Jurisdictional self-hosted Bridge relay
+#### `ch19-shipping-to-enterprise:ENT-19` - Jurisdictional self-hosted Bridge relay
 
-For compliance-mandated markets the self-hosted Bridge relay runs on infrastructure within the required jurisdiction — on-premise, sovereign cloud, or domestic data center — making the relay-sovereignty guarantee legally defensible rather than a marketing claim.
+For compliance-mandated markets the self-hosted Bridge relay runs on infrastructure within the required jurisdiction - on-premise, sovereign cloud, or domestic data center - making the relay-sovereignty guarantee legally defensible rather than a marketing claim.
 
 **Kleppmann:** `P5, P6, P7` · **Scope:** `inverted-stack-specific` · **Failure modes:** `data-residency-objection, vendor-outage`
 
@@ -6334,7 +6334,7 @@ For compliance-mandated markets the self-hosted Bridge relay runs on infrastruct
 
 **Verification:** Deployed relay rejects non-TLS-1.3 connections, accepts only attested Ed25519 identities, has no payload-decryption code paths, and is hosted within the regulator-approved jurisdiction (verifiable from cloud-provider region or on-premise inventory)
 
-#### `ch19-shipping-to-enterprise:ENT-20` — Power-interruption-resilient endpoint specification
+#### `ch19-shipping-to-enterprise:ENT-20` - Power-interruption-resilient endpoint specification
 
 For deployments in load-shedding or unstable-grid environments the hardware specification names a UPS with at least 30-minute runtime and SSDs with power-loss-protection capacitors as a baseline, not an optional upgrade.
 
@@ -6349,7 +6349,7 @@ For deployments in load-shedding or unstable-grid environments the hardware spec
 
 **Verification:** Abrupt-power-loss test drops AC mid-write and confirms event-log durability, clean restart, gossip resumption, and successful MDM re-attestation on next handshake
 
-#### `ch19-shipping-to-enterprise:ENT-21` — Compliance documentation pipeline
+#### `ch19-shipping-to-enterprise:ENT-21` - Compliance documentation pipeline
 
 A repeatable workflow that exports the audit log, SBOM, Grype CVE report, MDM compliance manifest, and Bridge relay jurisdictional configuration and assembles them into the format each compliance regime accepts (SOC 2 Type II, GDPR Article 30, EU CRA, regimes in Appendix F).
 
@@ -6364,9 +6364,9 @@ A repeatable workflow that exports the audit log, SBOM, Grype CVE report, MDM co
 
 **Verification:** Documentation pipeline produces a SOC 2 evidence bundle, a GDPR Article 30 record, and an EU CRA SBOM attestation from a single test deployment without manual data re-entry
 
-#### `ch19-shipping-to-enterprise:ENT-22` — Three-runbook minimum for enterprise GA
+#### `ch19-shipping-to-enterprise:ENT-22` - Three-runbook minimum for enterprise GA
 
-Enterprise general availability requires three published runbooks — node onboarding, node deprovisioning, and incident response for node or key compromise — each with named commands, expected outputs, and audit-log verification steps.
+Enterprise general availability requires three published runbooks - node onboarding, node deprovisioning, and incident response for node or key compromise - each with named commands, expected outputs, and audit-log verification steps.
 
 **Kleppmann:** `P6, P7` · **Scope:** `foundational` · **Failure modes:** `key-compromise`
 
@@ -6379,9 +6379,9 @@ Enterprise general availability requires three published runbooks — node onboa
 
 **Verification:** docs/runbooks/ contains all three named runbooks with command-output-verification triplets and expected-duration targets
 
-#### `ch19-shipping-to-enterprise:ENT-23` — Staged canary update rollout
+#### `ch19-shipping-to-enterprise:ENT-23` - Staged canary update rollout
 
-Production updates roll out in three stages — five-to-ten-percent canary, fifty percent, one hundred percent — with twenty-four-hour holds at each stage and a defined rollback by republishing the previous artifact through the same MDM policy on health-check failure.
+Production updates roll out in three stages - five-to-ten-percent canary, fifty percent, one hundred percent - with twenty-four-hour holds at each stage and a defined rollback by republishing the previous artifact through the same MDM policy on health-check failure.
 
 **Scope:** `foundational`
 
@@ -6403,7 +6403,7 @@ Production updates roll out in three stages — five-to-ten-percent canary, fift
 
 **Concept count:** 25
 
-#### `ch20-ux-sync-conflict:UX-01` — Complexity Hiding Standard
+#### `ch20-ux-sync-conflict:UX-01` - Complexity Hiding Standard
 
 A non-technical user must not be able to determine from normal use whether the application is local-first or cloud-first; the only visible difference is that the local-first app keeps working when the internet does not.
 
@@ -6417,9 +6417,9 @@ A non-technical user must not be able to determine from normal use whether the a
 
 **Verification:** A non-technical reviewer using the app under normal connectivity and full offline cannot identify which state they are in from chrome alone.
 
-#### `ch20-ux-sync-conflict:UX-02` — Plain-language register for all user-visible state
+#### `ch20-ux-sync-conflict:UX-02` - Plain-language register for all user-visible state
 
-Every string a user reads must pass a plain-language test — a practitioner with no knowledge of distributed systems understands it without training.
+Every string a user reads must pass a plain-language test - a practitioner with no knowledge of distributed systems understands it without training.
 
 **Kleppmann:** `P1` · **Scope:** `foundational`
 
@@ -6431,9 +6431,9 @@ Every string a user reads must pass a plain-language test — a practitioner wit
 
 **Verification:** String audit confirms no occurrences of forbidden terms (gossip, relay, quorum, epoch, attestation, CRDT) in any user-facing locale file.
 
-#### `ch20-ux-sync-conflict:UX-03` — Three always-visible status indicators
+#### `ch20-ux-sync-conflict:UX-03` - Three always-visible status indicators
 
-The application status bar displays three indicators at all times — node health, link status, and data freshness — non-intrusive under normal conditions and expanding to plain-language labels under degraded conditions.
+The application status bar displays three indicators at all times - node health, link status, and data freshness - non-intrusive under normal conditions and expanding to plain-language labels under degraded conditions.
 
 **Kleppmann:** `P1, P3` · **Scope:** `inverted-stack-specific`
 
@@ -6445,7 +6445,7 @@ The application status bar displays three indicators at all times — node healt
 
 **Verification:** Application shell includes a status bar implementing the three indicators; a screenshot under normal connectivity shows ambient icons with no labels.
 
-#### `ch20-ux-sync-conflict:UX-04` — Node health indicator semantics
+#### `ch20-ux-sync-conflict:UX-04` - Node health indicator semantics
 
 The node health indicator signals whether the local node is operating normally (green = engine and sync daemon running and last self-check passed; amber = degraded; red = node cannot accept writes and requires user action).
 
@@ -6459,9 +6459,9 @@ The node health indicator signals whether the local node is operating normally (
 
 **Verification:** Forcing each underlying condition (low disk, daemon restart, migration, credential revocation) drives the indicator to the documented state and surface text.
 
-#### `ch20-ux-sync-conflict:UX-05` — Link status indicator semantics with no red state
+#### `ch20-ux-sync-conflict:UX-05` - Link status indicator semantics with no red state
 
-The link status indicator signals connectivity to the team using green (peer reachable, gossip flowing), amber (relay-only), and grey (fully offline) — and never red, because connectivity failure is not an error condition for a local-first node.
+The link status indicator signals connectivity to the team using green (peer reachable, gossip flowing), amber (relay-only), and grey (fully offline) - and never red, because connectivity failure is not an error condition for a local-first node.
 
 **Kleppmann:** `P3` · **Scope:** `foundational` · **Failure modes:** `partition, peer-discovery-failure`
 
@@ -6473,7 +6473,7 @@ The link status indicator signals connectivity to the team using green (peer rea
 
 **Verification:** Disconnecting the network drives the indicator to grey without surfacing any error or warning chrome.
 
-#### `ch20-ux-sync-conflict:UX-06` — Data freshness indicator with hidden-by-default policy
+#### `ch20-ux-sync-conflict:UX-06` - Data freshness indicator with hidden-by-default policy
 
 The data freshness indicator is invisible while every active data class is within its staleness threshold and only surfaces when a threshold is close to expiring or has expired.
 
@@ -6487,7 +6487,7 @@ The data freshness indicator is invisible while every active data class is withi
 
 **Verification:** With all data classes within threshold the indicator does not render; advancing system clock past a threshold causes the indicator to appear in the documented state.
 
-#### `ch20-ux-sync-conflict:UX-07` — AP/CP visibility per data class
+#### `ch20-ux-sync-conflict:UX-07` - AP/CP visibility per data class
 
 Each data class declares its own staleness threshold and UX treatment derived from its AP/CP classification, with tighter thresholds and stricter blocking for data whose stale use causes immediate concrete harm.
 
@@ -6501,7 +6501,7 @@ Each data class declares its own staleness threshold and UX treatment derived fr
 
 **Verification:** Configuration manifest enumerates data classes with thresholds and treatments; behavioral test confirms a CP-class write is blocked while a matching AP-class write succeeds offline.
 
-#### `ch20-ux-sync-conflict:UX-08` — Per-record freshness badge bound to AP/CP classification
+#### `ch20-ux-sync-conflict:UX-08` - Per-record freshness badge bound to AP/CP classification
 
 A freshness badge component renders the per-record indicator for any data class, computing staleness against the configured threshold and handling clock-skew, daylight-saving, and suspend/resume edge cases without per-application code.
 
@@ -6515,9 +6515,9 @@ A freshness badge component renders the per-record indicator for any data class,
 
 **Verification:** Suspending the host machine across a threshold boundary, then resuming, drives the badge to the correct post-resume state without the application invoking a timer reset.
 
-#### `ch20-ux-sync-conflict:UX-09` — Three-state optimistic write lifecycle
+#### `ch20-ux-sync-conflict:UX-09` - Three-state optimistic write lifecycle
 
-An AP-class write moves through three explicit visual states — pending (applied locally, not yet seen by any peer), confirmed (received by at least one peer), and failed (circuit breaker rejected on reconnect) — with the failed state opening the conflict inbox.
+An AP-class write moves through three explicit visual states - pending (applied locally, not yet seen by any peer), confirmed (received by at least one peer), and failed (circuit breaker rejected on reconnect) - with the failed state opening the conflict inbox.
 
 **Kleppmann:** `P1, P3, P4` · **Scope:** `foundational` · **Failure modes:** `partition`
 
@@ -6529,7 +6529,7 @@ An AP-class write moves through three explicit visual states — pending (applie
 
 **Verification:** A write performed offline shows pending; reconnecting with no conflict transitions it to confirmed; reconnecting with an unresolvable conflict transitions it to failed and opens the conflict inbox via the Review affordance.
 
-#### `ch20-ux-sync-conflict:UX-10` — Pending and failed states never collapse
+#### `ch20-ux-sync-conflict:UX-10` - Pending and failed states never collapse
 
 A failed write must never remain in the pending visual state, because a user who sees a persistent spinner waits while a user who sees a failure indicator acts.
 
@@ -6543,9 +6543,9 @@ A failed write must never remain in the pending visual state, because a user who
 
 **Verification:** Forcing a circuit-breaker rejection at reconnect resolves the pending visual state to failed within the documented bound, never indefinitely spinning.
 
-#### `ch20-ux-sync-conflict:UX-11` — Conflict inbox as single resolution surface
+#### `ch20-ux-sync-conflict:UX-11` - Conflict inbox as single resolution surface
 
-All conflict resolution occurs in a dedicated panel — not a modal, not an interstitial — accessible from the status bar and any failed-write indicator.
+All conflict resolution occurs in a dedicated panel - not a modal, not an interstitial - accessible from the status bar and any failed-write indicator.
 
 **Kleppmann:** `P4` · **Scope:** `foundational` · **Failure modes:** `partition`
 
@@ -6557,7 +6557,7 @@ All conflict resolution occurs in a dedicated panel — not a modal, not an inte
 
 **Verification:** Two independent conflict-producing edits route both items to the same inbox panel reachable from the status bar.
 
-#### `ch20-ux-sync-conflict:UX-12` — Conflict grouping by record type and field
+#### `ch20-ux-sync-conflict:UX-12` - Conflict grouping by record type and field
 
 The conflict inbox groups conflicts by record type and field so a non-technical user sees structured items like "Status conflict on task: Design Review" rather than a raw CRDT diff.
 
@@ -6571,9 +6571,9 @@ The conflict inbox groups conflicts by record type and field so a non-technical 
 
 **Verification:** Producing N conflicts on the same record-type/field shows a single grouped item containing N entries with a human-readable label.
 
-#### `ch20-ux-sync-conflict:UX-13` — Configurable resolution rules constrained by data model
+#### `ch20-ux-sync-conflict:UX-13` - Configurable resolution rules constrained by data model
 
-Per-conflict-group resolution offers prefer-mine, prefer-remote, or a configurable merge rule chosen from rules declared per record type — end users cannot select arbitrary merge strategies the data model does not support.
+Per-conflict-group resolution offers prefer-mine, prefer-remote, or a configurable merge rule chosen from rules declared per record type - end users cannot select arbitrary merge strategies the data model does not support.
 
 **Kleppmann:** `P4` · **Scope:** `inverted-stack-specific` · **Failure modes:** `partition`
 
@@ -6585,7 +6585,7 @@ Per-conflict-group resolution offers prefer-mine, prefer-remote, or a configurab
 
 **Verification:** Configuration declares a numeric "keep higher value" rule; resolution UI for a numeric field offers it and rejects an attempt to apply a non-declared rule.
 
-#### `ch20-ux-sync-conflict:UX-14` — Resolve-all-similar bulk action
+#### `ch20-ux-sync-conflict:UX-14` - Resolve-all-similar bulk action
 
 A bulk affordance applies a chosen rule to every conflict of the same shape in a single operation, with outliers retained for individual review.
 
@@ -6599,7 +6599,7 @@ A bulk affordance applies a chosen rule to every conflict of the same shape in a
 
 **Verification:** Producing 40 same-shape conflicts and applying "resolve all similar" with one rule resolves them in one user-visible operation, leaving any outliers visible.
 
-#### `ch20-ux-sync-conflict:UX-15` — Auditable conflict-resolution event log
+#### `ch20-ux-sync-conflict:UX-15` - Auditable conflict-resolution event log
 
 Every conflict resolution writes an event log entry recording the conflict shape, the rule applied, the resolving user, and the timestamp; no resolution may pass through the system without a corresponding entry.
 
@@ -6613,7 +6613,7 @@ Every conflict resolution writes an event log entry recording the conflict shape
 
 **Verification:** Performing a resolution and inspecting the event log shows a matching entry; attempting to invoke a non-logging resolution path fails at the component boundary.
 
-#### `ch20-ux-sync-conflict:UX-16` — Three distinct connectivity-failure UX modes
+#### `ch20-ux-sync-conflict:UX-16` - Three distinct connectivity-failure UX modes
 
 Full offline, partial connectivity (relay-only), and the quarantine queue are surfaced as three distinct UX modes, not collapsed into a single "offline" treatment.
 
@@ -6627,9 +6627,9 @@ Full offline, partial connectivity (relay-only), and the quarantine queue are su
 
 **Verification:** Each of the three states presents the documented surface in isolation; collapsing any two into a shared treatment fails the test.
 
-#### `ch20-ux-sync-conflict:UX-17` — Quarantine queue surfaced before sync completes
+#### `ch20-ux-sync-conflict:UX-17` - Quarantine queue surfaced before sync completes
 
-When the node reconnects with offline writes pending validation, the quarantine count is surfaced as a one-sentence courtesy with a single review action before sync completes — not as a modal blocker, and not after the fact.
+When the node reconnects with offline writes pending validation, the quarantine count is surfaced as a one-sentence courtesy with a single review action before sync completes - not as a modal blocker, and not after the fact.
 
 **Kleppmann:** `P3, P4` · **Scope:** `inverted-stack-specific` · **Failure modes:** `partition`
 
@@ -6641,9 +6641,9 @@ When the node reconnects with offline writes pending validation, the quarantine 
 
 **Verification:** Producing N offline writes and reconnecting surfaces a count-of-N notification with a Review action; dismissing it completes sync silently and any resulting conflicts appear in the inbox.
 
-#### `ch20-ux-sync-conflict:UX-18` — Invisible recovery from unexpected shutdown
+#### `ch20-ux-sync-conflict:UX-18` - Invisible recovery from unexpected shutdown
 
-After a power-loss or OS-kill termination the node validates the last write-ahead checkpoint, replays pending writes from the CRDT log, and surfaces a single short status only when replay takes more than two seconds — never a crash dialog.
+After a power-loss or OS-kill termination the node validates the last write-ahead checkpoint, replays pending writes from the CRDT log, and surfaces a single short status only when replay takes more than two seconds - never a crash dialog.
 
 **Kleppmann:** `P1, P3, P5` · **Scope:** `foundational`
 
@@ -6655,9 +6655,9 @@ After a power-loss or OS-kill termination the node validates the last write-ahea
 
 **Verification:** Killing the node mid-write and relaunching opens the workspace at the prior state; injecting a long-replay condition surfaces the documented status string and no crash dialog.
 
-#### `ch20-ux-sync-conflict:UX-19` — First-run two-choice gate
+#### `ch20-ux-sync-conflict:UX-19` - First-run two-choice gate
 
-A new user sees exactly two options on first run — Start a new team and Join an existing team — with no onboarding tour, no feature callouts, and no auxiliary links.
+A new user sees exactly two options on first run - Start a new team and Join an existing team - with no onboarding tour, no feature callouts, and no auxiliary links.
 
 **Kleppmann:** `P2, P4` · **Scope:** `inverted-stack-specific`
 
@@ -6669,9 +6669,9 @@ A new user sees exactly two options on first run — Start a new team and Join a
 
 **Verification:** Fresh-install launch renders only the two-option chooser; instrumentation confirms no other actionable elements are present.
 
-#### `ch20-ux-sync-conflict:UX-20` — Mandatory BYOC backup configuration before workspace opens
+#### `ch20-ux-sync-conflict:UX-20` - Mandatory BYOC backup configuration before workspace opens
 
-Choosing "Start a new team" prompts for the first BYOC backup configuration before the application opens, framed in plain language with concrete target choices (local folder, OneDrive, Dropbox) — not as a later step.
+Choosing "Start a new team" prompts for the first BYOC backup configuration before the application opens, framed in plain language with concrete target choices (local folder, OneDrive, Dropbox) - not as a later step.
 
 **Kleppmann:** `P5, P7` · **Scope:** `inverted-stack-specific` · **Failure modes:** `key-loss`
 
@@ -6683,7 +6683,7 @@ Choosing "Start a new team" prompts for the first BYOC backup configuration befo
 
 **Verification:** Selecting "Start a new team" presents the backup-target prompt before the workspace renders; the workspace cannot be reached without configuring a target.
 
-#### `ch20-ux-sync-conflict:UX-21` — Jurisdictional backup-target labelling and gating
+#### `ch20-ux-sync-conflict:UX-21` - Jurisdictional backup-target labelling and gating
 
 Each backup target is labelled with its jurisdiction in plain language, and out-of-jurisdiction options are blocked with a short explanation when the team's declared jurisdiction requires in-country storage.
 
@@ -6697,9 +6697,9 @@ Each backup target is labelled with its jurisdiction in plain language, and out-
 
 **Verification:** Configuring a team with an in-country requirement renders only in-country targets as selectable; attempting an out-of-jurisdiction target is blocked with the documented explanation.
 
-#### `ch20-ux-sync-conflict:UX-22` — QR-based peer-assisted onboarding
+#### `ch20-ux-sync-conflict:UX-22` - QR-based peer-assisted onboarding
 
-Choosing "Join an existing team" runs the three-step onboarding flow — scan a QR code on an existing team member's device (or paste the bundle), transfer the role attestation, then sync eager buckets in the background — and shows a sync progress indicator until enough data has landed for a meaningful state.
+Choosing "Join an existing team" runs the three-step onboarding flow - scan a QR code on an existing team member's device (or paste the bundle), transfer the role attestation, then sync eager buckets in the background - and shows a sync progress indicator until enough data has landed for a meaningful state.
 
 **Kleppmann:** `P2, P4, P6` · **Scope:** `inverted-stack-specific` · **Failure modes:** `peer-discovery-failure`
 
@@ -6711,9 +6711,9 @@ Choosing "Join an existing team" runs the three-step onboarding flow — scan a 
 
 **Verification:** Scanning a valid QR transfers the attestation and begins eager-bucket sync; the workspace opens only after the documented progress state is reached.
 
-#### `ch20-ux-sync-conflict:UX-23` — Accessibility as a Tier-1 contract
+#### `ch20-ux-sync-conflict:UX-23` - Accessibility as a Tier-1 contract
 
-Every UX surface in the application carries an accessibility contract — semantic ARIA roles, keyboard reachability, declared component metadata, and plain-language assistive-technology text — enforced as rigorously as the write path.
+Every UX surface in the application carries an accessibility contract - semantic ARIA roles, keyboard reachability, declared component metadata, and plain-language assistive-technology text - enforced as rigorously as the write path.
 
 **Kleppmann:** `P1, P4` · **Scope:** `foundational`
 
@@ -6726,7 +6726,7 @@ Every UX surface in the application carries an accessibility contract — semant
 
 **Verification:** Automated accessibility audit on every shipped UI block confirms ARIA roles, keyboard reachability, and colour-plus-text pairing; a screen-reader walkthrough of the conflict inbox resolves a conflict without pointer input and lands focus on the next pending group.
 
-#### `ch20-ux-sync-conflict:UX-24` — Component-manifest accessibility enforcement
+#### `ch20-ux-sync-conflict:UX-24` - Component-manifest accessibility enforcement
 
 Each UI block declares its ARIA roles, announced state transitions, and keyboard contract via a component manifest, and the platform refuses to register a custom replacement that declares a weaker contract than the component it replaces.
 
@@ -6740,7 +6740,7 @@ Each UI block declares its ARIA roles, announced state transitions, and keyboard
 
 **Verification:** Registering a custom component whose manifest weakens any declared contract relative to the replaced component fails at registration with a documented error.
 
-#### `ch20-ux-sync-conflict:UX-25` — Plain-language parity across visual and assistive channels
+#### `ch20-ux-sync-conflict:UX-25` - Plain-language parity across visual and assistive channels
 
 Text surfaced to assistive technology must use the same plain-language register as the visible text, with no fallback to technical terminology in ARIA labels.
 
@@ -6757,7 +6757,7 @@ Text surfaced to assistive technology must use the same plain-language register 
 
 ---
 
-## Part V — Epilogue and appendices
+## Part V - Epilogue and appendices
 
 ### Epic: What the Stack Owes You (epilogue-what-the-stack-owes-you)
 
@@ -6765,7 +6765,7 @@ Text surfaced to assistive technology must use the same plain-language register 
 
 **Concept count:** 15
 
-#### `epilogue-what-the-stack-owes-you:EPI-01` — Protocol-layer data minimization
+#### `epilogue-what-the-stack-owes-you:EPI-01` - Protocol-layer data minimization
 
 Data minimization is a send-tier protocol enforcement that prevents bytes from leaving the originating node toward an unauthorized peer, not a UI filter or server-side policy applied after data arrives.
 
@@ -6779,7 +6779,7 @@ Data minimization is a send-tier protocol enforcement that prevents bytes from l
 
 **Verification:** Wire capture from an unauthorized peer's perspective shows zero protected bytes after capability negotiation completes.
 
-#### `epilogue-what-the-stack-owes-you:EPI-02` — MDM attestation at capability negotiation
+#### `epilogue-what-the-stack-owes-you:EPI-02` - MDM attestation at capability negotiation
 
 Mobile Device Management attestation is verified during capability negotiation before the sync stream opens, so that a non-compliant device is rejected at the perimeter rather than detected post-hoc in an audit log.
 
@@ -6793,9 +6793,9 @@ Mobile Device Management attestation is verified during capability negotiation b
 
 **Verification:** A peer presenting an invalid or absent MDM attestation cannot complete handshake; sync stream is never opened.
 
-#### `epilogue-what-the-stack-owes-you:EPI-03` — Honest three-tier CRDT consistency
+#### `epilogue-what-the-stack-owes-you:EPI-03` - Honest three-tier CRDT consistency
 
-The architecture commits to a three-tier resolution model — AP for documents, CP under lease for coordination records, append-only for financial ledger — and names the consistency guarantee per data type rather than presenting a single uniform model.
+The architecture commits to a three-tier resolution model - AP for documents, CP under lease for coordination records, append-only for financial ledger - and names the consistency guarantee per data type rather than presenting a single uniform model.
 
 **Kleppmann:** `P4, P5` · **Scope:** `inverted-stack-specific` · **Failure modes:** `partition`
 
@@ -6808,7 +6808,7 @@ The architecture commits to a three-tier resolution model — AP for documents, 
 
 **Verification:** Architecture document maps every persisted data type to one of the three tiers; the CRDT engine adapter for each tier matches the documented semantics.
 
-#### `epilogue-what-the-stack-owes-you:EPI-04` — Cryptographic role revocation
+#### `epilogue-what-the-stack-owes-you:EPI-04` - Cryptographic role revocation
 
 Role revocation is implemented through DEK/KEK envelope encryption with key rotation proportional to document count, so that a revoked role cannot decrypt documents whose keys have been rotated.
 
@@ -6822,7 +6822,7 @@ Role revocation is implemented through DEK/KEK envelope encryption with key rota
 
 **Verification:** Revocation procedure is executed, then the revoked principal's key material is presented against rotated documents and fails to decrypt.
 
-#### `epilogue-what-the-stack-owes-you:EPI-05` — Dual license and CLA before community formation
+#### `epilogue-what-the-stack-owes-you:EPI-05` - Dual license and CLA before community formation
 
 The dual license structure and Contributor License Agreement must exist before the first external pull request, so that governance terms cannot be retroactively changed against contributors who joined under different terms.
 
@@ -6836,7 +6836,7 @@ The dual license structure and Contributor License Agreement must exist before t
 
 **Verification:** Repository contains LICENSE, CLA, and governance documents whose commit dates precede the first external pull request merge.
 
-#### `epilogue-what-the-stack-owes-you:EPI-06` — Non-technical disaster recovery
+#### `epilogue-what-the-stack-owes-you:EPI-06` - Non-technical disaster recovery
 
 A non-technical user must be able to restore complete data after a device failure without contacting support, using a backup, restore, and verification UX legible to someone who is not an engineer.
 
@@ -6850,7 +6850,7 @@ A non-technical user must be able to restore complete data after a device failur
 
 **Verification:** A non-technical tester completes device-loss recovery scenario without engineering assistance and confirms data integrity.
 
-#### `epilogue-what-the-stack-owes-you:EPI-07` — Plain-file export without vendor cooperation
+#### `epilogue-what-the-stack-owes-you:EPI-07` - Plain-file export without vendor cooperation
 
 User data is available on local disk in a documented file format under user-controlled keys, allowing the user to leave the platform at any time without negotiating with the vendor or depending on its continued operation.
 
@@ -6864,7 +6864,7 @@ User data is available on local disk in a documented file format under user-cont
 
 **Verification:** Disconnect network and revoke vendor accounts; user produces a complete export and a third-party tool reads it using only the public format spec and the user's keys.
 
-#### `epilogue-what-the-stack-owes-you:EPI-08` — KEK-compromise incident response at scale
+#### `epilogue-what-the-stack-owes-you:EPI-08` - KEK-compromise incident response at scale
 
 The procedure for responding to compromise of a broadly-scoped Key Encryption Key across thousands of documents and hundreds of nodes is specified in principle but has not been validated under production load.
 
@@ -6880,7 +6880,7 @@ The procedure for responding to compromise of a broadly-scoped Key Encryption Ke
 
 > Acknowledged as unfinished work; included so conformance scoring can mark partial coverage rather than overstating completeness.
 
-#### `epilogue-what-the-stack-owes-you:EPI-09` — Relay isolation for high-risk verticals
+#### `epilogue-what-the-stack-owes-you:EPI-09` - Relay isolation for high-risk verticals
 
 The relay is designed as a data-minimal transit cache, but a complete threat model and isolation architecture for verticals where metadata about document existence is itself regulated (legal, healthcare) is not yet specified.
 
@@ -6894,7 +6894,7 @@ The relay is designed as a data-minimal transit cache, but a complete threat mod
 
 **Verification:** Threat model document for the relay enumerates observable metadata; deployment guide for high-risk verticals either specifies isolation controls or marks them as open.
 
-#### `epilogue-what-the-stack-owes-you:EPI-10` — Long-now archival format beyond CRDT log
+#### `epilogue-what-the-stack-owes-you:EPI-10` - Long-now archival format beyond CRDT log
 
 Because the CRDT event log is not a stable archival format, long-horizon durability requires snapshots in standardized formats (signed append-only logs, documented export schemas) that the architecture has not yet specified.
 
@@ -6908,7 +6908,7 @@ Because the CRDT event log is not a stable archival format, long-horizon durabil
 
 **Verification:** Snapshot specification document exists; a snapshot can be opened and read by a tool that has no CRDT engine in its dependency tree.
 
-#### `epilogue-what-the-stack-owes-you:EPI-11` — Domain invariant enforcement above CRDT convergence
+#### `epilogue-what-the-stack-owes-you:EPI-11` - Domain invariant enforcement above CRDT convergence
 
 CRDTs deliver structural convergence but not domain invariants such as inventory-cannot-go-negative, no-double-booking, or ledger-balance, which require additional modeling beyond the CRDT engine and have no standardized formal verification approach in this architecture.
 
@@ -6922,7 +6922,7 @@ CRDTs deliver structural convergence but not domain invariants such as inventory
 
 **Verification:** Semantic-layer document enumerates enforced invariants and their mechanisms; merge tests demonstrate violation rejection for each enforced invariant.
 
-#### `epilogue-what-the-stack-owes-you:EPI-12` — Crypto-shredding as right-to-erasure mechanism
+#### `epilogue-what-the-stack-owes-you:EPI-12` - Crypto-shredding as right-to-erasure mechanism
 
 Right-to-erasure is implemented technically by destroying the per-document DEK so that ciphertext becomes unrecoverable; whether residual CRDT-log operation metadata constitutes personal data under a given jurisdiction's deletion statute is an unsettled legal question, not a technical one.
 
@@ -6936,7 +6936,7 @@ Right-to-erasure is implemented technically by destroying the per-document DEK s
 
 **Verification:** Destroying a document's DEK is shown to render its ciphertext unrecoverable; compliance documentation names the jurisdictions in scope and the open legal question for each.
 
-#### `epilogue-what-the-stack-owes-you:EPI-13` — Mobile platform constraints unresolved
+#### `epilogue-what-the-stack-owes-you:EPI-13` - Mobile platform constraints unresolved
 
 iOS and Android impose background-execution, keystore, and filesystem constraints that the desktop-first local-node architecture has not yet solved, so mobile is not yet a first-class deployment target with a fully specified tradeoff envelope.
 
@@ -6950,9 +6950,9 @@ iOS and Android impose background-execution, keystore, and filesystem constraint
 
 **Verification:** Mobile platform notes exist enumerating the constraints and the architectural choices that remain open.
 
-#### `epilogue-what-the-stack-owes-you:EPI-14` — Implementation drift via server-side convenience paths
+#### `epilogue-what-the-stack-owes-you:EPI-14` - Implementation drift via server-side convenience paths
 
-The dominant failure mode for local-first architectures in practice is the gradual accumulation of locally-reasonable server-side paths — feature gates, analytics, A/B testing, compliance logging, write-time permission checks — that re-establish the server as load-bearing and reduce the local node to a cache.
+The dominant failure mode for local-first architectures in practice is the gradual accumulation of locally-reasonable server-side paths - feature gates, analytics, A/B testing, compliance logging, write-time permission checks - that re-establish the server as load-bearing and reduce the local node to a cache.
 
 **Kleppmann:** `P3, P5, P7` · **Scope:** `inverted-stack-specific` · **Failure modes:** `vendor-outage`
 
@@ -6964,9 +6964,9 @@ The dominant failure mode for local-first architectures in practice is the gradu
 
 **Verification:** ADR set documents each named anti-pattern with the local replacement; sample drift requests are matched to the ADR that already answers them.
 
-#### `epilogue-what-the-stack-owes-you:EPI-15` — ADRs with named enforcement owner
+#### `epilogue-what-the-stack-owes-you:EPI-15` - ADRs with named enforcement owner
 
-Architecture Decision Records that prevent drift must name an enforcement owner — a review board, principal engineer, or CTO sign-off path — because ADRs without an owner do not survive velocity pressure.
+Architecture Decision Records that prevent drift must name an enforcement owner - a review board, principal engineer, or CTO sign-off path - because ADRs without an owner do not survive velocity pressure.
 
 **Scope:** `inverted-stack-specific`
 
@@ -6985,7 +6985,7 @@ Architecture Decision Records that prevent drift must name an enforcement owner 
 
 **Concept count:** 36
 
-#### `appendix-a-sync-daemon-wire-protocol:WIRE-01` — Unix domain socket transport
+#### `appendix-a-sync-daemon-wire-protocol:WIRE-01` - Unix domain socket transport
 
 The sync daemon exposes its wire protocol over Unix domain sockets on Linux, macOS, and Windows 10 / Server 2019 and later, with a configurable socket path.
 
@@ -6999,7 +6999,7 @@ The sync daemon exposes its wire protocol over Unix domain sockets on Linux, mac
 
 **Verification:** Inspect daemon configuration for socket path; confirm a connection can be opened to the configured socket on each supported OS.
 
-#### `appendix-a-sync-daemon-wire-protocol:WIRE-02` — Mandatory Noise_XX tunnel
+#### `appendix-a-sync-daemon-wire-protocol:WIRE-02` - Mandatory Noise_XX tunnel
 
 Every connection must complete a Noise Protocol Framework Noise_XX handshake using Ed25519 static keys, ChaCha20-Poly1305, and BLAKE2s before any CBOR message defined in this protocol is exchanged.
 
@@ -7014,7 +7014,7 @@ Every connection must complete a Noise Protocol Framework Noise_XX handshake usi
 
 **Verification:** Packet capture on the socket shows Noise_XX handshake messages preceding any CBOR body; reject test sending a HELLO before Noise completion is closed without response.
 
-#### `appendix-a-sync-daemon-wire-protocol:WIRE-03` — CBOR length-prefixed framing
+#### `appendix-a-sync-daemon-wire-protocol:WIRE-03` - CBOR length-prefixed framing
 
 Every wire message is a 4-byte little-endian uint32 length prefix followed by exactly that many bytes of CBOR-encoded message body.
 
@@ -7028,7 +7028,7 @@ Every wire message is a 4-byte little-endian uint32 length prefix followed by ex
 
 **Verification:** Wire-vector test (appendix-a §A.9) round-trips byte-for-byte through the framer.
 
-#### `appendix-a-sync-daemon-wire-protocol:WIRE-04` — Four-MiB body cap
+#### `appendix-a-sync-daemon-wire-protocol:WIRE-04` - Four-MiB body cap
 
 The maximum allowed CBOR body size is 4,194,304 bytes (4 MiB), enforced as a relay memory-allocation invariant by closing any connection whose length prefix exceeds the cap without sending an error.
 
@@ -7042,9 +7042,9 @@ The maximum allowed CBOR body size is 4,194,304 bytes (4 MiB), enforced as a rel
 
 **Verification:** Send a length prefix of 4 MiB + 1 and confirm the connection closes silently with no error CBOR on the wire.
 
-#### `appendix-a-sync-daemon-wire-protocol:WIRE-05` — Deterministic CBOR for signed fields
+#### `appendix-a-sync-daemon-wire-protocol:WIRE-05` - Deterministic CBOR for signed fields
 
-Any CBOR encoding of fields that appear in signed contexts must use Deterministic Encoding per RFC 8949 §4.2 — definite-length arrays and maps, lexicographically sorted map keys, shortest-form integers, and shortest exact floating-point representation.
+Any CBOR encoding of fields that appear in signed contexts must use Deterministic Encoding per RFC 8949 §4.2 - definite-length arrays and maps, lexicographically sorted map keys, shortest-form integers, and shortest exact floating-point representation.
 
 **Kleppmann:** `P6` · **Scope:** `foundational`
 
@@ -7056,7 +7056,7 @@ Any CBOR encoding of fields that appear in signed contexts must use Deterministi
 
 **Verification:** Encode an attestation bundle twice on different implementations and compare byte-for-byte equality of the signed input.
 
-#### `appendix-a-sync-daemon-wire-protocol:WIRE-06` — Unknown-field tolerance
+#### `appendix-a-sync-daemon-wire-protocol:WIRE-06` - Unknown-field tolerance
 
 Receivers must ignore unknown fields in any CBOR map so that optional fields can be added in minor protocol revisions without breaking older implementations.
 
@@ -7069,7 +7069,7 @@ Receivers must ignore unknown fields in any CBOR map so that optional fields can
 
 **Verification:** Inject an extra unknown key into a HELLO body; confirm the receiver processes the message normally.
 
-#### `appendix-a-sync-daemon-wire-protocol:WIRE-07` — Connection state machine
+#### `appendix-a-sync-daemon-wire-protocol:WIRE-07` - Connection state machine
 
 A connection traverses the states CONNECTING, NOISE_HANDSHAKING, CBOR_HANDSHAKING, STREAMING, ERROR, and CLOSED, with defined transitions between them.
 
@@ -7083,7 +7083,7 @@ A connection traverses the states CONNECTING, NOISE_HANDSHAKING, CBOR_HANDSHAKIN
 
 **Verification:** State-machine test exercises each documented transition and rejects invalid transitions.
 
-#### `appendix-a-sync-daemon-wire-protocol:WIRE-08` — Back-to-back HELLO and CAPABILITY_NEG
+#### `appendix-a-sync-daemon-wire-protocol:WIRE-08` - Back-to-back HELLO and CAPABILITY_NEG
 
 The connecting node sends HELLO immediately followed by CAPABILITY_NEG without waiting for a response, allowing the relay to construct attestation, lease, and bucket authorisation in one transaction and saving a round trip.
 
@@ -7097,7 +7097,7 @@ The connecting node sends HELLO immediately followed by CAPABILITY_NEG without w
 
 **Verification:** Trace shows CAPABILITY_NEG sent immediately after HELLO with no intervening server message.
 
-#### `appendix-a-sync-daemon-wire-protocol:WIRE-09` — HELLO message
+#### `appendix-a-sync-daemon-wire-protocol:WIRE-09` - HELLO message
 
 HELLO is the first CBOR message of every connection and carries node_id (Ed25519 32-byte public key), schema_version (semver string), supported_versions (semver array), and protocol_version (uint major version).
 
@@ -7111,7 +7111,7 @@ HELLO is the first CBOR message of every connection and carries node_id (Ed25519
 
 **Verification:** Wire-vector 1 in §A.9 decodes to the documented field set with correct CBOR types.
 
-#### `appendix-a-sync-daemon-wire-protocol:WIRE-10` — Stable node_id identity
+#### `appendix-a-sync-daemon-wire-protocol:WIRE-10` - Stable node_id identity
 
 The node_id Ed25519 public key is the stable identity of a node across reconnections and must not be rotated without re-onboarding through the attestation flow.
 
@@ -7125,7 +7125,7 @@ The node_id Ed25519 public key is the stable identity of a node across reconnect
 
 **Verification:** Restart the daemon and confirm node_id is unchanged in the next HELLO.
 
-#### `appendix-a-sync-daemon-wire-protocol:WIRE-11` — CAPABILITY_NEG message
+#### `appendix-a-sync-daemon-wire-protocol:WIRE-11` - CAPABILITY_NEG message
 
 CAPABILITY_NEG follows HELLO and requests CRDT stream subscriptions, optional CP-class lease record types, sync bucket subscriptions, and carries the AttestationBundle proving the node's role.
 
@@ -7139,7 +7139,7 @@ CAPABILITY_NEG follows HELLO and requests CRDT stream subscriptions, optional CP
 
 **Verification:** Decode a CAPABILITY_NEG vector and confirm field presence and types match §A.3.2.
 
-#### `appendix-a-sync-daemon-wire-protocol:WIRE-12` — Stream and bucket attestation gating
+#### `appendix-a-sync-daemon-wire-protocol:WIRE-12` - Stream and bucket attestation gating
 
 The relay validates each requested CRDT stream identifier and bucket subscription against the role claims in the attestation bundle before granting access.
 
@@ -7153,7 +7153,7 @@ The relay validates each requested CRDT stream identifier and bucket subscriptio
 
 **Verification:** Submit CAPABILITY_NEG with a stream not authorised by the bundle; confirm the stream is absent from granted_streams in ACK.
 
-#### `appendix-a-sync-daemon-wire-protocol:WIRE-13` — CP-class lease acquisition before ACK
+#### `appendix-a-sync-daemon-wire-protocol:WIRE-13` - CP-class lease acquisition before ACK
 
 For every record type listed in cp_leases the relay acquires and holds a Flease-protocol distributed lease on behalf of the node before returning ACK; types not listed default to AP-class with no lease.
 
@@ -7167,7 +7167,7 @@ For every record type listed in cp_leases the relay acquires and holds a Flease-
 
 **Verification:** Integration test: connecting with cp_leases set blocks ACK until lease acquisition completes.
 
-#### `appendix-a-sync-daemon-wire-protocol:WIRE-14` — ACK message
+#### `appendix-a-sync-daemon-wire-protocol:WIRE-14` - ACK message
 
 ACK is the relay's single closing message of the handshake, carrying negotiated_version, granted_streams, granted_buckets, and an optional human-readable denied_reason; receipt of ACK transitions the connection to STREAMING.
 
@@ -7181,7 +7181,7 @@ ACK is the relay's single closing message of the handshake, carrying negotiated_
 
 **Verification:** Wire-vector test for ACK decodes the expected fields; STREAMING transition occurs on ACK receipt.
 
-#### `appendix-a-sync-daemon-wire-protocol:WIRE-15` — Wire-version negotiation rule
+#### `appendix-a-sync-daemon-wire-protocol:WIRE-15` - Wire-version negotiation rule
 
 negotiated_version is the highest wire protocol version supported by both peers (intersection of node supported_versions and relay capabilities), and the connecting node must use that version for all subsequent messages.
 
@@ -7195,7 +7195,7 @@ negotiated_version is the highest wire protocol version supported by both peers 
 
 **Verification:** Connect with supported_versions = ["1.0.0","1.1.0"] against a relay capped at 1.0.0; confirm negotiated_version = 1 and downgrade is logged.
 
-#### `appendix-a-sync-daemon-wire-protocol:WIRE-16` — Empty grant is not an error
+#### `appendix-a-sync-daemon-wire-protocol:WIRE-16` - Empty grant is not an error
 
 granted_streams and granted_buckets may be empty arrays when the attestation bundle authorises none of the requested resources; the connection remains valid and the node should surface the empty grant to the operator.
 
@@ -7209,7 +7209,7 @@ granted_streams and granted_buckets may be empty arrays when the attestation bun
 
 **Verification:** Test attestation that authorises no requested streams produces ACK with empty arrays and operator-visible warning.
 
-#### `appendix-a-sync-daemon-wire-protocol:WIRE-17` — DELTA_STREAM message
+#### `appendix-a-sync-daemon-wire-protocol:WIRE-17` - DELTA_STREAM message
 
 DELTA_STREAM carries a single CRDT operation tagged with stream_id, op_type (insert/delete/update), vector_clock, opaque CRDT payload bytes, and an optional epoch_id for CP-class records, fanned out by the relay to every node subscribed to that stream.
 
@@ -7224,7 +7224,7 @@ DELTA_STREAM carries a single CRDT operation tagged with stream_id, op_type (ins
 
 **Verification:** Multi-peer test: a DELTA_STREAM published by one node arrives unchanged at every subscribed peer.
 
-#### `appendix-a-sync-daemon-wire-protocol:WIRE-18` — Vector-clock node-key encoding
+#### `appendix-a-sync-daemon-wire-protocol:WIRE-18` - Vector-clock node-key encoding
 
 Vector clocks are CBOR maps whose keys are the 64-character lowercase hexadecimal encoding of a node's 32-byte Ed25519 public key (tstr) and whose values are uint sequence numbers.
 
@@ -7238,7 +7238,7 @@ Vector clocks are CBOR maps whose keys are the 64-character lowercase hexadecima
 
 **Verification:** Decode a DELTA_STREAM vector and verify keys are 64 lowercase hex characters and values parse as uint.
 
-#### `appendix-a-sync-daemon-wire-protocol:WIRE-19` — op_type as advisory routing metadata
+#### `appendix-a-sync-daemon-wire-protocol:WIRE-19` - op_type as advisory routing metadata
 
 op_type is advisory metadata used by the receiving application layer to route a delta to the correct merge handler; the CRDT engine applies payload regardless of op_type, so applications routing on op_type must validate against post-apply state.
 
@@ -7252,7 +7252,7 @@ op_type is advisory metadata used by the receiving application layer to route a 
 
 **Verification:** Code review confirms application routing layer validates engine post-apply state when correctness depends on op_type.
 
-#### `appendix-a-sync-daemon-wire-protocol:WIRE-20` — Epoch verification before CP-class apply
+#### `appendix-a-sync-daemon-wire-protocol:WIRE-20` - Epoch verification before CP-class apply
 
 For any CP-class operation the receiver must verify that its local epoch matches the message's epoch_id before applying the payload, producing ERR_EPOCH_MISMATCH on disagreement.
 
@@ -7266,7 +7266,7 @@ For any CP-class operation the receiver must verify that its local epoch matches
 
 **Verification:** Inject a DELTA_STREAM with stale epoch_id; receiver returns ERR_EPOCH_MISMATCH and CRDT state is unchanged.
 
-#### `appendix-a-sync-daemon-wire-protocol:WIRE-21` — No relay reordering or buffering
+#### `appendix-a-sync-daemon-wire-protocol:WIRE-21` - No relay reordering or buffering
 
 The relay does not reorder or buffer DELTA_STREAM messages; operations are delivered in network order and the CRDT engine guarantees convergent merge regardless of arrival order.
 
@@ -7279,7 +7279,7 @@ The relay does not reorder or buffer DELTA_STREAM messages; operations are deliv
 
 **Verification:** Relay test: ordered injected stream emerges in the same order at subscribers; multi-peer convergence test demonstrates byte-identical state under reordered deliveries.
 
-#### `appendix-a-sync-daemon-wire-protocol:WIRE-22` — GOSSIP_PING membership protocol
+#### `appendix-a-sync-daemon-wire-protocol:WIRE-22` - GOSSIP_PING membership protocol
 
 Each node sends a GOSSIP_PING to all connected peers every 30 seconds carrying sender_id, a partial membership_excerpt of known peers, and the sender's vector_clock summary; the relay forwards the message unchanged.
 
@@ -7293,7 +7293,7 @@ Each node sends a GOSSIP_PING to all connected peers every 30 seconds carrying s
 
 **Verification:** Trace shows GOSSIP_PING from each node every 30 s with correctly populated membership_excerpt entries.
 
-#### `appendix-a-sync-daemon-wire-protocol:WIRE-23` — Membership excerpt entry shape
+#### `appendix-a-sync-daemon-wire-protocol:WIRE-23` - Membership excerpt entry shape
 
 Each membership_excerpt entry is a CBOR map with node_id (32-byte Ed25519 public key), last_seen (Unix-seconds uint), and vector_clock_summary (map of hex node-key to uint sequence number).
 
@@ -7307,7 +7307,7 @@ Each membership_excerpt entry is a CBOR map with node_id (32-byte Ed25519 public
 
 **Verification:** Decode a GOSSIP_PING vector and confirm each entry has the three fields with documented types.
 
-#### `appendix-a-sync-daemon-wire-protocol:WIRE-24` — Ninety-second suspected-partition threshold
+#### `appendix-a-sync-daemon-wire-protocol:WIRE-24` - Ninety-second suspected-partition threshold
 
 A receiver that observes a peer's last_seen older than 90 seconds (three times the 30-second ping interval) should mark that peer suspected-partitioned and escalate to the application layer.
 
@@ -7321,9 +7321,9 @@ A receiver that observes a peer's last_seen older than 90 seconds (three times t
 
 **Verification:** Halt a peer's GOSSIP_PING; after 90 s the receiver raises a suspected-partition signal.
 
-#### `appendix-a-sync-daemon-wire-protocol:WIRE-25` — Long-absence reconnect treated as new node
+#### `appendix-a-sync-daemon-wire-protocol:WIRE-25` - Long-absence reconnect treated as new node
 
-A node returning after long absence is treated as a new connection — prior session state is discarded, CAPABILITY_NEG reacquires leases and subscriptions, and catch-up proceeds via DELTA_STREAM replay rather than session resume.
+A node returning after long absence is treated as a new connection - prior session state is discarded, CAPABILITY_NEG reacquires leases and subscriptions, and catch-up proceeds via DELTA_STREAM replay rather than session resume.
 
 **Kleppmann:** `P3` · **Scope:** `inverted-stack-specific` · **Failure modes:** `partition, peer-discovery-failure`
 
@@ -7335,7 +7335,7 @@ A node returning after long absence is treated as a new connection — prior ses
 
 **Verification:** Disconnect a node for hours; on reconnect verify a fresh handshake and DELTA_STREAM replay rather than a resume.
 
-#### `appendix-a-sync-daemon-wire-protocol:WIRE-26` — Error message envelope
+#### `appendix-a-sync-daemon-wire-protocol:WIRE-26` - Error message envelope
 
 All error messages share a CBOR map with type (the error code string) and reason (a human-readable description) and may be sent at any point in the connection lifecycle including during the handshake.
 
@@ -7349,9 +7349,9 @@ All error messages share a CBOR map with type (the error code string) and reason
 
 **Verification:** Inject each error code mid-stream and mid-handshake; confirm decoder recognises the envelope and triggers correct retry behaviour.
 
-#### `appendix-a-sync-daemon-wire-protocol:WIRE-27` — Error retry semantics catalogue
+#### `appendix-a-sync-daemon-wire-protocol:WIRE-27` - Error retry semantics catalogue
 
-Each defined error code carries a normative retry policy — exponential backoff with jitter for ERR_RATE_LIMIT_EXCEEDED and ERR_THROTTLE, no-retry for ERR_VERSION_INCOMPATIBLE and ERR_BUCKET_NOT_AUTHORIZED, IdP re-authentication for ERR_ATTESTATION_REQUIRED and ERR_KEY_REVOKED, and epoch snapshot fetch for ERR_EPOCH_MISMATCH.
+Each defined error code carries a normative retry policy - exponential backoff with jitter for ERR_RATE_LIMIT_EXCEEDED and ERR_THROTTLE, no-retry for ERR_VERSION_INCOMPATIBLE and ERR_BUCKET_NOT_AUTHORIZED, IdP re-authentication for ERR_ATTESTATION_REQUIRED and ERR_KEY_REVOKED, and epoch snapshot fetch for ERR_EPOCH_MISMATCH.
 
 **Kleppmann:** `P6` · **Scope:** `inverted-stack-specific` · **Failure modes:** `key-compromise, key-loss, partition, schema-skew`
 
@@ -7366,7 +7366,7 @@ Each defined error code carries a normative retry policy — exponential backoff
 
 **Verification:** Failure-injection harness exercises each error code and confirms the retry handler matches the documented policy.
 
-#### `appendix-a-sync-daemon-wire-protocol:WIRE-28` — QR onboarding payload layout
+#### `appendix-a-sync-daemon-wire-protocol:WIRE-28` - QR onboarding payload layout
 
 The QR onboarding payload is a flat byte sequence of bundle_length (uint32 LE), attestation_bundle CBOR bytes, snapshot_length (uint32 LE), and raw snapshot bytes, suitable for QR, NFC, or secure paste transfer.
 
@@ -7380,7 +7380,7 @@ The QR onboarding payload is a flat byte sequence of bundle_length (uint32 LE), 
 
 **Verification:** Round-trip an onboarding payload through QR encoding and confirm byte-identical decode.
 
-#### `appendix-a-sync-daemon-wire-protocol:WIRE-29` — AttestationBundle structure and signature
+#### `appendix-a-sync-daemon-wire-protocol:WIRE-29` - AttestationBundle structure and signature
 
 An AttestationBundle is a CBOR map carrying issuer_public_key, subject_public_key, role_claims, an Ed25519 (RFC 8032) signature over the deterministic CBOR concatenation of those fields, and an issued_at Unix-seconds timestamp.
 
@@ -7394,7 +7394,7 @@ An AttestationBundle is a CBOR map carrying issuer_public_key, subject_public_ke
 
 **Verification:** Wire-vector 2 in §A.9 produces a verifiable founder self-signed bundle; mutated payloads fail verification.
 
-#### `appendix-a-sync-daemon-wire-protocol:WIRE-30` — Founder vs joiner bundle semantics
+#### `appendix-a-sync-daemon-wire-protocol:WIRE-30` - Founder vs joiner bundle semantics
 
 Founder bundles are self-signed (issuer_public_key equals subject_public_key) and carry an implicit grant of every role claim accepted only at initial node creation; joiner bundles are signed by the founder or any admin-role holder and verified by the relay during CAPABILITY_NEG.
 
@@ -7408,7 +7408,7 @@ Founder bundles are self-signed (issuer_public_key equals subject_public_key) an
 
 **Verification:** Re-presenting a founder bundle to an established relay is rejected; a joiner bundle from a non-admin issuer is rejected.
 
-#### `appendix-a-sync-daemon-wire-protocol:WIRE-31` — Relay-side attestation revocation
+#### `appendix-a-sync-daemon-wire-protocol:WIRE-31` - Relay-side attestation revocation
 
 Attestation bundles have no expiry field; revocation is enforced at the relay by a revocation list keyed on issuer_public_key ‖ subject_public_key, and any revoked bundle produces ERR_KEY_REVOKED regardless of issued_at.
 
@@ -7422,7 +7422,7 @@ Attestation bundles have no expiry field; revocation is enforced at the relay by
 
 **Verification:** Add a bundle to the revocation list; subsequent CAPABILITY_NEG with that bundle returns ERR_KEY_REVOKED.
 
-#### `appendix-a-sync-daemon-wire-protocol:WIRE-32` — Snapshot hydration with replay fallback
+#### `appendix-a-sync-daemon-wire-protocol:WIRE-32` - Snapshot hydration with replay fallback
 
 The onboarding snapshot is opaque CRDT-engine serialised state passed directly to the engine's hydration API, and on hydration failure the node must discard the snapshot and request full state transfer via DELTA_STREAM replay from a peer.
 
@@ -7436,7 +7436,7 @@ The onboarding snapshot is opaque CRDT-engine serialised state passed directly t
 
 **Verification:** Corrupt the snapshot section; confirm the daemon discards the bundle and initiates DELTA_STREAM replay.
 
-#### `appendix-a-sync-daemon-wire-protocol:WIRE-33` — Two-version rolling-upgrade overlap
+#### `appendix-a-sync-daemon-wire-protocol:WIRE-33` - Two-version rolling-upgrade overlap
 
 HELLO carries both a uint major protocol_version and a supported_versions semver array; the relay must negotiate down to the highest mutually supported version listed in supported_versions rather than rejecting the connection, enabling two-version overlap during rolling upgrades.
 
@@ -7450,7 +7450,7 @@ HELLO carries both a uint major protocol_version and a supported_versions semver
 
 **Verification:** Mixed-version test: nodes with overlapping supported_versions sets connect successfully at the intersection's maximum.
 
-#### `appendix-a-sync-daemon-wire-protocol:WIRE-34` — Minor-version field-stability guarantees
+#### `appendix-a-sync-daemon-wire-protocol:WIRE-34` - Minor-version field-stability guarantees
 
 Within the same major protocol_version, message type strings are stable, required fields are not removed, and only optional fields may be added; receivers must apply the unknown-field-ignore rule.
 
@@ -7464,7 +7464,7 @@ Within the same major protocol_version, message type strings are stable, require
 
 **Verification:** Spec test confirms message type strings and required-field sets match the appendix tables for each released minor version.
 
-#### `appendix-a-sync-daemon-wire-protocol:WIRE-35` — Ed25519 algorithm fixed for signatures
+#### `appendix-a-sync-daemon-wire-protocol:WIRE-35` - Ed25519 algorithm fixed for signatures
 
 The protocol fixes Ed25519 (RFC 8032) for node identity and attestation signatures with no algorithm agility in the current version; deployments under national algorithm mandates such as GOST R 34.10-2012 must negotiate algorithm selection at a layer above this wire protocol.
 
@@ -7478,7 +7478,7 @@ The protocol fixes Ed25519 (RFC 8032) for node identity and attestation signatur
 
 **Verification:** Cryptographic test confirms all signatures verify under Ed25519 and no other algorithm appears in conformant traffic.
 
-#### `appendix-a-sync-daemon-wire-protocol:WIRE-36` — Conformance test-vector equivalence
+#### `appendix-a-sync-daemon-wire-protocol:WIRE-36` - Conformance test-vector equivalence
 
 A conformant implementation must produce byte-for-byte equivalent output to the published reference test vectors covering HELLO, CAPABILITY_NEG, ACK, DELTA_STREAM (insert/update/delete), GOSSIP_PING, attestation-bundle signature inputs, and each error code.
 
@@ -7499,7 +7499,7 @@ A conformant implementation must produce byte-for-byte equivalent output to the 
 
 **Concept count:** 25
 
-#### `appendix-b-threat-model-worksheets:SEC-01` — Asset inventory worksheet
+#### `appendix-b-threat-model-worksheets:SEC-01` - Asset inventory worksheet
 
 A maintained table enumerating every asset whose compromise, loss, or corruption would cause material harm, classified by sensitivity, location, and owner.
 
@@ -7514,7 +7514,7 @@ A maintained table enumerating every asset whose compromise, loss, or corruption
 
 **Verification:** Repository contains an asset inventory document covering all canonical asset categories with classification, location, owner, and sensitivity columns populated.
 
-#### `appendix-b-threat-model-worksheets:SEC-02` — Asset classification taxonomy
+#### `appendix-b-threat-model-worksheets:SEC-02` - Asset classification taxonomy
 
 A five-label classification scheme distinguishing Node-secret, Team-secret, Team-confidential, Team-internal, and Encrypted assets by who may know them and how they are protected.
 
@@ -7529,7 +7529,7 @@ A five-label classification scheme distinguishing Node-secret, Team-secret, Team
 
 **Verification:** Asset inventory uses only the defined labels; threat-model docs include classification definitions matching the appendix taxonomy.
 
-#### `appendix-b-threat-model-worksheets:SEC-03` — Keystore-binding documentation
+#### `appendix-b-threat-model-worksheets:SEC-03` - Keystore-binding documentation
 
 A requirement to record which OS keystore protects each Node-secret or Team-secret, naming the platform-specific protection mechanism rather than relying on generic claims of isolation.
 
@@ -7542,7 +7542,7 @@ A requirement to record which OS keystore protects each Node-secret or Team-secr
 
 **Verification:** Threat-model document names the keystore protecting each per-platform deployment of secret material.
 
-#### `appendix-b-threat-model-worksheets:SEC-04` — Actor taxonomy worksheet
+#### `appendix-b-threat-model-worksheets:SEC-04` - Actor taxonomy worksheet
 
 A maintained table enumerating every actor (benign or adversarial) who could realistically interact with the system, with access level, motivation, and capability level recorded for each.
 
@@ -7556,7 +7556,7 @@ A maintained table enumerating every actor (benign or adversarial) who could rea
 
 **Verification:** Threat-model document contains an actor table with access, motivation, and capability columns populated for each named actor.
 
-#### `appendix-b-threat-model-worksheets:THREAT-01` — External remote attacker
+#### `appendix-b-threat-model-worksheets:THREAT-01` - External remote attacker
 
 An adversary with no initial access who attempts data theft or ransomware against the deployment from outside the trust boundary.
 
@@ -7569,7 +7569,7 @@ An adversary with no initial access who attempts data theft or ransomware agains
 
 **Verification:** Actor taxonomy includes a remote external attacker entry; perimeter and transport controls are documented.
 
-#### `appendix-b-threat-model-worksheets:THREAT-02` — External attacker with physical access
+#### `appendix-b-threat-model-worksheets:THREAT-02` - External attacker with physical access
 
 An adversary who obtains physical possession of a node device and attempts credential theft or storage extraction.
 
@@ -7583,7 +7583,7 @@ An adversary who obtains physical possession of a node device and attempts crede
 
 **Verification:** MDM policy enforces disk encryption, PIN/biometric, and hibernation disable on all enrolled nodes.
 
-#### `appendix-b-threat-model-worksheets:THREAT-03` — Malicious insider with role access
+#### `appendix-b-threat-model-worksheets:THREAT-03` - Malicious insider with role access
 
 An authorized team member who attempts data exfiltration within the scope of their assigned role.
 
@@ -7596,7 +7596,7 @@ An authorized team member who attempts data exfiltration within the scope of the
 
 **Verification:** Role definitions and audit log coverage are documented; role scope is enforced by KEK hierarchy.
 
-#### `appendix-b-threat-model-worksheets:THREAT-04` — Compromised relay operator
+#### `appendix-b-threat-model-worksheets:THREAT-04` - Compromised relay operator
 
 A relay operator whose transport-layer position grants ciphertext visibility and traffic-analysis capability but no plaintext access because keys never leave nodes.
 
@@ -7610,7 +7610,7 @@ A relay operator whose transport-layer position grants ciphertext visibility and
 
 **Verification:** Wire-protocol implementation encrypts payloads at the node; key-distribution path bypasses the relay.
 
-#### `appendix-b-threat-model-worksheets:THREAT-05` — Relay service termination
+#### `appendix-b-threat-model-worksheets:THREAT-05` - Relay service termination
 
 The threat that a relay operator withdraws service due to jurisdiction restriction, sanctions, or commercial decision, producing total relay unavailability.
 
@@ -7624,7 +7624,7 @@ The threat that a relay operator withdraws service due to jurisdiction restricti
 
 **Verification:** Disconnect the relay; nodes continue local operation and reachable peer-to-peer sync without degradation.
 
-#### `appendix-b-threat-model-worksheets:THREAT-06` — Former team member
+#### `appendix-b-threat-model-worksheets:THREAT-06` - Former team member
 
 A previously authorized member whose future access is blocked by key rotation but whose historical-data exposure remains scoped by the data-at-risk calculation.
 
@@ -7638,7 +7638,7 @@ A previously authorized member whose future access is blocked by key rotation bu
 
 **Verification:** Offboarding runbook triggers KEK rotation and logs a data-at-risk computation for the affected role.
 
-#### `appendix-b-threat-model-worksheets:THREAT-07` — Compromised IdP
+#### `appendix-b-threat-model-worksheets:THREAT-07` - Compromised IdP
 
 An identity provider whose signing key is under adversary control, allowing fraudulent role attestations that bypass the attestation trust anchor.
 
@@ -7651,7 +7651,7 @@ An identity provider whose signing key is under adversary control, allowing frau
 
 **Verification:** IdP-compromise runbook exists naming detection signals and the signing-key rotation procedure.
 
-#### `appendix-b-threat-model-worksheets:THREAT-08` — Supply chain attacker
+#### `appendix-b-threat-model-worksheets:THREAT-08` - Supply chain attacker
 
 An adversary who compromises the build pipeline to ship a backdoored binary capable of exfiltrating keys or plaintext from inside the trust boundary.
 
@@ -7666,7 +7666,7 @@ An adversary who compromises the build pipeline to ship a backdoored binary capa
 
 **Verification:** Build pipeline produces signed reproducible artifacts; SBOM and signature verification are gating steps in distribution.
 
-#### `appendix-b-threat-model-worksheets:THREAT-09` — Government authority and regulatory body
+#### `appendix-b-threat-model-worksheets:THREAT-09` - Government authority and regulatory body
 
 A statutory actor with legal compulsion power (warrant, subpoena, administrative order, inspection notice, device seizure) whose architectural mitigation is end-to-end encryption with local key management so that compelled relay inspection yields ciphertext only.
 
@@ -7680,7 +7680,7 @@ A statutory actor with legal compulsion power (warrant, subpoena, administrative
 
 **Verification:** Architecture proves keys never reach the relay; legal-response runbook lists applicable jurisdictional authorities and the architectural response.
 
-#### `appendix-b-threat-model-worksheets:SEC-05` — Capability-level taxonomy
+#### `appendix-b-threat-model-worksheets:SEC-05` - Capability-level taxonomy
 
 A four-level scale (Low, Medium, High, Limited) rating an actor's technical sophistication and structural access constraints, used to size mitigations.
 
@@ -7693,7 +7693,7 @@ A four-level scale (Low, Medium, High, Limited) rating an actor's technical soph
 
 **Verification:** Actor taxonomy entries each carry one of the four defined capability levels.
 
-#### `appendix-b-threat-model-worksheets:SEC-06` — Per-vertical worksheet customization
+#### `appendix-b-threat-model-worksheets:SEC-06` - Per-vertical worksheet customization
 
 A requirement that each deployment add asset rows and actor rows specific to its vertical (healthcare, legal, government, defense, regulated finance) before the worksheet is treated as complete.
 
@@ -7707,7 +7707,7 @@ A requirement that each deployment add asset rows and actor rows specific to its
 
 **Verification:** Per-deployment threat model includes vertical-specific additions beyond the template baseline.
 
-#### `appendix-b-threat-model-worksheets:SEC-07` — Attack tree per worksheet
+#### `appendix-b-threat-model-worksheets:SEC-07` - Attack tree per worksheet
 
 A branch-by-branch decomposition of a primary threat scenario, naming each control checkpoint and its mitigation, and identifying the residual risk where controls do not fully cover the branch.
 
@@ -7721,7 +7721,7 @@ A branch-by-branch decomposition of a primary threat scenario, naming each contr
 
 **Verification:** Threat-model document contains at least one named attack tree with explicit mitigations and a residual-risk note.
 
-#### `appendix-b-threat-model-worksheets:MITIG-01` — MDM-enforced device hardening
+#### `appendix-b-threat-model-worksheets:MITIG-01` - MDM-enforced device hardening
 
 An MDM-enforced configuration baseline requiring full-disk encryption, minimum 6-digit PIN, disabled USB boot, locked BIOS settings, and disabled hibernation/suspend-to-disk on every node before it joins the sync mesh.
 
@@ -7737,7 +7737,7 @@ An MDM-enforced configuration baseline requiring full-disk encryption, minimum 6
 
 **Verification:** MDM policy file enforces all five controls; nodes failing compliance cannot complete sync-mesh handshake.
 
-#### `appendix-b-threat-model-worksheets:MITIG-02` — Self-hosted relay for traffic-analysis sensitivity
+#### `appendix-b-threat-model-worksheets:MITIG-02` - Self-hosted relay for traffic-analysis sensitivity
 
 Deployment of a relay inside the team's own trust boundary so that traffic-pattern observation moves from an external operator to internal IT.
 
@@ -7750,7 +7750,7 @@ Deployment of a relay inside the team's own trust boundary so that traffic-patte
 
 **Verification:** Relay distribution includes a self-hosted deployment package and operations guide.
 
-#### `appendix-b-threat-model-worksheets:SEC-08` — Key-compromise detection checklist
+#### `appendix-b-threat-model-worksheets:SEC-08` - Key-compromise detection checklist
 
 A standing list of triggers (theft, anomalous audit-log access, credential leak, threat-intel hit, IdP failures, offboarding, abnormal sync-state inconsistency, lawful access demand) that initiate the re-keying procedure on suspicion rather than on confirmation.
 
@@ -7765,7 +7765,7 @@ A standing list of triggers (theft, anomalous audit-log access, credential leak,
 
 **Verification:** Incident-response runbook contains a detection checklist with the eight named triggers and an explicit suspicion-not-confirmation directive.
 
-#### `appendix-b-threat-model-worksheets:SEC-09` — Re-keying procedure
+#### `appendix-b-threat-model-worksheets:SEC-09` - Re-keying procedure
 
 An ordered seven-step procedure (with a 1a recovery branch) that generates a fresh KEK, re-wraps DEKs, discards the old KEK, broadcasts revocation, forces re-authentication, notifies users, and re-issues wrapped KEK copies, each step having a named owner and completion condition.
 
@@ -7783,7 +7783,7 @@ An ordered seven-step procedure (with a 1a recovery branch) that generates a fre
 
 **Verification:** Incident-response runbook lists the seven steps with owners and completion conditions; relay protocol implements the ERR_KEY_REVOKED handshake response.
 
-#### `appendix-b-threat-model-worksheets:SEC-10` — Unrecoverable-KEK contingency (Step 1a)
+#### `appendix-b-threat-model-worksheets:SEC-10` - Unrecoverable-KEK contingency (Step 1a)
 
 The branch of the re-keying procedure executed when the old KEK cannot be retrieved, in which DEKs wrapped under the lost KEK are declared permanently inaccessible, the loss scope is documented, revocation is still broadcast, and the team chooses between BYOC backup reconstruction or accepted loss.
 
@@ -7798,7 +7798,7 @@ The branch of the re-keying procedure executed when the old KEK cannot be retrie
 
 **Verification:** Runbook explicitly handles the unrecoverable-KEK branch with a documented decision point and incident-log entry requirement.
 
-#### `appendix-b-threat-model-worksheets:SEC-11` — Data-at-risk scope calculation
+#### `appendix-b-threat-model-worksheets:SEC-11` - Data-at-risk scope calculation
 
 A bounded calculation of compromise exposure defined by the compromised KEK's keystore creation date as start, the relay-confirmed revocation date as end, and the documents the KEK protected within that window as scope, with documents outside that role or created after revocation explicitly excluded.
 
@@ -7813,7 +7813,7 @@ A bounded calculation of compromise exposure defined by the compromised KEK's ke
 
 **Verification:** Incident-response output contains a data-at-risk calculation with documented start, end, scope, and exclusions.
 
-#### `appendix-b-threat-model-worksheets:SEC-12` — User notification template and 90-day retention floor
+#### `appendix-b-threat-model-worksheets:SEC-12` - User notification template and 90-day retention floor
 
 A standardized affected-user notification recording recipient, channel, and timestamp, retained for a minimum of 90 days as an audit-log retention floor distinct from regulatory breach-notification deadlines.
 
@@ -7827,7 +7827,7 @@ A standardized affected-user notification recording recipient, channel, and time
 
 **Verification:** Audit log contains notification records with the three required fields and a retention policy of at least 90 days.
 
-#### `appendix-b-threat-model-worksheets:COMP-01` — Jurisdictional breach notification SLA matrix
+#### `appendix-b-threat-model-worksheets:COMP-01` - Jurisdictional breach notification SLA matrix
 
 A matrix mapping each operating jurisdiction to its supervisor-notification window and data-subject-notification window, against which the incident-response SLA is set to the shortest applicable window.
 
@@ -7842,7 +7842,7 @@ A matrix mapping each operating jurisdiction to its supervisor-notification wind
 
 **Verification:** Compliance documentation contains a jurisdiction matrix and an incident SLA equal to the shortest listed window.
 
-#### `appendix-b-threat-model-worksheets:COMP-02` — Pre-deployment regulatory validation
+#### `appendix-b-threat-model-worksheets:COMP-02` - Pre-deployment regulatory validation
 
 A pre-production requirement to validate, for every market the team operates in, the breach notification window, retention floor, regulatory inspection rights, and cross-border data transfer rules under the applicable regional frameworks.
 
@@ -7861,9 +7861,9 @@ A pre-production requirement to validate, for every market the team operates in,
 
 **Concept count:** 8
 
-#### `appendix-c-further-reading:READ-01` — Kleppmann seven local-first ideals
+#### `appendix-c-further-reading:READ-01` - Kleppmann seven local-first ideals
 
-The seven aspirational properties — fast local performance (P1), multi-device access (P2), network-optional operation (P3), seamless collaboration (P4), longevity beyond vendor lifespan (P5), security and privacy by default (P6), and ultimate user ownership (P7) — that together define local-first software per Kleppmann et al. (Onward! 2019).
+The seven aspirational properties - fast local performance (P1), multi-device access (P2), network-optional operation (P3), seamless collaboration (P4), longevity beyond vendor lifespan (P5), security and privacy by default (P6), and ultimate user ownership (P7) - that together define local-first software per Kleppmann et al. (Onward! 2019).
 
 **Kleppmann:** `P1, P2, P3, P4, P5, P6, P7` · **Scope:** `foundational`
 
@@ -7877,7 +7877,7 @@ The seven aspirational properties — fast local performance (P1), multi-device 
 
 > This is the canonical reference the entire book and conformance scorecard are organized around.
 
-#### `appendix-c-further-reading:READ-02` — CRDT convergent vs commutative distinction
+#### `appendix-c-further-reading:READ-02` - CRDT convergent vs commutative distinction
 
 The Shapiro et al. 2011 distinction between state-based (convergent) CRDTs that ship full state and operation-based (commutative) CRDTs that ship operation logs, which determines what is carried across the sync wire.
 
@@ -7891,7 +7891,7 @@ The Shapiro et al. 2011 distinction between state-based (convergent) CRDTs that 
 
 **Verification:** ADR exists naming the chosen CRDT type family (CvRDT, CmRDT, or delta-CRDT) with citation to Shapiro 2011.
 
-#### `appendix-c-further-reading:READ-03` — Flexible Paxos quorum intersection
+#### `appendix-c-further-reading:READ-03` - Flexible Paxos quorum intersection
 
 The Howard, Malkhi, and Spiegelman 2016 result that read and write quorums in a consensus protocol need only intersect, not be identical, which underpins the relaxed quorum assumptions in distributed lease protocols such as Flease.
 
@@ -7904,7 +7904,7 @@ The Howard, Malkhi, and Spiegelman 2016 result that read and write quorums in a 
 
 **Verification:** ADR for any consensus or lease protocol cites Flexible Paxos and states quorum sizes.
 
-#### `appendix-c-further-reading:READ-04` — CAP theorem as architectural constraint
+#### `appendix-c-further-reading:READ-04` - CAP theorem as architectural constraint
 
 The Brewer (2000) conjecture and Gilbert-Lynch (2002) proof that a distributed system cannot simultaneously guarantee consistency, availability, and partition tolerance, which forces every zone in the architecture to be classified as either AP or CP.
 
@@ -7918,9 +7918,9 @@ The Brewer (2000) conjecture and Gilbert-Lynch (2002) proof that a distributed s
 
 **Verification:** Each zone's ADR states AP or CP and describes observable behavior under network partition.
 
-#### `appendix-c-further-reading:READ-05` — Optimistic replication semantics
+#### `appendix-c-further-reading:READ-05` - Optimistic replication semantics
 
-The Saito and Shapiro 2005 framing of replication that allows tentative local commits, eventual convergence, and application-level conflict resolution — the academic vocabulary for what the book operationally calls local-first.
+The Saito and Shapiro 2005 framing of replication that allows tentative local commits, eventual convergence, and application-level conflict resolution - the academic vocabulary for what the book operationally calls local-first.
 
 **Kleppmann:** `P1, P3, P4` · **Scope:** `foundational` · **Failure modes:** `partition`
 
@@ -7932,7 +7932,7 @@ The Saito and Shapiro 2005 framing of replication that allows tentative local co
 
 **Verification:** Behavioral test confirms a local write commits and is visible to the local reader before any peer acknowledges it.
 
-#### `appendix-c-further-reading:READ-06` — Lamport logical time
+#### `appendix-c-further-reading:READ-06` - Lamport logical time
 
 Lamport's 1978 construction of logical clocks and the happens-before relation, which is the basis for the vector clocks the Appendix A wire protocol uses to order events across peers without relying on wall-clock time.
 
@@ -7946,7 +7946,7 @@ Lamport's 1978 construction of logical clocks and the happens-before relation, w
 
 **Verification:** Wire protocol specification names its logical-time scheme; partition test confirms causal order is preserved after heal.
 
-#### `appendix-c-further-reading:READ-07` — Cambria lens-based schema evolution
+#### `appendix-c-further-reading:READ-07` - Cambria lens-based schema evolution
 
 The Ink and Switch Cambria abstraction (2021) of bidirectional lenses that translate documents between schema versions N and N+1 without data loss, which is the conceptual foundation for the Chapter 13 schema migration approach.
 
@@ -7960,7 +7960,7 @@ The Ink and Switch Cambria abstraction (2021) of bidirectional lenses that trans
 
 **Verification:** Schema migration tests demonstrate round-trip lens application preserves data on a fleet running mixed schema versions.
 
-#### `appendix-c-further-reading:READ-08` — Vendor dependency risk as empirical case
+#### `appendix-c-further-reading:READ-08` - Vendor dependency risk as empirical case
 
 The composite 2022 record of Western SaaS providers suspending, restricting, or terminating service across Russia, Belarus, and adjacent CIS markets, treated by the book as the empirical case study justifying the local-first thesis against vendor dependency.
 
@@ -7981,7 +7981,7 @@ The composite 2022 record of Western SaaS providers suspending, restricting, or 
 
 **Concept count:** 14
 
-#### `appendix-d-testing-the-inverted-stack:TEST-01` — Five-level testing pyramid
+#### `appendix-d-testing-the-inverted-stack:TEST-01` - Five-level testing pyramid
 
 A tiered test architecture in which CRDT property tests, real-dependency integration tests, fault injection, deterministic simulation, and chaos testing each run at a defined cadence with mandatory pass conditions before first production release.
 
@@ -7997,7 +7997,7 @@ A tiered test architecture in which CRDT property tests, real-dependency integra
 
 **Verification:** CI configuration shows distinct jobs for each level with the prescribed triggers and time budgets, and every scenario in the suite carries an explicit pass condition.
 
-#### `appendix-d-testing-the-inverted-stack:TEST-02` — Property-based CRDT tests for convergence, idempotency, commutativity, and monotonicity
+#### `appendix-d-testing-the-inverted-stack:TEST-02` - Property-based CRDT tests for convergence, idempotency, commutativity, and monotonicity
 
 A Level 1 test class in which a property-based framework generates thousands of random operation sequences to verify that CRDT merge satisfies convergence, idempotency, commutativity (or join-semilattice merge for state-based CRDTs), and monotonicity.
 
@@ -8012,7 +8012,7 @@ A Level 1 test class in which a property-based framework generates thousands of 
 
 **Verification:** Test suite output shows at least 10,000 generated cases per CRDT property, with shrinking enabled and named property assertions distinct from example-based tests.
 
-#### `appendix-d-testing-the-inverted-stack:TEST-03` — Real-daemon integration tests via Testcontainers
+#### `appendix-d-testing-the-inverted-stack:TEST-03` - Real-daemon integration tests via Testcontainers
 
 A Level 2 test class that exercises the full sync handshake (HELLO, CAPABILITY_NEG, ACK, DELTA_STREAM, GOSSIP_PING) against a real local-node process spun up via Testcontainers, asserting on resulting CRDT state rather than wire messages.
 
@@ -8027,7 +8027,7 @@ A Level 2 test class that exercises the full sync handshake (HELLO, CAPABILITY_N
 
 **Verification:** Integration test fixtures launch a containerized node, complete the handshake, and assertions reference CRDT state hashes; CI environment provides Docker.
 
-#### `appendix-d-testing-the-inverted-stack:TEST-04` — Fault injection for partition, packet loss, and crash
+#### `appendix-d-testing-the-inverted-stack:TEST-04` - Fault injection for partition, packet loss, and crash
 
 A Level 3 test class that uses a network proxy such as toxiproxy with Testcontainers to inject node crashes mid-handshake, relay unreachability during DELTA_STREAM, and consecutive GOSSIP_PING losses, then asserts the system recovers to a CRDT state identical to the no-fault outcome.
 
@@ -8042,7 +8042,7 @@ A Level 3 test class that uses a network proxy such as toxiproxy with Testcontai
 
 **Verification:** Nightly CI job runs each fault scenario through toxiproxy and asserts post-recovery CRDT hash equals the no-fault baseline.
 
-#### `appendix-d-testing-the-inverted-stack:TEST-05` — Deterministic simulation harness with virtual clock and message scheduler
+#### `appendix-d-testing-the-inverted-stack:TEST-05` - Deterministic simulation harness with virtual clock and message scheduler
 
 A Level 4 in-process test harness that boots N node instances under a controllable virtual clock and a deterministic message scheduler, enabling exhaustive coverage of mixed-version sync, offline epoch transitions, and Flease edge cases that real-time tests cannot reach reliably.
 
@@ -8058,7 +8058,7 @@ A Level 4 in-process test harness that boots N node instances under a controllab
 
 **Verification:** Repository contains a simulation harness whose tests resolve all timeouts against the virtual clock and pass deterministically on repeated runs with the same seed.
 
-#### `appendix-d-testing-the-inverted-stack:TEST-06` — Chaos testing in staging under representative load
+#### `appendix-d-testing-the-inverted-stack:TEST-06` - Chaos testing in staging under representative load
 
 A Level 5 test class that runs Pumba, Gremlin, or equivalent chaos tooling against a multi-node staging environment loaded at median-production traffic, with the explicit goal of discovering unanticipated failure modes rather than verifying known properties.
 
@@ -8073,7 +8073,7 @@ A Level 5 test class that runs Pumba, Gremlin, or equivalent chaos tooling again
 
 **Verification:** Pre-major-release pipeline executes a 24–48 hour chaos run with logged anomalies and recovery times, archived against the release tag.
 
-#### `appendix-d-testing-the-inverted-stack:TEST-07` — CRDT growth tests for bounded resource use
+#### `appendix-d-testing-the-inverted-stack:TEST-07` - CRDT growth tests for bounded resource use
 
 A weekly and pre-release test class that simulates median-vertical usage at 30, 90, and 365 day horizons and measures CRDT document size to verify the system stays within its configured storage budget, that compaction reduces size when fired, and that per-shard size stays below the shallow snapshot threshold.
 
@@ -8088,7 +8088,7 @@ A weekly and pre-release test class that simulates median-vertical usage at 30, 
 
 **Verification:** Weekly CI job runs the growth simulation and emits per-horizon size metrics that the build gate compares to budget thresholds.
 
-#### `appendix-d-testing-the-inverted-stack:TEST-08` — Mandatory partition and reconnect scenarios
+#### `appendix-d-testing-the-inverted-stack:TEST-08` - Mandatory partition and reconnect scenarios
 
 A required scenario set covering 30-day offline divergence with merge, 90-day extended-offline baseline with intermittent windows, CP quorum loss, 1,000+ queued operations on standard and constrained hardware, abrupt power interruption during WAL write, and 30-day air-gapped operation, each with explicit pass conditions before first production release.
 
@@ -8105,7 +8105,7 @@ A required scenario set covering 30-day offline divergence with merge, 90-day ex
 
 **Verification:** Test report archives per-scenario pass/fail with CRDT state dumps, network captures showing zero relay traffic during air-gap, and recovery logs after each WAL kill.
 
-#### `appendix-d-testing-the-inverted-stack:TEST-09` — Schema migration scenarios across version skew
+#### `appendix-d-testing-the-inverted-stack:TEST-09` - Schema migration scenarios across version skew
 
 A required scenario set covering N-to-N-1 bidirectional sync via lenses, offline epoch transition recovery without manual intervention, and the couch-device case where a node lagging 3+ major versions is rejected at capability negotiation rather than migrated lossily.
 
@@ -8120,7 +8120,7 @@ A required scenario set covering N-to-N-1 bidirectional sync via lenses, offline
 
 **Verification:** Test suite includes mixed-version pairs, an offline-during-epoch fixture, and an over-gap connection attempt asserting the precise error code and update prompt.
 
-#### `appendix-d-testing-the-inverted-stack:TEST-10` — Flease edge case scenarios
+#### `appendix-d-testing-the-inverted-stack:TEST-10` - Flease edge case scenarios
 
 A required scenario set covering CP lease holder crash mid-write (partial write quarantined and visible, lease re-acquired by a peer after timeout) and partition during lease negotiation (both sides identify no-quorum and block writes with no split-brain).
 
@@ -8134,7 +8134,7 @@ A required scenario set covering CP lease holder crash mid-write (partial write 
 
 **Verification:** Test injects each scenario and asserts the partial write appears in a quarantine queue, lease ownership transfers cleanly, and no two partitions claim the lease concurrently.
 
-#### `appendix-d-testing-the-inverted-stack:TEST-11` — Security scenarios for encryption, key rotation, and audit
+#### `appendix-d-testing-the-inverted-stack:TEST-11` - Security scenarios for encryption, key rotation, and audit
 
 A required scenario set producing regulator-grade evidence covering SQLCipher unreadability without keys, post-rotation key revocation, historical document re-keying under a new KEK, data-boundary negative tests with relay disabled, relay-operator inability to decrypt, attestation revocation, and tamper-evident audit trail completeness.
 
@@ -8150,9 +8150,9 @@ A required scenario set producing regulator-grade evidence covering SQLCipher un
 - Reject attestation bundles whose issuer appears on the revocation list with ERR_KEY_REVOKED and a logged audit entry
 - Verify the audit log holds every operation in strict monotonic sequence with a passing tamper-evidence integrity check
 
-**Verification:** Per-scenario evidence column captures packet captures, audit log exports with verified Merkle root, relay log entries with issuer fingerprint, and ciphertext samples — archived per release.
+**Verification:** Per-scenario evidence column captures packet captures, audit log exports with verified Merkle root, relay log entries with issuer fingerprint, and ciphertext samples - archived per release.
 
-#### `appendix-d-testing-the-inverted-stack:TEST-12` — Ledger invariant scenarios under failure and duplication
+#### `appendix-d-testing-the-inverted-stack:TEST-12` - Ledger invariant scenarios under failure and duplication
 
 A required scenario set asserting that the sum-to-zero ledger invariant holds across the complete account set after a posting-node crash and retry, and that idempotency keys prevent duplicate postings when an identical domain event is submitted twice.
 
@@ -8166,7 +8166,7 @@ A required scenario set asserting that the sum-to-zero ledger invariant holds ac
 
 **Verification:** Test sums the ledger across all related accounts after each scenario and asserts a single posting set keyed by the idempotency token.
 
-#### `appendix-d-testing-the-inverted-stack:TEST-13` — Tiered CI configuration with archived test artefacts
+#### `appendix-d-testing-the-inverted-stack:TEST-13` - Tiered CI configuration with archived test artefacts
 
 A four-tier CI configuration (per-PR, nightly, weekly/RC, pre-major-release) that gates merges on L1+L2, runs L3 nightly, executes L4 simulation weekly or per RC, and runs L5 chaos before major releases, with archived test report, scenario evidence, harness configuration, and SBOM per release.
 
@@ -8182,7 +8182,7 @@ A four-tier CI configuration (per-PR, nightly, weekly/RC, pre-major-release) tha
 
 **Verification:** CI definitions show four named tiers with the prescribed triggers, time budgets, and artefact-upload steps producing an archive linked to each release tag.
 
-#### `appendix-d-testing-the-inverted-stack:TEST-14` — Accessibility test for sync-state announcements
+#### `appendix-d-testing-the-inverted-stack:TEST-14` - Accessibility test for sync-state announcements
 
 A test scenario asserting that sync-state transitions (sync-healthy, stale, offline, conflict-pending, revocation) are exposed through the platform accessibility tree (aria-live on web, UIAccessibilityTraits on iOS, AccessibilityNodeInfo on Android) and announced on change.
 
@@ -8201,7 +8201,7 @@ A test scenario asserting that sync-state transitions (sync-healthy, stale, offl
 
 **Concept count:** 1
 
-#### `appendix-e-citation-style:DOC-01` — Compliance citations verified against primary sources
+#### `appendix-e-citation-style:DOC-01` - Compliance citations verified against primary sources
 
 Every legal decision, statute, and regulation cited in support of a compliance claim must be checked against the primary source (case docket, official journal, enacting body) before publication.
 
@@ -8215,14 +8215,14 @@ Every legal decision, statute, and regulation cited in support of a compliance c
 
 **Verification:** Documentation build includes a citation-audit step that checks every legal-decision, statute, and regulation reference resolves to a primary source; build fails on broken or secondary-only references.
 
-> Architectural relevance is indirect — supports the credibility of compliance claims that the reference implementation must back up (see Appendix F and Ch15/Ch19). All other appendix content (in-text bracket format, reference-list templates) is editorial and not extracted.
+> Architectural relevance is indirect - supports the credibility of compliance claims that the reference implementation must back up (see Appendix F and Ch15/Ch19). All other appendix content (in-text bracket format, reference-list templates) is editorial and not extracted.
 
 
 ### Epic: Regulatory Coverage Map (appendix-f-regulatory-coverage)
 
 **Concept count:** 15
 
-#### `appendix-f-regulatory-coverage:COMP-01` — GDPR Article 17 right-to-erasure via crypto-shredding
+#### `appendix-f-regulatory-coverage:COMP-01` - GDPR Article 17 right-to-erasure via crypto-shredding
 
 An EU-mandated individual right to erasure that local-first architectures answer by destroying the per-record DEK so encrypted CRDT history becomes unrecoverable, with the lawfulness of crypto-shred-as-erasure remaining unsettled across CNIL and German DPAs.
 
@@ -8237,7 +8237,7 @@ An EU-mandated individual right to erasure that local-first architectures answer
 
 **Verification:** After erasure, the targeted record's ciphertext remains but no DEK path exists to decrypt it; an ADR documents the chosen erasure mechanism and its jurisdictional caveats
 
-#### `appendix-f-regulatory-coverage:COMP-02` — GDPR Article 30 records-of-processing at the node level
+#### `appendix-f-regulatory-coverage:COMP-02` - GDPR Article 30 records-of-processing at the node level
 
 A GDPR requirement that processing activities be logged in a controller-accessible record, satisfied in local-first architectures by per-node processing logs rather than centralized SaaS audit trails.
 
@@ -8251,7 +8251,7 @@ A GDPR requirement that processing activities be logged in a controller-accessib
 
 **Verification:** A node export produces an Article-30-compliant processing record without requiring vendor cooperation
 
-#### `appendix-f-regulatory-coverage:COMP-03` — Schrems II structural answer via no cross-border transfer
+#### `appendix-f-regulatory-coverage:COMP-03` - Schrems II structural answer via no cross-border transfer
 
 The CJEU C-311/18 ruling invalidating Privacy Shield and constraining SCCs is bypassed structurally when a local-first node never exports personal data to a foreign cloud, removing the transfer mechanism the ruling evaluates.
 
@@ -8265,7 +8265,7 @@ The CJEU C-311/18 ruling invalidating Privacy Shield and constraining SCCs is by
 
 **Verification:** A traffic-flow diagram and a deployment audit show no PII egress from EEA-resident nodes to non-adequate jurisdictions
 
-#### `appendix-f-regulatory-coverage:COMP-04` — DIFC DPL 2020 categorical foreign-cloud prohibition
+#### `appendix-f-regulatory-coverage:COMP-04` - DIFC DPL 2020 categorical foreign-cloud prohibition
 
 A DIFC-jurisdiction rule prohibiting DIFC-licensed financial entities from routing personal data through offshore cloud infrastructure, satisfied at the architectural level by a local-first node that never traverses an offshore cloud.
 
@@ -8279,7 +8279,7 @@ A DIFC-jurisdiction rule prohibiting DIFC-licensed financial entities from routi
 
 **Verification:** A network-egress test for a DIFC tenant shows no personal data leaving permitted infrastructure under any operational condition including degraded sync
 
-#### `appendix-f-regulatory-coverage:COMP-05` — UAE Federal DPL 2022 Article 16 erasure right
+#### `appendix-f-regulatory-coverage:COMP-05` - UAE Federal DPL 2022 Article 16 erasure right
 
 A UAE federal data protection rule establishing an Article 16 erasure right for processing outside DIFC and ADGM, carrying the same crypto-shredding sufficiency tension as GDPR Article 17.
 
@@ -8292,7 +8292,7 @@ A UAE federal data protection rule establishing an Article 16 erasure right for 
 
 **Verification:** A UAE federal tenant erasure request produces the same crypto-shred audit artifacts as a GDPR Article 17 request
 
-#### `appendix-f-regulatory-coverage:COMP-06` — India DPDP Act 2023 Section 12 erasure rights
+#### `appendix-f-regulatory-coverage:COMP-06` - India DPDP Act 2023 Section 12 erasure rights
 
 India's omnibus data protection statute establishes a Section 12 erasure right parallel to GDPR Article 17, with implementing rules pending and BFSI deployments layered with the RBI localization circular.
 
@@ -8305,7 +8305,7 @@ India's omnibus data protection statute establishes a Section 12 erasure right p
 
 **Verification:** A DPDP Section 12 erasure request produces a documented crypto-shred audit trail for the targeted record
 
-#### `appendix-f-regulatory-coverage:COMP-07` — RBI 2018 hard payment-data localization
+#### `appendix-f-regulatory-coverage:COMP-07` - RBI 2018 hard payment-data localization
 
 A Reserve Bank of India circular requiring all payment-related data of Indian payment-system operators to be stored exclusively within India, treated as a Tier 3 architectural driver rather than a design preference.
 
@@ -8319,7 +8319,7 @@ A Reserve Bank of India circular requiring all payment-related data of Indian pa
 
 **Verification:** An infrastructure inventory shows every node and relay handling RBI-scoped data resides within India
 
-#### `appendix-f-regulatory-coverage:COMP-08` — Russia Federal Law 242-FZ initial-collection localization
+#### `appendix-f-regulatory-coverage:COMP-08` - Russia Federal Law 242-FZ initial-collection localization
 
 The 2015 amendment to Federal Law 152-FZ requiring personal data of Russian citizens to be initially collected and stored on servers physically located in Russia, predating GDPR and establishing the doctrinal pattern of hard territorial mandates that local-first satisfies architecturally.
 
@@ -8333,7 +8333,7 @@ The 2015 amendment to Federal Law 152-FZ requiring personal data of Russian citi
 
 **Verification:** A data-flow trace for a Russian-citizen record shows initial write to a Russia-resident node before any cross-border replication
 
-#### `appendix-f-regulatory-coverage:COMP-09` — China PIPL plus MLPS 2.0 strict cross-border restriction
+#### `appendix-f-regulatory-coverage:COMP-09` - China PIPL plus MLPS 2.0 strict cross-border restriction
 
 PIPL Article 47 erasure rights combined with MLPS 2.0 security classification create one of the strictest cross-border transfer regimes globally, generally requiring personal data of Chinese residents to remain inside China.
 
@@ -8348,7 +8348,7 @@ PIPL Article 47 erasure rights combined with MLPS 2.0 security classification cr
 
 **Verification:** A China-tenant deployment audit confirms node residency, MLPS classification, and absence of unauthorized cross-border egress
 
-#### `appendix-f-regulatory-coverage:COMP-10` — Japan APPI Article 36 cross-border consent and erasure
+#### `appendix-f-regulatory-coverage:COMP-10` - Japan APPI Article 36 cross-border consent and erasure
 
 The 2022-revised Japanese APPI introduces Article 36 cross-border transfer consent and an erasure-equivalent right that inherits the same CRDT-history-versus-DEK-destruction tension as GDPR Article 17.
 
@@ -8361,7 +8361,7 @@ The 2022-revised Japanese APPI introduces Article 36 cross-border transfer conse
 
 **Verification:** A Japan-tenant erasure request produces a crypto-shred audit trail and any cross-border transfer carries an attached consent record
 
-#### `appendix-f-regulatory-coverage:COMP-11` — South Korea PIPA plus ISMS-P procurement certification
+#### `appendix-f-regulatory-coverage:COMP-11` - South Korea PIPA plus ISMS-P procurement certification
 
 South Korea's PIPA establishes erasure rights and ISMS-P functions as a procurement-required certification that the local-first vendor must produce alongside SOC 2 and ISO 27001 documentation.
 
@@ -8374,7 +8374,7 @@ South Korea's PIPA establishes erasure rights and ISMS-P functions as a procurem
 
 **Verification:** An ISMS-P artifact exists in the procurement-evidence bundle and an erasure dry-run produces a PIPA-suitable audit trail
 
-#### `appendix-f-regulatory-coverage:COMP-12` — Africa parallel mandates (NDPA, POPIA, Kenya DPA)
+#### `appendix-f-regulatory-coverage:COMP-12` - Africa parallel mandates (NDPA, POPIA, Kenya DPA)
 
 A coherent set of African data-protection statutes (Nigeria NDPA 2023, South Africa POPIA Sections 24 and 72, Kenya DPA 2019 Section 40) establishing erasure rights and cross-border transfer prohibitions to non-adequate countries that mirror the GDPR structural argument for on-device residency.
 
@@ -8388,7 +8388,7 @@ A coherent set of African data-protection statutes (Nigeria NDPA 2023, South Afr
 
 **Verification:** A POPIA Section 72 transfer review and a per-tenant sectoral-obligation register exist and are kept current
 
-#### `appendix-f-regulatory-coverage:COMP-13` — LATAM erasure-rights cluster (LGPD, LFPDPPP ARCO)
+#### `appendix-f-regulatory-coverage:COMP-13` - LATAM erasure-rights cluster (LGPD, LFPDPPP ARCO)
 
 A Latin American cluster of statutes (Brazil LGPD Article 18, Mexico LFPDPPP ARCO cancellation right, Colombia Ley 1581, Argentina Ley 25.326) establishing erasure rights parallel to GDPR Article 17 with the ANPD's stance on crypto-shredding still unsettled.
 
@@ -8401,9 +8401,9 @@ A Latin American cluster of statutes (Brazil LGPD Article 18, Mexico LFPDPPP ARC
 
 **Verification:** An LGPD Article 18 erasure dry-run produces a crypto-shred audit trail and an open-question note for ANPD review
 
-#### `appendix-f-regulatory-coverage:COMP-14` — US sector-specific frameworks (HIPAA, FedRAMP, ITAR)
+#### `appendix-f-regulatory-coverage:COMP-14` - US sector-specific frameworks (HIPAA, FedRAMP, ITAR)
 
-The absence of a US omnibus privacy law leaves sector-specific regimes — HIPAA for PHI, FedRAMP for federal cloud authorization, ITAR/EAR for export-controlled technology, CCPA/CPRA for California consumer rights — each addressed by on-device encryption and sovereign deployment patterns.
+The absence of a US omnibus privacy law leaves sector-specific regimes - HIPAA for PHI, FedRAMP for federal cloud authorization, ITAR/EAR for export-controlled technology, CCPA/CPRA for California consumer rights - each addressed by on-device encryption and sovereign deployment patterns.
 
 **Kleppmann:** `P5, P6, P7` · **Scope:** `foundational` · **Failure modes:** `data-residency-objection, key-compromise`
 
@@ -8416,7 +8416,7 @@ The absence of a US omnibus privacy law leaves sector-specific regimes — HIPAA
 
 **Verification:** A US-tenant deployment registers each applicable sectoral framework and produces the corresponding evidence artifacts on demand
 
-#### `appendix-f-regulatory-coverage:COMP-15` — Russian import-substitution market-access requirement
+#### `appendix-f-regulatory-coverage:COMP-15` - Russian import-substitution market-access requirement
 
 A Russian state procurement policy mandating preference for domestically-produced software, treated not as a data protection law but as a market-access requirement that a locally-deployed on-device build on domestically-licensed components can satisfy where cloud-resident SaaS cannot.
 

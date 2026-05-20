@@ -74,8 +74,8 @@ concepts:
   name: Honest three-tier CRDT consistency
   source: epilogue §"What the Stack Owes You"
   source-paper: v13 §20
-  definition: The architecture commits to a three-tier resolution model — AP for documents, CP under lease
-    for coordination records, append-only for financial ledger — and names the consistency guarantee per
+  definition: The architecture commits to a three-tier resolution model - AP for documents, CP under lease
+    for coordination records, append-only for financial ledger - and names the consistency guarantee per
     data type rather than presenting a single uniform model.
   must-implement:
   - Each data type is assigned an explicit consistency tier
@@ -416,8 +416,8 @@ concepts:
   source: epilogue §"The Implementation Drift Risk"
   source-paper: v13 §20
   definition: The dominant failure mode for local-first architectures in practice is the gradual accumulation
-    of locally-reasonable server-side paths — feature gates, analytics, A/B testing, compliance logging,
-    write-time permission checks — that re-establish the server as load-bearing and reduce the local node
+    of locally-reasonable server-side paths - feature gates, analytics, A/B testing, compliance logging,
+    write-time permission checks - that re-establish the server as load-bearing and reduce the local node
     to a cache.
   must-implement:
   - Architecture names each drift anti-pattern with the local-first equivalent that replaces it
@@ -451,8 +451,8 @@ concepts:
   name: ADRs with named enforcement owner
   source: epilogue §"The Implementation Drift Risk"
   source-paper: v13 §20
-  definition: Architecture Decision Records that prevent drift must name an enforcement owner — a review
-    board, principal engineer, or CTO sign-off path — because ADRs without an owner do not survive velocity
+  definition: Architecture Decision Records that prevent drift must name an enforcement owner - a review
+    board, principal engineer, or CTO sign-off path - because ADRs without an owner do not survive velocity
     pressure.
   must-implement:
   - Every drift-prevention ADR names an accountable role for deviation approval

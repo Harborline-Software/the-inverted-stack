@@ -1,4 +1,4 @@
-# Handcount Pilot — Prose Telemetry on the Filchner Trial Chapter
+# Handcount Pilot - Prose Telemetry on the Filchner Trial Chapter
 
 **Date:** 2026-05-12
 **Author:** PAO + CO (live session)
@@ -40,11 +40,11 @@ This is the dramatic-improvement signal we hoped to see. The Bobiverse register 
 
 ### The original Vol 2 problems are gone
 
-Anaphora collapsed from 699 runs / 51% coverage to **1 run / 1.3% coverage**. The single run found ("I told them…" in the wardroom briefing) is *intentional* cataloging — Anna inventorying what she briefed. Load-bearing parallelism, not decorative.
+Anaphora collapsed from 699 runs / 51% coverage to **1 run / 1.3% coverage**. The single run found ("I told them…" in the wardroom briefing) is *intentional* cataloging - Anna inventorying what she briefed. Load-bearing parallelism, not decorative.
 
 Tautology collapsed from 100+ to **1 occurrence** ("The cabin was the cabin"). That's Anna's deliberate one-off, used for character ("It always is. I have had this cabin on this boat on three prior missions and I do not redecorate"). Not a verbal tic.
 
-The first conclusion: the structural register change — Bobiverse cadence, first-person past, parenthetical-rich sentences — kills the device-density problem by changing *what kind of sentences exist*, not by editing problematic sentences out. This is the right way to fix the problem.
+The first conclusion: the structural register change - Bobiverse cadence, first-person past, parenthetical-rich sentences - kills the device-density problem by changing *what kind of sentences exist*, not by editing problematic sentences out. This is the right way to fix the problem.
 
 ### Asyndeton + polysyndeton + tricolon are register features now
 
@@ -53,11 +53,11 @@ Anna's voice naturally produces:
 - Cataloguing with deliberate conjunction repetition: *"the firmware, and the timestamps, and the official record"* (polysyndeton)
 - Listing in threes: *"eleven people breathing recycled air, one she will not bury at sea, and a boat that needs to surface"* (tricolon)
 
-These are now *signature* moves of the voice, not problems. The thresholds shouldn't fire on them — but they should be *measured* so we know if they climb into excess. Current densities (10.47, 4.11, 2.67 per 1k) are inside register; double those and the prose starts showing off.
+These are now *signature* moves of the voice, not problems. The thresholds shouldn't fire on them - but they should be *measured* so we know if they climb into excess. Current densities (10.47, 4.11, 2.67 per 1k) are inside register; double those and the prose starts showing off.
 
 ### Long-sentence outliers are parenthetical-rich, not run-on
 
-p90 = 52 and longest = 91 sound alarming but the top sentences are all *internally structured* — em-dashes, parentheticals, balanced clauses. They read aloud at audiobook pace without losing the listener. The Bobiverse register makes long sentences work because the rhythm has natural pauses.
+p90 = 52 and longest = 91 sound alarming but the top sentences are all *internally structured* - em-dashes, parentheticals, balanced clauses. They read aloud at audiobook pace without losing the listener. The Bobiverse register makes long sentences work because the rhythm has natural pauses.
 
 **Caveat:** the detector flagged one 75-word "sentence" that's actually three short dialogue lines glommed together by the sentence-splitter (it doesn't handle `."` boundary correctly). That's a detector bug, not a real long sentence. Note for the engineering session.
 
@@ -65,7 +65,7 @@ p90 = 52 and longest = 91 sound alarming but the top sentences are all *internal
 
 The v2 schema from the architecture doc serializes cleanly. All fields populated. JSON is consumable by the future QA-dashboard "Prose telemetry" chip.
 
-One field-shape note: `detected_devices[]` has *heterogeneous* shapes per device (anaphora has `run_length` and `sentences[]`; tautology has `head` and `text`; asyndeton has `commas` and `sentence`). This is fine and probably correct — JSON Schema can express it as a discriminated union on `type` — but the Phase 1 engineering should formalize the per-device sub-schemas before publishing.
+One field-shape note: `detected_devices[]` has *heterogeneous* shapes per device (anaphora has `run_length` and `sentences[]`; tautology has `head` and `text`; asyndeton has `commas` and `sentence`). This is fine and probably correct - JSON Schema can express it as a discriminated union on `type` - but the Phase 1 engineering should formalize the per-device sub-schemas before publishing.
 
 ## Detector gaps surfaced
 
@@ -79,16 +79,16 @@ Hand-implementing the detectors with stdlib-only revealed three gaps the enginee
 
 1. **Freestylo's job in v1 is calibration, not catching unknown problems.** The trial chapter already clears the original Vol 2 problems; Freestylo's role is to *confirm* that and *measure register features* (asyndeton, polysyndeton, tricolon, isocolon) so we have empirical thresholds.
 2. **First production target chapter is `ch01-departure.trial.md`.** It's clean; it produces a green baseline; subsequent measurements compare against it. The engineering session should ship Freestylo + StyloMetrix and reproduce the handcount numbers (plus isocolon) within ±10%. Reproducing the handcount = passing the integration test.
-3. **Custom-detector list shrinks.** Tautological self-equation (the project-specific antipattern) probably stays custom — Freestylo unlikely to have it. The other six v1 detectors likely all exist in Freestylo or are derivable from spaCy primitives.
+3. **Custom-detector list shrinks.** Tautological self-equation (the project-specific antipattern) probably stays custom - Freestylo unlikely to have it. The other six v1 detectors likely all exist in Freestylo or are derivable from spaCy primitives.
 4. **Baseline run sequence:**
    - Phase 1.0: ship Freestylo + StyloMetrix integration
    - Phase 1.1: reproduce handcount numbers on `ch01-departure.trial.md` (validation)
    - Phase 1.2: run against all 18 Vol 2 chapters (corpus baseline)
-   - Phase 1.3: run against the *old* `ch01-departure.md` (pre-trial draft) — comparison fixture, confirms register-change reduced the problem at the corpus level
+   - Phase 1.3: run against the *old* `ch01-departure.md` (pre-trial draft) - comparison fixture, confirms register-change reduced the problem at the corpus level
 
 ## Files
 
-- `build/prose_telemetry_handcount.py` — the stdlib hand-counter (this script)
-- `galley/build/the-inverted-stack/output/qa/ch01-departure.trial.prose-metrics.json` — the measurement artifact
+- `build/prose_telemetry_handcount.py` - the stdlib hand-counter (this script)
+- `galley/build/the-inverted-stack/output/qa/ch01-departure.trial.prose-metrics.json` - the measurement artifact
 
 Both committable. The handcount script lives in this book repo (it's a calibration tool tied to this manuscript); the production tool will live in `galley/prose/lib/prose_telemetry/` once Phase 1 ships.

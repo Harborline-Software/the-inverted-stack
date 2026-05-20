@@ -1,5 +1,5 @@
 --[[
-kroki-mermaid.lua — Pandoc Lua filter for rendering Mermaid blocks via kroki.io
+kroki-mermaid.lua - Pandoc Lua filter for rendering Mermaid blocks via kroki.io
 
 For each ```mermaid code block in the source markdown, POST the diagram source
 to kroki.io and replace the block with the returned SVG (cached on disk). The
@@ -135,7 +135,7 @@ function CodeBlock(block)
 
   local svg = fetch_svg(block.text)
   if not svg then
-    -- Pass through unchanged — broken Mermaid will be visible in output for
+    -- Pass through unchanged - broken Mermaid will be visible in output for
     -- author review rather than silently breaking the build.
     return nil
   end

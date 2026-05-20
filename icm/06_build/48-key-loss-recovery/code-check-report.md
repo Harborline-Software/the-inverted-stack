@@ -1,4 +1,4 @@
-# Code-check report — 48 key-loss recovery
+# Code-check report - 48 key-loss recovery
 
 **Stage:** code-check (ICM stage 3).
 **Run:** iter-0003, 2026-04-26.
@@ -48,27 +48,27 @@ No fenced code blocks present in either new section. No `// illustrative` marker
 | `TODO` | None found. |
 | `expand here` | None found. |
 | `placeholder` | None found. |
-| `<!-- CLAIM: -->` | One present in Ch15 §"Biometric-derived secondary key" — biometric-template non-exportability claim across Apple Secure Enclave / Pixel Titan M / Windows Pluton. **Intentional**; flagged for technical-review (next stage), not code-check. |
+| `<!-- CLAIM: -->` | One present in Ch15 §"Biometric-derived secondary key" - biometric-template non-exportability claim across Apple Secure Enclave / Pixel Titan M / Windows Pluton. **Intentional**; flagged for technical-review (next stage), not code-check. |
 
 ## Cross-reference integrity
 
 Cross-references introduced by iter-0002:
 
-- Ch15 §Key-Loss Recovery → Ch15 §Key Hierarchy (Argon2id parameters) — target exists; verified at line 75 of Ch15.
-- Ch15 §Key-Loss Recovery → Ch15 §Key Compromise Incident Response — target exists; verified at line 99 of Ch15.
-- Ch15 §Key-Loss Recovery → Ch15 §GDPR Article 17 and Crypto-Shredding — target exists; verified.
-- Ch15 §Key-Loss Recovery → primitives #32, #18, #9 — these are entries in `docs/reference-implementation/design-decisions.md` §5; cross-references are appropriate for forward-looking sub-pattern references in book prose.
-- Ch20 §Key-Loss Recovery UX → Ch15 §Key-Loss Recovery — newly-added section in same commit; cross-reference target exists.
-- Ch20 §Key-Loss Recovery UX → Ch20 §The First-Run Experience — target exists at line 151 of Ch20.
-- Ch20 §Key-Loss Recovery UX → Ch15 §Key Hierarchy — target exists; verified.
+- Ch15 §Key-Loss Recovery → Ch15 §Key Hierarchy (Argon2id parameters) - target exists; verified at line 75 of Ch15.
+- Ch15 §Key-Loss Recovery → Ch15 §Key Compromise Incident Response - target exists; verified at line 99 of Ch15.
+- Ch15 §Key-Loss Recovery → Ch15 §GDPR Article 17 and Crypto-Shredding - target exists; verified.
+- Ch15 §Key-Loss Recovery → primitives #32, #18, #9 - these are entries in `docs/reference-implementation/design-decisions.md` §5; cross-references are appropriate for forward-looking sub-pattern references in book prose.
+- Ch20 §Key-Loss Recovery UX → Ch15 §Key-Loss Recovery - newly-added section in same commit; cross-reference target exists.
+- Ch20 §Key-Loss Recovery UX → Ch20 §The First-Run Experience - target exists at line 151 of Ch20.
+- Ch20 §Key-Loss Recovery UX → Ch15 §Key Hierarchy - target exists; verified.
 
-## Quality gate — code-check → technical-review
+## Quality gate - code-check → technical-review
 
 Per loop-plan §5:
 
-- [x] All Sunfish package references validated — three classified, two annotated as forward-looking, one verified in canon.
-- [x] Code snippets marked illustrative — no code snippets present; nothing to mark.
-- [x] No `<!-- TBD -->` markers — verified.
+- [x] All Sunfish package references validated - three classified, two annotated as forward-looking, one verified in canon.
+- [x] Code snippets marked illustrative - no code snippets present; nothing to mark.
+- [x] No `<!-- TBD -->` markers - verified.
 
 Gate **passed**. Advance to technical-review.
 
@@ -78,7 +78,7 @@ Gate **passed**. Advance to technical-review.
 
 The technical-review stage handles substantive accuracy. The following items are queued for that pass:
 
-1. The `<!-- CLAIM: ... -->` marker in Ch15 §Biometric-derived secondary key — verify Apple Secure Enclave, Pixel Titan M, and Windows Pluton biometric-template non-exportability against vendor documentation [7].
+1. The `<!-- CLAIM: ... -->` marker in Ch15 §Biometric-derived secondary key - verify Apple Secure Enclave, Pixel Titan M, and Windows Pluton biometric-template non-exportability against vendor documentation [7].
 2. Verify Shamir threshold logic statements (3-of-5 vs. 2-of-3 tradeoff) against secret-sharing literature [6].
 3. Verify Argon2id parameter values in §Paper-key fallback match the regulated-tier values stated in Ch15 §Key Hierarchy (memory cost 128 MiB, iteration count 4, parallelism 4).
 4. Verify the four new IEEE citations [4]–[7] for date, venue, and URL stability.

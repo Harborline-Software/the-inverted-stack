@@ -3,7 +3,7 @@ metadata:
   view: Foundational concepts grouped by Kleppmann property (P1-P7)
   purpose: Feeds the local-first-properties Claude skill (any local-first repo can be scored against P1-P7
     from this subset)
-  scope-filter: foundational only — inverted-stack-specific concepts excluded so this view is portable
+  scope-filter: foundational only - inverted-stack-specific concepts excluded so this view is portable
     to non-Inverted-Stack local-first implementations
   concepts-per-property:
     P1: 36
@@ -14,11 +14,11 @@ metadata:
     P6: 103
     P7: 115
 kleppmann-property-glossary:
-  P1: No spinners — fast, work happens locally
+  P1: No spinners - fast, work happens locally
   P2: Your work is not trapped on one device
   P3: The network is optional
   P4: Seamless collaboration with colleagues
-  P5: The Long Now — data outlives vendor and subscription
+  P5: The Long Now - data outlives vendor and subscription
   P6: Security and privacy by default
   P7: You retain ultimate ownership and control
 properties:
@@ -54,7 +54,7 @@ properties:
     scope: foundational
     definition: A failure mode in which a SaaS application reduces to a read-only cache, queued submissions
       of uncertain success, or total inoperability when network connectivity is intermittent, weak, restricted,
-      or absent — disproportionately affecting field, rural, clinical, industrial, air-gapped, and majority-world
+      or absent - disproportionately affecting field, rural, clinical, industrial, air-gapped, and majority-world
       users whose baseline operating environment is non-continuous connectivity.
     must-implement: &id006
     - All core operations including create, update, search, and report execute against local storage with
@@ -67,7 +67,7 @@ properties:
     name: No-degraded-mode commitment
     scope: foundational
     definition: An architectural commitment that the application exposes no reduced-capability operating
-      mode under offline, partitioned, or vendor-unreachable conditions — every core capability behaves
+      mode under offline, partitioned, or vendor-unreachable conditions - every core capability behaves
       identically whether the network is present or absent.
     must-implement: &id007
     - No feature presents an offline-only read-only state
@@ -85,7 +85,7 @@ properties:
     definition: The observation that organizations under SaaS outage continue operating via analog fallbacks
       (paper charts, whiteboards, fax, manual reconciliation) demonstrates that the SaaS layer was largely
       mediating work that continued to happen, while the digital affordances (search, cross-history pattern
-      detection, analytic queries) were the genuine value lost — value that a local-first node preserves
+      detection, analytic queries) were the genuine value lost - value that a local-first node preserves
       through the outage.
     must-implement: &id008
     - Local node retains full digital affordances (search, reporting, cross-record analytics) during vendor
@@ -147,7 +147,7 @@ properties:
   - ref: ch03-inverted-stack-one-diagram:INV-18
     name: Three developer-habit shifts under the inversion
     scope: foundational
-    definition: Building under the inversion shifts three habits — writes succeed on local durability
+    definition: Building under the inversion shifts three habits - writes succeed on local durability
       rather than remote acknowledgement, business logic owns its correctness independently of the network,
       and failure modes are explicit rather than papered over.
     must-implement: &id011
@@ -160,7 +160,7 @@ properties:
       static analysis confirms no validator imports a network client; UI inventory confirms a conflict-inbox
       surface exists.
   - ref: ch04-choosing-your-architecture:FILT-03
-    name: Filter 3 — Connectivity and operational environment
+    name: Filter 3 - Connectivity and operational environment
     scope: foundational
     definition: A check that names the actual deployment environment and routes to local-first when users
       operate in field, air-gapped, regulated-residency, clinical, or chronically intermittent-connectivity
@@ -170,7 +170,7 @@ properties:
       the cloud provider's SLA
     - Field, air-gapped, MDM-governed, residency-regulated, and chronically-intermittent environments
       route to local-first as mandatory or strongly preferred
-    - The product treats absence of network as a normal operating mode, not a degraded one — input is
+    - The product treats absence of network as a normal operating mode, not a degraded one - input is
       accepted and writes are queued without network access
     - Always-online browser-only zero-install scenarios are the only category routed to traditional SaaS
       at this filter
@@ -182,7 +182,7 @@ properties:
     scope: foundational
     definition: An operational distinction that treats an application loading stale data and queueing
       writes as degraded (still working) and an application showing a spinner and refusing input as broken
-      — establishing absence-tolerance, not graceful-degradation, as the local-first acceptance criterion.
+      - establishing absence-tolerance, not graceful-degradation, as the local-first acceptance criterion.
     must-implement: &id013
     - The application accepts user input with no network present
     - Writes are persisted locally and queued for sync without blocking the UI
@@ -208,10 +208,10 @@ properties:
     scope: foundational
     definition: The first thirty seconds after install for a brand-new solo user with no prior data and
       no existing peers is specified as a product requirement that walks the user from blank state to
-      first project, first backup configuration, and first invite — closing the most common 30-day abandonment
+      first project, first backup configuration, and first invite - closing the most common 30-day abandonment
       path for local-first applications.
     must-implement: &id002
-    - The application specifies the zero-state screen explicitly — what the user sees, the first action
+    - The application specifies the zero-state screen explicitly - what the user sees, the first action
       surfaced, and the path to first project
     - The first-run flow guides the user to configure a backup target before significant data is created
     - The first-run flow surfaces the invite path so the workspace is not silently single-user by default
@@ -333,9 +333,9 @@ properties:
   - ref: ch17-building-first-node:BUILD-18
     name: Three-state optimistic write button
     scope: foundational
-    definition: Every write surface in a local-first application reflects three local-write states — pending
+    definition: Every write surface in a local-first application reflects three local-write states - pending
       (in-flight to local store), confirmed (durable on local device), failed (local-store error only)
-      — without conflating sync delay with write failure.
+      - without conflating sync delay with write failure.
     must-implement: &id020
     - UI distinguishes pending, confirmed, and failed states for every write surface
     - Confirmed state fires on local-store completion, not on peer acknowledgment
@@ -360,7 +360,7 @@ properties:
     name: Phase 2 local writes for AP-class only
     scope: foundational
     definition: Phase 2 routes AP-class block writes through the CRDT engine for instant local feedback
-      while CP-class records — billing, subscription limits, role membership, audit logs — remain server-authoritative.
+      while CP-class records - billing, subscription limits, role membership, audit logs - remain server-authoritative.
     must-implement: &id021
     - AP-class writes apply locally without a server round-trip
     - CRDT merge resolves concurrent edits on AP-class records without data loss
@@ -385,7 +385,7 @@ properties:
   - ref: ch20-ux-sync-conflict:UX-02
     name: Plain-language register for all user-visible state
     scope: foundational
-    definition: Every string a user reads must pass a plain-language test — a practitioner with no knowledge
+    definition: Every string a user reads must pass a plain-language test - a practitioner with no knowledge
       of distributed systems understands it without training.
     must-implement:
     - String catalog excludes infrastructure terminology in any user-visible surface
@@ -408,9 +408,9 @@ properties:
   - ref: ch20-ux-sync-conflict:UX-09
     name: Three-state optimistic write lifecycle
     scope: foundational
-    definition: An AP-class write moves through three explicit visual states — pending (applied locally,
+    definition: An AP-class write moves through three explicit visual states - pending (applied locally,
       not yet seen by any peer), confirmed (received by at least one peer), and failed (circuit breaker
-      rejected on reconnect) — with the failed state opening the conflict inbox.
+      rejected on reconnect) - with the failed state opening the conflict inbox.
     must-implement: &id024
     - Writes apply locally on user confirmation and surface a pending visual state immediately
     - Confirmation state is reached when at least one peer has acknowledged the write
@@ -434,7 +434,7 @@ properties:
     scope: foundational
     definition: After a power-loss or OS-kill termination the node validates the last write-ahead checkpoint,
       replays pending writes from the CRDT log, and surfaces a single short status only when replay takes
-      more than two seconds — never a crash dialog.
+      more than two seconds - never a crash dialog.
     must-implement: &id025
     - Relaunch validates the WAL checkpoint and replays the CRDT log automatically
     - Workspace opens as soon as replay completes
@@ -444,9 +444,9 @@ properties:
   - ref: ch20-ux-sync-conflict:UX-23
     name: Accessibility as a Tier-1 contract
     scope: foundational
-    definition: Every UX surface in the application carries an accessibility contract — semantic ARIA
+    definition: Every UX surface in the application carries an accessibility contract - semantic ARIA
       roles, keyboard reachability, declared component metadata, and plain-language assistive-technology
-      text — enforced as rigorously as the write path.
+      text - enforced as rigorously as the write path.
     must-implement: &id064
     - Status surfaces use role="status" with aria-live="polite" for ambient changes and role="alert" with
       aria-live="assertive" for required-action states
@@ -460,9 +460,9 @@ properties:
   - ref: appendix-c-further-reading:READ-01
     name: Kleppmann seven local-first ideals
     scope: foundational
-    definition: The seven aspirational properties — fast local performance (P1), multi-device access (P2),
+    definition: The seven aspirational properties - fast local performance (P1), multi-device access (P2),
       network-optional operation (P3), seamless collaboration (P4), longevity beyond vendor lifespan (P5),
-      security and privacy by default (P6), and ultimate user ownership (P7) — that together define local-first
+      security and privacy by default (P6), and ultimate user ownership (P7) - that together define local-first
       software per Kleppmann et al. (Onward! 2019).
     must-implement: &id003
     - System satisfies all seven Kleppmann properties P1-P7 measurably
@@ -474,7 +474,7 @@ properties:
     name: Optimistic replication semantics
     scope: foundational
     definition: The Saito and Shapiro 2005 framing of replication that allows tentative local commits,
-      eventual convergence, and application-level conflict resolution — the academic vocabulary for what
+      eventual convergence, and application-level conflict resolution - the academic vocabulary for what
       the book operationally calls local-first.
     must-implement: &id026
     - Local writes commit tentatively without coordination
@@ -524,7 +524,7 @@ properties:
       user can complete unaided in under thirty minutes, ending with a working node that resumes from
       BYOC backup without exposing any technical surface such as bucket URLs or rclone paths.
     must-implement: &id080
-    - Recovery flow is specified as a sequenced user-facing walkthrough — buy device, install application,
+    - Recovery flow is specified as a sequenced user-facing walkthrough - buy device, install application,
       enter recovery code or scan team-member QR, confirm BYOC target, restore runs in background
     - Recovery substitutes a recovery code or peer-attestation QR for the lost device's original attestation
       bundle
@@ -554,7 +554,7 @@ properties:
     scope: foundational
     definition: The first thirty seconds after install for a brand-new solo user with no prior data and
       no existing peers is specified as a product requirement that walks the user from blank state to
-      first project, first backup configuration, and first invite — closing the most common 30-day abandonment
+      first project, first backup configuration, and first invite - closing the most common 30-day abandonment
       path for local-first applications.
     must-implement: *id002
     verification: Install the application on a fresh device with no prior workspace; confirm the user
@@ -563,8 +563,8 @@ properties:
   - ref: ch09-local-first-practitioner-lens:LENS-LF-16
     name: Shared-device role-scoped recovery
     scope: foundational
-    definition: Recovery must support shared-device deployments — a single tablet rotated across a team
-      of field workers — by targeting the role and the workspace rather than the device and its sole user,
+    definition: Recovery must support shared-device deployments - a single tablet rotated across a team
+      of field workers - by targeting the role and the workspace rather than the device and its sole user,
       with BYOC backup configured against role-scoped workspace targets so any team member can restore
       from any device.
     must-implement: &id040
@@ -591,9 +591,9 @@ properties:
   - ref: appendix-c-further-reading:READ-01
     name: Kleppmann seven local-first ideals
     scope: foundational
-    definition: The seven aspirational properties — fast local performance (P1), multi-device access (P2),
+    definition: The seven aspirational properties - fast local performance (P1), multi-device access (P2),
       network-optional operation (P3), seamless collaboration (P4), longevity beyond vendor lifespan (P5),
-      security and privacy by default (P6), and ultimate user ownership (P7) — that together define local-first
+      security and privacy by default (P6), and ultimate user ownership (P7) - that together define local-first
       software per Kleppmann et al. (Onward! 2019).
     must-implement: *id003
     verification: Conformance scorecard maps every architectural choice to one or more of P1-P7; no property
@@ -612,7 +612,7 @@ properties:
       running mixed schema versions.
   P3:
   - ref: preface:PREF-01
-    name: The architectural thesis — local node as primary, vendor as optional
+    name: The architectural thesis - local node as primary, vendor as optional
     scope: foundational
     definition: 'The book''s central thesis is the inversion of the SaaS dependency relationship: the
       local node is the primary data plane and the vendor relay is an optional accelerator, so the application
@@ -649,7 +649,7 @@ properties:
     scope: foundational
     definition: A failure mode in which a SaaS application reduces to a read-only cache, queued submissions
       of uncertain success, or total inoperability when network connectivity is intermittent, weak, restricted,
-      or absent — disproportionately affecting field, rural, clinical, industrial, air-gapped, and majority-world
+      or absent - disproportionately affecting field, rural, clinical, industrial, air-gapped, and majority-world
       users whose baseline operating environment is non-continuous connectivity.
     must-implement: *id006
     verification: Place device in airplane mode for the duration of a complete representative workflow;
@@ -674,7 +674,7 @@ properties:
     name: No-degraded-mode commitment
     scope: foundational
     definition: An architectural commitment that the application exposes no reduced-capability operating
-      mode under offline, partitioned, or vendor-unreachable conditions — every core capability behaves
+      mode under offline, partitioned, or vendor-unreachable conditions - every core capability behaves
       identically whether the network is present or absent.
     must-implement: *id007
     verification: Behavioral test runs the full core workflow with the network disabled and asserts byte-identical
@@ -686,7 +686,7 @@ properties:
     definition: The observation that organizations under SaaS outage continue operating via analog fallbacks
       (paper charts, whiteboards, fax, manual reconciliation) demonstrates that the SaaS layer was largely
       mediating work that continued to happen, while the digital affordances (search, cross-history pattern
-      detection, analytic queries) were the genuine value lost — value that a local-first node preserves
+      detection, analytic queries) were the genuine value lost - value that a local-first node preserves
       through the outage.
     must-implement: *id008
     verification: Field test simulates vendor unavailability for a representative workday; node retains
@@ -734,7 +734,7 @@ properties:
   - ref: ch03-inverted-stack-one-diagram:INV-06
     name: Per-record-class CAP positioning
     scope: foundational
-    definition: CAP trade-offs are made per record class rather than per application — documents and notes
+    definition: CAP trade-offs are made per record class rather than per application - documents and notes
       are AP via CRDT merge, identity facts are AP with deferred merge, reservations and slots are CP
       via distributed lease, and financial transactions are CP under lease plus ledger ordering.
     must-implement: &id027
@@ -747,7 +747,7 @@ properties:
   - ref: ch03-inverted-stack-one-diagram:INV-09
     name: Gossip anti-entropy with vector clocks
     scope: foundational
-    definition: The daemon converges peer state through periodic gossip — every 30 seconds it selects
+    definition: The daemon converges peer state through periodic gossip - every 30 seconds it selects
       two random peers, exchanges deltas based on vector-clock divergence, and streams missing CRDT operations
       using CBOR encoding.
     must-implement: &id028
@@ -773,9 +773,9 @@ properties:
   - ref: ch03-inverted-stack-one-diagram:INV-15
     name: Mirror-inversion of Ch01 failure modes
     scope: foundational
-    definition: The inversion specifically resolves each of Ch01's six named SaaS failure modes — The
+    definition: The inversion specifically resolves each of Ch01's six named SaaS failure modes - The
       Outage and The Dependency Chain, The Vendor, The Connectivity, The Data, The Price, and The Third-Party
-      Veto — by removing the vendor's data custody as the load-bearing dependency.
+      Veto - by removing the vendor's data custody as the load-bearing dependency.
     must-implement: &id074
     - Local authoritative state survives any upstream cloud-region outage
     - Vendor business changes do not interrupt access to user data
@@ -788,7 +788,7 @@ properties:
   - ref: ch03-inverted-stack-one-diagram:INV-18
     name: Three developer-habit shifts under the inversion
     scope: foundational
-    definition: Building under the inversion shifts three habits — writes succeed on local durability
+    definition: Building under the inversion shifts three habits - writes succeed on local durability
       rather than remote acknowledgement, business logic owns its correctness independently of the network,
       and failure modes are explicit rather than papered over.
     must-implement: *id011
@@ -796,7 +796,7 @@ properties:
       static analysis confirms no validator imports a network client; UI inventory confirms a conflict-inbox
       surface exists.
   - ref: ch04-choosing-your-architecture:FILT-01
-    name: Filter 1 — Consistency requirements (hard stop)
+    name: Filter 1 - Consistency requirements (hard stop)
     scope: foundational
     definition: A disqualifying check that rejects local-first architecture when the domain requires atomic
       cross-user transactions, intolerance for stale data, or millisecond-identical truth across all peers.
@@ -811,7 +811,7 @@ properties:
       to atomic cross-user transactions, dangerous stale data, or millisecond-identical truth requirements
       documents the centralized routing for that subsystem.
   - ref: ch04-choosing-your-architecture:FILT-03
-    name: Filter 3 — Connectivity and operational environment
+    name: Filter 3 - Connectivity and operational environment
     scope: foundational
     definition: A check that names the actual deployment environment and routes to local-first when users
       operate in field, air-gapped, regulated-residency, clinical, or chronically intermittent-connectivity
@@ -823,8 +823,8 @@ properties:
   - ref: ch04-choosing-your-architecture:DEC-06
     name: The Practical Shortcut (three-question prefilter)
     scope: foundational
-    definition: A three-question prefilter — primary-record ownership, sustained-offline requirement,
-      vendor-outlive requirement — that determines whether a full five-filter evaluation is worth the
+    definition: A three-question prefilter - primary-record ownership, sustained-offline requirement,
+      vendor-outlive requirement - that determines whether a full five-filter evaluation is worth the
       time for a project in early discovery.
     must-implement: &id075
     - Discovery-stage projects answer the three shortcut questions before committing to a full filter
@@ -840,7 +840,7 @@ properties:
     scope: foundational
     definition: An operational distinction that treats an application loading stale data and queueing
       writes as degraded (still working) and an application showing a spinner and refusing input as broken
-      — establishing absence-tolerance, not graceful-degradation, as the local-first acceptance criterion.
+      - establishing absence-tolerance, not graceful-degradation, as the local-first acceptance criterion.
     must-implement: *id013
     verification: Behavioral test disables all network interfaces and exercises the application's primary
       write and read paths; no spinner appears on network absence and no input is refused.
@@ -959,7 +959,7 @@ properties:
   - ref: ch06-distributed-systems-lens:LENS-D-15
     name: Required test categories for sync protocol correctness
     scope: foundational
-    definition: Sync protocol verification requires a defined set of test categories — network partition
+    definition: Sync protocol verification requires a defined set of test categories - network partition
       simulation, clock skew injection, concurrent edit generation, GC boundary conditions, Byzantine
       operation injection, and long-partition reconnect scenarios.
     must-implement: &id035
@@ -973,8 +973,8 @@ properties:
     name: Vendor-continuity risk as commercial purchasing argument
     scope: foundational
     definition: The architecture's structural ability to keep operating after vendor commercial relationship
-      is severed — empirically anchored by the 2022 Western SaaS withdrawal from Russia and CIS markets
-      — is positioned in procurement materials as a structural commercial claim that cloud-dependent competitors
+      is severed - empirically anchored by the 2022 Western SaaS withdrawal from Russia and CIS markets
+      - is positioned in procurement materials as a structural commercial claim that cloud-dependent competitors
       cannot make without re-architecture.
     must-implement: &id079
     - Procurement and sales materials name vendor-continuity-on-suspension as a structural property of
@@ -1005,7 +1005,7 @@ properties:
     scope: foundational
     definition: When two offline nodes reconnect, surfaced conflicts are grouped by record type and cause,
       auto-resolved where predefined rules clearly apply, and offer a resolve-all-similar action for the
-      remainder — converting the undifferentiated conflict list that breaks most collaborative local-first
+      remainder - converting the undifferentiated conflict list that breaks most collaborative local-first
       applications into a manageable inbox.
     must-implement: &id037
     - Conflict UI groups conflicts by record type and by underlying cause rather than presenting a flat
@@ -1045,7 +1045,7 @@ properties:
     scope: foundational
     definition: The architecture treats intermittent connectivity as the operational baseline for hundreds
       of millions of enterprise workers across Sub-Saharan Africa, South and Southeast Asia, and rural
-      Latin America — not as a carrier-grade NAT edge case — so all sync, conflict, and recovery flows
+      Latin America - not as a carrier-grade NAT edge case - so all sync, conflict, and recovery flows
       are designed for sessions that span many disconnected intervals.
     must-implement: &id039
     - Sync daemon is designed for long-running sessions across repeated disconnections without manual
@@ -1059,8 +1059,8 @@ properties:
     name: Sanctions-grade availability as design anchor
     scope: foundational
     definition: The architecture is anchored against the empirical case of the 2022 sanctions-driven SaaS
-      suspensions across Russia and CIS markets — hundreds of thousands of organizations losing vendor
-      access on days of notice — establishing that surviving vendor suspension is not a theoretical improvement
+      suspensions across Russia and CIS markets - hundreds of thousands of organizations losing vendor
+      access on days of notice - establishing that surviving vendor suspension is not a theoretical improvement
       but a property the architecture has already had to provide.
     must-implement: &id081
     - Core read and write paths function with all vendor-controlled endpoints unreachable
@@ -1072,8 +1072,8 @@ properties:
   - ref: ch10-synthesis:LENS-04
     name: Three-tier CRDT applicability model
     scope: foundational
-    definition: Data is partitioned into three tiers — AP CRDT-merged content, CP single-writer operations
-      under lease coordination, and append-only ledger entries outside the CRDT — based on whether automatic
+    definition: Data is partitioned into three tiers - AP CRDT-merged content, CP single-writer operations
+      under lease coordination, and append-only ledger entries outside the CRDT - based on whether automatic
       merge is semantically valid.
     must-implement: &id041
     - Documents and collaborative content use CRDT merge in an AP tier
@@ -1119,8 +1119,8 @@ properties:
     name: CRDT merge mathematical properties (commutativity, associativity, idempotency)
     scope: foundational
     definition: A CRDT merge function must satisfy commutativity, associativity, and idempotency so that
-      any two peers applying the same set of operations in any order — including duplicate application
-      — converge to identical state.
+      any two peers applying the same set of operations in any order - including duplicate application
+      - converge to identical state.
     must-implement: &id042
     - Merge function is commutative across operation order
     - Merge function is associative across operation grouping
@@ -1128,7 +1128,7 @@ properties:
     verification: Property-based test applies randomized operation sequences in different orders and with
       duplicates, asserting byte-identical convergent state.
   - ref: ch12-crdt-engine-data-layer:CRDT-07
-    name: AP records — CRDT merge with tolerated divergence
+    name: AP records - CRDT merge with tolerated divergence
     scope: foundational
     definition: AP records (documents, notes, task descriptions, team membership) tolerate concurrent
       offline divergence because deterministic CRDT merge produces a result the user can review, and the
@@ -1140,9 +1140,9 @@ properties:
     verification: Two-peer offline divergence test for an AP stream confirms reconnect produces deterministic
       merged state with no manual intervention.
   - ref: ch12-crdt-engine-data-layer:CRDT-29
-    name: Layer 2 — append-only event log as source of truth
+    name: Layer 2 - append-only event log as source of truth
     scope: foundational
-    definition: Layer 2 is the append-only CRDT and event log — the source of truth — to which every CRDT
+    definition: Layer 2 is the append-only CRDT and event log - the source of truth - to which every CRDT
       operation, domain event, and ledger posting is durably written (fsync on POSIX, FlushFileBuffers
       on Windows) before the application receives confirmation, with the only mutating operation being
       compaction under the three-tier GC policy.
@@ -1212,8 +1212,8 @@ properties:
   - ref: ch13-schema-migration-evolution:SCH-08
     name: Additive change classes that skip upcasters
     scope: foundational
-    definition: Two classes of schema change require no upcaster — adding a new optional field to an existing
-      event type, and adding a new event variant — because absence is a defined default and unknown variants
+    definition: Two classes of schema change require no upcaster - adding a new optional field to an existing
+      event type, and adding a new event variant - because absence is a defined default and unknown variants
       are quarantined.
     must-implement: &id048
     - Optional field absence is treated as the field's declared default
@@ -1390,8 +1390,8 @@ properties:
   - ref: ch17-building-first-node:BUILD-16
     name: Always-visible three-indicator status bar
     scope: foundational
-    definition: A local-first node renders a permanently-visible status bar with three indicators — Node
-      Health, Link Status, and Data Freshness — so the user can always perceive how the node's behavior
+    definition: A local-first node renders a permanently-visible status bar with three indicators - Node
+      Health, Link Status, and Data Freshness - so the user can always perceive how the node's behavior
       depends on its current network and sync state.
     must-implement: &id060
     - Status bar is rendered on every screen, never hidden behind a settings panel
@@ -1404,8 +1404,8 @@ properties:
     name: Configurable data-freshness threshold as product decision
     scope: foundational
     definition: The staleness threshold that flips Data Freshness from healthy to stale is a configurable
-      product decision (default five minutes) chosen per application context — short for high-frequency
-      collaborative writing, long for intermittent-connectivity field deployments — and fixed before the
+      product decision (default five minutes) chosen per application context - short for high-frequency
+      collaborative writing, long for intermittent-connectivity field deployments - and fixed before the
       first user-facing release.
     must-implement:
     - Staleness threshold is configurable per deployment
@@ -1417,9 +1417,9 @@ properties:
   - ref: ch17-building-first-node:BUILD-18
     name: Three-state optimistic write button
     scope: foundational
-    definition: Every write surface in a local-first application reflects three local-write states — pending
+    definition: Every write surface in a local-first application reflects three local-write states - pending
       (in-flight to local store), confirmed (durable on local device), failed (local-store error only)
-      — without conflating sync delay with write failure.
+      - without conflating sync delay with write failure.
     must-implement: *id020
     verification: Disconnect network and submit a write; the button reaches confirmed and the Data Freshness
       indicator transitions to stale, but the write does not enter the failed state.
@@ -1440,8 +1440,8 @@ properties:
   - ref: ch18-migrating-existing-saas:MIG-04
     name: AP-class versus CP-class record separation
     scope: foundational
-    definition: Records are classified as AP-class — user-owned, eventually consistent, suitable for CRDT
-      replication — or CP-class — server-coordinated, requiring linearizable writes — and the two classes
+    definition: Records are classified as AP-class - user-owned, eventually consistent, suitable for CRDT
+      replication - or CP-class - server-coordinated, requiring linearizable writes - and the two classes
       never share a backing table.
     must-implement: &id061
     - Each table or aggregate is labeled AP-class or CP-class in the schema documentation
@@ -1466,7 +1466,7 @@ properties:
     name: Phase 2 local writes for AP-class only
     scope: foundational
     definition: Phase 2 routes AP-class block writes through the CRDT engine for instant local feedback
-      while CP-class records — billing, subscription limits, role membership, audit logs — remain server-authoritative.
+      while CP-class records - billing, subscription limits, role membership, audit logs - remain server-authoritative.
     must-implement: *id021
     verification: Convergence test against AP-class aggregates demonstrates byte-identical state after
       concurrent edits; CP-class regression suite passes unchanged.
@@ -1483,7 +1483,7 @@ properties:
     name: Link status indicator semantics with no red state
     scope: foundational
     definition: The link status indicator signals connectivity to the team using green (peer reachable,
-      gossip flowing), amber (relay-only), and grey (fully offline) — and never red, because connectivity
+      gossip flowing), amber (relay-only), and grey (fully offline) - and never red, because connectivity
       failure is not an error condition for a local-first node.
     must-implement:
     - Indicator distinguishes peer-reachable, relay-only, and offline states
@@ -1502,9 +1502,9 @@ properties:
   - ref: ch20-ux-sync-conflict:UX-09
     name: Three-state optimistic write lifecycle
     scope: foundational
-    definition: An AP-class write moves through three explicit visual states — pending (applied locally,
+    definition: An AP-class write moves through three explicit visual states - pending (applied locally,
       not yet seen by any peer), confirmed (received by at least one peer), and failed (circuit breaker
-      rejected on reconnect) — with the failed state opening the conflict inbox.
+      rejected on reconnect) - with the failed state opening the conflict inbox.
     must-implement: *id024
     verification: A write performed offline shows pending; reconnecting with no conflict transitions it
       to confirmed; reconnecting with an unresolvable conflict transitions it to failed and opens the
@@ -1525,7 +1525,7 @@ properties:
     scope: foundational
     definition: After a power-loss or OS-kill termination the node validates the last write-ahead checkpoint,
       replays pending writes from the CRDT log, and surfaces a single short status only when replay takes
-      more than two seconds — never a crash dialog.
+      more than two seconds - never a crash dialog.
     must-implement: *id025
     verification: Killing the node mid-write and relaunching opens the workspace at the prior state; injecting
       a long-replay condition surfaces the documented status string and no crash dialog.
@@ -1543,9 +1543,9 @@ properties:
   - ref: appendix-c-further-reading:READ-01
     name: Kleppmann seven local-first ideals
     scope: foundational
-    definition: The seven aspirational properties — fast local performance (P1), multi-device access (P2),
+    definition: The seven aspirational properties - fast local performance (P1), multi-device access (P2),
       network-optional operation (P3), seamless collaboration (P4), longevity beyond vendor lifespan (P5),
-      security and privacy by default (P6), and ultimate user ownership (P7) — that together define local-first
+      security and privacy by default (P6), and ultimate user ownership (P7) - that together define local-first
       software per Kleppmann et al. (Onward! 2019).
     must-implement: *id003
     verification: Conformance scorecard maps every architectural choice to one or more of P1-P7; no property
@@ -1577,7 +1577,7 @@ properties:
     name: Optimistic replication semantics
     scope: foundational
     definition: The Saito and Shapiro 2005 framing of replication that allows tentative local commits,
-      eventual convergence, and application-level conflict resolution — the academic vocabulary for what
+      eventual convergence, and application-level conflict resolution - the academic vocabulary for what
       the book operationally calls local-first.
     must-implement: *id026
     verification: Behavioral test confirms a local write commits and is visible to the local reader before
@@ -1676,7 +1676,7 @@ properties:
     definition: The observation that organizations under SaaS outage continue operating via analog fallbacks
       (paper charts, whiteboards, fax, manual reconciliation) demonstrates that the SaaS layer was largely
       mediating work that continued to happen, while the digital affordances (search, cross-history pattern
-      detection, analytic queries) were the genuine value lost — value that a local-first node preserves
+      detection, analytic queries) were the genuine value lost - value that a local-first node preserves
       through the outage.
     must-implement: *id008
     verification: Field test simulates vendor unavailability for a representative workday; node retains
@@ -1715,7 +1715,7 @@ properties:
   - ref: ch03-inverted-stack-one-diagram:INV-06
     name: Per-record-class CAP positioning
     scope: foundational
-    definition: CAP trade-offs are made per record class rather than per application — documents and notes
+    definition: CAP trade-offs are made per record class rather than per application - documents and notes
       are AP via CRDT merge, identity facts are AP with deferred merge, reservations and slots are CP
       via distributed lease, and financial transactions are CP under lease plus ledger ordering.
     must-implement: *id027
@@ -1724,7 +1724,7 @@ properties:
   - ref: ch03-inverted-stack-one-diagram:INV-09
     name: Gossip anti-entropy with vector clocks
     scope: foundational
-    definition: The daemon converges peer state through periodic gossip — every 30 seconds it selects
+    definition: The daemon converges peer state through periodic gossip - every 30 seconds it selects
       two random peers, exchanges deltas based on vector-clock divergence, and streams missing CRDT operations
       using CBOR encoding.
     must-implement: *id028
@@ -1733,7 +1733,7 @@ properties:
   - ref: ch03-inverted-stack-one-diagram:INV-18
     name: Three developer-habit shifts under the inversion
     scope: foundational
-    definition: Building under the inversion shifts three habits — writes succeed on local durability
+    definition: Building under the inversion shifts three habits - writes succeed on local durability
       rather than remote acknowledgement, business logic owns its correctness independently of the network,
       and failure modes are explicit rather than papered over.
     must-implement: *id011
@@ -1741,7 +1741,7 @@ properties:
       static analysis confirms no validator imports a network client; UI inventory confirms a conflict-inbox
       surface exists.
   - ref: ch04-choosing-your-architecture:FILT-01
-    name: Filter 1 — Consistency requirements (hard stop)
+    name: Filter 1 - Consistency requirements (hard stop)
     scope: foundational
     definition: A disqualifying check that rejects local-first architecture when the domain requires atomic
       cross-user transactions, intolerance for stale data, or millisecond-identical truth across all peers.
@@ -1753,7 +1753,7 @@ properties:
     name: Four required local-first engineering skills
     scope: foundational
     definition: The four engineering skills that separate local-node development from standard web application
-      development — CRDT debugging, distributed state management, multi-version schema migration, and
+      development - CRDT debugging, distributed state management, multi-version schema migration, and
       key management.
     must-implement: &id076
     - Team has practitioners who can reason about CRDT type semantics and merge order under uncertainty
@@ -1815,7 +1815,7 @@ properties:
   - ref: ch06-distributed-systems-lens:LENS-D-15
     name: Required test categories for sync protocol correctness
     scope: foundational
-    definition: Sync protocol verification requires a defined set of test categories — network partition
+    definition: Sync protocol verification requires a defined set of test categories - network partition
       simulation, clock skew injection, concurrent edit generation, GC boundary conditions, Byzantine
       operation injection, and long-partition reconnect scenarios.
     must-implement: *id035
@@ -1837,7 +1837,7 @@ properties:
     scope: foundational
     definition: The first thirty seconds after install for a brand-new solo user with no prior data and
       no existing peers is specified as a product requirement that walks the user from blank state to
-      first project, first backup configuration, and first invite — closing the most common 30-day abandonment
+      first project, first backup configuration, and first invite - closing the most common 30-day abandonment
       path for local-first applications.
     must-implement: *id002
     verification: Install the application on a fresh device with no prior workspace; confirm the user
@@ -1848,7 +1848,7 @@ properties:
     scope: foundational
     definition: When two offline nodes reconnect, surfaced conflicts are grouped by record type and cause,
       auto-resolved where predefined rules clearly apply, and offer a resolve-all-similar action for the
-      remainder — converting the undifferentiated conflict list that breaks most collaborative local-first
+      remainder - converting the undifferentiated conflict list that breaks most collaborative local-first
       applications into a manageable inbox.
     must-implement: *id037
     verification: Generate a synthetic conflict set covering at least three record types and two cause
@@ -1868,7 +1868,7 @@ properties:
     scope: foundational
     definition: The architecture treats intermittent connectivity as the operational baseline for hundreds
       of millions of enterprise workers across Sub-Saharan Africa, South and Southeast Asia, and rural
-      Latin America — not as a carrier-grade NAT edge case — so all sync, conflict, and recovery flows
+      Latin America - not as a carrier-grade NAT edge case - so all sync, conflict, and recovery flows
       are designed for sessions that span many disconnected intervals.
     must-implement: *id039
     verification: Run a multi-day partition simulation across the test fleet; confirm reconnect catch-up
@@ -1877,8 +1877,8 @@ properties:
   - ref: ch09-local-first-practitioner-lens:LENS-LF-16
     name: Shared-device role-scoped recovery
     scope: foundational
-    definition: Recovery must support shared-device deployments — a single tablet rotated across a team
-      of field workers — by targeting the role and the workspace rather than the device and its sole user,
+    definition: Recovery must support shared-device deployments - a single tablet rotated across a team
+      of field workers - by targeting the role and the workspace rather than the device and its sole user,
       with BYOC backup configured against role-scoped workspace targets so any team member can restore
       from any device.
     must-implement: *id040
@@ -1888,8 +1888,8 @@ properties:
   - ref: ch10-synthesis:LENS-04
     name: Three-tier CRDT applicability model
     scope: foundational
-    definition: Data is partitioned into three tiers — AP CRDT-merged content, CP single-writer operations
-      under lease coordination, and append-only ledger entries outside the CRDT — based on whether automatic
+    definition: Data is partitioned into three tiers - AP CRDT-merged content, CP single-writer operations
+      under lease coordination, and append-only ledger entries outside the CRDT - based on whether automatic
       merge is semantically valid.
     must-implement: *id041
     verification: Architecture documents the tier classification per data type; tier-violating writes
@@ -1938,16 +1938,16 @@ properties:
     name: CRDT merge mathematical properties (commutativity, associativity, idempotency)
     scope: foundational
     definition: A CRDT merge function must satisfy commutativity, associativity, and idempotency so that
-      any two peers applying the same set of operations in any order — including duplicate application
-      — converge to identical state.
+      any two peers applying the same set of operations in any order - including duplicate application
+      - converge to identical state.
     must-implement: *id042
     verification: Property-based test applies randomized operation sequences in different orders and with
       duplicates, asserting byte-identical convergent state.
   - ref: ch12-crdt-engine-data-layer:CRDT-03
     name: CRDT data layer primitives (map, list, text, counter)
     scope: foundational
-    definition: The data layer exposes four raw CRDT types — map (concurrent key insertions), list (insertion-order-preserving),
-      text (human-legible character-merge), and counter (additive across peers) — none of which carry
+    definition: The data layer exposes four raw CRDT types - map (concurrent key insertions), list (insertion-order-preserving),
+      text (human-legible character-merge), and counter (additive across peers) - none of which carry
       domain semantics.
     must-implement:
     - Map type merges concurrent key insertions deterministically
@@ -1960,7 +1960,7 @@ properties:
     name: Semantic layer enforces domain invariants
     scope: foundational
     definition: The semantic layer interprets CRDT data-layer changes as domain events and enforces invariants
-      that CRDT merge cannot enforce structurally — for example, turning a concurrent posting-amount mutation
+      that CRDT merge cannot enforce structurally - for example, turning a concurrent posting-amount mutation
       into a compensating ledger entry rather than a silent corruption.
     must-implement: &id157
     - Domain validation runs on every CRDT change interpreted as a domain event
@@ -1970,7 +1970,7 @@ properties:
     verification: Test injects a CRDT-merged state that violates a domain invariant; assertion confirms
       semantic layer flags or compensates rather than accepting silently.
   - ref: ch12-crdt-engine-data-layer:CRDT-07
-    name: AP records — CRDT merge with tolerated divergence
+    name: AP records - CRDT merge with tolerated divergence
     scope: foundational
     definition: AP records (documents, notes, task descriptions, team membership) tolerate concurrent
       offline divergence because deterministic CRDT merge produces a result the user can review, and the
@@ -1981,7 +1981,7 @@ properties:
   - ref: ch12-crdt-engine-data-layer:CRDT-20
     name: Schema-on-write CRDT operation validation at store entry
     scope: foundational
-    definition: Every CRDT operation — locally produced or peer-received — passes through schema-level
+    definition: Every CRDT operation - locally produced or peer-received - passes through schema-level
       validation before insertion into the local CRDT store, gating insertion by record-type check, field
       constraints, and minimum-supported schema version, with failures quarantined rather than applied.
     must-implement: &id105
@@ -1992,10 +1992,10 @@ properties:
     verification: Inject a malformed operation via the sync path and assert it is quarantined and surfaced
       to the conflict inbox without modifying CRDT state.
   - ref: ch12-crdt-engine-data-layer:CRDT-31
-    name: Layer 4 — content-addressed binary distribution (opt-in)
+    name: Layer 4 - content-addressed binary distribution (opt-in)
     scope: foundational
     definition: Layer 4 synchronizes binary assets across nodes using content-hash addressing as the storage
-      key, providing integrity verification and deduplication as structural properties — opt-in because
+      key, providing integrity verification and deduplication as structural properties - opt-in because
       text-and-structured-data nodes do not need the infrastructure overhead.
     must-implement: &id086
     - Asset storage key is the content hash
@@ -2039,8 +2039,8 @@ properties:
   - ref: ch13-schema-migration-evolution:SCH-08
     name: Additive change classes that skip upcasters
     scope: foundational
-    definition: Two classes of schema change require no upcaster — adding a new optional field to an existing
-      event type, and adding a new event variant — because absence is a defined default and unknown variants
+    definition: Two classes of schema change require no upcaster - adding a new optional field to an existing
+      event type, and adding a new event variant - because absence is a defined default and unknown variants
       are quarantined.
     must-implement: *id048
     verification: Test introduces a new optional field and a new event variant, sends both to an old node,
@@ -2144,7 +2144,7 @@ properties:
       on high-degree nodes.
     must-implement:
     - Daemon selects k random peers (default k=2) per gossip tick
-    - Exchange is symmetric — each side sends operations the other lacks
+    - Exchange is symmetric - each side sends operations the other lacks
     - 30-second default interval is configurable per deployment
     verification: Run a 10-node simulation; confirm convergence in O(log N) rounds and even per-node send/receive
       distribution.
@@ -2216,8 +2216,8 @@ properties:
   - ref: ch17-building-first-node:BUILD-16
     name: Always-visible three-indicator status bar
     scope: foundational
-    definition: A local-first node renders a permanently-visible status bar with three indicators — Node
-      Health, Link Status, and Data Freshness — so the user can always perceive how the node's behavior
+    definition: A local-first node renders a permanently-visible status bar with three indicators - Node
+      Health, Link Status, and Data Freshness - so the user can always perceive how the node's behavior
       depends on its current network and sync state.
     must-implement: *id060
     verification: Walk every UI route in the application; the status bar is present on each one with all
@@ -2225,8 +2225,8 @@ properties:
   - ref: ch18-migrating-existing-saas:MIG-04
     name: AP-class versus CP-class record separation
     scope: foundational
-    definition: Records are classified as AP-class — user-owned, eventually consistent, suitable for CRDT
-      replication — or CP-class — server-coordinated, requiring linearizable writes — and the two classes
+    definition: Records are classified as AP-class - user-owned, eventually consistent, suitable for CRDT
+      replication - or CP-class - server-coordinated, requiring linearizable writes - and the two classes
       never share a backing table.
     must-implement: *id061
     verification: Schema audit script enumerates tables and asserts each is labeled AP or CP; CI rejects
@@ -2235,16 +2235,16 @@ properties:
     name: Phase 2 local writes for AP-class only
     scope: foundational
     definition: Phase 2 routes AP-class block writes through the CRDT engine for instant local feedback
-      while CP-class records — billing, subscription limits, role membership, audit logs — remain server-authoritative.
+      while CP-class records - billing, subscription limits, role membership, audit logs - remain server-authoritative.
     must-implement: *id021
     verification: Convergence test against AP-class aggregates demonstrates byte-identical state after
       concurrent edits; CP-class regression suite passes unchanged.
   - ref: ch20-ux-sync-conflict:UX-09
     name: Three-state optimistic write lifecycle
     scope: foundational
-    definition: An AP-class write moves through three explicit visual states — pending (applied locally,
+    definition: An AP-class write moves through three explicit visual states - pending (applied locally,
       not yet seen by any peer), confirmed (received by at least one peer), and failed (circuit breaker
-      rejected on reconnect) — with the failed state opening the conflict inbox.
+      rejected on reconnect) - with the failed state opening the conflict inbox.
     must-implement: *id024
     verification: A write performed offline shows pending; reconnecting with no conflict transitions it
       to confirmed; reconnecting with an unresolvable conflict transitions it to failed and opens the
@@ -2260,8 +2260,8 @@ properties:
   - ref: ch20-ux-sync-conflict:UX-11
     name: Conflict inbox as single resolution surface
     scope: foundational
-    definition: All conflict resolution occurs in a dedicated panel — not a modal, not an interstitial
-      — accessible from the status bar and any failed-write indicator.
+    definition: All conflict resolution occurs in a dedicated panel - not a modal, not an interstitial
+      - accessible from the status bar and any failed-write indicator.
     must-implement:
     - Application exposes one canonical conflict inbox surface, not multiple per-feature dialogs
     - Inbox is reachable from both the status bar and any failed-write indicator
@@ -2301,9 +2301,9 @@ properties:
   - ref: ch20-ux-sync-conflict:UX-23
     name: Accessibility as a Tier-1 contract
     scope: foundational
-    definition: Every UX surface in the application carries an accessibility contract — semantic ARIA
+    definition: Every UX surface in the application carries an accessibility contract - semantic ARIA
       roles, keyboard reachability, declared component metadata, and plain-language assistive-technology
-      text — enforced as rigorously as the write path.
+      text - enforced as rigorously as the write path.
     must-implement: *id064
     verification: Automated accessibility audit on every shipped UI block confirms ARIA roles, keyboard
       reachability, and colour-plus-text pairing; a screen-reader walkthrough of the conflict inbox resolves
@@ -2345,9 +2345,9 @@ properties:
   - ref: appendix-c-further-reading:READ-01
     name: Kleppmann seven local-first ideals
     scope: foundational
-    definition: The seven aspirational properties — fast local performance (P1), multi-device access (P2),
+    definition: The seven aspirational properties - fast local performance (P1), multi-device access (P2),
       network-optional operation (P3), seamless collaboration (P4), longevity beyond vendor lifespan (P5),
-      security and privacy by default (P6), and ultimate user ownership (P7) — that together define local-first
+      security and privacy by default (P6), and ultimate user ownership (P7) - that together define local-first
       software per Kleppmann et al. (Onward! 2019).
     must-implement: *id003
     verification: Conformance scorecard maps every architectural choice to one or more of P1-P7; no property
@@ -2365,7 +2365,7 @@ properties:
     name: Optimistic replication semantics
     scope: foundational
     definition: The Saito and Shapiro 2005 framing of replication that allows tentative local commits,
-      eventual convergence, and application-level conflict resolution — the academic vocabulary for what
+      eventual convergence, and application-level conflict resolution - the academic vocabulary for what
       the book operationally calls local-first.
     must-implement: *id026
     verification: Behavioral test confirms a local write commits and is visible to the local reader before
@@ -2455,7 +2455,7 @@ properties:
       receives the corresponding announcement on web, iOS, and Android targets.
   P5:
   - ref: preface:PREF-01
-    name: The architectural thesis — local node as primary, vendor as optional
+    name: The architectural thesis - local node as primary, vendor as optional
     scope: foundational
     definition: 'The book''s central thesis is the inversion of the SaaS dependency relationship: the
       local node is the primary data plane and the vendor relay is an optional accelerator, so the application
@@ -2525,8 +2525,8 @@ properties:
   - ref: ch01-when-saas-fights-reality:THESIS-07
     name: Third-party veto over vendor-custodied data
     scope: foundational
-    definition: A failure mode in which an external authority — sanctions regime, data residency regulator,
-      court order, or national security designation — compels the vendor to suspend service or compels
+    definition: A failure mode in which an external authority - sanctions regime, data residency regulator,
+      court order, or national security designation - compels the vendor to suspend service or compels
       the customer to cease use, ending the relationship regardless of either party's preferences because
       data custody at the vendor concentrates the exposure surface there.
     must-implement: &id099
@@ -2603,9 +2603,9 @@ properties:
   - ref: ch03-inverted-stack-one-diagram:INV-15
     name: Mirror-inversion of Ch01 failure modes
     scope: foundational
-    definition: The inversion specifically resolves each of Ch01's six named SaaS failure modes — The
+    definition: The inversion specifically resolves each of Ch01's six named SaaS failure modes - The
       Outage and The Dependency Chain, The Vendor, The Connectivity, The Data, The Price, and The Third-Party
-      Veto — by removing the vendor's data custody as the load-bearing dependency.
+      Veto - by removing the vendor's data custody as the load-bearing dependency.
     must-implement: *id074
     verification: Failure-mode regression tests for each named mode confirm continued local function and
       data accessibility; export test produces a standard-format archive without vendor API calls.
@@ -2622,10 +2622,10 @@ properties:
     verification: Architecture decision record names the primary records, identifies their natural owner,
       and cites the One Question answer as the basis for selecting Zone A, B, or C.
   - ref: ch04-choosing-your-architecture:FILT-02
-    name: Filter 2 — Data ownership profile
+    name: Filter 2 - Data ownership profile
     scope: foundational
     definition: A check that classifies the natural owner of the primary records by who creates them,
-      who uses them, and who suffers loss when access is severed — distinguishing user-owned, vendor-aggregated,
+      who uses them, and who suffers loss when access is severed - distinguishing user-owned, vendor-aggregated,
       and regulator-custodied profiles.
     must-implement: &id128
     - Architecture decision record names the natural owner of each primary record type
@@ -2638,7 +2638,7 @@ properties:
       regulator-custodian flows reference the specific regulation (HIPAA, FINRA, ITAR, etc.) and the custodial
       mechanism used.
   - ref: ch04-choosing-your-architecture:FILT-04
-    name: Filter 4 — Business model alignment
+    name: Filter 4 - Business model alignment
     scope: foundational
     definition: A check that rejects local-first when revenue depends on controlling user access to their
       own data, and confirms it when revenue derives from service quality, managed relay, support, tooling,
@@ -2647,7 +2647,7 @@ properties:
     - Architecture decision record states the revenue model and confirms it does not require gating user
       access to user-owned data
     - Revenue paths that depend on data-custody lock-in are explicitly disqualified
-    - Managed relay is specified as replaceable infrastructure, not a data custodian — relay failure degrades
+    - Managed relay is specified as replaceable infrastructure, not a data custodian - relay failure degrades
       sync but never local operation or data access
     - Dual-licensing patterns (open-source core plus commercial managed offering) are recognized as the
       strongest alignment for this architecture
@@ -2656,8 +2656,8 @@ properties:
   - ref: ch04-choosing-your-architecture:DEC-06
     name: The Practical Shortcut (three-question prefilter)
     scope: foundational
-    definition: A three-question prefilter — primary-record ownership, sustained-offline requirement,
-      vendor-outlive requirement — that determines whether a full five-filter evaluation is worth the
+    definition: A three-question prefilter - primary-record ownership, sustained-offline requirement,
+      vendor-outlive requirement - that determines whether a full five-filter evaluation is worth the
       time for a project in early discovery.
     must-implement: *id075
     verification: Discovery-stage architecture note records the three shortcut answers and either cites
@@ -2666,7 +2666,7 @@ properties:
     name: Vendor-outlive requirement
     scope: foundational
     definition: The requirement that the product keep working regardless of whether the vendor survives,
-      is acquired, changes pricing, or is directed to stop serving a given jurisdiction — making vendor-independent
+      is acquired, changes pricing, or is directed to stop serving a given jurisdiction - making vendor-independent
       authoritative data custody a structural, not contractual, property.
     must-implement: &id130
     - Authoritative data lives on infrastructure under the user's or customer's control
@@ -2680,7 +2680,7 @@ properties:
     name: Four required local-first engineering skills
     scope: foundational
     definition: The four engineering skills that separate local-node development from standard web application
-      development — CRDT debugging, distributed state management, multi-version schema migration, and
+      development - CRDT debugging, distributed state management, multi-version schema migration, and
       key management.
     must-implement: *id076
     verification: Capability matrix documents named owners for each of the four skills; key compromise
@@ -2748,8 +2748,8 @@ properties:
   - ref: ch07-security-lens:LENS-S-14
     name: Credential recovery paths
     scope: foundational
-    definition: A required set of artifact-based recovery options — recovery-key file, administrator-held
-      wrapped KEK escrow, MDM re-enrollment plus relay-assisted re-sync — from which every deployment
+    definition: A required set of artifact-based recovery options - recovery-key file, administrator-held
+      wrapped KEK escrow, MDM re-enrollment plus relay-assisted re-sync - from which every deployment
       must select and test at least one before production, with the no-artifact case explicitly disclosed
       as permanent loss.
     must-implement: &id103
@@ -2776,7 +2776,7 @@ properties:
   - ref: ch08-product-economic-lens:LENS-P-12
     name: Documented project governance model
     scope: foundational
-    definition: A governance model — BDFL, contributor council, or lightweight stewardship — is documented
+    definition: A governance model - BDFL, contributor council, or lightweight stewardship - is documented
       publicly before the first external pull request so the first significant disagreement has a defined
       resolution path rather than producing a community crisis.
     must-implement:
@@ -2790,8 +2790,8 @@ properties:
     name: Vendor-continuity risk as commercial purchasing argument
     scope: foundational
     definition: The architecture's structural ability to keep operating after vendor commercial relationship
-      is severed — empirically anchored by the 2022 Western SaaS withdrawal from Russia and CIS markets
-      — is positioned in procurement materials as a structural commercial claim that cloud-dependent competitors
+      is severed - empirically anchored by the 2022 Western SaaS withdrawal from Russia and CIS markets
+      - is positioned in procurement materials as a structural commercial claim that cloud-dependent competitors
       cannot make without re-architecture.
     must-implement: *id079
     verification: Sales collateral contains the vendor-continuity claim with the 2022 anchor citation;
@@ -2800,8 +2800,8 @@ properties:
     name: Plain-file application-independent export path
     scope: foundational
     definition: A user-owned local-first application must provide a single command that produces user
-      data in durable application-independent formats — JSON for structured records, CSV for tabular data,
-      Markdown for long-form documents — readable by any other competent software without vendor cooperation,
+      data in durable application-independent formats - JSON for structured records, CSV for tabular data,
+      Markdown for long-form documents - readable by any other competent software without vendor cooperation,
       active subscription, or network connectivity.
     must-implement: &id144
     - Application exposes a single export command that runs entirely against the local node
@@ -2825,7 +2825,7 @@ properties:
     name: Engine-agnostic CRDT abstraction for ecosystem reversibility
     scope: foundational
     definition: The application layer interacts with the CRDT engine through a stable abstraction such
-      as ICrdtEngine that prevents lock-in to any specific CRDT ecosystem — Yjs, Automerge, or Loro —
+      as ICrdtEngine that prevents lock-in to any specific CRDT ecosystem - Yjs, Automerge, or Loro -
       so the engine can be replaced without rewriting the application as the field continues to evolve.
     must-implement: &id146
     - A single interface mediates all CRDT operations consumed by the application layer
@@ -2836,9 +2836,9 @@ properties:
   - ref: ch09-local-first-practitioner-lens:LENS-LF-07
     name: Three-state backup status with dismissible at-risk banner
     scope: foundational
-    definition: Backup health surfaces to the user through three escalating states — Protected (subtle),
+    definition: Backup health surfaces to the user through three escalating states - Protected (subtle),
       Attention (amber badge), At Risk (persistent non-blocking banner dismissible only with explicit
-      acknowledgment) — so users do not think about working backups but cannot accidentally ignore failing
+      acknowledgment) - so users do not think about working backups but cannot accidentally ignore failing
       ones.
     must-implement: &id147
     - Backup status UI exposes exactly the three named states with distinct visual treatments
@@ -2852,7 +2852,7 @@ properties:
     name: Recovery UX parity with backup status design
     scope: foundational
     definition: The restore experience receives the same non-technical design attention as backup status
-      — a guided reconnection to the BYOC target, a restore-progress indicator that mirrors the three-state
+      - a guided reconnection to the BYOC target, a restore-progress indicator that mirrors the three-state
       backup model in restore context, and zero exposure of bucket URLs or rclone paths at the moment
       the user is most stressed about lost work.
     must-implement: &id148
@@ -2867,8 +2867,8 @@ properties:
     name: Sanctions-grade availability as design anchor
     scope: foundational
     definition: The architecture is anchored against the empirical case of the 2022 sanctions-driven SaaS
-      suspensions across Russia and CIS markets — hundreds of thousands of organizations losing vendor
-      access on days of notice — establishing that surviving vendor suspension is not a theoretical improvement
+      suspensions across Russia and CIS markets - hundreds of thousands of organizations losing vendor
+      access on days of notice - establishing that surviving vendor suspension is not a theoretical improvement
       but a property the architecture has already had to provide.
     must-implement: *id081
     verification: Block all vendor-controlled domains at the network layer and confirm the application
@@ -2939,7 +2939,7 @@ properties:
     name: Monotonic CRDT growth requires bounded mitigation
     scope: foundational
     definition: CRDT documents grow monotonically because tombstones, historical operations, and version-vector
-      metadata accumulate as the document is used — this is a structural property of coordinator-free
+      metadata accumulate as the document is used - this is a structural property of coordinator-free
       deterministic merge, not a flaw, and growth must be bounded rather than eliminated.
     must-implement:
     - Architecture acknowledges monotonic growth as a property and applies bounding strategies
@@ -2963,7 +2963,7 @@ properties:
     scope: foundational
     definition: A shallow snapshot captures current visible state plus a version vector encoding which
       operations are included, discards operations older than the snapshot boundary, and becomes the new
-      base for subsequent deltas — opt-in per document type, with full-state transfer required for peers
+      base for subsequent deltas - opt-in per document type, with full-state transfer required for peers
       whose vector predates the boundary.
     must-implement:
     - Shallow snapshots are opt-in via stream definition
@@ -2976,7 +2976,7 @@ properties:
     scope: foundational
     definition: AckVector is a compact per-document per-peer acknowledgment watermark persisted alongside
       the Layer 2 event log, and the "active peer set" is the set of peers that authenticated a CAPABILITY_NEG
-      handshake within a configurable peer-staleness window (30 days default) — GC proceeds only after
+      handshake within a configurable peer-staleness window (30 days default) - GC proceeds only after
       all active peers have acknowledged.
     must-implement:
     - AckVector tracks each peer's highest-indexed acknowledged operation per document
@@ -2988,8 +2988,8 @@ properties:
   - ref: ch12-crdt-engine-data-layer:CRDT-23
     name: Double-entry ledger as canonical CP subsystem
     scope: foundational
-    definition: The double-entry ledger is the correct model for value records — not a CRDT workaround
-      — because its append-only, immutable, strictly-ordered, balanced-postings structure aligns directly
+    definition: The double-entry ledger is the correct model for value records - not a CRDT workaround
+      - because its append-only, immutable, strictly-ordered, balanced-postings structure aligns directly
       with what CP positioning requires for audit integrity.
     must-implement: &id158
     - Every transaction produces at least two postings whose amounts sum to zero
@@ -3000,7 +3000,7 @@ properties:
   - ref: ch12-crdt-engine-data-layer:CRDT-25
     name: CQRS write/read split for ledger
     scope: foundational
-    definition: The ledger applies CQRS — the immutable posting event stream is the write side, while
+    definition: The ledger applies CQRS - the immutable posting event stream is the write side, while
       balance tables, statements, aging reports, and period summaries are derived read-side projections
       that hold no data unrebuildable by replaying the event stream.
     must-implement:
@@ -3015,7 +3015,7 @@ properties:
     scope: foundational
     definition: At period close, the projection engine computes account balances, P&L, and cash flow as
       rollup snapshots committed as closing events to the append-only log, and any subsequent postings
-      affecting a closed period are directed to adjustment accounts in the next open period — the closed-period
+      affecting a closed period are directed to adjustment accounts in the next open period - the closed-period
       log is never rewritten.
     must-implement: &id159
     - Period close emits rollup snapshot events to the append-only log
@@ -3024,9 +3024,9 @@ properties:
     verification: Close a period, attempt a backdated posting, assert it is recorded as an adjustment
       in the current period and the closed-period log is unchanged.
   - ref: ch12-crdt-engine-data-layer:CRDT-29
-    name: Layer 2 — append-only event log as source of truth
+    name: Layer 2 - append-only event log as source of truth
     scope: foundational
-    definition: Layer 2 is the append-only CRDT and event log — the source of truth — to which every CRDT
+    definition: Layer 2 is the append-only CRDT and event log - the source of truth - to which every CRDT
       operation, domain event, and ledger posting is durably written (fsync on POSIX, FlushFileBuffers
       on Windows) before the application receives confirmation, with the only mutating operation being
       compaction under the three-tier GC policy.
@@ -3034,10 +3034,10 @@ properties:
     verification: Power-loss simulation confirms acknowledged writes survive recovery; static analysis
       confirms no in-place mutation API on the log; compaction test confirms snapshot equivalence.
   - ref: ch12-crdt-engine-data-layer:CRDT-31
-    name: Layer 4 — content-addressed binary distribution (opt-in)
+    name: Layer 4 - content-addressed binary distribution (opt-in)
     scope: foundational
     definition: Layer 4 synchronizes binary assets across nodes using content-hash addressing as the storage
-      key, providing integrity verification and deduplication as structural properties — opt-in because
+      key, providing integrity verification and deduplication as structural properties - opt-in because
       text-and-structured-data nodes do not need the infrastructure overhead.
     must-implement: *id086
     verification: Two nodes independently receive the same binary; hash comparison confirms identity and
@@ -3080,8 +3080,8 @@ properties:
   - ref: ch13-schema-migration-evolution:SCH-08
     name: Additive change classes that skip upcasters
     scope: foundational
-    definition: Two classes of schema change require no upcaster — adding a new optional field to an existing
-      event type, and adding a new event variant — because absence is a defined default and unknown variants
+    definition: Two classes of schema change require no upcaster - adding a new optional field to an existing
+      event type, and adding a new event variant - because absence is a defined default and unknown variants
       are quarantined.
     must-implement: *id048
     verification: Test introduces a new optional field and a new event variant, sends both to an old node,
@@ -3168,7 +3168,7 @@ properties:
     name: Non-migratable change classes
     scope: foundational
     definition: Three classes of change cannot be expressed as a bidirectional lens and require introducing
-      a new document type rather than migrating the existing one — field removal with no semantic equivalent,
+      a new document type rather than migrating the existing one - field removal with no semantic equivalent,
       CRDT type change, and field split with no deterministic inverse merge.
     must-implement:
     - Schema-change linter rejects field removals lacking a backward lens with no information loss
@@ -3235,8 +3235,8 @@ properties:
     name: CRDT garbage collection strategies
     scope: foundational
     definition: CRDT documents grow monotonically under naive storage; the architecture mitigates this
-      with three named strategies — library-level compaction, application-level document sharding, and
-      periodic shallow snapshots — with full-history retention as the conservative default.
+      with three named strategies - library-level compaction, application-level document sharding, and
+      periodic shallow snapshots - with full-history retention as the conservative default.
     must-implement:
     - Architecture names the three mitigation strategies and their tradeoffs
     - Default policy retains full history relying on library-level compaction
@@ -3262,7 +3262,7 @@ properties:
     name: Export determinism and completeness guarantees
     scope: foundational
     definition: The export process emits no telemetry, requires no network, produces deterministic output
-      (identical state yields identical export), and includes every record the local node holds — full
+      (identical state yields identical export), and includes every record the local node holds - full
       records as content, stubs as metadata-plus-hash.
     must-implement: &id172
     - Export emits zero network requests during execution
@@ -3312,7 +3312,7 @@ properties:
     name: Five migration triggers
     scope: foundational
     definition: A team justifies migrating a hosted SaaS to local-first only when at least one of five
-      named business triggers applies — compliance mandate, data-residency objection in enterprise sales,
+      named business triggers applies - compliance mandate, data-residency objection in enterprise sales,
       vendor reliability or termination event, churn driven by data sovereignty, or procurement review
       blocking adoption.
     must-implement: &id176
@@ -3389,7 +3389,7 @@ properties:
     name: Phase transition gates with hard stops
     scope: foundational
     definition: Each phase transition is governed by an explicit gate question with a named hard-stop
-      condition — CP-class write regression blocks Phase 1 to 2, merge data loss blocks Phase 2 to 3,
+      condition - CP-class write regression blocks Phase 1 to 2, merge data loss blocks Phase 2 to 3,
       projection-diff failure blocks fleet rollout from Phase 3 to 4.
     must-implement:
     - A change-advisory-board decision is required at each transition, not a calendar event
@@ -3425,7 +3425,7 @@ properties:
     scope: foundational
     definition: After a power-loss or OS-kill termination the node validates the last write-ahead checkpoint,
       replays pending writes from the CRDT log, and surfaces a single short status only when replay takes
-      more than two seconds — never a crash dialog.
+      more than two seconds - never a crash dialog.
     must-implement: *id025
     verification: Killing the node mid-write and relaunching opens the workspace at the prior state; injecting
       a long-replay condition surfaces the documented status string and no crash dialog.
@@ -3476,9 +3476,9 @@ properties:
   - ref: appendix-c-further-reading:READ-01
     name: Kleppmann seven local-first ideals
     scope: foundational
-    definition: The seven aspirational properties — fast local performance (P1), multi-device access (P2),
+    definition: The seven aspirational properties - fast local performance (P1), multi-device access (P2),
       network-optional operation (P3), seamless collaboration (P4), longevity beyond vendor lifespan (P5),
-      security and privacy by default (P6), and ultimate user ownership (P7) — that together define local-first
+      security and privacy by default (P6), and ultimate user ownership (P7) - that together define local-first
       software per Kleppmann et al. (Onward! 2019).
     must-implement: *id003
     verification: Conformance scorecard maps every architectural choice to one or more of P1-P7; no property
@@ -3570,7 +3570,7 @@ properties:
     - Verify the audit log holds every operation in strict monotonic sequence with a passing tamper-evidence
       integrity check
     verification: Per-scenario evidence column captures packet captures, audit log exports with verified
-      Merkle root, relay log entries with issuer fingerprint, and ciphertext samples — archived per release.
+      Merkle root, relay log entries with issuer fingerprint, and ciphertext samples - archived per release.
   - ref: appendix-d-testing-the-inverted-stack:TEST-13
     name: Tiered CI configuration with archived test artefacts
     scope: foundational
@@ -3694,9 +3694,9 @@ properties:
   - ref: appendix-f-regulatory-coverage:COMP-14
     name: US sector-specific frameworks (HIPAA, FedRAMP, ITAR)
     scope: foundational
-    definition: The absence of a US omnibus privacy law leaves sector-specific regimes — HIPAA for PHI,
+    definition: The absence of a US omnibus privacy law leaves sector-specific regimes - HIPAA for PHI,
       FedRAMP for federal cloud authorization, ITAR/EAR for export-controlled technology, CCPA/CPRA for
-      California consumer rights — each addressed by on-device encryption and sovereign deployment patterns.
+      California consumer rights - each addressed by on-device encryption and sovereign deployment patterns.
     must-implement: &id118
     - HIPAA-scoped PHI is encrypted at rest using the same per-record DEK pattern as GDPR-scoped data
     - ITAR-scoped or EAR-scoped deployments restrict node residency to authorized jurisdictions and personnel
@@ -3709,8 +3709,8 @@ properties:
   - ref: ch01-when-saas-fights-reality:THESIS-07
     name: Third-party veto over vendor-custodied data
     scope: foundational
-    definition: A failure mode in which an external authority — sanctions regime, data residency regulator,
-      court order, or national security designation — compels the vendor to suspend service or compels
+    definition: A failure mode in which an external authority - sanctions regime, data residency regulator,
+      court order, or national security designation - compels the vendor to suspend service or compels
       the customer to cease use, ending the relationship regardless of either party's preferences because
       data custody at the vendor concentrates the exposure surface there.
     must-implement: *id099
@@ -3768,8 +3768,8 @@ properties:
   - ref: ch03-inverted-stack-one-diagram:INV-16
     name: The Security Breach as hidden-exposure reveal
     scope: foundational
-    definition: SaaS exposes users to a structurally invisible failure mode — vendor-side breach of decryptable
-      copies — that the inverted architecture neutralizes by ensuring the relay only ever holds ciphertext
+    definition: SaaS exposes users to a structurally invisible failure mode - vendor-side breach of decryptable
+      copies - that the inverted architecture neutralizes by ensuring the relay only ever holds ciphertext
       sealed under per-document DEKs wrapped by role KEKs whose keys never leave the originating node.
     must-implement: &id126
     - Per-document data encryption keys (DEKs) are generated and held only on originating nodes
@@ -3782,7 +3782,7 @@ properties:
     name: Four required local-first engineering skills
     scope: foundational
     definition: The four engineering skills that separate local-node development from standard web application
-      development — CRDT debugging, distributed state management, multi-version schema migration, and
+      development - CRDT debugging, distributed state management, multi-version schema migration, and
       key management.
     must-implement: *id076
     verification: Capability matrix documents named owners for each of the four skills; key compromise
@@ -4028,8 +4028,8 @@ properties:
   - ref: ch07-security-lens:LENS-S-14
     name: Credential recovery paths
     scope: foundational
-    definition: A required set of artifact-based recovery options — recovery-key file, administrator-held
-      wrapped KEK escrow, MDM re-enrollment plus relay-assisted re-sync — from which every deployment
+    definition: A required set of artifact-based recovery options - recovery-key file, administrator-held
+      wrapped KEK escrow, MDM re-enrollment plus relay-assisted re-sync - from which every deployment
       must select and test at least one before production, with the no-artifact case explicitly disclosed
       as permanent loss.
     must-implement: *id103
@@ -4038,9 +4038,9 @@ properties:
   - ref: ch07-security-lens:LENS-S-15
     name: Defense-in-depth four-layer model
     scope: foundational
-    definition: A non-optional composition of four enforcement layers — encryption at rest, field-level
+    definition: A non-optional composition of four enforcement layers - encryption at rest, field-level
       envelope encryption, stream-level send-tier data minimization, and circuit-breaker quarantine of
-      offline writes — each built from independently audited primitives and specified before use.
+      offline writes - each built from independently audited primitives and specified before use.
     must-implement: &id142
     - Local databases are encrypted at rest with a vetted engine and Argon2id-derived keys stored in OS-native
       keystores
@@ -4067,8 +4067,8 @@ properties:
     name: Default-deny telemetry with named privacy model
     scope: foundational
     definition: Product analytics in a local-first architecture must be specified before the first analytics
-      request arrives — opt-in telemetry disabled by default, aggregate-through-relay privacy-preserving
-      statistics as the only permitted centralized collection — and the chosen model is documented in
+      request arrives - opt-in telemetry disabled by default, aggregate-through-relay privacy-preserving
+      statistics as the only permitted centralized collection - and the chosen model is documented in
       an ADR mapped to GDPR Article 25 privacy-by-design so the line stays durable under future product
       pressure.
     must-implement: &id149
@@ -4168,7 +4168,7 @@ properties:
   - ref: ch12-crdt-engine-data-layer:CRDT-20
     name: Schema-on-write CRDT operation validation at store entry
     scope: foundational
-    definition: Every CRDT operation — locally produced or peer-received — passes through schema-level
+    definition: Every CRDT operation - locally produced or peer-received - passes through schema-level
       validation before insertion into the local CRDT store, gating insertion by record-type check, field
       constraints, and minimum-supported schema version, with failures quarantined rather than applied.
     must-implement: *id105
@@ -4228,8 +4228,8 @@ properties:
   - ref: ch15-security-architecture:SEC-04
     name: Relay metadata visibility
     scope: foundational
-    definition: The relay observes the communication graph — which node identifiers communicate with which,
-      when, in what volume, and with what burst pattern — even though it cannot read payload content.
+    definition: The relay observes the communication graph - which node identifiers communicate with which,
+      when, in what volume, and with what burst pattern - even though it cannot read payload content.
     must-implement:
     - Documentation enumerates exactly which metadata fields the relay observes
     - Self-hosted relay deployment path exists for metadata-sensitive deployments
@@ -4411,7 +4411,7 @@ properties:
     name: Relay compelled-access immunity
     scope: foundational
     definition: A subpoena or compulsion order to the relay operator yields connection logs and message
-      envelopes only — never payload plaintext — because the relay structurally does not possess decryptable
+      envelopes only - never payload plaintext - because the relay structurally does not possess decryptable
       content.
     must-implement: &id170
     - Relay operator has no technical capability to produce plaintext payloads under legal compulsion
@@ -4429,7 +4429,7 @@ properties:
     - The bundle embeds the founder device's Ed25519 public key as IssuerPublicKey
     - Joiner verification checks signature against the embedded public key
     - No external CA or third-party issuer is consulted
-    verification: Generate a founder bundle and inspect it — issuer equals subject, IssuerPublicKey is
+    verification: Generate a founder bundle and inspect it - issuer equals subject, IssuerPublicKey is
       present, verification succeeds against the embedded key alone.
   - ref: ch17-building-first-node:BUILD-13
     name: Founder-issued joiner attestation with embedded subject key
@@ -4481,8 +4481,8 @@ properties:
   - ref: ch19-shipping-to-enterprise:ENT-18
     name: OCSP and CRL connectivity preservation
     scope: foundational
-    definition: Air-gap egress policy must preserve a path to OCSP and CRL responders — internal mirror,
-      certificate pinning with long-lived certs, or open egress to public responders — because blocking
+    definition: Air-gap egress policy must preserve a path to OCSP and CRL responders - internal mirror,
+      certificate pinning with long-lived certs, or open egress to public responders - because blocking
       revocation checking breaks TLS chain validation across the entire node, not just update checks.
     must-implement:
     - Air-gap deployment guidance names OCSP/CRL preservation as non-negotiable
@@ -4494,8 +4494,8 @@ properties:
   - ref: ch19-shipping-to-enterprise:ENT-22
     name: Three-runbook minimum for enterprise GA
     scope: foundational
-    definition: Enterprise general availability requires three published runbooks — node onboarding, node
-      deprovisioning, and incident response for node or key compromise — each with named commands, expected
+    definition: Enterprise general availability requires three published runbooks - node onboarding, node
+      deprovisioning, and incident response for node or key compromise - each with named commands, expected
       outputs, and audit-log verification steps.
     must-implement: &id181
     - Node onboarding runbook covers IdP confirmation, attestation issuance, pre-seeded config, MDM deployment,
@@ -4546,7 +4546,7 @@ properties:
     name: Deterministic CBOR for signed fields
     scope: foundational
     definition: Any CBOR encoding of fields that appear in signed contexts must use Deterministic Encoding
-      per RFC 8949 §4.2 — definite-length arrays and maps, lexicographically sorted map keys, shortest-form
+      per RFC 8949 §4.2 - definite-length arrays and maps, lexicographically sorted map keys, shortest-form
       integers, and shortest exact floating-point representation.
     must-implement:
     - Signed CBOR uses definite-length arrays and maps only
@@ -4771,9 +4771,9 @@ properties:
   - ref: appendix-c-further-reading:READ-01
     name: Kleppmann seven local-first ideals
     scope: foundational
-    definition: The seven aspirational properties — fast local performance (P1), multi-device access (P2),
+    definition: The seven aspirational properties - fast local performance (P1), multi-device access (P2),
       network-optional operation (P3), seamless collaboration (P4), longevity beyond vendor lifespan (P5),
-      security and privacy by default (P6), and ultimate user ownership (P7) — that together define local-first
+      security and privacy by default (P6), and ultimate user ownership (P7) - that together define local-first
       software per Kleppmann et al. (Onward! 2019).
     must-implement: *id003
     verification: Conformance scorecard maps every architectural choice to one or more of P1-P7; no property
@@ -4796,7 +4796,7 @@ properties:
       and tamper-evident audit trail completeness.
     must-implement: *id108
     verification: Per-scenario evidence column captures packet captures, audit log exports with verified
-      Merkle root, relay log entries with issuer fingerprint, and ciphertext samples — archived per release.
+      Merkle root, relay log entries with issuer fingerprint, and ciphertext samples - archived per release.
   - ref: appendix-d-testing-the-inverted-stack:TEST-13
     name: Tiered CI configuration with archived test artefacts
     scope: foundational
@@ -4889,15 +4889,15 @@ properties:
   - ref: appendix-f-regulatory-coverage:COMP-14
     name: US sector-specific frameworks (HIPAA, FedRAMP, ITAR)
     scope: foundational
-    definition: The absence of a US omnibus privacy law leaves sector-specific regimes — HIPAA for PHI,
+    definition: The absence of a US omnibus privacy law leaves sector-specific regimes - HIPAA for PHI,
       FedRAMP for federal cloud authorization, ITAR/EAR for export-controlled technology, CCPA/CPRA for
-      California consumer rights — each addressed by on-device encryption and sovereign deployment patterns.
+      California consumer rights - each addressed by on-device encryption and sovereign deployment patterns.
     must-implement: *id118
     verification: A US-tenant deployment registers each applicable sectoral framework and produces the
       corresponding evidence artifacts on demand
   P7:
   - ref: preface:PREF-01
-    name: The architectural thesis — local node as primary, vendor as optional
+    name: The architectural thesis - local node as primary, vendor as optional
     scope: foundational
     definition: 'The book''s central thesis is the inversion of the SaaS dependency relationship: the
       local node is the primary data plane and the vendor relay is an optional accelerator, so the application
@@ -4955,8 +4955,8 @@ properties:
   - ref: ch01-when-saas-fights-reality:THESIS-07
     name: Third-party veto over vendor-custodied data
     scope: foundational
-    definition: A failure mode in which an external authority — sanctions regime, data residency regulator,
-      court order, or national security designation — compels the vendor to suspend service or compels
+    definition: A failure mode in which an external authority - sanctions regime, data residency regulator,
+      court order, or national security designation - compels the vendor to suspend service or compels
       the customer to cease use, ending the relationship regardless of either party's preferences because
       data custody at the vendor concentrates the exposure surface there.
     must-implement: *id099
@@ -4987,7 +4987,7 @@ properties:
   - ref: ch02-local-first-serious-stack:LF-07
     name: You retain ultimate ownership and control
     scope: foundational
-    definition: The user structurally — not contractually — decides where data lives, who can access it,
+    definition: The user structurally - not contractually - decides where data lives, who can access it,
       and when to delete it, because the bits live on hardware the user controls in a format the user
       can read under encryption the user can manage.
     must-implement:
@@ -5026,17 +5026,17 @@ properties:
   - ref: ch03-inverted-stack-one-diagram:INV-15
     name: Mirror-inversion of Ch01 failure modes
     scope: foundational
-    definition: The inversion specifically resolves each of Ch01's six named SaaS failure modes — The
+    definition: The inversion specifically resolves each of Ch01's six named SaaS failure modes - The
       Outage and The Dependency Chain, The Vendor, The Connectivity, The Data, The Price, and The Third-Party
-      Veto — by removing the vendor's data custody as the load-bearing dependency.
+      Veto - by removing the vendor's data custody as the load-bearing dependency.
     must-implement: *id074
     verification: Failure-mode regression tests for each named mode confirm continued local function and
       data accessibility; export test produces a standard-format archive without vendor API calls.
   - ref: ch03-inverted-stack-one-diagram:INV-16
     name: The Security Breach as hidden-exposure reveal
     scope: foundational
-    definition: SaaS exposes users to a structurally invisible failure mode — vendor-side breach of decryptable
-      copies — that the inverted architecture neutralizes by ensuring the relay only ever holds ciphertext
+    definition: SaaS exposes users to a structurally invisible failure mode - vendor-side breach of decryptable
+      copies - that the inverted architecture neutralizes by ensuring the relay only ever holds ciphertext
       sealed under per-document DEKs wrapped by role KEKs whose keys never leave the originating node.
     must-implement: *id126
     verification: Threat-model audit demonstrates no key material crosses the node boundary; relay breach
@@ -5050,17 +5050,17 @@ properties:
     verification: Architecture decision record names the primary records, identifies their natural owner,
       and cites the One Question answer as the basis for selecting Zone A, B, or C.
   - ref: ch04-choosing-your-architecture:FILT-02
-    name: Filter 2 — Data ownership profile
+    name: Filter 2 - Data ownership profile
     scope: foundational
     definition: A check that classifies the natural owner of the primary records by who creates them,
-      who uses them, and who suffers loss when access is severed — distinguishing user-owned, vendor-aggregated,
+      who uses them, and who suffers loss when access is severed - distinguishing user-owned, vendor-aggregated,
       and regulator-custodied profiles.
     must-implement: *id128
     verification: Architecture decision record cites the data-ownership profile per primary record type;
       regulator-custodian flows reference the specific regulation (HIPAA, FINRA, ITAR, etc.) and the custodial
       mechanism used.
   - ref: ch04-choosing-your-architecture:FILT-04
-    name: Filter 4 — Business model alignment
+    name: Filter 4 - Business model alignment
     scope: foundational
     definition: A check that rejects local-first when revenue depends on controlling user access to their
       own data, and confirms it when revenue derives from service quality, managed relay, support, tooling,
@@ -5071,8 +5071,8 @@ properties:
   - ref: ch04-choosing-your-architecture:DEC-06
     name: The Practical Shortcut (three-question prefilter)
     scope: foundational
-    definition: A three-question prefilter — primary-record ownership, sustained-offline requirement,
-      vendor-outlive requirement — that determines whether a full five-filter evaluation is worth the
+    definition: A three-question prefilter - primary-record ownership, sustained-offline requirement,
+      vendor-outlive requirement - that determines whether a full five-filter evaluation is worth the
       time for a project in early discovery.
     must-implement: *id075
     verification: Discovery-stage architecture note records the three shortcut answers and either cites
@@ -5081,7 +5081,7 @@ properties:
     name: Vendor-outlive requirement
     scope: foundational
     definition: The requirement that the product keep working regardless of whether the vendor survives,
-      is acquired, changes pricing, or is directed to stop serving a given jurisdiction — making vendor-independent
+      is acquired, changes pricing, or is directed to stop serving a given jurisdiction - making vendor-independent
       authoritative data custody a structural, not contractual, property.
     must-implement: *id130
     verification: Behavioral test simulates vendor service permanently unavailable; the application continues
@@ -5200,8 +5200,8 @@ properties:
   - ref: ch07-security-lens:LENS-S-14
     name: Credential recovery paths
     scope: foundational
-    definition: A required set of artifact-based recovery options — recovery-key file, administrator-held
-      wrapped KEK escrow, MDM re-enrollment plus relay-assisted re-sync — from which every deployment
+    definition: A required set of artifact-based recovery options - recovery-key file, administrator-held
+      wrapped KEK escrow, MDM re-enrollment plus relay-assisted re-sync - from which every deployment
       must select and test at least one before production, with the no-artifact case explicitly disclosed
       as permanent loss.
     must-implement: *id103
@@ -5210,9 +5210,9 @@ properties:
   - ref: ch07-security-lens:LENS-S-15
     name: Defense-in-depth four-layer model
     scope: foundational
-    definition: A non-optional composition of four enforcement layers — encryption at rest, field-level
+    definition: A non-optional composition of four enforcement layers - encryption at rest, field-level
       envelope encryption, stream-level send-tier data minimization, and circuit-breaker quarantine of
-      offline writes — each built from independently audited primitives and specified before use.
+      offline writes - each built from independently audited primitives and specified before use.
     must-implement: *id142
     verification: Architecture conformance test confirms presence and engagement of each of the four layers
       and that primitives in use are from the approved list
@@ -5229,8 +5229,8 @@ properties:
     name: Vendor-continuity risk as commercial purchasing argument
     scope: foundational
     definition: The architecture's structural ability to keep operating after vendor commercial relationship
-      is severed — empirically anchored by the 2022 Western SaaS withdrawal from Russia and CIS markets
-      — is positioned in procurement materials as a structural commercial claim that cloud-dependent competitors
+      is severed - empirically anchored by the 2022 Western SaaS withdrawal from Russia and CIS markets
+      - is positioned in procurement materials as a structural commercial claim that cloud-dependent competitors
       cannot make without re-architecture.
     must-implement: *id079
     verification: Sales collateral contains the vendor-continuity claim with the 2022 anchor citation;
@@ -5239,8 +5239,8 @@ properties:
     name: Plain-file application-independent export path
     scope: foundational
     definition: A user-owned local-first application must provide a single command that produces user
-      data in durable application-independent formats — JSON for structured records, CSV for tabular data,
-      Markdown for long-form documents — readable by any other competent software without vendor cooperation,
+      data in durable application-independent formats - JSON for structured records, CSV for tabular data,
+      Markdown for long-form documents - readable by any other competent software without vendor cooperation,
       active subscription, or network connectivity.
     must-implement: *id144
     verification: Disconnect the network, cancel the subscription if applicable, run the export command,
@@ -5269,7 +5269,7 @@ properties:
     name: Engine-agnostic CRDT abstraction for ecosystem reversibility
     scope: foundational
     definition: The application layer interacts with the CRDT engine through a stable abstraction such
-      as ICrdtEngine that prevents lock-in to any specific CRDT ecosystem — Yjs, Automerge, or Loro —
+      as ICrdtEngine that prevents lock-in to any specific CRDT ecosystem - Yjs, Automerge, or Loro -
       so the engine can be replaced without rewriting the application as the field continues to evolve.
     must-implement: *id146
     verification: Source tree contains an ICrdtEngine-equivalent interface; a second engine adapter (test
@@ -5287,9 +5287,9 @@ properties:
   - ref: ch09-local-first-practitioner-lens:LENS-LF-07
     name: Three-state backup status with dismissible at-risk banner
     scope: foundational
-    definition: Backup health surfaces to the user through three escalating states — Protected (subtle),
+    definition: Backup health surfaces to the user through three escalating states - Protected (subtle),
       Attention (amber badge), At Risk (persistent non-blocking banner dismissible only with explicit
-      acknowledgment) — so users do not think about working backups but cannot accidentally ignore failing
+      acknowledgment) - so users do not think about working backups but cannot accidentally ignore failing
       ones.
     must-implement: *id147
     verification: Force each of the three backup states in a test build and confirm the visual treatment
@@ -5299,7 +5299,7 @@ properties:
     name: Recovery UX parity with backup status design
     scope: foundational
     definition: The restore experience receives the same non-technical design attention as backup status
-      — a guided reconnection to the BYOC target, a restore-progress indicator that mirrors the three-state
+      - a guided reconnection to the BYOC target, a restore-progress indicator that mirrors the three-state
       backup model in restore context, and zero exposure of bucket URLs or rclone paths at the moment
       the user is most stressed about lost work.
     must-implement: *id148
@@ -5309,8 +5309,8 @@ properties:
     name: Default-deny telemetry with named privacy model
     scope: foundational
     definition: Product analytics in a local-first architecture must be specified before the first analytics
-      request arrives — opt-in telemetry disabled by default, aggregate-through-relay privacy-preserving
-      statistics as the only permitted centralized collection — and the chosen model is documented in
+      request arrives - opt-in telemetry disabled by default, aggregate-through-relay privacy-preserving
+      statistics as the only permitted centralized collection - and the chosen model is documented in
       an ADR mapped to GDPR Article 25 privacy-by-design so the line stays durable under future product
       pressure.
     must-implement: *id149
@@ -5332,7 +5332,7 @@ properties:
     scope: foundational
     definition: The architecture treats intermittent connectivity as the operational baseline for hundreds
       of millions of enterprise workers across Sub-Saharan Africa, South and Southeast Asia, and rural
-      Latin America — not as a carrier-grade NAT edge case — so all sync, conflict, and recovery flows
+      Latin America - not as a carrier-grade NAT edge case - so all sync, conflict, and recovery flows
       are designed for sessions that span many disconnected intervals.
     must-implement: *id039
     verification: Run a multi-day partition simulation across the test fleet; confirm reconnect catch-up
@@ -5342,8 +5342,8 @@ properties:
     name: Sanctions-grade availability as design anchor
     scope: foundational
     definition: The architecture is anchored against the empirical case of the 2022 sanctions-driven SaaS
-      suspensions across Russia and CIS markets — hundreds of thousands of organizations losing vendor
-      access on days of notice — establishing that surviving vendor suspension is not a theoretical improvement
+      suspensions across Russia and CIS markets - hundreds of thousands of organizations losing vendor
+      access on days of notice - establishing that surviving vendor suspension is not a theoretical improvement
       but a property the architecture has already had to provide.
     must-implement: *id081
     verification: Block all vendor-controlled domains at the network layer and confirm the application
@@ -5352,8 +5352,8 @@ properties:
   - ref: ch09-local-first-practitioner-lens:LENS-LF-16
     name: Shared-device role-scoped recovery
     scope: foundational
-    definition: Recovery must support shared-device deployments — a single tablet rotated across a team
-      of field workers — by targeting the role and the workspace rather than the device and its sole user,
+    definition: Recovery must support shared-device deployments - a single tablet rotated across a team
+      of field workers - by targeting the role and the workspace rather than the device and its sole user,
       with BYOC backup configured against role-scoped workspace targets so any team member can restore
       from any device.
     must-implement: *id040
@@ -5454,7 +5454,7 @@ properties:
     name: Semantic layer enforces domain invariants
     scope: foundational
     definition: The semantic layer interprets CRDT data-layer changes as domain events and enforces invariants
-      that CRDT merge cannot enforce structurally — for example, turning a concurrent posting-amount mutation
+      that CRDT merge cannot enforce structurally - for example, turning a concurrent posting-amount mutation
       into a compensating ledger entry rather than a silent corruption.
     must-implement: *id157
     verification: Test injects a CRDT-merged state that violates a domain invariant; assertion confirms
@@ -5462,8 +5462,8 @@ properties:
   - ref: ch12-crdt-engine-data-layer:CRDT-23
     name: Double-entry ledger as canonical CP subsystem
     scope: foundational
-    definition: The double-entry ledger is the correct model for value records — not a CRDT workaround
-      — because its append-only, immutable, strictly-ordered, balanced-postings structure aligns directly
+    definition: The double-entry ledger is the correct model for value records - not a CRDT workaround
+      - because its append-only, immutable, strictly-ordered, balanced-postings structure aligns directly
       with what CP positioning requires for audit integrity.
     must-implement: *id158
     verification: Attempt to mutate a committed posting and confirm the operation is rejected; verify
@@ -5473,7 +5473,7 @@ properties:
     scope: foundational
     definition: At period close, the projection engine computes account balances, P&L, and cash flow as
       rollup snapshots committed as closing events to the append-only log, and any subsequent postings
-      affecting a closed period are directed to adjustment accounts in the next open period — the closed-period
+      affecting a closed period are directed to adjustment accounts in the next open period - the closed-period
       log is never rewritten.
     must-implement: *id159
     verification: Close a period, attempt a backdated posting, assert it is recorded as an adjustment
@@ -5583,7 +5583,7 @@ properties:
     name: Relay compelled-access immunity
     scope: foundational
     definition: A subpoena or compulsion order to the relay operator yields connection logs and message
-      envelopes only — never payload plaintext — because the relay structurally does not possess decryptable
+      envelopes only - never payload plaintext - because the relay structurally does not possess decryptable
       content.
     must-implement: *id170
     verification: Architecture document and threat model state the compelled-access invariant; implementation
@@ -5601,7 +5601,7 @@ properties:
     name: Export determinism and completeness guarantees
     scope: foundational
     definition: The export process emits no telemetry, requires no network, produces deterministic output
-      (identical state yields identical export), and includes every record the local node holds — full
+      (identical state yields identical export), and includes every record the local node holds - full
       records as content, stubs as metadata-plus-hash.
     must-implement: *id172
     verification: Run export twice over identical state; diff confirms identical contents. Capture network
@@ -5622,7 +5622,7 @@ properties:
       the founder's Ed25519 public key, establishing the trust root for the team without any external
       certificate authority.
     must-implement: *id174
-    verification: Generate a founder bundle and inspect it — issuer equals subject, IssuerPublicKey is
+    verification: Generate a founder bundle and inspect it - issuer equals subject, IssuerPublicKey is
       present, verification succeeds against the embedded key alone.
   - ref: ch18-migrating-existing-saas:MIG-01
     name: Reversible four-phase migration model
@@ -5638,7 +5638,7 @@ properties:
     name: Five migration triggers
     scope: foundational
     definition: A team justifies migrating a hosted SaaS to local-first only when at least one of five
-      named business triggers applies — compliance mandate, data-residency objection in enterprise sales,
+      named business triggers applies - compliance mandate, data-residency objection in enterprise sales,
       vendor reliability or termination event, churn driven by data sovereignty, or procurement review
       blocking adoption.
     must-implement: *id176
@@ -5689,8 +5689,8 @@ properties:
   - ref: ch19-shipping-to-enterprise:ENT-22
     name: Three-runbook minimum for enterprise GA
     scope: foundational
-    definition: Enterprise general availability requires three published runbooks — node onboarding, node
-      deprovisioning, and incident response for node or key compromise — each with named commands, expected
+    definition: Enterprise general availability requires three published runbooks - node onboarding, node
+      deprovisioning, and incident response for node or key compromise - each with named commands, expected
       outputs, and audit-log verification steps.
     must-implement: *id181
     verification: docs/runbooks/ contains all three named runbooks with command-output-verification triplets
@@ -5819,9 +5819,9 @@ properties:
   - ref: appendix-c-further-reading:READ-01
     name: Kleppmann seven local-first ideals
     scope: foundational
-    definition: The seven aspirational properties — fast local performance (P1), multi-device access (P2),
+    definition: The seven aspirational properties - fast local performance (P1), multi-device access (P2),
       network-optional operation (P3), seamless collaboration (P4), longevity beyond vendor lifespan (P5),
-      security and privacy by default (P6), and ultimate user ownership (P7) — that together define local-first
+      security and privacy by default (P6), and ultimate user ownership (P7) - that together define local-first
       software per Kleppmann et al. (Onward! 2019).
     must-implement: *id003
     verification: Conformance scorecard maps every architectural choice to one or more of P1-P7; no property
@@ -5863,7 +5863,7 @@ properties:
       and tamper-evident audit trail completeness.
     must-implement: *id108
     verification: Per-scenario evidence column captures packet captures, audit log exports with verified
-      Merkle root, relay log entries with issuer fingerprint, and ciphertext samples — archived per release.
+      Merkle root, relay log entries with issuer fingerprint, and ciphertext samples - archived per release.
   - ref: appendix-f-regulatory-coverage:COMP-01
     name: GDPR Article 17 right-to-erasure via crypto-shredding
     scope: foundational
@@ -5946,9 +5946,9 @@ properties:
   - ref: appendix-f-regulatory-coverage:COMP-14
     name: US sector-specific frameworks (HIPAA, FedRAMP, ITAR)
     scope: foundational
-    definition: The absence of a US omnibus privacy law leaves sector-specific regimes — HIPAA for PHI,
+    definition: The absence of a US omnibus privacy law leaves sector-specific regimes - HIPAA for PHI,
       FedRAMP for federal cloud authorization, ITAR/EAR for export-controlled technology, CCPA/CPRA for
-      California consumer rights — each addressed by on-device encryption and sovereign deployment patterns.
+      California consumer rights - each addressed by on-device encryption and sovereign deployment patterns.
     must-implement: *id118
     verification: A US-tenant deployment registers each applicable sectoral framework and produces the
       corresponding evidence artifacts on demand

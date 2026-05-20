@@ -2,7 +2,7 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Take *The Inverted Stack* manuscript through a full editorial + voice-pass cycle: clean dense source prose, audit and tune voice agents, run all 27 chapters through the two-pass orchestrator, and promote vetted outputs back to `main` — with full provenance and reproducibility.
+**Goal:** Take *The Inverted Stack* manuscript through a full editorial + voice-pass cycle: clean dense source prose, audit and tune voice agents, run all 27 chapters through the two-pass orchestrator, and promote vetted outputs back to `main` - with full provenance and reproducibility.
 
 **Architecture:** Five phases (0.0, 0, 0.5, 1, 2, 3, 4) executed sequentially with binary gates between each. Heavy editorial work in Phase 0; one methodology test in Phase 0.5 that may collapse Phase 1; code changes to `build/voice-pass.py` and a new `build/promote.py` in Phases 1 and 4; pilot validation in Phase 2 before the full Phase 3 run.
 
@@ -26,7 +26,7 @@
 | `agents/voice-grant.md` | Same |
 | `agents/voice-godin.md` | Same |
 | `agents/voice-lencioni.md` | Same |
-| `vol-1/appendices/appendix-f-regulatory-coverage.md` | New — full jurisdiction × framework × chapter table |
+| `vol-1/appendices/appendix-f-regulatory-coverage.md` | New - full jurisdiction × framework × chapter table |
 | `vol-1/_part-2-preamble.md` *(optional, see D1)* | Council-disclosure note alternative location |
 | `build/promote.py` | Phase 4 promotion script; hash verification, manifest writing, ICM marker update |
 | `build/check_audit.py` | Reference-integrity script: every jurisdiction removed from inline prose appears in Appendix F |
@@ -38,7 +38,7 @@
 | `tests/build/test_check_audit.py` | Tests for audit verification |
 | `tests/conftest.py` | Pytest fixtures (tmp repo, sample chapter) |
 | `pytest.ini` | pytest config |
-| `vol-1/<part>/<ch>.manifest.json` × 27 | Created during Phase 4 — per-promoted-chapter audit sidecar |
+| `vol-1/<part>/<ch>.manifest.json` × 27 | Created during Phase 4 - per-promoted-chapter audit sidecar |
 
 ### Files modified in this plan
 
@@ -155,11 +155,11 @@ git commit -m "build: add pytest scaffolding for voice-pass plan"
 ```
 
 > **GitButler note for all subsequent tasks:** This repo uses GitButler. A `pre-commit` hook blocks plain `git commit`. Use one of:
-> - `but commit` — but this commits **all** working-tree changes, not just staged paths. Risk of stowaway files.
-> - GitButler UI/desktop app — for path-precise commits.
-> - `git -c core.hooksPath=/dev/null commit` — bypass the hook for a precise CLI commit (use sparingly; coordinate with GitButler virtual-branch state).
+> - `but commit` - but this commits **all** working-tree changes, not just staged paths. Risk of stowaway files.
+> - GitButler UI/desktop app - for path-precise commits.
+> - `git -c core.hooksPath=/dev/null commit` - bypass the hook for a precise CLI commit (use sparingly; coordinate with GitButler virtual-branch state).
 >
-> When dispatching subagents, prefer staging exact paths and using a hook-bypassed `git commit`, then let GitButler reassign the commit to the right virtual branch via the UI. Never let a subagent run `but commit` against an unclean working tree — it will scoop in everything and produce mixed-scope commits.
+> When dispatching subagents, prefer staging exact paths and using a hook-bypassed `git commit`, then let GitButler reassign the commit to the right virtual branch via the UI. Never let a subagent run `but commit` against an unclean working tree - it will scoop in everything and produce mixed-scope commits.
 
 ---
 
@@ -193,7 +193,7 @@ The jurisdictional scope of this compliance argument is wider than US-centric di
 
 New paragraph:
 ```
-The jurisdictional scope of this compliance argument is wider than US-centric discussions typically acknowledge. The EU's Schrems II ruling, India's Digital Personal Data Protection Act 2023, and the UAE's DIFC Data Protection Law 2020 are representative — each, in different language, makes data residency a compliance mechanism rather than a preference. The same pattern repeats across more than thirty national and regional frameworks; the full coverage table for this chapter is in Appendix F. In each of these jurisdictions, an architecture where data lives on the user's own hardware — not in a vendor's cloud region — is not merely preferred. In many configurations, it is the architecture that makes compliance tractable. The book's architecture is frequently a legal requirement before it is an architectural choice.
+The jurisdictional scope of this compliance argument is wider than US-centric discussions typically acknowledge. The EU's Schrems II ruling, India's Digital Personal Data Protection Act 2023, and the UAE's DIFC Data Protection Law 2020 are representative - each, in different language, makes data residency a compliance mechanism rather than a preference. The same pattern repeats across more than thirty national and regional frameworks; the full coverage table for this chapter is in Appendix F. In each of these jurisdictions, an architecture where data lives on the user's own hardware - not in a vendor's cloud region - is not merely preferred. In many configurations, it is the architecture that makes compliance tractable. The book's architecture is frequently a legal requirement before it is an architectural choice.
 ```
 
 - [ ] **Step 5: Verify word count of the chapter is still in range**
@@ -224,7 +224,7 @@ git commit -m "edit(ch01): compress jurisdictional enumeration ¶73 (Phase 0.0 t
 
 - [ ] **Step 2: Read the audit entry** for the chosen paragraph.
 
-- [ ] **Step 3: Apply the MED-recipe** — keep up to 4 jurisdictions inline as a short series; lift the rest to a forthcoming Appendix F entry (which will be created in Task 5).
+- [ ] **Step 3: Apply the MED-recipe** - keep up to 4 jurisdictions inline as a short series; lift the rest to a forthcoming Appendix F entry (which will be created in Task 5).
 
 - [ ] **Step 4: Verify word count.**
 
@@ -241,7 +241,7 @@ From `.wolf/phase00-timing.txt`, compute `avg_minutes = (ch01_minutes + chXX_min
 - [ ] **Step 2: Multiply by total paragraph count from the audit**
 
 Run: `grep -c "^- \*\*HIGH\*\*\|^- \*\*MED\*\*" docs/superpowers/specs/2026-04-25-voice-pass-orchestration-audit.md`
-Expected: a single number — total HIGH+MED paragraphs.
+Expected: a single number - total HIGH+MED paragraphs.
 
 Project total = `total_paragraphs * avg_minutes / 60` hours.
 
@@ -282,7 +282,7 @@ Run: `grep "^- \*\*HIGH\*\*" docs/superpowers/specs/2026-04-25-voice-pass-orches
 
 For each:
 1. Read the paragraph in context.
-2. Identify the chapter-anchor jurisdiction(s) — the one most relevant to the chapter's argument; check `.wolf/memory.md` 2026-04-24 entries for any literary-board-flagged jurisdictions for that chapter.
+2. Identify the chapter-anchor jurisdiction(s) - the one most relevant to the chapter's argument; check `.wolf/memory.md` 2026-04-24 entries for any literary-board-flagged jurisdictions for that chapter.
 3. Replace enumeration with: anchor + short series of 2–3 + reference pointer to Appendix F.
 4. Re-read the paragraph; verify it still reads as one argument.
 5. `make word-count` to confirm chapter is within ±10%.
@@ -294,7 +294,7 @@ git add chapters/<part>/<ch>.md
 git commit -m "edit(chXX): compress jurisdictional enumeration (Phase 0a HIGH)"
 ```
 
-(One commit per chapter — small commits aid Phase 4 review.)
+(One commit per chapter - small commits aid Phase 4 review.)
 
 ### Task 5: Bulk compress all remaining MED-severity paragraphs
 
@@ -310,7 +310,7 @@ Same five sub-steps as Task 4 Step 2, but inline allowance is 4 jurisdictions in
 
 - [ ] **Step 3: Commit per chapter** as in Task 4.
 
-### Task 6: Create Appendix F — Regulatory Coverage Map
+### Task 6: Create Appendix F - Regulatory Coverage Map
 
 **Files:**
 - Create: `vol-1/appendices/appendix-f-regulatory-coverage.md`
@@ -320,7 +320,7 @@ Same five sub-steps as Task 4 Step 2, but inline allowance is 4 jurisdictions in
 Use this template (write the full file):
 
 ```markdown
-# Appendix F — Regulatory Coverage Map
+# Appendix F - Regulatory Coverage Map
 
 <!-- icm/draft -->
 <!-- Target: ~2,000 words -->
@@ -380,9 +380,9 @@ The frameworks are grouped by region. Within each region, the entries follow a c
 
 ## Cross-Cutting Frameworks
 
-### Standard Contractual Clauses (EU) — adequacy status
+### Standard Contractual Clauses (EU) - adequacy status
 ### Binding Corporate Rules
-### ISO/IEC 27701, SOC 2, ISMS-P (Korea), ENS (Spain) — administrative controls
+### ISO/IEC 27701, SOC 2, ISMS-P (Korea), ENS (Spain) - administrative controls
 
 ## Per-Chapter Index
 
@@ -504,11 +504,11 @@ def main() -> int:
         if orphans:
             failures.append(f"{ch.relative_to(REPO).as_posix()}: {sorted(orphans)}")
     if failures:
-        print("FAIL — jurisdictions in chapters not declared in Appendix F:")
+        print("FAIL - jurisdictions in chapters not declared in Appendix F:")
         for f in failures:
             print(f"  {f}")
         return 1
-    print(f"PASS — every jurisdiction in chapters appears in Appendix F.")
+    print(f"PASS - every jurisdiction in chapters appears in Appendix F.")
     return 0
 
 
@@ -554,7 +554,7 @@ The disclosure should appear in or just after the section that introduces the co
 - [ ] **Step 2: Insert the Sinek-voice paragraph**
 
 ```markdown
-We invented the people. We did not invent the objections. Five composite characters — each a faithful stand-in for a domain that had every reason to dismantle this architecture — read the paper twice. What broke, broke for real reasons. What changed, changed because the reasons were good.
+We invented the people. We did not invent the objections. Five composite characters - each a faithful stand-in for a domain that had every reason to dismantle this architecture - read the paper twice. What broke, broke for real reasons. What changed, changed because the reasons were good.
 ```
 
 - [ ] **Step 3: Verify word count**
@@ -578,7 +578,7 @@ git commit -m "edit(preface): composite-character disclosure paragraph (Phase 0c
 After the chapter's title heading, before the body, insert:
 
 ```markdown
-> **A note on the council:** The five members are composite characters — fictional practitioners constructed to embody real domains and real objections. The objections are real. The names are not.
+> **A note on the council:** The five members are composite characters - fictional practitioners constructed to embody real domains and real objections. The objections are real. The names are not.
 ```
 
 - [ ] **Step 2: Verify word count**
@@ -759,7 +759,7 @@ def test_build_prompt_references_in_repo_agent_path():
 - [ ] **Step 2: Run test to verify it fails**
 
 Run: `python -m pytest tests/build/test_voice_pass.py::test_build_prompt_references_in_repo_agent_path -v`
-Expected: FAIL — current `build_prompt` references `~/.claude/agents/voice-{voice}.md`.
+Expected: FAIL - current `build_prompt` references `~/.claude/agents/voice-{voice}.md`.
 
 - [ ] **Step 3: Update build_prompt in build/voice-pass.py**
 
@@ -813,12 +813,12 @@ git add agents/
 git commit -m "agents: forbid source/ paper access (council C10)"
 ```
 
-### Task 16: Tune voice-sinek for chapter-scale prose (B5/C16 — full-tune-only)
+### Task 16: Tune voice-sinek for chapter-scale prose (B5/C16 - full-tune-only)
 
 **Files:**
 - Modify: `agents/voice-sinek.md`
 
-> Skip this task if Phase 0.5 returned "drop pass-2" — Sinek is unchanged in that branch.
+> Skip this task if Phase 0.5 returned "drop pass-2" - Sinek is unchanged in that branch.
 
 - [ ] **Step 1: Reframe calibration test #2 from per-section to per-chapter**
 
@@ -828,7 +828,7 @@ Open `agents/voice-sinek.md`. Find the calibration test section. Change:
 ```
 to:
 ```
-2. Is the chapter's core claim — not each section's claim — restated 2–3 times across the chapter, each at a different angle? Section-level repetition compounds at chapter scale into fatiguing emphasis. Restate the chapter's thesis, not each section's.
+2. Is the chapter's core claim - not each section's claim - restated 2–3 times across the chapter, each at a different angle? Section-level repetition compounds at chapter scale into fatiguing emphasis. Restate the chapter's thesis, not each section's.
 ```
 
 - [ ] **Step 2: Add the scene-preservation rule**
@@ -849,7 +849,7 @@ Insert into "Sentence-level rules":
 
 Insert into "Sentence-level rules":
 ```markdown
-- **Register variation.** Scene, exposition, and argument should sound different. Do not flatten all three to a single declarative cadence. When a passage in the source is already well-written for its register, leave it alone — your job is to add craft on top of the author's, not to overwrite it.
+- **Register variation.** Scene, exposition, and argument should sound different. Do not flatten all three to a single declarative cadence. When a passage in the source is already well-written for its register, leave it alone - your job is to add craft on top of the author's, not to overwrite it.
 ```
 
 - [ ] **Step 5: Add the 10% cut rule**
@@ -864,15 +864,15 @@ Insert into "Sentence-level rules" (or as a new rule near the calibration test):
 Insert after the existing CRDT example (### Example):
 
 ```markdown
-### Example — chapter-opening register
+### Example - chapter-opening register
 
 This is the Sinek voice operating at *chapter* scale rather than at illustration scale.
 
 **Source (preface fragment):**
-> The Kleppmann Council read the paper twice. They are five composite characters — invented people — who each represent a real domain that had every reason to dismantle this architecture.
+> The Kleppmann Council read the paper twice. They are five composite characters - invented people - who each represent a real domain that had every reason to dismantle this architecture.
 
 **Sinek-voice (chapter-opening register):**
-> We invented the people. We did not invent the objections. Five composite characters — each a faithful stand-in for a domain that had every reason to dismantle this architecture — read the paper twice. What broke, broke for real reasons. What changed, changed because the reasons were good.
+> We invented the people. We did not invent the objections. Five composite characters - each a faithful stand-in for a domain that had every reason to dismantle this architecture - read the paper twice. What broke, broke for real reasons. What changed, changed because the reasons were good.
 
 Notice: scene-led ("we invented... we did not invent"), parallel construction, no inline enumeration of jurisdictions or domains. The closing line gives the reader a stance, not a summary.
 ```
@@ -989,7 +989,7 @@ def test_log_invocation_writes_json_with_required_fields(tmp_repo):
 - [ ] **Step 2: Run test to verify it fails**
 
 Run: `python -m pytest tests/build/test_voice_pass.py::test_log_invocation_writes_json_with_required_fields -v`
-Expected: FAIL — `log_invocation` does not exist.
+Expected: FAIL - `log_invocation` does not exist.
 
 - [ ] **Step 3: Add log_invocation to build/voice-pass.py**
 
@@ -1221,15 +1221,15 @@ Create `.wolf/phase2-pilot-grades.md`:
 # Phase 2 Pilot Grades
 
 ## Ch01 (gladwell → sinek-polish)
-- Pass-1: PASS / FAIL — <notes>
-- Pass-2: PASS / FAIL — <notes>
+- Pass-1: PASS / FAIL - <notes>
+- Pass-2: PASS / FAIL - <notes>
 
 ## Ch04 (godin → sinek-polish)
 ...
 ## Ch05 (lencioni → sinek-polish)
 ...
 ## Ch11 (sinek-normalize direct)
-- Pass-2: PASS / FAIL — <notes>
+- Pass-2: PASS / FAIL - <notes>
 ```
 
 - [ ] **Step 4: External-reader gate (C17)**
@@ -1251,7 +1251,7 @@ Listen end-to-end. Note any passage where cadence fatigues or enumeration breaks
 
 Add a `## Audiobook listener test` section with PASS/FAIL and notes.
 
-### Task 24: Phase 2 gate — decide continue or retune
+### Task 24: Phase 2 gate - decide continue or retune
 
 - [ ] **Step 1: Apply gate**
 
@@ -1275,7 +1275,7 @@ git commit -m "phase(2): pilot complete; <pass/retune>"
 
 ### Task 25: Add polish/normalize mode parser to voice-pass.py (full-tune-only)
 
-> Skip this entire task if Phase 0.5 collapsed Phase 1 — no mode dispatch needed.
+> Skip this entire task if Phase 0.5 collapsed Phase 1 - no mode dispatch needed.
 
 **Files:**
 - Modify: `build/voice-pass.py`
@@ -1430,7 +1430,7 @@ def test_build_prompt_polish_differs_from_normalize():
 - [ ] **Step 2: Run test to verify it fails**
 
 Run: `python -m pytest tests/build/test_voice_pass.py::test_build_prompt_polish_differs_from_normalize -v`
-Expected: FAIL — `build_prompt` does not accept `mode`.
+Expected: FAIL - `build_prompt` does not accept `mode`.
 
 - [ ] **Step 3: Add mode parameter to build_prompt**
 
@@ -1454,7 +1454,7 @@ TASK
         mode_block = """
 MODE: POLISH
 You are running in POLISH mode. The source has already been rewritten by a guest voice.
-Your job is to lightly normalize cadence and cut hedging — not to overwrite the guest voice.
+Your job is to lightly normalize cadence and cut hedging - not to overwrite the guest voice.
 Specifically:
 - Do NOT apply restatement-loop or moral-statement-ending techniques to scenes.
 - Do NOT replace the guest voice's prose patterns with your own.
@@ -1465,7 +1465,7 @@ Specifically:
         mode_block = """
 MODE: NORMALIZE
 You are running in NORMALIZE mode. The source is the original chapter (not guest-voiced).
-Apply your full voice instructions — Why→How→What sequencing, repetition loops at chapter scale, scene preservation.
+Apply your full voice instructions - Why→How→What sequencing, repetition loops at chapter scale, scene preservation.
 """
     return base + mode_block + """
 OUTPUT TO STDOUT:
@@ -1475,7 +1475,7 @@ Output nothing else.
 """
 ```
 
-(Replace the entire `build_prompt` function. The existing PRESERVATION RULES / REWRITE TARGETS / DISCIPLINE RULES blocks must be preserved verbatim — copy them from the current implementation.)
+(Replace the entire `build_prompt` function. The existing PRESERVATION RULES / REWRITE TARGETS / DISCIPLINE RULES blocks must be preserved verbatim - copy them from the current implementation.)
 
 - [ ] **Step 4: Wire mode through to run_voice_pass and main()**
 
@@ -1556,7 +1556,7 @@ def test_no_stale_when_draft_newer(tmp_path):
 - [ ] **Step 2: Run test to verify it fails**
 
 Run: `python -m pytest tests/build/test_check_stale.py -v`
-Expected: FAIL — module not found.
+Expected: FAIL - module not found.
 
 - [ ] **Step 3: Implement build/check_stale.py**
 
@@ -1604,7 +1604,7 @@ def main() -> int:
         for s in stale:
             print(f"  {s}")
         return 1
-    print("OK — all drafts are at-or-newer than their source.")
+    print("OK - all drafts are at-or-newer than their source.")
     return 0
 
 

@@ -41,9 +41,9 @@ concepts:
   name: Five-layer storage architecture
   source: ch16 §"Five-Layer Storage Architecture"
   source-paper: v13 §8
-  definition: Persistence is composed of five specialized tiers — local encrypted database, CRDT and event
+  definition: Persistence is composed of five specialized tiers - local encrypted database, CRDT and event
     log, user-controlled cloud backup, content-addressed distribution (opt-in), and decentralized archival
-    (opt-in) — rather than a single database system.
+    (opt-in) - rather than a single database system.
   must-implement:
   - Implementation distinguishes the five tiers as separately addressable subsystems
   - Tiers 1-3 are mandatory; Tiers 4-5 are opt-in and absence does not constitute degradation
@@ -135,7 +135,7 @@ concepts:
   name: Eager versus lazy bucket replication
   source: ch16 §"Declarative Sync Buckets"
   source-paper: v13 §8
-  definition: Each bucket declares a replication mode — eager buckets sync immediately on connect; lazy
+  definition: Each bucket declares a replication mode - eager buckets sync immediately on connect; lazy
     buckets use demand-driven fetch and represent records locally as stubs.
   must-implement:
   - Sync daemon supports both `eager` and `lazy` replication modes per bucket
@@ -338,8 +338,8 @@ concepts:
   source: ch16 §"CRDT Growth and Garbage Collection"
   source-paper: v13 §8
   definition: CRDT documents grow monotonically under naive storage; the architecture mitigates this with
-    three named strategies — library-level compaction, application-level document sharding, and periodic
-    shallow snapshots — with full-history retention as the conservative default.
+    three named strategies - library-level compaction, application-level document sharding, and periodic
+    shallow snapshots - with full-history retention as the conservative default.
   must-implement:
   - Architecture names the three mitigation strategies and their tradeoffs
   - Default policy retains full history relying on library-level compaction
@@ -393,8 +393,8 @@ concepts:
   name: Three-state backup UX
   source: 'ch16 §"Backup UX: Three-State Model"'
   source-paper: v13 §8
-  definition: Backup status is exposed to the user as one of three states — Protected, Attention, At Risk
-    — each mapping to a single user action (none, back up now, acknowledge), with no exposure of internal
+  definition: Backup status is exposed to the user as one of three states - Protected, Attention, At Risk
+    - each mapping to a single user action (none, back up now, acknowledge), with no exposure of internal
     replication factors or vector clocks.
   must-implement:
   - System surfaces backup state as exactly the three named states
@@ -609,7 +609,7 @@ concepts:
   source: ch16 §"Relay Architecture"
   source-paper: v13 §9
   definition: A subpoena or compulsion order to the relay operator yields connection logs and message
-    envelopes only — never payload plaintext — because the relay structurally does not possess decryptable
+    envelopes only - never payload plaintext - because the relay structurally does not possess decryptable
     content.
   must-implement:
   - Relay operator has no technical capability to produce plaintext payloads under legal compulsion
@@ -779,7 +779,7 @@ concepts:
   source: ch16 §"Plain-File Export"
   source-paper: v13 §10
   definition: The export process emits no telemetry, requires no network, produces deterministic output
-    (identical state yields identical export), and includes every record the local node holds — full records
+    (identical state yields identical export), and includes every record the local node holds - full records
     as content, stubs as metadata-plus-hash.
   must-implement:
   - Export emits zero network requests during execution
@@ -865,7 +865,7 @@ concepts:
     human-readable without rendering.'
 - id: DUR-29
   name: Layer 5 decentralized archival as deferred extension point
-  source: ch16 §"Layer 5 — Decentralized Archival (Phase 2)"
+  source: ch16 §"Layer 5 - Decentralized Archival (Phase 2)"
   source-paper: v13 §8
   definition: Layer 5 is an optional enterprise tier providing cryptographic proof-of-storage for regulated
     long-term retention; the operational mechanism (Filecoin, Arweave, Merkle-challenge) is deferred to

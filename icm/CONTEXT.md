@@ -1,4 +1,4 @@
-# ICM — Iterative Chapter / Content Manufacturing Pipeline
+# ICM - Iterative Chapter / Content Manufacturing Pipeline
 
 The `icm/` directory is the story-change pipeline for this repo. Every new chapter, revision, or cross-format adaptation moves through transparent stages, with artifacts landing in predictable places. This file is the orientation doc; each stage folder carries its own `README.md` describing its inputs, outputs, and exit criteria.
 
@@ -24,19 +24,19 @@ The repo holds two volumes plus their cross-format productions (ebook, audio, we
 
 ## Naming convention
 
-Work items use a numeric prefix and a slug: `NN-short-slug/` inside each stage folder. The same item keeps its number as it moves between stages — e.g., `12-ch15-security-split/` flows from `00_intake/12-ch15-security-split.md` through `07_review/12-ch15-security-split/` to `08_release/12-ch15-security-split.md`.
+Work items use a numeric prefix and a slug: `NN-short-slug/` inside each stage folder. The same item keeps its number as it moves between stages - e.g., `12-ch15-security-split/` flows from `00_intake/12-ch15-security-split.md` through `07_review/12-ch15-security-split/` to `08_release/12-ch15-security-split.md`.
 
 ## Relationship to existing structure
 
-- **`vol-1/`, `vol-2/`** — canonical prose. ICM produces changes; canon receives them.
-- **`_production/`** — format outputs (audiobook, web, ebook, print). Release stage hands off here.
-- **`_series/`** — shared world bible, long arcs, cross-volume continuity. Discovery and architecture consult here.
-- **`.pao-inbox/`** — short-form coordination beacons. Long-form artifacts live in `icm/`.
-- **`icm/pipelines/book-update-loop/`** — historical loop orchestration that drove the original Vol-1-extensions queue (#9–#12, #43–#48); preserved for audit trail. Working items it produced now live in `icm/06_build/` and `icm/07_review/`.
+- **`vol-1/`, `vol-2/`** - canonical prose. ICM produces changes; canon receives them.
+- **`_production/`** - format outputs (audiobook, web, ebook, print). Release stage hands off here.
+- **`_series/`** - shared world bible, long arcs, cross-volume continuity. Discovery and architecture consult here.
+- **`.pao-inbox/`** - short-form coordination beacons. Long-form artifacts live in `icm/`.
+- **`icm/pipelines/book-update-loop/`** - historical loop orchestration that drove the original Vol-1-extensions queue (#9–#12, #43–#48); preserved for audit trail. Working items it produced now live in `icm/06_build/` and `icm/07_review/`.
 
 ## How to start
 
 1. Drop a brief into `00_intake/` describing the change.
-2. Run discovery into `01_discovery/` (or invoke the relevant skill — `local-first-properties`, `inverted-stack-conformance`).
+2. Run discovery into `01_discovery/` (or invoke the relevant skill - `local-first-properties`, `inverted-stack-conformance`).
 3. Promote through stages as gates pass.
 4. Release lands the change in `vol-*/` and triggers `_production/` regeneration.

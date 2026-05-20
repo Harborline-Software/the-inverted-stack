@@ -1,4 +1,4 @@
-# Technical-review report — #12 Privacy-Preserving Aggregation at Relay
+# Technical-review report - #12 Privacy-Preserving Aggregation at Relay
 
 **Iteration:** iter-0030
 **Date:** 2026-04-28
@@ -22,7 +22,7 @@ back-edit IS in-scope per item 6a).
 
 ## Items resolved with edits
 
-### Item 1 — CLAIM marker at §12c (line 750), retired
+### Item 1 - CLAIM marker at §12c (line 750), retired
 
 **Disposition: RESOLVED. Marker retired.**
 
@@ -48,7 +48,7 @@ deliver." All four honesty elements are present:
 The CLAIM marker has been removed. The honesty-bound prose itself is preserved verbatim
 (only the HTML comment marker was stripped).
 
-### Item 3 — k = 10 "practical floor" qualified
+### Item 3 - k = 10 "practical floor" qualified
 
 **Disposition: RESOLVED with edit.**
 
@@ -66,7 +66,7 @@ revised to:
 This makes the architecture's choice explicit ("recommended for this architecture") without
 falsely attributing the floor to a primary source.
 
-### Item 5 — Suspension audit-event visibility scope specified
+### Item 5 - Suspension audit-event visibility scope specified
 
 **Disposition: RESOLVED with edit.**
 
@@ -76,8 +76,8 @@ unspecified. The correct scope is operator-only, because broadcasting suspension
 would itself leak the fact of an unconfirmed incident before the operator has scoped it. The
 edit appended:
 
-> The suspension event is encrypted to the operator role only — visible to the operator and
-> to auditors holding the operator-role key, not to the broader node fleet — so the
+> The suspension event is encrypted to the operator role only - visible to the operator and
+> to auditors holding the operator-role key, not to the broader node fleet - so the
 > existence of the suspension does not itself leak the fact of an unconfirmed incident
 > before the operator has scoped it.
 
@@ -85,7 +85,7 @@ This aligns with the §Endpoint Compromise procedure (operator-controlled respon
 §Key-Loss Recovery 48f audit-event visibility model (encrypted application-data log; visible
 to the role that holds the audit-role key).
 
-### Item 6a — Forward pointer at §Relay Trust Model close
+### Item 6a - Forward pointer at §Relay Trust Model close
 
 **Disposition: RESOLVED with edit.**
 
@@ -93,8 +93,8 @@ to the role that holds the audit-role key).
 (limitation statement). One sentence was added at the close pointing forward to the new
 section:
 
-> For operators who legitimately derive aggregate statistics from relay traffic — error
-> rates, sync latencies, fleet health counts — §Privacy-Preserving Aggregation at Relay
+> For operators who legitimately derive aggregate statistics from relay traffic - error
+> rates, sync latencies, fleet health counts - §Privacy-Preserving Aggregation at Relay
 > specifies the differential-privacy and k-anonymity mechanisms that satisfy the same
 > metadata-protection intent as a self-hosted relay while still enabling operational
 > intelligence.
@@ -102,7 +102,7 @@ section:
 This converts the §Relay Trust Model close from a pure-limitation statement into a
 forward-pointer that names the analytics-not-surveillance solution.
 
-### Item 6b — Metadata-minimization row in §Security Properties Summary
+### Item 6b - Metadata-minimization row in §Security Properties Summary
 
 **Disposition: RESOLVED with edit.**
 
@@ -113,13 +113,13 @@ Integrity, Availability, Non-repudiation). One row added:
 > privacy with a k-anonymity floor; per-partition aggregates below floor are suppressed;
 > cumulative ε is gated against a rolling-window budget so individual-node behavior is not
 > recoverable from published telemetry. | Central differential privacy at the relay tier,
-> k-anonymity floor evaluator, and rolling-window budget tracker — all relay-internal policy
+> k-anonymity floor evaluator, and rolling-window budget tracker - all relay-internal policy
 > components within `Sunfish.Kernel.Sync`; suspension-event audit trail in
 > `Sunfish.Kernel.Audit`. |
 
 The summary now incorporates the new guarantee without requiring a retroactive edit pass.
 
-### Item 8 — Apple [34] citation precision
+### Item 8 - Apple [34] citation precision
 
 **Disposition: RESOLVED with edit.**
 
@@ -131,7 +131,7 @@ The reference was tightened from corporate author + generic venue to:
 The Differential Privacy Team author attribution and the *Apple Machine Learning Journal*
 volume/issue/date metadata match the document's published metadata. URL is unchanged.
 
-### Item 11 — `BudgetWarning` event-contract naming
+### Item 11 - `BudgetWarning` event-contract naming
 
 **Disposition: RESOLVED with edit.**
 
@@ -145,7 +145,7 @@ event-contract convention established in §Key-Loss Recovery (`RecoveryClaimSubm
 
 ## Items verified without edits
 
-### Item 2 — Smart-meter worked example
+### Item 2 - Smart-meter worked example
 
 **Disposition: GENERIC FRAMING SUFFICES. No edit.**
 
@@ -160,7 +160,7 @@ reference cited in outline §E is acknowledged in §J's novelty discussion as th
 literature pointing at the temporal-correlation gap, which is sufficient. **No worked example
 added.**
 
-### Item 4 — DP / forward-secrecy orthogonality
+### Item 4 - DP / forward-secrecy orthogonality
 
 **Disposition: VERIFIED. No edit.**
 
@@ -172,41 +172,41 @@ are zeroed after use.
 The DP noise injector at the relay operates exclusively on observed plaintext metadata
 (packet headers, session timings, connection-graph edges, error codes). It has no view into
 ratchet state, no key-material-derived inputs, and no shared budget or accounting with the
-forward-secrecy ratchet. The two mechanisms compose orthogonally — neither shares state with
+forward-secrecy ratchet. The two mechanisms compose orthogonally - neither shares state with
 the other, neither weakens the other, neither alone closes the other's gap.
 
 The §12a orthogonality statement is technically accurate as drafted.
 
-### Item 7 — Dwork & Roth §3.5 sequential vs advanced composition
+### Item 7 - Dwork & Roth §3.5 sequential vs advanced composition
 
 **Disposition: VERIFIED. No edit.**
 
 The Dwork & Roth monograph §3.5 covers both basic sequential composition (Theorem 3.16:
 k applications of ε-DP yield kε-DP, additive) and advanced composition (Theorem 3.20,
 attributed to Dwork-Rothblum-Vadhan FOCS 2010, giving roughly √(2k ln(1/δ'))·ε + kε(e^ε - 1)
-bounds — the sqrt-N savings under (ε, δ)-DP composition).
+bounds - the sqrt-N savings under (ε, δ)-DP composition).
 
 The drafted §12c distinguishes them correctly:
 
-- **Sequential** at line 746: "Sequential composition is additive — n queries at ε per query
+- **Sequential** at line 746: "Sequential composition is additive - n queries at ε per query
   consume nε of cumulative budget (Dwork and Roth [32], §3.5)." Correct attribution to the
   basic theorem.
 - **Advanced** at line 750 (revised): "Deployments requiring tighter bounds adopt advanced
-  composition accounting (Dwork and Roth [32], §3.5) — the relay exposes simple-versus-
+  composition accounting (Dwork and Roth [32], §3.5) - the relay exposes simple-versus-
   advanced composition as a configuration knob." Correct attribution; §3.5 covers both, so
   the citation is precise.
 
 The two citations to the same chapter section are deliberate (both theorems live there) and
 the prose distinguishes them by function. Framing is correct.
 
-### Item 9 — `Sunfish.Kernel.Audit` canon-correction sweep
+### Item 9 - `Sunfish.Kernel.Audit` canon-correction sweep
 
 **Disposition: NOT A #12 BLOCKER. Documented as queued.**
 
 Per cerebrum 2026-04-28 (line 39), `Sunfish.Kernel.Audit` is in canon (`packages/kernel-audit/`
 exists in the Sunfish repo). Earlier extensions (#48 line 119, #45 line 304, #47 by
 extension, #9 line 585) declared `Sunfish.Kernel.Audit` "forward-looking" in their HTML
-annotation headers — that designation is incorrect. #12's HTML annotation header at line 712
+annotation headers - that designation is incorrect. #12's HTML annotation header at line 712
 correctly does NOT declare Audit as forward-looking (it only mentions `Sunfish.Kernel.Sync`;
 Audit appears in body prose at line 752 only).
 
@@ -214,7 +214,7 @@ The pre-existing erroneous "forward-looking" annotation headers at Ch15 lines 11
 are queued for the canon-correction sweep (separate task #25 per loop tracker). **Not a #12
 blocker.** This technical-review pass does not modify those headers.
 
-### Item 10 — Concept-index extraction
+### Item 10 - Concept-index extraction
 
 **Disposition: DEFERRED to next concept-index iteration. Documented here.**
 
@@ -324,7 +324,7 @@ These are noted for the prose-review pass; they are not technical-review defects
 - 0 placeholder text, 0 TBD markers, 0 broken cross-references.
 - Citations [32]–[36] verified against primary-source metadata; one citation tightened ([34]).
 - All 11 code-check items addressed: 7 resolved with edits, 3 verified without edits, 1
-  deferred (concept-index yaml — separate task).
+  deferred (concept-index yaml - separate task).
 - Two outline-§H back-edits folded in (Relay Trust Model forward pointer; Security
   Properties Summary row).
 
@@ -347,7 +347,7 @@ Section advances to prose-review. Items for prose-reviewer attention:
    appended to a previously-closed section).
 
 The technical-review pass does NOT modify the §Forward Secrecy [14]–[19], §Endpoint
-Compromise [20]–[27], or §Chain-of-Custody [28]–[31] sections — they remain sealed per the
+Compromise [20]–[27], or §Chain-of-Custody [28]–[31] sections - they remain sealed per the
 review scope. The §Relay Trust Model close-out forward pointer (one sentence) and the
 §Security Properties Summary metadata-minimization row (one row) are the only out-of-section
 edits, both explicitly in scope per the queued items 6a and 6b.

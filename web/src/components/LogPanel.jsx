@@ -274,7 +274,7 @@ export default function LogPanel({ onClose }) {
               <div className="log-progress-bar" style={{ width: `${progress}%` }} />
               <span className="log-progress-label">
                 {logData.lastChunk != null
-                  ? `${logData.lastChunk}/${logData.totalChunks} chunks — ${progress.toFixed(1)}%`
+                  ? `${logData.lastChunk}/${logData.totalChunks} chunks - ${progress.toFixed(1)}%`
                   : `${progress.toFixed(1)}%`}
                 {selectedLog?.status === 'running' && <span className="log-running-pill">live</span>}
               </span>
@@ -283,7 +283,7 @@ export default function LogPanel({ onClose }) {
           {selectedLog?.status === 'done' && logData?.lastChunk != null && (
             <div className="log-progress-bar-wrap log-progress-bar-wrap--done">
               <div className="log-progress-bar log-progress-bar--done" style={{ width: '100%' }} />
-              <span className="log-progress-label">{logData.lastChunk}/{logData.totalChunks} chunks — done</span>
+              <span className="log-progress-label">{logData.lastChunk}/{logData.totalChunks} chunks - done</span>
             </div>
           )}
 

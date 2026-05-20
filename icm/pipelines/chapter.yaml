@@ -6,7 +6,7 @@
 #
 # Loading: drivers in icm/pipelines/scripts/ (TBD) read this file and use it
 # to promote items between stage folders, check exit gates, and assign agents.
-# For now the file is descriptive — humans and Claude can follow it manually.
+# For now the file is descriptive - humans and Claude can follow it manually.
 
 id: chapter
 version: 1
@@ -87,9 +87,9 @@ stages:
       - voice-plan.yaml   # optional, per-section voice agent assignments
     templates:
       - templates/chapter-standard.md   # Part I, epilogue
-      - templates/chapter-council.md    # Part II — two-act structure
-      - templates/chapter-reference.md  # Part III — specification voice
-      - templates/chapter-playbook.md   # Part IV — tutorial voice
+      - templates/chapter-council.md    # Part II - two-act structure
+      - templates/chapter-reference.md  # Part III - specification voice
+      - templates/chapter-playbook.md   # Part IV - tutorial voice
     actions:
       - Pick template matching chapter type.
       - Set target word count, voice register, beats list, code-snippet
@@ -117,7 +117,7 @@ stages:
       criterion: scaffold-complete
       checks:
         - Every section in design.md has a topic sentence.
-        - Every code snippet has a stub or "// illustrative — not runnable".
+        - Every code snippet has a stub or "// illustrative - not runnable".
         - Every claim has a "<!-- CITE: ? -->" marker or real citation.
 
   - stage: 05_implementation-plan
@@ -225,7 +225,7 @@ stages:
         - Production outputs rebuilt.
         - Release note filed.
 
-# Escape conditions — when the pipeline should halt and surface a problem
+# Escape conditions - when the pipeline should halt and surface a problem
 # rather than mechanically promote.
 escapes:
   - condition: discovery-finds-claim-unsupportable

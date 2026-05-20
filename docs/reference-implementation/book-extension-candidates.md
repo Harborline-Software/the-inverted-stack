@@ -1,6 +1,6 @@
-# Book Extension Candidates — Architectural Primitives Beyond the Current Volume
+# Book Extension Candidates - Architectural Primitives Beyond the Current Volume
 
-**Status:** Writing roadmap, not implementation. Captures architectural primitives surfaced during the Path B design discussion (April 2026) that are NOT in the current book's 562-concept catalog but warrant inclusion in future writing — either Volume 1 extensions (this book, future editions) or new volumes (Volumes 2-5).
+**Status:** Writing roadmap, not implementation. Captures architectural primitives surfaced during the Path B design discussion (April 2026) that are NOT in the current book's 562-concept catalog but warrant inclusion in future writing - either Volume 1 extensions (this book, future editions) or new volumes (Volumes 2-5).
 
 **Audience:** Future-author for chapter planning; conformance-skill consumers who need to know what's covered today vs. what's roadmapped; reviewers evaluating the book's architectural completeness.
 
@@ -14,10 +14,10 @@ Each entry maps a primitive identifier (matching `design-decisions.md` §5) to i
 
 **Volume planning:**
 - **Volume 1 extensions** = additions to the CURRENT book in a future edition. Things the book SHOULD address but doesn't yet.
-- **Volume 2 — Cyber-physical systems** = potential new book covering local-first for automotive, robotics, smart-home actuators, medical devices, industrial control.
-- **Volume 3 — Multi-stakeholder economic systems** = potential new book covering DePIN, smart meters, voting, governance, ownership transfer, redaction, compliance.
-- **Volume 4 — Extreme environment systems** = potential new book covering spacecraft, drones, submarines, aviation.
-- **Volume 5 — Long-now systems** = potential new book covering deep-time archives, multi-generational governance, mythic-depth artifacts. Splits into 5A (technical substrate) and 5B (governance and cognition).
+- **Volume 2 - Cyber-physical systems** = potential new book covering local-first for automotive, robotics, smart-home actuators, medical devices, industrial control.
+- **Volume 3 - Multi-stakeholder economic systems** = potential new book covering DePIN, smart meters, voting, governance, ownership transfer, redaction, compliance.
+- **Volume 4 - Extreme environment systems** = potential new book covering spacecraft, drones, submarines, aviation.
+- **Volume 5 - Long-now systems** = potential new book covering deep-time archives, multi-generational governance, mythic-depth artifacts. Splits into 5A (technical substrate) and 5B (governance and cognition).
 
 **Effort estimates:**
 - **S (small)** = ~1 chapter section, ~1-2k words
@@ -48,9 +48,9 @@ These primitives apply to the book's current scope (information-systems local-fi
 
 ---
 
-## Volume 2 — Cyber-physical systems (potential new book)
+## Volume 2 - Cyber-physical systems (potential new book)
 
-These primitives apply when local-first software CONTROLS PHYSICAL ACTUATORS. Bug consequences move from data loss / disclosure to property damage / injury / death — qualitative jump from information-systems local-first.
+These primitives apply when local-first software CONTROLS PHYSICAL ACTUATORS. Bug consequences move from data loss / disclosure to property damage / injury / death - qualitative jump from information-systems local-first.
 
 | # | Primitive | Suggested chapter | Effort |
 |---|---|---|---|
@@ -66,7 +66,7 @@ These primitives apply when local-first software CONTROLS PHYSICAL ACTUATORS. Bu
 
 ---
 
-## Volume 3 — Multi-stakeholder economic systems (potential new book)
+## Volume 3 - Multi-stakeholder economic systems (potential new book)
 
 These primitives apply when MULTIPLE INDEPENDENT PARTIES (with potentially divergent incentives) share a system. Trust, governance, ownership, and legal-compliance dimensions become first-class architectural concerns.
 
@@ -85,11 +85,11 @@ These primitives apply when MULTIPLE INDEPENDENT PARTIES (with potentially diver
 | 35 | Legitimate-but-non-owner access | Ch11 of V3 | M |
 | 36 | Redaction primitives (selective disclosure) | Ch12 of V3 | L |
 
-**Volume 3 total: 12 primitives.** Plausible 12-15 chapter book covering DePIN, smart meters, voting systems, governance, ownership transfer, redaction, compliance. ~80-100k words. **Effort: XL.** This is likely the highest-leverage future volume — covers the most pressing real-world architectural patterns the current book doesn't address.
+**Volume 3 total: 12 primitives.** Plausible 12-15 chapter book covering DePIN, smart meters, voting systems, governance, ownership transfer, redaction, compliance. ~80-100k words. **Effort: XL.** This is likely the highest-leverage future volume - covers the most pressing real-world architectural patterns the current book doesn't address.
 
 ---
 
-## Volume 4 — Extreme environment systems (potential new book)
+## Volume 4 - Extreme environment systems (potential new book)
 
 These primitives apply when systems operate under extreme constraints (planet-scale latency, extreme dynamics, hostile-physical environments). Specialized but architecturally distinct.
 
@@ -105,11 +105,11 @@ These primitives apply when systems operate under extreme constraints (planet-sc
 
 ---
 
-## Volume 5 — Long-now systems (potential new book; splits 5A + 5B)
+## Volume 5 - Long-now systems (potential new book; splits 5A + 5B)
 
 The 10,000-year timespan problem. Splits cleanly into TWO sub-clusters that work together but address orthogonal failure modes.
 
-### Volume 5A — Technical substrate (data + custody + semantics survive)
+### Volume 5A - Technical substrate (data + custody + semantics survive)
 
 | # | Primitive | Suggested chapter | Effort |
 |---|---|---|---|
@@ -117,7 +117,7 @@ The 10,000-year timespan problem. Splits cleanly into TWO sub-clusters that work
 | 38 | Multi-generational custody and governance | Ch2 of V5 | L |
 | 39 | Deep-time semantics | Ch3 of V5 | L |
 
-### Volume 5B — Governance and cognition (decisions consider the long horizon)
+### Volume 5B - Governance and cognition (decisions consider the long horizon)
 
 | # | Primitive | Suggested chapter | Effort |
 |---|---|---|---|
@@ -125,7 +125,7 @@ The 10,000-year timespan problem. Splits cleanly into TWO sub-clusters that work
 | 41 | Mythic-depth artifacts and narrative continuity | Ch5 of V5 | M-L |
 | 42 | Optionality preservation across generations | Ch6 of V5 | M-L |
 
-**Volume 5 total: 6 primitives across 2 sub-clusters.** Plausible 8-10 chapter book at the intersection of architecture, governance theory, and Long Now Foundation framing. ~60-80k words. **Effort: XL.** Highly speculative / aspirational — would be more philosophy + architecture than implementation guide.
+**Volume 5 total: 6 primitives across 2 sub-clusters.** Plausible 8-10 chapter book at the intersection of architecture, governance theory, and Long Now Foundation framing. ~60-80k words. **Effort: XL.** Highly speculative / aspirational - would be more philosophy + architecture than implementation guide.
 
 ---
 
@@ -133,20 +133,20 @@ The 10,000-year timespan problem. Splits cleanly into TWO sub-clusters that work
 
 Several primitives apply across multiple domains that warrant their own chapter-length treatment OR appendix coverage:
 
-- **Civic-governance** — applies to #20, #31, #32, #33, #34, #35, #36, #38, #40
-- **Medical-systems** — applies to #31, #34, #36
-- **Estate-planning** — applies to #32, #38
-- **Financial-systems** — applies to #21, #22, #34
-- **Journalist-source-protection** — applies to #25, #33, #36
-- **Dissident-protection** — applies to #25, #33, #36, #38
-- **Research-ethics** — applies to #36, #41
-- **Civic-archives** — applies to #37, #38, #39, #40
-- **Cultural-heritage** — applies to #38, #39, #41
-- **Scientific-data** — applies to #37, #38, #39
-- **Family-genealogy** — applies to #37, #38
-- **Indigenous-knowledge-preservation** — applies to #38, #39, #41
-- **Climate-policy** — applies to #40, #42
-- **Sovereign-finance** — applies to #40, #42
+- **Civic-governance** - applies to #20, #31, #32, #33, #34, #35, #36, #38, #40
+- **Medical-systems** - applies to #31, #34, #36
+- **Estate-planning** - applies to #32, #38
+- **Financial-systems** - applies to #21, #22, #34
+- **Journalist-source-protection** - applies to #25, #33, #36
+- **Dissident-protection** - applies to #25, #33, #36, #38
+- **Research-ethics** - applies to #36, #41
+- **Civic-archives** - applies to #37, #38, #39, #40
+- **Cultural-heritage** - applies to #38, #39, #41
+- **Scientific-data** - applies to #37, #38, #39
+- **Family-genealogy** - applies to #37, #38
+- **Indigenous-knowledge-preservation** - applies to #38, #39, #41
+- **Climate-policy** - applies to #40, #42
+- **Sovereign-finance** - applies to #40, #42
 
 A future book or appendix series could organize content by application domain rather than by primitive, providing depth-first coverage of each domain's specific architectural needs.
 
@@ -171,16 +171,16 @@ If all roadmap items were fully written:
 Based on real-world deployment scenarios captured in `design-decisions.md` §4:
 
 **Highest-priority Volume 1 extensions** (close gaps in existing scope):
-1. **#48 Key-loss recovery** — most common P7 failure mode in real deployments; affects every consumer scenario
-2. **#43 Performance contracts** — most common reason "local-first feels slow" critique lands
-3. **#45 Collaborator revocation** — most common P4+P7 gap when departing-employee / divorce scenarios surface
-4. **#11 Fleet management** — required for any organization deploying Sunfish at scale
+1. **#48 Key-loss recovery** - most common P7 failure mode in real deployments; affects every consumer scenario
+2. **#43 Performance contracts** - most common reason "local-first feels slow" critique lands
+3. **#45 Collaborator revocation** - most common P4+P7 gap when departing-employee / divorce scenarios surface
+4. **#11 Fleet management** - required for any organization deploying Sunfish at scale
 
 **Highest-priority new volume to write**:
-- **Volume 3 (multi-stakeholder economic)** — covers the most pressing real-world architectural patterns (DePIN, smart meters, voting, governance, ownership transfer, redaction, compliance). 12 primitives, broadest applicability.
+- **Volume 3 (multi-stakeholder economic)** - covers the most pressing real-world architectural patterns (DePIN, smart meters, voting, governance, ownership transfer, redaction, compliance). 12 primitives, broadest applicability.
 
 **Aspirational / lowest urgency**:
-- **Volume 5 (long-now systems)** — important but speculative; existing Ch16 + epilogue + Appendix C cover the philosophy adequately for current audience. Volume 5 would be a separate intellectual project rather than an immediate practitioner need.
+- **Volume 5 (long-now systems)** - important but speculative; existing Ch16 + epilogue + Appendix C cover the philosophy adequately for current audience. Volume 5 would be a separate intellectual project rather than an immediate practitioner need.
 
 ---
 

@@ -27,7 +27,7 @@ concepts:
   - compliance
   - citation
   - build
-  notes: Architectural relevance is indirect — supports the credibility of compliance claims that the
+  notes: Architectural relevance is indirect - supports the credibility of compliance claims that the
     reference implementation must back up (see Appendix F and Ch15/Ch19). All other appendix content (in-text
     bracket format, reference-list templates) is editorial and not extracted.
   failed-conditions:

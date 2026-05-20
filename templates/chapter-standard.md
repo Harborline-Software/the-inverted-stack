@@ -1,4 +1,4 @@
-# Chapter N — Title
+# Chapter N - Title
 
 <!-- Target: ~X,000 words -->
 <!-- Source: vNN §X, vNN §Y -->
@@ -6,7 +6,7 @@
 
 ---
 
-*Opening hook — one or two sentences that make the reader care before you name the problem.*
+*Opening hook - one or two sentences that make the reader care before you name the problem.*
 
 ---
 
@@ -16,7 +16,7 @@
 
 ## Section Title
 
-*[Second section. Each section should advance the argument — not just add more of the same.]*
+*[Second section. Each section should advance the argument - not just add more of the same.]*
 
 ## Section Title
 
@@ -24,7 +24,7 @@
 
 ---
 
-*Closing paragraph — land the central claim. What does the reader now know that they didn't before? No summary, no "in this chapter we covered". Just the takeaway.*
+*Closing paragraph - land the central claim. What does the reader now know that they didn't before? No summary, no "in this chapter we covered". Just the takeaway.*
 
 ---
 

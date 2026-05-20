@@ -12,12 +12,12 @@
 
 ### What we're building
 
-**The Sunfish Business Suite** — an integrated local-first SMB (small/medium business) operations suite covering four interlocking modules:
+**The Sunfish Business Suite** - an integrated local-first SMB (small/medium business) operations suite covering four interlocking modules:
 
-- **Accounts** — double-entry accounting (chart of accounts, journal entries, bank reconciliation, P&L + balance sheet + cash flow, multi-currency, tax handling, invoicing)
-- **Vendors** — vendor master, AP workflow (PO → receipt → bill → payment), vendor catalog, 1099/W-9 reporting
-- **Inventory** — item master, multi-location stock, stock movements, cost methods (FIFO/LIFO/avg), serial/lot/batch tracking
-- **Projects** — project hierarchy, time tracking, resource allocation, kanban + gantt + list views, file attachments, project-cost rollup to accounts
+- **Accounts** - double-entry accounting (chart of accounts, journal entries, bank reconciliation, P&L + balance sheet + cash flow, multi-currency, tax handling, invoicing)
+- **Vendors** - vendor master, AP workflow (PO → receipt → bill → payment), vendor catalog, 1099/W-9 reporting
+- **Inventory** - item master, multi-location stock, stock movements, cost methods (FIFO/LIFO/avg), serial/lot/batch tracking
+- **Projects** - project hierarchy, time tracking, resource allocation, kanban + gantt + list views, file attachments, project-cost rollup to accounts
 
 ### What makes this different from existing OSS
 
@@ -32,20 +32,20 @@
 
 **Sunfish Business Suite differentiators:**
 
-1. **Integrated SMB suite** — accounts + vendors + inventory + projects in one app
-2. **Local-first by design** — owner controls data; no vendor lock-in
-3. **Multi-device collab without forcing cloud** — LAN sync between Anchor instances
-4. **Optional cloud bridge for off-site access** — Bridge for mobile / remote workers / off-site backup
-5. **Open formats / no lock-in** — plain-file export per module (CSV / JSON / Markdown / OFX)
-6. **Privacy-first** — financial + customer data stays on user-controlled infrastructure
-7. **Sanctions-resilient** — works in jurisdictions where US/EU SaaS is unavailable (per book Ch01 vendor-disappearance failure mode + Ch08 sanctions-grade availability)
+1. **Integrated SMB suite** - accounts + vendors + inventory + projects in one app
+2. **Local-first by design** - owner controls data; no vendor lock-in
+3. **Multi-device collab without forcing cloud** - LAN sync between Anchor instances
+4. **Optional cloud bridge for off-site access** - Bridge for mobile / remote workers / off-site backup
+5. **Open formats / no lock-in** - plain-file export per module (CSV / JSON / Markdown / OFX)
+6. **Privacy-first** - financial + customer data stays on user-controlled infrastructure
+7. **Sanctions-resilient** - works in jurisdictions where US/EU SaaS is unavailable (per book Ch01 vendor-disappearance failure mode + Ch08 sanctions-grade availability)
 
 ### Target customer profile
 
 - **Size**: 1-50 employees
 - **Industries**: services (consulting, agencies, design, dev shops), retail (single + multi-location), trades (construction, contractors), professional services (law, accounting, healthcare), light manufacturing
 - **Pain point**: tired of vendor lock-in, subscription creep, data residency concerns, "what happens to our books if QuickBooks deletes our account?"
-- **Tech sophistication**: low to medium — owner is not a developer; needs UI as good as cloud SaaS competitors
+- **Tech sophistication**: low to medium - owner is not a developer; needs UI as good as cloud SaaS competitors
 - **Network reality**: usually has internet but not always; needs to keep working during outages; some have intermittent / metered connectivity
 
 ### MVP success criteria
@@ -63,7 +63,7 @@ The MVP is shippable when:
 
 ## §2. OSS lessons synthesis
 
-### Actual Budget — local-first sync architecture validated
+### Actual Budget - local-first sync architecture validated
 
 **What they prove:** The Anchor + Bridge architecture (client + optional sync server) works at production scale for personal finance. CRDTs for accounting data are mature. Open-source sync server with self-hostable option is viable.
 
@@ -79,9 +79,9 @@ The MVP is shippable when:
 - Multi-tenant Bridge (vs. one-user-many-devices only)
 - Per-resource ACL within tenant (vs. owner-only)
 
-**Repo:** [github.com/actualbudget/actual-server](https://github.com/actualbudget/actual-server) — read for sync-server reference implementation patterns.
+**Repo:** [github.com/actualbudget/actual-server](https://github.com/actualbudget/actual-server) - read for sync-server reference implementation patterns.
 
-### Frappe Books — desktop accounting feature surface
+### Frappe Books - desktop accounting feature surface
 
 **What they prove:** Electron + SQLite desktop accounting works for SMB. Double-entry + invoicing + inventory + POS is the right feature surface for the segment. Multi-currency + tax handling is solvable.
 
@@ -100,9 +100,9 @@ The MVP is shippable when:
 - Plain-file export (Frappe Books is SQLite-only)
 - Plugin architecture (each module as plugin per book Ch11 NODE-* concepts)
 
-**Repo:** [github.com/frappe/books](https://github.com/frappe/books) — read for SMB accounting feature surface + UI patterns.
+**Repo:** [github.com/frappe/books](https://github.com/frappe/books) - read for SMB accounting feature surface + UI patterns.
 
-### GnuCash — mature double-entry semantic foundation
+### GnuCash - mature double-entry semantic foundation
 
 **What they prove:** Double-entry accounting model has been stable for 25+ years. The 5-account-type taxonomy (asset, liability, equity, income, expense) is durable. Reconciliation workflow patterns are well-understood. Account hierarchy is the right organizing concept.
 
@@ -120,14 +120,14 @@ The MVP is shippable when:
 - Plain-text export beyond GnuCash XML (CSV + Markdown + Beancount-compatible)
 - Web-mobile companion (GnuCash desktop-only)
 
-**Repo:** [github.com/Gnucash/gnucash](https://github.com/Gnucash/gnucash) — read for data model + transaction semantics.
+**Repo:** [github.com/Gnucash/gnucash](https://github.com/Gnucash/gnucash) - read for data model + transaction semantics.
 
-### Beancount / Fava / Plain Text Accounting — long-now archival format
+### Beancount / Fava / Plain Text Accounting - long-now archival format
 
 **What they prove:** Plain-text accounting in deterministic format outlives any specific software. Fava's web interface proves you can have rich reports against plain-text source. Plugin architecture allows extension without forking.
 
 **What we adopt:**
-- Beancount-compatible plain-text export (P5 long-now archival format — matches book Ch16 DUR-25 plain-file export)
+- Beancount-compatible plain-text export (P5 long-now archival format - matches book Ch16 DUR-25 plain-file export)
 - Account hierarchy with `:` separators (Beancount convention: `Assets:Bank:Checking`)
 - Metadata on transactions (tags, links, document attachments)
 - Plugin architecture for custom rules / imports / reports
@@ -137,52 +137,52 @@ The MVP is shippable when:
 - Multi-device sync (Beancount files in Git is the current pattern; CRDTs are better)
 - SMB feature surface (vendors / inventory / projects beyond accounting alone)
 
-**Repo:** [github.com/beancount/beancount](https://github.com/beancount/beancount) — read for plain-text format spec; use as P5 export format.
+**Repo:** [github.com/beancount/beancount](https://github.com/beancount/beancount) - read for plain-text format spec; use as P5 export format.
 
 ### Other OSS to mine per module
 
 #### Project / tasks / Gantt
 
-- **Plane** ([github.com/makeplane/plane](https://github.com/makeplane/plane), AGPL-3.0) — modern Jira/Linear/ClickUp alternative; Gateway + Pilot microservices architecture; native MCP server + agent framework + @mention support; cycles, modules, work items, dashboards, estimates, REST API + webhooks; Docker-deployable in <10 min with 2 CPU + 4GB RAM. **Most relevant for Projects module**: modern UI patterns + MCP integration vector. **Note:** Plane is server-architected (not local-first); we adopt UI patterns + MCP server idea, not the architecture.
-- **OpenProject** ([github.com/opf/openproject](https://github.com/opf/openproject)) — mature project mgmt feature surface; Gantt + Kanban + meetings + work-breakdown
-- **Taiga** ([github.com/taigaio/taiga-back](https://github.com/taigaio/taiga-back)) — agile project mgmt; story-driven; well-designed sprint flow
-- **Redmine** ([github.com/redmine/redmine](https://github.com/redmine/redmine)) — issue tracking + project mgmt; Ruby on Rails; very mature plugin ecosystem
-- **Wekan** ([github.com/wekan/wekan](https://github.com/wekan/wekan)) — open-source kanban; Trello-style UX
+- **Plane** ([github.com/makeplane/plane](https://github.com/makeplane/plane), AGPL-3.0) - modern Jira/Linear/ClickUp alternative; Gateway + Pilot microservices architecture; native MCP server + agent framework + @mention support; cycles, modules, work items, dashboards, estimates, REST API + webhooks; Docker-deployable in <10 min with 2 CPU + 4GB RAM. **Most relevant for Projects module**: modern UI patterns + MCP integration vector. **Note:** Plane is server-architected (not local-first); we adopt UI patterns + MCP server idea, not the architecture.
+- **OpenProject** ([github.com/opf/openproject](https://github.com/opf/openproject)) - mature project mgmt feature surface; Gantt + Kanban + meetings + work-breakdown
+- **Taiga** ([github.com/taigaio/taiga-back](https://github.com/taigaio/taiga-back)) - agile project mgmt; story-driven; well-designed sprint flow
+- **Redmine** ([github.com/redmine/redmine](https://github.com/redmine/redmine)) - issue tracking + project mgmt; Ruby on Rails; very mature plugin ecosystem
+- **Wekan** ([github.com/wekan/wekan](https://github.com/wekan/wekan)) - open-source kanban; Trello-style UX
 
 #### Inventory / parts
 
-- **InvenTree** ([github.com/inventree/InvenTree](https://github.com/inventree/InvenTree)) — Python/Django; **strong parts management** with hierarchical categorization; supplier-linked parts; **Bill of Materials (BOM)** with intelligent management; **Build management** (track builds consuming stock to make new parts — this is light manufacturing); REST API + Python binding library; plugin system. Particularly strong for hardware / electronics / light manufacturing SMBs. **Most relevant for Inventory module**: BOM + build mgmt patterns (post-MVP but architecture must not preclude); parts categorization + supplier-linked patterns.
-- **ERPNext** ([github.com/frappe/erpnext](https://github.com/frappe/erpnext)) — full Frappe-stack ERP; modular; inventory + accounting + manufacturing tightly integrated
-- **Odoo Inventory** (part of Odoo Community, see below) — barcode scanning, batch tracking, real-time valuation
-- **Snipe-IT** ([github.com/snipe/snipe-it](https://github.com/snipe/snipe-it)) — IT asset management; checkout/checkin model; asset depreciation tracking. **Most relevant for asset-heavy SMBs** that need to track equipment.
+- **InvenTree** ([github.com/inventree/InvenTree](https://github.com/inventree/InvenTree)) - Python/Django; **strong parts management** with hierarchical categorization; supplier-linked parts; **Bill of Materials (BOM)** with intelligent management; **Build management** (track builds consuming stock to make new parts - this is light manufacturing); REST API + Python binding library; plugin system. Particularly strong for hardware / electronics / light manufacturing SMBs. **Most relevant for Inventory module**: BOM + build mgmt patterns (post-MVP but architecture must not preclude); parts categorization + supplier-linked patterns.
+- **ERPNext** ([github.com/frappe/erpnext](https://github.com/frappe/erpnext)) - full Frappe-stack ERP; modular; inventory + accounting + manufacturing tightly integrated
+- **Odoo Inventory** (part of Odoo Community, see below) - barcode scanning, batch tracking, real-time valuation
+- **Snipe-IT** ([github.com/snipe/snipe-it](https://github.com/snipe/snipe-it)) - IT asset management; checkout/checkin model; asset depreciation tracking. **Most relevant for asset-heavy SMBs** that need to track equipment.
 
 #### Invoicing / billing
 
-- **Invoice Ninja** ([github.com/invoiceninja/invoiceninja](https://github.com/invoiceninja/invoiceninja), Laravel + Flutter + React) — invoicing, billing, payment management; recurring billing; quote/proposal management; expense tracking; **built-in time tracking** (overlap with project mgmt — interesting integration model); source-available license (not pure OSS — note for licensing strategy). **Most relevant for Accounts module**: invoice template + recurring billing patterns.
-- **Akaunting** ([github.com/akaunting/akaunting](https://github.com/akaunting/akaunting), Laravel + Vue) — online accounting for small business; **multi-company support from one admin panel** (relevant for SMBs with multiple legal entities); multi-currency + tax rules + client portals; **app marketplace concept** (similar to Sunfish plugin architecture per book Ch11). Limitation: free version is single-user. **Most relevant for Accounts module**: multi-company architecture + plugin marketplace patterns.
+- **Invoice Ninja** ([github.com/invoiceninja/invoiceninja](https://github.com/invoiceninja/invoiceninja), Laravel + Flutter + React) - invoicing, billing, payment management; recurring billing; quote/proposal management; expense tracking; **built-in time tracking** (overlap with project mgmt - interesting integration model); source-available license (not pure OSS - note for licensing strategy). **Most relevant for Accounts module**: invoice template + recurring billing patterns.
+- **Akaunting** ([github.com/akaunting/akaunting](https://github.com/akaunting/akaunting), Laravel + Vue) - online accounting for small business; **multi-company support from one admin panel** (relevant for SMBs with multiple legal entities); multi-currency + tax rules + client portals; **app marketplace concept** (similar to Sunfish plugin architecture per book Ch11). Limitation: free version is single-user. **Most relevant for Accounts module**: multi-company architecture + plugin marketplace patterns.
 
 #### Full ERP (all domains)
 
-- **ERPNext** — see above; comprehensive Frappe-based ERP
-- **Odoo Community** ([odoo.com](https://www.odoo.com/)) — Python + PostgreSQL; **modular ERP architecture is the selling point**; CRM + Sales + Accounting + Inventory + Project + Manufacturing modules; OCA (Odoo Community Association) extends with additional modules; no per-user/per-app fee. **Most relevant for the overall MVP architecture**: validates modular ERP pattern that maps directly to Sunfish's kernel-plugin architecture (book Ch11). Specifically: Odoo Community accounting + inventory + project + CRM = exactly the MVP module set.
-- **EspoCRM** ([github.com/espocrm/espocrm](https://github.com/espocrm/espocrm)) — vendor/customer relationship mgmt patterns; lighter-weight than Salesforce-class
-- **Tryton** ([github.com/tryton/tryton](https://github.com/tryton/tryton)) — modular business application platform; module separation patterns
+- **ERPNext** - see above; comprehensive Frappe-based ERP
+- **Odoo Community** ([odoo.com](https://www.odoo.com/)) - Python + PostgreSQL; **modular ERP architecture is the selling point**; CRM + Sales + Accounting + Inventory + Project + Manufacturing modules; OCA (Odoo Community Association) extends with additional modules; no per-user/per-app fee. **Most relevant for the overall MVP architecture**: validates modular ERP pattern that maps directly to Sunfish's kernel-plugin architecture (book Ch11). Specifically: Odoo Community accounting + inventory + project + CRM = exactly the MVP module set.
+- **EspoCRM** ([github.com/espocrm/espocrm](https://github.com/espocrm/espocrm)) - vendor/customer relationship mgmt patterns; lighter-weight than Salesforce-class
+- **Tryton** ([github.com/tryton/tryton](https://github.com/tryton/tryton)) - modular business application platform; module separation patterns
 
 ### Local-first project landscape (production references for the architecture, not the features)
 
-The OSS surveyed above (§2 above) shows the FEATURE SURFACE for SMB business apps. This section surveys the LOCAL-FIRST PROJECT LANDSCAPE — what proves the architectural patterns we're building on. Less about "what features do we need" and more about "who has built local-first at production scale and what did they learn."
+The OSS surveyed above (§2 above) shows the FEATURE SURFACE for SMB business apps. This section surveys the LOCAL-FIRST PROJECT LANDSCAPE - what proves the architectural patterns we're building on. Less about "what features do we need" and more about "who has built local-first at production scale and what did they learn."
 
 #### Production local-first apps (validate the user-facing patterns)
 
 | Project | Domain | Sync model | Lesson for MVP |
 |---|---|---|---|
-| **Logseq** ([github.com/logseq/logseq](https://github.com/logseq/logseq), AGPL) | Knowledge graph / note-taking | Syncthing OR Git OR self-hosted | **Sync via existing tools is viable** — users can BYO sync (Syncthing, Git remote, NAS); doesn't have to mean "use our cloud." Outliner-first UX style. Markdown files on disk = perfect P5 long-now |
-| **Obsidian** ([obsidian.md](https://obsidian.md/), proprietary client / open file format) | Knowledge graph / note-taking | Optional paid sync OR free P2P (Syncthing, iCloud Drive, etc.) | **Plugin ecosystem is the moat** — 1000+ community plugins keep users locked-in to Obsidian *because* of community value, not because of vendor lock-in. Plain markdown files mean users can leave anytime. Sunfish should plan for plugins from day one (book Ch11 already does) |
-| **Anytype** ([anytype.io](https://anytype.io/), AGPL) | Knowledge management with structured objects | True P2P + optional self-hosted sync nodes | **P2P-first is feasible at scale** — proves CRDT-based multi-device sync without central server is production-ready. Object-based model (vs. file-based) for richer relations |
-| **Joplin** ([joplinapp.org](https://joplinapp.org/), MIT) | Note-taking with sync | Dropbox / OneDrive / Joplin Cloud / WebDAV / S3 | **Sync via off-the-shelf services** — uses general-purpose cloud storage as transport instead of building bespoke relay. Optional E2EE on top. Useful pattern for users who already pay for Dropbox |
-| **Standard Notes** ([standardnotes.com](https://standardnotes.com/), AGPL) | Encrypted notes | E2EE with sync server (self-hostable) | **Zero-knowledge sync at scale works** — proves the Bridge pattern (relay holds only ciphertext, can never decrypt) is viable for production users. Validates Sunfish's relay model |
-| **Reflect** ([reflect.app](https://reflect.app/), proprietary) | Notes with backlinks | E2EE iCloud Drive sync | **Apple-ecosystem local-first** — uses iCloud as the sync layer; data lives on user devices. Useful pattern for Anchor's macOS/iOS variant |
-| **Heynote** ([heynote.com](https://heynote.com/), MIT) | Scratchpad / quick notes | Local file with optional cloud sync | **Minimal local-first works** — proves you don't need full CRDT machinery for many use cases; sometimes just "save to a local file with smart conflict resolution" is enough |
+| **Logseq** ([github.com/logseq/logseq](https://github.com/logseq/logseq), AGPL) | Knowledge graph / note-taking | Syncthing OR Git OR self-hosted | **Sync via existing tools is viable** - users can BYO sync (Syncthing, Git remote, NAS); doesn't have to mean "use our cloud." Outliner-first UX style. Markdown files on disk = perfect P5 long-now |
+| **Obsidian** ([obsidian.md](https://obsidian.md/), proprietary client / open file format) | Knowledge graph / note-taking | Optional paid sync OR free P2P (Syncthing, iCloud Drive, etc.) | **Plugin ecosystem is the moat** - 1000+ community plugins keep users locked-in to Obsidian *because* of community value, not because of vendor lock-in. Plain markdown files mean users can leave anytime. Sunfish should plan for plugins from day one (book Ch11 already does) |
+| **Anytype** ([anytype.io](https://anytype.io/), AGPL) | Knowledge management with structured objects | True P2P + optional self-hosted sync nodes | **P2P-first is feasible at scale** - proves CRDT-based multi-device sync without central server is production-ready. Object-based model (vs. file-based) for richer relations |
+| **Joplin** ([joplinapp.org](https://joplinapp.org/), MIT) | Note-taking with sync | Dropbox / OneDrive / Joplin Cloud / WebDAV / S3 | **Sync via off-the-shelf services** - uses general-purpose cloud storage as transport instead of building bespoke relay. Optional E2EE on top. Useful pattern for users who already pay for Dropbox |
+| **Standard Notes** ([standardnotes.com](https://standardnotes.com/), AGPL) | Encrypted notes | E2EE with sync server (self-hostable) | **Zero-knowledge sync at scale works** - proves the Bridge pattern (relay holds only ciphertext, can never decrypt) is viable for production users. Validates Sunfish's relay model |
+| **Reflect** ([reflect.app](https://reflect.app/), proprietary) | Notes with backlinks | E2EE iCloud Drive sync | **Apple-ecosystem local-first** - uses iCloud as the sync layer; data lives on user devices. Useful pattern for Anchor's macOS/iOS variant |
+| **Heynote** ([heynote.com](https://heynote.com/), MIT) | Scratchpad / quick notes | Local file with optional cloud sync | **Minimal local-first works** - proves you don't need full CRDT machinery for many use cases; sometimes just "save to a local file with smart conflict resolution" is enough |
 | **Actual Budget** (already covered in §2) | Personal finance | Optional self-hosted sync server | Validates the Anchor + Bridge architecture for financial data at production scale |
 
 **Key lesson cluster:** local-first apps that have achieved real adoption (Logseq, Obsidian, Anytype, Joplin) all share three patterns: (1) plain-file or open-format storage so users CAN leave; (2) sync as a feature, not the value proposition (the value is the app, not the cloud); (3) plugin/extension ecosystem to lock users in via community value rather than vendor capture. Sunfish should adopt all three.
@@ -194,18 +194,18 @@ These are the building blocks Sunfish would compete with OR build on. Important 
 | Engine | License | Architecture pattern | Lesson for MVP |
 |---|---|---|---|
 | **Replicache** ([replicache.dev](https://replicache.dev/), source-available) | Source-available + commercial | Server-authority sync framework; client-side datastore | Mature production-grade sync framework; pattern for client-side mutator + server-side validation. Authority pattern is server-side (vs. CRDT decentralized) |
-| **PowerSync** ([powersync.com](https://www.powersync.com/), Apache 2.0 client / commercial cloud) | Apache 2.0 client / commercial server | Server-authority; SQLite client + Postgres backend; bidirectional sync via persistent upload queue | **Strong fit for "I have a Postgres backend, want to add local-first to my app"** — relevant for SMBs migrating from cloud-only to local-first |
-| **ElectricSQL** ([electric-sql.com](https://electric-sql.com/), Apache 2.0) | Apache 2.0 | "Durable Sync" layer for Postgres; replication streams push to clients; strong schema consistency | Different sync philosophy than Sunfish's CRDT approach — Postgres-anchored. Useful comparison for "why CRDTs over replication-based sync" decision rationale |
+| **PowerSync** ([powersync.com](https://www.powersync.com/), Apache 2.0 client / commercial cloud) | Apache 2.0 client / commercial server | Server-authority; SQLite client + Postgres backend; bidirectional sync via persistent upload queue | **Strong fit for "I have a Postgres backend, want to add local-first to my app"** - relevant for SMBs migrating from cloud-only to local-first |
+| **ElectricSQL** ([electric-sql.com](https://electric-sql.com/), Apache 2.0) | Apache 2.0 | "Durable Sync" layer for Postgres; replication streams push to clients; strong schema consistency | Different sync philosophy than Sunfish's CRDT approach - Postgres-anchored. Useful comparison for "why CRDTs over replication-based sync" decision rationale |
 | **InstantDB** ([instantdb.com](https://instantdb.com/), MIT client / commercial cloud) | MIT client / commercial cloud | Server-authority; "spiritual successor to Firebase for relational era"; offline + permissions out of box | Validates relational + real-time + offline triad. Sunfish's Bridge could expose similar query primitives over the local CRDT data |
 | **Triplit** ([triplit.dev](https://triplit.dev/), now community OSS) | OSS (was commercial; folded Jan 2026) | Server-authority; full-stack local-first DB | **Cautionary tale**: commercial local-first sync engine couldn't sustain as company; folded to community OSS in early 2026. **Implication**: Sunfish's open-source-from-day-one position is more durable than commercial-from-day-one. The Bridge's value-as-managed-service rather than value-as-product is a defensible business model |
 | **Jazz** ([jazz.tools](https://jazz.tools/), MIT) | MIT | CRDT-based with collaborative state primitives | Newer entrant; CRDT-decentralized; useful comparison for "what does a modern Yjs alternative look like" |
 | **Automerge** ([automerge.org](https://automerge.org/), MIT) | MIT | Decentralized CRDT engine | One of the canonical CRDT engines; rust-based with JS bindings; competing pattern to Yjs/YDotNet |
-| **Yjs** ([github.com/yjs/yjs](https://github.com/yjs/yjs), MIT) | MIT | Decentralized CRDT engine | Most-deployed CRDT engine in production (powers Notion AI, Linear, etc.); Y-Sweet by Jamsocket adds managed sync. **YDotNet is .NET port — Sunfish's current choice per book Ch12** |
+| **Yjs** ([github.com/yjs/yjs](https://github.com/yjs/yjs), MIT) | MIT | Decentralized CRDT engine | Most-deployed CRDT engine in production (powers Notion AI, Linear, etc.); Y-Sweet by Jamsocket adds managed sync. **YDotNet is .NET port - Sunfish's current choice per book Ch12** |
 | **Loro** ([loro.dev](https://loro.dev/), MIT) | MIT | Modern Rust CRDT engine | **Sunfish's stated future target** per book Ch12; faster than Yjs for large documents; pluggable into Sunfish's `ICrdtEngine` adapter |
 
-**Key lesson cluster:** the sync-engine landscape divides cleanly into **server-authority** (Replicache, Zero, PowerSync, ElectricSQL, InstantDB, Convex, Triplit, Firebase) and **decentralized** (Yjs, Automerge, Loro). Sunfish chose decentralized (CRDT-based) per book Ch12 because it cleanly satisfies P3 (network optional) and P7 (ownership) — server-authority engines fundamentally require the server to be reachable for write authorization. Sunfish's Bridge is server-authority FOR ROUTING (relay) but data ownership stays decentralized at the peer level. This is a meaningful architectural choice worth documenting.
+**Key lesson cluster:** the sync-engine landscape divides cleanly into **server-authority** (Replicache, Zero, PowerSync, ElectricSQL, InstantDB, Convex, Triplit, Firebase) and **decentralized** (Yjs, Automerge, Loro). Sunfish chose decentralized (CRDT-based) per book Ch12 because it cleanly satisfies P3 (network optional) and P7 (ownership) - server-authority engines fundamentally require the server to be reachable for write authorization. Sunfish's Bridge is server-authority FOR ROUTING (relay) but data ownership stays decentralized at the peer level. This is a meaningful architectural choice worth documenting.
 
-**Triplit-as-cautionary-tale** is important: a VC-backed local-first sync company with a strong team folded its commercial business in early 2026 and re-released as community OSS. The local-first space is full of similar attempts. Sunfish's positioning — open-source-from-day-one with Bridge-as-managed-service business model — is structurally more durable than competing as a closed-source local-first sync engine.
+**Triplit-as-cautionary-tale** is important: a VC-backed local-first sync company with a strong team folded its commercial business in early 2026 and re-released as community OSS. The local-first space is full of similar attempts. Sunfish's positioning - open-source-from-day-one with Bridge-as-managed-service business model - is structurally more durable than competing as a closed-source local-first sync engine.
 
 #### Local-first research projects (validate emerging patterns)
 
@@ -250,9 +250,9 @@ Not local-first by strict definition, but validate that "feels like local" + "wo
 
 Two patterns from the broader OSS landscape are worth surfacing because they suggest non-obvious architectural directions:
 
-**1. Plane's native MCP server** — Plane ships with a Model Context Protocol (MCP) server built in, allowing AI agents to interact with project management primitives natively (`@mention` agents in tasks, agent-driven task creation, full agent-run lifecycle tracking). This is the SAME MCP we use in Claude Code. **Implication for Sunfish**: each module (accounts / vendors / inventory / projects) should ship with a native MCP server exposing its primitives. This makes Sunfish AI-agent-friendly from day one — agents can query inventory, post journal entries, update project status — without bolting on AI features later. Local-first MCP is interesting because the AI agent runs against the user's local Anchor with the user's keys, not against a vendor's cloud.
+**1. Plane's native MCP server** - Plane ships with a Model Context Protocol (MCP) server built in, allowing AI agents to interact with project management primitives natively (`@mention` agents in tasks, agent-driven task creation, full agent-run lifecycle tracking). This is the SAME MCP we use in Claude Code. **Implication for Sunfish**: each module (accounts / vendors / inventory / projects) should ship with a native MCP server exposing its primitives. This makes Sunfish AI-agent-friendly from day one - agents can query inventory, post journal entries, update project status - without bolting on AI features later. Local-first MCP is interesting because the AI agent runs against the user's local Anchor with the user's keys, not against a vendor's cloud.
 
-**2. Odoo Community's modular architecture** — Odoo's modules are independently installable + upgradable + removable, with a published API contract between modules. This maps directly to Sunfish's kernel + plugin architecture (book Ch11 NODE-* concepts). **Implication for Sunfish**: each MVP module (accounts / vendors / inventory / projects) ships as a separate Sunfish plugin, with the kernel orchestrating them. Users can install only the modules they need. Third parties can write additional modules using the same plugin contract. This is also how the OCA (Odoo Community Association) extends Odoo's surface — community-contributed modules outside the core team.
+**2. Odoo Community's modular architecture** - Odoo's modules are independently installable + upgradable + removable, with a published API contract between modules. This maps directly to Sunfish's kernel + plugin architecture (book Ch11 NODE-* concepts). **Implication for Sunfish**: each MVP module (accounts / vendors / inventory / projects) ships as a separate Sunfish plugin, with the kernel orchestrating them. Users can install only the modules they need. Third parties can write additional modules using the same plugin contract. This is also how the OCA (Odoo Community Association) extends Odoo's surface - community-contributed modules outside the core team.
 
 These two patterns together suggest a mature plugin-plus-MCP architecture where each plugin is independently AI-agent-accessible. This is a meaningful differentiator from cloud SaaS competitors who typically bolt MCP on at the API layer (and require their cloud to mediate).
 
@@ -260,16 +260,16 @@ These two patterns together suggest a mature plugin-plus-MCP architecture where 
 
 | Layer | Choice | Rationale | Alternative considered |
 |---|---|---|---|
-| **Anchor app shell** | .NET MAUI | Per book Ch12 reference (.NET ecosystem); cross-platform Win/Mac/Linux; integrates with Sunfish package layout | Tauri (Rust + web UI) — more web-native but doesn't match book's .NET orientation |
-| **Anchor local store** | SQLite + SQLCipher | Per book Ch15 encrypted-at-rest; matches Frappe Books, Actual Budget, GnuCash patterns; mature; battle-tested | LiteDB / RocksDB / DuckDB — less mature for application data |
+| **Anchor app shell** | .NET MAUI | Per book Ch12 reference (.NET ecosystem); cross-platform Win/Mac/Linux; integrates with Sunfish package layout | Tauri (Rust + web UI) - more web-native but doesn't match book's .NET orientation |
+| **Anchor local store** | SQLite + SQLCipher | Per book Ch15 encrypted-at-rest; matches Frappe Books, Actual Budget, GnuCash patterns; mature; battle-tested | LiteDB / RocksDB / DuckDB - less mature for application data |
 | **CRDT engine** | YDotNet (today) → Loro (target) | Per book Ch12 CRDT-10 engine adapter; existing in Sunfish reference | Automerge (different language); custom implementation (too risky) |
 | **Bridge service** | ASP.NET Core 9+ | Consistent with .NET ecosystem; battle-tested; native to Sunfish package layout | Node.js (mismatched stack); Go (ditto) |
 | **Bridge storage** | PostgreSQL + Redis | Standard for ASP.NET multi-tenant; well-understood scale-out patterns | SQLite-only (won't scale to multi-tenant); MongoDB (overkill) |
 | **Wire protocol** | Per Appendix A (CBOR over Noise_XX over UDS / TCP) | Already specified in book; reuse | gRPC (added complexity; Noise gives security primitives directly) |
-| **UI components** | Sunfish.UiBlocks | Per other concurrent session's work | Build per-app — wasteful |
-| **i18n / l10n** | Per other concurrent session's framework | Per concurrent session | Build per-module — wasteful |
-| **Plain-text export** | Beancount-compatible for accounts; CSV for inventory; Markdown for project docs; JSON for raw data | Per book Ch16 DUR-25 plain-file export + #37 long-horizon format | Custom XML — won't outlive software |
-| **MCP server per module** | Native MCP server in each plugin exposing module primitives | Per Plane's pattern; makes each module AI-agent-accessible without bolting on AI later; runs locally against user keys | Bolt-on AI integration at API layer — cedes control to vendor |
+| **UI components** | Sunfish.UiBlocks | Per other concurrent session's work | Build per-app - wasteful |
+| **i18n / l10n** | Per other concurrent session's framework | Per concurrent session | Build per-module - wasteful |
+| **Plain-text export** | Beancount-compatible for accounts; CSV for inventory; Markdown for project docs; JSON for raw data | Per book Ch16 DUR-25 plain-file export + #37 long-horizon format | Custom XML - won't outlive software |
+| **MCP server per module** | Native MCP server in each plugin exposing module primitives | Per Plane's pattern; makes each module AI-agent-accessible without bolting on AI later; runs locally against user keys | Bolt-on AI integration at API layer - cedes control to vendor |
 
 ### Architectural primitives applied
 
@@ -296,7 +296,7 @@ This MVP exercises virtually every primitive in the current book + most v1.1 ext
 
 ---
 
-## §4. Module 1 — Accounts
+## §4. Module 1 - Accounts
 
 ### Feature scope
 
@@ -322,13 +322,13 @@ Drawing from GnuCash (double-entry foundation) + Beancount (plain-text export fo
 - Bank balance vs. book balance reports
 
 **Reports**
-- P&L (Income Statement) — current period, prior period, YoY
-- Balance Sheet — current + comparative
-- Cash Flow Statement — direct + indirect methods
-- AR Aging (Customer Aging) — outstanding receivables by age bucket
-- AP Aging (Vendor Aging) — outstanding payables by age bucket
-- Trial Balance — all accounts current
-- General Ledger — full transaction history per account
+- P&L (Income Statement) - current period, prior period, YoY
+- Balance Sheet - current + comparative
+- Cash Flow Statement - direct + indirect methods
+- AR Aging (Customer Aging) - outstanding receivables by age bucket
+- AP Aging (Vendor Aging) - outstanding payables by age bucket
+- Trial Balance - all accounts current
+- General Ledger - full transaction history per account
 
 **Invoicing**
 - Sales invoices → AR
@@ -357,8 +357,8 @@ Drawing from GnuCash (double-entry foundation) + Beancount (plain-text export fo
 
 ### CRDT semantics per record type
 
-- **Account** (in chart): LWW-Map (last-write-wins for name/type/parent/etc.) — schema-stable
-- **Journal entry**: append-only log with Flease-protected period-close lease — once closed, entries within period are immutable
+- **Account** (in chart): LWW-Map (last-write-wins for name/type/parent/etc.) - schema-stable
+- **Journal entry**: append-only log with Flease-protected period-close lease - once closed, entries within period are immutable
 - **Customer / vendor master**: LWW-Map with delete-tombstones
 - **Item master** (shared with inventory): LWW-Map
 - **Tax rate table**: append-only with effective-date version
@@ -372,7 +372,7 @@ Drawing from GnuCash (double-entry foundation) + Beancount (plain-text export fo
 
 ---
 
-## §5. Module 2 — Vendors
+## §5. Module 2 - Vendors
 
 ### Feature scope
 
@@ -391,14 +391,14 @@ Drawing from Frappe Books (SMB AP workflow) + ERPNext (full P2P cycle) + EspoCRM
 - Three-way match: PO ↔ receipt ↔ vendor bill
 
 **Vendor bills (AP)**
-- Bill = (vendor-id, bill-number, date, due-date, line-items[] — link to PO line if applicable, total, status)
+- Bill = (vendor-id, bill-number, date, due-date, line-items[] - link to PO line if applicable, total, status)
 - Status lifecycle: draft → entered → approved → scheduled → paid
 - Payment scheduling (per due date + cash-flow optimization)
 - 1099 / W-9 data accumulation per vendor
 
 **Reports**
 - Vendor list with status + balance
-- AP Aging (also in accounts module — same data, different view)
+- AP Aging (also in accounts module - same data, different view)
 - PO outstanding (placed but not yet received)
 - 1099 prep report (US-specific)
 - Vendor performance scorecard
@@ -409,10 +409,10 @@ Drawing from Frappe Books (SMB AP workflow) + ERPNext (full P2P cycle) + EspoCRM
 |---|---|
 | **P1** | PO entry / approval / status change all <16ms locally |
 | **P2** | Buyer + receiver + AP clerk sync vendors + POs; mobile receiver records receipts on phone |
-| **P3** | Receiving in warehouse with no signal — receipt goes into local CRDT; syncs when signal returns |
+| **P3** | Receiving in warehouse with no signal - receipt goes into local CRDT; syncs when signal returns |
 | **P4** | Buyer creates PO; receiver records partial receipt; AP enters bill; all converge on PO #N record |
 | **P5** | Vendor master + PO history exportable as CSV + JSON |
-| **P6** | Vendor banking info (for ACH payments) classified `private` — encrypted at rest with separate KEK |
+| **P6** | Vendor banking info (for ACH payments) classified `private` - encrypted at rest with separate KEK |
 | **P7** | Owner can export entire vendor master + AP history; can revoke AP clerk's access; can crypto-shred former vendor's PII per data retention policy |
 
 ### CRDT semantics
@@ -430,7 +430,7 @@ Drawing from Frappe Books (SMB AP workflow) + ERPNext (full P2P cycle) + EspoCRM
 
 ---
 
-## §6. Module 3 — Inventory
+## §6. Module 3 - Inventory
 
 ### Feature scope
 
@@ -500,7 +500,7 @@ Drawing from InvenTree (parts categorization + supplier-linked + BOM patterns) +
 
 ---
 
-## §7. Module 4 — Projects
+## §7. Module 4 - Projects
 
 ### Feature scope
 
@@ -556,9 +556,9 @@ Drawing from Plane (modern UI + MCP server integration vector) + OpenProject (Ga
 | **P1** | Task drag-drop on kanban <16ms; gantt-view rendering <100ms; time-entry save <16ms |
 | **P2** | Project manager's laptop + team members' phones + tablet on-site all sync; per-data-class policy: PM sees full data; field crew sees their assigned tasks only |
 | **P3** | Field worker logs hours on phone with no signal; tasks update on-site without server roundtrip |
-| **P4** | Multiple team members concurrently edit task status / add comments / log time — CRDT converges |
+| **P4** | Multiple team members concurrently edit task status / add comments / log time - CRDT converges |
 | **P5** | Project plan + tasks exportable as Markdown; time entries as CSV; gantt as JSON |
-| **P6** | Client confidential project data classified per project; per-project ACL (#46) — not all employees see all projects |
+| **P6** | Client confidential project data classified per project; per-project ACL (#46) - not all employees see all projects |
 | **P7** | Owner can export entire project history; can revoke departed employee access; can crypto-shred completed-and-billed project data per data retention policy |
 
 ### CRDT semantics
@@ -582,17 +582,17 @@ Drawing from Plane (modern UI + MCP server integration vector) + OpenProject (Ga
 
 | Capability | Anchor (desktop full-node) | Bridge (relay + admin console) |
 |---|---|---|
-| **Local data store** | ✓ SQLCipher SQLite (full data) | Per-tenant SQLite shards (CIPHERTEXT only — relay can't decrypt) |
+| **Local data store** | ✓ SQLCipher SQLite (full data) | Per-tenant SQLite shards (CIPHERTEXT only - relay can't decrypt) |
 | **CRDT engine** | ✓ YDotNet (full operations) | Read-only CRDT for sync routing; cannot mutate without device key |
 | **Sync daemon** | ✓ Initiates + receives sync | ✓ Receives + relays; no local mutation |
-| **All four modules** (accounts/vendors/inventory/projects) | ✓ Full UI + features | None — Bridge has no business logic; only sync |
-| **Reports + analytics** | ✓ All reports compute locally | None — analytics only computable on Anchor with decryption keys |
-| **Plain-text export** | ✓ All formats | None — Bridge cannot decrypt |
+| **All four modules** (accounts/vendors/inventory/projects) | ✓ Full UI + features | None - Bridge has no business logic; only sync |
+| **Reports + analytics** | ✓ All reports compute locally | None - analytics only computable on Anchor with decryption keys |
+| **Plain-text export** | ✓ All formats | None - Bridge cannot decrypt |
 | **Tenant management UI** | None | ✓ Admin console for managing multiple tenants (one tenant = one SMB) |
 | **Per-tenant billing** | None | ✓ Bridge tracks usage per tenant; bills tenant for relay service |
 | **Audit log of relay activity** | ✓ Local audit log for owner | ✓ Tenant-visible audit log of relay-side operations (who connected, sync volume, no content) |
 | **Backup orchestration** | ✓ Local backup to user-chosen location | Optional: Bridge holds encrypted backup blobs (if tenant opts in) |
-| **Key recovery custodian** | None — Anchor IS the keyholder | Optional: Bridge can serve as custodian-of-last-resort with escrow protocol |
+| **Key recovery custodian** | None - Anchor IS the keyholder | Optional: Bridge can serve as custodian-of-last-resort with escrow protocol |
 | **MDM / fleet management** | Per-device | ✓ Per-tenant fleet view; rotate keys across N Anchor instances |
 
 ### Deployment patterns
@@ -624,7 +624,7 @@ Drawing from Plane (modern UI + MCP server integration vector) + OpenProject (Ga
 
 ## §9. Local-first compliance matrix
 
-Cross-cuts §4-§7 modules with §1 properties — this is the conformance scorecard target for the MVP:
+Cross-cuts §4-§7 modules with §1 properties - this is the conformance scorecard target for the MVP:
 
 | | Accounts | Vendors | Inventory | Projects |
 |---|---|---|---|---|
@@ -757,7 +757,7 @@ expected-outcome: 30-minute offline session; 200 transactions entered; reconcili
 
 ### Vendors / Inventory / Projects conformance tests
 
-(Similar structure — see template above. Subagent can generate per-module specifics during build.)
+(Similar structure - see template above. Subagent can generate per-module specifics during build.)
 
 ### Cross-module conformance tests
 
@@ -797,20 +797,20 @@ expected-outcome: All data round-trips; version-spec frozen at v1.0 still readab
 
 ## §13. Out of scope for MVP
 
-Explicit non-goals for the 12-month MVP — all flagged for post-1.0:
+Explicit non-goals for the 12-month MVP - all flagged for post-1.0:
 
-- **Mobile native apps** (iOS / Android) — read-only mobile-web-PWA against Bridge in 1.x; native in 2.0
-- **Manufacturing module** (BOM, work orders, MRP) — too complex for MVP; hooks for v2.0
-- **CRM module** (sales pipeline, opportunity tracking) — basic customer master in accounts module; full CRM in 2.0
-- **HR / Payroll** — high regulatory complexity; integrate with external payroll providers in 1.x
-- **Banking integration via Plaid / Yodlee** — manual OFX import in MVP; live connections in 1.x
-- **AI features** (auto-categorization, natural-language reports) — possibly in 1.x via Sunfish.AI plugin
-- **Multi-language UI** — handled by other concurrent session; MVP ships English-only initially
-- **Full WCAG 2.2 AAA** — handled by other concurrent session; MVP targets AA
-- **DePIN / cryptoeconomic features** — book Volume 3 territory; not in scope
-- **Long-now governance features** (#40-#42) — book Volume 5B territory; not in scope
-- **Cyber-physical / IoT features** — book Volume 2 territory; not in scope
-- **Spacecraft / DTN** — book Volume 4 territory; obviously not in scope
+- **Mobile native apps** (iOS / Android) - read-only mobile-web-PWA against Bridge in 1.x; native in 2.0
+- **Manufacturing module** (BOM, work orders, MRP) - too complex for MVP; hooks for v2.0
+- **CRM module** (sales pipeline, opportunity tracking) - basic customer master in accounts module; full CRM in 2.0
+- **HR / Payroll** - high regulatory complexity; integrate with external payroll providers in 1.x
+- **Banking integration via Plaid / Yodlee** - manual OFX import in MVP; live connections in 1.x
+- **AI features** (auto-categorization, natural-language reports) - possibly in 1.x via Sunfish.AI plugin
+- **Multi-language UI** - handled by other concurrent session; MVP ships English-only initially
+- **Full WCAG 2.2 AAA** - handled by other concurrent session; MVP targets AA
+- **DePIN / cryptoeconomic features** - book Volume 3 territory; not in scope
+- **Long-now governance features** (#40-#42) - book Volume 5B territory; not in scope
+- **Cyber-physical / IoT features** - book Volume 2 territory; not in scope
+- **Spacecraft / DTN** - book Volume 4 territory; obviously not in scope
 
 ---
 
@@ -822,7 +822,7 @@ Explicit non-goals for the 12-month MVP — all flagged for post-1.0:
 | **Multi-language** (i18n / l10n) | All MVP user-facing strings flow through i18n framework | Strings extracted via existing framework; MVP session adds keys; i18n session adds locale data |
 | **Disabled-user** (a11y / WCAG) | All MVP UI uses a11y-compliant components; keyboard nav + screen reader tested per module | Component session handles a11y at component level; MVP session uses components correctly |
 
-The MVP plan does NOT specify implementations for these dimensions — it integrates with whatever the concurrent sessions produce. When a coordination need arises (e.g., MVP needs a "currency-amount-input" component that doesn't exist), MVP session files an icm/00_intake/ ticket; component session decides whether to build, when, and how.
+The MVP plan does NOT specify implementations for these dimensions - it integrates with whatever the concurrent sessions produce. When a coordination need arises (e.g., MVP needs a "currency-amount-input" component that doesn't exist), MVP session files an icm/00_intake/ ticket; component session decides whether to build, when, and how.
 
 ---
 
@@ -840,24 +840,24 @@ Treat as canonical execution spec until 1.0 ships; thereafter the codebase becom
 
 ---
 
-## Appendix A — Quick reference: relevant book chapters
+## Appendix A - Quick reference: relevant book chapters
 
 For the MVP build, these chapters are most directly relevant:
 
-- **Ch11 Node Architecture** — kernel + plugin pattern; module-as-plugin for accounts/vendors/inventory/projects
-- **Ch12 CRDT Engine + Data Layer** — three-tier resolution; ledger as CP-class CRDT (CRDT-23 directly applies to accounts)
-- **Ch13 Schema Migration** — module schemas evolve over years; expand-contract pattern
-- **Ch14 Sync Daemon Protocol** — Anchor↔Anchor LAN sync + Anchor↔Bridge WAN sync
-- **Ch15 Security Architecture** — KEK/DEK envelope; per-tenant + per-user key custody; encryption-at-rest via SQLCipher
-- **Ch16 Persistence Beyond the Node** — backup + recovery; plain-file export per module
-- **Ch17 Building First Node** — start-here playbook; MVP follows this
-- **Ch18 Migrating Existing SaaS** — for users coming from QuickBooks/Xero into Sunfish; Phase 6 documentation
-- **Ch19 Shipping to Enterprise** — when an SMB grows mid-market; signing + MDM; out-of-MVP scope but architecture should not preclude
-- **Ch20 UX Sync Conflict** — conflict resolution UI patterns; sync-state visualization; backup-state UX
+- **Ch11 Node Architecture** - kernel + plugin pattern; module-as-plugin for accounts/vendors/inventory/projects
+- **Ch12 CRDT Engine + Data Layer** - three-tier resolution; ledger as CP-class CRDT (CRDT-23 directly applies to accounts)
+- **Ch13 Schema Migration** - module schemas evolve over years; expand-contract pattern
+- **Ch14 Sync Daemon Protocol** - Anchor↔Anchor LAN sync + Anchor↔Bridge WAN sync
+- **Ch15 Security Architecture** - KEK/DEK envelope; per-tenant + per-user key custody; encryption-at-rest via SQLCipher
+- **Ch16 Persistence Beyond the Node** - backup + recovery; plain-file export per module
+- **Ch17 Building First Node** - start-here playbook; MVP follows this
+- **Ch18 Migrating Existing SaaS** - for users coming from QuickBooks/Xero into Sunfish; Phase 6 documentation
+- **Ch19 Shipping to Enterprise** - when an SMB grows mid-market; signing + MDM; out-of-MVP scope but architecture should not preclude
+- **Ch20 UX Sync Conflict** - conflict resolution UI patterns; sync-state visualization; backup-state UX
 
 For the conformance work:
 
-- **Appendix A** — sync daemon wire protocol (Phase 1 implements this)
-- **Appendix B** — threat-model worksheets (per-module worksheets in Phase 1)
-- **Appendix D** — testing the inverted stack (per-phase test patterns)
-- **Appendix F** — regulatory coverage (US sales tax, GDPR, etc. — per-deployment compliance manifest)
+- **Appendix A** - sync daemon wire protocol (Phase 1 implements this)
+- **Appendix B** - threat-model worksheets (per-module worksheets in Phase 1)
+- **Appendix D** - testing the inverted stack (per-phase test patterns)
+- **Appendix F** - regulatory coverage (US sales tax, GDPR, etc. - per-deployment compliance manifest)

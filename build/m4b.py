@@ -3,7 +3,7 @@
 Reads build/output/audiobook/manifest.json in chapter order, concatenates the
 MP3s, transcodes to AAC-in-MP4 (.m4b), and embeds chapter markers + book-level
 metadata (title, author, genre=Audiobook). Uses the static ffmpeg bundled with
-the `imageio-ffmpeg` pip package — no system ffmpeg install required.
+the `imageio-ffmpeg` pip package - no system ffmpeg install required.
 
 Usage:
     python build/m4b.py                  # default 96 kbps AAC mono (audiobook quality floor)
@@ -74,7 +74,7 @@ def main() -> None:
     ap.add_argument("--out", type=Path, default=DEFAULT_OUT,
                     help=f"output .m4b path (default: {DEFAULT_OUT.name})")
     ap.add_argument("--bitrate", default="96k",
-                    help="AAC bitrate (default: 96k — audiobook quality floor; "
+                    help="AAC bitrate (default: 96k - audiobook quality floor; "
                          "Audible accepts 64-320k, but 96k is the threshold below "
                          "which speech artifacts become audible on critical listening)")
     ap.add_argument("--cover", type=Path, default=DEFAULT_COVER,
@@ -111,13 +111,13 @@ def main() -> None:
                         "end_ms": cursor_ms + dur_ms})
         cursor_ms += dur_ms
 
-    # concat demuxer input list — forward slashes required on Windows
+    # concat demuxer input list - forward slashes required on Windows
     with list_file.open("w", encoding="utf-8") as f:
         for e in entries:
             p = str(e["path"]).replace("\\", "/")
             f.write(f"file '{p}'\n")
 
-    # ffmetadata file — book-level tags + per-chapter markers
+    # ffmetadata file - book-level tags + per-chapter markers
     with metadata_file.open("w", encoding="utf-8") as f:
         f.write(";FFMETADATA1\n")
         f.write(f"title={escape_metadata(BOOK_TITLE)}\n")

@@ -66,7 +66,7 @@ def check_chapter(key):
         is_illustrative = "// illustrative" in block or "# illustrative" in block
         for pat in INVENTED_API_PATTERNS:
             if re.search(pat, block) and not is_illustrative:
-                warnings.append(f"Block {i+1}: possible invented API — {pat} (mark // illustrative if intentional)")
+                warnings.append(f"Block {i+1}: possible invented API - {pat} (mark // illustrative if intentional)")
 
         sunfish_refs = re.findall(r"Sunfish\.\w+(?:\.\w+)*", block)
         for ref in sunfish_refs:

@@ -1,5 +1,5 @@
 /**
- * The Inverted Stack — commitlint config.
+ * The Inverted Stack - commitlint config.
  *
  * Mirrors the fleet's conventions but allows looser subject-case (book PRs
  * frequently quote chapter titles or proper nouns in the subject) and extends

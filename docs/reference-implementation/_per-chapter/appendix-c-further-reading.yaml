@@ -8,9 +8,9 @@ concepts:
   name: Kleppmann seven local-first ideals
   source: 'appendix-c-further-reading §"Section 1: Local-First Foundations"'
   source-paper: null
-  definition: The seven aspirational properties — fast local performance (P1), multi-device access (P2),
+  definition: The seven aspirational properties - fast local performance (P1), multi-device access (P2),
     network-optional operation (P3), seamless collaboration (P4), longevity beyond vendor lifespan (P5),
-    security and privacy by default (P6), and ultimate user ownership (P7) — that together define local-first
+    security and privacy by default (P6), and ultimate user ownership (P7) - that together define local-first
     software per Kleppmann et al. (Onward! 2019).
   must-implement:
   - System satisfies all seven Kleppmann properties P1-P7 measurably
@@ -124,7 +124,7 @@ concepts:
   source: 'appendix-c-further-reading §"Section 3: Distributed Systems Foundations"'
   source-paper: null
   definition: The Saito and Shapiro 2005 framing of replication that allows tentative local commits, eventual
-    convergence, and application-level conflict resolution — the academic vocabulary for what the book
+    convergence, and application-level conflict resolution - the academic vocabulary for what the book
     operationally calls local-first.
   must-implement:
   - Local writes commit tentatively without coordination

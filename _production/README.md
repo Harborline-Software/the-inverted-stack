@@ -1,4 +1,4 @@
-# _production — Format outputs
+# _production - Format outputs
 
 Everything about how the canonical prose in `vol-1/` and `vol-2/` becomes a delivered artifact: ebook, audiobook, video, comic, web reader, print. Formats can evolve here without touching the story text.
 
@@ -7,7 +7,7 @@ Everything about how the canonical prose in `vol-1/` and `vol-2/` becomes a deli
 | Folder | Purpose |
 |---|---|
 | `ebook/` | Pandoc EPUB/PDF outputs, Leanpub preview configs, cover assets |
-| `audiobook/` | TTS-rendered chapters, forced-alignment artifacts, overlays, mastering chain — produced by `build/audiobook.py` |
+| `audiobook/` | TTS-rendered chapters, forced-alignment artifacts, overlays, mastering chain - produced by `build/audiobook.py` |
 | `web/` | Web reader bundle (currently lives at repo root `web/`; candidate to move here) |
 | `print/` | Print-ready PDF, typography overrides, ISBN/colophon files |
 | `comic/` | Panel scripts, art references for graphic adaptations (Vol 2) |

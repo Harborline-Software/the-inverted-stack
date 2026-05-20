@@ -1,13 +1,13 @@
-# Appendix F — Regulatory Coverage Map
+# Appendix F - Regulatory Coverage Map
 
 <!-- icm/draft -->
 <!-- Target: ~2,000 words -->
 
 ---
 
-This appendix consolidates every regulatory framework the book references. Practitioners deploying local-first architecture across multiple jurisdictions need a single place to check what each regime requires, where that requirement creates a structural argument for on-device residency, and which chapters develop the argument. Entries are practitioner-focused: each describes the deployment relevance, not the statutory text. This appendix is not legal advice — production deployments require jurisdiction-specific counsel.
+This appendix consolidates every regulatory framework the book references. Practitioners deploying local-first architecture across multiple jurisdictions need a single place to check what each regime requires, where that requirement creates a structural argument for on-device residency, and which chapters develop the argument. Entries are practitioner-focused: each describes the deployment relevance, not the statutory text. This appendix is not legal advice - production deployments require jurisdiction-specific counsel.
 
-Frameworks are grouped by region. Each entry gives: framework name and citation; effective date; data-residency, consent, or access-rights properties that bear on local-first architecture; chapters where the compliance argument appears. The four load-bearing entries — GDPR, Schrems II, DIFC DPL 2020, and Russia's Federal Law 242-FZ — receive fuller treatment because the book's structural compliance arguments pivot on them. All other entries are intentionally terse.
+Frameworks are grouped by region. Each entry gives: framework name and citation; effective date; data-residency, consent, or access-rights properties that bear on local-first architecture; chapters where the compliance argument appears. The four load-bearing entries - GDPR, Schrems II, DIFC DPL 2020, and Russia's Federal Law 242-FZ - receive fuller treatment because the book's structural compliance arguments pivot on them. All other entries are intentionally terse.
 
 ---
 
@@ -17,7 +17,7 @@ Frameworks are grouped by region. Each entry gives: framework name and citation;
 
 **Effective:** 25 May 2018.
 
-The foundational EU data-residency and individual-rights regime. Article 5(1)(c) (data minimization) and Article 5(1)(e) (storage limitation) create architectural pressure toward bounded local storage. Article 17 (right to erasure) is the book's most significant unresolved tension: CRDTs retain full operation history by design; DEK destruction (crypto-shredding, Chapter 15) is the proposed erasure mechanism, but CNIL in France and several German DPAs have not definitively resolved whether it constitutes lawful Article 17 compliance — the question is unsettled, not foreclosed. Article 30 (records of processing) and Article 33 (72-hour breach notification) operate at the node level. Article 44 restricts transfers to third countries lacking adequacy.
+The foundational EU data-residency and individual-rights regime. Article 5(1)(c) (data minimization) and Article 5(1)(e) (storage limitation) create architectural pressure toward bounded local storage. Article 17 (right to erasure) is the book's most significant unresolved tension: CRDTs retain full operation history by design; DEK destruction (crypto-shredding, Chapter 15) is the proposed erasure mechanism, but CNIL in France and several German DPAs have not definitively resolved whether it constitutes lawful Article 17 compliance - the question is unsettled, not foreclosed. Article 30 (records of processing) and Article 33 (72-hour breach notification) operate at the node level. Article 44 restricts transfers to third countries lacking adequacy.
 
 **Chapters:** Preface, Ch02–Ch07, Ch09–Ch11, Ch13–Ch15, Ch18–Ch19, Ch22–Ch23, Epilogue, Appendix A, Appendix B, Appendix D
 
@@ -25,7 +25,7 @@ The foundational EU data-residency and individual-rights regime. Article 5(1)(c)
 
 **Effective:** 16 July 2020 (Privacy Shield invalidated simultaneously).
 
-The strongest European compliance argument for local-first. The CJEU ruled that Privacy Shield was invalid and that SCCs alone are insufficient where the importing country's surveillance laws preclude effective protection. A local-first node that never exports personal data to a foreign cloud bypasses the transfer mechanism entirely — Schrems II does not apply when there is no cross-border transfer to evaluate. The architecture answers the ruling structurally, not contractually.
+The strongest European compliance argument for local-first. The CJEU ruled that Privacy Shield was invalid and that SCCs alone are insufficient where the importing country's surveillance laws preclude effective protection. A local-first node that never exports personal data to a foreign cloud bypasses the transfer mechanism entirely - Schrems II does not apply when there is no cross-border transfer to evaluate. The architecture answers the ruling structurally, not contractually.
 
 **Chapters:** Preface, Ch02–Ch06, Ch09–Ch11, Ch13–Ch15, Ch18–Ch19, Ch23, Epilogue, Appendix D
 
@@ -55,7 +55,7 @@ Neither authority has definitively resolved whether DEK destruction constitutes 
 
 **Effective:** 1 July 2020.
 
-The most structurally decisive regime in this book's GCC arguments. The DIFC DPL uniquely *prohibits* foreign cloud storage for DIFC-licensed financial entities — not a constraint to satisfy contractually, but a categorical prohibition. A local-first node that never routes personal data through an offshore cloud satisfies this prohibition at the architectural level. Chapter 4 develops the argument; Chapter 14 addresses the compelled-access threat model in the DIFC context.
+The most structurally decisive regime in this book's GCC arguments. The DIFC DPL uniquely *prohibits* foreign cloud storage for DIFC-licensed financial entities - not a constraint to satisfy contractually, but a categorical prohibition. A local-first node that never routes personal data through an offshore cloud satisfies this prohibition at the architectural level. Chapter 4 develops the argument; Chapter 14 addresses the compelled-access threat model in the DIFC context.
 
 **Chapters:** Preface, Ch02–Ch06, Ch09–Ch11, Ch13–Ch15, Ch18–Ch19, Ch22–Ch23, Epilogue, Appendix D
 
@@ -83,7 +83,7 @@ Establishes data processing principles, consent requirements, and erasure rights
 
 ### RBI Data Localization Circular (April 2018, DPSS.CO.OD No.2785)
 
-**Effective:** October 2018 for payment system operators. Requires all payment-related data to be stored exclusively in India — a hard territorial mandate, not a design preference. Chapter 13 treats it as a Tier 3 architectural driver alongside 242-FZ and DIFC.
+**Effective:** October 2018 for payment system operators. Requires all payment-related data to be stored exclusively in India - a hard territorial mandate, not a design preference. Chapter 13 treats it as a Tier 3 architectural driver alongside 242-FZ and DIFC.
 
 **Chapters:** Ch04–Ch06, Ch09, Ch11, Ch13–Ch14, Ch18, Ch23, Appendix D
 
@@ -97,7 +97,7 @@ Dedicated legislation was in draft as of this writing. Implementers should verif
 
 ### China PIPL (Personal Information Protection Law, effective 1 November 2021) + MLPS 2.0 (effective 1 December 2019)
 
-PIPL Article 47 establishes erasure rights parallel to GDPR Article 17. Cross-border transfer restrictions are among the strictest globally — personal data of Chinese residents must generally be stored within China. MLPS 2.0 adds a security classification and certification layer. Together they create one of the strongest architectural arguments for local-first in this roster.
+PIPL Article 47 establishes erasure rights parallel to GDPR Article 17. Cross-border transfer restrictions are among the strictest globally - personal data of Chinese residents must generally be stored within China. MLPS 2.0 adds a security classification and certification layer. Together they create one of the strongest architectural arguments for local-first in this roster.
 
 **Chapters:** Ch02–Ch06, Ch08–Ch11, Ch13–Ch15, Ch18–Ch19, Ch22–Ch23, Epilogue, Appendix D
 
@@ -131,7 +131,7 @@ The NDPA (Act No. 40 of 2023) re-enacted and strengthened NDPR, establishing a d
 
 ### South Africa POPIA (Protection of Personal Information Act 4 of 2013, effective 1 July 2021)
 
-Section 24 (right to correction and deletion). Section 72 prohibits cross-border transfers to countries lacking adequate protection — the same structural argument as GDPR for on-device residency.
+Section 24 (right to correction and deletion). Section 72 prohibits cross-border transfers to countries lacking adequate protection - the same structural argument as GDPR for on-device residency.
 
 **Chapters:** Preface, Ch02–Ch03, Ch05, Ch07–Ch11, Ch13, Ch15, Ch18–Ch19, Ch22–Ch23, Epilogue, Appendix A, Appendix D
 
@@ -157,7 +157,7 @@ Article 18 establishes erasure rights parallel to GDPR Article 17. The ANPD has 
 
 **Chapters:** Ch02–Ch03, Ch05, Ch07, Ch09–Ch11, Ch13–Ch15, Ch18, Ch22, Epilogue
 
-### Mexico LFPDPPP (2010) — ARCO Rights
+### Mexico LFPDPPP (2010) - ARCO Rights
 
 Cancellation right (the ARCO "C") parallels GDPR Article 17. Data localization requirements are sector-specific.
 
@@ -169,7 +169,7 @@ Each establishes data subject rights including deletion. Argentina has EU adequa
 
 **Chapters:** Ch02
 
-### United States — Sector-Specific Frameworks
+### United States - Sector-Specific Frameworks
 
 No omnibus federal privacy law. The book addresses:
 
@@ -186,7 +186,7 @@ No omnibus federal privacy law. The book addresses:
 
 ### Russia Federal Law 242-FZ (2015)
 
-**Effective:** 1 September 2015 — enacted two years before GDPR and the earliest major national localization mandate. 242-FZ amended Federal Law 152-FZ to require that personal data of Russian citizens be initially collected and stored on servers physically located in Russia. The book repeatedly emphasizes this chronology: Russia established the doctrinal pattern of hard localization mandates before Europe's rights-based framework took effect. A local-first node within Russia satisfies 242-FZ at the architectural level — the same structural answer as Schrems II, but with a harder territorial requirement. Roskomnadzor enforcement has intensified since 2022.
+**Effective:** 1 September 2015 - enacted two years before GDPR and the earliest major national localization mandate. 242-FZ amended Federal Law 152-FZ to require that personal data of Russian citizens be initially collected and stored on servers physically located in Russia. The book repeatedly emphasizes this chronology: Russia established the doctrinal pattern of hard localization mandates before Europe's rights-based framework took effect. A local-first node within Russia satisfies 242-FZ at the architectural level - the same structural answer as Schrems II, but with a harder territorial requirement. Roskomnadzor enforcement has intensified since 2022.
 
 **Chapters:** Ch02–Ch06, Ch09, Ch11, Ch13–Ch15, Ch18–Ch19, Ch23, Epilogue
 
@@ -198,7 +198,7 @@ No omnibus federal privacy law. The book addresses:
 
 ### Импортозамещение (Import Substitution Policy)
 
-Russian state policy mandating preference for domestically-produced software in government and state-adjacent procurement. Not a data protection law — a market-access requirement. State-sector enterprises face formal procurement barriers against Western SaaS products that do not apply to locally-deployed on-device software. A local-first node built on domestically-licensed components can qualify for state procurement in ways that a cloud-resident SaaS cannot. Import substitution thereafter.
+Russian state policy mandating preference for domestically-produced software in government and state-adjacent procurement. Not a data protection law - a market-access requirement. State-sector enterprises face formal procurement barriers against Western SaaS products that do not apply to locally-deployed on-device software. A local-first node built on domestically-licensed components can qualify for state procurement in ways that a cloud-resident SaaS cannot. Import substitution thereafter.
 
 **Chapters:** Ch02, Ch05, Ch09, Ch19
 
@@ -214,13 +214,13 @@ Both establish data localization obligations for citizens' personal data. Implem
 
 ### ISO/IEC 27701, SOC 2, ISMS-P (Korea), ENS (Spain)
 
-Certification and attestation standards, not laws. The book treats them as procurement thresholds — evidence artifacts the local-first vendor produces to satisfy enterprise procurement. Chapter 8 and Chapter 19 develop the compliance-packaging argument.
+Certification and attestation standards, not laws. The book treats them as procurement thresholds - evidence artifacts the local-first vendor produces to satisfy enterprise procurement. Chapter 8 and Chapter 19 develop the compliance-packaging argument.
 
 ---
 
 ## Per-Chapter Index
 
-Reverse index showing frameworks each compressed chapter originally cited inline. Used by reviewers and the reference-integrity script (`build/check_audit.py`). Chapters not yet through HIGH-tier compression (Ch01, Ch16, Ch20, and MED-tier paragraphs in Ch07 and Ch10) are omitted — their inline citations remain in the chapter text and will be added here during the MED-tier pass. Appendix B ¶56 and Ch12 ¶61 (retained as structured lists) are included for completeness.
+Reverse index showing frameworks each compressed chapter originally cited inline. Used by reviewers and the reference-integrity script (`build/check_audit.py`). Chapters not yet through HIGH-tier compression (Ch01, Ch16, Ch20, and MED-tier paragraphs in Ch07 and Ch10) are omitted - their inline citations remain in the chapter text and will be added here during the MED-tier pass. Appendix B ¶56 and Ch12 ¶61 (retained as structured lists) are included for completeness.
 
 | Chapter | Frameworks cited |
 |---|---|

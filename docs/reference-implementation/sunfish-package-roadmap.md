@@ -1,4 +1,4 @@
-# Sunfish Package Roadmap — Forward-Looking Namespaces from Volume 1 Extensions
+# Sunfish Package Roadmap - Forward-Looking Namespaces from Volume 1 Extensions
 
 **Status:** Living document. Authoritative source for forward-looking Sunfish package commitments made by book extensions (Volume 1).
 **Cadence:** Updated whenever a book extension introduces a new Sunfish namespace. Mirrors are maintained in the Sunfish reference implementation at `C:/Projects/Sunfish/docs/specifications/inverted-stack-package-roadmap.md`.
@@ -12,8 +12,8 @@ This document is the canonical list of every such forward-looking namespace, the
 
 It exists for two audiences:
 
-1. **Book readers** evaluating whether a Sunfish-aligned implementation today honors the architecture described — they need to know which packages are shipped and which are roadmap commitments.
-2. **Sunfish developers** picking up implementation work — they need a single list of pending packages, ordered by priority, with the architectural commitment already specified by the book.
+1. **Book readers** evaluating whether a Sunfish-aligned implementation today honors the architecture described - they need to know which packages are shipped and which are roadmap commitments.
+2. **Sunfish developers** picking up implementation work - they need a single list of pending packages, ordered by priority, with the architectural commitment already specified by the book.
 
 ## Cross-references
 
@@ -39,22 +39,22 @@ It exists for two audiences:
 | Field | Value |
 |---|---|
 | **Source extension** | #48 key-loss recovery |
-| **Status** | `adr-accepted` (per ADR 0046) — not yet scaffolded |
+| **Status** | `adr-accepted` (per ADR 0046) - not yet scaffolded |
 | **Sunfish dir** | `packages/foundation-recovery/` (planned; does not yet exist) |
 | **Sunfish ADR** | `docs/adrs/0046-key-loss-recovery-scheme-phase-1.md` (accepted 2026-04-26) |
 | **Book sections** | Ch15 §Key-Loss Recovery; Ch20 §Key-Loss Recovery UX |
 
 **Architectural commitment:** Owns the recovery primitive. Implements the six sub-patterns (48a multi-sig social, 48b custodian-held, 48c paper-key, 48d biometric-derived, 48e timed grace period, 48f recovery-event audit trail) under a unified configuration. Reads the deployment-class manifest at startup and binds the appropriate threshold and grace-period values. Emits five named event contracts: `RecoveryClaimSubmitted`, `GracePeriodObserver`, `TrusteeAttestation`, `RecoveryDispute`, `RecoveryCompleted`. Enforces the convergence rule (halt-on-dispute) at the audit-log validation layer.
 
-**Phase 1 scope per ADR 0046:** sub-patterns 48a + 48c + 48e + 48f (multi-sig social + paper-key + 7-day timed grace + signed audit trail). Sub-patterns 48b (institutional custodian) and 48d (biometric-derived) are explicitly deferred to post-MVP. The Phase 1 architecture must not preclude adding them later — the recovery surface is an extensible enum, not hard-coded to the four ship-now flows.
+**Phase 1 scope per ADR 0046:** sub-patterns 48a + 48c + 48e + 48f (multi-sig social + paper-key + 7-day timed grace + signed audit trail). Sub-patterns 48b (institutional custodian) and 48d (biometric-derived) are explicitly deferred to post-MVP. The Phase 1 architecture must not preclude adding them later - the recovery surface is an extensible enum, not hard-coded to the four ship-now flows.
 
 **Minimal book-referenced surface:**
 
-- `IRecoveryArrangement` — declared at first-run, persists in the team's signed configuration manifest; binds primary mechanism, secondary mechanism, deployment class, grace-period window
-- `IShamirDealer` — local Shamir secret-sharing dealer (sub-pattern 48a); GF(2^256) field; OS CSRNG seed; share-wrapping under trustee public key before transit; dealer-state zeroing post-emission
-- `ICustodianRelease` — out-of-band custodian release (sub-pattern 48b); local unwrap; never holds plaintext key
-- `IPaperKeyDerivation` — BIP-39 mnemonic derivation through Argon2id at regulated-tier parameters (sub-pattern 48c); round-trip transcription verification at setup
-- `IRecoveryAuditTrail` — signed event sequence (sub-pattern 48f); composes with chain-of-custody mechanism (#9, future)
+- `IRecoveryArrangement` - declared at first-run, persists in the team's signed configuration manifest; binds primary mechanism, secondary mechanism, deployment class, grace-period window
+- `IShamirDealer` - local Shamir secret-sharing dealer (sub-pattern 48a); GF(2^256) field; OS CSRNG seed; share-wrapping under trustee public key before transit; dealer-state zeroing post-emission
+- `ICustodianRelease` - out-of-band custodian release (sub-pattern 48b); local unwrap; never holds plaintext key
+- `IPaperKeyDerivation` - BIP-39 mnemonic derivation through Argon2id at regulated-tier parameters (sub-pattern 48c); round-trip transcription verification at setup
+- `IRecoveryAuditTrail` - signed event sequence (sub-pattern 48f); composes with chain-of-custody mechanism (#9, future)
 
 **Open questions for the Sunfish implementation:**
 
@@ -66,7 +66,7 @@ It exists for two audiences:
 | Field | Value |
 |---|---|
 | **Source extension** | #48 key-loss recovery |
-| **Status** | `book-committed` — not yet scaffolded; potential overlap with existing packages flagged |
+| **Status** | `book-committed` - not yet scaffolded; potential overlap with existing packages flagged |
 | **Sunfish dir** | `packages/kernel-audit/` (planned; does not yet exist) |
 | **Sunfish ADR** | None yet. Referenced obliquely in ADR 0046. |
 | **Book sections** | Ch15 §Key-Loss Recovery (§Recovery-event audit trail); Ch15 §Implementation Surfaces |
@@ -75,7 +75,7 @@ It exists for two audiences:
 
 **Minimal book-referenced surface:**
 
-- Recovery-event records: claim submission, trustee attestation, dispute, completion — all signed, all in the same encrypted log used for application data, but with a distinct retention class
+- Recovery-event records: claim submission, trustee attestation, dispute, completion - all signed, all in the same encrypted log used for application data, but with a distinct retention class
 - Default-preserve metadata posture for Article 17 erasure requests; case-specific erasure requires legal review (per Ch15 §Recovery-event audit trail closing paragraph)
 
 **Open questions for the Sunfish implementation:**
@@ -90,7 +90,7 @@ It exists for two audiences:
 | Field | Value |
 |---|---|
 | **Source extension** | #43 performance contracts with framework-level enforcement |
-| **Status** | `book-committed` — not yet scaffolded; no ADR yet |
+| **Status** | `book-committed` - not yet scaffolded; no ADR yet |
 | **Sunfish dir** | `packages/kernel-performance/` (planned; does not yet exist) |
 | **Sunfish ADR** | None yet. Recommend opening one as part of the next implementation phase. |
 | **Book sections** | Ch11 §Performance Contracts and Main-Thread Isolation; Ch20 §Performance Budgets and Progressive Degradation |
@@ -99,14 +99,14 @@ It exists for two audiences:
 
 **Minimal book-referenced surface:**
 
-- `PerformanceClass` — enumeration of deployment classes (`Interactive`, `DocumentEditing`, `BackgroundSync`); declared at startup
-- `IProgressiveDegradation` — hook called when a merge or rebuild is scheduled to exceed its budget; provides cancellation path and notifies UI layer through `Sunfish.Foundation`
-- `PerformanceBudgetValidator` — CI test that measures actual latency across three representative document sizes (1k, 10k, 100k operations) and asserts against declared budgets per deployment class
-- `PerformanceDegraded` — new sub-state on `SyncState` (Ch11 §The UI Kernel); existing `SunfishNodeHealthBar` binds to it through the same indicator architecture
+- `PerformanceClass` - enumeration of deployment classes (`Interactive`, `DocumentEditing`, `BackgroundSync`); declared at startup
+- `IProgressiveDegradation` - hook called when a merge or rebuild is scheduled to exceed its budget; provides cancellation path and notifies UI layer through `Sunfish.Foundation`
+- `PerformanceBudgetValidator` - CI test that measures actual latency across three representative document sizes (1k, 10k, 100k operations) and asserts against declared budgets per deployment class
+- `PerformanceDegraded` - new sub-state on `SyncState` (Ch11 §The UI Kernel); existing `SunfishNodeHealthBar` binds to it through the same indicator architecture
 
 **Constraint propagated to existing packages:**
 
-- `Sunfish.Kernel.Crdt` — `ICrdtEngine` merge operations are async by contract. No synchronous merge surface permitted. (This constraint is consistent with the existing async-first design per ADR 0028.)
+- `Sunfish.Kernel.Crdt` - `ICrdtEngine` merge operations are async by contract. No synchronous merge surface permitted. (This constraint is consistent with the existing async-first design per ADR 0028.)
 
 **Phase 1 scope (recommended):** sub-patterns 43a (per-operation budget) + 43b (main-thread isolation guarantee) + 43c (progressive-degradation fallback) + 43d (CI conformance test) + 43e (per-deployment-class calibration). All five sub-patterns need to ship together for the contract to hold; partial implementation does not satisfy the FAILED-conditions block.
 
@@ -122,28 +122,28 @@ It exists for two audiences:
 | Field | Value |
 |---|---|
 | **Source extension** | #11 fleet management |
-| **Status** | `book-committed` — not yet scaffolded; no ADR yet |
+| **Status** | `book-committed` - not yet scaffolded; no ADR yet |
 | **Sunfish dir** | `packages/foundation-fleet/` (planned; does not yet exist) |
 | **Sunfish ADR** | None yet. Recommend opening one as part of the next phase scoping. |
 | **Book sections** | Ch21 §all subsections (NEW chapter in NEW Part V "Operational Concerns") |
 
-**Architectural commitment:** Owns the fleet-coordination layer above the kernel. Orchestrates per-node primitives that `Sunfish.Kernel.Security` and `Sunfish.Kernel.Sync` already own, generalising single-node operations to fleet scale. Sits at the same architectural tier as `Sunfish.Foundation.LocalFirst` and `Sunfish.Foundation.Recovery` — coordination-and-abstraction, not low-level protocol.
+**Architectural commitment:** Owns the fleet-coordination layer above the kernel. Orchestrates per-node primitives that `Sunfish.Kernel.Security` and `Sunfish.Kernel.Sync` already own, generalising single-node operations to fleet scale. Sits at the same architectural tier as `Sunfish.Foundation.LocalFirst` and `Sunfish.Foundation.Recovery` - coordination-and-abstraction, not low-level protocol.
 
-**Phase 1 scope (per Ch21):** all four sub-patterns ship together — partial implementation does not satisfy the chapter's FAILED-conditions block.
+**Phase 1 scope (per Ch21):** all four sub-patterns ship together - partial implementation does not satisfy the chapter's FAILED-conditions block.
 
 | Sub-pattern | Surface |
 |---|---|
-| 11a | Provisioning at flash time — manufacturing ceremony, fleet registry enrollment, device-key generation outside the field |
-| 11b | Fleet-scale key-rotation orchestration — epoch announcement, propagation tracker, straggler registry, escalation events |
-| 11c | OTA update coordination — signed update bundles, staged rollout, rollback bundle management |
-| 11d | Fleet observability — heartbeat protocol, fleet registry, dashboard aggregation, compliance export |
+| 11a | Provisioning at flash time - manufacturing ceremony, fleet registry enrollment, device-key generation outside the field |
+| 11b | Fleet-scale key-rotation orchestration - epoch announcement, propagation tracker, straggler registry, escalation events |
+| 11c | OTA update coordination - signed update bundles, staged rollout, rollback bundle management |
+| 11d | Fleet observability - heartbeat protocol, fleet registry, dashboard aggregation, compliance export |
 
 **Constraint propagated to existing packages:**
 
-- `Sunfish.Kernel.Security` — re-wrapping job must be idempotent (a node receiving the epoch announcement twice must not double-wrap its DEKs). The chapter's technical-review pass confirms the kernel preserves this invariant; the fleet layer relies on it.
-- `Sunfish.Kernel.Audit` (forward-looking from #48) — extended to record fleet rotation events alongside per-node recovery events using the same audit-log substrate.
+- `Sunfish.Kernel.Security` - re-wrapping job must be idempotent (a node receiving the epoch announcement twice must not double-wrap its DEKs). The chapter's technical-review pass confirms the kernel preserves this invariant; the fleet layer relies on it.
+- `Sunfish.Kernel.Audit` (forward-looking from #48) - extended to record fleet rotation events alongside per-node recovery events using the same audit-log substrate.
 
-**Kill trigger:** any of the five FAILED conditions in Ch21 §21.1 — provisioning ceremony missed, rotation epoch not propagated within window, OTA update failure, observability blind spot, fleet-level compliance export missing.
+**Kill trigger:** any of the five FAILED conditions in Ch21 §21.1 - provisioning ceremony missed, rotation epoch not propagated within window, OTA update failure, observability blind spot, fleet-level compliance export missing.
 
 **Next implementation step:** open an ADR scoping Phase 1 of `Sunfish.Foundation.Fleet`. Reference Ch21 as the architectural commitment and the FAILED-conditions block as the testable specification. Decide whether to scaffold all four sub-patterns together or stage them across multiple Phase 1 sub-milestones.
 

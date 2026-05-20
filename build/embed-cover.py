@@ -4,10 +4,10 @@ Audiobook players (Apple Books, Plex, Smart Audiobook Player, BookFusion)
 read the APIC frame to display per-track cover art. Without it, individual
 chapter MP3s show generic file icons rather than the book cover.
 
-Source: assets/cover-square.jpg (1400×1400 — Apple Books / Audible
+Source: assets/cover-square.jpg (1400×1400 - Apple Books / Audible
 audiobook standard). The source can be overridden via --cover.
 
-Uses ffmpeg via imageio_ffmpeg — copies the audio stream (no re-encode)
+Uses ffmpeg via imageio_ffmpeg - copies the audio stream (no re-encode)
 and adds the cover as an attached_pic stream. This preserves the loudness
 normalization done by build/normalize.py and adds ~50–100 KB per chapter.
 

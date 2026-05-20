@@ -10,18 +10,27 @@ log-opener-pattern: none
 primary-rail: career-cost-and-aging-out
 secondary-rail: grief-family-memory
 chapter-version: v2
+plants-set:
+  - discipline-from-the-boat
+  - three-identity-architecture
+  - boat-on-register-no-more
+  - joel-does-not-sleep-right-away
+plants-paid:
+  - sunfish-name-private-to-joel
+  - green-ceramic-mug
+  - gauge-in-front-of-you
 ---
 
 
-<!-- Anna-voice rewrite pass 2026-05-16 (PAO). self_referential_frame 4→0 (4× "staff history" pile-up in single paragraph at chapter-close compressed); galley red→green. Joel teaching-register pilot (Task #11 / directive 2026-05-16T11-54Z) applied: three existing beats deepened — soft-case/identity-triad T2 briefing added; discipline-tempo registration deepened; architecture-mapping paragraph receives Anna's interior recognition beat. No new scenes. Net +~430 words; within ±10% of 5000-word target. -->
+<!-- Anna-voice rewrite pass 2026-05-16 (PAO). self_referential_frame 4→0 (4× "staff history" pile-up in single paragraph at chapter-close compressed); galley red→green. Joel teaching-register pilot (Task #11 / directive 2026-05-16T11-54Z) applied: three existing beats deepened - soft-case/identity-triad T2 briefing added; discipline-tempo registration deepened; architecture-mapping paragraph receives Anna's interior recognition beat. No new scenes. Net +~430 words; within ±10% of 5000-word target. -->
 
-The wardroom at twenty-two-thirty on Day 22 was the wardroom the surface window had emptied for the night. The bridge had the watch. Wanjiru had the comm space. Diego had been at the polar-operations console an hour earlier and had gone forward to his bunk after the second pass on the Belgrano cross-traffic. Hiroshi had filed his daily and had gone to his own bunk at the early end of the rotation he kept on every mission he had ever served on. Maria had finished the crew-fitness pass at twenty. Sabina had gone to read against the inventory in the conference space because Sabina read against the inventory in the conference space the way other officers read against a paperback in their bunk. Priya was asleep. The boat was on the surface and the surface was quiet.
+The wardroom at twenty-two-thirty on Day 22 was the wardroom the surface window had emptied for the night. The bridge had the watch. Wanjiru had the comm space. Diego had been at the polar-operations console an hour earlier and had gone forward to his bunk after the second pass on the Belgrano cross-traffic. Hiroshi had filed his daily and had gone to his own bunk at the early end of the rotation he kept on every mission he had ever served on. Maria had finished the crew-fitness pass at twenty. Sabina had gone to read against the inventory in the conference space, the way other officers read against a paperback in their bunk. Priya was asleep. The boat was on the surface and the surface was quiet.
 
-I had finished the second pass on the press packet and had put the second pass away. I had filed nothing else for the day. The window had thirty hours and forty minutes left on its clock. I was at the wardroom desk with a fresh tea I had brewed myself and the night's light from the wardroom sconce laid across the desk surface in the band that fell where the light fell when the ceiling sconce was the only light on. The boat at the surface was the boat I had been inside three weeks earlier at the pier; the texture was different. The texture was different because I now knew the partition register from the inside and the surface register felt borrowed against it.
+I had finished the second pass on the press packet and had put the second pass away. I had filed nothing else for the day. The window had thirty hours and forty minutes left on its clock. I was at the wardroom desk with a fresh tea I had brewed myself and the night's light from the wardroom sconce laid across the desk surface in the band that fell where the light fell when the ceiling sconce was the only light on. The boat at the surface was the boat I had been inside three weeks earlier at the pier; the texture was different. The texture was different because I now knew the partition bearing from the inside and the surface bearing felt borrowed against it.
 
 The hatch opened and Joel came in.
 
-He had a mug in one hand and the soft case the size of a paperback book in the other. He nodded to me when he saw me at the desk. He did not make the motion a man makes when he had been expecting to find a compartment empty and finds another officer in it. He came in. He went to the urn. He poured himself a coffee from the carafe Maria had set on the warmer at twenty. He stood at the urn for the eight or nine seconds the urn took to register the pour. He turned and looked at the wardroom.
+He had a mug in one hand and the soft case the size of a paperback book in the other. He nodded to me when he saw me at the desk. He did not make the motion a man makes when he had been expecting to find a compartment empty and finds another officer in it. He came in. He went to the urn. He poured himself a coffee from the carafe Maria had set on the warmer at twenty. He stood at the urn for the eight or nine seconds the urn took to accept the pour. He turned and looked at the wardroom.
 
 He said: *Director.*
 
@@ -35,7 +44,7 @@ I said: *sit.*
 
 He pulled the chair across from me. He set the coffee on the desk. He set the soft case on the desk next to the coffee. He did not open the case. He sat.
 
-The wardroom hum was the hum of a galley refrigerator and the recirculation fans and the deck plate above us that carried the bridge watch's footstep when the bridge watch's footstep happened to land in the band the deck plate registered. The hum was the hum the hum had been on every night I had been on the boat. Joel registered the hum the way I had registered it; I noted the texture of his registering. He was at home in the hum.
+The wardroom hum was the hum of a galley refrigerator and the recirculation fans and the deck plate above us that carried the bridge watch's footstep when one happened to land in the band the deck plate transmitted. The hum was the hum the hum had been on every night I had been on the boat. Joel took the hum in the way I had taken it in; I noted the texture of his settling. He was at home in the hum.
 
 He said: *I have something I owe you.*
 
@@ -53,7 +62,7 @@ I said: *the submarine.*
 
 He said: *the submarine.*
 
-I had not asked him about the name on the recruitment call. I had not asked him about the name on the dock at Punta Arenas in the equipment-review hour or in the wardroom on the night before departure. I had not asked him about the name in the conference space on the morning of Day 7 or at the captain-asks-engineer exchanges since. I had read the paper before I knew the name's weight and I had registered the weight without naming the weight in any conversation we had had about anything else. I had a working hypothesis about the name from the third week of pre-mission preparation. The hypothesis had not been certain. I had not put the certainty on Joel.
+I had not asked him about the name on the recruitment call. I had not asked him about the name on the dock at Punta Arenas in the equipment-review hour or in the wardroom on the night before departure. I had not asked him about the name in the conference space on the morning of Day 7 or at the captain-asks-engineer exchanges since. I had read the paper before I knew the name's weight and I had taken the weight in without naming it in any conversation we had had about anything else. I had a working hypothesis about the name from the third week of pre-mission preparation. The hypothesis had not been certain. I had not put the certainty on Joel.
 
 He said: *USS Sunfish, SSN six-four-nine. Sturgeon-class fast attack. Decommissioned in '98. My first boat. The only boat I served on long enough for the boat to leave a stamp.*
 
@@ -61,7 +70,7 @@ He said it as a statement. He did not soften it. He did not stage it. He named f
 
 I said: *acknowledged.*
 
-I had said *acknowledged* the way I said *acknowledged* on the bridge after a watch officer had reported a depth or a trim or a cycle. I had not chosen the word. The word had arrived because the word was the word the moment wanted. Joel registered that I had said *acknowledged* and not *thank you* and not *go on* and not anything else. I had given him the operational register the moment had asked for. He had given me the disclosure in the same register he would have used at a watch handoff. We were two senior operators in a wardroom and we had been in this register for the entire mission and on the recruitment call before that and the register was the register the conversation needed to be in.
+I had said *acknowledged* the way I said *acknowledged* on the bridge after a watch officer had reported a depth or a trim or a cycle. I had not chosen the word. The word had arrived because the word was the word the moment wanted. Joel caught that I had said *acknowledged* and not *thank you* and not *go on* and not anything else. I had given him the operational bearing the moment had asked for. He had given me the disclosure at the same level he would have used at a watch handoff. We were two senior operators in a wardroom and we had been at this level for the entire mission and on the recruitment call before that and the level was the level the conversation needed to be at.
 
 He looked at the coffee. He drank a third of it.
 
@@ -77,9 +86,9 @@ He took another quarter of the coffee. He set the mug back down at the precise p
 
 *The thing the boat made me into was not what I had been expecting. I had expected to be made into a reactor operator. I was made into a reactor operator. That was the first surface of it. The second surface of it was the discipline the boat ran on, which was not the discipline of the reactor and was not exactly the discipline of the Navy and was the discipline a closed pressure hull at depth on a deterrent posture runs on when the boat is alone for sixty days and the discipline is the only thing between the boat and the boat not coming home. The discipline I am talking about is the discipline of a system that has decided to be honest about what it has and what it does not have. The discipline that does not pretend a reading exists when the reading does not exist. The discipline that does not assume the dashboard is telling the truth because the dashboard is the only thing on the panel. The discipline that reads the gauge in front of you and does not extrapolate from the gauge to a quantity the gauge cannot see. The discipline that says, when a casualty fires, the procedure is the procedure for the casualty that is happening, which is not the casualty that is in the casebook. The casebook is a starting point. The procedure is what you do when the casebook is one minute behind the boat.*
 
-He said it in one breath at the operational tempo. The tempo was the tempo Wanjiru had used at the comm space on the morning of Day 21 to walk me through the priority queue. The tempo was the tempo Joel had used in the conference space on the morning of Day 7 to walk me through the partition. The tempo was a tempo I had registered in him three different times and was registering again. He was telling me about the boat at the tempo he used for telling me about the architecture. The two tempos were the same tempo.
+He said it in one breath at the operational tempo. The tempo was the tempo Wanjiru had used at the comm space on the morning of Day 21 to walk me through the priority queue. The tempo was the tempo Joel had used in the conference space on the morning of Day 7 to walk me through the partition. The tempo was a tempo I had marked in him three different times and was marking again. He was telling me about the boat at the tempo he used for telling me about the architecture. The two tempos were the same tempo.
 
-What I registered, in addition to the tempo, was what the tempo was not doing. It was not accelerating at the technical content. It was not eliding the difficult part and naming the conclusion. Joel's tempo was the tempo of a man who waited for the picture to assemble itself in the listener before he placed the next piece. The discipline he had been describing was not a list. He was constructing it in the order it wanted to be constructed in and he was giving me time to receive it. I had read his paper three times in St. Petersburg; I had noted the same patience in the prose. The paper had done the same thing at the sentence level that Joel's voice was doing now in the wardroom.
+What I caught, in addition to the tempo, was what the tempo was not doing. It was not accelerating at the technical content. It was not eliding the difficult part and naming the conclusion. Joel's tempo was the tempo of a man who waited for the picture to assemble itself in the listener before he placed the next piece. The discipline he had been describing was not a list. He was constructing it in the order it wanted to be constructed in and he was giving me time to receive it. I had read his paper three times in St. Petersburg; I had noted the same patience in the prose. The paper had done the same thing at the sentence level that Joel's voice was doing now in the wardroom.
 
 I said nothing. I let the breath end where the breath ended.
 
@@ -95,7 +104,7 @@ He said: *I went to undergraduate computer science on the GI Bill. I had thought
 
 He stopped again. He rotated the mug a quarter turn. He looked at me to verify I was tracking. I was tracking. I had been tracking since the second sentence.
 
-*I did defense work for some years. I did contract work in the Gulf for some years. I worked at a few companies you would not have heard of. I watched a lot of people lose data they had assumed they would not lose. I watched a lot of senior engineers tell senior managers that the cloud platform the company was running on was making decisions the company was going to regret, and I watched the senior managers run the platform anyway because the platform was the platform on the budget. I had been the engineer in the room a few times. I had been the engineer who was right and was not the engineer the room was listening to. I logged the pattern. I did not log it as politics. I logged it as engineering.*
+*I did defense work for some years. I did contract work in the Gulf for some years. I worked at a few companies you would not have heard of. I watched a lot of people lose data they had assumed they would not lose. I watched a lot of senior engineers tell senior managers that the cloud platform the company was running on was making decisions it was going to regret, and I watched the senior managers run the platform anyway because the platform was the platform on the budget. I had been the engineer in the room a few times. I had been the engineer who was right and was not the engineer the room was listening to. I logged the pattern. I did not log it as politics. I logged it as engineering.*
 
 He said: *I started writing the paper at fifty-one. I had been thinking about it for a decade. I sat down to write it because nobody else in the OSS distributed-systems community was going to write the paper I wanted to read. I wrote the first draft in eight months in the evenings and the weekends. I sent it to the Council. The Council said most of what I had written was correct and one part of it was wrong. I sat with the wrong part overnight. I rewrote it. The rewrite passed.*
 
@@ -107,13 +116,13 @@ I said: *I had a hypothesis.*
 
 He said: *I had figured.*
 
-He said it without surprise. He had figured I had figured. The not-surprise registered as the same texture I had registered in his other not-surprises across the mission, which was the texture of a senior engineer who assumed competent observers would observe what was observable and that he did not have to perform a disclosure for the observation to land.
+He said it without surprise. He had figured I had figured. The not-surprise came in at the same texture I had marked in his other not-surprises across the mission, which was the texture of a senior engineer who assumed competent observers would observe what was observable and that he did not have to perform a disclosure for the observation to land.
 
 ---
 
 I said: *the discipline.*
 
-I said it as a single word and let the word do the work. Joel registered the word. He understood the word. He had been waiting for the word; he had not been pushing me to it.
+I said it as a single word and let the word do the work. Joel took in the word. He understood the word. He had been waiting for the word; he had not been pushing me to it.
 
 He said: *the discipline that runs through the architecture. I want to be precise about this part. I did not sit down to translate submarine engineering into distributed-systems engineering. The translation was not a project. The discipline I had learned on the boat was the discipline I had. When I was working a problem in distributed systems, the only discipline I had to bring to the problem was the discipline I had. The translation was not a choice. The translation was that I did not have a different engineer to be.*
 
@@ -127,13 +136,13 @@ He reached for the soft case. He opened it. The laptop inside was the kind of la
 
 He said: *The architecture on this boat runs three distinct identities. Not one. The crew's, the platform's, and the services'. I built them separate because the boat built separate compartments. A reactor casualty does not become a weapons casualty because you kept the hatches closed. A compromised service key does not become a compromised platform because you kept the chains separate. They seem like the same system from the outside. They are not the same compartment from the inside.*
 
-He let that sit for three seconds. He did not gloss it. He did not produce the next sentence until the three seconds had run. That was the register I had noted in his paper — the sentence that does not chase itself. The sentence that lets the reader arrive before the next sentence departs.
+He let that sit for three seconds. He did not gloss it. He did not produce the next sentence until the three seconds had run. That was the bearing I had noted in his paper - the sentence that does not chase itself. The sentence that lets the reader arrive before the next sentence departs.
 
 I said: *Wanjiru's three credential modules at the Helsinki handoff.*
 
 He said: *yes. That is what those were. You already ran the ceremony. I owed you the name of the thing you ran.*
 
-I registered the construction. He had not said *you should have known* and he had not said *I should have told you earlier*. He had said *I owed you the name of the thing you ran*. The debt was his, and the debt was architectural, and naming it was the same discipline he had described for twenty minutes: you do not pass a watch with an unresolved indication.
+I marked the construction. He had not said *you should have known* and he had not said *I should have told you earlier*. He had said *I owed you the name of the thing you ran*. The debt was his, and the debt was architectural, and naming it was the same discipline he had described for twenty minutes: you do not pass a watch with an unresolved indication.
 
 He closed the laptop. He set it back in the case. He did not zip the case.
 
@@ -141,21 +150,21 @@ He said: *That is what I owe you. I owe you that the discipline you bet your cre
 
 I said: *acknowledged.*
 
-The acknowledgment landed the way the acknowledgment had landed at the disclosure ten minutes earlier. Joel registered it. He sat with it.
+The acknowledgment landed the way the acknowledgment had landed at the disclosure ten minutes earlier. Joel took it in. He sat with it.
 
 ---
 
-I had been registering, while he had been talking, what I had registered when I had read his paper for the first time. I had read the paper in St. Petersburg in the kitchen of my apartment with the rain on the kitchen window and the building's heating registers ticking and a cup of tea I had let go cold in the way I let cups of tea go cold when I am reading something I had not expected to be reading at the altitude I was reading it at. The paper had been technical. The technical content had not been the part of the paper I had registered, that first afternoon, with the texture I had registered it with.
+I had been tracking, while he had been talking, what I had caught when I had read his paper for the first time. I had read the paper in St. Petersburg in the kitchen of my apartment with the rain on the kitchen window and the building's heating coils ticking and a cup of tea I had let go cold in the way I let cups of tea go cold when I am reading something I had not expected to be reading at the altitude I was reading it at. The paper had been technical. The technical content had not been the part of the paper I had taken in, that first afternoon, with the texture I had taken it in with.
 
-I had registered the texture of the prose. The prose had been the prose of a man who did not soften. The prose had been the prose of a man who did not stage. The prose had been the prose of a man who had been operating on a system that decided ten years before the paper was written that the system was going to be honest about what it had and what it did not have, and the prose had inherited the system's discipline without commenting on the inheritance.
+I had noted the texture of the prose. The prose had been the prose of a man who did not soften. The prose had been the prose of a man who did not stage. The prose had been the prose of a man who had been operating on a system that decided ten years before the paper was written that the system was going to be honest about what it had and what it did not have, and the prose had inherited the system's discipline without commenting on the inheritance.
 
-I had registered the shape that afternoon. I had not known what the shape's source was. I had read it as the shape of a competent senior architect who had been writing for the kind of operator who would be operating his architecture in the field and who did not waste either of their time with the architectural prose conventions that other senior architects' papers had been trained me to read past. The shape had been the reason I had read the paper end-to-end on the first sitting. The shape had been the reason I had been on the second pass before I made dinner that evening. The shape had been the reason I had been on the third pass with a notebook within the week.
+I had marked the shape that afternoon. I had not known what the shape's source was. I had read it as the shape of a competent senior architect who had been writing for the kind of operator who would be operating his architecture in the field and who did not waste either of their time with the architectural prose conventions that other senior architects' papers had been trained me to read past. The shape had been the reason I had read the paper end-to-end on the first sitting. The shape had been the reason I had been on the second pass before I made dinner that evening. The shape had been the reason I had been on the third pass with a notebook within the week.
 
 The shape had been the shape of submarine engineering written into civilian distributed-systems work. I had not known the shape's source on the first reading. The shape had been the source. I had been recognizing the source without knowing what I was recognizing.
 
 I sat with the recognition.
 
-I did not name it aloud. I did not need to. Joel did not need me to. The wardroom was the wardroom. The clock was the clock. The naming would have been ceremony. We were not in a register the ceremony belonged in.
+I did not name it aloud. I did not need to. Joel did not need me to. The wardroom was the wardroom. The clock was the clock. The naming would have been ceremony. We were not in the frame the ceremony belonged in.
 
 ---
 
@@ -175,7 +184,7 @@ He stopped. He rotated the empty mug another quarter turn. He looked at the port
 
 *She is gone. She has been gone for twenty-eight years. She was on the active list for less than a quarter of a century. The reactor is decommissioned. The hull is not on the register. There is no longer a hull I served on. The hull I served on does not exist. I am the kind of veteran whose boat is not on a museum mooring somewhere; my boat is steel that was recycled into other things, in other yards, twenty-eight years ago.*
 
-He said it without weight on the words. He named the facts in the order the facts wanted to be named in. The not-weight was the weight; he had decided some time earlier that he was not going to put weight on the boat's absence and the discipline of the decision was the discipline I had been registering in him since the recruitment call.
+He said it without weight on the words. He named the facts in the order the facts wanted to be named in. The not-weight was the weight; he had decided some time earlier that he was not going to put weight on the boat's absence and the discipline of the decision was the discipline I had been marking in him since the recruitment call.
 
 He said: *the discipline she ran on did not go with her. The discipline she ran on is in me. It has been in me for thirty years. It is in the architecture you are running on right now. Some of it is in the engineers I have worked with over the years and the engineers they have worked with after me. It is not in the hull. The hull is steel; the steel is recycled. The discipline is somewhere else.*
 
@@ -189,17 +198,17 @@ I said it with the same texture I had said it with the third time, which was the
 
 I sat with what he had said.
 
-I had been thinking, in the seven seconds of quiet between his last sentence and my acknowledgment, about a thing I would not say to him in this conversation. I had been thinking about what the architecture's discipline meant in a register Joel had not named and would not name and was not, on the night of Day 22 in the wardroom, the register he had been talking in. The register he had been talking in had been the register of a man telling another senior operator the source of the discipline he had encoded. The register I had been thinking in was the register of a Mission Director who had bet her crew on that discipline. The two registers were not the same register.
+I had been thinking, in the seven seconds of quiet between his last sentence and my acknowledgment, about a thing I would not say to him in this conversation. I had been thinking about what the architecture's discipline meant at a level Joel had not named and would not name and was not, on the night of Day 22 in the wardroom, the level he had been talking at. The level he had been talking at had been the level of a man telling another senior operator the source of the discipline he had encoded. The level I had been thinking at was the level of a Mission Director who had bet her crew on that discipline. The two were not the same altitude.
 
-The register I had been thinking in was the register that had read his paper that afternoon in St. Petersburg and had recognized the shape without knowing the source. The shape had been the source. I had bet on the shape and the shape had been the discipline of a man who had been honest about what his system had and what his system did not have for fifteen years before he sat down to write a paper. The recognition had been my recognition. The discipline had been his.
+The level I had been thinking at was the level that had read his paper that afternoon in St. Petersburg and had recognized the shape without knowing the source. The shape had been the source. I had bet on the shape and the shape had been the discipline of a man who had been honest about what his system had and what his system did not have for fifteen years before he sat down to write a paper. The recognition had been my recognition. The discipline had been his.
 
-I had not, until tonight, fully registered what I had been registering when I read the paper. I had registered that Joel was a competent architect. I had registered that he did not soften. I had registered the prose's directness. I had not, until tonight, registered that the directness had a source, and that the source was a hull that no longer existed, and that the hull's absence had not subtracted from the directness because the directness had moved to a different substrate.
+I had not, until tonight, fully understood what I had been catching when I read the paper. I had caught that Joel was a competent architect. I had caught that he did not soften. I had caught the prose's directness. I had not, until tonight, caught that the directness had a source, and that the source was a hull that no longer existed, and that the hull's absence had not subtracted from the directness because the directness had moved to a different substrate.
 
 The architecture's discipline was the source's discipline. The source was gone. The discipline had moved.
 
 I sat with that.
 
-I noted, in a register I would not name aloud either, the texture of the man across the desk from me. I had been registering Joel in the operational register since the recruitment call. The operational register was not the only register I was registering him in tonight. The wardroom hum was the wardroom hum. The light was the wardroom light. Joel was Joel, in the chair across the desk, with the empty coffee mug at the precise place he had set it down before, and his eyes were the eyes of a man who had finished telling me a thing he had been carrying for some time and had decided to set down. The setting-down was a setting-down. I registered the setting-down. I registered the man who had set it down.
+I noted, in a frame I would not name aloud either, the texture of the man across the desk from me. I had been taking Joel's measure in the operational bearing since the recruitment call. The operational bearing was not the only bearing I was measuring him in tonight. The wardroom hum was the wardroom hum. The light was the wardroom light. Joel was Joel, in the chair across the desk, with the empty coffee mug at the precise place he had set it down before, and his eyes were the eyes of a man who had finished telling me a thing he had been carrying for some time and had decided to set down. The setting-down was a setting-down. I saw the setting-down. I saw the man who had set it down.
 
 I went back to the work.
 
@@ -225,9 +234,9 @@ I said: *Joel.*
 
 He went forward through the hatch.
 
-I sat at the desk. The wardroom was the wardroom. The hum was the hum. The clock at twenty-three forty-three was the clock at twenty-three forty-three. The window had twenty-nine hours and forty-seven minutes left on it. The boat would dive at oh-five-thirty on Day 23 and Segment 2 would commence at the routine tempo and the architecture would resume the partition register the architecture had been honest about since the morning of Day 7.
+I sat at the desk. The wardroom was the wardroom. The hum was the hum. The clock at twenty-three forty-three was the clock at twenty-three forty-three. The window had twenty-nine hours and forty-seven minutes left on it. The boat would dive at oh-five-thirty on Day 23 and Segment 2 would commence at the routine tempo and the architecture would resume the partition bearing the architecture had been honest about since the morning of Day 7.
 
-I sat with what Joel had said. I did not write it down. I had registered enough of it that the registering would carry. The conversation would be logged later, in the form the record would need to carry it in. That form would not be the one the conversation had taken in the wardroom. The wardroom kept its own register; the record would land it differently.
+I sat with what Joel had said. I did not write it down. I had taken enough of it in that it would carry. The conversation would be logged later, in the form the record would need to carry it in. That form would not be the one the conversation had taken in the wardroom. The wardroom kept its own carriage; the record would land it differently.
 
 I stood. I rinsed my own cup. I closed the wardroom desk terminal. I turned the wardroom sconce down at the dimmer. The hum continued. The hum would continue.
 
@@ -235,7 +244,7 @@ I went forward to my bunk.
 
 I did not sleep right away.
 
-I lay on the bunk in the dark with the hum overhead and the surface dark of sixty-one south outside the hull and the clock running down on the surface window, and I sat with what Joel had told me about the boat. I sat with the boat that was no longer on the register and the discipline that had moved and the man who had carried the discipline from the boat to the paper to the architecture to the wardroom on the night of Day 22 in the wardroom of a different boat, and I sat with what I had bet on, when I had read the paper, and what I had been registering in him without registering the source.
+I lay on the bunk in the dark with the hum overhead and the surface dark of sixty-one south outside the hull and the clock running down on the surface window, and I sat with what Joel had told me about the boat. I sat with the boat that was no longer on the register and the discipline that had moved and the man who had carried the discipline from the boat to the paper to the architecture to the wardroom on the night of Day 22 in the wardroom of a different boat, and I sat with what I had bet on, when I had read the paper, and what I had been tracking in him without seeing the source.
 
 I sat with it for some minutes.
 

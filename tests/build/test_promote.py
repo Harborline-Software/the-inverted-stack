@@ -110,7 +110,7 @@ def test_promote_with_accept_manual_edit_flag_succeeds_on_mismatch(tmp_repo):
     log_entry = {
         "chapter": "ch01-foo", "pass_num": 2,
         "input_sha256": promote.compute_sha256(source),
-        "output_sha256": "f" * 64,  # mismatch — but accept_manual_edit=True overrides
+        "output_sha256": "f" * 64,  # mismatch - but accept_manual_edit=True overrides
         "agent_path": ".claude/agents/voice-sinek.md", "agent_sha256": "0" * 64,
         "claude_cli_version": "claude 1.0.0", "model": "claude-sonnet-4-6",
         "prompt_mode": "normalize", "exit_code": 0, "duration_s": 1.0,

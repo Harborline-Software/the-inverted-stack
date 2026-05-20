@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Lexical-fatigue detector — Phase 0 of the prose-telemetry platform.
+"""Lexical-fatigue detector - Phase 0 of the prose-telemetry platform.
 
 Counts hand-curated word-family occurrences per chapter; computes per-1000-word
 density; compares to Vol 2 baseline; flags chapters where any family exceeds
@@ -228,7 +228,7 @@ def run_rollup() -> None:
         for c in flagged:
             print(f"    {c['slug']}:")
             for fl in c["flags"]:
-                print(f"      {fl['lemma']:<15s} {fl['per_1k']:>5.2f}/1k vs baseline {fl['baseline_per_1k']:.2f} ({fl['ratio']:.2f}x) — {fl['severity']}")
+                print(f"      {fl['lemma']:<15s} {fl['per_1k']:>5.2f}/1k vs baseline {fl['baseline_per_1k']:.2f} ({fl['ratio']:.2f}x) - {fl['severity']}")
     print()
     print(f"  → rollup written to {out_path.relative_to(REPO)}")
 
@@ -328,7 +328,7 @@ def run_observational_density() -> None:
 
     Three canonical references (per .pao-inbox/_creative/nansen-ingestion-canon.md):
     Nansen 1897 (Arctic field diary), Verne 1897 (Antarctic Mystery), Verne 1870
-    (Twenty Thousand Leagues — submarine narrative). Weighted average forms the
+    (Twenty Thousand Leagues - submarine narrative). Weighted average forms the
     canon baseline. Chapters falling below 50% of weighted baseline are candidates
     for ingestion; chapters falling below 35% flag as high-priority.
     """
@@ -420,7 +420,7 @@ def run_observational_density() -> None:
         ratio = vol2_baseline_per_1k / canon_per_1k
         print(f"  Vol 2 vs triangulated canon ratio:                              {ratio:.2f}× ({'BELOW' if ratio < 1 else 'above'} canon)")
     print()
-    print(f"  Per-chapter observational density (sorted ascending — lowest = most candidate for ingestion):")
+    print(f"  Per-chapter observational density (sorted ascending - lowest = most candidate for ingestion):")
     print(f"    {'chapter':<55s}  {'words':>6s}  {'obs':>5s}  {'/1k':>6s}  {'vs canon':>10s}")
     for c in sorted(per_chapter, key=lambda x: x["per_1k"]):
         flag = ""
@@ -434,7 +434,7 @@ def run_observational_density() -> None:
     if flagged:
         print(f"  Chapters with observational density < 50% of triangulated canon:")
         for c in flagged:
-            print(f"    {c['slug']:<55s}  {c['per_1k']:.2f}/1k ({c['ratio_to_canon']:.2f}x of canon) — {c['severity']}")
+            print(f"    {c['slug']:<55s}  {c['per_1k']:.2f}/1k ({c['ratio_to_canon']:.2f}x of canon) - {c['severity']}")
     print()
     print(f"  → rollup written to {out_path.relative_to(REPO)}")
 
@@ -493,7 +493,7 @@ def run_discover() -> None:
     out_path = OUT_DIR / "vol-2-lexical-fatigue-discovery.json"
     write_json(out_path, rollup)
 
-    print(f"Auto-discovery — non-curated lemmas with density >= 2.0/1k across Vol 2 ({total:,} tokens):")
+    print(f"Auto-discovery - non-curated lemmas with density >= 2.0/1k across Vol 2 ({total:,} tokens):")
     print(f"  {'lemma':<25s}  {'count':>6s}  {'per /1k':>7s}  {'note':30s}")
     for c in candidates:
         flag = "(proper noun)" if c["proper_noun_candidate"] else ""

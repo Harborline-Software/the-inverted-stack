@@ -1,4 +1,4 @@
-# Technical Review Report — #44 Per-Data-Class Device Distribution
+# Technical Review Report - #44 Per-Data-Class Device Distribution
 
 **Chapter:** `vol-1/part-3-reference-architecture/ch16-persistence-beyond-the-node.md`
 **Stage:** ICM Stage 4 (technical-review)
@@ -15,9 +15,9 @@ The previous attempt stalled mid-analysis of the Ch16:188 CLAIM marker. Three mu
 
 ## 2. Edits Already Applied (manual, do not redo)
 
-1. **Ch16:170** — Cross-reference corrected: `Cross-reference Ch11 §Fleet Management` -> `Cross-reference Ch21 §21.1 Why fleet management is a distinct discipline (and the §11a-§11d sub-patterns that follow)`. Ch21 is the canonical fleet-management home; Ch11 is the runtime-substrate chapter.
-2. **Ch16:134** — HTML annotation header on `Sunfish.Foundation.Fleet` corrected from "in canon, introduced #11" to "forward-looking, Volume 1 extension roadmap from #11; not yet present in Sunfish reference implementation per Ch21:8".
-3. **Ch16:188** — CLAIM-marker prose tightened: replaced over-broad "per-class ratchet" framing with a faithful summary of Ch15 §Forward Secrecy (per-message ratchet between session pairs, sub-pattern 46a-46b) and explicit framing that the mid-stream subscription onboarding mechanism must be specified jointly with the #46 work. CLAIM marker retained but tightened to flag a #46 follow-up rather than a Ch15 contradiction.
+1. **Ch16:170** - Cross-reference corrected: `Cross-reference Ch11 §Fleet Management` -> `Cross-reference Ch21 §21.1 Why fleet management is a distinct discipline (and the §11a-§11d sub-patterns that follow)`. Ch21 is the canonical fleet-management home; Ch11 is the runtime-substrate chapter.
+2. **Ch16:134** - HTML annotation header on `Sunfish.Foundation.Fleet` corrected from "in canon, introduced #11" to "forward-looking, Volume 1 extension roadmap from #11; not yet present in Sunfish reference implementation per Ch21:8".
+3. **Ch16:188** - CLAIM-marker prose tightened: replaced over-broad "per-class ratchet" framing with a faithful summary of Ch15 §Forward Secrecy (per-message ratchet between session pairs, sub-pattern 46a-46b) and explicit framing that the mid-stream subscription onboarding mechanism must be specified jointly with the #46 work. CLAIM marker retained but tightened to flag a #46 follow-up rather than a Ch15 contradiction.
 
 These three edits are accepted as-applied and were not re-verified in this run.
 
@@ -29,12 +29,12 @@ URL/DOI reachability checked via `curl -I` (no WebSearch budget consumed). All s
 
 | # | Source | Status | Analogue claim faithful? |
 |---|---|---|---|
-| [1] | Dropbox Selective Sync | 200 | Yes — line 160 frames it as "untyped void rather than typed placeholder," consistent with how Selective Sync excludes folders without semantic stub. PASS. |
-| [2] | Microsoft OneDrive Files On-Demand | 200 | Yes — line 160 frames it as placeholder-as-presence with deferred-fetch latency. PASS. |
-| [3] | Apple iCloud Optimize Mac Storage | 301 (canonical product redirect) | Yes — line 160 frames it as deferred-fetch (re-materialise on access). PASS. |
-| [4] | ElectricSQL v0.10 shape filtering | 200 | Yes — date 2024-04-10 matches blog URL slug; shape-filtering is the primary feature of v0.10. Line 152 analogue: "shape filtering is the closest production analogue at the WAN-sync level" with the documented inversion (schema-declared class labels vs SQL `WHERE` predicates). PASS. |
-| [5] | PowerSync Sync Rules | 308 (canonical) | Yes — line 146 analogue: "bucket-definition model" with explicit inversion (server-side per client parameter vs client-side device-declared policy). PASS. |
-| [6] | Terry et al. Bayou SOSP 1995 | DOI 302 -> ACM portal | Yes — authors (Terry, Theimer, Petersen, Demers, Spreitzer, Hauser), venue (SOSP '95 Copper Mountain), pp. 172-182, DOI 10.1145/224056.224070 all match canonical paper metadata. Line 176 analogue: "device-level partial replication with explicit subscription declarations dates to 1995." PASS. |
+| [1] | Dropbox Selective Sync | 200 | Yes - line 160 frames it as "untyped void rather than typed placeholder," consistent with how Selective Sync excludes folders without semantic stub. PASS. |
+| [2] | Microsoft OneDrive Files On-Demand | 200 | Yes - line 160 frames it as placeholder-as-presence with deferred-fetch latency. PASS. |
+| [3] | Apple iCloud Optimize Mac Storage | 301 (canonical product redirect) | Yes - line 160 frames it as deferred-fetch (re-materialise on access). PASS. |
+| [4] | ElectricSQL v0.10 shape filtering | 200 | Yes - date 2024-04-10 matches blog URL slug; shape-filtering is the primary feature of v0.10. Line 152 analogue: "shape filtering is the closest production analogue at the WAN-sync level" with the documented inversion (schema-declared class labels vs SQL `WHERE` predicates). PASS. |
+| [5] | PowerSync Sync Rules | 308 (canonical) | Yes - line 146 analogue: "bucket-definition model" with explicit inversion (server-side per client parameter vs client-side device-declared policy). PASS. |
+| [6] | Terry et al. Bayou SOSP 1995 | DOI 302 -> ACM portal | Yes - authors (Terry, Theimer, Petersen, Demers, Spreitzer, Hauser), venue (SOSP '95 Copper Mountain), pp. 172-182, DOI 10.1145/224056.224070 all match canonical paper metadata. Line 176 analogue: "device-level partial replication with explicit subscription declarations dates to 1995." PASS. |
 
 **Outcome:** All six refs verified. No edits required.
 
@@ -75,7 +75,7 @@ URL/DOI reachability checked via `curl -I` (no WebSearch budget consumed). All s
 
 Exactly **one** CLAIM marker remains in Ch16:
 
-- **Line 188** — flags joint specification with #46 (forward-secrecy onboarding boundary at mid-stream class subscription). Tightened during the manual fix run. Not a contradiction with v13/v5/Ch15; an explicit deferral to the #46 spec.
+- **Line 188** - flags joint specification with #46 (forward-secrecy onboarding boundary at mid-stream class subscription). Tightened during the manual fix run. Not a contradiction with v13/v5/Ch15; an explicit deferral to the #46 spec.
 
 This satisfies the PASS-with-claim-markers bar (≤1 marker).
 
@@ -85,9 +85,9 @@ This satisfies the PASS-with-claim-markers bar (≤1 marker).
 
 Spot-check of new references in Ch16 (#44 additions):
 
-- `Sunfish.Kernel.Buckets` — in canon. PASS.
-- `Sunfish.Foundation.Fleet` — flagged as forward-looking via the corrected line 134 annotation. PASS (annotation now accurate).
-- `Sunfish.Kernel.Audit` — in canon. PASS.
+- `Sunfish.Kernel.Buckets` - in canon. PASS.
+- `Sunfish.Foundation.Fleet` - flagged as forward-looking via the corrected line 134 annotation. PASS (annotation now accurate).
+- `Sunfish.Kernel.Audit` - in canon. PASS.
 
 No invented APIs surfaced; no new flags.
 

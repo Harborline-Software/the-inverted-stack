@@ -48,11 +48,11 @@ def main() -> int:
             if orphans:
                 failures.append(f"{ch.relative_to(REPO).as_posix()}: {sorted(orphans)}")
     if failures:
-        print("FAIL — jurisdictions in chapters not declared in Appendix F:")
+        print("FAIL - jurisdictions in chapters not declared in Appendix F:")
         for f in failures:
             print(f"  {f}")
         return 1
-    print(f"PASS — every jurisdiction in chapters appears in Appendix F.")
+    print(f"PASS - every jurisdiction in chapters appears in Appendix F.")
     return 0
 
 
