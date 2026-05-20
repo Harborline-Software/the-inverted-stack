@@ -30,7 +30,7 @@ plants-paid:
 
 ---
 
-The light at 0708 on the morning of Day 37 was the light I had been expecting and was not the light I had taken in at the first surfacing. The first surfacing had given me a green that had not yet been a green and a sun that had not yet been a sun. Sixteen days later the southern ocean at sixty-one degrees south had moved against the season; the sun was higher; the green was a green now. I came up the ladder to the bridge wing for the second time on this mission, took the wind on my face, and noted that the body took the surface this time with less of what it had felt at the first surfacing. Repetition was the body adjusting. The morning of Day 21 had been the body learning that the boat could surface. The morning of Day 37 was the body knowing.
+The light at 0708 on the morning of Day 37 was the light I had been expecting and was not the light I had taken in at the first surfacing. The first surfacing had given me a green that had not yet been a green and a sun that had not yet been a sun. Sixteen days later the southern ocean at sixty-one degrees south had moved against the season; the sun was higher; the green was a green now. I came up the ladder to the bridge wing for the second time on this mission, took the wind on my face — cold still, but dry in a way the first surfacing had not been dry — and noted that the body took the surface this time with less of what it had felt at the first surfacing. Repetition was the body adjusting. The morning of Day 21 had been the body learning that the boat could surface. The morning of Day 37 was the body knowing.
 
 The architecture had spent sixteen days on the boat alone, and the architecture was reporting clean.
 
@@ -134,13 +134,13 @@ I noted the filing. I went to the wardroom.
 
 ---
 
-I had a cup of tea in the wardroom at 1438. The cup was the same metal cup with the small dent in the handle that I had been carrying since the Drake. The tea was hotter than I had expected. I had not made the tea.
+I had a cup of tea in the wardroom at 1438. The cup was the same metal cup with the small dent in the handle that I had been carrying since the Drake. The tea was hotter than I had expected — bergamot, which I had not requested. I had not made the tea.
 
 Joel was at the wardroom table at the far end. He was reading something on his laptop with the kind of stillness he read at. He looked up when I came in. He nodded. He went back to the laptop.
 
 I sat at the desk on the near end. The cup of tea was already at my elbow when I sat down. I had not put it there. Joel had put it there before I came in, between his second watch and the wardroom run, in the seven minutes during which he had known the cross-check had filed and during which he had known I would come to the wardroom for the watch handoff. The cup was the metal cup he knew I drank tea from. The tea was the tea I drank in the afternoon. The cup was at the elbow that was the elbow the cup belonged at if the cup was waiting for me. He did not look up to mark that I had taken the cup in. He was reading. He read the way he read.
 
-I had been tracking this since the morning of Day 22 of Segment 1, when he had brought me a cup of coffee at 0317 in the night watch and had set it down at the elbow without making the setting-down a thing, and I had taken the cup in and not yet named the pattern. The pattern had been there for sixteen days at the level the pattern operates at when the pattern is not yet at the level of the body knowing that the pattern is a pattern. He had adjusted his evening rotation by ten minutes on Day 28 so that his read-period at the wardroom overlapped with mine on the schedule the boat ran by, and I had noted the overlap and not yet caught the adjustment. He had taken the seat at the far end of the wardroom on three consecutive evenings in Segment 2 - the seat that gave the wardroom the spacing the wardroom needed when two senior officers were in the wardroom at the same time without being at the wardroom together. The pattern had been quiet. The pattern had been held to the discipline he held things to. I had been tracking the pattern at the same body-level register - slower than the architecture caught the partition transition, at the tempo I had been operating at for thirty years. I saw now, at 1438 in the wardroom on the morning of the second day of the second surface window, that I had been tracking the pattern for sixteen days. The naming arrived without changing what the morning held. I did not act on the naming. He did not see that I had seen. The cup was hotter than I had expected. I drank the tea.
+I had been tracking this since Day 22, when he had set a cup of coffee at my elbow at 0317 in the night watch without making the setting-down a thing. That was sixteen days ago. The naming arrived now, at 1438, without changing what the morning held. I did not act on it. He did not see that I had seen. I drank the tea.
 
 ---
 

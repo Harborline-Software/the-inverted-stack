@@ -24,9 +24,7 @@ plants-paid:
 
 # Chapter 10 - *The Aftermath of a Mission That Once Was*
 
-The wardroom hum was the wardroom hum. The light was the wardroom light. The clock on the bulkhead read oh-two-fifty-one. The boat had been at depth for twenty-six days and nine hours.
-
-I had been at the wardroom desk since the bridge had been quiet enough that I could be at the wardroom desk without being missed. The watch had settled. The trim held. The carrier-acoustic floor under the boat was the floor it had been at oh-two-fifty-one on the morning of Day 24 and on the morning of Day 30 and on every morning between. The data console on the other side of the bulkhead was operating without Hiroshi at its shoulder; he had handed off at midnight and was sleeping in the bunk he had earned. The polar-operations console was unmanned. The relay was dormant the way the relay had been dormant since oh-five-forty-six on Day 7 of the transit south. The architecture was operating.
+The wardroom hum was the wardroom hum. The clock on the bulkhead read oh-two-fifty-one. The boat had been at depth for twenty-six days and nine hours.
 
 I had a cup of tea at my left elbow that had gone past warm and had not yet gone cold. The cup was the metal one from the wardroom stack. The handle had the small dent it had carried since the Drake and that I had noted every morning of Segment 1 and that I had stopped noting, the way the boat eventually stops marking things that have taken up residence in the body, on Day 22 of Segment 2.
 
@@ -118,8 +116,6 @@ What I took in, sitting across the consortium table from her at the moment of th
 
 The shape is what I went home with from Bremerhaven. The shape is what I have carried for five years.
 
-I am, tonight, writing it down for the first time.
-
 ---
 
 The architectural property that failed us in the prior mission was not the schema migration. The schema migration is a mechanism. Mechanisms can be specified, tested, and improved. The engineer at AARI who replaced me on the mortality-investigation working group has, in the four years since, contributed to three published papers on schema-migration specification practices in distributed polar deployments. The schema migration as a mechanism is, in 2026, a better-understood mechanism than it was in 2021. The improvement is real. The improvement is also not the answer to the question the mortality-investigation working group did not ask.
@@ -156,7 +152,7 @@ Priya, with the four-pass discipline she carried into the lab and onto the boat.
 
 Wanjiru, with the exception-refusal she had brought into every standards-adjacent conversation we had had since I recruited her. She had told me, in the office on the eighteenth of November, that she would not, under any consortium pressure or any institutional incentive, sign off on a key-rotation framework that permitted exception-grants for jurisdictions whose data-sovereignty postures she could not technically verify. She had told me she would not sign off on it before I had asked her to consider whether she would sign off on it. She had told me in writing - in the formal mission-acceptance memo she filed with the consortium's security-architecture board - what she would refuse to do, in advance, with reasons. The refusal was record. The refusal had been the document the security-architecture board had read at the moment of her acceptance. She refused the exception before it was requested. The refusal is record.
 
-Three architectural inverses. One in disclosure. One in disciplined limit. One in institutional refusal. Three different operational shapes; three different professional vocabularies; three different framings for the same property. Disclosure-without-compulsion in the protocol. Disciplined-limit-without-compulsion in the lab. Institutional-refusal-without-compulsion in the standards layer.
+The same architectural inverse had surfaced in three different operational vocabularies: disclosure-without-compulsion in the protocol, disciplined-limit-without-compulsion in the lab, institutional-refusal-without-compulsion in the standards layer.
 
 I had selected for the property in three different vocabularies because the property is the same property at three different layers of the architecture. The selection in three vocabularies had been intuitive. The selection has, tonight, become legible.
 

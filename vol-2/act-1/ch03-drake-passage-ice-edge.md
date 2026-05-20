@@ -33,7 +33,8 @@ plants-paid:
      Wave 4: replaced bookkeeping "six crossings... twice as a junior, three times..." with role-arc only ("came up through the Strait first as a junior, then as a chief scientist, and now as the woman in command").
      Wave 5: earn-its-place audit cuts: "Drake Passage eleven times" → "before"; "reconciling the third item on each" → "items on each"; collapsed "She said Director. She said it in her working register"; dropped "Sabina is fifty-eight"; dropped "I have known Diego for fifteen years"; resolved 3-vessels redundancy (line 42 specific-count duplicate to Insert 4's specific-ships).
      Wave 6: UPF Stage 1.5 fixes — trimmed redundant forward-foreshadowing closer ("None of us yet knew..."); thematic-restructure to Option A (theme-labeled section headers replacing `---` scene breaks).
-     Final word count: ~6,100. Galley green. -->
+     Wave 7 (UPF recommendations 2026-05-20, Yeoman): (1) Cut Wanjiru tricolon close ("That is what the architecture is...") → concrete physical close ("I went below and logged it in those words"); (2) Varied "the discipline" motif overrun in Priya scene: "The discipline took both" → "Both of them took it"; "The discipline did not lift for him..." → "She didn't come up for him..."; kept "The discipline was where it belonged"; (3) Compressed Joel post-rehearsal 120-word confirmation paragraph to one sentence referencing recorded-fact callback.
+     Final word count: ~6,020. Galley run pending. -->
 
 
 The Strait of Magellan was behind us by the second watch of Day 1. I came up through the Strait first as a junior, then as a chief scientist, and now as the woman in command, and I will tell you that the Strait is a kind of water you can love without effort. It is sheltered. It is glacial-fed. It is the grey-green you can stand at the rail of and read the depth of by eye. None of those things are true of what was waiting on the other side. It is not the Drake. The boat knew the difference before any of us did. Around eighteen hundred, the Nansen began to take the first of the swells the boat takes on the southern leg, and from that hour on the deck moved.
@@ -110,7 +111,7 @@ What the exchange had been, I logged afterward at the desk, was Wanjiru installi
 
 Other comm officers would not have thought to install the baseline. The surface-side claim would have been assumed in the way operational baselines are usually assumed, which is to say by reference to the absence of any complaint. Wanjiru did not assume by absence. Wanjiru attested. The attestation was procedure, not theatre. She had done the same thing the architecture would do, in the same kind of sentence the architecture would use, on the surface, before the dive. The discipline ran through both of them.
 
-I want to name what that means, because if you have not stood on a deck before a partition where the architecture is about to carry the work the network used to carry, the technical sentence does not land. An attestation is what you say when you cannot afford for the next person to misunderstand the state of the world. The architecture's specification has a sentence in it that says: *at the close of a relay window, the surface state is countersigned and replicated to the local store of every node.* Wanjiru, on the wing at the afternoon of Day 4, said the same sentence in the human register. She named the surface state. She asked me to attest it. I attested it. The architecture, two compartments below us, was about to be asked to do the same thing on its own carrier under conditions it had not yet been tested under. The architecture would attest, when the partition closed against it, the same way Wanjiru had attested when I came up to her on the wing. The architecture's discipline was Wanjiru's discipline made portable. That is what the architecture is. That is what Wanjiru is. That is why I had picked them both.
+I want to name what that means, because if you have not stood on a deck before a partition where the architecture is about to carry the work the network used to carry, the technical sentence does not land. An attestation is what you say when you cannot afford for the next person to misunderstand the state of the world. The architecture's specification has a sentence in it that says: *at the close of a relay window, the surface state is countersigned and replicated to the local store of every node.* Wanjiru, on the wing at the afternoon of Day 4, said the same sentence in the human register. She named the surface state. She asked me to attest it. I attested it. The architecture, two compartments below us, was about to be asked to do the same thing on its own carrier under conditions it had not yet been tested under. The architecture would attest, when the partition closed against it, the same way Wanjiru had attested when I came up to her on the wing. The architecture's discipline was Wanjiru's discipline made portable. I went below and logged it in those words.
 
 ## The Fourth Pass — Priya
 
@@ -152,9 +153,9 @@ She did not negotiate. She did not offer the operational context for why a fourt
 
 She started the fourth pass.
 
-I watched the first ninety seconds from the doorway. Priya counted under her breath. The numbers came in clean. The sub-windows on the workstation showed them as she counted. The pass log logged the entry. The deviation plot updated. Sub-channel nine returned to mid-tolerance; the other eight held where they had been on the third pass. The fixture took the boat's motion. Priya took the fixture's motion. The discipline took both.
+I watched the first ninety seconds from the doorway. Priya counted under her breath. The numbers came in clean. The sub-windows on the workstation showed them as she counted. The pass log logged the entry. The deviation plot updated. Sub-channel nine returned to mid-tolerance; the other eight held where they had been on the third pass. The fixture took the boat's motion. Priya took the fixture's motion. Both of them took it.
 
-She acknowledged the watch officer who came in two minutes later with a question about the deployment manifest. She said *yes* without looking up. The follow-up got *no*. *Clear*, on the third exchange. The watch officer accepted the three words and went forward. The discipline did not lift for him, or for the Mission Director either.
+She acknowledged the watch officer who came in two minutes later with a question about the deployment manifest. She said *yes* without looking up. The follow-up got *no*. *Clear*, on the third exchange. The watch officer accepted the three words and went forward. She didn't come up for him, or for the Mission Director either.
 
 I noted, leaving the lab, that Priya's fourth pass was not a thing she had announced as a deviation from procedure. It was a thing she had decided was procedure on the boat about to dive under the ice. The consortium's three-pass standard had been the floor; the fourth was the ceiling she ran her own work to. She had not asked the consortium for permission to raise the ceiling. She had not consulted me on whether to raise it. She had raised it. The lift cost the boat about eleven additional minutes of calibration time. The boat could afford them. The architecture, if a sub-channel-nine fault propagated through schema migration under partition six weeks from now, would not have to spend them recovering.
 
@@ -188,9 +189,7 @@ You may, if you have read the earlier chapter about the afternoon I interviewed 
 
 ---
 
-The rehearsal ran on the afternoon watch on Day 6 between fourteen-twenty and fifteen-thirty. The acoustic-only mesh held. The sync protocol's behavior matched the pre-mission models within the expected envelope on every metric Joel and Wanjiru had instrumented for. Priya brought her instrumentation calibration into the mesh on the rehearsal's second pass and the sub-channels she had recalibrated on Day 5 returned within tolerance under the carrier's error profile. Joel briefed me at sixteen-forty. He said the rehearsal had matched the specification. The dive on Day 7 could proceed against the architecture's pre-mission profile. The comparison was now a recorded fact.
-
-I said: *acknowledged.* He went below.
+The rehearsal held. Joel briefed me at sixteen-forty and confirmed the comparison was now a recorded fact.
 
 ## The Edge — Day 7
 

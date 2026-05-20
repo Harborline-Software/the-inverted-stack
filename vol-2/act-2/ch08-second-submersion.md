@@ -20,17 +20,19 @@ plants-paid:
 ---
 
 
-<!-- PRE-BOBIVERSE DRAFT. Awaiting rewrite in the locked Filchner / Anna-voice register (vol-2/SPINE.md, vol-2/ANNA-VOICE.md). Not for assembly, not for listen-test, not for audiobook regeneration until rewritten. -->
+<!-- Bobiverse-warmth pass 2026-05-20 (PAO). Per UPF ch08 report: cut "the way X" motif overrun (11+→3); cut "register" family (~8→3, no adjacent); insert 4 parenthetical asides at Sabina conference + wardroom close; cut wardroom reflection to "The hum would continue." stop. Preserved: foreshadowing plants (sabina-procurement-dry-run, mock-flag-specification, priya-schema-handshake-clean-segment2), Hiroshi best-sentence ("He had seen that I had needed to log him there"), three-meeting structural shape. PRE-BOBIVERSE flag retired. -->
 
 The Nansen passed below the surface at oh-five-thirty on Day 23.
 
-I was on the bridge for it. The boat's master ran the dive sequence at the tempo the dive sequence ran at, and the deck plates under my boots took on the angle a vessel takes on when the vessel ceases to be a surface vessel and becomes a different kind of vessel, and the band of grey-green water that had been off the port quarter at the start of the cycle was no longer water by the seventh minute. The pumps cycled. The trim seated. The boat steadied. The instrument panel showed three hundred meters at oh-five-forty-six. The relay layer transitioned from active to dormant at the same moment the trim seated; Wanjiru reported the transition clean from the comm space; the gossip protocol on the consortium-port side noted the dormancy at the level grey it had noted on the morning of Day 7 and again at the close of the surface window two days earlier.
+I was on the bridge for it. Mikael ran the dive sequence at its own tempo - pumps, trim, the deck plates tilting toward the angle that means a surface vessel has stopped being one - and the band of grey-green water off the port quarter was no longer water by the seventh minute. The pumps cycled. The trim seated. The boat steadied. The instrument panel showed three hundred meters at oh-five-forty-six. The relay layer transitioned from active to dormant at the same moment the trim seated; Wanjiru reported the transition clean from the comm space; the gossip protocol on the consortium-port side dropped to the level grey it had carried on the morning of Day 7, and again at the close of the surface window two days earlier.
 
-I did not log the dive entry the way I had logged it on the morning of Day 7. The morning of Day 7 had been the morning the partition bearing first became operational. The morning of Day 23 was the morning the partition bearing became routine. The boat's master called the depth without staging. The deck officer acknowledged without staging. I signed the dive entry. The entry chained into the local store the way the entry on Day 7 had chained, and the way the entry on Day 21 had chained at the surface transition. The dive was the dive. The boat was at depth. Segment 2 had commenced.
+I did not log the dive entry as I had on the morning of Day 7. The morning of Day 7 had been the morning the partition bearing first became operational. The morning of Day 23 was the morning it became routine - which is a different kind of morning, and on a long mission a more important one. Mikael called the depth without staging. The deck officer acknowledged without staging. I signed. The entry chained into the local store as cleanly as the Day 7 entry had chained, and as the Day 21 entry had chained at the surface transition. The dive was a dive. The boat was at depth. Segment 2 had commenced.
 
 I went below.
 
-The wardroom hum was the wardroom hum. The light was the wardroom light. The hatch into the conference space was open at the angle it had been open at on the morning of Day 7. The body had not, this morning, taken in the colour of the water above the hull the way the body had taken it in at three hundred meters on the morning of Day 7. The colour above had been the same colour. The body had not paused to mark it. The chapter-of-Segment-2 had begun the way Joel had said it would, which was the way the architecture had said it would, which was at the routine tempo with the partition bearing now installed in everyone on the boat as the operational floor.
+The wardroom hum was on. The light was the wardroom's standard. The hatch into the conference space stood open at the angle it had stood at on the morning of Day 7. I noticed all of this and noticed that I had not, this time, paused at three hundred meters to mark the colour of the water above the hull - the body skips the ceremony once the body knows where the floor is. The colour above was the same colour. I had stopped collecting it.
+
+Joel had said the second dive would feel like nothing. The architecture had said the second dive would feel like nothing. They were both correct, which is one of the things Joel and the architecture have in common, and which is not always reassuring.
 
 I had thirteen and a half days ahead of me to spend at the routine tempo. I knew what the routine tempo looked like. I had not yet seen what the work would do inside the tempo.
 
@@ -38,7 +40,7 @@ I had thirteen and a half days ahead of me to spend at the routine tempo. I knew
 
 Sabina came to me at oh-eight-forty.
 
-She came through the wardroom hatch with the manila folder in her left hand and a tablet in her right and the satchel that lived on the bench at the wardroom desk over her shoulder. She had been at the desk since before the dive sequence began. She had been at the desk through the sequence. She had not come up to the bridge for the dive because Sabina did not come up to the bridge for events that did not require her presence; she had been reconciling the consortium's first-window outbound against the paper file, and she had finished the reconciliation, and now she had something to bring me.
+She came through the wardroom hatch with the manila folder in her left hand, a tablet in her right, and the satchel that lived on the bench at her desk over her shoulder. She had been at the desk since before the dive - through the sequence and after - because Sabina does not come up to the bridge for events that do not require her presence (a discipline I have stopped trying to thank her for, because she has stopped accepting the thanks). She had been reconciling the consortium's first-window outbound against the paper file. She had finished. She had something to bring me.
 
 She said: *Director.*
 
@@ -50,13 +52,13 @@ I said: *the hour.*
 
 She said: *I have something to validate. The partition has run for one cycle. The reconciliation at the surface window has run for one cycle. The architecture has done what the architecture said it would do. I now have a use case I have not yet run against the architecture, and I would like to run it before Segment 2 has gone deep enough that running it costs us a procedure we cannot easily redo. I would like to run it this morning.*
 
-She said it in the tone Sabina has, which is the tone of an officer who has prepared the question before she asks it and does not waste either of our time staging the asking. She had a paper folder under her arm. She had a tablet in her other hand. She had the second sheet of notes she keeps and that I had marked her keeping at the wardroom desk on Day 2 of the transit south. The discipline of how she brought a thing forward was the discipline of an officer who had decided some time before the boat left the pier that the consortium's signoffs would be reconciled, on the boat, on paper, against the architecture's record, and that the reconciliation would be hers to verify. The discipline was not a tic; it was the work, and the work had a shape.
+She said it in her working tone - the tone of an officer who has prepared the question before she asks it and does not waste either of our time staging the asking. The folder was under her arm. The tablet was in her other hand. The second sheet of notes she keeps - the one I had first noticed at the wardroom desk on Day 2 of the transit south - was clipped to the folder's inside cover. None of this is a tic. It is the work, and the work has a shape.
 
 I said: *the conference space at oh-nine.*
 
 She said: *I will pull Joel.*
 
-She said it as a fact about her next move, not as a request. She had been clearing the corridor to the engineering compartment with the second part of her sentence before she finished the first.
+She said it as a fact about her next move, not as a request - which is to say she was already clearing the corridor to the engineering compartment with the second part of her sentence while she finished the first.
 
 She went forward.
 
@@ -64,7 +66,7 @@ I went to the conference space.
 
 ---
 
-Joel came in at oh-eight-fifty-seven. He had the tablet, the printed copy of the council review he had carried on the recruitment call, the notebook, and the coffee he drinks when the coffee is for the work. He sat at the bench opposite me. He did not ask what the meeting was for. He had taken in, from Sabina's request and the timing and the carriage Sabina had brought, that the meeting was Sabina's meeting and that he was here in the supporting carriage. He had set himself at that level before he sat down.
+Joel came in at oh-eight-fifty-seven. He had the tablet, the printed copy of the council review he had carried on the recruitment call, the notebook, and the coffee he drinks when the coffee is for the work (Joel has two coffees, and you can read his expected day off which one he is holding). He sat at the bench opposite me. He did not ask what the meeting was for. He had taken in, from Sabina's request and the timing and the carriage she had brought, that the meeting was Sabina's meeting and that he was here in the supporting role. He had set himself there before he sat down.
 
 Sabina came in at oh-five-of. She had the manila folder open in her hand and a single sheet of paper on top of the folder. The sheet had three columns and twenty-two rows. The columns were headed in her hand: *consortium signoff*, *jurisdiction*, *authority of record*. The rows were the in-port acknowledgments and the secondary contacts she had walked me through on Day 2 of the transit south, plus the additional consortium audit checkpoint the UAE-led leg had added before the boat had left port, plus a category I had not seen on the Day 2 sheet and that Sabina had pencilled in at the bottom of the page in a hand slightly more compressed than the rest of the page.
 
@@ -72,7 +74,7 @@ She closed the hatch. She sat at the head of the bench. She set the folder down.
 
 She said: *the case.*
 
-She said it the way Sabina opens an institutional question, which is by naming the case before she names the procedure. She had decided some time earlier that the case was the case and the procedure was the procedure and that she would name the case first.
+This is how Sabina opens an institutional question: name the case first, then the procedure, never in the reverse order. The decision is older than this meeting. It will outlast it.
 
 She said: *the consortium has scheduled an interim funding-tranche release for Segment 2. The release does not require boat acknowledgment for its initiation; it does require, on the consortium side, a counter-signed acknowledgment of receipt from the boat's procurement officer of record. From me. I would normally counter-sign in the consortium portal during a surface window. The window the consortium has scheduled does not align with our Surface 2. It opens on Day 28. It closes on Day 33. We are at depth from Day 23 to Day 37. I will not be at the consortium portal during the counter-signature window.*
 
@@ -94,7 +96,7 @@ She said: *walk me through what the architecture will do when I sign on Day 28 a
 
 Joel said: *acknowledged.*
 
-He said it the way Joel said *acknowledged* when a senior officer had brought him a real question and he had caught the question at the altitude the question lived at. He took a breath.
+He said it in the bearing he uses when a senior officer has brought him a real question and he has caught the question at the altitude it lives at. He took a breath.
 
 He said: *the case is in the specification. I will walk it. Stop me when I have not been precise.*
 
@@ -160,7 +162,7 @@ She said: *the synthetic record uses the actual consortium chain from the surfac
 
 Joel said: *acknowledged.*
 
-He said it without softening. He had not been going to push back. The constraint was the constraint of an officer who had been thinking about portal behaviour at the level the portal would actually behave at.
+He said it without softening. He had not been going to push back. Sabina's constraint was the constraint of an officer who had been thinking about portal behaviour at the level the portal would actually behave at - not at the level the protocol abstracts allow you to discuss it.
 
 He said: *we use the actual chain from the in-port acknowledgments. The synthetic event is a mock counter-signature on the real chain at a mock timestamp, labelled in the audit log with the mock-flag the specification provides. The portal recognizes the flag and will not treat the artifact as a real procurement event. The flag does not interfere with the envelope. The dry run produces an envelope identical to a real one minus the funding-tranche identity.*
 
@@ -186,7 +188,7 @@ They stood. Sabina collected the folder, the sheet, and the pencil. Joel collect
 
 I sat at the bench for a minute before I moved.
 
-Sabina had brought the case in the texture I had been reading in her since pre-mission, and the texture this morning had also been the texture of an officer who had insisted on the validation because Sabina had been an officer once at the wrong end of a system that had not been honest about what it had and what it did not have, and Sabina had decided some time ago that no system she was ever again responsible for would discover what it could not do at the moment the doing was required. She had brought the paper backup. She had cleared the legal authority. She had read the framework end-to-end. She had not been performing diligence. She had been doing the work the work needed.
+Sabina had brought the case in the texture I had been reading in her since pre-mission. The texture this morning had also been that of an officer who insisted on validation because Sabina had once been at the wrong end of a system that had not been honest about what it had and what it did not have - and who had decided, some time ago, that no system she was ever again responsible for would discover what it could not do at the moment the doing was required. She had brought the paper backup. She had cleared the legal authority. She had read the framework end-to-end. The consortium would call this "diligence" in a press release; Sabina would call it the work. They are not the same word.
 
 I did not log the texture. I noted it.
 
@@ -196,7 +198,7 @@ I went forward.
 
 Hiroshi was at the data console.
 
-He had been at the console since oh-five-fifteen. He had been at the console through the dive sequence; he had been at the console through the transition; he had been at the console while Joel and Sabina had been in the conference space with me. Hiroshi was at the data console the way Hiroshi was at the data console, which was the way the calmest man on the manifest was at his work.
+He had been at the console since oh-five-fifteen - through the dive sequence, through the transition, through the hour Joel and Sabina had spent in the conference space with me. Hiroshi at the data console looked the way Hiroshi at the data console always looked, which is to say like the calmest man on the manifest doing his work.
 
 I came up to his shoulder. He nodded without breaking the angle of his eyes from the screens. He had three displays open. The primary carried the Segment-2 sediment-core deployment schedule with the morning's consortium science-office acknowledgments docked into the side panel. The secondary carried the chief-scientist's daily form for Day 23 in draft, with two of the eleven fields already filled. The tertiary carried a piece of the shore-side correspondence he had been maintaining since the boat left Punta Arenas.
 
@@ -206,11 +208,11 @@ I stood at his shoulder for some seconds.
 
 He said, without looking up: *I have what I need, Director.*
 
-He said it in the register he uses when an officer he respects has come to his shoulder for the kind of check-in that is not a check-in. He had seen me come up. He had noted that I had not asked him a question. He had given me the sentence the morning required, which was the sentence that told me his work was running on the metric his work ran on. He gave it once. He gave it cleanly. He returned to his screens.
+He said it in the bearing he uses when an officer he respects has come to his shoulder for the kind of check-in that is not a check-in. He had seen me come up. He had noted that I had not asked him a question. He had given me the sentence the morning required - the one that told me his work was running on the metric his work ran on. He gave it once. He gave it cleanly. He returned to his screens.
 
 I said: *acknowledged.*
 
-I stood at his shoulder for another second. The console hummed. The angle of his eyes did not change. The discipline of his attention was the discipline of his attention. I had known his discipline from the Drake - *the calmest man on the manifest had set the calmest watch I had seen* - and I knew it now in Segment 2 in the same texture. The texture had not changed. He was the watch's quiet centre. He did not need me at his shoulder. He had seen that I had needed to log him there.
+I stood at his shoulder for another second. The console hummed. The angle of his eyes did not change. I had known his discipline from the Drake - *the calmest man on the manifest had set the calmest watch I had seen* - and I knew it now in Segment 2, unchanged. He was the watch's quiet centre. He did not need me at his shoulder. He had seen that I had needed to log him there.
 
 I went forward.
 
@@ -222,7 +224,7 @@ I said: *Diego.*
 
 He said: *Sabina pulled me before the dive. She asked whether the under-ice routing would put us in any acoustic shadow during the simulated surface-relay window for her dry run. I told her no - we are clear on the routing through the next twelve days; the carrier behaviour at Day 28 will match what the architecture is reading right now. I gave her the printout. She has it.*
 
-He said it the way Diego said operational information - flat, factual, in the senior-operator-to-senior-operator bearing he had with everyone on the boat. He had been pulled by Sabina into her dry-run preparation in the half hour before the dive, and he had walked her through the polar-operations dimension of the case at the altitude she had asked for, and he had done it without making her ask twice.
+Diego delivers operational information in one bearing only - flat, factual, senior-operator-to-senior-operator, the same with me as with everyone else on the boat. Sabina had pulled him into her dry-run preparation in the half hour before the dive. He had walked her through the polar-operations dimension at the altitude she had asked for, and he had done it without making her ask twice.
 
 He nodded. He went forward to the bridge.
 
@@ -244,42 +246,22 @@ I said: *acknowledged.*
 
 She said: *Priya checked the schema state during the dive. The handshake completed across the local mesh at oh-five-forty-eight; she filed the confirmation at oh-six-oh-two. No drift. No deferred upcasters. The schema we surfaced into and the schema we re-submerged on are the same schema. There is no migration scheduled for Segment 2.*
 
-She said it without my asking. She said it in the tone she gave reports in when the report was a report I would want before I asked. Priya's check during the dive had been the same check she had filed on the morning of Day 7 in the conference space. The discipline was the discipline. The schema was stable.
+She said it without my asking - in the tone she uses for reports I would want before I asked for them. Priya's check during the dive had been the same check she had filed on the morning of Day 7 in the conference space. Same discipline. Same outcome. The schema was stable.
 
 I said: *acknowledged.*
 
-The hum continued. Wanjiru turned back to the screens. The partition status panel held the duration field. The duration field incremented. The work was the work.
+The hum continued. Wanjiru turned back to the screens. The partition status panel held the duration field. The duration field incremented.
 
 I went back through the wardroom.
 
 ---
 
-I sat at the wardroom desk for a few minutes before I went up to the bridge.
+I sat at the wardroom desk for a few minutes before going up to the bridge.
 
-The wardroom hum was the wardroom hum. The light was the wardroom light. The clock on the bulkhead read oh-nine-forty-nine. The dive had been four hours and nineteen minutes earlier. The boat had been at the routine tempo for three hours and three minutes.
+The hum was on. The clock on the bulkhead read oh-nine-forty-nine. The dive had been four hours and nineteen minutes earlier. The boat had been at the routine tempo for three hours and three minutes - which, I noted, was already long enough that I had stopped counting from the dive and started counting from the meeting.
 
-I logged what the morning had been. Sabina had brought a use case the architecture had not yet run. Joel had walked the architecture's behaviour against the case in the case's institutional vocabulary. Sabina had constrained the dry run to use the real consortium chain - a constraint Joel had taken in without softening and had implemented inside the protocol's specification using a flag both layers recognized. The dry run was now running at Wanjiru's queue, on the routing Diego had cleared, against the schema Priya had verified at the dive, in the conference space below the wardroom where Sabina and Joel had been since oh-nine-thirty-six. Hiroshi was at the data console. The boat was at depth. The relay was dormant.
+I logged the morning into the bridge journal: Sabina's case, Joel's walk, Sabina's constraint on the chain, the mock-flag, the dry run now running at Wanjiru's queue on the routing Diego had cleared against the schema Priya had verified at the dive. Hiroshi at the console. The boat at depth. The relay dormant. Dequeue simulation at eleven hundred.
 
-The Segment-2 bearing was now installed in everyone on the boat without any officer having required ceremony to install it. The dive entry had not been an event. The transition had been a transition. The work of Segment 2 had begun in the form the work was going to take.
+It read, on the page, like the bureaucratic report of an unremarkable morning. The architecture had been designed so that mornings like this one would read that way. I had hired Sabina, in part, because she would design her preparation so that the day she needed the preparation would also read that way - and would not be the day anyone thanked her. (Sabina would not have wanted to be thanked. The architecture cannot want anything. The symmetry is not accidental.)
 
-Sabina's case was Sabina's case. I had hired her for the case; I had hired her, specifically, for the discipline that had brought the case to the architecture at oh-nine on Day 23 in the form the case had been brought in. I had marked the discipline in pre-mission. I had marked it on the morning of departure when she had handed me the consortium's last in-port acknowledgment on paper. I had marked it, again, in the conference space this morning. The discipline was the discipline of an officer who did not trust networks she could not see and who had, at some earlier point in her career, decided that the lesson had stayed and was going to stay. The decision had been hers. I had not had to ask her to make it. I had hired the decision.
-
-The architecture had answered the case the way the architecture had been built to answer it. The architecture had not been built for Sabina's case specifically; the architecture had been built for the class of case Sabina's case belonged to. Sabina's case was the first time the class had been exercised against this architecture under partition by this crew. The exercising had gone the way the architecture had said it would. The dry run would confirm the envelope. The procedure on Day 28 would be the procedure the dry run produced.
-
-I had thirteen and a half days ahead of me to spend at the routine tempo. The first four hours of the first morning of Segment 2 had given me Sabina's case, Joel's walk, Hiroshi's *I have what I need*, Diego's pre-clearance of the routing, Wanjiru's queue, and Priya's schema verification. The crew was on the boat. The boat was at depth. The work was the work the work needed.
-
-I stood. I rinsed my cup. I closed the wardroom desk terminal. I turned the wardroom sconce down at the dimmer one click. The hum continued. The hum would continue.
-
-I went up to the bridge.
-
-The boat's master had the watch. The deck officer was at the dive station. The instrument panel showed three hundred meters of depth. The trim held. The carrier-acoustic floor under the boat was the floor it had been at oh-five-forty-six and would be at oh-five-forty-six on Day 24 and on Day 25 and on the days the segment carried me through to Day 37. I gave the master the nod I had given on the morning of Day 7. He acknowledged.
-
-I noted the morning at the bridge log: *Day 23, 0954 local. Segment 2 commenced at routine tempo at 0530. Relay dormant; gossip protocol on consortium-port side dormant; local mesh active. First-cycle procurement use-case validation under way; Rahman + Reyes running synthetic counter-signature dry run against actual consortium chain; mock-flagged; dequeue-simulation at 1100. Schema verified at dive; no migrations scheduled. Routing cleared through Day 28. Crew on stations. - A.Y.*
-
-I put the pen down.
-
-The boat was at depth. The architecture was operating. The crew was where the crew should be. The chapter the boat would spend at the routine tempo had begun. The morning had been the morning Segment 2 had wanted.
-
-I noted the morning.
-
-I went below.
+I stood. I rinsed the cup. I closed the wardroom desk terminal. I turned the wardroom sconce down one click. The hum continued. The hum would continue.

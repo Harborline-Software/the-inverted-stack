@@ -204,21 +204,13 @@ I had not seen the dogging. I had been at the lower-deck access ladder when the 
 
 I had seen the look.
 
-Joel had turned at the compartment door. He had turned after the door had dogged. He had turned and faced me through the porthole window of the bulkhead door. The porthole was thirty centimeters across at the head of the door at the level his face was at. The porthole window was tempered glass at the engineering-spec rating the boat carried for compartment-isolation events. The glass was thick. The light on his side of the glass was the compartment's emergency lighting at the red level the leak alarm had triggered. The light on my side of the glass was the corridor's red night-watch lighting. The two lights were the same red. His face through the glass was at the same red I would have read on him if we had been on the same side of the door.
-
-He looked at me.
-
-The look held for a duration I did not measure. The duration was longer than the look I had seen at every meeting between us across the mission. The duration was shorter than the duration the look would have required in any context less compressed than a sealed compartment with an active leak. The look was the look I had not taken in until the look happened. I had read every operational look between us across five months of mission preparation and forty-seven days of sea time. I had read the looks at the recruitment interview, the looks across the wardroom, the looks across the bridge during routine watches, the looks across the engineering compartment during the schema migration four days before, the looks at the back wall of every meeting we had been in together. None of the looks had been the look that was now at the porthole window.
+The look held for a duration I did not measure. None of the looks had been the look that was now at the porthole window — not at the recruitment interview, not across the wardroom, not across any watch across forty-seven days of sea time.
 
 The look said what the discipline had prevented him from saying since the recruitment interview.
-
-I had read the discipline. I had recruited him for the discipline. The discipline was what the architecture required and what the boat required and what the mission required. The discipline had held for five months. The discipline had held for forty-seven days at sea. The discipline had not held against the alarm. The alarm had fired, and the body had moved, and the body had moved through me on the way to the leak, and the body had dogged the door, and the body had turned. The turn was the part of the sequence the procedure had not required. The turn was choice. The look was the choice.
 
 I received the look.
 
 I did not change my face.
-
-I had read the bridge behind me at the standing position. The watch officer was at the helm. The polar-operations specialist was at the telemetry console. The comm-node officer was at the comm node. The logistics officer was at the bridge rail. The medical officer was at the bulkhead. Every crew member at standing position was watching the Mission Director. The Mission Director's face was the Mission Director's face. The face was the face the mission required. The face did not change.
 
 I held the look for the duration the look required. Then I gave him the small acknowledgment my face was permitted at the bridge's standing position - not a nod that the bridge could read, not a softening the bridge could read, only the receipt of the look at the level the look could be received at without breaking the standing. The receipt was the receipt. He saw it. He turned.
 
@@ -504,7 +496,7 @@ The mission continued.
 
 *The discipline cracked at 0319.*
 
-*The discipline cracked because his body moved before his mind caught up. The discipline cracked because his body chose to put a hand on me on the way past, when it could have gone around. The discipline cracked because he turned at the door after he had dogged it, when he could have gone straight to the leak. The discipline cracked because he looked at me through the glass for the duration the look held, when no part of the procedure required the look. The discipline did not crack because of him. The discipline cracked because of the alarm, and the leak, and the cascade window, and the body's thirty years of nuclear-Navy casualty-procedure training that had made his response deeper than choice. The discipline did not fail. The discipline held against everything except the part of the discipline that the body could not hold against. The body cracked the discipline. The body chose me at the moment the body cracked. The choice was the choice.*
+*The discipline cracked because his body moved before his mind caught up. The discipline cracked because his body chose to put a hand on me on the way past, when it could have gone around. The discipline cracked because he turned at the door after he had dogged it, when he could have gone straight to the leak. The discipline cracked because he looked at me through the glass for the duration the look held, when no part of the procedure required the look. The discipline did not crack because of him. The discipline cracked because of the alarm, and the leak, and the cascade window, and the body's thirty years of nuclear-Navy casualty-procedure training that had made his response deeper than choice. The discipline did not fail. It held on every axis the will controls. The body moved before the will had anything to say about it, and the body chose me, and the choice was the choice.*
 
 *I received the look. I did not change my face. The bridge was watching me. I had two operational orders during the duration. I gave the orders at the minimum altitude. The orders were correct. The orders were the orders. The bridge held. The boat held. The compartment cleared. The discipline returned at 0353. The discipline has been the discipline since.*
 
@@ -524,7 +516,7 @@ The mission continued.
 
 *I was selfless in the moment because I had to be. The bridge required the standing; the standing required the face; the face was the face. I was loyal to the boat in the moment because the boat required the loyalty; the loyalty was operational; the loyalty was the standing. I was direct in the moment because the orders required the directness; the orders were the orders; the directness was the standing's directness, not the directness I would write at this desk in this file at this hour.*
 
-*What I am at this desk in this file at this hour is the part of me that the standing did not require. The part of me that the standing did not require is the part of me that received the look. The part of me that received the look is the part of me that marked the discipline cracking at the body. The part of me that marked the discipline cracking is the part of me that knew what the cracking was. The part of me that knew is the part of me that is writing this.*
+*What I am at this desk in this file at this hour is the part of me that the standing did not require. The part of me that the standing did not require is the part of me that received the look. That part knew what the cracking was, and that part is writing this.*
 
 *The part is mine. The file is mine. The choice not to play the capture back is mine. The receiving was mine. The standing was mine. The boat is mine. The mission is mine. The discipline is mine. The cracking was his.*
 

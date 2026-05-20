@@ -145,8 +145,6 @@ The two paragraphs were about the lending instruments by which a multinational c
 
 I marked the page. I closed the book. I put it back in the inner pocket beside the list.
 
-I did not narrate the connection. The record would carry it at the level the record carries such things at.
-
 ---
 
 The reception began at 0512 against the consortium's standing handshake.

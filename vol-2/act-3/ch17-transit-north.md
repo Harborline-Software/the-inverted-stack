@@ -42,13 +42,13 @@ The boat at the surface in autumn was a different boat.
 
 It was the same hull. The same crew. The same mission. The light was different. The boat had been at the gradient against the under-ice depth for forty-eight days and at reduced capability for six days more, and now it was at the surface in the Drake's September afternoon, and the light came in the wardroom port at the angle the September light came in from the west, and the crew had the light for the first time since Belgrano-II.
 
-The transit was four days. Punta Arenas was four days at the surface-transit rate against the Drake's standing September swell. The boat was running at the surface-rotation cycle the manual specified. Hiroshi had the helm. Diego had the polar-operations console for the surface-approach watch the IAA had asked him to stand. Wanjiru had the comm node working the priority queue against the bridge channel. Joel was at the engineering compartment at the standing diagnostic cycle. Priya was at the lab compartment. Sabina was closing the cross-jurisdictional procurement-audit ledger by hand. Maria was at the medical bay. The boat was running.
+The transit was four days. Punta Arenas was four days at the surface-transit rate against the Drake's standing September swell. The boat was running at the surface-rotation cycle the manual specified. Hiroshi had the helm. Diego had the polar-operations console for the surface-approach watch the IAA had asked him to stand. Wanjiru had the comm node working the priority queue against the bridge channel. Joel was at the engineering compartment on the diagnostic cycle. Priya was at the lab compartment. Sabina was closing the cross-jurisdictional procurement-audit ledger by hand. Maria was at the medical bay. The boat was running.
 
-The wardroom carried the conversation that was not all operational. The cycle had shifted - the lights had returned to the surface light cycle the manual specified for surface transit; the meals were at the standing surface rotation; the wardroom radio was on at the standing low volume Sabina had set against the consortium's surface-broadcast feed. The crew was not narrating the mission. The crew was at the wardroom.
+The wardroom carried the conversation that was not all operational. The cycle had shifted - the lights had returned to the surface light cycle the manual specified for surface transit; the meals were at the new surface rotation; the wardroom radio was on at the low volume Sabina had set against the consortium's surface-broadcast feed. The crew was not narrating the mission. The crew was at the wardroom.
 
 The list of *queries to run when we surface* was on the page at the desk in my cabin. The list at the start of the transit had carried twenty-five items. I had not added many across the transit. The questions on the list were the questions the per-laptop could not answer; the questions waited at the surface; the architecture would close the gap when the boat docked. I read the list once each morning before the watch handoff and once in the afternoon at the desk. The list did not require addition. The list required closing.
 
-Diego was at the wardroom table at 1410 against the off-watch hour. He had a stack of pages at the table. The pages were the letter to María Elena. He had been writing it for the back five days on the per-laptop against the canonical authored-content archive, and against the IAA's institutional-Spanish practice, and against the back thirty-four years of his marriage. The leather mate-cup with the unpolished bombilla was beside the pages at the standing position; the kettle was on the warmer. He was writing slowly. The pen moved the way a pen moved when the writer had carried the question for the duration of the transit and was now writing the answer at the rate the answer was due. He did not look up when I came through for tea. I poured the tea against the standing kettle. I went out.
+Diego was at the wardroom table at 1410 against the off-watch hour. He had a stack of pages at the table. The pages were the letter to María Elena. He had been writing it for the back five days on the per-laptop against the canonical authored-content archive, and against the IAA's institutional-Spanish practice, and against the back thirty-four years of his marriage. The leather mate-cup with the unpolished bombilla was beside the pages; the kettle was on the warmer. He was writing slowly. The pen moved the way a pen moved when the writer had carried the question for the duration of the transit and was now writing the answer at the rate the answer was due. He did not look up when I came through for tea. I poured the tea. I went out.
 
 The pages were Diego's. The pages would reach María Elena Vargas at Belgrano at the Punta Arenas surface window through the consortium's communications channel against the priority queue Wanjiru had set. The pages did not require my reading. The pages required Punta Arenas.
 
@@ -56,7 +56,7 @@ The pages were Diego's. The pages would reach María Elena Vargas at Belgrano at
 
 Wanjiru came to my cabin at 1640 on Mission Day 53.
 
-She knocked twice, briefly, at the standing volume she used at the cabin door. I called her in. She came in. She stood at the desk. She had the cucu-notebook in her hand, closed. She did not open it.
+She knocked twice, briefly, in the way she used at the cabin door. I called her in. She came in. She stood at the desk. She had the cucu-notebook in her hand, closed. She did not open it.
 
 She said: *Director. The institution requires a staff history at the close of the maiden voyage. The convention is in the consortium's standing onboarding documentation since the mission framework was drafted. The next mission's director reads the prior mission's staff history at the start of her selection cycle. The convention is also institutional discipline that the documentation does not by itself preserve. I am asking now because the institution does not always remember to ask at the institutional level at the close of a successful maiden voyage. I am asking.*
 
@@ -68,7 +68,7 @@ She had not asked for the document that day. She had named the convention. She h
 
 I had been writing the document she was now asking for at the institutional level.
 
-She knew it. Wanjiru read what reached the relay-operations log at standing and what the institutional pattern of the convention was. She had named the convention on Day 22 because she had wanted the convention named at the moment the convention had been carried at the standing. She was asking now because the mission was at the close and the institution required the artifact.
+She knew it. Wanjiru read what reached the relay-operations log and what the institutional pattern of the convention was. She had named the convention on Day 22 because she had wanted the convention named at the moment it had been carried forward. She was asking now because the mission was at the close and the institution required the artifact.
 
 I said: *Wanjiru. The document will be filed at the institutional level at the consortium archive at the close of the post-mission documentation cycle. I have been writing it since pre-mission. The convention will be honored.*
 
@@ -82,7 +82,7 @@ I said: *acknowledged.*
 
 She nodded. She went out.
 
-I sat at the desk. The file was on the per-laptop. It had been growing for a year. It carried the text from the pre-mission cycle through the wardroom at 0312 on Mission Day 52 and the comm-node at 0420 and the open file at the desk at 0814. It was at the canonical authored-content archive at the standing replication cadence, signed at capture under my KEK. It would carry to Punta Arenas. It would become the institutional document when I closed it at the post-mission documentation cycle.
+I sat at the desk. The file was on the per-laptop. It had been growing for a year. It carried the text from the pre-mission cycle through the wardroom at 0312 on Mission Day 52 and the comm-node at 0420 and the open file at the desk at 0814. It was at the canonical authored-content archive on its replication schedule, signed at capture under my KEK. It would carry to Punta Arenas. It would become the institutional document when I closed it at the post-mission documentation cycle.
 
 The file had been the document all along. I had not named it. I had been writing it. I had been writing what the next mission director would read at the start of her selection cycle.
 
@@ -96,7 +96,7 @@ I went back to the file.
 
 Joel and Wanjiru worked the forensic-substrate analysis at the wardroom table at 1900 on Mission Day 54.
 
-The wardroom was empty at the standing post-dinner hour. Sabina had logged the logistics for the morning. Maria had completed Joel's medical checkpoint at 1830. Hiroshi was on the bridge against the surface watch. Priya was at the lab compartment against the post-incident schema-evolution annotation queue. Diego was at his cabin with the letter. The wardroom had Joel and Wanjiru at the table and me at the table corner and the per-laptops open at the standing.
+The wardroom was empty at the post-dinner hour. Sabina had logged the logistics for the morning. Maria had completed Joel's medical checkpoint at 1830. Hiroshi was on the bridge against the surface watch. Priya was at the lab compartment against the post-incident schema-evolution annotation queue. Diego was at his cabin with the letter. The wardroom had Joel and Wanjiru at the table and me at the table corner and the per-laptops open.
 
 They had been working the analysis at laptop-class since Day 49. The analysis was the analysis Wanjiru had logged at 1207 on Day 48 and that Joel had read at the comm-node at 1714 on Day 48. The data was narrow. The data was what they had on the per-laptops. The analysis was the analysis the per-laptop would support.
 
@@ -114,6 +114,8 @@ Wanjiru had pulled the vendor's ownership history from the consortium-procuremen
 
 Joel read the ownership panel. He did not narrate.
 
+I watched Joel read. He read the way he read circuit schematics - top to bottom without annotation, then a second pass where his left hand moved slightly, indexing something he was not saying aloud. Wanjiru let him finish. That was their rhythm, and they had developed it in five days without discussing it, which told me something about both of them that I did not write in the bridge log.
+
 Wanjiru said: *the partnership's scope at the conference announcement was firmware-and-protocol co-development for the next generation of edge-anomaly-detection instruments. The scope was at the routine level at which industry partnerships are announced. The scope was on the public record.*
 
 She walked the third item - Helvetia Trust SA's co-development investments more broadly.
@@ -125,6 +127,8 @@ Wanjiru brought up the cross-mission firmware-update timing pattern.
 Across the back twenty-four months, the six manufacturers had each released between two and four firmware patches against units deployed at OSS-affiliated mission consortia. The patches' installation timestamps at the consortia's integration facilities had carried a small recurring deviation from the consortia's standing installation rules. The deviations averaged six to ten hours past the standing window. The deviations were institutional, not protocol-level. The deviations were in the metadata where a different operator reading a different patch on a different unit would have read the signatures and the chain and would have stopped at the institutional cleanliness.
 
 The pattern was small. The pattern was inconclusive.
+
+Wanjiru had said it flat, without emphasis, which was how she said things she considered more significant than emphasis could carry. I noted the room temperature of the analysis - two people who had done this work alone for five days and were now saying the parts aloud for the first time in front of a third person, and who were neither performing nor understating it.
 
 Joel read the panel for the duration it required. He read the timestamps. He read the deviations. He read the recurring shape. He did not narrate.
 
@@ -168,7 +172,7 @@ Joel said: *we will draft the regulatory filing tonight. The filing will documen
 
 Wanjiru said: *acknowledged. I will draft at the relay-operations record. The filing will carry to the consortium-port mirror at Punta Arenas at the post-incident review carrier.*
 
-Joel nodded. He closed his per-laptop. He gathered the panel printouts at the standing order. He stood. He went out.
+Joel nodded. He closed his per-laptop. He gathered the panel printouts in order. He stood. He went out.
 
 Wanjiru sat at the table for the duration the duration required. She opened the cucu-notebook. She wrote in it. She wrote at the rate she wrote when she was writing the questions she was holding for after the institutional record had filed. She closed the notebook. She put it beside her per-laptop. She opened the per-laptop. She began the regulatory filing.
 
@@ -181,8 +185,6 @@ I added a paragraph to the file.
 The paragraph was about the OSS-funding-asymmetry at the architectural level.
 
 The consortium had not been able to afford to vertically integrate. The consortium had not been able to afford to design the sensor-head silicon, to manufacture the units against its own foundry contracts, to maintain a firmware fork, to staff the engineering depth a fork would have required. Off-the-shelf had been the only choice. The choice was a property of small-OSS-project-and-commodity-vendor reality. The choice was not a failure.
-
-The architecture's response to the choice was the response the architecture had been specified to carry. The architecture had not promised to prevent supply-chain compromise of off-the-shelf components. The architecture had promised to detect compromise after the fact at the forensic-substrate level. The architecture preserved the full pre-failure timestream of every edge device. The architecture replicated the timestream across the crew nodes. The architecture hash-chained the firmware-update events under the signing keys of the consortium procurement officers. The architecture made the metadata question askable. The architecture had done what the architecture had been specified to do.
 
 The selective-corporate-retention model did not preserve the full pre-failure timestream of every edge device. A mission running on the selective model could not have asked the question Wanjiru had asked at 1207 on Day 48. The selective model would not have known.
 
@@ -256,7 +258,7 @@ I read the filing at the desk at 2347 on Mission Day 55.
 
 The filing did not name Helvetia Trust SA at the conclusion. The filing did not name a conclusion. The filing carried the data the per-laptop had supported and the recommendations the data permitted. The filing was procedural. The filing was inconclusive. The filing was clean.
 
-The filing would carry to the consortium-port mirror at Punta Arenas at the standing post-handshake. The post-incident review standing committee would investigate at the institutional level. The institution might investigate further. The institution might close the filing at the inconclusive. The institution would be the institution. The boat would not be the institution.
+The filing would carry to the consortium-port mirror at Punta Arenas at the post-handshake. The post-incident review standing committee would investigate at the institutional level. The institution might investigate further. The institution might close the filing at the inconclusive. The institution would be the institution. The boat would not be the institution.
 
 I added a paragraph to the file.
 

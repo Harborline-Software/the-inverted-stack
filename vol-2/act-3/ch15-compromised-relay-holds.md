@@ -157,33 +157,15 @@ I read the event.
 
 The signatures validated. The chain was institutionally clean. The patch had moved from manufacturer-release through consortium-procurement-receipt through consortium-integration-installation in three days, under the procurement officer's standing authority, against the standing patch-validation procedure.
 
-I read the event a second time.
-
 The manufacturer's release was 2026-March-fourth at 14:22 UTC. The consortium's procurement receipt was 2026-March-fifth at 09:18 UTC. The consortium's installation was 2026-March-sixth at 22:55 UTC. The window from manufacturer-release to consortium-installation was approximately fifty-six hours.
 
-The consortium's standing protocol for sensor-head firmware updates was installation within forty-eight hours of release as a hard rule. The protocol had been in the consortium's standing documentation since 2024 and had been the protocol against which I had reviewed the consortium's procurement chain at the pre-mission verification I had run on the OSS-side security audit before departure. The protocol was specific. The protocol was not advisory. The protocol said forty-eight hours; this installation was fifty-six.
+The consortium's standing protocol for sensor-head firmware updates was installation within forty-eight hours of release as a hard rule. The protocol had been in the consortium's standing documentation since 2024 and had been the protocol against which I had reviewed the consortium's procurement chain at the pre-mission verification I ran on the OSS-side security audit before departure. The protocol was specific. The protocol was not advisory. The protocol said forty-eight hours; this installation was fifty-six.
 
 The fifty-six-hour window was eight hours past the standing protocol.
 
 I noted the eight-hour gap.
 
-I went deeper.
-
-The consortium's procurement records showed the sensor head had been in consortium possession since 2026-February-twenty-fifth, when the unit had arrived at the consortium-integration facility from the manufacturer's distribution center after a four-day shipping window. The unit had been at the facility for nine days before the installation. The patch had been applied on day eleven of the unit's possession by the consortium.
-
-The patch had been released on day eight of the unit's possession.
-
-The patch had been received by the consortium on day nine.
-
-The installation had happened on day eleven.
-
-The thirty-seven hours between consortium-procurement receipt and consortium-integration installation was the gap. The thirty-seven hours was on the consortium's side of the chain. The thirty-seven hours was past the consortium's standing forty-eight-hour rule by nine hours, which I had initially read as eight hours and was now reading as nine hours after I checked the timestamps a second time. The unit had been in consortium possession; the patch had been received; the installation should have occurred within forty-eight hours of receipt by standing protocol; the installation occurred at the thirty-seventh hour past the standing window's start, which was the fifty-sixth hour past manufacturer-release, which was the eighth hour past the standing forty-eight-hour rule.
-
-The rule had been violated by approximately eight hours. The violation was small. The violation was not the kind of violation a post-incident review would normally surface from the audit log alone, because the audit log preserved the timestamps but did not flag the rule because the rule was institutional rather than protocol-level. A different operator, reading the same event, would have read the signatures and the chain and would have stopped at the institutional cleanliness. I had stopped there at 0323. I had stopped there because the cascade had been the cascade.
-
-I had not stopped there now.
-
-The eight-hour deviation in a standing forty-eight-hour rule was the kind of deviation that meant either the consortium's procurement officer had been delayed by a routine institutional reason - staff illness, a holiday window, a scheduling conflict at the integration facility - or the deviation was not routine.
+The deviation meant either the consortium's procurement officer had been delayed by a routine institutional reason - staff illness, a holiday window, a scheduling conflict at the integration facility - or the deviation was not routine.
 
 I did not know which.
 
@@ -231,19 +213,7 @@ She had said *no* to a regulator and to a bank executive in a country where the 
 
 I had been twenty-six. I had been at the back of the room. I had taken in what I had taken in at an altitude I had not yet had the words for at twenty-six. I had had the words at thirty-five. I had the words now. The words were *the discipline applies to the operator at the moment the operator most wants to skip it*. The words were *the policy is not what the policy says; the policy is what the policy holds against*. The words were the words I had written into the architecture during the R2 rewrite four years before the Nansen sailed.
 
-The architecture had been built against political coercion. The case I had specified against, in the design documents I had filed against the security-architecture chapter of the Shipyard project's contributor record, had been the case of a regulator pressing for a key revocation off the documented chain. The case I had named in the cover note of the R2 rewrite was the SIM-swap pattern, which was the case from the room in Nairobi. The cases had been the cases in the political dimension. The cases had been the cases in which the adversary had been the operator under pressure or the institution applying the pressure.
-
-The cases I had not named in the design documents had been the cases the architecture had now exercised against. The cases were three.
-
-The first was the political case. The case I had built for. The case the architecture had been specified against.
-
-The second was the environmental case. The cascade. The case in which the adversary was not an operator and not an institution but coolant ingress and smoke and the geometry of a sealed compartment. The architecture had held against the second case for the reason the architecture had held against the first case - because the policy had been specified against the worst case and not against the routine case, because the propagation channels had been specified against simultaneous failure of any two channels, because the receiver-side validation against the local revocation horizon did not require any external coordination during the window in which the external coordination was unavailable. The architecture had not been specified against the cascade. The architecture had behaved against the cascade as if the architecture had been specified against the cascade. The behavior was the architectural property the post-cascade record would carry.
-
-The third was the capability case. The case in which the heavy-LLM hosting was offline and the full-archive RAG index was unavailable and the cross-corpus tooling was unavailable. The case I was operating against now. The architecture had been specified to preserve the canonical record at the per-laptop level; the hub had been capability, not source-of-truth; the hub's loss was a capability loss, not a preservation loss. The forensic substrate was operating at laptop-class. The forensic substrate was running narrow targeted queries; the queries were producing readable results; the results were carrying through to the post-incident review. The capability was reduced. The architecture was holding.
-
-Three threat models. The same structural shape. The same architectural defense.
-
-The recognition was the recognition. The recognition was not the kind of recognition I would narrate. The recognition was the kind of recognition that surfaced in the body the way the proverb had surfaced - present, registered, unspoken. I sat at the comm node for the duration of the surfacing. The hum had not resumed. The body had noted. The standing was the standing.
+The recognition was not the kind of recognition I would narrate. It surfaced in the body the way the proverb had surfaced - present, unspoken. I sat at the comm node for the duration of the surfacing. The hum had not resumed. The body had noted. The standing was the standing.
 
 I went forward to the wardroom for the afternoon meal at 1330.
 
@@ -359,10 +329,6 @@ She said: *the substrate held.*
 
 He stood at the station for half a beat after the exchange. He nodded once. He said *Wanjiru.* She said *Joel.* He went out.
 
-The exchange was the one Wanjiru repeated to me later because the record would have to carry it. The post-incident review would carry it. The architecture's forensic property would carry it. The exchange was Joel's nuclear-Navy register on a question his discipline did not yet have the data to settle. The exchange was Wanjiru's institutional discipline on the same question. The two bearings met at the panel and walked away at the standing.
-
-The institutional discipline had been the discipline at the comm node since 0322. The institutional discipline was the discipline now. The discipline was the discipline.
-
 ---
 
 The watch continued.
@@ -399,7 +365,7 @@ The record had not been written since the cascade. The operational damage report
 
 I had taken in enough now.
 
-The account would carry the relay-operations officer's institutional discipline at the comm node from oh-three-twenty-two through oh-four-thirty-two and at the morning's relay-operations review and at the forensic-substrate query at twelve-oh-seven and at the wardroom conversation at sixteen-forty-eight and at the comm-node exchange with the principal architect at seventeen-fourteen. The account would carry the architecture as its own investigative tool - the property Joel and Wanjiru had specified four years before the boat sailed and that the boat had now exercised at laptop-class against a metadata question on a singed sensor head's firmware-update history. The account would carry the three-fold recognition Wanjiru had not narrated at the comm node and that I had seen in her face for half a beat at twelve-twenty-eight. The account would carry the relay holding through the cascade and the relay holding through the post-cascade and the relay holding against the temptation to take an operational shortcut through a singed auxiliary bus and the relay holding against the temptation to pursue a forensic finding under operational pressure without a clean-mode confirmation pass. The account would carry what Wanjiru had built and what Wanjiru had held.
+The account would carry the architecture as its own investigative tool - the property Joel and Wanjiru had specified four years before the boat sailed and that the boat had now exercised at laptop-class against a metadata question on a singed sensor head's firmware-update history. The account would carry the recognition I had seen in her face for half a beat at twelve-twenty-eight. The account would carry the relay holding against the temptation - the singed auxiliary bus, the forensic finding under operational pressure - and the discipline that had held it. The account would carry what Wanjiru had built and what Wanjiru had held.
 
 I wrote a paragraph.
 

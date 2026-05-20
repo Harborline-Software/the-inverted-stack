@@ -20,7 +20,7 @@ plants-paid:
 
 I have written the part of this account that I can compose without ceremony. The departure. The transit south. The first dive. The thirteen days of routine that established what *routine* would mean for the duration. That part is procedure, and procedure writes itself if you let it.
 
-What I have to write next is harder, and the difficulty is not what I expected. The difficulty is that the moment was small. It happened at my desk, on a watch I was not standing, while the boat was doing what the boat had been doing for two weeks. No one else was present. Nothing visible changed. If I had described it to the crew at the next morning's brief, they would have nodded and gone back to their coffee. The architecture did not announce itself. It simply did what it was designed to do, and on Day 20 of the mission and Day 13 of sustained submersion I finally understood what that was.
+What I have to write next is harder. The moment was small. It happened at my desk, on a watch I was not standing, while the boat was doing what the boat had been doing for two weeks. No one else was present. Nothing visible changed. If I had described it to the crew at the next morning's brief, they would have nodded and gone back to their coffee. The architecture did not announce itself. It simply did what it was designed to do, and on Day 20 of the mission and Day 13 of sustained submersion I finally understood what that was.
 
 I am setting it down now because the record has to carry it forward, and because I am not certain I will know how to say it correctly if I wait any longer. Two months after surfacing, at the same bearing as the rest.
 
@@ -138,7 +138,7 @@ I had bet the mission on the refusal. I had bet it the day I read the paper and 
 
 It felt, to set it down carefully, like trust. Not the operational trust I had extended to the architecture on the surface. A different kind. The kind of trust that is the absence of the suspicion that the system might be telling you what you want to hear. The kind of trust that is what trust actually is, when you encounter it in a system, which is rare.
 
-I have not encountered it often. The sentence stands as it is.
+I sat with the tea a moment longer. Then I closed the note.
 
 ---
 
@@ -152,7 +152,7 @@ The mother is not the boat. The boat is not the mother. The thirty-seven thousan
 
 This is the Long Now thread the record has to carry forward. It belongs here because the recognition that the architecture is the answer to *what survives* did not arrive in any of the places I had expected to find it. It arrived at my desk on the morning of Day 20, at a moment of administrative housekeeping, when I verified a single sentence in someone else's annex and noticed that the verification had been performed by an architecture that had refused, by design, to lie to me about whether the verification was real.
 
-That paragraph cost me effort to set down. It will not be rewritten.
+I looked at what I had written. I closed the terminal.
 
 ---
 
