@@ -3,6 +3,10 @@
 > Chronological action log. Hooks and AI append to this file automatically.
 > Old sessions are consolidated by the daemon weekly.
 
+| 21:52 | Added --check-stale + --only-stale flags + staleness helpers | build/audiobook.py | done | ~2k |
+| 21:52 | Added Check 12 audio-staleness to QM daemon + lock-file pattern + --no-audio-autoregen flag | coordination/qm-daemon.py | done | ~2k |
+| 21:52 | Added Key Learning for check-stale/only-stale behavior | .wolf/cerebrum.md | done | ~200 |
+
 | 13:30 | Anti-tautology pass on ch14-the-crossing: 17 grep hits, 16 cut (narrator voice), 1 preserved (Diego Spanish letter line 421) | vol-2/act-3/ch14-the-crossing.md | complete | ~4k |
 
 | 13:29 | Anti-tautology pass ch15 — CIC zero-narrator-voice ruling 2026-05-21T13:15Z | vol-2/act-3/ch15-compromised-relay-holds.md | 12 hits before / 0 after; 12 edits applied (11 FM1 + 1 FM2 noun-parade + 1 FM3 diary); audit replacements used where provided, Yeoman-devised for load-bearing cases | ~4k |

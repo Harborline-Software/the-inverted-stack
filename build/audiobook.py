@@ -5,6 +5,8 @@ Usage:
     python build/audiobook.py --only ch05             # single chapter
     python build/audiobook.py --force                 # re-render everything
     python build/audiobook.py --voice af_sky          # pick a different voice
+    python build/audiobook.py --check-stale           # read-only staleness scan (exit 1 if any stale)
+    python build/audiobook.py --only-stale            # render only chapters whose MP3 is older than source
 """
 
 from __future__ import annotations
@@ -1756,6 +1758,95 @@ def out_name_for(src_rel: str) -> str:
     return f"{stem}.mp3"
 
 
+def check_stale_chapters() -> list[dict]:
+    """Return a list of staleness records for all chapters in CHAPTER_FILES.
+
+    Each record is a dict:
+        rel        — repo-relative source path
+        md_path    — Path to the source .md file
+        out_path   — Path to the expected MP3 output
+        status     — 'stale' | 'current' | 'missing_mp3' | 'missing_source'
+        src_mtime  — float (epoch) or None
+        mp3_mtime  — float (epoch) or None
+        delta_s    — float seconds (src_mtime - mp3_mtime); positive = stale
+    """
+    records: list[dict] = []
+    for rel in CHAPTER_FILES:
+        md_path = CHAPTERS_DIR / rel
+        volume_slug = volume_for_chapter(rel)
+        out_path = OUT_DIR / volume_slug / f"{Path(rel).stem}.mp3"
+
+        if not md_path.exists():
+            records.append({
+                "rel": rel, "md_path": md_path, "out_path": out_path,
+                "status": "missing_source",
+                "src_mtime": None, "mp3_mtime": None, "delta_s": None,
+            })
+            continue
+
+        src_mtime = md_path.stat().st_mtime
+        if not out_path.exists():
+            records.append({
+                "rel": rel, "md_path": md_path, "out_path": out_path,
+                "status": "missing_mp3",
+                "src_mtime": src_mtime, "mp3_mtime": None, "delta_s": None,
+            })
+            continue
+
+        mp3_mtime = out_path.stat().st_mtime
+        delta = src_mtime - mp3_mtime
+        status = "stale" if delta > 0 else "current"
+        records.append({
+            "rel": rel, "md_path": md_path, "out_path": out_path,
+            "status": status,
+            "src_mtime": src_mtime, "mp3_mtime": mp3_mtime, "delta_s": delta,
+        })
+    return records
+
+
+def print_staleness_table(records: list[dict]) -> None:
+    """Print a human-readable staleness table to stdout."""
+    def _fmt_ts(t: float | None) -> str:
+        if t is None:
+            return "—"
+        from datetime import datetime, timezone
+        return datetime.fromtimestamp(t, tz=timezone.utc).strftime("%Y-%m-%dT%H:%MZ")
+
+    def _fmt_delta(r: dict) -> str:
+        if r["delta_s"] is None:
+            return "—"
+        d = abs(r["delta_s"])
+        if d < 60:
+            return f"{int(d)}s"
+        if d < 3600:
+            return f"{int(d/60)}m"
+        if d < 86400:
+            return f"{d/3600:.1f}h"
+        return f"{d/86400:.1f}d"
+
+    col1, col2, col3, col4 = 55, 17, 17, 14
+    header = (
+        f"{'Chapter':<{col1}}  {'Source mtime':<{col2}}  {'MP3 mtime':<{col3}}  "
+        f"{'Age delta':<{col4}}  Status"
+    )
+    print(header)
+    print("-" * len(header))
+    for r in records:
+        flag = ""
+        if r["status"] in ("stale", "missing_mp3"):
+            flag = "  <<< STALE"
+        elif r["status"] == "missing_source":
+            flag = "  (source missing)"
+        row = (
+            f"{r['rel']:<{col1}}  "
+            f"{_fmt_ts(r['src_mtime']):<{col2}}  "
+            f"{_fmt_ts(r['mp3_mtime']):<{col3}}  "
+            f"{_fmt_delta(r):<{col4}}  "
+            f"{r['status']}{flag}"
+        )
+        print(row)
+
+
 # Dropbox auto-sync — copy each rendered MP3 to the matching vol-N/ folder
 # under the user's Dropbox path. Disabled if the Dropbox path doesn't exist
 # (e.g., running in CI / on a different machine) or if --no-dropbox-sync
@@ -1856,6 +1947,14 @@ def main() -> None:
                          "across re-renders.")
     ap.add_argument("--only", help="render only chapters whose source name contains this string (e.g. 'ch05')")
     ap.add_argument("--force", action="store_true", help="re-render even if an MP3 already exists")
+    ap.add_argument("--check-stale", action="store_true",
+                    help="read-only staleness scan: print a table of chapter/source-mtime/MP3-mtime/delta "
+                         "and exit 1 if any chapter has a stale or missing MP3. No TTS calls. "
+                         "Safe to run from QM daemon or CI.")
+    ap.add_argument("--only-stale", action="store_true",
+                    help="render only chapters whose MP3 is missing or older than its source markdown. "
+                         "Equivalent to --force --only <chapter> for each stale chapter. "
+                         "Skips current chapters. Works with --engine.")
     ap.add_argument("--dry-run", action="store_true", help="print chunk counts only")
     ap.add_argument("--scripts-only", action="store_true",
                     help="regenerate narration scripts from markdown without calling TTS")
@@ -1873,6 +1972,21 @@ def main() -> None:
                          "Use with --max-paragraphs to avoid overwriting full-chapter "
                          "renders during voice/preset iteration. Default: empty.")
     args = ap.parse_args()
+
+    # --check-stale: read-only scan; no TTS, no auth needed.
+    if args.check_stale:
+        records = check_stale_chapters()
+        print_staleness_table(records)
+        stale = [r for r in records if r["status"] in ("stale", "missing_mp3")]
+        missing_src = [r for r in records if r["status"] == "missing_source"]
+        for r in missing_src:
+            print(f"WARN: source not found, skipped: {r['rel']}", file=sys.stderr)
+        if stale:
+            print(f"\n{len(stale)} stale chapter(s) found.")
+            sys.exit(1)
+        else:
+            print(f"\nAll {len(records) - len(missing_src)} chapters current.")
+            sys.exit(0)
 
     engine = ENGINES[args.engine]
     presets = engine["presets"]
@@ -1971,6 +2085,24 @@ def main() -> None:
         if not targets:
             print(f"No chapters matched --only={args.only!r}", file=sys.stderr)
             sys.exit(2)
+
+    if args.only_stale:
+        # Run staleness check and filter targets to stale/missing-MP3 chapters only.
+        stale_records = check_stale_chapters()
+        stale_rels = {
+            r["rel"] for r in stale_records
+            if r["status"] in ("stale", "missing_mp3")
+        }
+        missing_src = [r for r in stale_records if r["status"] == "missing_source"]
+        for r in missing_src:
+            print(f"WARN: source not found, skipped: {r['rel']}", file=sys.stderr)
+        targets = [p for p in targets if p in stale_rels]
+        if not targets:
+            print("--only-stale: all chapters current; nothing to render.")
+            sys.exit(0)
+        print(f"--only-stale: {len(targets)} stale chapter(s) to render.")
+        # Treat as --force for the stale chapters (we want to overwrite their MP3s).
+        args.force = True
 
     t_all = time.time()
     for rel in targets:
