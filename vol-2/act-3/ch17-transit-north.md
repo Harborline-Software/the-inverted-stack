@@ -229,7 +229,7 @@ I said: *acknowledged.*
 
 He said: *Anna.*
 
-He said it in the personal register he had used twice across the duration of the mission - once on Day 39 at the comm-node and once now. He had not used it across the cascade. He had not used it across the post-cascade. He used it now.
+He said it in the personal register he had used twice across the duration of the mission - once on Day 39 at the polar-operations console and once now. He had not used it across the cascade. He had not used it across the post-cascade. He used it now.
 
 I said: *Diego.*
 
