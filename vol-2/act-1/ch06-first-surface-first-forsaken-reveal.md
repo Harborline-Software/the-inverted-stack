@@ -33,7 +33,7 @@ plants-paid:
 
 The boat rose into a colour I had not expected to take in the way I took it in. The colour above three hundred meters of ice for fourteen days had been the colour the architecture had been showing me on the bridge displays - a flat charted grey for the underside of the floe, the carrier-acoustic floor laid in narrower greens, the trim and the depth and the bottom contour rendered in the flat institutional palette the boat's master and Diego had calibrated together in the surface days before the dive. The colour at 0612 on the morning of Day 21 was not that colour. It was the colour the southern ocean has at sixty-one degrees south in late September, a few minutes after the boat clears the marginal zone from below - a green that is not yet a green, with the low light of a sun that had not yet risen on the horizon laid across the water in a band one shade lighter than the band above it. I had seen the colour once before, on a different boat, sixteen years earlier. The body remembers the colour faster than the mind names it.
 
-I came up the ladder to the bridge wing and stood at the rail with the wind on my face for the first time since Day 7. After fourteen days inside a sealed hull the wind on the face is a thing the body takes in as a fact that is no longer abstract. I noted the air temperature, the swell period, the moisture on the deck plates from the surface spray. The logging would happen at the watch handoff.
+I came up the ladder to the bridge wing and stood at the rail with the wind on my face for the first time since Day 7. After fourteen days inside a sealed hull the wind on the face is a thing the body takes in as a fact that is no longer abstract. The air temperature, the swell period, the moisture on the deck plates from the surface spray. The logging would happen at the watch handoff.
 
 I went forward to the comm space.
 
@@ -103,6 +103,8 @@ The surface had not been the only cause. Other causes had compounded, including 
 
 Wanjiru had said the sentence in the comm space thirty-six seconds ago. She had not been quoting me. She did not know I had written the sentence. The two sentences had arrived at the same wording from two different routes. The architecture and the operator who carried it had said in the operational frame the thing I had spent two years finding the words for.
 
+Stefan, on the mission's last operational day, had said: *we did what we thought was right.* He had said it once.
+
 I drank the coffee.
 
 I had been taking Wanjiru's measure since Day 0 in the texture I measured senior officers in - operational tempo, breath, eye contact, the volume she did not raise when she was saying things that needed to land. The texture was the one I had taken Joel's measure at. Both had been hired for the same reason. Not until thirty-six seconds in the comm space this morning had I watched her exercise the part of her discipline that had been the part I hired her for. She had drawn the line at the same volume she had said *the link is up*: without making Diego smaller, naming the procedure, offering the documented path, costing it in minutes, naming the contingency if the path missed the window. She stayed in the chair. The hum resumed when her hand reached the keyboard.
@@ -127,7 +129,7 @@ This was the first time the name had appeared on the boat. The packet at Punta A
 
 The framing had Stefan's preliminary results in the third paragraph and a footnote on the fourth page and an institutional acknowledgment that the rival mission's findings would be the subject of the consortium's normal multi-mission cross-validation procedure once both consortia had filed full results. The framing was institutionally clean. The framing did not editorialize. The framing also did not hide the fact that on the morning of Day 21, with the Nansen ten days from Segment 2 and three weeks from the second surface window and five weeks from final docking, Stefan's findings were already on the cycle and mine were not.
 
-I noted the framing. I closed the packet.
+I closed the packet.
 
 ---
 
@@ -141,7 +143,7 @@ I said: *the press packet.*
 
 Wanjiru said: *the rival's preliminary results landed in the inbound batch at oh-six-twenty-eight. The cycle started at oh-five-ten Bremerhaven local. By the time the Nansen surfaced the cycle had been running for an hour. Reinhardt's name is in the body of the coverage; the framing is what the framing always is from the Helvetia side; the institutional response from the consortium is queued and will not file until end of window at the earliest.*
 
-I noted that she had said *Reinhardt* the way the consortium institutional record said *Reinhardt*. The naming was clean. The naming did not carry weight she had not earned the right to put on it. She had read the cycle; she had taken the cycle in; she had named the rival's principal investigator at the institutional register, and that had been the full extent of what she was carrying about the morning's framing. The next move on the cycle was not the boat's. The boat had not yet finished filing what the boat had to file from Segment 1. The cross-check the boat had on the rival's segment - the surface-window observations the Nansen had been making during its own surfacing - had not yet entered the queue because the queue's first job was the mission record and the cross-check was P1, not P0.
+She had said *Reinhardt* the way the consortium institutional record said *Reinhardt*. The naming was clean. The naming did not carry weight she had not earned the right to put on it. She had read the cycle; she had taken the cycle in; she had named the rival's principal investigator at the institutional register, and that had been the full extent of what she was carrying about the morning's framing. The next move on the cycle was not the boat's. The boat had not yet finished filing what the boat had to file from Segment 1. The cross-check the boat had on the rival's segment - the surface-window observations the Nansen had been making during its own surfacing - had not yet entered the queue because the queue's first job was the mission record and the cross-check was P1, not P0.
 
 I said: *the cross-check observations.*
 
@@ -161,7 +163,7 @@ I stood at the bridge wing for the rest of the morning. The carrier-acoustic flo
 
 I noted that I had not, in the half hour since the wardroom, named the rival's principal investigator in my own interior frame. I had taken Stefan's name in as it had appeared in the press packet. I had not named it again. The not-naming was not avoidance. It was the operational bearing doing what the operational bearing did. There would be a chapter, later, in which I would name the name at a different altitude. The chapter would not be this chapter. This chapter had a surface window forty-seven hours and twenty-six minutes long and a triage that was running and a cross-check that needed to land before the second window and a Mission Director who needed to be on the bridge and not in the staff history.
 
-I logged the morning at the bridge log. I noted Wanjiru's prioritization had been documented at the relay-queue filing. I noted Diego's documented key issuance had cleared at 0746 and the polar-operations handshake at Belgrano had landed at 0758, two minutes ahead of the window. I noted the consortium's Segment 1 acknowledgment had filed clean against the boat's outbound. I noted the cross-check observations were in the queue.
+I logged the morning at the bridge log. Wanjiru's prioritization was documented at the relay-queue filing. Diego's documented key issuance had cleared at 0746 and the polar-operations handshake at Belgrano had landed at 0758, two minutes ahead of the window. The consortium's Segment 1 acknowledgment had filed clean against the boat's outbound. I noted the cross-check observations were in the queue.
 
 I did not log the press packet. I logged what the boat was doing.
 

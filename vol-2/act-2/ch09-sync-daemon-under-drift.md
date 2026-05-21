@@ -19,7 +19,7 @@ plants-paid:
 ---
 
 
-<!-- PRE-BOBIVERSE DRAFT. Awaiting rewrite in the locked Filchner / Anna-voice register (vol-2/SPINE.md, vol-2/ANNA-VOICE.md). Not for assembly, not for listen-test, not for audiobook regeneration until rewritten. -->
+<!-- Bobiverse-warmth pass 2026-05-20 (PAO). Per UPF ch09 v2 report: install 5-6 parenthetical asides (coffee-placement, hiring-observation irony, Joel *thank you* moment, Priya upstream-constraint reveal, Joel self-assessment, watchkeeper-register break); break the `I had` six-opener anaphora run in the hiring-observation block (cap 2 per ANNA-VOICE.md AP-2); insert one concrete physical Anna-observation of Joel; lift Priya postdoc-coffee beat into a wry parenthetical; compress Joel self-assessment to 60%. Preserved: cold-coffee symbolism (lines 82-84 + 354-358), Pattern B dual-log frame (0612 opener + 0712 post-event), three-thread foreshadowing (council-reviewer credit / upstream-constraint naming / architecture-in-better-hands), Priya's "Three passes. Clear." cadence, Hiroshi/Diego/Wanjiru bridge-visit beats. PRE-BOBIVERSE flag retired. -->
 
 Mission log, Day 30, 0612 local. RV Nansen, MERIDIAN-7. Routine watch.
 
@@ -37,7 +37,7 @@ He said: *Director.*
 
 I said: *Joel.*
 
-I set the coffee on the bench at the corner of the console where it would not be in his hand's path to the keyboard. He took in the coffee. He noted that I had not put it under his face, where I would have been suggesting he stop and drink it. He saw that I had put it where he could reach for it when he had a place to stop.
+I set the coffee on the bench at the corner of the console where it would not be in his hand's path to the keyboard - which is to say, in the one square inch of the console area that does not constitute either an interruption or a hint. He took it in. He saw that I had not put the cup under his face, where I would have been suggesting he stop and drink it; he saw that I had put it where he could reach when he had a place to stop. He did not thank me. He logged the cup the way he logged any other piece of equipment that had arrived at his bench without his having asked for it.
 
 I said: *the drift event.*
 
@@ -121,7 +121,7 @@ He said: *oh-two-forty-seven. The bow started at approximately oh-one-fifty. The
 
 She said: *acknowledged.*
 
-She set her body the way Priya set her body when she was concentrating on a graph she had not yet reconciled with her own model of what the graph should be. Her shoulders were at the angle her shoulders went to when the work was the work. Her left hand moved to the bench and adjusted the tablet so that the tablet was square to her body - the angle she preferred for reading from the tablet under field conditions. The micro-gesture took half a second. She did not mark having made it.
+She set her body the way Priya set her body when she was concentrating on a graph she had not yet reconciled with her own model of what the graph should be (which is to say, the same posture she had used in postdoc seminars where the room contained one person whose opinion she wanted and twelve whose she did not). Her left hand moved to the bench and squared the tablet to her body - the angle she preferred for reading under field conditions. The micro-gesture took half a second. She did not mark having made it.
 
 She looked at the graph for thirty-eight seconds.
 
@@ -179,7 +179,7 @@ I noted the second *acknowledged*. I noted the texture of it.
 
 Priya said: *the cycle.*
 
-She said it the way Priya said the third sentence in a piece of work she had organized in her head before she sat down. She had not been waiting for an opening; she had been holding the question until the question's moment was the moment it was. The moment was the comm space at oh-six-thirty-six on Day 30 with the graph on the display and Joel's *acknowledged* still in the air between them.
+She said it the way Priya said the third sentence in a piece of work she had organised in her head before sitting down. She had not been waiting for an opening; she had been waiting for the right opening. It had arrived: the comm space at oh-six-thirty-six on Day 30, the graph on the display, Joel's *acknowledged* still in the air between them.
 
 She said: *the four-hour sweep cycle was the cycle the lab calibration suite specified. The lab calibration suite specified four hours because the sweep's reference to the calibration baseline expires at four hours under the lab's environmental envelope. The lab's environmental envelope is not the boat's environmental envelope. The boat's compartment-temperature variability is narrower than the lab's. The reference baseline expires more slowly under the boat's envelope. I have data from the first three weeks of the mission that suggests the reference holds at six hours under the boat's actual envelope and probably at eight.*
 
@@ -199,7 +199,7 @@ Priya said: *the sweep cycle.*
 
 He said: *I had not thought of stretching it.*
 
-He said it flat. He said it the way he had said *I missed it* on the recruitment call, which I had read in the transcript afterward, and the way he had said *the rewrite passed* in the wardroom on the night of Day 22, and the way he had said *the gauge in front of you* on the same night when he had been describing the discipline that ran through the architecture. He said it without softening. He said it without performing the acknowledgment of the gap; the gap was the gap, and the acknowledgment of it was the acknowledgment of it, and the saying was the saying of what he had seen.
+He said it flat. He said it in the cadence he had used to say *I missed it* on the recruitment call (which I had read in transcript afterward), and the cadence he had used to say *the rewrite passed* in the wardroom on the night of Day 22, and again to say *the gauge in front of you* on that same night when he had been describing the discipline that ran through the architecture. He said it without softening - which is to say, he did not perform the acknowledgment of the gap; he named what he had seen, and let the naming carry the acknowledgment.
 
 He said: *the protocol's broadening window's headroom is a function of the load profile of the contributing nodes. I had calculated the headroom against the protocol's specification. I had not calculated it against the contributing nodes' actual load profiles, which are upstream of the protocol. The instrument-tier load profile is upstream of the protocol. Stretching the sweep cycle is upstream of the protocol. I had not put the upstream variable into the calculation. The calculation I would have run on the drift's amplitude across cycles was the calculation against the protocol's headroom. The calculation you are proposing is the calculation against the load profile that produces the demand on the headroom. They are different calculations. The one you are proposing is the better one for the operational case we are in.*
 
@@ -207,7 +207,7 @@ He stopped.
 
 He said: *thank you.*
 
-He said it once. He did not stage it. He did not soften it. He did not turn it into a procedural sentence that buried the gratitude inside the procedure. He said the word and let the word do what the word did.
+He said it once. He did not stage it. He did not soften it. He did not turn it into a procedural sentence that buried the gratitude inside the procedure (which is the move I have watched a hundred competent men perform, and which Joel had been close enough to learning, in his postdoc years, that I had wondered which way the formation would set in him). He said the word and let the word do what the word did.
 
 Priya said: *acknowledged.*
 
@@ -215,13 +215,13 @@ She said it clipped. She said it the way she said *acknowledged* when an officer
 
 I did not move at the bench.
 
-I had been tracking, while Priya had been speaking, the texture of what was happening in the comm space. The texture was not the texture of an instrumentation engineer correcting a senior architect. The texture was not the texture of a senior architect being corrected. The texture was the texture of two engineers working on a problem at the same altitude, with the constraints of the problem distributed across both of their disciplines, and the engineer who had seen the constraint nobody had yet calculated had named the constraint at the moment the constraint was the next thing the conversation needed.
+I had been tracking, while Priya had been speaking, the texture of what was happening in the comm space. It was not the texture of an instrumentation engineer correcting a senior architect. It was not, either, the texture of a senior architect being corrected. Two engineers were working on a problem at the same altitude, with the constraints of the problem distributed across both of their disciplines, and the engineer who had seen the constraint nobody had yet calculated had named it at the moment the conversation needed it named.
 
-I had hired Joel for the architecture. I had hired Priya for the instrumentation that ran on the architecture and for the schema migration that had been written into the architecture by her hand. I had noted, on the recruitment calls, that the architecture had been built by Joel and that the architecture had been improved by the council's review and by the contributors who had been working on it after the review and that Priya was one of the contributors who had improved it. I had not, on the recruitment calls, seen the texture of how the improvement happened. I had seen that the improvement had happened. I had not seen the *form* the improvement took.
+I had hired Joel for the architecture. Priya I had hired for the instrumentation that ran on the architecture and for the schema migration she had written into it by her own hand. On the recruitment calls I had noted, with the kind of mild appreciation a hiring committee marks and moves on from, that the architecture had been built by Joel and improved after the council's review by contributors of whom Priya was one. What I had seen, on those calls, was that the improvement had happened. What I had not seen - and this is the kind of detail you'd think I'd have caught at the time, given how many recruitment calls I have run in twenty years - was the *form* the improvement took.
 
-The form was the form I was catching now. The form was an instrumentation engineer who had been running her own cycle on her own discipline noticing a constraint upstream of the protocol that the protocol's designer had not put into his calculation, and naming the constraint at the moment the constraint was operational, and offering the change to the cycle that absorbed the constraint, and the protocol's designer taking in the absorption without defending the omission and saying *thank you* at the moment the taking-in needed to be said.
+The form was the form I was catching now. It was an instrumentation engineer running her own cycle on her own discipline, noticing a constraint upstream of the protocol that the protocol's designer had not yet put into his calculation, naming the constraint at the moment it was operational, and offering the change to the cycle that absorbed it - and the protocol's designer taking the absorption in without defending the omission and saying *thank you* at the moment the taking-in needed to be said.
 
-I had hired him for this. I had hired her for this. I had noted, in pre-mission, that I had hired both of them. I had not until oh-six-thirty-eight on Day 30 in the comm space understood the architectural fact that the architecture got better in their hands than it had been in his alone. I logged that. I did not log it on the bridge log. I logged it at the place where I logged the things that did not belong on the bridge log.
+I had hired him for this. I had hired her for this. Until oh-six-thirty-eight on Day 30, however, I had not understood, operationally, that the architecture got better in their hands than it had been in his alone. I logged that. Not on the bridge log; on the file where I keep the things that do not belong on the bridge log.
 
 I drank the rest of the coffee. I set the cup down at the corner of the bench at the angle the cup had been at when I had set it down at the start.
 
@@ -251,29 +251,21 @@ She picked up the notebook. She picked up the tablet. She set the satchel back o
 
 The comm space went quiet.
 
-Joel sat at the console. He looked at the graph on the secondary display for some seconds without speaking. The graph held the bow at the right edge of the seventy-two-hour window and the seventy-two hours of mostly-baseline behind it. The model's flag was a small red marker at the start of the bow's upward leg. The protocol's broadening window was a slightly wider grey band that overlaid the bow.
+Joel sat at the console. He looked at the graph on the secondary display for some seconds without speaking. His hands had come off the keyboard and were flat on the bench, fingers spread - the posture he took, I had noticed across three weeks, when the work in front of him had moved from a problem he was solving to a problem he was watching. The graph held the bow at the right edge of the seventy-two-hour window. The model's flag was a small red marker at the start of the upward leg. The protocol's broadening window was a slightly wider grey band overlaying the bow.
 
 He said, still looking at the display: *I will run the calculation she asked me to run.*
 
 I said: *acknowledged.*
 
-He said: *I should have run it three weeks ago. The instrument-tier load profile has been on the boat since the boat left the pier. The data has been in the audit log. I had been calculating the protocol's behaviour against the protocol's specification. I had not been calculating it against the boat's actual load profile.*
-
-He said: *that is the calculation Priya was running. She has been running it. She has been running it on her tablet at the wardroom desk every day since the boat left the pier. I had been at the same wardroom desk as her every day since the boat left the pier. I had not seen the calculation she was running. I had seen her running a calculation. I had not asked her what calculation she was running.*
+He said: *I should have run it three weeks ago. The instrument-tier load profile has been on the boat since the boat left the pier. I had been calculating the protocol's behaviour against the protocol's specification; I had not been calculating it against the boat's actual load profile. That is the calculation Priya was running. She has been running it at the wardroom desk every day since the boat left the pier - the same wardroom desk I have been sitting at every day since the boat left the pier - and I had not asked her what she was working on.*
 
 He stopped.
-
-He said: *the architecture was not built by me alone. The contributors who improved it after the council review improved it because they were running calculations the council and I had not been running. The improvements went into the spec because the calculations were better than the ones in the original. The architecture as it sits today is the union of the calculations that have been run against it. The contributors' calculations are the architecture's calculations now. I had acknowledged that abstractly. I had not seen, on this boat, that the contributor on this boat is running a calculation right now that I should be reading.*
-
-He said: *I will read it tomorrow. I will read the calculation Priya has been running. I will note what is in the calculation that is not in mine. I will write those notes into the post-mission notes.*
-
-He stopped again.
 
 He said: *the architecture is going to be in better hands than mine for the rest of its life. I had understood that abstractly. I am understanding it operationally this morning.*
 
 I noted what he had said.
 
-I did not respond. I did not need to. He had not been asking for a response. He had been logging, aloud, what he had been seeing. He had been logging it the way an engineer logs what he has been seeing when the engineer has been at a console for three hours and forty minutes and the work is the work and the seeing is part of the work.
+I did not respond. He had not been asking for a response - he had been logging aloud what he had been seeing, the way an engineer logs at three hours and forty minutes into a watch when the seeing has become part of the watching. (Anyone who has spent a career standing alongside engineers learns to recognise the cadence. You do not interrupt it. You do not, especially, treat it as a personal confession requiring personal acknowledgment. You let the man log.)
 
 I sat with what he had said for a few seconds.
 

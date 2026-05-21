@@ -11,14 +11,18 @@ primary-rail: class-region-institutional-politics
 secondary-rail: career-cost-and-aging-out
 chapter-version: v1
 plants-set:
-  - priya-refusal-of-record-architecture
   - architecture-extended-at-local-mesh
-  - field-eighteen-that-is-why-i-am-here
 plants-paid:
   - priya-fourth-pass
   - three-inverses-named
   - starboard-probe-firmware-update
   - priya-upstream-constraint
+  - priya-refusal-of-record-architecture  # atomic-within-scene (ch13 IS the refusal scene)
+  - field-eighteen-that-is-why-i-am-here  # atomic-within-scene (set + paid in ch13 at line 473)
+  - architecture-improves-in-their-hands  # relink: set ch09 (mislabeled); pays here (migration extends the spec)
+  - council-broadening-window-credit  # relink: set ch09 (mislabeled); pays here (Priya extends spec her R2 work drove)
+  - priya-four-pass-replaces-three  # relink: set ch12 (mislabeled); pays here (4-pass migration runs in ch13)
+  - schema-anomaly-boundary  # relink: set ch12 (mislabeled); pays here (migration is its resolution)
 ---
 
 
@@ -304,7 +308,7 @@ Joel said: *acknowledged. Roll pass two back to the checkpoint. Reset the field 
 
 Priya said: *acknowledged. Confirm the rollback-direction lock holds.*
 
-Joel verified. The rollback-direction lock held. The lock was rollback-to-old-schema. The lock was unmovable.
+Joel verified. The rollback-direction lock held. The lock was rollback-to-old-schema. It would not move until the migration completed or failed.
 
 He rolled pass two back to the pass-one checkpoint at oh-six-twelve-fifty-one. The checkpoint held; the deviation plot reset; the pass log logged the rollback at oh-seventeen-twelve. He reset the field map to draft four - the twenty-field version with the dual-timestamp capture for field one. He reloaded the new-schema definition. He re-ran pass one.
 
@@ -478,9 +482,9 @@ He said: *acknowledged.*
 
 He returned to the entry.
 
-I had heard the shape of the exchange before. I had heard it in Joel's recruitment interview - *I had not thought of it that way until you said it* against my question on the lease protocol, in Bengaluru, with the printed paper across the table. I had heard it across Segment 2 in the wardroom - Joel and Priya at the same table, Priya correcting an assumption Joel had made about the schema-version handshake's behaviour under contraction; Joel reading the correction; nodding; saying *acknowledged*. The shape of the exchange was the shape of the exchange. The shape was honest engineering at the level of engineers who knew that the work was the work, and that the work could not be done by either of them alone, and that the discipline that caught what the discipline caught was a property of two minds reading the same record at different layers, not of one mind reading at a higher level.
+I had heard the shape of the exchange before. I had heard it in Joel's recruitment interview - *I had not thought of it that way until you said it* against my question on the lease protocol, in Bengaluru, with the printed paper across the table. I had heard it across Segment 2 in the wardroom - Joel and Priya at the same table, Priya correcting an assumption Joel had made about the schema-version handshake's behaviour under contraction; Joel reading the correction; nodding; saying *acknowledged*. Honest engineering at the level of engineers who knew that the discipline that caught what the discipline caught was a property of two minds reading the same record at different layers, not of one mind reading at a higher level.
 
-I had seen this shape twice before. I saw it now in the compartment at oh-eight-seventeen on Mission Day 44, ninety minutes after a migration that I had been five minutes from authorizing without the conditions Priya had filed. The migration would have cleared without the conditions because the architecture's specification was the architecture's specification; the migration would also have committed field one with the millisecond drift uncharacterized, and field eighteen with the *did-not-report* state silently mapped to zero, and the boat would have run for ten days against a probe whose early-warning state was being suppressed at a different layer than the original suppression layer, and the next migration on this boat or any other boat that had pulled the corpus at the consortium-port would have either lost the data or recovered the data through additional partition-time at the consortium's clock.
+I saw it again now in the compartment at oh-eight-seventeen on Mission Day 44, ninety minutes after a migration that I had been five minutes from authorizing without the conditions Priya had filed. The migration would have cleared without the conditions because the architecture's specification was the architecture's specification; the migration would also have committed field one with the millisecond drift uncharacterized, and field eighteen with the *did-not-report* state silently mapped to zero, and the boat would have run for ten days against a probe whose early-warning state was being suppressed at a different layer than the original suppression layer, and the next migration on this boat or any other boat that had pulled the corpus at the consortium-port would have either lost the data or recovered the data through additional partition-time at the consortium's clock.
 
 The architecture was now extended. The extensions were filed. The extensions had been filed because Priya had filed the conditions; the conditions had been filed because Priya had said no; the no had been filed because Priya was Priya.
 

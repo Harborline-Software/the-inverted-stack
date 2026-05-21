@@ -113,6 +113,8 @@ I had asked the same question once before, on the recruitment call, in different
 
 I had needed to verify the discipline at depth. I had verified it.
 
+The conference space held the particular air of a room whose hatch has been closed for an hour - recycled, slightly warmer than the passageway, carrying the faint mineral trace the boat's scrubbers left in every enclosed space at depth. The hatch was closed behind us. Joel's coffee sat at his right hand where he had set it down; it had been there since the start and I had not watched it go cold, only noticed, now, that it had. The tea I had carried in from the wardroom and set on the bench at oh-nine-hundred was in the same condition.
+
 I moved to the next question.
 
 ---
@@ -229,7 +231,7 @@ We had been in the conference space for an hour and ten minutes.
 
 I did not end the meeting immediately. I sat with the bench and the closed notebook and the coffee that was no longer hot, and I let the architecture's morning settle in my mind in the order I had received it.
 
-The local store on every node, operating in partition mode, attesting every write at capture, propagating to the local mesh on the acoustic carrier. The relay layer dormant - not failing; dormant; the operational state the protocol named for the case where there was no consortium to talk to. The gossip protocol's two sides - the local-mesh side active, the consortium-port side correctly identified as waiting on the dormant relay layer. The audit log carrying cross-attestation across the local mesh, accumulating a partition layer that would compose cleanly with the consortium's layer at surface. The schema stable; Priya watching the state from the lab; the migration we were not running today. The architecture's loss case named; the boat as the only third party; the writes existing on the boat and only on the boat for the duration of the segment.
+The local store on every node, operating in partition mode, attesting every write at capture, propagating to the local mesh on the acoustic carrier. The relay layer dormant - not failing; dormant; the operational state the protocol named for the case where there was no consortium to talk to. The gossip protocol's two sides - the local-mesh side active, the consortium-port side correctly identified as waiting on the dormant relay layer. The audit log carrying cross-attestation across the local mesh, accumulating a partition layer that would compose cleanly with the consortium's layer at surface. The schema stable.
 
 I had needed to install all of those things in my own head this morning. The reason was that the segment ahead would not let me ask Joel to walk through them again at this altitude. The morning was the window. The conference space was the room. Only this morning could carry these questions without competing with the next operational concern.
 
@@ -259,7 +261,7 @@ I said: *acknowledged.*
 
 She turned to face her console. The hum resumed. She did not say anything else.
 
-I thought, going back through the wardroom, that Wanjiru's *the log is not lying* was the same sentence Joel had said in the conference space about the architecture's refusal to lie. The architecture and the comm officer who carried it were saying the same thing in the same kind of voice. I had hired both of them. I had hired them for the same reason. The chapter the boat was about to spend under the ice would carry that reason or it would not carry. The architecture would carry it. The comm officer would carry it. The Mission Director would carry it. The crew below the bridge plates were carrying it now without yet knowing they were carrying it.
+I thought, going back through the wardroom, that Wanjiru's *the log is not lying* was the same sentence Joel had said in the conference space about the architecture's refusal to lie. The architecture and the comm officer who carried it were saying the same thing in the same kind of voice. I had hired both of them. I had hired them for the same reason.
 
 I went forward to the bridge.
 

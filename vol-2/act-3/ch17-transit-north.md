@@ -14,17 +14,21 @@ plants-set:
   - wanjiru-standards-body-naming
   - regulatory-filing-inconclusive
   - anna-twenty-three-thousand-words
-  - diego-letter-sealed
 plants-paid:
   - wanjiru-firmware-supply-chain-question
   - wanjiru-1714-joel-exchange
   - next-mission-director-addressed
   - diego-letter-maria-elena
   - architecture-extended-at-local-mesh
+  - diego-letter-sealed  # atomic-within-scene (set + paid in ch17 at lines 197-218)
+  - institutional-response-day-41-43  # relink: set ch11 (mislabeled); pays here (consortium institutional response arrives via post-incident review)
+  - institutional-response-pending  # relink: set ch12 (mislabeled); pays here (consortium institutional response arrives via post-incident review)
 ---
 
 
 <!-- Anna-voice rewrite pass 2026-05-16 (PAO). self_referential_frame 12→<3 (galley red→green): "the staff history" cluster compressed via "the document" / "the record" / "the file" varied alternatives; Wanjiru's institutional dialog preserved with reduced repetition; final "in my hands" line preserved as load-bearing close. -->
+<!-- A+ roadmap pass 2026-05-20 (Yeoman). "standing" 44→34: 10 narrator-body instances varied (per-laptop's local-cache window; consortia's installation rules / prescribed window; the discipline he carried; the IAA's institutional stationery; low background volume; Drake's autumn latitude; data the panel had carried; the Punta Arenas approach was at the horizon; same level). Diegetic blocks (crew logs + regulatory filing) preserved intact. Anna-interior beat inserted after forensic analysis closes (line ~179): "Five days of private work, and they had brought it to the table with the flat temperature of people who had already finished being impressed by it." -->
+<!-- chapter-version: v2 -->
 
 *Crew log, Mission Day 53, 0612 local. Yusupova, Mission Director. RV Nansen, MERIDIAN-7.*
 
@@ -64,7 +68,7 @@ She had said something close to it on Mission Day 22.
 
 She had said it in the comm space at the surface window, after the bandwidth-allocation discussion had cleared and the priority-queue discussion had cleared and the regulatory-bulletin discussion had cleared, when the comm space had emptied and only the two of us were at the consoles. She had said: *the staff history convention is the institutional discipline that carries the architecture forward. The architecture preserves what reaches the consortium ports. The institutional discipline preserves what the architecture cannot say about itself. I read prior staff histories before I came to this mission. I learned the missions from what the directors had written. The next mission director will read what you write about this one.*
 
-She had not asked for the document that day. She had named the convention. She had let the convention sit. I had taken in her naming it. I had logged it in the file I kept for things that were not the bridge log - the file the record would be drafted from. The naming had gone in at the same standing register as the conversation in the wardroom with Joel and the morning at the desk on Day 20 and Wanjiru's exception-refusal at Surface 1 and the noting of the firmware-update timestamp gap on Day 47.
+She had not asked for the document that day. She had named the convention. She had let the convention sit. I had taken in her naming it. I had logged it in the file I kept for things that were not the bridge log - the file the record would be drafted from. The naming had gone in at the same level as the conversation in the wardroom with Joel and the morning at the desk on Day 20 and Wanjiru's exception-refusal at Surface 1 and the noting of the firmware-update timestamp gap on Day 47.
 
 I had been writing the document she was now asking for at the institutional level.
 
@@ -110,7 +114,7 @@ Wanjiru said: *the consortium-procurement chain on the patch is clean at the sig
 
 They walked the vendor's ownership pattern second.
 
-Wanjiru had pulled the vendor's ownership history from the consortium-procurement archive at the per-laptop's standing-cache window. The vendor's name was at the panel - *Pacific Hydroacoustic Systems*, a small specialist sensor-head manufacturer based in the Pacific Northwest with a thirty-year history of supplying hydroacoustic instruments to oceanographic research consortia. The ownership history showed a Series-C investment in 2023 from a consortium of investors. One of the investors was *Helvetia Trust SA*. The investment carried a co-development partnership clause at the institutional level rather than an acquisition. The minority stake had been announced at a 2023 industry conference. The announcement was on the public record.
+Wanjiru had pulled the vendor's ownership history from the consortium-procurement archive at the per-laptop's local-cache window. The vendor's name was at the panel - *Pacific Hydroacoustic Systems*, a small specialist sensor-head manufacturer based in the Pacific Northwest with a thirty-year history of supplying hydroacoustic instruments to oceanographic research consortia. The ownership history showed a Series-C investment in 2023 from a consortium of investors. One of the investors was *Helvetia Trust SA*. The investment carried a co-development partnership clause at the institutional level rather than an acquisition. The minority stake had been announced at a 2023 industry conference. The announcement was on the public record.
 
 Joel read the ownership panel. He did not narrate.
 
@@ -124,7 +128,7 @@ The consortium-procurement archive carried the back two years of Helvetia's anno
 
 Wanjiru brought up the cross-mission firmware-update timing pattern.
 
-Across the back twenty-four months, the six manufacturers had each released between two and four firmware patches against units deployed at OSS-affiliated mission consortia. The patches' installation timestamps at the consortia's integration facilities had carried a small recurring deviation from the consortia's standing installation rules. The deviations averaged six to ten hours past the standing window. The deviations were institutional, not protocol-level. The deviations were in the metadata where a different operator reading a different patch on a different unit would have read the signatures and the chain and would have stopped at the institutional cleanliness.
+Across the back twenty-four months, the six manufacturers had each released between two and four firmware patches against units deployed at OSS-affiliated mission consortia. The patches' installation timestamps at the consortia's integration facilities had carried a small recurring deviation from the consortia's installation rules. The deviations averaged six to ten hours past the prescribed window. The deviations were institutional, not protocol-level. The deviations were in the metadata where a different operator reading a different patch on a different unit would have read the signatures and the chain and would have stopped at the institutional cleanliness.
 
 The pattern was small. The pattern was inconclusive.
 
@@ -144,7 +148,7 @@ The acoustic-signature stream had a small recurring low-frequency component that
 
 The component had not been flagged because the component was within nominal range. The component was not in the manufacturer's release documentation. The component was in the data.
 
-Joel read the component. He read the timestamps. He read the manufacturer's release notes against the standing discipline he carried for vendor documentation. The release notes described the calibration update; the release notes did not describe the low-frequency component.
+Joel read the component. He read the timestamps. He read the manufacturer's release notes against the discipline he carried for vendor documentation. The release notes described the calibration update; the release notes did not describe the low-frequency component.
 
 He said: *the component is consistent with two readings. The first is that the calibration update modified the unit's response to a sub-band the release notes did not separately document, and the documentation is incomplete in a routine industry way. The second is that the component is a behavior the patch introduces deliberately and that the documentation does not describe. The data is consistent with both readings. The data does not require the second.*
 
@@ -176,6 +180,8 @@ Joel nodded. He closed his per-laptop. He gathered the panel printouts in order.
 
 Wanjiru sat at the table for the duration the duration required. She opened the cucu-notebook. She wrote in it. She wrote at the rate she wrote when she was writing the questions she was holding for after the institutional record had filed. She closed the notebook. She put it beside her per-laptop. She opened the per-laptop. She began the regulatory filing.
 
+Five days of private work, and they had brought it to the table with the flat temperature of people who had already finished being impressed by it.
+
 I went to my cabin.
 
 I added a paragraph to the file.
@@ -196,7 +202,7 @@ I left the paragraph in the file. I closed the per-laptop.
 
 Diego sealed the letter at 2147 on Mission Day 55.
 
-He brought it to the wardroom. The pages were folded against the standing IAA institutional-stationery Diego had brought from Buenos Aires in his personal cargo allocation. The envelope was addressed in his hand to *María Elena Vargas, calle 11 de Septiembre, Belgrano, Buenos Aires, Argentina*. The address was the address he had written on letters home from research stations across the back thirty-four years. The hand was the hand. The seal was a routine paper seal.
+He brought it to the wardroom. The pages were folded against the IAA's institutional stationery Diego had brought from Buenos Aires in his personal cargo allocation. The envelope was addressed in his hand to *María Elena Vargas, calle 11 de Septiembre, Belgrano, Buenos Aires, Argentina*. The address was the address he had written on letters home from research stations across the back thirty-four years. The hand was the hand. The seal was a routine paper seal.
 
 He set the envelope on the wardroom table. The kettle was off the warmer.
 
@@ -216,7 +222,7 @@ I said: *Diego.*
 
 He nodded. He took the envelope. He went to his cabin.
 
-I sat at the wardroom table for the duration of the tea. The kettle was off. The radio was at the low standing volume. The light from the surface port was at the September evening tone at the Drake's standing latitude.
+I sat at the wardroom table for the duration of the tea. The kettle was off. The radio was at the low background volume. The light from the surface port was at the September evening tone at the Drake's autumn latitude.
 
 I went up to the bridge.
 
@@ -262,7 +268,7 @@ The filing would carry to the consortium-port mirror at Punta Arenas at the post
 
 I added a paragraph to the file.
 
-The paragraph was about Wanjiru at the wardroom table at 1900 on Mission Day 54. The paragraph carried the half-beat at which Wanjiru had named the standards body the consortium would need. The paragraph carried Wanjiru's institutional register against Joel's nuclear-Navy register against the panel's standing data. The paragraph did not name what Wanjiru had been seeding. The paragraph recorded what Wanjiru had said. The next mission director would draw what she would draw from the paragraph.
+The paragraph was about Wanjiru at the wardroom table at 1900 on Mission Day 54. The paragraph carried the half-beat at which Wanjiru had named the standards body the consortium would need. The paragraph carried Wanjiru's institutional register against Joel's nuclear-Navy register against the data the panel had carried. The paragraph did not name what Wanjiru had been seeding. The paragraph recorded what Wanjiru had said. The next mission director would draw what she would draw from the paragraph.
 
 I closed the file. I closed the per-laptop. I went to bed.
 
@@ -272,7 +278,7 @@ The boat was at twelve hours from the Punta Arenas approach at the morning brief
 
 The brief was the surface-approach brief the manual specified. Hiroshi had the helm. Diego had the polar-operations console at the surface-approach watch he had asked to stand. Wanjiru had the comm node at the bridge channel's post-handshake throughput. Joel was at the engineering compartment. Priya was at the lab compartment closing the post-incident schema-evolution annotation queue. Sabina was closing the resupply manifest. Maria was at the medical bay closing Joel's recovery checkpoints.
 
-I read the consoles at the bridge. The consoles read what the consoles read. The Punta Arenas approach was at the horizon's standing distance. The consortium-port mirror at Punta Arenas had acknowledged the priority list's first eight items. The regulatory filing was at the post-handshake carrier at the surface-bandwidth's standing throughput.
+I read the consoles at the bridge. The consoles read what the consoles read. The Punta Arenas approach was at the horizon. The consortium-port mirror at Punta Arenas had acknowledged the priority list's first eight items. The regulatory filing was at the post-handshake carrier at the surface-bandwidth's standing throughput.
 
 The list at the desk was at twenty-six items. The architecture would close the gap at Punta Arenas.
 

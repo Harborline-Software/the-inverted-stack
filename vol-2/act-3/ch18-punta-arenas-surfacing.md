@@ -12,7 +12,6 @@ secondary-rail: trust-prior-betrayal
 chapter-version: v1
 plants-set:
   - hiroshi-unfinished-line  # Vol-3 forward-plant (per CIC 2026-05-19); flagged in _series/canon.yaml forward_plants
-  - stefan-thirty-second-exchange
 plants-paid:
   - stefan-reinhardt-first-named
   - prior-mission-shadow
@@ -27,6 +26,9 @@ plants-paid:
   - three-inverses-named
   - joel-porthole-look
   - questions-the-system-wont-answer
+  - stefan-thirty-second-exchange  # atomic-within-scene (ch18 IS the exchange scene)
+  - institutional-response-day-41-43  # relink: set ch11 (mislabeled); pays here (consortium institutional response arrives via post-incident review)
+  - institutional-response-pending  # relink: set ch12 (mislabeled); pays here (consortium institutional response arrives via post-incident review)
 ---
 
 
@@ -48,15 +50,15 @@ plants-paid:
 
 ---
 
-The dock was at the angle the dock was at when the boat surfaced into a winter morning at fifty-three degrees south. The light was not yet morning; it was the cold pre-light that comes out of the Strait at the September hour before the sun has any work in the sky. The Punta Arenas waterfront was at the standing. The consortium-port pier had the consortium's institutional flag on the mast at half-mast for the equinox observance and the working flag on the staff at the standing; the Argentine port authority's jurisdictional pennant was on the secondary staff at the joint-protocol level; the Chilean flag was on the primary. The wind was at the standing southwesterly. The water was at the slack tide at the standing.
+The dock was at the angle the dock was at when the boat surfaced into a winter morning at fifty-three degrees south. The light was not yet morning; it was the cold pre-light that comes out of the Strait at the September hour before the sun has any work in the sky. The Punta Arenas waterfront was at its position. The consortium-port pier had the consortium's institutional flag on the mast at half-mast for the equinox observance and the working flag on the staff at the correct bearing; the Argentine port authority's jurisdictional pennant was on the secondary staff at the joint-protocol level; the Chilean flag was on the primary. The wind was southwesterly. The water was at the slack tide.
 
-I had been on the bridge through the surfacing-and-mooring sequence. The surfacing had taken eleven minutes against the procedure. Hiroshi had the helm; Diego had the polar-operations console at the surface-approach watch he had asked to stand for the last time; Wanjiru had the comm node at the bridge channel's post-handshake throughput. The mooring crew on the dock had set the spring lines first and the breast lines second, which was the consortium-port standing rule against the September swell. The gangway came across at 0438 against the boat's freeboard. The bridge channel acknowledged at the standing handshake at 0441. The dockside team was at the gangway at 0443.
+I had been on the bridge through the surfacing-and-mooring sequence. The surfacing had taken eleven minutes against the procedure. Hiroshi had the helm; Diego had the polar-operations console at the surface-approach watch he had asked to stand for the last time; Wanjiru had the comm node at the bridge channel's post-handshake throughput. The mooring crew on the dock had set the spring lines first and the breast lines second, which was the consortium-port standing rule against the September swell. The gangway came across at 0438 against the boat's freeboard. The bridge channel acknowledged at protocol at 0441. The dockside team was at the gangway at 0443.
 
-The first to come across was a consortium-affiliate I knew by surname only - *Dr. Holm*, the Norwegian Polar Institute representative the consortium had standing on the Punta Arenas reception roster against the maiden-voyage protocol. He was in his fifties, in winter consortium issue, with the tablet that carried the institutional reception checklist at the standing. Behind him: an Argentine port authority officer in IAA-secondary issue, with the customs paperwork at the standing; a medical-clearance officer from the consortium's contracted clinic in Punta Arenas, in clinic issue, with the per-crew medical-clearance dossiers; the consortium's logistics officer for the supply-and-fuel reception, in port-issue, with the manifest. Four faces, four protocols, the standing reception against the consortium handshake. They came across the gangway in the order the protocol specified.
+The first to come across was a consortium-affiliate I knew by surname only - *Dr. Holm*, the Norwegian Polar Institute representative the consortium had standing on the Punta Arenas reception roster against the maiden-voyage protocol. He was in his fifties, in winter consortium issue, with the tablet that carried the institutional reception checklist in hand. Behind him: an Argentine port authority officer in IAA-secondary issue, with the customs paperwork in hand; a medical-clearance officer from the consortium's contracted clinic in Punta Arenas, in clinic issue, with the per-crew medical-clearance dossiers; the consortium's logistics officer for the supply-and-fuel reception, in port-issue, with the manifest. Four faces, four protocols, the institutional reception against the consortium handshake. They came across the gangway in the order the protocol specified.
 
-Holm said: *Director Yusupova. Welcome to Punta Arenas. The consortium acknowledges the maiden voyage of the RV Nansen on the MERIDIAN-7 mission at the institutional level. The post-handshake reception schedule is on the tablet at the standing.*
+Holm said: *Director Yusupova. Welcome to Punta Arenas. The consortium acknowledges the maiden voyage of the RV Nansen on the MERIDIAN-7 mission at the institutional level. The post-handshake reception schedule is on the tablet.*
 
-I said: *Dr. Holm. Acknowledged. The boat is yours at the consortium's standing. The crew will disembark at the medical-clearance queue. The cargo manifest is at the post-handshake transfer.*
+I said: *Dr. Holm. Acknowledged. The boat is yours at the consortium's disposal. The crew will disembark at the medical-clearance queue. The cargo manifest is at the post-handshake transfer.*
 
 The exchange was the institutional one the consortium handshake required. I had noted the words I had said and the words Holm had said and the order in which the four officers had come across the gangway. The noting would carry to the record at the institutional level.
 
@@ -70,25 +72,25 @@ Holm took me to the consortium reception room at the dockside building.
 
 ---
 
-The reception room was on the second floor of the consortium-port building. The window looked north against the city's pre-dawn lights. The room had been set against the institutional standing — a long table at the room's center, the consortium's institutional banner at the room's east wall, the Argentine and Chilean port-authority pennants at the joint-protocol level at the south wall. The room was warm against the Punta Arenas cold. There was coffee at the table at the standing. There was a small dish of *galletas de algarrobo* the IAA always brought to consortium receptions in Patagonia; Diego had told me about them a year ago.
+The reception room was on the second floor of the consortium-port building. The window looked north against the city's pre-dawn lights. The room had been set at the institutional level — a long table at the room's center, the consortium's institutional banner at the room's east wall, the Argentine and Chilean port-authority pennants at the joint-protocol level at the south wall. The room was warm against the Punta Arenas cold. There was coffee at the table. There was a small dish of *galletas de algarrobo* the IAA always brought to consortium receptions in Patagonia; Diego had told me about them a year ago.
 
 Wanjiru had come up from the boat ten minutes after me. She had her per-laptop in its cold-weather sleeve and the cucu-notebook in her free hand. She set the per-laptop on the table at the room's far end and opened it. She did not sit. She watched the bridge channel come up at the post-handshake mirror's full-bandwidth allocation for the first time since Surface 2 on Mission Day 39.
 
 I watched her watch it.
 
-The bandwidth meter on her per-laptop was at the post-handshake throughput. The throughput was at thirty-nine times the per-laptop level the boat had been carrying for the back nine days. The bulk that the post-leak laptop-class fallback could not handle began to stream against the consortium-port mirror at the standing rate. The priority queue closed item nine, item ten, item eleven, item twelve at the cadence at which Wanjiru tracked the queue at the standing handshake. The cucu-notebook was open beside the per-laptop at the page Wanjiru had been writing on across the back nine days; the page from Day 48 was visible at the spine; the thirty-seven-hour question was still ringed in pencil at the page's center; Wanjiru was writing around it now, the institutional response forming on the page in real-time at the standing institutional bearing, the architecture of the standards body already taking shape in her grandmother's lined hand.
+The bandwidth meter on her per-laptop was at the post-handshake throughput. The throughput was at thirty-nine times the per-laptop level the boat had been carrying for the back nine days. The bulk that the post-leak laptop-class fallback could not handle began to stream against the consortium-port mirror at full rate. The priority queue closed item nine, item ten, item eleven, item twelve at the cadence at which Wanjiru tracked the queue at protocol. The cucu-notebook was open beside the per-laptop at the page Wanjiru had been writing on across the back nine days; the page from Day 48 was visible at the spine; the thirty-seven-hour question was still ringed in pencil at the page's center; Wanjiru was writing around it now, the institutional response forming on the page in real-time at the standing institutional bearing, the architecture of the standards body already taking shape in her grandmother's lined hand.
 
 She was writing the framework while the bandwidth filled.
 
-She said: *Director. The post-handshake mirror is at the standing throughput. The back-queue is closing at the standing rate. The regulatory filing is acknowledged at the consortium-port mirror at 0447 local. The consortium's preliminary response is in the queue at the post-handshake carrier.*
+She said: *Director. The post-handshake mirror is at full throughput. The back-queue is closing at pace. The regulatory filing is acknowledged at the consortium-port mirror at 0447 local. The consortium's preliminary response is in the queue at the post-handshake carrier.*
 
 I said: *acknowledged.*
 
-She said: *the rival mission's public summary is at the consortium press archive at the standing. The summary is at the public-favorable altitude. Helvetia Trust SA's communications office at Zurich filed the summary at 1442 GMT on Mission Day 53. The summary is at the standing institutional gloss. The architecturally sophisticated reading of the summary against our regulatory filing will be the reading the post-incident review carries at the institutional level. The public reading will not be that reading.*
+She said: *the rival mission's public summary is at the consortium press archive. The summary is at the public-favorable altitude. Helvetia Trust SA's communications office at Zurich filed the summary at 1442 GMT on Mission Day 53. The summary is at the institutional gloss. The architecturally sophisticated reading of the summary against our regulatory filing will be the reading the post-incident review carries at the institutional level. The public reading will not be that reading.*
 
 I said: *acknowledged.*
 
-She said: *the Working Group on Compliance-Friendly Distributed Architectures has filed a preliminary response at the consortium-affiliate level. The response acknowledges the regulatory filing at the standing. The response does not concede the substantive point. The response schedules the Working Group's full submission for February 2027 at the European Commission DG-CNECT level. The response names a federated-trust reference architecture as the working hypothesis at the post-consultation.*
+She said: *the Working Group on Compliance-Friendly Distributed Architectures has filed a preliminary response at the consortium-affiliate level. The response acknowledges the regulatory filing. The response does not concede the substantive point. The response schedules the Working Group's full submission for February 2027 at the European Commission DG-CNECT level. The response names a federated-trust reference architecture as the working hypothesis at the post-consultation.*
 
 I said: *acknowledged.*
 
@@ -106,50 +108,52 @@ She nodded. She returned to the per-laptop. The bandwidth meter held at the post
 
 ---
 
-I went to the room's smaller table by the window. The window looked over the harbor at the standing pre-dawn. The list was in the inner pocket of my parka. I took it out. I unfolded it on the table beside the coffee.
+I went to the room's smaller table by the window. The window looked over the harbor at the pre-dawn. The list was in the inner pocket of my parka. I took it out. I unfolded it on the table beside the coffee.
 
 The list was in my handwriting. The list was on the back of a consortium meeting agenda from Mission Day 14 that I had been carrying as scratch paper since the leak. The list had grown across the back nine days at the rate the per-laptop had not been able to answer. The list was at twenty-six items at the morning brief on Mission Day 56. The list was now twenty-seven items because I had added one at the gangway.
 
-I opened my per-laptop. The bridge channel's post-handshake throughput pushed against the per-laptop at the standing. The full-archive RAG index came up against the consortium-port compute resources at 0451. The heavy-LLM hosting came up at 0452 against the consortium-affiliate compute pool. The cross-corpus tooling came up at 0454.
+I opened my per-laptop. The bridge channel's post-handshake throughput pushed against the per-laptop at full allocation. The full-archive RAG index came up against the consortium-port compute resources at 0451. The heavy-LLM hosting came up at 0452 against the consortium-affiliate compute pool. The cross-corpus tooling came up at 0454.
 
 The list was answerable.
 
-I worked the technical items first. The thermal anomaly at the secondary sensor's reading stream from Mission Day 33 - the system answered against the full archive in eleven seconds; the anomaly was within the calibration drift the manufacturer had documented in a release note from 2024 that had not made it into the per-laptop's local cache. The bridge log inconsistency at 0414 on Mission Day 19 - the system answered against the full audit log; the inconsistency was a routine clock-skew event that had reconciled at the next gossip cycle and that I had not been able to verify against the bulk. The cross-mission baseline against the AARI Filchner-Ronne campaigns from 2018 and 2021 - the system answered; the Nansen's basal-melt readings were within the standing variance band; Diego's photographs from the under-ice transit on Mission Day 35 were the highest-resolution survey IAA had collected of the section; the survey would be the basis of the paper Diego had told me he wanted to publish and that he was now going to publish from San Martín de los Andes.
+I worked the technical items first. The thermal anomaly at the secondary sensor's reading stream from Mission Day 33 - the system answered against the full archive in eleven seconds; the anomaly was within the calibration drift the manufacturer had documented in a release note from 2024 that had not made it into the per-laptop's local cache. The bridge log inconsistency at 0414 on Mission Day 19 - the system answered against the full audit log; the inconsistency was a routine clock-skew event that had reconciled at the next gossip cycle and that I had not been able to verify against the bulk. The cross-mission baseline against the AARI Filchner-Ronne campaigns from 2018 and 2021 - the system answered; the Nansen's basal-melt readings were within the documented variance band; Diego's photographs from the under-ice transit on Mission Day 35 were the highest-resolution survey IAA had collected of the section; the survey would be the basis of the paper Diego had told me he wanted to publish and that he was now going to publish from San Martín de los Andes.
 
 Twelve items closed in nineteen minutes.
 
-I worked Wanjiru's deferred forensic question next. The full vendor-ownership trace against Helvetia Trust SA's investment portfolio across the small-firmware-vendor space came up against the full corpus at the standing. The pattern Wanjiru and Joel had sketched on the per-laptop across the back nine days was now resolvable against the post-handshake archive. The pattern was stronger than it had been at the per-laptop level. The pattern carried seven additional vendor-ownership chains the per-laptop's local cache had not held. The pattern carried four additional firmware-update-window deviations against three of the seven chains. The pattern was still inconclusive at the standard regulatory level; the data still did not discriminate between the benign reading and the deliberate reading; the pattern was now substantially larger and substantially more recurring than it had been at the per-laptop level. The standards-body work Wanjiru had named at the wardroom table on Mission Day 54 had a larger evidentiary base now than it had had then.
+I worked Wanjiru's deferred forensic question next. The full vendor-ownership trace against Helvetia Trust SA's investment portfolio across the small-firmware-vendor space came up against the full corpus. The pattern Wanjiru and Joel had sketched on the per-laptop across the back nine days was now resolvable against the post-handshake archive. The pattern was stronger than it had been at the per-laptop level. The pattern carried seven additional vendor-ownership chains the per-laptop's local cache had not held. The pattern carried four additional firmware-update-window deviations against three of the seven chains. The pattern was still inconclusive at the standard regulatory level; the data still did not discriminate between the benign reading and the deliberate reading; the pattern was now substantially larger and substantially more recurring than it had been at the per-laptop level. The standards-body work Wanjiru had named at the wardroom table on Mission Day 54 had a larger evidentiary base now than it had had then.
 I logged the resolution to the file. I did not narrate the logging.
 
 I worked the personal items next.
 
-There was a question on the list - *mother - anything since Day 39?* - that I had been carrying since the surface window I had not been able to take at the per-laptop level against the family-channel queue. The system answered against the consortium's family-channel archive at the post-handshake. My mother had filed three voice messages and seven text messages across the back seventeen days. Her voice in the first message was at the tone I knew it at. *Anya, I have been at the church on Sundays. The icon corner at the apartment is at the standing. The candle for you is at the standing. The doctor came on Tuesday and said my numbers are at the standing. Your brother brought Misha to see me on Saturday. Call when you surface.* The tone was the tone. She was fine. The candles had been lit across the duration. The numbers were at the standing. I would call her after the reception at the post-reception window.
+There was a question on the list - *mother - anything since Day 39?* - that I had been carrying since the surface window I had not been able to take at the per-laptop level against the family-channel queue. The system answered against the consortium's family-channel archive at the post-handshake. My mother had filed three voice messages and seven text messages across the back seventeen days. Her voice in the first message was at the tone I knew it at. *Anya, I have been at the church on Sundays. The icon corner at the apartment is as it should be. The candle for you is lit. The doctor came on Tuesday and said my numbers are fine. Your brother brought Misha to see me on Saturday. Call when you surface.* The tone was the tone. She was fine. The candles had been lit across the duration. The numbers were unremarkable. I would call her after the reception at the post-reception window.
 
-There was a question on the list - *Galina's data - Day 22 forensic queue?* - about a colleague at AARI whose archived dataset I had been holding against the post-handshake because the architecture had not been able to verify the integrity at the per-laptop level without the full-corpus key registry. The system answered. Galina was fine. Her data was in the queue at the post-handshake. The integrity was clean. The dataset would replicate to her per-AARI node at the next standing handshake.
+There was a question on the list - *Galina's data - Day 22 forensic queue?* - about a colleague at AARI whose archived dataset I had been holding against the post-handshake because the architecture had not been able to verify the integrity at the per-laptop level without the full-corpus key registry. The system answered. Galina was fine. Her data was in the queue at the post-handshake. The integrity was clean. The dataset would replicate to her per-AARI node at the next handshake cycle.
 
-There was a question on the list - *the small house at San Martín de los Andes - IAA institutional logistics?* - that I had been holding for Diego at the post-mission level without naming it to him. The system answered against the IAA's institutional retiree-support archive. The institutional logistics were standing. The IAA's senior-research-fellow retirement protocol was at the institutional level. Diego's pension would carry; his guest-professorship at UBA would carry at the emeritus level; his fellowship at IAA would carry at the senior-emeritus level. The small house at San Martín de los Andes was within the institutional logistics. María Elena and Diego could buy the house against the standing. The retirement was institutionally feasible. I had not asked Diego. I had asked the system.
+There was a question on the list - *the small house at San Martín de los Andes - IAA institutional logistics?* - that I had been holding for Diego at the post-mission level without naming it to him. The system answered against the IAA's institutional retiree-support archive. The institutional logistics were in order. The IAA's senior-research-fellow retirement protocol was at the institutional level. Diego's pension would carry; his guest-professorship at UBA would carry at the emeritus level; his fellowship at IAA would carry at the senior-emeritus level. The small house at San Martín de los Andes was within the institutional logistics. María Elena and Diego could buy the house. The retirement was institutionally feasible. I had not asked Diego. I had asked the system.
 
 I closed the personal items at sixteen.
 
 There were items the list carried that the system would not close at the post-handshake.
 
-The first was *should the architecture's environmental-stress claim be formally documented in a paper at the standing?* The system did not answer. The system did not answer because the question was not a question the system could answer; the question was a question I would answer when I had thought about the maiden voyage long enough to know whether the paper was the paper to write next. The question would carry to the post-mission. The question was not a bandwidth question. The question was a judgment question.
+The first was *should the architecture's environmental-stress claim be formally documented in a paper at this stage?* The system did not answer. The system did not answer because the question was not a question the system could answer; the question was a question I would answer when I had thought about the maiden voyage long enough to know whether the paper was the paper to write next. The question would carry to the post-mission. The question was not a bandwidth question. The question was a judgment question.
 
 The second was *Diego's retirement timing - the Filchner-Ronne paper - the granddaughter*. The system did not answer. The system did not answer because the question was Diego's. The question would carry to Diego at the post-reception window when he was ready to answer it. The question was Diego's question. I had not been the one to ask it.
 
 The third was the question I had added at the gangway. The third was *Stefan*. The system did not answer because the system did not have the data the question required. The data was at the consortium reception in twenty-two minutes. The data would be at the room when Stefan was at the room. The question would close at the institutional level or it would not.
 
-I folded the list. I put it back in the inner pocket of my parka. I closed the per-laptop. I picked up the paperback I had brought ashore in the same pocket. The book was *Confessions of an Economic Hit Man* - Perkins, the 2004 first edition, English. I was at chapter fourteen. The bookmark was a folded consortium meeting agenda. I read two paragraphs at the small table by the window while the bandwidth meter on Wanjiru's per-laptop held at the standing.
+I folded the list. I put it back in the inner pocket of my parka. I closed the per-laptop. I picked up the paperback I had brought ashore in the same pocket. The book was *Confessions of an Economic Hit Man* - Perkins, the 2004 first edition, English. I was at chapter fourteen. The bookmark was a folded consortium meeting agenda. I read two paragraphs at the small table by the window while the bandwidth meter on Wanjiru's per-laptop held.
 
 The two paragraphs were about the lending instruments by which a multinational consultancy in the late 1970s arranged the conditions of a small Andean state's electricity-grid procurement against a portfolio of vendors whose ownership was opaque at the public level and whose firmware-and-protocol decisions ran through the consultancy's preferred channels. The structural shape was the structural shape. The mechanism was older than the architecture; the mechanism was older than the architecture's contest; the mechanism was the family of mechanism Wanjiru had been reading at the standards-body level and that the regulatory filing had documented at the institutional level with the data the architecture had preserved.
 
 I marked the page. I closed the book. I put it back in the inner pocket beside the list.
 
+Astrid would be in the room. I had known this since Wanjiru named the rival-platform delegation at the reception list on Day 54. I had carried it the way I carried the other things I could not answer at the per-laptop level — as a question I would close when the data arrived. The data would arrive at 0512. I knew what I would find in the room and what I would not permit myself to find there. The room was the institutional level. I had made this decision before the list item and did not need to make it again.
+
 ---
 
 The reception began at 0512 against the consortium's standing handshake.
 
-The room filled at the institutional level. The consortium representatives came in first - Holm and his three counterparts; the IAA's reception lead, who knew Diego and who came over to speak to him at the door at the standing institutional warmth IAA carried for its long-service fellows; the INACH liaison from Punta Arenas, in port-issue. The Argentine port authority officer was at the door at the standing. The Chilean port authority officer was at the door at the standing. The medical-clearance officer was at the back wall against the per-crew clearance dossiers. The logistics officer was at the side table against the resupply manifest.
+The room filled at the institutional level. The consortium representatives came in first - Holm and his three counterparts; the IAA's reception lead, who knew Diego and who came over to speak to him at the door at the standing institutional warmth IAA carried for its long-service fellows; the INACH liaison from Punta Arenas, in port-issue. The Argentine port authority officer was at the door at his post. The Chilean port authority officer was at the door at his post. The medical-clearance officer was at the back wall against the per-crew clearance dossiers. The logistics officer was at the side table against the resupply manifest.
 
 Then the rival-platform delegation came in.
 
@@ -161,7 +165,7 @@ He saw me at the room's south wall.
 
 He came over.
 
-The consortium witnesses were in the room at the institutional level. The IAA's reception lead was at the door speaking to Diego. Holm was at the table speaking to Wanjiru. The Argentine port authority officer was watching the room at the standing. The medical-clearance officer was watching the room at the standing. The room was not silent. The room was at the institutional level.
+The consortium witnesses were in the room at the institutional level. The IAA's reception lead was at the door speaking to Diego. Holm was at the table speaking to Wanjiru. The Argentine port authority officer was watching the room at his post. The medical-clearance officer was watching the room at her station. The room was not silent. The room was at the institutional level.
 
 Stefan said: *Anna. Congratulations on a successful conclusion of the MERIDIAN-7 mission. The consortium will be reading the results at substantial interest.*
 
@@ -171,7 +175,7 @@ I said: *Stefan. Acknowledged. I read the public summary of the rival mission's 
 
 The English was the English I had used when I had been at the AWI postdoctoral wardroom in 2010 and had needed the institutional bearing against the German colleague who had been my friend at the time. The vocabulary was institutional. The cadence was correct.
 
-He said: *thank you. The rival mission is at the post-conclusion review at the standing at the consortium level. The architectural-philosophical contest will continue at the institutional level at the consultation cycle.*
+He said: *thank you. The rival mission is at the post-conclusion review at the consortium level. The architectural-philosophical contest will continue at the institutional level at the consultation cycle.*
 
 I said: *acknowledged. The post-incident review for the MERIDIAN-7 mission is at the institutional level at the consortium standing committee. The forensic-substrate analysis is at the regulatory-filing carrier at the post-handshake mirror.*
 
@@ -199,9 +203,9 @@ He nodded. He turned. He went back to the rival-platform delegation at the room'
 
 The exchange was thirty seconds against the consortium's standing institutional handshake.
 
-I did not note the exchange aloud. The room was at the institutional level. Holm was speaking to Wanjiru at the table. The IAA's reception lead was speaking to Diego at the door. Joel was at the room's north wall speaking to the medical-clearance officer at the standing post-clearance. The room was not the room at which Anna Yusupova would have narrated to anyone what had not been said. The room was the room at which the institutional level held.
+I did not note the exchange aloud. The room was at the institutional level. Holm was speaking to Wanjiru at the table. The IAA's reception lead was speaking to Diego at the door. Joel was at the room's north wall speaking to the medical-clearance officer at the post-clearance. The room was not the room at which Anna Yusupova would have narrated to anyone what had not been said. The room was the room at which the institutional level held.
 
-I went to the coffee table. I poured a cup. I drank it at the standing.
+I went to the coffee table. I poured a cup. I drank it.
 
 I would record the exchange at the institutional level without flourish. I would not record what had not been said. The next director, at the start of her selection cycle, would read what I had recorded. She would mark the gap or not mark it. The institutional level was what it was.
 
@@ -211,19 +215,19 @@ I returned to the work the reception required.
 
 The disembarkation went at the standing rate across the back two hours.
 
-Priya was at the dockside customs station at 0612. She had her IIT-Delhi institutional-issue parka and the schema-evolution annotation queue she had been closing for me across the transit on a small drive in her hand. She gave me the drive at the gangway. She said: *Director. The annotations are at the standing. The schema-migration paper is at the draft stage against the post-mission documentation cycle. I will send the draft from Delhi.* I said: *acknowledged. Safe travel.* She said: *thank you, Director.* She went down the dock to the consortium logistics van that was running the consortium-affiliate transfer to the airport.
+Priya was at the dockside customs station at 0612. She had her IIT-Delhi institutional-issue parka and the schema-evolution annotation queue she had been closing for me across the transit on a small drive in her hand. She gave me the drive at the gangway. She said: *Director. The annotations are complete. The schema-migration paper is at the draft stage against the post-mission documentation cycle. I will send the draft from Delhi.* I said: *acknowledged. Safe travel.* She said: *thank you, Director.* She went down the dock to the consortium logistics van that was running the consortium-affiliate transfer to the airport.
 
-Sabina was at the resupply manifest at 0648. The bid-disaster recovery she had been working at the bridge channel since Mission Day 30 was closing at the post-handshake; the cross-jurisdictional procurement-audit ledger was at the closing. She came up to me at the table where the regulatory filing's preliminary response was open. She said: *Director. The logistics are at the standing. The post-mission audit ledger is at the closing. I am at the consortium logistics office at the post-mission documentation cycle. I will see you at the post-mission consortium meeting in Brasília in November.* I said: *acknowledged. Thank you for the mission, Sabina.* She said: *Director.* She went out.
+Sabina was at the resupply manifest at 0648. The bid-disaster recovery she had been working at the bridge channel since Mission Day 30 was closing at the post-handshake; the cross-jurisdictional procurement-audit ledger was at the closing. She came up to me at the table where the regulatory filing's preliminary response was open. She said: *Director. The logistics are in hand. The post-mission audit ledger is at the closing. I am at the consortium logistics office at the post-mission documentation cycle. I will see you at the post-mission consortium meeting in Brasília in November.* I said: *acknowledged. Thank you for the mission, Sabina.* She said: *Director.* She went out.
 
-Maria was at the medical bay clearing the back of the per-crew clearance dossiers at 0703. She was scheduled to fly to Lisbon in two days against the post-mission medical-clearance. She would be at the consortium's medical-officer post-mission debrief at the standing. She came up briefly at the reception room to confirm Joel's clearance was at the standing. I said: *acknowledged.* She nodded. She went out.
+Maria was at the medical bay clearing the back of the per-crew clearance dossiers at 0703. She was scheduled to fly to Lisbon in two days against the post-mission medical-clearance. She would be at the consortium's medical-officer post-mission debrief on schedule. She came up briefly at the reception room to confirm Joel's clearance was clean. I said: *acknowledged.* She nodded. She went out.
 
 Hiroshi was at the reception room's north wall at 0712.
 
-I had noted him at the periphery across the morning. He was watching the room at the attention I had been deferring to him on glaciological matters for ten years. The attention was scientific. The attention was also something I had not consciously noted before. I had not noted it because the attention had been at the institutional level all the years I had known him; I had not had reason to note it as anything other than the chief scientist's standing attention.
+I had noted him at the periphery across the morning. He was watching the room at the attention I had been deferring to him on glaciological matters for ten years. The attention was scientific. The attention was also something I had not consciously noted before. I had not noted it because the attention had been at the institutional level all the years I had known him; I had not had reason to note it as anything other than the chief scientist's customary attention.
 
-He had the small notebook in his hands. He had been carrying the notebook across the mission. The notebook had been at the standing; he had used it for scientific observations at the wardroom and at the bridge at the rate the chief scientist's notebook required. I had noted the notebook as a fact about him at the standing.
+He had the small notebook in his hands. He had been carrying the notebook across the mission. The notebook had been present across the mission; he had used it for scientific observations at the wardroom and at the bridge at the rate the chief scientist's notebook required. I had noted the notebook as a fact about him and let it rest there.
 
-He was making a small mark on the back cover of the notebook at the moment I came over to him. It was not a note. The mark was at the line's cadence; it was a fragment of a line; the line was on a page that was on the back of the notebook where no one would have looked at the standing; the line was a single curved stroke that was unfinished against a larger composition I could not see because his thumb covered it.
+He was making a small mark on the back cover of the notebook at the moment I came over to him. It was not a note. The mark was at the line's cadence; it was a fragment of a line; the line was on a page that was on the back of the notebook where no one would have looked; the line was a single curved stroke that was unfinished against a larger composition I could not see because his thumb covered it.
 
 He saw me see the line.
 
@@ -255,7 +259,7 @@ He said: *the maiden voyage is at the close. The next mission is at the institut
 
 I said: *acknowledged.*
 
-He nodded. He closed the notebook with his thumb still covering the unfinished line. He put the notebook in his inner pocket. He went over to Diego at the side table. The two of them spoke briefly. Hiroshi said something in Japanese-English that the IAA reception lead did not catch; Diego said something in Spanish-English that the consortium-affiliate did not catch; the two of them laughed at the standing warmth the two of them had carried at the wardroom across the back fifty-six days. The laughter was warm. The laughter was the laughter of two senior scientists at the close of a maiden voyage they had been on at the institutional level.
+He nodded. He closed the notebook with his thumb still covering the unfinished line. He put the notebook in his inner pocket. He went over to Diego at the side table. The two of them spoke briefly. Hiroshi said something in Japanese-English that the IAA reception lead did not catch; Diego said something in Spanish-English that the consortium-affiliate did not catch; the two of them laughed at the warmth the two of them had carried at the wardroom across the back fifty-six days. The laughter was warm. The laughter was the laughter of two senior scientists at the close of a maiden voyage they had been on at the institutional level.
 
 I noted Hiroshi at the institutional level the record would carry him at. I noted him also at the register the record would not carry. That second level was where the diary would carry him. The level was the level at which a man who had stopped drawing at twenty had been drawing in the back of every notebook for forty-five years and had not lamented the drawing he had not done because the cold edge had been the drawing he had done.
 
@@ -265,7 +269,7 @@ I went to the gangway.
 
 Diego was at the gangway at 0728.
 
-He had his sea-bag at his side. The bag was the bag he had brought aboard at Bremerhaven on Mission Day minus one; the bag was at the standing. The IAA institutional-stationery envelope addressed in his hand to *María Elena Vargas, calle 11 de Septiembre, Belgrano, Buenos Aires, Argentina* was at the breast pocket of his parka where he had been carrying it since Mission Day 55.
+He had his sea-bag at his side. The bag was the bag he had brought aboard at Bremerhaven on Mission Day minus one; the same bag. The IAA institutional-stationery envelope addressed in his hand to *María Elena Vargas, calle 11 de Septiembre, Belgrano, Buenos Aires, Argentina* was at the breast pocket of his parka where he had been carrying it since Mission Day 55.
 
 He saw me at the gangway. He came over.
 
@@ -293,7 +297,7 @@ He said: *thank you, Director.*
 
 I said: *thank you, Diego.*
 
-He set the sea-bag down. He took the leather mate-cup out of the inner pocket. He looked at it. He did not say anything for a moment. He put it back. He picked up the sea-bag. He went down the gangway. The consortium logistics van that was running the consortium-affiliate transfer to the airport was at the dock at the standing. The driver opened the door. Diego got in. The door closed. The van pulled away into the Punta Arenas pre-dawn.
+He set the sea-bag down. He took the leather mate-cup out of the inner pocket. He looked at it. He did not say anything for a moment. He put it back. He picked up the sea-bag. He went down the gangway. The consortium logistics van that was running the consortium-affiliate transfer to the airport was at the dock. The driver opened the door. Diego got in. The door closed. The van pulled away into the Punta Arenas pre-dawn.
 
 I watched the van go.
 
@@ -305,7 +309,7 @@ I went back to the reception room.
 
 The hotel room at the Hotel Dreams del Estrecho was at the consortium-affiliate level. The room had been booked against the post-reception at the consortium standing handshake. The room had a small desk against the window and a single chair and a bed and a closet and a kettle. The window looked north against the Strait. The light was now full morning against the equinox.
 
-I sat at the desk. The per-laptop was on the desk. The list was on the desk. The Perkins paperback was on the desk. The page of staff history I had drafted in the file across the back hour was on the per-laptop's screen in the canonical authored-content archive. The file was at twenty-three thousand four hundred words against the back year of writing. The file had grown by the morning's drafting at the standing.
+I sat at the desk. The per-laptop was on the desk. The list was on the desk. The Perkins paperback was on the desk. The page of staff history I had drafted in the file across the back hour was on the per-laptop's screen in the canonical authored-content archive. The file was at twenty-three thousand four hundred words against the back year of writing. The file had grown by the morning's drafting.
 
 There was a knock at the door at 1147.
 
@@ -315,7 +319,7 @@ She said: *Director. The institution requires the staff history at the close of 
 
 She was asking the way she had named the convention on Day 22 and the way she had asked it formally on Day 53 - at the institutional level, at the moment the institution required the asking, at the discipline that did not assume the convention would be honored without naming.
 
-I said: *acknowledged. The document will be filed at the consortium archive at the close of the post-mission documentation cycle. It is at the standing at the per-laptop. The file will close at the institutional level when I close it at the post-mission cycle.*
+I said: *acknowledged. The document will be filed at the consortium archive at the close of the post-mission documentation cycle. It is in the file at the per-laptop. The file will close at the institutional level when I close it at the post-mission cycle.*
 
 She said: *acknowledged.*
 
@@ -334,7 +338,7 @@ I sat at the desk.
 I had been writing the document across the back year. The file at the per-laptop was the draft it was being built from. It carried the pre-mission cycle and the departure and the Drake Passage and the first submersion and the Day-Twenty realization and the first surface and the second submersion and the Day-Forty-Seven leak and the post-leak transit and the Punta Arenas surface, each at the institutional level the convention required. It would close when I closed it at the post-mission documentation cycle. It would carry to the consortium archive at the institutional handshake. The next mission director would read it at the start of her selection cycle.
 I had been writing what the next mission director would read.
 
-I had not been writing because Wanjiru had asked at 0512 in the reception room. I had been writing because Wanjiru had named the convention on Day 22 at the comm space at the moment the comm space had emptied. I had been writing because the institutional discipline carried the convention at the standing. I had been writing because a director who had carried the convention before me had carried it for the director before her, and the director before her had carried it for the director before her, and the convention was older than the architecture, and the architecture carried what reached the consortium ports, and the convention was what reached the consortium ports because the directors had honored the convention at the institutional level across the duration the institutional discipline had required.
+I had not been writing because Wanjiru had asked at 0512 in the reception room. I had been writing because Wanjiru had named the convention on Day 22 at the comm space at the moment the comm space had emptied. I had been writing because the institutional discipline carried the convention forward. I had been writing because a director who had carried the convention before me had carried it for the director before her, and the director before her had carried it for the director before her, and the convention was older than the architecture, and the architecture carried what reached the consortium ports, and the convention was what reached the consortium ports because the directors had honored the convention at the institutional level across the duration the institutional discipline had required.
 
 I was writing for the next mission director.
 
@@ -372,13 +376,13 @@ I opened a different file.
 
 *The next mission director will read the institutional file at the start of her selection cycle. She will read what the convention requires me to write. She will read what I have decided to write at the discretion the convention permits. She will not read what is in this one. This one is for me. It is not the record going to the consortium. It will close when I close it. It will not replicate. It will not carry to the consortium archive. It will carry to me, at the level it carries at.*
 
-*I am writing because Wanjiru asked. I am writing because the convention required asking. I am writing because the directors who came before me wrote what I read at the start of my own selection cycle, and I learned what I needed to learn from the writing they had done. I am writing because the next mission director will need what I have to give her. That is enough.*
+*Wanjiru asked. The convention required asking. The directors who came before me wrote what I read at the start of my own selection cycle, and I learned what I needed to learn from the writing they had done. The next mission director will need what I have to give her. That is enough. That has always been enough.*
 
 *The mission is at the close. The contest is at the institutional level. The architecture has held. The convention is older than the architecture. The convention will hold.*
 
-*I am writing for the next mission director.*
+*She will read it at the start of her selection cycle. She will not know my name until she opens the file. She will not need to.*
 
-*I am writing.*
+*The file is open. I am at the desk.*
 
 *- A.Y.*
 
@@ -392,7 +396,7 @@ I added a paragraph.
 
 The paragraph carried Punta Arenas at 0441 and the dock and the gangway and the reception and the disembarkation and Diego at the gangway and Hiroshi at the reception and Wanjiru at the door. The paragraph did not narrate. The paragraph carried what had been done at the institutional level.
 
-The paragraph closed at the post-handshake at the standing.
+The paragraph closed at the post-handshake.
 
 The file was at twenty-three thousand seven hundred words.
 
@@ -415,6 +419,14 @@ The mission was at the close.
 The record was at the desk.
 
 I kept writing.
+
+---
+
+The card printer was on the desk beside the per-laptop. I had not used it since Mission Day 39. I had a photograph from the bakery in Ushuaia from the transit north — the *medialunas* had been what they claimed to be, and I had noted this in the margin of the Perkins book and photographed the pastry case before I ate. I printed the photograph on the card stock. I addressed it in my hand to Diana Yusupova, Voronezh, the Lesnoy district, the building number her father had sent me when they moved in August. I wrote on the reverse: *D — From Punta Arenas. The boat is safe. The crew is safe. I am at the desk. Tell me what is new at the building. — A.*
+
+I left a space for a sticker, which Diana would apply.
+
+I set the card on the desk beside the list. I would drop it at the morning post before I flew north.
 
 ---
 

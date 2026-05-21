@@ -10,12 +10,12 @@ log-opener-pattern: none
 primary-rail: mission-as-survival
 narrator-frame: archive-conspiratorial
 plants-set:
-  - joel-93-days
   - firmware-second-note
   - diana-postcards
   - mother-comparisons-pattern
   - vatrushka-evaluation-standards
-plants-paid: []
+plants-paid:
+  - joel-93-days  # atomic-within-scene (set + resolved in ch01 itself at line 153 when Joel appears)
 last-measured: 2026-05-17
 last-measurement-result: 79/79 passes, zero warnings (yeoman)
 stage-advance-ratified-by: CIC 2026-05-17
@@ -54,7 +54,7 @@ The walk from the bakery to the harbor was eleven minutes by the inland route an
 
 I should say, since I have brought it up: I do not like cold. Never have. I prefer, when given the choice, to be warm - twenty-five degrees, sun on a wall, the air doing nothing in particular. I have spent twenty-three years going to the coldest places on Earth for a living, and the contradiction has stopped, at this point, embarrassing me. The fee for the cold is paid by the consortium. They do not know this is what they are paying for.
 
-I was wearing the parka the consortium had not paid for and the boots they had. I noted this as I walked. I had been thinking, on and off, about which expenses were mine and which were theirs, and the parka had become a small private symbol of the parts of the mission that were going to be mine alone whether they liked it or not. The granddaughter at the bakery had complimented the parka twice. I did not blame her.
+I was wearing the parka the consortium had not paid for and the boots they had. I marked this as I walked. I had been thinking, on and off, about which expenses were mine and which were theirs, and the parka had become a small private symbol of the parts of the mission that were going to be mine alone whether they liked it or not. The granddaughter at the bakery had complimented the parka twice. I did not blame her.
 
 I passed three of my crew on the way to the dock. They did not see me. This was deliberate on their part and not on mine, and I appreciated it.
 
@@ -118,8 +118,6 @@ With the benefit of what I learned later, I am leaving this on the page: I had r
 
 Nobody raised an objection. **Wanjiru Kamau**, my survey lead, asked a clarifying question about the watch rotation that was not really a clarifying question - the wardroom still smelled of diesel from the morning engine run, which meant the ventilation handover had not fully cycled, which meant someone had opened a hull fitting after 07:00, which I noted and did not yet ask about - she asked it because she asks one clarifying question at every briefing whether or not she has one, on the grounds that it makes everyone else feel less stupid for asking theirs. It is the kind of thing she does. I answered her. She nodded. She wrote something on a notepad I could not read from across the table.
 
-On the morning of February fourteenth I trusted Wanjiru Kamau the way you trust the second person you ever hired, which is differently from how you trust anyone else; this trust was earned over eleven years and was not, on the morning of departure, in any way conditional. I'm telling you for the same reason I told you about Priya. You should know what I thought of these women before what happened, happened. Otherwise the part where I figure out what they did is going to read like I was suspicious of them all along, and I was not. I was running my boat with the people I had trusted longest, and that is a thing I would do again with the same information.
-
 I closed the briefing at 08:34. I told them to be on station by 09:00. I told them, with a directness I did not soften, that nobody was going to die on this mission if I could help it, and that I was going to help it.
 
 And then I put the white bakery box on the wardroom table and told them to enjoy. The crew took the pastries quietly, in the way of people who had been waiting for the box and were not going to admit it. Mikael took two.
@@ -130,7 +128,7 @@ This is the part the archive does not get.
 
 The chemistry rack is forward of frame thirty-six, port side, three steps down from the main passageway, and it has the only door on the boat that is not actually a hatch. I went there because Mikael had told me to, and because I always do. The honest reason was Joel Reyes. I had not spoken with him since the thirteenth of November in Bremerhaven, and ninety-three days is enough time to develop opinions about a man he has done nothing to deserve. I wanted to see him before we sailed. I wanted to confirm, with my own eyes, that he was the man I had decided ninety-three days ago not to think about, and not someone else.
 
-He was kneeling by the lower environmental sensor rack with a multimeter in his left hand and a coffee in his right. He had not heard me come in, or had heard me and was pretending. The cup was one I recognized. I noted this and did not remark on it.
+He was kneeling by the lower environmental sensor rack with a multimeter in his left hand and a coffee in his right. He had not heard me come in, or had heard me and was pretending. The cup was one I recognized. I noted this and did not remark on it. There was a laptop open on his bunk behind him.
 
 "Joel." 
 

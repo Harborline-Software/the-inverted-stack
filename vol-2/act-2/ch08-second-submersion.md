@@ -11,12 +11,12 @@ primary-rail: class-region-institutional-politics
 secondary-rail: mission-as-survival
 chapter-version: v1
 plants-set:
-  - sabina-procurement-dry-run
-  - mock-flag-specification
   - priya-schema-handshake-clean-segment2
 plants-paid:
   - sabina-1998-dock-lesson
   - diego-day-28-matters
+  - sabina-procurement-dry-run  # atomic-within-scene (ch08 IS the dry-run scene)
+  - mock-flag-specification  # atomic-within-scene (set + paid in ch08 at line 167)
 ---
 
 
@@ -70,7 +70,7 @@ Joel came in at oh-eight-fifty-seven. He had the tablet, the printed copy of the
 
 Sabina came in at oh-five-of. She had the manila folder open in her hand and a single sheet of paper on top of the folder. The sheet had three columns and twenty-two rows. The columns were headed in her hand: *consortium signoff*, *jurisdiction*, *authority of record*. The rows were the in-port acknowledgments and the secondary contacts she had walked me through on Day 2 of the transit south, plus the additional consortium audit checkpoint the UAE-led leg had added before the boat had left port, plus a category I had not seen on the Day 2 sheet and that Sabina had pencilled in at the bottom of the page in a hand slightly more compressed than the rest of the page.
 
-She closed the hatch. She sat at the head of the bench. She set the folder down.
+She closed the hatch. She sat at the head of the bench. She set the folder at the centre of the bench - precisely, the way she set things when she wanted them to be findable at speed - and folded her hands over it.
 
 She said: *the case.*
 
@@ -188,7 +188,7 @@ They stood. Sabina collected the folder, the sheet, and the pencil. Joel collect
 
 I sat at the bench for a minute before I moved.
 
-Sabina had brought the case in the texture I had been reading in her since pre-mission. The texture this morning had also been that of an officer who insisted on validation because Sabina had once been at the wrong end of a system that had not been honest about what it had and what it did not have - and who had decided, some time ago, that no system she was ever again responsible for would discover what it could not do at the moment the doing was required. She had brought the paper backup. She had cleared the legal authority. She had read the framework end-to-end. The consortium would call this "diligence" in a press release; Sabina would call it the work. They are not the same word.
+Sabina had brought the case in the texture I had been reading in her since pre-mission. The texture this morning had also been that of an officer who insisted on validation because Sabina had once been at the wrong end of a system that had not been honest about what it had and what it did not have - and who had decided, some time ago, that no system she was ever again responsible for would discover what it could not do at the moment the doing was required. She had brought the paper backup. The legal authority was already cleared. She had read the framework end-to-end. The consortium would call this "diligence" in a press release; Sabina would call it the work. They are not the same word.
 
 I did not log the texture. I noted it.
 
@@ -264,4 +264,4 @@ I logged the morning into the bridge journal: Sabina's case, Joel's walk, Sabina
 
 It read, on the page, like the bureaucratic report of an unremarkable morning. The architecture had been designed so that mornings like this one would read that way. I had hired Sabina, in part, because she would design her preparation so that the day she needed the preparation would also read that way - and would not be the day anyone thanked her. (Sabina would not have wanted to be thanked. The architecture cannot want anything. The symmetry is not accidental.)
 
-I stood. I rinsed the cup. I closed the wardroom desk terminal. I turned the wardroom sconce down one click. The hum continued. The hum would continue.
+I stood. I rinsed the cup. I closed the wardroom desk terminal. I turned the wardroom sconce down one click. Joel passed the wardroom hatch on his way forward to the engineering compartment. He was holding the smaller cup. The hum continued. The hum would continue.

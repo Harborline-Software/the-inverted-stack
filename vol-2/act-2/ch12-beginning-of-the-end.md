@@ -57,7 +57,7 @@ I had a thought I did not write down. I will write it here.
 
 *And now everything we record for the next ten days is on the boat alone until we surface in Punta Arenas.*
 
-(Which is the kind of thing you know from departure day. The manifest says fifty-six days. The timeline shows three surface windows. Basic arithmetic. And then you are standing at the command station on Day 39 at 0611, and the body does the arithmetic again, and the arithmetic is the same, and the answer arrives at a different altitude than it did in September. The body had taken in Surface 1 as the surfacing it had been and Surface 2 as the surfacing it had been, and the body knew, as bodies on boats know, that there was not a third one. I noted that I had had the thought. I did not soften it.)
+(Which is the kind of thing you know from departure day. The manifest says fifty-six days. The timeline shows three surface windows. Basic arithmetic. And then you are at the command station on Day 39 at 0611, on your feet, and the body does the arithmetic again, and the arithmetic is the same, and the answer arrives at a different altitude than it did in September. The body had taken in Surface 1 as the surfacing it had been and Surface 2 as the surfacing it had been, and the body knew, as bodies on boats know, that there was not a third one. I noted that I had had the thought. I did not soften it.)
 
 I returned to the indications. The watch ran. The bridge ran routine.
 
@@ -127,7 +127,7 @@ Diego stayed forward at the polar-operations console through the rest of his wat
 
 I went to my desk in the wardroom corner at 1112 between the bridge watches.
 
-I read the cross-check filing's confirmed receipt. Wanjiru had filed the consolidated end-of-window reconciliation at 0457 against both consortium ports on the way out of the surface window. The consortium's institutional read-stack had pulled the cross-check on HELVETICA-2 into active read at 1530 of Day 37 and had not yet filed an institutional response. The institutional response would file no earlier than Day 41 and no later than Day 43, against the consortium's standing forty-eight-to-ninety-six-hour cross-validation procedure. The cross-check was on the consortium's desk. The procedure was the procedure. The clock was on the consortium's side of the surface window and would resolve at the consortium's side. The boat had filed what the boat could file. There was nothing on my desk against the cross-check that the boat could do for the next ten days. The institution would respond on the institution's clock or the institution would not respond. Either result would arrive at the boat at the surfacing at Punta Arenas on Day 56, in the bulk inbound batch of the institutional traffic that had accumulated against the boat across the closed window.
+I read the cross-check filing's confirmed receipt. Wanjiru had filed the consolidated end-of-window reconciliation at 0457 against both consortium ports on the way out of the surface window. The consortium's institutional read-stack had pulled the cross-check on HELVETICA-2 into active read at 1530 of Day 37 and had not yet filed an institutional response. The institutional response would file no earlier than Day 41 and no later than Day 43, against the consortium's established forty-eight-to-ninety-six-hour cross-validation procedure. The cross-check was on the consortium's desk; the clock was on the consortium's side of the surface window and would resolve there. The boat had filed what the boat could file, and there was nothing on my desk against the cross-check that the boat could do for the next ten days. Either response or silence would arrive at the boat at the surfacing at Punta Arenas on Day 56, in the bulk inbound batch of institutional traffic that had accumulated across the closed window.
 
 I noted the receipt at the routine tempo. I closed the document. I went to the comm space.
 
@@ -143,7 +143,7 @@ She said: *clean. The window cleared P0 in full and P1 in full and P2 partial an
 
 I said: *the institutional response window.*
 
-She said: *Day 41 to Day 43. Consortium's clock. The response would surface against the boat at Punta Arenas - earlier if the consortium routed an institutional cable on the standing emergency surface-burst frequency, but the cross-check is not at the priority that gets a cable. I have set the inbound-priority panel to surface it in the first read-stack at Punta Arenas surfacing.*
+She said: *Day 41 to Day 43. Consortium's clock. The response would surface against the boat at Punta Arenas - earlier if the consortium routed an institutional cable on the emergency surface-burst frequency, but the cross-check is not at the priority that gets a cable. I have set the inbound-priority panel to surface it in the first read-stack at Punta Arenas surfacing.*
 
 I said: *acknowledged.*
 
@@ -195,7 +195,7 @@ I left the compartment.
 
 The afternoon ran routine.
 
-Priya ran the four-pass schema check at 1200. The four-pass cleared. The v3.4.2 had not recurred. She filed the result at 1218 in the audit log against the morning's three-pass-with-anomaly entry, then went back to her instrumentation station and continued the calibration runs that had been on her standing list for the segment-three opening. She did not come to the bridge to report the clear. (Which was the report. Priya is the kind of person whose silences carry a signature, and you learn to read it the way you learn to read a barometer.)
+Priya ran the four-pass schema check at 1200. The four-pass cleared. The v3.4.2 had not recurred. She filed the result at 1218 in the audit log against the morning's three-pass-with-anomaly entry, then went back to her instrumentation station and continued the calibration runs that had been on her segment-three opening list. She did not come to the bridge to report the clear. (Which was the report. Priya is the kind of person whose silences carry a signature, and you learn to read it the way you learn to read a barometer.)
 
 Diego stood through the first half of the afternoon watch. He sat at 1430 for the consortium-model cross-section at the second hour, stood again at 1518 for the bathymetry update at the half-hour mark, and stood through to the end of his watch at 1600. The polar-operations console refresh stayed at the higher rate. The chart was running half a degree south of the consortium model; the back-correction was filed; the second cross-section confirmed the half-degree; Diego had named it twice.
 

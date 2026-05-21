@@ -11,14 +11,14 @@ primary-rail: career-cost-and-aging-out
 secondary-rail: grief-family-memory
 chapter-version: v2
 plants-set:
-  - discipline-from-the-boat
-  - three-identity-architecture
   - boat-on-register-no-more
   - joel-does-not-sleep-right-away
 plants-paid:
   - sunfish-name-private-to-joel
   - green-ceramic-mug
   - gauge-in-front-of-you
+  - discipline-from-the-boat  # atomic-within-scene (set + paid in ch07)
+  - three-identity-architecture  # atomic-within-scene (set + paid in ch07 at line 139)
 ---
 
 
@@ -84,7 +84,7 @@ He said: *I came out of the Navy nuclear program in the early nineties. I had fi
 
 He took another quarter of the coffee. He set the mug back down at the precise place he had set it down before.
 
-*The thing the boat made me into was not what I had been expecting. I had expected to be made into a reactor operator. I was made into a reactor operator. That was the first surface of it. The second surface of it was the discipline the boat ran on, which was not the discipline of the reactor and was not exactly the discipline of the Navy and was the discipline a closed pressure hull at depth on a deterrent posture runs on when the boat is alone for sixty days and the discipline is the only thing between the boat and the boat not coming home. The discipline I am talking about is the discipline of a system that has decided to be honest about what it has and what it does not have. The discipline that does not pretend a reading exists when the reading does not exist. The discipline that does not assume the dashboard is telling the truth because the dashboard is the only thing on the panel. The discipline that reads the gauge in front of you and does not extrapolate from the gauge to a quantity the gauge cannot see. The discipline that says, when a casualty fires, the procedure is the procedure for the casualty that is happening, which is not the casualty that is in the casebook. The casebook is a starting point. The procedure is what you do when the casebook is one minute behind the boat.*
+*The thing the boat made me into was not what I had been expecting. I had expected to be made into a reactor operator. I was made into a reactor operator. That was the first surface of it. The second surface of it was the bearing the boat ran on, which was not the posture of the reactor and was not exactly the posture of the Navy and was the discipline a closed pressure hull at depth on a deterrent posture runs on when the boat is alone for sixty days and the discipline is the only thing between the boat and the boat not coming home. The discipline I am talking about is the discipline of a system that has decided to be honest about what it has and what it does not have. The discipline that does not pretend a reading exists when the reading does not exist. The discipline that does not assume the dashboard is telling the truth because the dashboard is the only thing on the panel. The discipline that reads the gauge in front of you and does not extrapolate from the gauge to a quantity the gauge cannot see. The practice that says, when a casualty fires, the procedure is the procedure for the casualty that is happening, which is not the casualty that is in the casebook. The casebook is a starting point. The procedure is what you do when the casebook is one minute behind the boat.*
 
 He had his hands flat on the desk while he said it. Not braced. Just resting, in the way a man rests his hands on a surface when he is not performing anything and the thing he is saying does not require demonstration. I noted the hands.
 
@@ -193,8 +193,6 @@ He said: *the discipline she ran on did not go with her. The discipline she ran 
 He said: *that is what the project's name is for. I named it after her because the discipline that runs through it is the discipline she taught me. The boat does not exist. The discipline does. I had wanted the name to be the place the discipline came from, even though the boat was no longer at the place she had come from. That is the gesture. I had not told it to anyone before tonight.*
 
 I said: *acknowledged.*
-
-I said it with the same texture I had said it with the third time, which was the texture I had said it with the first time, which was the texture the conversation had been running on since the conversation began. The texture had not changed. The texture was the texture the conversation had wanted.
 
 ---
 

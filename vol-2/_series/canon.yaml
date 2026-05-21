@@ -223,3 +223,12 @@ forward_plants:
       Neither accepted nor refused in vol-3.
     payoff_target: vol-4 (Astrid as narrator; Wanjiru's response letter is the
       inciting beat for the Belyana mission)
+  - id: diana-postcards
+    set_in: vol-2/ch01 (Departure)
+    set_date: 2026-05-20 (Yeoman plant-payoff audit)
+    description: |
+      Anna prints postcards for Diana from every bakery in every city she passes
+      through. The postcard thread runs through vol-2 but the payment — a postcard
+      fails to arrive or arrives late, and Diana notices — does not occur in vol-2.
+    payoff_target: vol-2 endgame or vol-3 (per A+ roadmap plant-payoff triage
+      2026-05-21; genuine unpaid forward-plant)
