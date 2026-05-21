@@ -125,7 +125,7 @@ I logged the resolution to the file. I did not narrate the logging.
 
 I worked the personal items next.
 
-There was a question on the list - *mother - anything since Day 39?* - that I had been carrying since the surface window I had not been able to take at the per-laptop level against the family-channel queue. The system answered against the consortium's family-channel archive at the post-handshake. My mother had filed three voice messages and seven text messages across the back seventeen days. Her voice in the first message was at the tone I knew it at. *Anya, I have been at the church on Sundays. The icon corner at the apartment is as it should be. The candle for you is lit. The doctor came on Tuesday and said my numbers are fine. Your brother brought Misha to see me on Saturday. Call when you surface.* The tone was the tone. She was fine. The candles had been lit across the duration. The numbers were unremarkable. I would call her after the reception at the post-reception window.
+There was a question on the list - *mother - anything since Day 39?* - that I had been carrying since the surface window I had not been able to take at the per-laptop level against the family-channel queue. The system answered against the consortium's family-channel archive at the post-handshake. My mother had filed three voice messages and seven text messages across the back seventeen days. Her voice in the first message was at the tone I knew it at. *Anya, I have been at the church on Sundays. The icon corner at the apartment is as it should be. The candle for you is lit. The doctor came on Tuesday and said my numbers are fine. Your brother brought Misha to see me on Saturday. Call when you surface.* She was fine. The candles had been lit across the duration. The numbers were unremarkable. I would call her after the reception at the post-reception window.
 
 There was a question on the list - *Galina's data - Day 22 forensic queue?* - about a colleague at AARI whose archived dataset I had been holding against the post-handshake because the architecture had not been able to verify the integrity at the per-laptop level without the full-corpus key registry. The system answered. Galina was fine. Her data was in the queue at the post-handshake. The integrity was clean. The dataset would replicate to her per-AARI node at the next handshake cycle.
 
@@ -135,7 +135,7 @@ I closed the personal items at sixteen.
 
 There were items the list carried that the system would not close at the post-handshake.
 
-The first was *should the architecture's environmental-stress claim be formally documented in a paper at this stage?* The system did not answer. The system did not answer because the question was not a question the system could answer; the question was a question I would answer when I had thought about the maiden voyage long enough to know whether the paper was the paper to write next. The question would carry to the post-mission. The question was not a bandwidth question. The question was a judgment question.
+The first was *should the architecture's environmental-stress claim be formally documented in a paper at this stage?* The system did not answer. The system did not answer because the system could not answer it; I would answer it myself when I had thought about the maiden voyage long enough to know whether to write the paper next. The question would carry to the post-mission. The question was not a bandwidth question. The question was a judgment question.
 
 The second was *Diego's retirement timing - the Filchner-Ronne paper - the granddaughter*. The system did not answer. The system did not answer because the question was Diego's. The question would carry to Diego at the post-reception window when he was ready to answer it. The question was Diego's question. I had not been the one to ask it.
 
@@ -169,11 +169,11 @@ The consortium witnesses were in the room at the institutional level. The IAA's 
 
 Stefan said: *Anna. Congratulations on a successful conclusion of the MERIDIAN-7 mission. The consortium will be reading the results at substantial interest.*
 
-The English was the English. The English-as-second-language formality was the same it had been at Bremerhaven and at the Helsinki workshop in 2019 and at the Tromsø workshop in 2023. The vocabulary was institutional. The cadence was correct.
+His English was unchanged. The English-as-second-language formality was the same it had been at Bremerhaven and at the Helsinki workshop in 2019 and at the Tromsø workshop in 2023. The vocabulary was institutional. The cadence was correct.
 
 I said: *Stefan. Acknowledged. I read the public summary of the rival mission's conclusion at the consortium press archive yesterday. Congratulations on the conclusion.*
 
-The English was the English I had used when I had been at the AWI postdoctoral wardroom in 2010 and had needed the institutional bearing against the German colleague who had been my friend at the time. The vocabulary was institutional. The cadence was correct.
+I used the English I had relied on at the AWI postdoctoral wardroom in 2010, when I had needed the institutional bearing against the German colleague who had been my friend at the time. The vocabulary was institutional. The cadence was correct.
 
 He said: *thank you. The rival mission is at the post-conclusion review at the consortium level. The architectural-philosophical contest will continue at the institutional level at the consultation cycle.*
 
@@ -185,7 +185,7 @@ I said: *the filing is at the institutional level.*
 
 There was a pause.
 
-The pause was the pause at which the institutional level stops being able to carry what is not at the institutional level. The pause was three seconds long. I did not note the pause aloud. Stefan did not note the pause aloud. The witnesses did not note the pause.
+The pause was three seconds long — long enough that the institutional level could no longer carry what was not at the institutional level. I did not note the pause aloud. Stefan did not note the pause aloud. The witnesses did not note the pause.
 
 He did not say *I am sorry about the prior mission.*
 
@@ -203,7 +203,7 @@ He nodded. He turned. He went back to the rival-platform delegation at the room'
 
 The exchange was thirty seconds against the consortium's standing institutional handshake.
 
-I did not note the exchange aloud. The room was at the institutional level. Holm was speaking to Wanjiru at the table. The IAA's reception lead was speaking to Diego at the door. Joel was at the room's north wall speaking to the medical-clearance officer at the post-clearance. The room was not the room at which Anna Yusupova would have narrated to anyone what had not been said. The room was the room at which the institutional level held.
+I did not note the exchange aloud. The room was at the institutional level. Holm was speaking to Wanjiru at the table. The IAA's reception lead was speaking to Diego at the door. Joel was at the room's north wall speaking to the medical-clearance officer at the post-clearance. Anna Yusupova would not have narrated to anyone what had not been said. The institutional level held.
 
 I went to the coffee table. I poured a cup. I drank it.
 
@@ -259,9 +259,9 @@ He said: *the maiden voyage is at the close. The next mission is at the institut
 
 I said: *acknowledged.*
 
-He nodded. He closed the notebook with his thumb still covering the unfinished line. He put the notebook in his inner pocket. He went over to Diego at the side table. The two of them spoke briefly. Hiroshi said something in Japanese-English that the IAA reception lead did not catch; Diego said something in Spanish-English that the consortium-affiliate did not catch; the two of them laughed at the warmth the two of them had carried at the wardroom across the back fifty-six days. The laughter was warm. The laughter was the laughter of two senior scientists at the close of a maiden voyage they had been on at the institutional level.
+He nodded. He closed the notebook with his thumb still covering the unfinished line. He put the notebook in his inner pocket. He went over to Diego at the side table. The two of them spoke briefly. Hiroshi said something in Japanese-English that the IAA reception lead did not catch; Diego said something in Spanish-English that the consortium-affiliate did not catch; the two of them laughed at the warmth the two of them had carried at the wardroom across the back fifty-six days. The laughter was warm. It was the laughter of two senior scientists at the close of a maiden voyage they had been on at the institutional level.
 
-I noted Hiroshi at the institutional level the record would carry him at. I noted him also at the register the record would not carry. That second level was where the diary would carry him. The level was the level at which a man who had stopped drawing at twenty had been drawing in the back of every notebook for forty-five years and had not lamented the drawing he had not done because the cold edge had been the drawing he had done.
+I noted Hiroshi at the institutional level the record would carry him at. I noted him also at the register the record would not carry. That second level was where the diary would carry him. It was the level at which a man who had stopped drawing at twenty had been drawing in the back of every notebook for forty-five years and had not lamented the drawing he had not done because the cold edge had been the drawing he had done.
 
 I went to the gangway.
 
@@ -269,7 +269,7 @@ I went to the gangway.
 
 Diego was at the gangway at 0728.
 
-He had his sea-bag at his side. The bag was the bag he had brought aboard at Bremerhaven on Mission Day minus one; the same bag. The IAA institutional-stationery envelope addressed in his hand to *María Elena Vargas, calle 11 de Septiembre, Belgrano, Buenos Aires, Argentina* was at the breast pocket of his parka where he had been carrying it since Mission Day 55.
+He had his sea-bag at his side. It was the same sea-bag he had brought aboard at Bremerhaven on Mission Day minus one. The IAA institutional-stationery envelope addressed in his hand to *María Elena Vargas, calle 11 de Septiembre, Belgrano, Buenos Aires, Argentina* was at the breast pocket of his parka where he had been carrying it since Mission Day 55.
 
 He saw me at the gangway. He came over.
 
@@ -301,7 +301,7 @@ He set the sea-bag down. He took the leather mate-cup out of the inner pocket. H
 
 I watched the van go.
 
-The architecture had preserved what reached the consortium ports. The architecture had preserved Diego's photographs and Diego's logs and the unfinished paper in the canonical authored-content archive and the letter that would carry to María Elena at the post-handshake mirror against the IAA's institutional handshake. The architecture had not preserved Diego. The architecture had not been the architecture for Diego. The architecture had been the architecture for what Diego had made. Diego had preserved Diego.
+The architecture had preserved what reached the consortium ports. The architecture had preserved Diego's photographs and Diego's logs and the unfinished paper in the canonical authored-content archive and the letter that would carry to María Elena at the post-handshake mirror against the IAA's institutional handshake. The architecture had not preserved Diego. The architecture had not been built to preserve him. The architecture had been built to preserve what he made. He made the rest of it himself.
 
 I went back to the reception room.
 
@@ -344,7 +344,7 @@ I was writing for the next mission director.
 
 I was writing what I had wanted to read at the start of my selection cycle.
 
-I had not seen the writing for what it was at the institutional level until the moment Wanjiru had asked. The asking had named what I had been doing. The naming was the naming. The work was the work.
+I had not seen the writing for what it was at the institutional level until the moment Wanjiru had asked. The asking had named what I had been doing. The naming had been Wanjiru's. The work was ahead.
 
 I added a paragraph to the file. The paragraph was at the staff-history level. The paragraph carried the surfacing-and-mooring at 0441 and the reception room at 0512 and the gangway at 0728 and the door at 1147. The paragraph did not carry what had not been said. The paragraph carried what had been done.
 
@@ -370,7 +370,7 @@ I opened a different file.
 
 *Wanjiru is at the standards-body level at the work the institution will require. She did not name the work as her work. She named the work as the work that needed drafting. She will draft the work because the work needs drafting and she is the officer who will draft what needs drafting. The institutional discipline is what carries forward. The convention is older than the architecture. The architecture carries what reaches the ports. The convention is what reaches the ports.*
 
-*Diego is going home. The architecture preserved his photographs and his logs and the letter and the paper. The architecture did not preserve him. He preserved himself. The architecture was the architecture for what he made. The desk at the lake side of the road into San Martín de los Andes is what he will write at. María Elena will cook in the kitchen. Sofía will come at school holidays. The architecture is not the architecture for any of that.*
+*Diego is going home. The architecture preserved his photographs and his logs and the letter and the paper. The architecture did not preserve him. The desk at the lake side of the road into San Martín de los Andes is what he will write at. María Elena will cook in the kitchen. Sofía will come at school holidays. The architecture has nothing to say about that.*
 
 *I am the mission director. I have been writing the document for a year. Wanjiru asked at the door at 1147. I said acknowledged. The file will close at the post-mission documentation cycle. It will carry to the consortium archive at the institutional handshake.*
 
@@ -378,7 +378,7 @@ I opened a different file.
 
 *Wanjiru asked. The convention required asking. The directors who came before me wrote what I read at the start of my own selection cycle, and I learned what I needed to learn from the writing they had done. The next mission director will need what I have to give her. That is enough. That has always been enough.*
 
-*The mission is at the close. The contest is at the institutional level. The architecture has held. The convention is older than the architecture. The convention will hold.*
+*The mission is at the close. The contest is at the institutional level. The architecture has held. The convention is older than the architecture. The convention has been held tonight by the directors who came before me, and will be held by those who come after.*
 
 *She will read it at the start of her selection cycle. She will not know my name until she opens the file. She will not need to.*
 

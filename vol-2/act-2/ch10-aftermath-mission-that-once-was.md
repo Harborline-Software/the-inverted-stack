@@ -40,7 +40,7 @@ She paused at the hatch.
 
 "Yes."
 
-She regarded me with the calibration of a medical officer who had been a medical officer on three submarine missions before the Nansen. The calibration ran for the time it took her to satisfy herself that the desk was the desk and that I was at it because I had chosen to be.
+She regarded me with the calibration of a medical officer who had been a medical officer on three submarine missions before the Nansen. The calibration ran for the time it took her to satisfy herself that I was at the desk because I had chosen to be.
 
 "Routine," she said.
 
@@ -62,7 +62,7 @@ I began.
 
 ---
 
-The prior mission was cut short on operational grounds. That sentence is the sentence I have written into every grant application, every consortium debrief, every hiring decision I have made in the five years since the boat came home with what came home. It is technically correct. It is operationally accurate. It tells you that the mission was cut short, that the grounds were operational, and that the operational grounds resulted in the mission being cut short. It also tells you nothing.
+The prior mission was cut short on operational grounds. I have written that sentence into every grant application, every consortium debrief, every hiring decision I have made in the five years since the boat came home with what came home. It is technically correct. It is operationally accurate. It tells you that the mission was cut short, that the grounds were operational, and that the operational grounds resulted in the mission being cut short. It also tells you nothing.
 
 What it does not tell you is that the mission was cut short because a schema-migration limitation in the toolkit we were running manifested under sustained partition forty-three days into a fifty-eight-day deployment, that the limitation locked our science team out of their own data for six hours during the window in which the science was time-critical, that the lockout produced an instrument-tier cascade across the carbonate-chemistry rig that the rig was not engineered to absorb at depth, that the cascade produced a coolant breach that the access protocol for the affected compartment had not been written to expect, that the breach produced one fatality and two medical evacuations, that the medevacs completed cleanly and the two officers recovered fully and returned to professional duty within nine months, that the fatality was a thirty-one-year-old chemical-instrumentation engineer named Tomáš Havránek whom I had selected for the mission six weeks before sailing and whose mother had asked me, in the consortium's debrief room in Bremerhaven four months later, what I would say to her about the schema migration, which was a word she had not encountered before her son had died inside one.
 
@@ -110,7 +110,7 @@ The omission was the institutional acknowledgment's content. I understood it as 
 
 Stefan had told me, on the dock, what he was willing to tell me, and what he was not willing to tell me had been operationally legible to me by the end of the meeting. Astrid told me, in the debrief room, what the institute was willing to tell me, and what the institute was not willing to tell me had been operationally legible to me by the end of the conversation. The two non-disclosures were of different kinds. Stefan's non-disclosure had been a calibrated bet under institutional pressure he could not name. Astrid's non-disclosure was the institution naming the engineer's loss in a vocabulary that preserved the institution's relationship with the toolkit's organization and with the firm in Zurich the toolkit's organization was negotiating its commercial future with.
 
-I do not blame Astrid for the conversation. She did her work. The institute's institutional interests were the interests she was paid to carry. She handled the conversation within those interests with the calibration of a senior officer who had handled many such conversations. The conversation was the conversation she had come to have.
+I do not blame Astrid for the conversation. She did her work. The institute's institutional interests were the interests she was paid to carry. She handled the conversation within those interests with the calibration of a senior officer who had handled many such conversations. She had the conversation she had come to have.
 
 What I took in, sitting across the consortium table from her at the moment of the second non-disclosure, was that the two non-disclosures were the same shape. They were not the same scale; they were not the same author; they were not the same cost. Stefan's non-disclosure had been an engineer's calibrated decision under pressure he could not name. Astrid's was an institution's calibrated decision under pressure it would not name. The pressures were different. The shape was identical. The shape was: the disclosure that would have served the engineer who was no longer alive to receive it had been weighed against an institutional cost that the disclosing party valued more, and the disclosing party had chosen the institutional cost.
 
@@ -160,7 +160,7 @@ I did not know I was selecting for it at the time. I knew the operational stakes
 
 ---
 
-The cup of tea at my left elbow was cold. The clock on the bulkhead read oh-four-twelve. The watch had been the watch for an hour and twenty-one minutes since Maria had crossed the wardroom and recrossed it. The boat was at depth.
+The cup of tea at my left elbow was cold. The clock on the bulkhead read oh-four-twelve. I had been on watch for an hour and twenty-one minutes since Maria had crossed the wardroom and recrossed it. The boat was at depth.
 
 I sat at the desk with the file open.
 
@@ -172,7 +172,7 @@ I have not named what I will do with the naming. I do not know yet. The boat is 
 
 I have not forgiven Stefan. I have not absolved Astrid. I have not closed the question of what was owed to Tomáš Havránek's mother that has not been paid. The architecture does not close those questions. The architecture is a different question, asked at a different scale, in a vocabulary that the question of what was owed cannot be answered in.
 
-What I know tonight is what mine had been forged in, and what I had built around me on this boat, and what the building had cost.
+What I know tonight is what mine had been forged in, and what I had built around me on this boat. I do not yet know what it had cost.
 
 I do not know yet what trust costs to harden. I am sitting with the question.
 

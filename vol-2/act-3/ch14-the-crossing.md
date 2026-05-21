@@ -74,7 +74,7 @@ We converged at the lower-deck access ladder. I was closer to the ladder than he
 
 He pushed me aside.
 
-The contact was a hand at my shoulder, firm, brief, and specific. The push was not violent. The push was the push of a man whose body had decided to be at the leak before any cognitive part of him had caught up with the decision, and whose body had marked me as an obstacle in the path the body had decided to take, and whose hand had moved me out of the path without his face changing. I stepped back. I did not stumble. I had been in motion; the push moved my motion sideways; my hand found the bulkhead rail; I was at the bulkhead beside the ladder before I had taken in that I had been pushed.
+The contact was a hand at my shoulder, firm, brief, and specific. The push was not violent. It was a man whose body had decided to be at the leak before any cognitive part of him had caught up with the decision, and whose body had marked me as an obstacle in the path the body had decided to take, and whose hand had moved me out of the path without his face changing. I stepped back. I did not stumble. I had been in motion; the push moved my motion sideways; my hand found the bulkhead rail; I was at the bulkhead beside the ladder before I had taken in that I had been pushed.
 
 He did not look at me. He did not stop. He went past. He went down the ladder.
 
@@ -122,7 +122,7 @@ I said: *Diego, ventilation hold on the two-bravo adjacent ducting. Coordinate w
 
 Diego said: *ventilation hold acknowledged. Coordinating with environmental.*
 
-The bridge had taken in the cascade window. The trim was adjusted. The depth was held. The ventilation was held against the smoke ingress that would follow the leak's source identification. The boat was at the operational tempo it would hold for the duration of the compartment isolation. The bridge was running on procedure. The procedure was the procedure I had read in the Mission Director's manual and had never executed against an active casualty event.
+The bridge had taken in the cascade window. The trim was adjusted. The depth was held. The ventilation was held against the smoke ingress that would follow the leak's source identification. The boat was at the operational tempo it would hold for the duration of the compartment isolation. The bridge was running on procedure. I had read the Mission Director's manual; I had never executed it against an active casualty event.
 
 I did not move from the rail.
 
@@ -166,7 +166,7 @@ I said: *acknowledged. Hold the analysis. Stand at the lab compartment in case t
 
 She said: *acknowledged.*
 
-She did not ask whether the cascade would require architectural-protocol intervention. She had read the procedure manual the same number of times I had. She knew the manual specified what she would do at each stage of the cascade. Her position was the position the manual specified. She returned to the lab compartment.
+She did not ask whether the cascade would require architectural-protocol intervention. She had read the procedure manual the same number of times I had. She knew the manual specified what she would do at each stage of the cascade. She returned to the lab compartment.
 
 The bridge was at the operational tempo.
 
@@ -182,7 +182,7 @@ I said: *acknowledged.*
 
 Maria was at the bulkhead. Maria was four steps from where I had been pushed against the rail. Maria was where she would be for the duration of the eleven minutes. Maria was running her routine check on her tablet - the third check, the fourth check, the fifth check - at the rate she ran the check before any clinical engagement, at the rate she had run it before every watch handoff for the duration of the mission, at the rate she had been running it since Belo Horizonte. The check was on the medical record's integrity. The medical record was in the archive. The medical record was not at risk. Maria checked it anyway. Maria checked it because Maria's hands were steady when Maria's hands were checking, and Maria needed her hands steady for the moment Joel came out the compartment door.
 
-Sabina did not narrate this. Sabina had been on the boat long enough to know what Maria was doing. The clipboard's checklist was Sabina's cascade procedure. She had run it at every drill. The drills had been the drills. The procedure was the same.
+Sabina did not narrate this. Sabina had been on the boat long enough to know what Maria was doing. The clipboard's checklist was Sabina's cascade procedure. She had run it at every drill since the Belo Horizonte work-up. The procedure tonight was the same procedure; the alarm was not.
 
 Hiroshi at the watch console did not narrate either. The chief scientist's hands were at the helm at the operational rate. He had taken the helm against the cascade as he had taken operational command of the boat at the prior segment's medical event because that was what the chief scientist did when the Mission Director needed the position at the rail. He had not been asked. He had read the bridge. He had read the cascade. He had taken the helm. The helm was at the right pace in his hands. He did not mark that he had taken it without being asked. The bridge noted it. The bridge did not narrate. The tempo held.
 
@@ -198,7 +198,7 @@ The bridge was running.
 
 The eleven minutes had begun.
 
-Joel was behind the bulkhead door at compartment two-bravo. The compartment was at the lower deck aft. The compartment held the failed sensor head and the central compute hub. The bulkhead door was dogged from the compartment-internal side. Joel had dogged it himself. The procedure was the procedure - you do not leave a door open with active leakage; you isolate, you contain, you work the leak; you do not invite the cascade into the corridor. The dogging was procedurally correct. The dogging was also, at 0319, the act of a man who had moved his body into a sealed compartment containing an active leak and had taken the key with him.
+Joel was behind the bulkhead door at compartment two-bravo. The compartment was at the lower deck aft. The compartment held the failed sensor head and the central compute hub. The bulkhead door was dogged from the compartment-internal side. Joel had dogged it himself. The procedure was clear - you do not leave a door open with active leakage; you isolate, you contain, you work the leak; you do not invite the cascade into the corridor. The dogging was procedurally correct. The dogging was also, at 0319, the act of a man who had moved his body into a sealed compartment containing an active leak and had taken the key with him.
 
 I had not seen the dogging. I had been at the lower-deck access ladder when the dogging happened.
 
@@ -212,7 +212,7 @@ I received the look.
 
 I did not change my face.
 
-I held the look for the duration the look required. Then I gave him the small acknowledgment my face was permitted at the bridge's standing position - not a nod that the bridge could read, not a softening the bridge could read, only the receipt of the look at the level the look could be received at without breaking the standing. The receipt was the receipt. He saw it. He turned.
+I held the look for the duration the look required. Then I gave him the small acknowledgment my face was permitted at the bridge's standing position - not a nod that the bridge could read, not a softening the bridge could read, only the receipt of the look at the level the look could be received at without breaking the standing. He saw the receipt. He turned.
 
 He went to work.
 
@@ -240,7 +240,7 @@ I stood at the rail. The bridge was at the operational level. The cascade window
 
 Wanjiru was at the comm node. The Sunfish archive was capturing at the replication cadence. The compartment-camera capture was preserved at the consent-gated state. The sensor head's pre-failure timestream was preserved at the firmware-diagnostic level. The command-and-response between the control plane and the failed instrument was preserved at the operational capture. The audit log was carrying the cascade at the operational level.
 
-Wanjiru was also working a thread the bridge would not have asked her to work and that she had begun to work without being asked. The thread was the firmware-update history on the starboard sensor head. She had pulled the history from the audit log at 0323. She had read it. She had read it at the rate at which she read security artifacts when she was reading them against a pattern she had seen before. The pattern was the pattern of vendor firmware updates on sensors deployed in OSS-architecture missions over the back four years of her institutional reading. The pattern was the kind of pattern she had been reading institutionally for the back several years against the OSS-architecture supply-chain landscape. The pattern was here now. She did not pursue the thread further at 0323. She logged the read. She set the question aside. She marked it for transit-north review with Joel.
+Wanjiru was also working a thread the bridge would not have asked her to work and that she had begun to work without being asked. The thread was the firmware-update history on the starboard sensor head. She had pulled the history from the audit log at 0323. She had read it. She had read it at the rate at which she read security artifacts when she was reading them against a pattern she had seen before. The pattern matched vendor firmware updates on sensors deployed in OSS-architecture missions over the back four years of her institutional reading. She had been reading this pattern institutionally for several years against the OSS-architecture supply-chain landscape. The shape was familiar. The shape was here now. She did not pursue the thread further at 0323. She logged the read. She set the question aside. She marked it for transit-north review with Joel.
 
 The pattern was not a fact. The pattern was a question. The question was not for tonight. The question was for after the boat surfaced.
 
@@ -254,7 +254,7 @@ Diego was at the polar-operations console. He had not relinquished the console a
 
 The cascade window was the window during which the boat's environmental envelope could compound the compartment-isolation event into a secondary failure. The envelope was at the depth-trim-list product. The boat at four knots on the bearing was at the operational envelope. The compartment-isolation event was about to introduce asymmetric water and asymmetric power into the lower-deck-aft compartment. The asymmetric introduction would propagate through the boat's trim-balance system at the rate the trim-balance system carried for the boat's geometry. The propagation was the cascade window's mechanism. The cascade window's mitigation was the trim adjustment.
 
-Diego had recommended the two-up on starboard plane at 0321. The recommendation had been the right recommendation; the trim-balance system absorbed the asymmetric water against the two-up adjustment; the boat held the depth; the list did not develop. The recommendation had been Diego's. The recommendation had not been in the procedure manual. The procedure manual specified depth hold; the procedure manual specified ventilation hold; the procedure manual did not specify the two-up on starboard plane against the asymmetric introduction at compartment two-bravo's lower-deck-aft position. The two-up was Diego's reading of the boat's geometry against the compartment's location against the failed sensor head's coolant-loop volume. The reading was the reading of an operator who had read the consoles for thirty-five years.
+Diego had recommended the two-up on starboard plane at 0321. The recommendation had been the right recommendation; the trim-balance system absorbed the asymmetric water against the two-up adjustment; the boat held the depth; the list did not develop. The recommendation had been Diego's. The recommendation had not been in the procedure manual. The procedure manual specified depth hold; the procedure manual specified ventilation hold; the procedure manual did not specify the two-up on starboard plane against the asymmetric introduction at compartment two-bravo's lower-deck-aft position. The two-up was Diego's reading of the boat's geometry against the compartment's location against the failed sensor head's coolant-loop volume. It was what thirty-five years of console-reading produced.
 
 He read the console. He checked the boat's trim, the depth, the list, the ambient pressure, the sonar return, the ice-shelf overhead clearance, the current bearing, the cross-current vector. He read all eight readings across the cascade window, each at the rate he had been running for thirty-five years.
 
@@ -300,7 +300,7 @@ I read the time at the master clock at 0341. I had stood at the rail since 0322.
 
 The watch officer at the helm had not looked back at the position. The polar-operations specialist at the telemetry console had not looked back at the position. The logistics officer at the rail had not looked back at the position. The comm-node officer at the comm node had not looked up at the position when she had filed the standing-capture entry at 0335. None of the bridge had looked at the Mission Director at the rail. All of the bridge had been carrying the Mission Director's position as the position the bridge was operating against. The two facts were the same fact. The bridge that does not look is the bridge that is watching. The bridge that is watching is the bridge that has the Mission Director's bearing as the bearing the bridge is operating against. The bridge held because the Mission Director held. The Mission Director's bearing was the load-bearing register.
 
-I had not moved my hands from the rail. I had read every console. I had given two operational orders against the cascade. I had taken in Diego's recommendation at 0341 and had acknowledged. The face was the face.
+I had not moved my hands from the rail. I had read every console. I had given two operational orders against the cascade. I had taken in Diego's recommendation at 0341 and had acknowledged.
 
 I was at the rail.
 
@@ -430,7 +430,7 @@ The list grew.
 
 Diego wrote the letter that night. He wrote it at his cabin desk on his per-laptop. The per-laptop carried his canonical authored-content archive at the operational record; the archive was per-author; the archive was signed at capture under Diego's KEK; the archive was access-controlled by Diego; the archive was not access-controlled by the consortium; the archive was Diego's.
 
-The letter read in two languages. Diego wrote in Spanish first; he wrote a parallel English translation second; the parallel-translation practice was the practice the IAA's institutional records had used since the IAA's first multinational collaboration with the British Antarctic Survey in 1942 and that Diego had used across his thirty-five years of writing for the IAA's record.
+The letter read in two languages. Diego wrote in Spanish first; he wrote a parallel English translation second; the parallel-translation practice the IAA's institutional records had used since the IAA's first multinational collaboration with the British Antarctic Survey in 1942 and that Diego had carried across his thirty-five years of writing for the IAA's record.
 
 The fragment, in his Spanish:
 
@@ -466,13 +466,13 @@ The mission continued.
 
 The Segment-3 leg ran another nine days. The boat held depth at the operational envelope. The trim was at the operational envelope. The instrumentation streams continued. The cross-instrument cross-check between the port sensor and the offline starboard sensor's last-captured data ran at the review cadence; the cross-check produced data that the post-incident analysis would carry to the post-mission review. The compute hub was offline. The per-laptop nodes were operational. The crew adapted. The crew did not narrate the adaptation. The architecture was at the operational tempo.
 
-The boat made nine knots on the bearing toward Drake Passage on Mission Day 49. The boat made eight knots on Mission Day 50. The boat made nine knots on Mission Day 51. The watch rotations held. The cycle held. The standing was the standing.
+The boat made nine knots on the bearing toward Drake Passage on Mission Day 49. The boat made eight knots on Mission Day 50. The boat made nine knots on Mission Day 51. The watch rotations held. The cycle held. The boat held its tempo against the Drake.
 
 I wrote the half-mission report on the per-laptop on Mission Day 50. The report carried the operational record at the operational level. The report carried what the report carried. The report did not carry what the report did not carry. The report was at the audit log.
 
-I read the post-incident captures on the per-laptop against the consortium-port mirror's reference. The captures were at the laptop. The captures were the captures. The captures would carry to the consortium-port at Punta Arenas surfacing. The captures would carry to the post-incident review. The post-incident review would be Wanjiru's and Joel's review. The review would run at transit-north on laptop-class compute. The review would surface what the review surfaced. The review was for after.
+I read the post-incident captures on the per-laptop against the consortium-port mirror's reference. The captures were at the laptop. The captures would carry to the consortium-port at Punta Arenas surfacing. The captures would carry to the post-incident review. The post-incident review would be Wanjiru's and Joel's review. The review would run at transit-north on laptop-class compute. The review would surface what the review surfaced. The review was for after.
 
-The architecture was at the operational tempo at reduced capability. The architecture had been built so that the compute hub's loss would be capability loss, not preservation loss. The architecture was operating at the case the architecture had been built for. The protocol's environmental-stress claim from Joel's paper had been exercised against literal physical environmental stress. The protocol had held.
+The architecture ran at reduced capability. The compute hub was gone; the per-laptops held what the per-laptops were specified to hold; the boat made its bearing. Joel's environmental-stress claim from the paper had been exercised against actual coolant and actual smoke. The claim held.
 
 I noted the holding on the per-laptop at the operational level. The note was at the operational level. The note did not require further narration.
 
@@ -488,19 +488,19 @@ The mission continued.
 
 *The push and the look were not procedure.*
 
-*I had noted Joel since the recruitment interview. I had noted the recognition during the second segment. I had noted the recognition again at the schema migration four days ago. I had caught the recognition at the wardroom across the segment, at the bridge across the watches, at the engineering compartment across the schema work. The recognition had held its discipline across the mission. The recognition had been disciplined. The recognition had not been spoken. The discipline had been the discipline that made Joel the engineer Anna Yusupova had recruited, and the recognition had been disciplined because Joel was the engineer he was, and the discipline had held for one hundred and forty-seven days from the recruitment interview until 0317 on Mission Day 47. The discipline had been adequate. The discipline had been the work.*
+*I had noted Joel since the recruitment interview. I had noted the recognition during the second segment. I had noted the recognition again at the schema migration four days ago. I had caught the recognition at the wardroom across the segment, at the bridge across the watches, at the engineering compartment across the schema work. The recognition had held its discipline across the mission. The recognition had been disciplined. The recognition had not been spoken. The discipline had held for one hundred and forty-seven days from the recruitment interview until 0317 on Mission Day 47. It had been the work of every one of them.*
 
 *The discipline cracked at 0319.*
 
-*The discipline cracked because his body moved before his mind caught up. The discipline cracked because his body chose to put a hand on me on the way past, when it could have gone around. The discipline cracked because he turned at the door after he had dogged it, when he could have gone straight to the leak. The discipline cracked because he looked at me through the glass for the duration the look held, when no part of the procedure required the look. The discipline did not crack because of him. The discipline cracked because of the alarm, and the leak, and the cascade window, and the body's thirty years of nuclear-Navy casualty-procedure training that had made his response deeper than choice. The discipline did not fail. It held on every axis the will controls. The body moved before the will had anything to say about it, and the body chose me, and the choice was the choice.*
+*The discipline cracked because his body moved before his mind caught up. The discipline cracked because his body chose to put a hand on me on the way past, when it could have gone around. The discipline cracked because he turned at the door after he had dogged it, when he could have gone straight to the leak. The discipline cracked because he looked at me through the glass for the duration the look held, when no part of the procedure required the look. The discipline did not crack because of him. The discipline cracked because of the alarm, and the leak, and the cascade window, and the body's thirty years of nuclear-Navy casualty-procedure training that had made his response deeper than choice. The discipline did not fail. It held on every axis the will controls. The body moved before the will had anything to say about it, and the body chose me.*
 
-*I received the look. I did not change my face. The bridge was watching me. I had two operational orders during the duration. I gave the orders at the minimum altitude. The orders were correct. The orders were the orders. The bridge held. The boat held. The compartment cleared. The discipline returned at 0353. The discipline has been the discipline since.*
+*I received the look. I did not change my face. The bridge was watching me. I had two operational orders during the duration. I gave the orders at the minimum altitude. The orders were correct. The bridge held. The boat held. The compartment cleared. The discipline returned at 0353.*
 
 *I have not spoken of the look. He has not spoken of the look. We will not speak of the look across the remainder of the mission. The mission has another seven days against the chart. We will speak of the look at some point. The point will not be on the boat. The point will be after Punta Arenas. The point will be after I have decided what to do with the point. I am writing this so that I have a record of the point at the moment the point is fresh.*
 
 *The compartment cameras captured the moment. The capture is at the consent-gated archive. The capture is signed at capture under the bridge's standing recording authority. The capture has been replicated to my per-laptop and to the comm-node and to the principal architect's per-laptop and to the relay-operations officer's per-laptop and to the medical officer's per-laptop. The capture will replicate to the relay mirror at Punta Arenas surfacing. The capture is at the archive. The capture is hash-chained. The capture is signed. The capture is mine to read at any time the access controls grant me to read it. The access controls grant me. I could play it back. I am not going to.*
 
-*The reason I am not going to is not that I do not want to. The reason is that I do not need to. The look was at the porthole window. I received it. The receiving was at the level the receiving was at. The receiving was the receiving. The capture would not give me what I had at the porthole window. The capture would give me the capture. The capture is at the archive. The receiving is in me. The two are not the same. I do not want the second copy.*
+*The reason I am not going to is not that I do not want to. The reason is that I do not need to. The look was at the porthole window. I received it. The capture would not give me what I had at the porthole window. The capture would give me a recording. The two were not the same. The capture is at the archive. The receiving is in me. I do not want the second copy.*
 
 *The choice not to play it back is mine. The choice is recorded here in this file. The choice is in this file because the choice was a choice. The choice not to revisit a moment that the architecture has preserved is the kind of choice the architecture is built to support - preserve, then leave the reading to the author. The architecture preserved the moment. I am the author of the access decision against my own viewing. I am exercising the access decision at the level the access decision is exercised at, which is privately, and once, in this file.*
 
@@ -510,7 +510,7 @@ The mission continued.
 
 *I am not going to write what I felt when I received it. The vocabulary I would write in is not adequate. The vocabulary I have for what I felt is in three languages and none of them is adequate. The Russian word would be one register. The Uzbek word would be another. The English word would be a third. None of the three carries the duration. None of the three carries the rate. None of the three carries the standing position at the rail. None of the three carries the bridge watching me. None of the three carries the eleven minutes that began at the look and ended at the compartment-clear. The vocabulary is not adequate. I am writing this knowing the vocabulary is not adequate. I am writing it anyway because the inadequacy is itself the record.*
 
-*I was selfless in the moment because I had to be. The bridge required the standing; the standing required the face; the face was the face. I was loyal to the boat in the moment because the boat required the loyalty; the loyalty was operational; the loyalty was the standing. I was direct in the moment because the orders required the directness; the orders were the orders; the directness was the standing's directness, not the directness I would write at this desk in this file at this hour.*
+*I was selfless in the moment because I had to be. The bridge required the standing; the standing required the face. I gave it what I had. I was loyal to the boat in the moment because the boat required the loyalty; the loyalty was operational; the loyalty was the standing. I was direct in the moment because the orders required the directness; the directness was the standing's directness, not the directness I would write at this desk in this file at this hour.*
 
 *What I am at this desk in this file at this hour is the part of me that the standing did not require. The part of me that the standing did not require is the part of me that received the look. That part knew what the cracking was, and that part is writing this.*
 

@@ -31,7 +31,7 @@ plants-paid:
 
 ---
 
-The dive sequence ran eight minutes long against Diego's chart. The thermocline at one hundred and forty meters had stratified harder than the model said it would, which is the polite way of saying the model was wrong and the water was the water. Mikael took the eight minutes the boat needed. The trim corrected at 0608. The acoustic floor laid down at 0610 on the new bearing. The engine note settled to the low-speed ratio - the one that means the boat is settled and the boat knows it.
+The dive sequence ran eight minutes long against Diego's chart. The thermocline at one hundred and forty meters had stratified harder than the model said it would, which is the polite way of saying the model was wrong and the water had its own opinion. Mikael took the eight minutes the boat needed. The trim corrected at 0608. The acoustic floor laid down at 0610 on the new bearing. The engine note settled to the low-speed ratio - the one that means the boat is settled and the boat knows it.
 
 I came onto the bridge at 0611. Diego was at the polar-operations station to the right of Mikael, standing.
 
@@ -49,7 +49,7 @@ I said: *good.*
 
 He turned back to his console. He did not settle into the chair. The polar-operations station runs four screens; he had three of them up at full and the fourth at the bathymetry feed at the higher refresh rate he had set at the start of the dive sequence. The console had been at the standard refresh through Segments 1 and 2. The refresh was up now because Diego was reading the bathymetry the way a man reads water he has read before and is no longer willing to trust to the boat's instinct alone.
 
-Diego had not stood at the polar-operations console for an entire bridge watch in Segment 1 or Segment 2. He had taken the chair through the routine watches; he had stood for the partition transitions and the surface preparations and now, at 0611 on Day 39, for the commencement of Segment 3. He would stand through the first two hours of routine submerged ops. He would stand the next morning through the first cross-section against the consortium model. He would - I knew, because I had been on three previous Antarctic missions with him - stand more in Segment 3 than he had stood in Segments 1 and 2 combined. The bathymetry mattered now in a way it had not yet mattered. Diego's tempo was the tempo the boat was now operating at, and the rest of us would catch up to it on our own schedule.
+Diego had not stood at the polar-operations console for an entire bridge watch in Segment 1 or Segment 2. He had taken the chair through the routine watches; he had stood for the partition transitions and the surface preparations and now, at 0611 on Day 39, for the commencement of Segment 3. He would stand through the first two hours of routine submerged ops. He would stand the next morning through the first cross-section against the consortium model. He would - I knew, because I had been on three previous Antarctic missions with him - stand more in Segment 3 than he had stood in Segments 1 and 2 combined. The bathymetry mattered now in a way it had not yet mattered. Diego ran at the tempo the boat now required, and the rest of us would catch up to it on our own schedule.
 
 I went to the command station. I read the routine indications.
 
@@ -115,7 +115,7 @@ She said: *acknowledged.*
 
 She picked up the paper from the chart console. She closed the laptop. She did not soften the reading on the way out. She did not say *the architecture held*. She did not say *the discipline caught what the discipline catches*. She said, at the door of the bridge, the one-word acknowledgment she had said at the beginning. *Acknowledged.* She left.
 
-I noted the exchange. The segment boundary was clean at the canonical record. Priya had caught what the third pass had been engineered to catch, logged it, and named the four-pass she would run against the recurrence. She had not, at any point in the exchange, said the word *worry*. (Which is the closest Priya gets to telling you something is worth your attention - she names the next test, at the cadence at which it will run, and the absence of further commentary is the commentary.)
+I noted the exchange. The segment boundary was clean at the canonical record. Priya had caught what the third pass had been engineered to catch, logged it, and named the four-pass she would run against the recurrence. She had not, at any point in the exchange, said the word *worry*. (Which is the closest Priya gets to telling you something is worth your attention - she names the next test, at the cadence at which it will run, and lets the silence after it do the rest.)
 
 I returned to the indications.
 
@@ -205,7 +205,7 @@ Joel stood the engineering watch at the routine tempo. He read his book at 2114 
 
 I ran the bridge from 1600 to 2000.
 
-The bridge across those four hours ran the way the bridge had run across Segments 1 and 2 - Mikael at the master's console, the half-watches signed against the routine, the bathymetry deltas Diego had filed in the morning sitting on my side of the chart console where I would want them. What was different was on my side. I was standing the watch at a tempo half a bearing tighter than the one I had stood it at on Day 22 of Segment 1. The body took the tightening in before the conscious part of me did, in the way the body had marked the difference between Surface 1 and Surface 2 on the morning of Day 37. The tightening was not the tightening of new-segment unease. It was the tightening of last-leg work, which is a tightening I have carried before, on other boats, and which has a known shape and a known cost. I noted it. I did not soften it. The boat had ten days.
+The bridge across those four hours ran the way the bridge had run across Segments 1 and 2 - Mikael at the master's console, the half-watches signed against the routine, the bathymetry deltas Diego had filed in the morning sitting on my side of the chart console where I would want them. What was different was on my side. I was standing the watch at a tempo half a bearing tighter than the one I had stood it at on Day 22 of Segment 1. The body took the tightening in before the conscious part of me did, in the way the body had marked the difference between Surface 1 and Surface 2 on the morning of Day 37. The tightening was not new-segment unease. It was last-leg work, which has a known shape and a known cost; I had carried it on other boats. I noted it. I did not soften it. The boat had ten days.
 
 ---
 

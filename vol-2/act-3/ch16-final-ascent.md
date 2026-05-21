@@ -38,7 +38,7 @@ plants-paid:
 
 The boat had been at depth for forty-eight days when it began to come up.
 
-The ascent at the polar-operations console was the procedure I had rehearsed against the manual on the bridge of the *Akademik Treshnikov* in 2018 and against the manual on the bridge of the Nansen for fourteen months before the boat sailed. The procedure was the procedure. Diego had the polar-operations console at the ascent rotation; Hiroshi had the helm; I had the rail. The boat came up at the rate the manual specified - five meters a minute against a gradient the cross-current did not contest. The cross-current was the Drake's bearing at the September approach. The gradient was the gradient. The boat read the water at the rate the boat read the water.
+The ascent at the polar-operations console was the procedure I had rehearsed against the manual on the bridge of the *Akademik Treshnikov* in 2018 and against the manual on the bridge of the Nansen for fourteen months before the boat sailed. Diego had the polar-operations console at the ascent rotation; Hiroshi had the helm; I had the rail. The boat came up at the rate the manual specified - five meters a minute against a gradient the cross-current did not contest. The cross-current was the Drake's bearing at the September approach. The gradient held. The boat read the water.
 
 I had not stood the rail at an ascent on this boat before. I had stood ascents on three boats before this one. The water against the hull at five meters a minute was the same water. The consoles read what they read.
 
@@ -46,19 +46,19 @@ The list of *queries to run when we surface* was on the page at the desk in my c
 
 Some questions we asked the system; some questions we wrote down to ask later.
 
-The list was on the page at the desk. The list would carry to the surface. The system would answer the items at the consortium-port at Punta Arenas. The architecture would close the gap. The gap was the gap the architecture had built into its specification.
+The list was on the page at the desk. The list would carry to the surface. The system would answer the items at the consortium-port at Punta Arenas. The architecture would close the gap — that gap was in the specification; the specification had always named it.
 
 The crew was at the routine. The boat had been operating on per-laptop for ten days. The cycle had settled - Diego on the polar-operations console at the ascent watch, Hiroshi on the helm, Wanjiru at the comm node working the prioritization queue against the Drake's surface-window topology, Priya in the lab compartment running the post-incident analysis at the smaller context window, Sabina in the logistics compartment closing the cross-jurisdictional procurement-audit ledger by hand, Maria in the medical bay against Joel's recovery checkpoints, Joel at the engineering compartment against the per-laptop's diagnostic cycle. The boat was at operational tempo at reduced capability. The reduced capability was the level the boat had run on since Day 47.
 
-I went down from the bridge at 0247 against the watch handoff. Diego had eight hours left on the polar-operations console - he had asked to stand the ascent watch at the same register he had asked to stay on the console at 0354 the morning of the cascade. I had acknowledged the request. The polar-operations console at the ascent watch was Diego's. The leather mate-cup with the unpolished bombilla was beside the console at the position the cup had been at since Diego had brought it aboard at the Belgrano-II provisioning. The cup was where the cup was. Diego had drunk from it across the duration of the cascade and across the duration of the post-cascade and across the watches between. The bombilla had not been polished. The patina was the patina. Diego's hands were easy on the controls.
+I went down from the bridge at 0247 against the watch handoff. Diego had eight hours left on the polar-operations console - he had asked to stand the ascent watch at the same register he had asked to stay on the console at 0354 the morning of the cascade. I had acknowledged the request. The polar-operations console at the ascent watch was Diego's. The leather mate-cup with the unpolished bombilla was beside the console at the position the cup had been at since Diego had brought it aboard at the Belgrano-II provisioning. The cup sat at the position it had been at since Belgrano-II. Diego had drunk from it across the duration of the cascade and across the duration of the post-cascade and across the watches between. The bombilla had not been polished. The patina was old. Diego's hands were easy on the controls.
 
 The fact did not say anything about Diego. It was a fact about Diego I noted the way I noted the consoles. Diego was on the polar-operations console at the ascent watch. The hands were easy. Diego was going home.
 
-He had told me at 1647 on Mission Day 48. He had not told the consortium. He had told me. He had said *I will go home* at the same tempo he said *acknowledged* at the polar-operations console. The decision was the decision. The retirement was the retirement. The position did not require me to act on what I knew. It required me to acknowledge it and to hold it.
+He had told me at 1647 on Mission Day 48. He had not told the consortium. He had told me. He had said *I will go home* at the same tempo he said *acknowledged* at the polar-operations console. He had decided. He was going home. The position did not require me to act on what I knew. It required me to acknowledge it and to hold it.
 
 I held it.
 
-Diego was already closing the polar-ops binder at the rate he closed binders when he was closing them for the last institutional cycle. The Filchner-Ronne photograph queue - the back two years of acoustic-imaging composites Diego had been curating against the IAA's photo archive at the Belgrano-II station - was already in the bridge-watch officer's handoff package. Diego had walked Hiroshi through the queue at the morning brief on Mission Day 50. Hiroshi had asked the questions Hiroshi asked when Hiroshi was learning a queue at the institutional level; Diego had answered at the rate Diego answered when Diego was handing a queue across institutional generations. The queue was the queue. The handoff was the handoff. Neither of us was required to name what the handoff was.
+Diego was already closing the polar-ops binder at the rate he closed binders when he was closing them for the last institutional cycle. The Filchner-Ronne photograph queue - the back two years of acoustic-imaging composites Diego had been curating against the IAA's photo archive at the Belgrano-II station - was already in the bridge-watch officer's handoff package. Diego had walked Hiroshi through the queue at the morning brief on Mission Day 50. Hiroshi had asked the questions Hiroshi asked when Hiroshi was learning a queue at the institutional level; Diego had answered at the rate Diego answered when Diego was handing a queue across institutional generations. Diego had readied the queue. Hiroshi would take it forward. Neither of us was required to name what that meant.
 
 Diego checked the sensor heads against the ascent gradient at 0301. The check was the standard check at the rate the check had run across thirty-five years on three institutions' polar-operations consoles. Diego noted the surviving sensor heads at the routine position. He noted the offline starboard sensor. He logged the offline state in the polar-operations log against his signature. The polar-operations log carried Diego's signature against the institutional record.
 
@@ -70,7 +70,7 @@ I went forward to the wardroom for tea. I did not narrate the noting. The noting
 
 Joel was at the wardroom table at 0312 when I came in.
 
-He had been at the engineering compartment across the morning's diagnostic cycle. He had finished the cycle at 0258. He had walked to the wardroom against the standing route he had walked the wardroom route on every morning since the cascade. He had the last pot of mission coffee on the wardroom warmer - Sabina had marked the pot at 0200 against the standing manifest as the manifest's last reserve before the Punta Arenas resupply. The pot was the pot. Joel had a cup. He was at the table at the position he held when he was at the wardroom alone.
+He had been at the engineering compartment across the morning's diagnostic cycle. He had finished the cycle at 0258. He had walked to the wardroom against the standing route he had walked the wardroom route on every morning since the cascade. He had the last pot of mission coffee on the wardroom warmer - Sabina had marked it at 0200 against the standing manifest as the last reserve before the Punta Arenas resupply. Joel had a cup. He was at the table at the position he held when he was at the wardroom alone.
 
 He was reading the engineer's log.
 
@@ -78,17 +78,17 @@ He had filed the log at 0432 the morning of Mission Day 47 - the post-cascade en
 
 I sat at the table at the wardroom. I did not press.
 
-Joel's quietness was the quietness the engineering compartment had carried since the cascade. He had not narrated the cascade across the duration of the post-cascade window. He had filed the engineer's log at 0432 on Mission Day 47 and had not narrated further. He had held the recovery at the medical level Maria had set against the Day-49-onward checkpoints. He had returned to the engineering compartment at 0800 on Mission Day 50 against the rotation. He had held the morning diagnostic cycle on the per-laptop across the back two days. The discipline was the discipline he had held since the boat sailed.
+Joel's quietness matched the engineering compartment's, which had held since the cascade. He had not narrated the cascade across the duration of the post-cascade window. He had filed the engineer's log at 0432 on Mission Day 47 and had not narrated further. He had held the recovery at the medical level Maria had set against the Day-49-onward checkpoints. He had returned to the engineering compartment at 0800 on Mission Day 50 against the rotation. He had held the morning diagnostic cycle on the per-laptop across the back two days. The discipline had run since the boat sailed.
 
-He was reading the engineer's log because the architecture had performed across the cascade. The cascade had been the cascade. The architecture had held what the architecture had been specified to hold. The hash chain had been continuous. The forensic substrate had carried the pre-failure timestream. The boat-internal replication had survived the compute hub's loss. The graceful-degradation specification - which Joel had written into the architecture against the Round-2 rewrite four years before the boat sailed - had run live on the boat at the worst case the specification had been built for. The architecture had run as Joel had specified it. He was reading the log to see what the log had carried.
+He was reading the engineer's log because the architecture had performed across the cascade. The architecture had held what it had been specified to hold. The hash chain had been continuous. The forensic substrate had carried the pre-failure timestream. The boat-internal replication had survived the compute hub's loss. The graceful-degradation specification - which Joel had written into the architecture against the Round-2 rewrite four years before the boat sailed - had run live on the boat at the worst case the specification had been built for. The architecture had run as Joel had specified it. He was reading the log to see what the log had carried.
 
 He read it for the duration of his cup of coffee.
 
 He did not look up. He did not narrate. He read the log at the rate he read engineering documents he had written at the standing and that had now run live against the case. The architecture had performed. He was satisfied. The satisfaction was at the volume the engineer's log was at - the standing, the standing volume, the standing pace. He did not narrate the satisfaction. He did not need to.
 
-The architecture's correctness depended on Joel having handled the engineering at the rate he had handled it. He had spent twenty-five years on it - the Navy's nuclear-reactor-supervision discipline against the back fourteen years of distributed-systems work against the four years of the Sunfish project's pre-mission rewrite cycle. The discipline was the discipline. The architecture had now exercised against the worst case it had been built for. The case was the case. The discipline had held.
+The architecture's correctness depended on Joel having handled the engineering at the rate he had handled it. He had spent twenty-five years on it - the Navy's nuclear-reactor-supervision discipline against the back fourteen years of distributed-systems work against the four years of the Sunfish project's pre-mission rewrite cycle. The discipline had held. The architecture had now exercised against the worst case it had been built for. Joel had built it for exactly this case.
 
-I read the rate he was reading at, and I read the duration he was reading for, and I did not press the reading. The reading was Joel's reading. The reading was the reading of an engineer who had handed his architecture to a boat and had gone with the boat and had watched the architecture run against the case and had survived the case and was now reading what his architecture had carried back through the case. The reading was not a celebration. The reading was the reading. Joel had carried the Navy's bearing from the *Sunfish* SSN-649 across the back two and a half decades - the discipline of the boat that had taught him that engineering documents were what the boat had when the boat had nothing else; the discipline that had carried him through the reactor-plant supervision cycles where the procedure was what held against the system that was always failing; the discipline that had run against the OSS contributor-record at the rate he had specified the contributor-record to run against. That bearing had carried the Round-2 rewrite four years before the boat sailed. It had now run live.
+I read the rate he was reading at, and I read the duration he was reading for, and I did not press it. He was reading as an engineer who had handed his architecture to a boat and gone with the boat and watched the architecture run against the case and survived the case and was now reading what his architecture had carried back through it. The reading was not a celebration. Joel was reading what he had built. Joel had carried the Navy's bearing from the *Sunfish* SSN-649 across the back two and a half decades - the discipline of the boat that had taught him that engineering documents were what the boat had when the boat had nothing else; the discipline that had carried him through the reactor-plant supervision cycles where the procedure was what held against the system that was always failing; the discipline that had run against the OSS contributor-record at the rate he had specified the contributor-record to run against. That bearing had carried the Round-2 rewrite four years before the boat sailed. It had now run live.
 
 He was at the wardroom alone with the log because the architecture had not yet been checked against the consortium's institutional record at Punta Arenas, and because Joel was the kind of engineer who checked against the engineering record before checking against the institutional record, and because the engineering log was where Joel knew what he had built.
 
@@ -100,7 +100,7 @@ He pulled his wallet out of his inner jacket pocket against the wardroom-coffee-
 
 I noted the card.
 
-I did not note it aloud. The card was a fact about Joel I noted the way I noted facts about crew - peripherally, accurately, without ceremony. The card was the card. I poured my tea. I sat at the wardroom.
+I did not note it aloud. The card was a fact about Joel I noted the way I noted facts about crew - peripherally, accurately, without ceremony. The card was old; I did not name it aloud. I poured my tea. I sat at the wardroom.
 
 Joel closed the wallet. He set the bill on the table for Sabina. He drank the last of his cup. He set the cup on the table. He nodded once.
 
@@ -110,7 +110,7 @@ I said: *Joel.*
 
 He went out.
 
-I sat at the wardroom for the duration of my tea. I did not narrate the noting. The wardroom was the wardroom.
+I sat at the wardroom for the duration of my tea. I did not narrate the noting. I sat in the empty wardroom until the tea was gone.
 
 ---
 
@@ -122,7 +122,7 @@ The hierarchy at the Punta Arenas surfacing was the hierarchy the post-cascade r
 
 *Operational damage report (Anna, filed Mission Day 47, 0518). Reyes recovery documentation (Maria, filed across Mission Days 47-49). Half-mission report on the per-laptop (Anna, filed Mission Day 48, 1647). Polar-operations institutional carryover (Diego, filed Mission Day 50, 0900). Forensic-substrate query (Wanjiru, filed Mission Day 48, 1207). Schema-evolution annotation queue (Priya, filed across Mission Days 47-52). Cross-jurisdictional procurement audit ledger (Sabina, filed Mission Day 51, 1130). Cross-language collaboration carryover with JARE (Hiroshi, filed Mission Day 51, 1645). Medical records cross-corpus query (Maria, queued Mission Day 47).*
 
-The queue was at the comm node. Wanjiru had walked the queue with me at 0900 on Mission Day 51. I had acknowledged the priority list. The list was the list. The Mission Director's position on the relay-operations officer's prioritization decision was acknowledgment, not adjustment. Wanjiru had set the queue. The queue was the queue.
+The queue was at the comm node. Wanjiru had walked the queue with me at 0900 on Mission Day 51. I had acknowledged the priority list. The Mission Director's position on the relay-operations officer's prioritization decision was acknowledgment, not adjustment. Wanjiru had set the queue. The queue moved at her rate.
 
 The relay channel opened at 0414. The audit-log streaming to the consortium-port mirror at Punta Arenas began at the standing cadence at 0416. The full-archive relay sync began at 0418 against the priority list. The queue moved at the surface bandwidth's standing rate.
 
@@ -132,7 +132,7 @@ She was watching the priority list move against the consortium-port mirror's ack
 
 She was also reading the inbound. The inbound at the surfacing was the consortium's institutional traffic plus the contributor-record traffic the OSS project's other deployments had filed against the back ten days plus the regulatory-monitoring channels Wanjiru had subscribed against at the pre-mission verification. The inbound carried the items the relay-operations officer was responsible for reading - consortium-port acknowledgments, regulatory bulletins from the jurisdictions whose coverage maps the architecture indexed against, post-conference contributor announcements from the standards bodies whose work-product the architecture had been built against. The inbound was on the per-laptop; the heavy-LLM hosting at the compute hub would have pulled the inbound against the summarization rate; the per-laptop required Wanjiru to read at pace and to summarize at her own rate. She read the inbound. She did not narrate what she read. She filed the institutional digest at the relay-operations notebook against the log.
 
-The notebook on the desk was not the institutional notebook. The institutional notebook was at the comm node's standing position against the relay-operations log. The notebook on the desk was the cucu's-notebook - the small leather-bound lined notebook Wanjiru carried from the wardroom to the comm node and from the comm node to her cabin. The notebook was at the desk. The notebook was open. The handwriting on the open page was Wanjiru's. The handwriting was the handwriting of a person writing at the rate a person wrote when the person was writing the questions she would not ask in the institutional record at this moment. The questions were on the page. The questions were the questions.
+The notebook on the desk was not the institutional notebook. The institutional notebook was at the comm node's standing position against the relay-operations log. The notebook on the desk was the cucu's-notebook - the small leather-bound lined notebook Wanjiru carried from the wardroom to the comm node and from the comm node to her cabin. The notebook was at the desk. The notebook was open. The handwriting on the open page was Wanjiru's. It was the handwriting of a person writing at the rate a person writes when she is writing the questions she will not ask in the institutional record at this moment. The questions were on the page. I did not read them.
 
 I did not read the page.
 
@@ -172,7 +172,7 @@ Some of the items were technical - the cross-mission Drake-Passage transit data 
 
 Some of the items were personal. *Mother - late summer; the cousins' children; the bakery on Ostrovsky Street whose owner is still the same woman.* *Lakshmi's calibration data - she had asked me about it at the conference in 2024 and I had said I would check; I had not checked; the system would have answered at the heavy-LLM hosting.* *The Bremerhaven postdoc colleague's archive - the one I have not been able to ask about since 2022.*
 
-The list was the list. The list at the desk was at the rate the architecture's reduced capability had built the gap. The gap was the gap I had noted at the standing at the rate I had noted it. The architecture had been honest about what it had and what it did not have. The list was the record of what the architecture had carried on the per-laptop and what the architecture would answer at the consortium-port at surfacing.
+The list at the desk was what the architecture's reduced capability had built into the gap. The architecture had been honest about what it had and what it did not have. The list was the record of what the architecture had carried on the per-laptop and what the architecture would answer at the consortium-port at surfacing.
 
 The list itself was what the architecture was for.
 
@@ -180,7 +180,7 @@ The questions had survived the journey because the architecture had preserved th
 
 I drank my tea. I read the list a second time. I returned to the open file.
 
-I had pulled the small allocation of dried Uzbek melon from the Mission Director's discretionary cargo at the wardroom on Mission Day 51 - Sabina had logged it without comment against the standing manifest on the per-laptop at the same standing position Sabina had logged it at when the manifest had been filed before departure. I had eaten one strip with afternoon tea on Mission Day 51. The taste had been the taste - honeyed, dense, a little dry, the kind of dried melon the cane-awning markets in the Chilonzor district had stacked in late September when I was eight years old and my grandmother had known the names of the women at every stall and had taught me to read the shape of the *qovun* before I had been able to read the price written above the stack. The taste had carried the geography. The geography had carried the mother-and-grandmother register that came with it. I had taken in the taste. I had taken in the geography. I had returned to the work.
+I had pulled the small allocation of dried Uzbek melon from the Mission Director's discretionary cargo at the wardroom on Mission Day 51 - Sabina had logged it without comment against the standing manifest on the per-laptop at the same standing position Sabina had logged it at when the manifest had been filed before departure. I had eaten one strip with afternoon tea on Mission Day 51. The taste was honeyed, dense, a little dry, the kind of dried melon the cane-awning markets in the Chilonzor district had stacked in late September when I was eight years old and my grandmother had known the names of the women at every stall and had taught me to read the shape of the *qovun* before I had been able to read the price written above the stack. The taste had carried the geography. The geography had carried the mother-and-grandmother register that came with it. I had taken in the taste. I had taken in the geography. I had returned to the work.
 
 I took a strip from the desk drawer at 0832 against the same standing practice.
 
@@ -206,7 +206,7 @@ I read the consoles.
 
 The consoles read what the consoles read.
 
-I went to the rail. I looked west. The Drake was the Drake at the September afternoon standing sea-state. The horizon was the horizon. The Punta Arenas approach was in sight at the standing transit rate. Two days. The boat would dock against the consortium's standing handshake at 0441 local on Mission Day 56.
+I went to the rail. I looked west. The Drake at the September afternoon ran its standing sea-state. The horizon ran north. The Punta Arenas approach was in sight at the standing transit rate. Two days. The boat would dock against the consortium's standing handshake at 0441 local on Mission Day 56.
 
 Surface. Relay open. Punta Arenas approach in two days.
 

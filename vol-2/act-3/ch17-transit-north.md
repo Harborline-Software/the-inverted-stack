@@ -102,7 +102,7 @@ Joel and Wanjiru worked the forensic-substrate analysis at the wardroom table at
 
 The wardroom was empty at the post-dinner hour. Sabina had logged the logistics for the morning. Maria had completed Joel's medical checkpoint at 1830. Hiroshi was on the bridge against the surface watch. Priya was at the lab compartment against the post-incident schema-evolution annotation queue. Diego was at his cabin with the letter. The wardroom had Joel and Wanjiru at the table and me at the table corner and the per-laptops open.
 
-They had been working the analysis at laptop-class since Day 49. The analysis was the analysis Wanjiru had logged at 1207 on Day 48 and that Joel had read at the comm-node at 1714 on Day 48. The data was narrow. The data was what they had on the per-laptops. The analysis was the analysis the per-laptop would support.
+They had been working the analysis at laptop-class since Day 49. The analysis was what Wanjiru had logged at 1207 on Day 48 and that Joel had read at the comm-node at 1714 on Day 48. The data was narrow. The data was what they had on the per-laptops. The analysis was what the per-laptop would support.
 
 They walked the firmware-update history first.
 
@@ -202,7 +202,7 @@ I left the paragraph in the file. I closed the per-laptop.
 
 Diego sealed the letter at 2147 on Mission Day 55.
 
-He brought it to the wardroom. The pages were folded against the IAA's institutional stationery Diego had brought from Buenos Aires in his personal cargo allocation. The envelope was addressed in his hand to *María Elena Vargas, calle 11 de Septiembre, Belgrano, Buenos Aires, Argentina*. The address was the address he had written on letters home from research stations across the back thirty-four years. The hand was the hand. The seal was a routine paper seal.
+He brought it to the wardroom. The pages were folded against the IAA's institutional stationery Diego had brought from Buenos Aires in his personal cargo allocation. The envelope was addressed in his hand to *María Elena Vargas, calle 11 de Septiembre, Belgrano, Buenos Aires, Argentina*. The address was what he had written on letters home from research stations across the back thirty-four years. The handwriting was Diego's. The seal was a routine paper seal.
 
 He set the envelope on the wardroom table. The kettle was off the warmer.
 

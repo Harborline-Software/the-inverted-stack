@@ -91,7 +91,7 @@ I went up to the bridge.
 
 ---
 
-I came up at 0322. The bridge was at its post. The Mission Director was at the rail position. Hiroshi was at the helm. Diego was at the polar-operations console. The Director's face was the face the bridge required. The bridge was at bearing.
+I came up at 0322. The bridge was at its post. The Mission Director was at the rail position. Hiroshi was at the helm. Diego was at the polar-operations console. The Director's face carried what the bridge required. The bridge was at bearing.
 
 I said: *Director.*
 
@@ -125,7 +125,7 @@ I did not pursue the second read further at 0420. The post-incident review was f
 
 I went to my bunk at 0432 after the relay-operations entry filed in the log. I slept four hours. I woke at the routine hour. I went to the wardroom for the morning meal. I went to the comm node at 0830 for the morning's relay-operations review.
 
-The morning's relay-operations review was the review I had not been able to run during the cascade. The review was on laptop-class compute. The review was the kind of review that would have run on heavy-LLM hosting at the compute hub on a normal day; today the review ran on the per-laptop with smaller context windows and slower throughput. It ran.
+The morning's relay-operations review was what I had not been able to run during the cascade. It ran on laptop-class compute. On a normal day it would have run on heavy-LLM hosting at the compute hub; today it ran on the per-laptop with smaller context windows and slower throughput. It ran.
 
 I ran the review through the morning. The relay layer was at level; the gossip protocol was at level; the audit log was at level; the boat-internal replication was at level. The third revocation-propagation channel was still offline by my logged decision; the architecture's quorum-acknowledgment was holding against the two surviving channels; nothing in the operational state required the third channel.
 
@@ -135,11 +135,11 @@ I opened the forensic-substrate query.
 
 ---
 
-The forensic-substrate query was the query I had been carrying since 0323 the previous night, when I had pulled the firmware-update history on the starboard sensor head from the audit log and had read it at the rate I read security artifacts when I was reading them against a pattern.
+I had been carrying the forensic-substrate query since 0323 the previous night, when I had pulled the firmware-update history on the starboard sensor head from the audit log and had read it at the rate I read security artifacts when I was reading them against a pattern.
 
-I had not pursued the read at 0323. I had logged the question. I had marked it for transit-north review with Joel. The cascade window had been the cascade window. The post-cascade environmental envelope had been the envelope. The morning's relay-operations review had been the review.
+I had not pursued the read at 0323. I had logged the question. I had marked it for transit-north review with Joel. The cascade window had taken priority. The post-cascade environmental envelope had taken priority next. The morning's relay-operations review had taken what time was left.
 
-The forensic-substrate query was the query I could now run at laptop-class before deeper degradation made the broad analysis slow. The compute hub was offline; the full-archive RAG index was unavailable; the cross-corpus tooling was unavailable. What I had on the laptop was the firmware-update history pulled from the audit log, the consortium-procurement archive replicated to my per-laptop store at mission departure, the command-and-response stream from the cascade window, and the pre-failure acoustic-signature timestream up to the failure point. The data was narrow. The query had to be narrow.
+I could now run the forensic-substrate query at laptop-class, before deeper degradation made the broad analysis slow. The compute hub was offline; the full-archive RAG index was unavailable; the cross-corpus tooling was unavailable. What I had on the laptop was the firmware-update history pulled from the audit log, the consortium-procurement archive replicated to my per-laptop store at mission departure, the command-and-response stream from the cascade window, and the pre-failure acoustic-signature timestream up to the failure point. The data was narrow. The query had to be narrow.
 
 I framed the query.
 
@@ -193,7 +193,7 @@ Cucu used to say *the steward does not chase her own heart*. The saying was hers
 
 Cucu had used the proverb when she had been the steward of the family's matters across the back of her sixty years. The steward did not chase her own heart against the institution she carried. The steward held the institution at the rate the institution required. The institution required restraint. The restraint was the work.
 
-I sat at the comm node. The proverb was not the kind of proverb I narrated. The proverb was the kind of proverb that surfaced when the body needed it and receded when the body had taken it in. The body had taken it in. The proverb had receded. The hum did not resume because the moment was the moment the moment was, and the hum was for the moment after.
+I sat at the comm node. The proverb was not one I would narrate. It was the kind that surfaced when the body needed it and receded when the body had taken it in. The body had taken it in. The proverb had receded. The hum did not resume because that moment was not the moment after, and the hum was for the moment after.
 
 I closed the notebook in my mind. I returned to my station.
 
@@ -201,19 +201,19 @@ I closed the notebook in my mind. I returned to my station.
 
 The first time I had read the shape, the room had been a room in a building two blocks off Kenyatta Avenue.
 
-It had been 2014. I had been twenty-six. The room had been a meeting room at the consultancy that was integrating M-PESA's revocation-propagation against a regulatory change the central bank had not yet finalized. The case had been the case of a SIM-swap pattern that had been operating against agent-side identity verification at the rural agent network for approximately fourteen months at the moment we had identified it. The pattern had taken four hundred million shillings off rural users across that window, in the units of fifty and a hundred and two hundred shillings the pattern had taken because the pattern had not taken at the institutional level it had taken at the user-account level and had taken at the user-account level by walking the access-control chain at the agent endpoint.
+It had been 2014. I had been twenty-six. The room had been a meeting room at the consultancy that was integrating M-PESA's revocation-propagation against a regulatory change the central bank had not yet finalized. It had been the SIM-swap case — a pattern that had been operating against agent-side identity verification at the rural agent network for approximately fourteen months at the moment we had identified it. The pattern had taken four hundred million shillings off rural users across that window, in the units of fifty and a hundred and two hundred shillings the pattern had taken because the pattern had not taken at the institutional level it had taken at the user-account level and had taken at the user-account level by walking the access-control chain at the agent endpoint.
 
 The room had been a room in which the senior architect at the consultancy had been pressed by a regulator and by a senior bank executive to authorize a one-off exception that would have allowed a particular set of agent endpoints to bypass the receiver-side validation against the central revocation horizon. The exception had been requested on the operational basis that the affected endpoints had been certified through a different chain at a different time and were operationally clean. The exception had been requested because the documented path for re-onboarding the endpoints would have taken three weeks and the regulator's deadline was nine days.
 
 The senior architect had said *no*.
 
-She had said *no* at the volume she said *yes* at. She had said *no* in front of the regulator and in front of the bank executive and in front of the four junior engineers who had been at the meeting because that was the meeting where the question had to be settled. She had said *no* and had laid out the documented path and the cost in days and the contingency if the documented path missed the regulatory deadline. She had said the documented path was the path. She had said the procedure was the procedure for the case where you most want to skip it. She had said the policy held against the operator at the moment the operator most wanted to bend the policy.
+She had said *no* at the volume she said *yes* at. She had said *no* in front of the regulator and in front of the bank executive and in front of the four junior engineers who had been at the meeting because that was the meeting where the question had to be settled. She had said *no* and had laid out the documented path and the cost in days and the contingency if the documented path missed the regulatory deadline. She had said the documented path was the only path. She had said the procedure held for the case where you most want to skip it. She had said the policy held against the operator at the moment the operator most wanted to bend the policy.
 
 She had said *no* to a regulator and to a bank executive in a country where the regulator's pressure on a consultancy was not a pressure that consultancies routinely refused. She had not raised her voice. She had not performed the refusal. She had said *no* the way a steward said *no* when the steward held the institution.
 
 I had been twenty-six. I had been at the back of the room. I had taken in what I had taken in at an altitude I had not yet had the words for at twenty-six. I had had the words at thirty-five. I had the words now. The words were *the discipline applies to the operator at the moment the operator most wants to skip it*. The words were *the policy is not what the policy says; the policy is what the policy holds against*. The words were the words I had written into the architecture during the R2 rewrite four years before the Nansen sailed.
 
-The recognition was not the kind of recognition I would narrate. It surfaced in the body the way the proverb had surfaced - present, unspoken. I sat at the comm node for the duration of the surfacing. The hum had not resumed. The body had noted. The position was the position.
+The recognition was not the kind of recognition I would narrate. It surfaced in the body the way the proverb had surfaced - present, unspoken. I sat at the comm node for the duration of the surfacing. The hum had not resumed. The body had noted. I held the position.
 
 I went forward to the wardroom for the afternoon meal at 1330.
 
@@ -221,7 +221,7 @@ I went forward to the wardroom for the afternoon meal at 1330.
 
 I noticed Wanjiru's face change for half a beat at the comm node at 1228.
 
-I had come down from the bridge after the morning brief and had walked past the comm node on the way to the wardroom. Wanjiru was at the station. Her hands were still. Her eyes were on the screen. The hum was not on. I caught the absence of the hum the way I had caught the presence of the hum across the duration of the mission - peripherally, accurately, without naming what I was catching it against. The hum was off. Wanjiru's face was the face it was when Wanjiru was not yet at the moment after a recognition. I had read the face on her once at the wardroom on the morning of Day 34, at a moment I had not asked her about. I read it now. I did not ask her about it.
+I had come down from the bridge after the morning brief and had walked past the comm node on the way to the wardroom. Wanjiru was at the station. Her hands were still. Her eyes were on the screen. The hum was not on. I caught the absence of the hum the way I had caught the presence of the hum across the duration of the mission - peripherally, accurately, without naming what I was catching it against. The hum was off. Wanjiru's face had settled into what it became when she was not yet at the moment after a recognition. I had read the face on her once at the wardroom on the morning of Day 34, at a moment I had not asked her about. I read it now. I did not ask her about it.
 
 I went to the wardroom.
 
@@ -243,7 +243,7 @@ I read the panel.
 
 I said: *the rule is the consortium's standing rule.*
 
-She said: *yes. The rule has been in the consortium's standing documentation since 2024. The rule was the rule against which I reviewed the consortium's procurement chain at the pre-mission verification I ran on the OSS-side security audit before departure. The procurement chain was at the rule's compliance level at every event I reviewed at the pre-mission verification. The chain has been at the rule's compliance level at every event I have reviewed across the mission until this event. This event is the first event I have read on the consortium's procurement chain that is past the standing rule.*
+She said: *yes. The rule has been in the consortium's standing documentation since 2024. The rule against which I reviewed the consortium's procurement chain at the pre-mission verification I ran on the OSS-side security audit before departure was this rule. The procurement chain was at the rule's compliance level at every event I reviewed at the pre-mission verification. The chain has been at the rule's compliance level at every event I have reviewed across the mission until this event. This event is the first event I have read on the consortium's procurement chain that is past the standing rule.*
 
 I said: *the eight hours could be routine.*
 
@@ -261,7 +261,7 @@ I said: *the substrate.*
 
 She said: *this is the first time the substrate has been operationally substantive on this mission. The boat-internal hash chain captured the firmware-update event at capture, signed under the procurement officer's Ed25519 key, replicated to every crew node before the cascade, and preserved through the cascade. The consortium-procurement archive was on my per-laptop at departure and is available offline. The substrate gave me a metadata question I would not have been able to ask without the substrate. No other architecture preserves the full pre-failure timestream of every edge device, the full firmware-update history with consortium-procurement metadata in chain, and the boat's internal hash-chained replication of both. TrustMesh missions cannot do this. The architecture has just been its own investigative tool. The property is not theoretical. The property is operating.*
 
-She said the sentence at the rate she said sentences when the sentence was the sentence she had been carrying since 0323 the previous night and had not yet said. The hum was not on. Her body was still. Her eye contact was direct.
+She said it at the rate she said sentences that had been carried since 0323 the previous night and not yet spoken. The hum was not on. Her body was still. Her eye contact was direct.
 
 I said: *what do you do.*
 
@@ -269,9 +269,9 @@ She said: *nothing this mission. The forensic-substrate query is logged at the o
 
 I said: *the discipline.*
 
-She said: *the discipline applies to the operator at the moment the operator most wants to skip it. I am the operator. The moment is the moment. The discipline applies.*
+She said: *the discipline applies to the operator at the moment the operator most wants to skip it. I am the operator. The moment is now. The discipline applies.*
 
-I read her face. The face was the face the face was. The hum was still not on.
+I read her face. The face had settled. The hum was still not on.
 
 I said: *acknowledged. The question is at the post-incident review carrier. The institutional channels are the institutional channels. The clean-mode confirmation pass is the clean-mode confirmation pass. The Mission Director's position on the question is that the question is logged at the operational log and that the relay-operations officer's discipline on the question is the discipline the institution requires of the relay-operations officer at the moment the institution requires it.*
 
@@ -319,7 +319,7 @@ He said: *I do not want to run the analysis tonight.*
 
 She said: *I have it logged at the post-incident review carrier. The joint analysis is for transit-north.*
 
-He said: *acknowledged. Transit-north. We will run the joint analysis on laptop-class compute at the rate laptop-class allows. We will not pursue cause-of-deviation tonight. The question is the question. The question is at the post-incident review.*
+He said: *acknowledged. Transit-north. We will run the joint analysis on laptop-class compute at the rate laptop-class allows. We will not pursue cause-of-deviation tonight. The question holds. The question is at the post-incident review.*
 
 She said: *acknowledged.*
 
@@ -347,15 +347,15 @@ I read the operational damage report against the consortium-port mirror's refere
 
 The crew adapted.
 
-The architecture was at the operational tempo at reduced capability. The hub was offline. The per-laptop held. The canonical record was at the per-laptop. The hub had been capability, not source-of-truth. The architecture had been built so that the hub's loss would be capability loss, not preservation loss. The architecture was operating at the case the architecture had been built for. The architecture was operating as the architecture was specified.
+The architecture was at reduced capability. The hub was offline. The per-laptop held. The canonical record was at the per-laptop. The hub had been capability, not source-of-truth. Joel had built it that way. He had been right.
 
 I noted the holding on the per-laptop.
 
 I did not mourn the GPU.
 
-The list of *queries to run when we surface* grew. The list at the end of Day 48 had thirteen items. The list would have twenty-two items by Day 56 against the chart. The list would carry to surfacing. The system would answer the items at the consortium-port when the boat surfaced and the relay filled. The architecture would close the gap at surfacing. The architecture had built the gap into its specification. The gap was the gap the architecture had been honest about.
+The list of *queries to run when we surface* grew. The list at the end of Day 48 had thirteen items. The list would have twenty-two items by Day 56 against the chart. The list would carry to surfacing. The system would answer the items at the consortium-port when the boat surfaced and the relay filled. The architecture would close the gap at surfacing. The architecture had built the gap into the specification it had been honest about since the morning of Day 7.
 
-The crew did not narrate the adaptation. The adaptation was on tempo. The tempo was the tempo.
+The crew did not narrate the adaptation. The adaptation was on tempo. The boat made its bearing.
 
 ---
 
@@ -385,9 +385,9 @@ I went to bed.
 
 *I had hired Wanjiru for the work she did at the comm node yesterday and today. I had read it on her at the recruitment interview five months before the boat sailed. I had read it on her at the wardroom on the morning of Day 21, when she had said no to Diego at the same volume she had said the link is up. I had read it on her at the comm space on the morning of Day 37, when she had set the cross-check filing into the second-day outbound at the elevated P1 position the institutional clock required. I had read it on her again today, at the comm node and at my cabin and through what I caught in her face at twelve-twenty-eight when she had looked at the screen with her hands still and the hum not on.*
 
-*The architecture has now been exercised against three threat models. Wanjiru did not narrate this in my cabin at sixteen-forty-eight. She narrated the metadata question and the institutional discipline and the carrier and the clean-mode confirmation pass. She did not narrate the pattern that the metadata question made when she put it next to the cascade and the post-cascade. The pattern is the pattern she has been carrying since 2014 in a room two blocks off Kenyatta Avenue that I have not asked her about and that she has not narrated. The pattern is the institutional discipline at the operator's moment. The pattern is the procedure for the case where you most want to skip it. The pattern is the architecture's defense against the architecture being misused.*
+*The architecture has now been exercised against three threat models. Wanjiru did not narrate this in my cabin at sixteen-forty-eight. She narrated the metadata question and the institutional discipline and the carrier and the clean-mode confirmation pass. She did not narrate the pattern that the metadata question made when she put it next to the cascade and the post-cascade. The pattern is the institutional discipline at the operator's moment. The pattern is the rule Wanjiru learned in 2014 in a room two blocks off Kenyatta Avenue. The architecture's defense against misuse is Wanjiru. That is the recognition of tonight.*
 
-*The relay holding was the relay holding. The architecture's defense against the architecture being misused was Wanjiru's discipline. The two are the same thing at different layers.*
+*The relay held tonight because Wanjiru held. The architecture's defense against the architecture being misused is the operator's discipline at the operator's moment. The two are the same thing at different layers.*
 
 *The day's account will be set down in the record. The pattern will not. The pattern is what the reader will register from what Wanjiru does and does not do. The pattern is what the reader will carry.*
 

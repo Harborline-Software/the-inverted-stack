@@ -3,6 +3,10 @@
 > Chronological action log. Hooks and AI append to this file automatically.
 > Old sessions are consolidated by the daemon weekly.
 
+| 13:30 | Anti-tautology pass on ch14-the-crossing: 17 grep hits, 16 cut (narrator voice), 1 preserved (Diego Spanish letter line 421) | vol-2/act-3/ch14-the-crossing.md | complete | ~4k |
+
+| 13:29 | Anti-tautology pass ch15 — CIC zero-narrator-voice ruling 2026-05-21T13:15Z | vol-2/act-3/ch15-compromised-relay-holds.md | 12 hits before / 0 after; 12 edits applied (11 FM1 + 1 FM2 noun-parade + 1 FM3 diary); audit replacements used where provided, Yeoman-devised for load-bearing cases | ~4k |
+
 | 01:58 | A+ roadmap Tier II #9+#10 applied to ch07-joels-sunfish: cut meta-commentary paragraph after 5th "acknowledged" beat; varied 3 of 7 "discipline" cluster instances (bearing/posture/practice) in Joel monologue lines 83-87 | vol-2/act-2/ch07-joels-sunfish.md | complete | ~2k |
 
 | HH:MM | A+ roadmap Tier I #3 applied to ch09-sync-daemon-under-drift: Bobiverse-warmth pass — installed 6 parenthetical asides (coffee placement / Priya postdoc posture / Joel *thank you* irony / recruitment-irony hiring observation / watchkeeper-register break / cadence compression), broke the 6-sentence "I had hired / I had noted / I had not seen" anaphora run at the hiring-observation block (varied openers — "Priya I had hired" / "On the recruitment calls I had noted" / "What I had seen" / "What I had not seen"), inserted concrete physical Joel observation (hands flat on bench fingers spread = problem-watching posture, noticed across three weeks), compressed Joel self-assessment from 5 spoken beats to 2, retired PRE-BOBIVERSE flag, preserved cold-coffee symbolism + Pattern B dual-log frame + three-thread foreshadowing | vol-2/act-2/ch09-sync-daemon-under-drift.md | complete; word count 5858→5849 (modest tightening); 6 parentheticals confirmed via live-grep; projected grade B+→A- | ~7k |
@@ -4189,3 +4193,10 @@ Open / deferred:
 | 02:03 | A+ Tier I #5: plant-payoff frontmatter audit + relink — 15 atomic-within-scene plants moved to plants-paid, 7 relinkable plants relinked in paying chapters, diana-postcards added to canon.yaml forward_plants | ch01/ch07/ch08/ch11/ch13/ch14/ch15/ch16/ch17/ch18 + _series/canon.yaml | complete; 2 genuine unpaid plants remain (diana-postcards + day-14-deployed-architecture-proof both correctly noted) | ~6k |
 | 02:03 | A+ roadmap ch18: standing 49→16 (33 substitutions), Astrid-prep beat inserted pre-reception, Diana postcard payoff added at chapter close, diary inset close varied (no I-am-writing anaphora), Stefan/Wanjiru/Hiroshi preserved | vol-2/act-3/ch18-punta-arenas-surfacing.md | complete | ~12k |
 | 02:07 | A+ roadmap edits: standing 83→25, X-was-X 23→11, Diego letter frame CUT, structural close preserved | vol-2/act-3/ch14-the-crossing.md | done | ~18k |
+| 13:27 | Anti-tautology audit pass ch10: 3 FM1 hits all LOAD-BEARING/kept; 1 FM3 at line 175 cut (what-the-building-had-cost anaphoric close → forward-motion split) | vol-2/act-2/ch10-aftermath-mission-that-once-was.md | 1 edit applied | ~8k |
+| 13:28 | Anti-tautology pass ch11 — 4 FM1 cuts applied per 2026-05-21 audit | vol-2/act-2/ch11-second-surface-second-forsaken-reveal.md | 4 decorative tautologies removed, 0 load-bearing exceptions | ~3k |
+| 13:28 | anti-tautology pass ch12: cut narrator-voice 'the water was the water' (line 13), applied audit tightening replacement (line 208); 5 LOAD-BEARING dialogue instances untouched per Diego-exception model | vol-2/act-2/ch12-beginning-of-the-end.md | 2 edits applied | ~4k |
+| 13:28 | anti-tautology pass ch17-transit-north: 3 narrator-voice X-was-the-X cuts (analysis x2, address, hand) | vol-2/act-3/ch17-transit-north.md | applied; diegetic speech (Joel line 111, Diego line 209) preserved | ~3k |
+| 13:28 | Applied anti-tautology audit CIC ruling: 6 narrator-voice cuts in ch18 (2 high-profile + 4 additional FM1/FM3) | vol-2/act-3/ch18-punta-arenas-surfacing.md | done | ~3200 |
+| 13:29 | Anti-tautology pass — ch07-joels-sunfish: 12 FM1 hits cut to 0 per CIC ruling 2026-05-21T13:15Z | vol-2/act-2/ch07-joels-sunfish.md | complete | ~3500 |
+| 13:29 | Anti-tautology pass — ch16-final-ascent: 16 FM1 hits reduced to 1 load-bearing (highest-density chapter) per CIC ruling 2026-05-21T13:15Z | vol-2/act-3/ch16-final-ascent.md | complete | ~4k |
