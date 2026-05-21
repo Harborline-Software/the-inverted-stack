@@ -161,10 +161,24 @@ stages:
       from a grep you ran THIS pass on the live file body.
 
       Recommended grep recipe (gnu/bsd portable):
-        # Strip HTML comments + frontmatter, then grep:
-        sed '/^---$/,/^---$/d' <CHAPTER> \
+        # Strip ONLY the leading YAML frontmatter block (anchored to
+        # start-of-file via \A), then HTML comments, then grep.
+        # The leading-only strip is required — chapters may use body
+        # `---` lines as Markdown horizontal rules. A naive
+        # `sed '/^---$/,/^---$/d'` would treat each body `---` as
+        # an opening or closing fence and silently delete every
+        # alternating body section between them. Discovered 2026-05-21
+        # from ch03 v2 audit (two body `---` rules at lines 124 + 190
+        # ate the Priya + Joel scenes from the grep counts).
+        perl -0777 -pe 's/\A---\n.*?\n---\n//s' <CHAPTER> \
           | perl -0777 -pe 's/<!--.*?-->//gs' \
           | grep -ciE 'YOUR_PATTERN'
+
+      The recipe ONLY strips the leading frontmatter (anchored via \A).
+      Any `---` inside the body is preserved. If you need to confirm,
+      check that the stripped output's word count is within ~30 words
+      of the chapter's pre-strip word count (frontmatter is typically
+      <30 lines).
 
       Report the raw count from THIS grep, alongside any qualitative
       finding. Where a count differs from a historical annotation in

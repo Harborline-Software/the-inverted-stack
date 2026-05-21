@@ -96,10 +96,13 @@ Each subagent prompt is **self-contained** (cold-start safe — the subagent doe
 >
 > Recommended grep recipe (gnu/bsd portable):
 > ```
-> sed '/^---$/,/^---$/d' <CHAPTER> \
+> # Strip ONLY leading frontmatter (anchored via \A), then HTML comments, then grep.
+> perl -0777 -pe 's/\A---\n.*?\n---\n//s' <CHAPTER> \
 >   | perl -0777 -pe 's/<!--.*?-->//gs' \
 >   | grep -ciE 'YOUR_PATTERN'
 > ```
+>
+> **Why perl not sed (added 2026-05-21 after ch03 v2 audit):** chapters may use body `---` lines as Markdown horizontal rules. The naive `sed '/^---$/,/^---$/d'` treats every body `---` as an alternating fence and silently deletes every other body section between them. Ch03 had two body `---` rules at lines 124 + 190; the sed strip ate the Priya + Joel scenes from the grep counts and ch03's v1 register count came back as 1 when it was actually 3 (at cap). The perl `\A` anchor only matches start-of-file, so the strip touches frontmatter only.
 >
 > Report the raw count from THIS grep, alongside any qualitative finding. Where a count differs from a historical annotation in the file, note the discrepancy explicitly so the orchestrator can update the annotation.
 
