@@ -15,6 +15,7 @@ plants-set:
   - schema-anomaly-boundary
   - priya-four-pass-replaces-three
   - institutional-response-pending
+  - diego-mate-cup-cadence
 plants-paid:
   - acoustic-mesh-8-percent-faster
   - priya-schema-handshake-clean-segment2
@@ -51,7 +52,15 @@ He turned back to his console. He did not settle into the chair. The polar-opera
 
 Diego had not stood at the polar-operations console for an entire bridge watch in Segment 1 or Segment 2. He had taken the chair through the routine watches; he had stood for the partition transitions and the surface preparations and now, at 0611 on Day 39, for the commencement of Segment 3. He would stand through the first two hours of routine submerged ops. He would stand the next morning through the first cross-section against the consortium model. He would - I knew, because I had been on three previous Antarctic missions with him - stand more in Segment 3 than he had stood in Segments 1 and 2 combined. The bathymetry mattered now in a way it had not yet mattered. Diego ran at the tempo the boat now required, and the rest of us would catch up to it on our own schedule.
 
-I went to the command station. I read the routine indications.
+I crossed to the command station past the polar-operations console. The leather mate-cup sat on the console's left shelf where Diego's off-hand could reach it without leaving the screens, the bombilla unpolished against the leather. I had seen the cup at his elbow on three previous Antarctic boats. I had selected him for each of those boats. I had selected him for this one. (Which is the kind of arithmetic a commander does not run at the moment of the order. The body had decided to run it now.)
+
+Diego marked the pass at the edge of his attention without turning his head from the bathymetry screen.
+
+He said: *Anna. The cross-section's at ten-eighteen.*
+
+I said: *acknowledged.*
+
+He returned to the screens. I went on to the command station. I read the routine indications.
 
 I had a thought I did not write down. I will write it here.
 

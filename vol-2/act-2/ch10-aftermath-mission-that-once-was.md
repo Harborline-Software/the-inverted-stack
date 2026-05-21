@@ -170,6 +170,16 @@ I have been writing the file on the desk under three hundred meters of ice in th
 
 I have not named what I will do with the naming. I do not know yet. The boat is at depth. The mission is twenty-three days from Punta Arenas. The architecture will be tested again before the boat surfaces, in shapes I cannot yet specify. What I have named tonight is what I selected for and why and what the selection's structural relationship is to the loss that taught me to make the selection.
 
+The naming I had not yet named was that I was not only naming the prior mission. I was naming the present one in the negative space the prior mission cast.
+
+I had twelve people on this boat. Twelve names, twelve kitchen tables, and twelve letters I would have to write if the mission cost me one of them.
+
+Joel — his sister in Mexico City. Priya — her father in Bangalore. Wanjiru — the standards-body draft, and what it would now have to be carried by. Mikael — Greta and the boys, and the bread complaints I had never properly thanked him for. Maria — her partner in Tromsø. Hiroshi — his parents in Sapporo. Sabina — the husband and the second child, due in May. Diego — the kitchen table in Belgrano I had sat at, in 2018. The four others I had not yet learned at the same depth — four names in the file, four addresses on the manifest, four kitchen tables I had not opened.
+
+My mother had taught me to rank people against each other. I had spent thirty years learning not to.
+
+I looked up at the bulkhead and counted the seven drawings.
+
 I have not forgiven Stefan. I have not absolved Astrid. I have not closed the question of what was owed to Tomáš Havránek's mother that has not been paid. The architecture does not close those questions. The architecture is a different question, asked at a different scale, in a vocabulary that the question of what was owed cannot be answered in.
 
 What I know tonight is what mine had been forged in, and what I had built around me on this boat. I do not yet know what it had cost.

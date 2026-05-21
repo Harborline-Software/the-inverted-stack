@@ -11,6 +11,7 @@ primary-rail: mission-as-survival
 narrator-frame: archive-conspiratorial
 plants-set:
   - firmware-second-note
+  - joel-firmware-admission-seed  # pays in ch17 wardroom Day 54 admission
   - diana-postcards
   - mother-comparisons-pattern
   - vatrushka-evaluation-standards
@@ -92,7 +93,7 @@ He let go of my hand. "Your bay is squared away. Joel has been on board since 05
 
 "Of course he has." 
 
-Which meant the man on the seafront had been someone else. I noted the correction. I did not name it aloud. I had been thinking about Joel for ninety-three days, and the mind does what the mind does.
+Which meant the man on the seafront had been someone else. I noted the correction. I did not name it aloud. I had been thinking about Joel for ninety-three days, and the mind does what the mind does — including, when you give it ninety-three days, the call I am still not sure about, which he had carried since the pre-procurement review and which neither of us had named in the months since.
 
 "He is in the chemistry rack." 
 

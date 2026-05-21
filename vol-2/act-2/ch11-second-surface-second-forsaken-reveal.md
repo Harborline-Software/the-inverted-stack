@@ -165,6 +165,10 @@ I said: *good.*
 
 She nodded. She returned to the screen.
 
+She said, without looking up: *one more item for the transit-north review queue. The consortium-port mirror has been filing firmware-update windows against the vendor archive at a cadence I do not yet have an explanation for. The pattern is at the institutional level, not the signal level. I have not pursued it. I have logged it.*
+
+She did not say what the pattern was. She said what she had done with it.
+
 I stood at the door of the comm space for a second longer than I needed to before I went to the bridge. The comm space was the comm space. The hum was on. The relay queue ran. The consortium's clock ran on the consortium's side of the surface window. The boat's clock ran on the boat's side. The two were reconciling at the bandwidth Wanjiru's triage had budgeted them at. The architecture compounded at two cycles, intact.
 
 I went to the bridge.
