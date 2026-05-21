@@ -91,7 +91,7 @@ I went up to the bridge.
 
 ---
 
-I came up at 0322. The bridge was at its post. The Mission Director was at the rail position. Hiroshi was at the helm. Diego was at the polar-operations console. The Director's face carried what the bridge required. The bridge was at bearing.
+I came up at 0322. The bridge was at its post. The Mission Director was at the rail position. Hiroshi was at the helm. The polar-operations console was at its standing position; the chair was empty. The Director's face carried what the bridge required. The bridge was at bearing.
 
 I said: *Director.*
 
@@ -143,7 +143,7 @@ I could now run the forensic-substrate query at laptop-class, before deeper degr
 
 I framed the query.
 
-I framed it at the rate I framed queries when I was framing them at a level where the answer mattered to the institution and not only to me. I wrote the framing in the relay-operations notebook the way I wrote framings when I wanted the framing to be visible to the post-incident review. The framing read:
+I framed it at the rate I framed queries when I was framing them at a level where the answer mattered to the institution and not only to me. The post-incident review at transit-north would carry one case that had not been on the carrier the previous evening; this query would carry against the same review. I wrote the framing in the relay-operations notebook the way I wrote framings when I wanted the framing to be visible to the post-incident review. The framing read:
 
 *Question: is the firmware-update history on the starboard sensor head consistent with the consortium's procurement protocol? Scope: the patch applied to this specific unit on the date the audit log records the patch as applied. Scope: the manufacturer-release-to-installation window. Scope: the consortium-port handling chain. Out of scope: the patch's contents; the patch's behavior; the patch's effects. The question is procedural integrity, not patch-content analysis.*
 
@@ -214,6 +214,8 @@ She had said *no* to a regulator and to a bank executive in a country where the 
 I had been twenty-six. I had been at the back of the room. I had taken in what I had taken in at an altitude I had not yet had the words for at twenty-six. I had had the words at thirty-five. I had the words now. The words were *the discipline applies to the operator at the moment the operator most wants to skip it*. The words were *the policy is not what the policy says; the policy is what the policy holds against*. The words were the words I had written into the architecture during the R2 rewrite four years before the Nansen sailed.
 
 The recognition was not the kind of recognition I would narrate. It surfaced in the body the way the proverb had surfaced - present, unspoken. I sat at the comm node for the duration of the surfacing. The hum had not resumed. The body had noted. I held the position.
+
+I noted one further thing, at the altitude at which I would not say it aloud and would not write it into the operational log. The architecture's defenses were the defenses against three threat models. The case the boat had lost the day before was not among the three. The architecture had not been built against a fourth case because no architecture I had read had been built against that case. I held the noting at its altitude. I did not pursue it.
 
 I went forward to the wardroom for the afternoon meal at 1330.
 
@@ -341,7 +343,7 @@ Priya ran the post-cascade instrumentation analysis on her per-laptop at the sma
 
 Hiroshi's biweekly cross-language collaboration with the JARE colleagues at Showa Station was on the post-mission list. The translation between the boat's English and JARE's Japanese had been running on the heavy-LLM hosting for the back ten years; the per-laptop would not handle the cross-language collaboration at the rate the collaboration required; the collaboration carried to surfacing.
 
-Diego stood the polar-operations console. The polar-operations console did not require the heavy-LLM hosting. The polar-operations console required Diego. Diego was at the console.
+The polar-operations console was at its standing position; the higher-refresh bathymetry configuration Diego had set at the start of the dive sequence held. The chair was empty. Hiroshi had acquired the polar-operations rotation in addition to the chief-scientist's; the watch worked through.
 
 I read the operational damage report against the consortium-port mirror's reference on the per-laptop at 1843. The reference was at the laptop. The damage report was filed. The damage report was at baseline.
 
@@ -371,7 +373,7 @@ I wrote a paragraph.
 
 I read the paragraph. I wrote another paragraph. I read both. I let the duration carry.
 
-The boat was at depth. The trim was at the operational envelope. Diego was on the polar-operations console. The cycle was holding. The boat would surface in eight days. The list would grow. The architecture would close the gap. The post-incident review would run at transit-north. The consortium would receive the relay-operations officer's filing at Punta Arenas. The institution would investigate. The question on the firmware-update history would be the question the consortium investigated at the institutional level. The boat would not be the institution. The boat was at depth.
+The boat was at depth. The trim was at the operational envelope. Hiroshi was on the polar-operations console. The cycle was holding. The boat would surface in eight days. The list would grow. The architecture would close the gap. The post-incident review would run at transit-north. The consortium would receive the relay-operations officer's filing at Punta Arenas. The institution would investigate. The question on the firmware-update history would be the question the consortium investigated at the institutional level. The boat would not be the institution. The boat was at depth.
 
 The relay held. Wanjiru held. The architecture held what we asked it to hold.
 
@@ -389,7 +391,9 @@ I went to bed.
 
 *The relay held tonight because Wanjiru held. The architecture's defense against the architecture being misused is the operator's discipline at the operator's moment. The two are the same thing at different layers.*
 
-*The day's account will be set down in the record. The pattern will not. The pattern is what the reader will register from what Wanjiru does and does not do. The pattern is what the reader will carry.*
+*What the architecture held tonight was the audit log, the hash chain, the gossip layer, the substrate at laptop-class, the discipline at the operator's moment. What the architecture held was not Diego. The list at the desk is the list of queries the institution will answer. There is no query for Diego.*
+
+*The day's account will be set down in the record. The pattern will not. The pattern is what the reader will take in from what Wanjiru does and does not do. The pattern is what the reader will carry.*
 
 *The boat is at depth. The list is at thirteen. The cycle holds.*
 
