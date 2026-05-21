@@ -79,6 +79,31 @@ Each subagent prompt is **self-contained** (cold-start safe — the subagent doe
    - NYT-profile readiness (green / yellow / red, one-sentence verdict)
    - Single highest-leverage edit
 7. Constraints: no chapter modifications, no further subagent spawning.
+8. **Live-grep mandate** (added 2026-05-21, see below).
+
+### Live-grep mandate
+
+**Why this exists:** the 2026-05-20 vol-2 dispatch surfaced three false-positive BLOCKERs (ch14 "10+ register instances," ch16 "double-register sentence," ch18 "83 register instances"). All three chapters had been brought to compliance by a prior 2026-05-16 PAO rewrite; the audit subagents read embedded HTML-comment rewrite annotations describing the *pre-rewrite* state and reported those counts as current. The Stage 06 Yeoman edit subagents caught the error by running actual greps before editing — but the audit pass wasted attention on phantom blockers.
+
+**The mandate, included verbatim in every per-chapter prompt:**
+
+> Before reporting ANY quantitative metric (instance counts of motif phrases, register-family occurrences, anti-pattern hits, word counts of specific constructions, etc.), you MUST run a live grep against the chapter's BODY PROSE — explicitly excluding:
+> - YAML frontmatter (between the leading `---` fences)
+> - HTML comments (`<!-- ... -->` blocks, including multi-line rewrite-audit annotations that document past edits)
+> - Embedded code blocks unless they are part of the prose
+>
+> Do NOT trust embedded rewrite-history annotations, frontmatter tallies, prior galley reports, or prior UPF reports as ground truth for current counts. Those annotations describe historical state, not live state. If you cite a count, the count MUST come from a grep you ran THIS pass on the live file body.
+>
+> Recommended grep recipe (gnu/bsd portable):
+> ```
+> sed '/^---$/,/^---$/d' <CHAPTER> \
+>   | perl -0777 -pe 's/<!--.*?-->//gs' \
+>   | grep -ciE 'YOUR_PATTERN'
+> ```
+>
+> Report the raw count from THIS grep, alongside any qualitative finding. Where a count differs from a historical annotation in the file, note the discrepancy explicitly so the orchestrator can update the annotation.
+
+**Stage 06 gate addition:** orchestrator spot-checks at least 2 reported quantitative metrics against a fresh grep before accepting Stage 07 input. Catches subagents that silently dropped the mandate.
 
 ---
 

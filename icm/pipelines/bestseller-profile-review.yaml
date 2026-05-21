@@ -124,6 +124,7 @@ stages:
           (e) output report path
           (f) return contract: ≤400-word executive summary
           (g) constraints (no chapter modification, no subagent spawning)
+          (h) **live-grep mandate** (see below)
       - Verify prompt fits in subagent's context window comfortably.
     gate:
       criterion: prompt-template-ready
@@ -131,6 +132,44 @@ stages:
         - Template is fully self-contained (cold-start safe).
         - All rubric items present in prompt body.
         - Return contract specifies what orchestrator needs back.
+        - Live-grep mandate present and explicit.
+
+    # Live-grep mandate — added 2026-05-21 after the 2026-05-20 vol-2 dispatch
+    # surfaced stale-flag false positives on ch14, ch16, ch18.
+    #
+    # Failure mode: per-chapter UPF subagents trusted embedded HTML-comment
+    # rewrite annotations (e.g. "2026-05-16 rewrite reduced register-family
+    # from 83 to 3") and reported the PRE-rewrite count as current state.
+    # Stage 06_build Yeoman edit subagents caught the error by running
+    # actual grep before editing, but the audit pass wasted attention on
+    # phantom blockers.
+    #
+    # Mandate language to include verbatim in every per-chapter prompt:
+    live_grep_mandate: |
+      Before reporting ANY quantitative metric (instance counts of motif
+      phrases, register-family occurrences, anti-pattern hits, word
+      counts of specific constructions, etc.), you MUST run a live grep
+      against the chapter's BODY PROSE — explicitly excluding:
+        - YAML frontmatter (between the leading `---` fences)
+        - HTML comments (`<!-- ... -->` blocks, including multi-line
+          rewrite-audit annotations that document past edits)
+        - Embedded code blocks unless they are part of the prose
+      Do NOT trust embedded rewrite-history annotations, frontmatter
+      tallies, prior galley reports, or prior UPF reports as ground
+      truth for current counts. Those annotations describe historical
+      state, not live state. If you cite a count, the count MUST come
+      from a grep you ran THIS pass on the live file body.
+
+      Recommended grep recipe (gnu/bsd portable):
+        # Strip HTML comments + frontmatter, then grep:
+        sed '/^---$/,/^---$/d' <CHAPTER> \
+          | perl -0777 -pe 's/<!--.*?-->//gs' \
+          | grep -ciE 'YOUR_PATTERN'
+
+      Report the raw count from THIS grep, alongside any qualitative
+      finding. Where a count differs from a historical annotation in
+      the file, note the discrepancy explicitly so the orchestrator
+      can update the annotation.
 
   - stage: 04_scaffolding
     name: Scaffolding
@@ -172,12 +211,17 @@ stages:
       - Each subagent returns its ≤400-word executive summary on completion.
       - Orchestrator collects summaries; full reports land at the specified
         output paths via the subagent's own Write tool.
+      - Each subagent MUST honor the live-grep mandate (Stage 03) — counts
+        come from a grep run THIS pass, not from embedded annotations.
     gate:
       criterion: all-reports-landed
       checks:
         - N output reports exist at expected paths.
         - N executive summaries received by orchestrator.
-        - No subagent failed silently (every dispatched agent returned).
+        - No subagent failed silently (every dispatched agent returned.
+        - Spot-check at least 2 reported quantitative metrics against a
+          fresh grep before accepting Stage 07 input — catches subagents
+          that silently dropped the live-grep mandate.
 
   - stage: 07_review
     name: Review (consolidation)
