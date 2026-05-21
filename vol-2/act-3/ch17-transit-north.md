@@ -28,7 +28,8 @@ plants-paid:
 
 <!-- Anna-voice rewrite pass 2026-05-16 (PAO). self_referential_frame 12→<3 (galley red→green): "the staff history" cluster compressed via "the document" / "the record" / "the file" varied alternatives; Wanjiru's institutional dialog preserved with reduced repetition; final "in my hands" line preserved as load-bearing close. -->
 <!-- A+ roadmap pass 2026-05-20 (Yeoman). "standing" 44→34: 10 narrator-body instances varied (per-laptop's local-cache window; consortia's installation rules / prescribed window; the discipline he carried; the IAA's institutional stationery; low background volume; Drake's autumn latitude; data the panel had carried; the Punta Arenas approach was at the horizon; same level). Diegetic blocks (crew logs + regulatory filing) preserved intact. Anna-interior beat inserted after forensic analysis closes (line ~179): "Five days of private work, and they had brought it to the table with the flat temperature of people who had already finished being impressed by it." -->
-<!-- chapter-version: v2 -->
+<!-- Plan C Wave 1 framing E pass 2026-05-21 (PAO). Joel admission inserted: AI-agent security audit on vendor firmware returned clean; Joel signed the procurement approval against the agent's output without reading the agent's findings against the raw firmware. Discipline-breach = human verification of an automated authority's output, exactly at the load-bearing claim Joel's architecture rests on. 7-sentence admission in Joel's voice; preserved exactly: sentences 4 ("I did not read the agent's findings against the raw firmware"), 5 ("The architecture I built exists because I do not trust an agent to do that work alone"), 7 ("The cost is in the compartment"). Wanjiru's setup beat (institutional "at" preposition) precedes admission; preposition switch ("at" → "in") is the chapter's structural device. Anna's interior response = 25 words concrete physical (Joel's hands, the screen, the ventilation hum); no aphorism. Joel leaves. Anna+Wanjiru remain ≤2 sentences, no spoken exchange; Wanjiru drafting the standards-body framework in the shadow of the admission. The prior-pass "Five days of private work..." Anna-interior beat retired (editorial commentary in narrator-voice). FM1 narrator-voice count post-edit: 0 (the 1 remaining hit at line 85 is Joel-dialogue, LOAD-BEARING per anti-tautology audit). -->
+<!-- chapter-version: v3 -->
 
 *Crew log, Mission Day 53, 0612 local. Yusupova, Mission Director. RV Nansen, MERIDIAN-7.*
 
@@ -176,11 +177,23 @@ Joel said: *we will draft the regulatory filing tonight. The filing will documen
 
 Wanjiru said: *acknowledged. I will draft at the relay-operations record. The filing will carry to the consortium-port mirror at Punta Arenas at the post-incident review carrier.*
 
-Joel nodded. He closed his per-laptop. He gathered the panel printouts in order. He stood. He went out.
+The wardroom radio had cleared the surface-broadcast feed at the institutional cycle's midnight close. Sabina had set the volume to off before she logged for the morning. The kettle was off the warmer. The wardroom held the three of us at the table and the per-laptops open. Joel had not closed his laptop.
 
-Wanjiru sat at the table for the duration the duration required. She opened the cucu-notebook. She wrote in it. She wrote at the rate she wrote when she was writing the questions she was holding for after the institutional record had filed. She closed the notebook. She put it beside her per-laptop. She opened the per-laptop. She began the regulatory filing.
+Wanjiru filed the analysis at the institutional record at 2347 against the relay-operations log. She set the per-laptop to one side of the cucu-notebook. She did not close the per-laptop.
 
-Five days of private work, and they had brought it to the table with the flat temperature of people who had already finished being impressed by it.
+She said: *the analysis is at the institutional record. The signatures are at the consortium-port mirror's pending handshake. The pattern is at the data level. The institution's response will be at the institutional level.*
+
+Joel did not look up.
+
+He said: *I ran the firmware audit through the agent. The agent returned clean. I signed the procurement approval against the agent's output. I did not read the agent's findings against the raw firmware. The architecture I built exists because I do not trust an agent to do that work alone. I trusted this one. The cost is in the compartment.*
+
+He did not narrate further.
+
+Joel's hands were flat on either side of his per-laptop. The screen carried the panel he had been reading for five days. The wardroom's surface-ventilation hum was at the standing low pitch.
+
+Joel closed his per-laptop. He gathered the panel printouts in order. He stood. He went out.
+
+Wanjiru did not look up from the cucu-notebook. She wrote in it at the rate she wrote when she was writing the standards-body framework her institutional work would carry forward.
 
 I went to my cabin.
 
