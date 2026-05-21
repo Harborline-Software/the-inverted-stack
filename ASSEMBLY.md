@@ -96,7 +96,7 @@ Phase 5 cross-reference cleanup substantially complete (verified 2026-05-01: all
 | Ch 3 - Drake Passage | `vol-2/act-1/ch03-drake-passage-ice-edge.md` | icm/outline (Act I dispatch authorized) | - | - |
 | Ch 4 - First Submersion | `vol-2/act-1/ch04-first-submersion.md` | icm/outline (Act I dispatch authorized) | - | - |
 | Ch 5 - Day-Twenty Realization | `vol-2/act-1/ch05-day-twenty-realization.md` | **icm/draft (prose-pass; listen-test APPROVED)** | 5,971 | 36.5 min |
-| Ch 6 - First Surface, First Forsaken Reveal | `vol-2/act-1/ch06-first-surface-first-forsaken-reveal.md` | icm/outline (Act I dispatch authorized) | - | - |
+| Ch 6 - First Surface | `vol-2/act-1/ch06-first-surface.md` | icm/outline (Act I dispatch authorized) | - | - |
 | Ch 7-12 (Act II) | `vol-2/act-2/` | icm/outline | - | - |
 | Ch 13-18 (Act III) | `vol-2/act-3/` | icm/outline | - | - |
 

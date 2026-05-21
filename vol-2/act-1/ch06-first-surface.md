@@ -1,5 +1,5 @@
 ---
-title: "First Surface, First Forsaken Reveal"
+title: "First Surface"
 volume: 2
 act: 1
 chapter: 6

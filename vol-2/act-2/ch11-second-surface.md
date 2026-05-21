@@ -1,5 +1,5 @@
 ---
-title: "Second Surface, Second Forsaken Reveal"
+title: "Second Surface"
 volume: 2
 act: 2
 chapter: 11

@@ -226,7 +226,7 @@ Drafters see `vol-2-archive-and-capture-convention.md` § 6 for the discipline r
 - **Verification gap:** the chapter is the verification gap. The architecture's authoritative-local-store claim from the paper is exercised against Anna's lived experience under partition for the first time. The claim holds.
 - **Drafting notes:** **this is one of the two listen-test chapters (concept note §9).** The chapter's primary risk is overwriting the realization; trust the silence and the single-character interior. Tight scene; one location; emotional realization at the chapter's center. If Arc 1 listens well as audiobook, Anna's first-person mission-frame voice is validated. If it does not, the issue is identifiable to the narrator-voice choice itself.
 
-## Ch 6 - *First Surface, First Forsaken Reveal* (Day 21-23)
+## Ch 6 - *First Surface* (Day 21-23)
 
 - **Days / setting:** Day 21 surfacing; 2-day surface window; comms reconnect.
 - **Architectural claim:** *the gossip layer rapidly reconciles with the consortium ports after partition; the audit log is intact; provenance is preserved.* Reconciliation under healthy network resumed.
@@ -306,7 +306,7 @@ Drafters see `vol-2-archive-and-capture-convention.md` § 6 for the discipline r
 - **Verification gap:** the architectural property of trust (disclosure-without-compulsion) is the inverse of the architectural property of failure (non-disclosure-under-pressure). Anna's selection of Joel was made on a structural property of his character that exactly inverses what failed her last time.
 - **Drafting notes:** the chapter is mostly flashback; the mission-frame anchor is light. Does not dramatize Stefan in person (he is fully dramatized in Book 4); the Stefan figure is Anna's interior. Refer `stefan-reinhardt-rival-architect.md` for Stefan's dimension; the chapter does not require all of him to land - only Anna's reading of him is required. The chapter is the load-bearing prior-failure interior for Book 1; subsequent Arc 7 fragments distribute lightly across other chapters.
 
-## Ch 11 - *Second Surface, Second Forsaken Reveal* (Day 37-39)
+## Ch 11 - *Second Surface* (Day 37-39)
 
 - **Days / setting:** Day 37 surfacing; 2-day surface window.
 - **Architectural claim:** *the architecture is intact across two surface-window cycles; the audit log compounds correctly.*
@@ -462,12 +462,12 @@ Drafters see `vol-2-archive-and-capture-convention.md` § 6 for the discipline r
 | Ch 3 - Drake Passage and the Ice Edge | 4,500 | 30 |
 | Ch 4 - First Submersion | 5,000 | 33 |
 | Ch 5 - The Day-Twenty Realization | 6,000 | 40 |
-| Ch 6 - First Surface, First Forsaken Reveal | 5,000 | 33 |
+| Ch 6 - First Surface | 5,000 | 33 |
 | Ch 7 - Joel's Sunfish | 5,000 | 33 |
 | Ch 8 - Second Submersion | 5,000 | 33 |
 | Ch 9 - Subsystem Test - Sync Daemon Under Drift | 6,000 | 40 |
 | Ch 10 - The Aftermath of a Mission That Once Was | 5,000 | 33 |
-| Ch 11 - Second Surface, Second Forsaken Reveal | 5,000 | 33 |
+| Ch 11 - Second Surface | 5,000 | 33 |
 | Ch 12 - Beginning of the End | 5,000 | 33 |
 | Ch 13 - The Schema That Should Not Migrate | 10,000 | 67 |
 | Ch 14 - The Crossing | 12,500 | 83 |

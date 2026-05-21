@@ -607,12 +607,12 @@ CHAPTER_PRESET_MAP: dict[str, str] = {
     "vol-2/act-1/ch03-drake-passage-ice-edge": "female-solo",
     "vol-2/act-1/ch04-first-submersion": "female-solo",
     "vol-2/act-1/ch05-day-twenty-realization": "female-solo",
-    "vol-2/act-1/ch06-first-surface-first-forsaken-reveal": "female-solo",
+    "vol-2/act-1/ch06-first-surface": "female-solo",
     "vol-2/act-2/ch07-joels-sunfish": "female-solo",
     "vol-2/act-2/ch08-second-submersion": "female-solo",
     "vol-2/act-2/ch09-sync-daemon-under-drift": "female-solo",
     "vol-2/act-2/ch10-aftermath-mission-that-once-was": "female-solo",
-    "vol-2/act-2/ch11-second-surface-second-forsaken-reveal": "female-solo",
+    "vol-2/act-2/ch11-second-surface": "female-solo",
     "vol-2/act-2/ch12-beginning-of-the-end": "female-solo",
     "vol-2/act-3/ch13-schema-that-should-not-migrate": "female-solo",
     "vol-2/act-3/ch14-the-crossing": "female-solo",
@@ -670,13 +670,13 @@ CHAPTER_FILES = [
     "vol-2/act-1/ch03-drake-passage-ice-edge.md",
     "vol-2/act-1/ch04-first-submersion.md",
     "vol-2/act-1/ch05-day-twenty-realization.md",
-    "vol-2/act-1/ch06-first-surface-first-forsaken-reveal.md",
+    "vol-2/act-1/ch06-first-surface.md",
     # Act II
     "vol-2/act-2/ch07-joels-sunfish.md",
     "vol-2/act-2/ch08-second-submersion.md",
     "vol-2/act-2/ch09-sync-daemon-under-drift.md",
     "vol-2/act-2/ch10-aftermath-mission-that-once-was.md",
-    "vol-2/act-2/ch11-second-surface-second-forsaken-reveal.md",
+    "vol-2/act-2/ch11-second-surface.md",
     "vol-2/act-2/ch12-beginning-of-the-end.md",
     "vol-2/act-3/ch13-schema-that-should-not-migrate.md",
     "vol-2/act-3/ch14-the-crossing.md",
@@ -704,13 +704,13 @@ VOL2_CHAPTER_FILES = [
     # ch03-drake-passage-ice-edge.md — ACTIVATED in CHAPTER_FILES (2026-05-06)
     # ch04-first-submersion.md — ACTIVATED in CHAPTER_FILES (2026-05-06)
     # ch05-day-twenty-realization.md — ACTIVATED in CHAPTER_FILES (2026-05-04)
-    # ch06-first-surface-first-forsaken-reveal.md — ACTIVATED in CHAPTER_FILES (2026-05-06)
+    # ch06-first-surface.md — ACTIVATED in CHAPTER_FILES (2026-05-06)
     # Act II — Subsystems hold; the contest sharpens (Days 22-42)
     # ch07-joels-sunfish.md — ACTIVATED in CHAPTER_FILES (2026-05-06)
     # ch08-second-submersion.md — ACTIVATED in CHAPTER_FILES (2026-05-06)
     # ch09-sync-daemon-under-drift.md — ACTIVATED in CHAPTER_FILES (2026-05-06)
     # ch10-aftermath-mission-that-once-was.md — ACTIVATED in CHAPTER_FILES (2026-05-06)
-    # ch11-second-surface-second-forsaken-reveal.md — ACTIVATED in CHAPTER_FILES (2026-05-06)
+    # ch11-second-surface.md — ACTIVATED in CHAPTER_FILES (2026-05-06)
     # ch12-beginning-of-the-end.md — ACTIVATED in CHAPTER_FILES (2026-05-06)
     # Act III — Cascade, ascent, and the cumulative reveal (Days 43-56)
     # ch13-schema-that-should-not-migrate.md — ACTIVATED in CHAPTER_FILES (2026-05-06)
