@@ -1,0 +1,40 @@
+version: 2
+updates:
+  # Web reader app (Express + React + Vite)
+  - package-ecosystem: npm
+    directory: /web
+    assignees:
+      - "ctwoodwa"
+    schedule:
+      interval: weekly
+      day: monday
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: "chore(deps)"
+      include: "scope"
+    ignore:
+      # marked major bumps have substantial API churn; align with flight-deck policy
+      - dependency-name: "marked"
+        update-types: ["version-update:semver-major"]
+    groups:
+      react:
+        patterns:
+          - "react"
+          - "react-dom"
+          - "@types/react*"
+      vite:
+        patterns:
+          - "vite"
+          - "@vitejs/*"
+
+  # GitHub Actions
+  - package-ecosystem: github-actions
+    directory: /
+    assignees:
+      - "ctwoodwa"
+    schedule:
+      interval: weekly
+      day: monday
+    commit-message:
+      prefix: "chore(deps)"
+      include: "scope"
