@@ -420,7 +420,7 @@ I kept writing.
 
 ---
 
-The card printer was on the desk beside the per-laptop. I had not used it since Mission Day 39. I had a photograph from the bakery in Ushuaia from the transit north — the *medialunas* had been what they claimed to be, and I had noted this in the margin of the Perkins book and photographed the pastry case before I ate. I printed the photograph on the card stock. I addressed it in my hand to Diana Yusupova, Voronezh, the Lesnoy district, the building number her father had sent me when they moved in August. I wrote on the reverse: *D — From Punta Arenas. The boat is safe. The crew is safe. I am at the desk. Tell me what is new at the building. — A.*
+The card printer was on the desk beside the per-laptop. I had not used it since Mission Day 39. I had a photograph from the bakery in Ushuaia from the transit north — the *medialunas* had been properly laminated — the butter visible in the layers, the glaze thin, the crumb open — and I had noted this in the margin of the Perkins book and photographed the pastry case before I ate. I printed the photograph on the card stock. I addressed it in my hand to Diana Yusupova, Voronezh, the Lesnoy district, the building number her father had sent me when they moved in August. I wrote on the reverse: *D — From Punta Arenas. The boat is safe. The crew is safe. I am at the desk. Tell me what is new at the building. — A.*
 
 I left a space for a sticker, which Diana would apply.
 

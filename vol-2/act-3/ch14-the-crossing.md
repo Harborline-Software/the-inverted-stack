@@ -192,7 +192,7 @@ The look held for a duration I did not measure. None of the looks had been the l
 
 The look said what the discipline had prevented him from saying since the recruitment interview.
 
-The look said one other thing the bridge could not see and that I could not yet read - that I would read later in the staff history, retrospectively, in the way the staff history reads forward.
+The look said one other thing the bridge could not see and that I could not yet read - that I would read later in the staff history, retrospectively.
 
 I received the look at the layer the bridge could see. I did not change my face.
 
