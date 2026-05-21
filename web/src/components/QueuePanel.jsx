@@ -277,7 +277,7 @@ export default function QueuePanel({ chapters, queue, onClose }) {
               <>
                 <div className="queue-form-row">
                   <label>Base URL</label>
-                  <input type="text" placeholder="http://host:8883/api/v1"
+                  <input type="text" placeholder="http://host:8881/api/v1"
                     value={baseUrl} onChange={e => setBaseUrl(e.target.value)} />
                 </div>
                 <div className="queue-form-row">

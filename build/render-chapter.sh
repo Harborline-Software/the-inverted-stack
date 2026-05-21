@@ -9,7 +9,7 @@
 #   ./build/render-chapter.sh ch05-day-twenty-realization --preset ciufi-galeazzi
 #
 # What it does:
-#   - Resolves the Chatterbox TTS server (Tailscale FQDN, port 8883).
+#   - Resolves the Chatterbox TTS server (Tailscale FQDN, port 8881).
 #   - Disables the per-chapter preset map so --preset wins (the map otherwise
 #     overrides ciufi-galeazzi to female-solo for some chapters).
 #   - Runs under `caffeinate -disu` to block display, idle, and system sleep
@@ -30,7 +30,7 @@
 set -euo pipefail
 
 # ---- defaults (the flags-of-record from .wolf/cerebrum.md) ----
-BASE_URL="http://desktop-umt08rn:8883/api/v1"
+BASE_URL="http://desktop-umt08rn:8881/api/v1"
 PRESET="ciufi-galeazzi"
 ENGINE="chatterbox"
 
