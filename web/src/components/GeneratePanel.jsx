@@ -144,7 +144,7 @@ export default function GeneratePanel({ chapter, onGenerated }) {
             {isRunning && <span className="spinner" />}
             {isRunning ? 'Generating…' : isDone ? '✓ Done' : '✗ Failed'}
           </div>
-          {isRunning && <p className="job-hint">Generation runs in background — safe to navigate away.</p>}
+          {isRunning && <p className="job-hint">Generation runs in background - safe to navigate away.</p>}
           {isDone    && <p className="job-hint">Audio updated. Reload the player to hear it.</p>}
           {isFailed  && <p className="job-hint">Check the log below for errors.</p>}
           {log && <pre className="job-log">{log}</pre>}

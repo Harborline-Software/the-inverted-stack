@@ -1,12 +1,12 @@
-# Audiobook Generation — Docker Setup
+# Audiobook Generation - Docker Setup
 
 This repo's audiobook pipeline (`build/audiobook.py`) calls a local
 OpenAI-compatible TTS server. Two engines are documented here:
 
 | Engine | Quality | Speed on the workstation (Intel i9, 32 GB, no GPU) | Voice cloning | When to use |
 |---|---|---|---|---|
-| **Kokoro-82M** (FastAPI) | Good — clearly TTS but listenable | ~0.6× realtime (~5 sec audio per 3 sec compute) | No (67 preset voices, includes blends) | Daily iteration, full-book first drafts, sample renders |
-| **Higgs Audio v2** (faster-higgs-audio fork) | High — close to ElevenLabs in long-form coherence | ~0.05–0.15× realtime (~60–180 hr to render the full book) | Yes (3-second sample) | Once-per-chapter quality A/B against Kokoro; pre-final-master comparison; voice-cloned stretches |
+| **Kokoro-82M** (FastAPI) | Good - clearly TTS but listenable | ~0.6× realtime (~5 sec audio per 3 sec compute) | No (67 preset voices, includes blends) | Daily iteration, full-book first drafts, sample renders |
+| **Higgs Audio v2** (faster-higgs-audio fork) | High - close to ElevenLabs in long-form coherence | ~0.05–0.15× realtime (~60–180 hr to render the full book) | Yes (3-second sample) | Once-per-chapter quality A/B against Kokoro; pre-final-master comparison; voice-cloned stretches |
 
 Both speak `POST /v1/audio/speech` (OpenAI shape), so `audiobook.py --base-url`
 points at one or the other and the rest of the pipeline (chunking,
@@ -14,7 +14,7 @@ lexicon, silence injection, alignment, mastering) is identical.
 
 ---
 
-## 1. Kokoro — daily driver (already set up)
+## 1. Kokoro - daily driver (already set up)
 
 The compose file at `build/docker-compose.audio.yml` defines a `kokoro`
 service. Bring it up:
@@ -71,7 +71,7 @@ make audiobook-sample ch=ch15 paragraphs=3 preset=fenrir
 
 **Hardware:** RTX 4070 Ti (12 GB VRAM) on a Windows gaming machine on
 the same LAN as the Mac. With this card, **target Higgs Audio v2.5**
-(the 1B model that supersedes v2 — faster, smaller, more accurate, fits
+(the 1B model that supersedes v2 - faster, smaller, more accurate, fits
 comfortably in fp16 with VRAM headroom). Expect **~2–3× realtime**
 inference: ~3–4 hours of GPU compute for a 9-hour audiobook.
 
@@ -80,12 +80,12 @@ service. `audiobook.py --engine higgs --base-url http://<windows-lan-ip>:8881/v1
 points the pipeline at it; the rest (chunking, lexicon, mastering)
 runs on the Mac as today.
 
-### Two install paths on Windows — pick one
+### Two install paths on Windows - pick one
 
 | Path | Recommended? | Tradeoff |
 |---|---|---|
-| **A — Native Windows Python + CUDA** | **Yes** | Simplest in 2025. PyTorch ships pre-built CUDA wheels, no container indirection, direct LAN networking. Slight host pollution mitigated by venv. |
-| **B — Podman with GPU passthrough** | Only if container isolation matters more than setup time | Podman GPU on Windows works as of Podman 4.7+ but requires installing NVIDIA Container Toolkit *inside* the Podman Machine WSL2 VM and configuring CDI. Multiple known sharp edges. |
+| **A - Native Windows Python + CUDA** | **Yes** | Simplest in 2025. PyTorch ships pre-built CUDA wheels, no container indirection, direct LAN networking. Slight host pollution mitigated by venv. |
+| **B - Podman with GPU passthrough** | Only if container isolation matters more than setup time | Podman GPU on Windows works as of Podman 4.7+ but requires installing NVIDIA Container Toolkit *inside* the Podman Machine WSL2 VM and configuring CDI. Multiple known sharp edges. |
 
 The user already has Podman installed but not GPU-configured. **Path A
 is the lower-friction path.** Path B is documented below for
@@ -93,9 +93,9 @@ completeness.
 
 ---
 
-### Path A — Native Windows + PowerShell (recommended)
+### Path A - Native Windows + PowerShell (recommended)
 
-#### Prerequisites — verify these once before starting
+#### Prerequisites - verify these once before starting
 
 Open PowerShell on the Windows machine and run each command. If any
 fails, fix that step before proceeding.
@@ -105,7 +105,7 @@ fails, fix that step before proceeding.
 nvidia-smi
 # -> should show RTX 4070 Ti and a CUDA driver version (12.x recommended)
 
-# 2. Python 3.10 or 3.11 installed (NOT 3.12+ yet — some ML wheels lag)
+# 2. Python 3.10 or 3.11 installed (NOT 3.12+ yet - some ML wheels lag)
 python --version
 # -> Python 3.10.x or 3.11.x
 
@@ -165,7 +165,7 @@ If this prints `CUDA available: True`, names the RTX 4070 Ti, and writes
 
 #### Run the OpenAI-compatible API server
 
-The exact entry point depends on the upstream repo's current layout —
+The exact entry point depends on the upstream repo's current layout -
 check `examples/openai_server/` or the README's "OpenAI-compatible API"
 section. Typical command:
 
@@ -175,7 +175,7 @@ python -m higgs_audio.openai_server --host 0.0.0.0 --port 8881 --device cuda --d
 ```
 
 If the Boson repo doesn't ship the server module under that name, fall
-back to the **`sorbetstudio/faster-higgs-audio`** fork — same install
+back to the **`sorbetstudio/faster-higgs-audio`** fork - same install
 pattern but ships the FastAPI server explicitly. Replace step 1 with:
 
 ```powershell
@@ -198,7 +198,7 @@ New-NetFirewallRule `
 ```
 
 The `RemoteAddress LocalSubnet` scope means only machines on your home
-LAN can reach the port — not the public internet. Safer than wide-open.
+LAN can reach the port - not the public internet. Safer than wide-open.
 
 #### Find the Windows LAN IP
 
@@ -209,7 +209,7 @@ ipconfig | Select-String "IPv4"
 
 Pin a DHCP reservation on your router for this IP, or note that DHCP
 lease renewal can shift it (in which case you re-look it up). For
-zero-friction, install Tailscale on both machines — see "Tailscale"
+zero-friction, install Tailscale on both machines - see "Tailscale"
 below.
 
 #### Run as a Windows service (optional but recommended)
@@ -231,7 +231,7 @@ Now `Get-Service HiggsAudio` shows it running, and it survives reboots.
 
 ---
 
-### Path B — Podman with GPU passthrough on Windows
+### Path B - Podman with GPU passthrough on Windows
 
 Path A is recommended. Path B works but expect 1-2 hours of debugging.
 
@@ -250,7 +250,7 @@ sudo nvidia-ctk runtime configure --runtime=podman
 sudo nvidia-ctk cdi generate --output=/etc/cdi/nvidia.yaml
 exit
 
-# 3. Back in PowerShell — verify GPU passthrough works
+# 3. Back in PowerShell - verify GPU passthrough works
 podman run --rm --device nvidia.com/gpu=all nvidia/cuda:12.4.0-base-ubuntu22.04 nvidia-smi
 # -> should list the RTX 4070 Ti
 ```
@@ -276,7 +276,7 @@ NVIDIA WSL device), drop to Path A.
 
 ---
 
-### Networking — Mac dials the Windows box
+### Networking - Mac dials the Windows box
 
 Two options. **Same LAN** is simplest if both machines stay home:
 
@@ -289,7 +289,7 @@ export HIGGS_URL=http://192.168.1.50:8881/v1
 make audiobook-sample-higgs ch=ch01 paragraphs=2
 ```
 
-#### Tailscale — recommended for resilience
+#### Tailscale - recommended for resilience
 
 Free for personal use, ~10 min setup, gives both machines stable
 WireGuard-based IPs (`100.x.y.z`) that work regardless of network. Big
@@ -305,7 +305,7 @@ export HIGGS_URL=http://gaming-rig.tail-scale.ts.net:8881/v1
 # Or: http://100.x.y.z:8881/v1
 ```
 
-The Windows Firewall rule above already allows `LocalSubnet` — you may
+The Windows Firewall rule above already allows `LocalSubnet` - you may
 also need to allow the Tailscale subnet (`100.64.0.0/10`) explicitly:
 
 ```powershell
@@ -344,10 +344,10 @@ python3 build/audiobook.py --engine higgs --only ch01 --base-url $HIGGS_URL --fo
 On the first sample render against `--engine higgs` you'll get a clear
 error if `PRESETS_HIGGS` voice IDs are still placeholder `None`. The
 error message tells you to query `/v1/audio/voices`, fill in the IDs,
-and retry. This is intentional — voice catalog is engine-specific and
+and retry. This is intentional - voice catalog is engine-specific and
 must be populated explicitly before unattended renders.
 
-### Setup path C — Replicate (cloud API, no local install)
+### Setup path C - Replicate (cloud API, no local install)
 
 Still useful as a quick A/B if you want to hear v2.5 quality before
 committing to the Windows install. Pricing was $0.005–0.05 per second
@@ -370,7 +370,7 @@ curl -s -X POST https://api.replicate.com/v1/predictions \
 directory mounted at `./audio/voices` → reference by filename in the
 TTS request. The faster-higgs-audio README has the exact field name.
 
-For commercial-licensed pro VA samples (the path discussed earlier — no
+For commercial-licensed pro VA samples (the path discussed earlier - no
 celebrity cloning), download an MIT/CC-licensed clip from Higgs's
 preset voice library or VCTK, clone, render.
 
@@ -384,17 +384,17 @@ What the audiobook pipeline can use, organized by source and license:
 
 67 voices available; the book's `PRESETS` dict uses these blends:
 
-- **female / female-solo** — `af_bella` (+ `af_nicole` blend) — Voss, narrator alt
-- **male / male-solo** — `am_michael` (+ `am_fenrir` blend) — narrator default
-- **sinek** — `am_michael` at 0.88 speed — preface/epilogue/ch10 deliberate cadence
-- **practitioner** — `am_michael` at 0.95 speed — Ferreira (Ch09)
-- **british / british-male** — `bf_emma`, `bm_george` — Okonkwo (Ch07)
-- **fry / fry-blend** — `bm_fable` (+ `bm_george` blend) — Shevchenko (Ch06)
-- **fenrir** — `am_fenrir` solo — Kelsey (Ch08)
+- **female / female-solo** - `af_bella` (+ `af_nicole` blend) - Voss, narrator alt
+- **male / male-solo** - `am_michael` (+ `am_fenrir` blend) - narrator default
+- **sinek** - `am_michael` at 0.88 speed - preface/epilogue/ch10 deliberate cadence
+- **practitioner** - `am_michael` at 0.95 speed - Ferreira (Ch09)
+- **british / british-male** - `bf_emma`, `bm_george` - Okonkwo (Ch07)
+- **fry / fry-blend** - `bm_fable` (+ `bm_george` blend) - Shevchenko (Ch06)
+- **fenrir** - `am_fenrir` solo - Kelsey (Ch08)
 
 License: Kokoro-82M is Apache 2.0, voice samples included with the model
 are documented as commercially usable (verify per voice in the upstream
-repo — `hexgrad/Kokoro-82M`).
+repo - `hexgrad/Kokoro-82M`).
 
 ### Higgs preset voices
 
@@ -404,21 +404,21 @@ per voice before publishing.
 
 ### Commercially-licensed VA voices (for sellable-on-Audible final master)
 
-Not in this Docker stack — see the parallel discussion on cloud APIs:
+Not in this Docker stack - see the parallel discussion on cloud APIs:
 
-- **ElevenLabs Voice Library** — 50+ pro VA voices, explicit commercial AI license
-- **Findaway Voices AI Generation Library** — designed for Audible-grade AI audiobooks
-- **Hire-and-clone** — pay a real VA $200–500 for a 5-minute recording, license it explicitly for AI cloning, then clone via Higgs/F5/XTTS
+- **ElevenLabs Voice Library** - 50+ pro VA voices, explicit commercial AI license
+- **Findaway Voices AI Generation Library** - designed for Audible-grade AI audiobooks
+- **Hire-and-clone** - pay a real VA $200–500 for a 5-minute recording, license it explicitly for AI cloning, then clone via Higgs/F5/XTTS
 
 ### Voices NOT to use
 
 Cloning identifiable real people without explicit consent:
 
-- **Celebrities** (Morgan Freeman, James Earl Jones, etc.) — right of publicity
+- **Celebrities** (Morgan Freeman, James Earl Jones, etc.) - right of publicity
   liability under US state law (Bette Midler v. Ford 1988, Tom Waits v. Frito-Lay
   1992); Tennessee ELVIS Act 2024; pending federal NO FAKES Act
-- **Real VAs without their AI license** — SAG-AFTRA actively monitors and pursues
-- **Public figures, podcasters, journalists** — same right-of-publicity exposure
+- **Real VAs without their AI license** - SAG-AFTRA actively monitors and pursues
+- **Public figures, podcasters, journalists** - same right-of-publicity exposure
 
 ACX/Audible terms of service require warranty that you own the voice
 rights. Submission with an unauthorized cloned voice is grounds for

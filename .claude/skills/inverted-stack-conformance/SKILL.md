@@ -1,13 +1,13 @@
 ---
 name: inverted-stack-conformance
-description: Score any repository claiming alignment with *The Inverted Stack: Local-First Nodes in a SaaS World* against the full 562-concept catalog (foundational + inverted-stack-specific). Use when a repo's contributors say it implements this book's architecture (Zone A/B/C, Flease quorum participation, the specific sync daemon protocol from Appendix A, the Bridge hybrid pattern, KEK/DEK envelope hierarchy, three-tier CRDT resolution model, etc.) and you need a structured per-chapter conformance report. Goes deeper than `local-first-properties` — that skill covers Kleppmann's seven properties using the foundational subset (538 entries); this skill covers the full book including book-specific architectural choices (Sunfish package layout patterns, the WIRE-* protocol message types, the THREAT-* worksheet structure). ICM-aware: writes findings into `icm/01_discovery/output/` if the target repo has Sunfish-style ICM, otherwise `.inverted-stack-conformance/` at repo root. Invoke when the user asks "how much of the book does this repo implement?", "score this repo against The Inverted Stack," "what chapters of the book is this repo missing?", or after cloning a repo that names the book as its reference architecture.
+description: Score any repository claiming alignment with *The Inverted Stack: Local-First Nodes in a SaaS World* against the full 562-concept catalog (foundational + inverted-stack-specific). Use when a repo's contributors say it implements this book's architecture (Zone A/B/C, Flease quorum participation, the specific sync daemon protocol from Appendix A, the Bridge hybrid pattern, KEK/DEK envelope hierarchy, three-tier CRDT resolution model, etc.) and you need a structured per-chapter conformance report. Goes deeper than `local-first-properties` - that skill covers Kleppmann's seven properties using the foundational subset (538 entries); this skill covers the full book including book-specific architectural choices (Sunfish package layout patterns, the WIRE-* protocol message types, the THREAT-* worksheet structure). ICM-aware: writes findings into `icm/01_discovery/output/` if the target repo has Sunfish-style ICM, otherwise `.inverted-stack-conformance/` at repo root. Invoke when the user asks "how much of the book does this repo implement?", "score this repo against The Inverted Stack," "what chapters of the book is this repo missing?", or after cloning a repo that names the book as its reference architecture.
 ---
 
-# Inverted Stack Conformance — Full-Spec Skill
+# Inverted Stack Conformance - Full-Spec Skill
 
 ## Why this skill exists
 
-*The Inverted Stack* makes a specific architectural commitment — not just "be local-first" but a particular shape of local-first software (microkernel + plugins, three-tier CRDT resolution, KEK/DEK envelope keys, signed wire-protocol messages, MDM-attested handshakes, Zone-A/B/C deployment taxonomy, Flease quorum coordination). A repo claiming alignment with the book should be scoreable against THE BOOK — not just against the seven Kleppmann properties.
+*The Inverted Stack* makes a specific architectural commitment - not just "be local-first" but a particular shape of local-first software (microkernel + plugins, three-tier CRDT resolution, KEK/DEK envelope keys, signed wire-protocol messages, MDM-attested handshakes, Zone-A/B/C deployment taxonomy, Flease quorum coordination). A repo claiming alignment with the book should be scoreable against THE BOOK - not just against the seven Kleppmann properties.
 
 This skill is the deep complement to `local-first-properties`. Same ICM-aware output structure, but covers the full 562-concept catalog (both `foundational` and `inverted-stack-specific` scopes) and groups the report by **chapter epic** rather than by Kleppmann property.
 
@@ -23,7 +23,7 @@ Use it when:
 
 Skip it when:
 
-- The repo doesn't claim Inverted Stack alignment (use `local-first-properties` for the generic 7-property check instead — it works on Loro/Yjs/Automerge repos that take different architectural paths).
+- The repo doesn't claim Inverted Stack alignment (use `local-first-properties` for the generic 7-property check instead - it works on Loro/Yjs/Automerge repos that take different architectural paths).
 - The user just wants a quick "is this local-first?" sniff test (use `local-first-properties` quick mode).
 
 ## The catalog
@@ -33,10 +33,10 @@ The bundled `references/concept-index.yaml` is a snapshot of the consolidated in
 | Part | Chapters | Concept count |
 |---|---|---|
 | Front matter | preface | 8 |
-| Part I — Thesis | ch01-ch04 | 61 |
-| Part II — Council | ch05-ch10 | 96 |
-| Part III — Reference architecture | ch11-ch16 | 188 |
-| Part IV — Playbooks | ch17-ch20 | 95 |
+| Part I - Thesis | ch01-ch04 | 61 |
+| Part II - Council | ch05-ch10 | 96 |
+| Part III - Reference architecture | ch11-ch16 | 188 |
+| Part IV - Playbooks | ch17-ch20 | 95 |
 | Epilogue + Appendices | epilogue, appendix-{a-f} | 114 |
 | **Total** | **28** | **562** |
 
@@ -55,7 +55,7 @@ Before scanning, ask:
 > - **Standard** (~60 min): score every concept once, no deep behavioral verification
 > - **Deep** (~2 hours): score every concept including behavioral checks where applicable
 >
-> Also, do you want all 28 chapters scored, or filter to specific parts? (Common filter: just Part III — the spec — for an architecture audit.)"
+> Also, do you want all 28 chapters scored, or filter to specific parts? (Common filter: just Part III - the spec - for an architecture audit.)"
 
 ### 2. Detect output destination
 
@@ -63,14 +63,14 @@ Before scanning, ask:
 test -d <repo>/icm && test -f <repo>/icm/CONTEXT.md && echo "ICM-style"
 ```
 
-- **If ICM-style**: write to `<repo>/icm/01_discovery/output/inverted-stack-conformance-<YYYY-MM-DD>.md`. This integrates with Sunfish-style ICM workflow — the report is a Stage 01 Discovery output, ready to advance into Stage 02 Architecture (remediation design) and onward through the pipeline.
+- **If ICM-style**: write to `<repo>/icm/01_discovery/output/inverted-stack-conformance-<YYYY-MM-DD>.md`. This integrates with Sunfish-style ICM workflow - the report is a Stage 01 Discovery output, ready to advance into Stage 02 Architecture (remediation design) and onward through the pipeline.
 - **Otherwise**: create `<repo>/.inverted-stack-conformance/` and write `report-<YYYY-MM-DD>.md` there.
 
 State the destination before writing.
 
 ### 3. Load the catalog efficiently
 
-The full `concept-index.yaml` is large (~617KB). Don't load it all at once — load the metadata header first, then load chapter-by-chapter as you score:
+The full `concept-index.yaml` is large (~617KB). Don't load it all at once - load the metadata header first, then load chapter-by-chapter as you score:
 
 ```python
 import yaml
@@ -91,7 +91,7 @@ for c in concepts:
 
 Process one chapter at a time. After each chapter, write its findings to the report incrementally rather than holding all 562 findings in memory.
 
-For really tight context budgets, use `references/chapter-overview.md` to navigate — it lists each chapter's concept count and key themes without the full per-concept data.
+For really tight context budgets, use `references/chapter-overview.md` to navigate - it lists each chapter's concept count and key themes without the full per-concept data.
 
 ### 4. Score per chapter
 
@@ -108,7 +108,7 @@ For each chapter (or each chapter in the user's filter):
 | `complete` | Evidence found AND it implements the requirement(s) substantively |
 | `partial` | Evidence found but incomplete |
 | `missing` | No evidence found |
-| `not_applicable` | Concept does not apply (justify in notes — e.g., "this repo is Zone A only, Bridge concepts in MIG-* are out of scope") |
+| `not_applicable` | Concept does not apply (justify in notes - e.g., "this repo is Zone A only, Bridge concepts in MIG-* are out of scope") |
 
 **Evidence sources by concept type:**
 
@@ -152,15 +152,15 @@ Use this exact structure:
 | Part | Concepts | Score |
 |---|---|---|
 | Front matter | 8 | X/8 (X%) |
-| Part I — Thesis | 61 | X/61 (X%) |
-| Part II — Council | 96 | X/96 (X%) |
-| Part III — Reference architecture | 188 | X/188 (X%) |
-| Part IV — Playbooks | 95 | X/95 (X%) |
+| Part I - Thesis | 61 | X/61 (X%) |
+| Part II - Council | 96 | X/96 (X%) |
+| Part III - Reference architecture | 188 | X/188 (X%) |
+| Part IV - Playbooks | 95 | X/95 (X%) |
 | Epilogue + Appendices | 114 | X/114 (X%) |
 
 ### Coverage by Kleppmann property
 
-(Cross-cut from chapter view — for parity with local-first-properties scorecards)
+(Cross-cut from chapter view - for parity with local-first-properties scorecards)
 
 | Property | Score |
 |---|---|
@@ -172,22 +172,22 @@ Use this exact structure:
 | P6 Security | X/199 (X%) |
 | P7 Ownership | X/216 (X%) |
 
-**Headline:** [one sentence — e.g., "Strong on Part III spec (Ch11-14 at 80%+); weak on Part IV playbooks (Ch17-19 at <40%) reflecting that this is a library, not a packaged product."]
+**Headline:** [one sentence - e.g., "Strong on Part III spec (Ch11-14 at 80%+); weak on Part IV playbooks (Ch17-19 at <40%) reflecting that this is a library, not a packaged product."]
 
 ## Top remediation priorities (ranked by leverage × gap size)
 
 Ranking heuristic: prioritize concepts that are (1) referenced by `must-implement` of multiple other concepts, (2) currently `missing`, (3) in chapters where overall score is below 50%.
 
-1. `<chapter:id>` — <name>: <one-line remediation>
+1. `<chapter:id>` - <name>: <one-line remediation>
 2. ...
 
 ## Per-chapter findings
 
-### Epic: Preface (preface) — X/8 complete
+### Epic: Preface (preface) - X/8 complete
 
 [Same per-concept structure as local-first-properties report, with status icon, ref, name, evidence, suggested remediation.]
 
-### Epic: When SaaS Fights Reality (ch01-when-saas-fights-reality) — X/11 complete
+### Epic: When SaaS Fights Reality (ch01-when-saas-fights-reality) - X/11 complete
 
 ...
 
@@ -205,11 +205,11 @@ This catalog has known synthesis relationships. When scoring, note:
 
 ## Not-applicable concepts (with justification)
 
-- `<chapter:id>` — <name>: <why not applicable to this repo>
+- `<chapter:id>` - <name>: <why not applicable to this repo>
 
 ## Re-run guidance
 
-To re-score after closing gaps: invoke `inverted-stack-conformance` again on the same repo. Idempotent — does not modify the target repo.
+To re-score after closing gaps: invoke `inverted-stack-conformance` again on the same repo. Idempotent - does not modify the target repo.
 
 To compare deltas: diff this report against the previous one. The chapter-by-chapter structure makes per-epic deltas easy to read.
 
@@ -244,23 +244,23 @@ The summary tables show only the in-scope counts. Per-chapter findings only cove
 If the user wants only `foundational` or only `inverted-stack-specific`:
 
 - `foundational` filter → effectively the same as running `local-first-properties` but with chapter grouping. Recommend the user invoke `local-first-properties` instead unless they specifically want chapter-grouped output.
-- `inverted-stack-specific` filter → useful for "what book-specific architecture is in this repo?" — focuses on the architectural choices that distinguish Inverted Stack from generic local-first.
+- `inverted-stack-specific` filter → useful for "what book-specific architecture is in this repo?" - focuses on the architectural choices that distinguish Inverted Stack from generic local-first.
 
 ### Sunfish-specific scoring (if target repo is Sunfish itself)
 
-If the target repo is `c:/Projects/Sunfish` (or appears to be — check for `Sunfish.*` package names), there's an additional resource: `c:/Projects/Sunfish/icm/_config/conformance-map.md` (built in a separate session) maps each book concept to the Sunfish package(s) where it should live. If that file exists, USE IT — it tells you exactly where to look for evidence of each concept, vastly speeding up scoring.
+If the target repo is `c:/Projects/Sunfish` (or appears to be - check for `Sunfish.*` package names), there's an additional resource: `c:/Projects/Sunfish/icm/_config/conformance-map.md` (built in a separate session) maps each book concept to the Sunfish package(s) where it should live. If that file exists, USE IT - it tells you exactly where to look for evidence of each concept, vastly speeding up scoring.
 
 If the file doesn't exist yet, fall back to general grep/glob across the Sunfish package layout: `packages/foundation/`, `packages/kernel/`, `packages/sync/`, `apps/anchor/`, `apps/bridge/`, `tooling/`.
 
 ## Calibration notes
 
-**Inverted-Stack-specific concepts have stricter evidence requirements.** A concept like `ch11:NODE-22 — Daemon as separate process with length-prefixed CBOR over UDS` requires the SPECIFIC implementation choice (CBOR + UDS), not just any IPC mechanism. If the repo uses gRPC over TCP, that's `not_applicable` (different architectural choice) — note this clearly and don't penalize.
+**Inverted-Stack-specific concepts have stricter evidence requirements.** A concept like `ch11:NODE-22 - Daemon as separate process with length-prefixed CBOR over UDS` requires the SPECIFIC implementation choice (CBOR + UDS), not just any IPC mechanism. If the repo uses gRPC over TCP, that's `not_applicable` (different architectural choice) - note this clearly and don't penalize.
 
-**Foundational concepts can be implemented many ways.** A concept like `ch12:CRDT-02 — Algebraic CRDT properties hold` is satisfied by Loro, Yjs, Automerge, or any custom impl that demonstrates commutativity/associativity/idempotency under property tests.
+**Foundational concepts can be implemented many ways.** A concept like `ch12:CRDT-02 - Algebraic CRDT properties hold` is satisfied by Loro, Yjs, Automerge, or any custom impl that demonstrates commutativity/associativity/idempotency under property tests.
 
-**Pre-1.0 repos won't have Part IV coverage.** Part IV is the playbooks for shipping to enterprise. A pre-1.0 reference implementation (like Sunfish today) will legitimately have low Part IV scores — the playbooks document what they would do at GA, not what they've already shipped.
+**Pre-1.0 repos won't have Part IV coverage.** Part IV is the playbooks for shipping to enterprise. A pre-1.0 reference implementation (like Sunfish today) will legitimately have low Part IV scores - the playbooks document what they would do at GA, not what they've already shipped.
 
-**Council chapters (Part II) are constraints, not contracts.** A `partial` or `missing` LENS-* finding usually means "the constraint isn't surfaced in the design" rather than "the code doesn't satisfy it." Often, the architecture satisfies the constraint by accident — verify by reading the code, then suggest the constraint be made explicit in an ADR.
+**Council chapters (Part II) are constraints, not contracts.** A `partial` or `missing` LENS-* finding usually means "the constraint isn't surfaced in the design" rather than "the code doesn't satisfy it." Often, the architecture satisfies the constraint by accident - verify by reading the code, then suggest the constraint be made explicit in an ADR.
 
 ## Refreshing the catalog
 
@@ -279,7 +279,7 @@ Pin the snapshot to a known book commit if reproducibility across teams matters.
 - Does not run the target repo or its tests
 - Does not score against frameworks other than this book (use other tools for general code review)
 - Does not attempt to fix gaps automatically
-- Does not produce binary "compliant / not compliant" — coverage is a percentage, and the rubric (complete/partial/missing/n_a) preserves nuance
+- Does not produce binary "compliant / not compliant" - coverage is a percentage, and the rubric (complete/partial/missing/n_a) preserves nuance
 
 ## Acknowledgments
 

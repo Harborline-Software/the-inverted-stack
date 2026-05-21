@@ -49,7 +49,7 @@ concepts:
     triggers and time budgets, and every scenario in...'
 - id: TEST-02
   name: Property-based CRDT tests for convergence, idempotency, commutativity, and monotonicity
-  source: appendix-d §"Level 1 — Property-Based Tests"
+  source: appendix-d §"Level 1 - Property-Based Tests"
   source-paper: v13 §15
   definition: A Level 1 test class in which a property-based framework generates thousands of random operation
     sequences to verify that CRDT merge satisfies convergence, idempotency, commutativity (or join-semilattice
@@ -83,7 +83,7 @@ concepts:
     property, with shrinking enabled and named property ass...'
 - id: TEST-03
   name: Real-daemon integration tests via Testcontainers
-  source: appendix-d §"Level 2 — Integration Tests (Real Dependencies)"
+  source: appendix-d §"Level 2 - Integration Tests (Real Dependencies)"
   source-paper: v13 §15
   definition: A Level 2 test class that exercises the full sync handshake (HELLO, CAPABILITY_NEG, ACK,
     DELTA_STREAM, GOSSIP_PING) against a real local-node process spun up via Testcontainers, asserting
@@ -119,7 +119,7 @@ concepts:
     the handshake, and assertions reference CRDT state hashe...'
 - id: TEST-04
   name: Fault injection for partition, packet loss, and crash
-  source: appendix-d §"Level 3 — Fault Injection in CI"
+  source: appendix-d §"Level 3 - Fault Injection in CI"
   source-paper: v13 §15
   definition: A Level 3 test class that uses a network proxy such as toxiproxy with Testcontainers to
     inject node crashes mid-handshake, relay unreachability during DELTA_STREAM, and consecutive GOSSIP_PING
@@ -158,7 +158,7 @@ concepts:
     post-recovery CRDT hash equals the no-fault baseli...'
 - id: TEST-05
   name: Deterministic simulation harness with virtual clock and message scheduler
-  source: appendix-d §"Level 4 — Deterministic Simulation"
+  source: appendix-d §"Level 4 - Deterministic Simulation"
   source-paper: v13 §15
   definition: A Level 4 in-process test harness that boots N node instances under a controllable virtual
     clock and a deterministic message scheduler, enabling exhaustive coverage of mixed-version sync, offline
@@ -201,7 +201,7 @@ concepts:
     timeouts against the virtual clock and pass determinist...'
 - id: TEST-06
   name: Chaos testing in staging under representative load
-  source: appendix-d §"Level 5 — Chaos Testing in Staging"
+  source: appendix-d §"Level 5 - Chaos Testing in Staging"
   source-paper: v13 §15
   definition: A Level 5 test class that runs Pumba, Gremlin, or equivalent chaos tooling against a multi-node
     staging environment loaded at median-production traffic, with the explicit goal of discovering unanticipated
@@ -423,7 +423,7 @@ concepts:
   - Verify the audit log holds every operation in strict monotonic sequence with a passing tamper-evidence
     integrity check
   verification: Per-scenario evidence column captures packet captures, audit log exports with verified
-    Merkle root, relay log entries with issuer fingerprint, and ciphertext samples — archived per release.
+    Merkle root, relay log entries with issuer fingerprint, and ciphertext samples - archived per release.
   kleppmann-properties:
   - P5
   - P6

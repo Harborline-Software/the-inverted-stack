@@ -1,4 +1,4 @@
-# Audiobook generation stack — local TTS engines.
+# Audiobook generation stack - local TTS engines.
 #
 # Usage:
 #   docker compose -f build/docker-compose.audio.yml up -d kokoro      # always-on draft engine
@@ -14,12 +14,12 @@
 # higgs/eleven; runs at ~0.6x realtime on a 2.3 GHz Intel i9.
 #
 # The higgs service is the higher-quality path with voice cloning. Prebuilt
-# images do not exist as of this writing — see build/AUDIO-DOCKER.md for
+# images do not exist as of this writing - see build/AUDIO-DOCKER.md for
 # how to build the sorbetstudio/faster-higgs-audio fork locally. The block
 # below is a placeholder you uncomment after building.
 #
 # DOCKER MEMORY: bump Docker Desktop's memory limit to 12 GB minimum BEFORE
-# starting higgs — it OOMs at the 4 GB Docker default. Settings -> Resources
+# starting higgs - it OOMs at the 4 GB Docker default. Settings -> Resources
 # -> Memory in Docker Desktop on macOS.
 
 services:
@@ -42,7 +42,7 @@ services:
       retries: 3
       start_period: 60s
 
-  # higgs (commented until a local image is built — see AUDIO-DOCKER.md)
+  # higgs (commented until a local image is built - see AUDIO-DOCKER.md)
   #
   # higgs:
   #   image: faster-higgs-audio:local

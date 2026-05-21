@@ -62,3 +62,9 @@ corpora/
 
 # Vale config - generated, can be regenerated via prose_telemetry_vale_export.py
 .vale/styles/
+
+# Git worktrees — must live under .worktrees/ per fleet convention
+.worktrees/
+
+# OpenWolf additional runtime state
+.wolf/cron-state.json

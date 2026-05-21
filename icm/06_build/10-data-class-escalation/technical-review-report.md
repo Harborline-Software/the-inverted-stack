@@ -1,4 +1,4 @@
-# Technical Review — Extension #10 (Data-Class Escalation)
+# Technical Review - Extension #10 (Data-Class Escalation)
 
 **Reviewer:** technical-reviewer subagent
 **Date:** 2026-04-28
@@ -16,16 +16,16 @@ Reviewed only the two new sections and the new refs [37]-[41]. Did not touch:
 
 ---
 
-## 2. CLAIM Marker at Ch15:728 — RESOLVED
+## 2. CLAIM Marker at Ch15:728 - RESOLVED
 
 ### Marker text (before)
-> CLAIM: re-classification re-encryption under forward-secrecy ratchet — confirm envelope-only re-keying is sufficient for all class transitions; same question for §Chain-of-Custody chain-of-custody receipts under in-flight escalation.
+> CLAIM: re-classification re-encryption under forward-secrecy ratchet - confirm envelope-only re-keying is sufficient for all class transitions; same question for §Chain-of-Custody chain-of-custody receipts under in-flight escalation.
 
 ### Resolution
 
-**(a) Composition with §Forward Secrecy and Post-Compromise Security.** Read Ch15 §Forward Secrecy (lines 403-474). The per-message ratchet specified in sub-patterns 46a-46b is a **transport-layer** construction over **session pairs**: X25519 ephemeral exchange at session establishment, HKDF-SHA256 per-message key derivation, Double Ratchet healing on DH advance. Each sync event between two nodes carries a freshly derived message key. The ratchet is keyed per-session-pair, NOT per-data-class. Re-classification (sub-pattern 10a) is an event on the record's envelope at rest; it re-wraps the existing DEK under a new KEK at the new class. The two layers operate orthogonally — the ratchet does not see KEK envelopes, and KEK rotation does not consume ratchet state. Envelope-only re-keying is sufficient for every class transition; the DEK itself does not change; full content re-encryption is not required. The "boundary conditions under aggressive ratchet rotation" hedge in the original draft was unwarranted — there is no boundary case where the layers interact such that envelope-only re-keying would fail.
+**(a) Composition with §Forward Secrecy and Post-Compromise Security.** Read Ch15 §Forward Secrecy (lines 403-474). The per-message ratchet specified in sub-patterns 46a-46b is a **transport-layer** construction over **session pairs**: X25519 ephemeral exchange at session establishment, HKDF-SHA256 per-message key derivation, Double Ratchet healing on DH advance. Each sync event between two nodes carries a freshly derived message key. The ratchet is keyed per-session-pair, NOT per-data-class. Re-classification (sub-pattern 10a) is an event on the record's envelope at rest; it re-wraps the existing DEK under a new KEK at the new class. The two layers operate orthogonally - the ratchet does not see KEK envelopes, and KEK rotation does not consume ratchet state. Envelope-only re-keying is sufficient for every class transition; the DEK itself does not change; full content re-encryption is not required. The "boundary conditions under aggressive ratchet rotation" hedge in the original draft was unwarranted - there is no boundary case where the layers interact such that envelope-only re-keying would fail.
 
-**(b) Composition with §Chain-of-Custody for Multi-Party Transfers.** Read Ch15 §Chain-of-Custody (lines 583-672), specifically sub-pattern 9a (line 603-613). The transfer receipt binds a specific `(data-object-id, operation-vector, transferor-signature, transferor-timestamp, recipient-signature, recipient-timestamp, transfer-channel, custody-scope)` tuple. The receipt's claim is point-in-time: "this party asserted this state, at this time, under this authority." Subsequent escalation produces a NEW operation on the record — it does not retroactively modify any field of the prior receipt. The receipt's class field (if present in the custody scope) names the class at time of transfer and remains accurate as a historical fact. Escalation is a successor event in the audit log substrate (`Sunfish.Kernel.Audit`); receipts continue to validate against their original signatures and version vector. No deeper interaction exists.
+**(b) Composition with §Chain-of-Custody for Multi-Party Transfers.** Read Ch15 §Chain-of-Custody (lines 583-672), specifically sub-pattern 9a (line 603-613). The transfer receipt binds a specific `(data-object-id, operation-vector, transferor-signature, transferor-timestamp, recipient-signature, recipient-timestamp, transfer-channel, custody-scope)` tuple. The receipt's claim is point-in-time: "this party asserted this state, at this time, under this authority." Subsequent escalation produces a NEW operation on the record - it does not retroactively modify any field of the prior receipt. The receipt's class field (if present in the custody scope) names the class at time of transfer and remains accurate as a historical fact. Escalation is a successor event in the audit log substrate (`Sunfish.Kernel.Audit`); receipts continue to validate against their original signatures and version vector. No deeper interaction exists.
 
 ### Edit applied
 
@@ -49,11 +49,11 @@ Deferred: deep-dive verification of full ISO/IEC 27001:2022 Annex A control text
 
 ---
 
-## 4. Max-Register Class-Label Invariant — Source Verification Deferred
+## 4. Max-Register Class-Label Invariant - Source Verification Deferred
 
-`source/` directory is not accessible from this environment (consistent with prior extension pattern — gitignored, lives only on Windows authoring machine). Cannot grep v13/v5 for "max-register" / "class label" / "data-class CRDT" terminology.
+`source/` directory is not accessible from this environment (consistent with prior extension pattern - gitignored, lives only on Windows authoring machine). Cannot grep v13/v5 for "max-register" / "class label" / "data-class CRDT" terminology.
 
-**Architectural claim** (Ch15 §10a): the max-register CRDT is the invariant governing class-label convergence; max is associative, commutative, idempotent — strict semilattice; rejects downward operations.
+**Architectural claim** (Ch15 §10a): the max-register CRDT is the invariant governing class-label convergence; max is associative, commutative, idempotent - strict semilattice; rejects downward operations.
 
 **Verdict:** PASS-on-architectural-soundness. Max-register / monotonic semilattice constructions are textbook CRDT primitives (Shapiro et al. 2011 framing); the prose accurately describes their convergence properties. Whether v13 §5 entry #10 names this specific invariant is deferred to a future pass when source papers are accessible.
 
@@ -129,7 +129,7 @@ These are deferred consistently with #46 and #48 precedent.
 Per scope, prose-quality is the prose-reviewer's domain. Spot-checks performed only for technical-accuracy adjacent issues:
 
 - No academic scaffolding ("this paper argues", "as we have seen") in either section.
-- No re-introducing the architecture — both sections assume Part I read.
+- No re-introducing the architecture - both sections assume Part I read.
 - Ch15 voice: specification register (what it is, how it works fully). PASS.
 - Ch20 voice: tutorial register, references Ch15 without rewriting it (line 358: "This section does not re-state it"). PASS.
 - One existing CLAIM marker remains in Ch20 line 352 (voice-check, not technical) and one in Ch15 line 461 (forward-secrecy section, NOT in scope of #10, NOT my marker to resolve). Both predate this review and are out of scope.
@@ -139,12 +139,12 @@ Per scope, prose-quality is the prose-reviewer's domain. Spot-checks performed o
 ## 9. Items Resolved / Items Deferred
 
 ### Resolved
-- CLAIM marker at Ch15:728 — RESOLVED. Body prose updated; marker deleted.
-- Citation spot-check refs [37]-[41] — PASS, no edits.
-- Sunfish package canon — PASS, no edits.
-- Cross-reference resolution — PASS, no edits.
-- Composition with #46 forward secrecy — clean (envelope-only re-keying sufficient).
-- Composition with #9 chain-of-custody — clean (receipt is point-in-time; escalation is successor event).
+- CLAIM marker at Ch15:728 - RESOLVED. Body prose updated; marker deleted.
+- Citation spot-check refs [37]-[41] - PASS, no edits.
+- Sunfish package canon - PASS, no edits.
+- Cross-reference resolution - PASS, no edits.
+- Composition with #46 forward secrecy - clean (envelope-only re-keying sufficient).
+- Composition with #9 chain-of-custody - clean (receipt is point-in-time; escalation is successor event).
 
 ### Deferred (consistent with #46/#48 precedent)
 - v13/v5 source-paper grep for "max-register" / "class label" terminology (source dir not in this environment).
@@ -152,8 +152,8 @@ Per scope, prose-quality is the prose-reviewer's domain. Spot-checks performed o
 - Whether v13 §5 entry #10 enumerates the operation tuple fields by name.
 
 ### Out of scope (explicitly not touched)
-- Ch15 line 461 CLAIM (forward-secrecy OTR/PCS attribution precision) — predates #10; flagged for next-pass copy-edit per its own marker text.
-- Ch20 line 352 voice-check marker — author-only (Stage 6 voice-check belongs to human author).
+- Ch15 line 461 CLAIM (forward-secrecy OTR/PCS attribution precision) - predates #10; flagged for next-pass copy-edit per its own marker text.
+- Ch20 line 352 voice-check marker - author-only (Stage 6 voice-check belongs to human author).
 
 ---
 

@@ -16,7 +16,7 @@ version: 1
 families:
   register:
     forms: [register, registers, registered, registering, registry, registries]
-    note: Anna's signature procedural marker (CO ear-flag 2026-05-09; verified at ~10/1000 across Vol 2 — heaviest fatigue candidate in the corpus)
+    note: Anna's signature procedural marker (CO ear-flag 2026-05-09; verified at ~10/1000 across Vol 2 - heaviest fatigue candidate in the corpus)
 
   standing:
     forms: [standing, stood]
@@ -45,7 +45,7 @@ families:
 
   discipline:
     forms: [discipline, disciplined, disciplines, disciplining, disciplinary]
-    note: Thematic word; check density vs narrative-essential threshold. Ch07 override — organizing concept (Joel-teaching pilot, nuclear-Navy inheritance); density 9.47/1k thematic, do not flag in ch07 rollups.
+    note: Thematic word; check density vs narrative-essential threshold. Ch07 override - organizing concept (Joel-teaching pilot, nuclear-Navy inheritance); density 9.47/1k thematic, do not flag in ch07 rollups.
 
   procedure:
     forms: [procedure, procedures, procedural, procedurally]
@@ -53,11 +53,11 @@ families:
 
   assess:
     forms: [assess, assesses, assessed, assessing, assessment, assessments, reassess, reassesses, reassessed, reassessing]
-    note: CO surfaced 2026-05-09 as candidate; data shows only 5 hits across Vol 2 — included for tracking but not a current fatigue source
+    note: CO surfaced 2026-05-09 as candidate; data shows only 5 hits across Vol 2 - included for tracking but not a current fatigue source
 
   against:
     forms: [against]
-    note: Preposition tic — "against the standing register" / "against the partition" — high baseline density worth tracking
+    note: Preposition tic - "against the standing register" / "against the partition" - high baseline density worth tracking
 
   exchange:
     forms: [exchange, exchanges, exchanged, exchanging]

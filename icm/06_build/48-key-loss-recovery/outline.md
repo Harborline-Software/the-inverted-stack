@@ -1,4 +1,4 @@
-# 48 — Key-loss Recovery — Outline
+# 48 - Key-loss Recovery - Outline
 
 **ICM stage:** outline → ready for draft.
 **Target chapters:** Ch15 (security architecture, Part III) + Ch20 (UX, Part IV).
@@ -8,7 +8,7 @@
 
 ---
 
-## §A. New section in Ch15 — "Key-Loss Recovery"
+## §A. New section in Ch15 - "Key-Loss Recovery"
 
 **Insertion point:** between the existing `## Key Compromise Incident Response` section and the existing `## Offline Node Revocation and Reconnection` section. The flow is: scheduled rotation → compromise response → user-driven key loss → offline-revocation handshake. Key-loss recovery sits naturally between attacker-driven and operator-driven scenarios.
 
@@ -18,13 +18,13 @@
 
 ### A.1 Why this matters (≈250 words)
 
-- The P7 ownership property assumes the user retains the keys that decrypt their data. Lose the key, lose the data — that is the architecture's honest boundary, not a defect.
+- The P7 ownership property assumes the user retains the keys that decrypt their data. Lose the key, lose the data - that is the architecture's honest boundary, not a defect.
 - Real-world failure modes: forgotten master password; lost device with no backup; sudden death or incapacity without succession arrangement; loss of the OS keystore through factory reset; loss of a hardware key through theft or destruction.
 - Without a recovery primitive, a single lapse converts the architecture's confidentiality guarantee into permanent data loss.
-- A correct recovery primitive cannot lower the bar to entry — recovery that an attacker can also invoke breaks confidentiality. The design space is the narrow corridor where a legitimate user can recover and an adversary cannot.
-- Cross-reference to #32 (succession arrangements with executor delegation) and #18 (delegated capability) — recovery is the runtime mechanism; succession and delegation are the upstream policies.
+- A correct recovery primitive cannot lower the bar to entry - recovery that an attacker can also invoke breaks confidentiality. The design space is the narrow corridor where a legitimate user can recover and an adversary cannot.
+- Cross-reference to #32 (succession arrangements with executor delegation) and #18 (delegated capability) - recovery is the runtime mechanism; succession and delegation are the upstream policies.
 
-### A.2 The six recovery mechanisms (≈900 words — ~150 each)
+### A.2 The six recovery mechanisms (≈900 words - ~150 each)
 
 Each subsection presents one mechanism with: who it serves, the cryptographic construction in plain language, the threat model (recovery-as-attack-vector), and the deployment cost.
 
@@ -39,7 +39,7 @@ Each subsection presents one mechanism with: who it serves, the cryptographic co
 #### A.2.2 Custodian-held backup key (sub-pattern 48b)
 
 - Construction: institutional custodian (lawyer, bank, regulated cloud-custodian) holds a wrapped recovery key under attestation policy.
-- Release requires multi-factor identity verification by the custodian — out-of-band channel.
+- Release requires multi-factor identity verification by the custodian - out-of-band channel.
 - Threat model: custodian compromise or coercion; mitigation is custodian's own audited security posture; legal liability allocation through contract.
 - Best fit: enterprise, regulated industries, estate planning.
 - Cross-reference to #32 (executor delegation for succession).
@@ -47,7 +47,7 @@ Each subsection presents one mechanism with: who it serves, the cryptographic co
 #### A.2.3 Paper-key fallback (sub-pattern 48c)
 
 - Construction: BIP-39-style mnemonic phrase printed at first-run, stored offline (safe, safety-deposit box).
-- The printed phrase derives the root seed via Argon2id under the deployment's high-security parameters (memory cost 128 MiB, iterations 4 — same parameters Ch15 §Key Hierarchy specifies for the regulated tier).
+- The printed phrase derives the root seed via Argon2id under the deployment's high-security parameters (memory cost 128 MiB, iterations 4 - same parameters Ch15 §Key Hierarchy specifies for the regulated tier).
 - Threat model: physical access to the printed phrase. The architecture is honest: paper keys defeat hibernation/cold-boot attacks but have a physical-security perimeter the user is responsible for.
 - Best fit: low-frequency recovery, single-user accounts, deployments where digital escrow is itself a higher risk than physical paper.
 
@@ -55,23 +55,23 @@ Each subsection presents one mechanism with: who it serves, the cryptographic co
 
 - Construction: a recovery key derived from a biometric template held in the platform's secure enclave (Apple Secure Enclave, Pixel Titan M, Windows Pluton).
 - The biometric never leaves the enclave; what leaves is a derived key only on positive match.
-- Threat model: coerced biometric (sleeping user, forced presentation), template extraction (rare but documented for some sensors). Mitigation is deployment-specific opt-in only — biometric recovery is not the default in regulated tiers.
+- Threat model: coerced biometric (sleeping user, forced presentation), template extraction (rare but documented for some sensors). Mitigation is deployment-specific opt-in only - biometric recovery is not the default in regulated tiers.
 - Best fit: consumer; secondary-factor with another mechanism, not standalone.
 
 #### A.2.5 Timed recovery with grace period (sub-pattern 48e)
 
 - Construction: a recovery claim is broadcast to the user's existing devices and to designated trustees (where present). The original holder has 7–30 days to dispute. If undisputed, the recovery completes and the new key takes effect.
-- The grace period is not an artifact of network propagation — it is a deliberate friction layer. An attacker who can also wait 30 days and suppress the original holder's notifications has a much harder problem than an attacker who can complete recovery in minutes.
+- The grace period is not an artifact of network propagation - it is a deliberate friction layer. An attacker who can also wait 30 days and suppress the original holder's notifications has a much harder problem than an attacker who can complete recovery in minutes.
 - Threat model: long-game adversary with persistent access to the original user's notification channels (email, SMS); mitigation is multi-channel notification and trustee co-signing on completion.
-- Best fit: every deployment that uses any of the prior mechanisms — the grace period is composable, not exclusive.
+- Best fit: every deployment that uses any of the prior mechanisms - the grace period is composable, not exclusive.
 
 #### A.2.6 Recovery-event audit trail (sub-pattern 48f)
 
 - Construction: every recovery initiation, dispute, and completion is recorded as a signed event in the same encrypted log used for application data. Records carry the trustee identifiers (where applicable), the claimed identity, the grace-period start and end, and the completion attestation.
-- The audit trail is the legal artifact when a recovery is later contested. It is also the architectural defense against silent recovery — a recovery cannot complete without a corresponding event in the log, and any node verifying the log can detect a tampered or missing record.
-- Cross-reference to #9 (chain-of-custody) — the same multi-party signed-event mechanism, applied to recovery rather than data transfer.
+- The audit trail is the legal artifact when a recovery is later contested. It is also the architectural defense against silent recovery - a recovery cannot complete without a corresponding event in the log, and any node verifying the log can detect a tampered or missing record.
+- Cross-reference to #9 (chain-of-custody) - the same multi-party signed-event mechanism, applied to recovery rather than data transfer.
 
-### A.3 Threat model — recovery as attack vector (≈300 words)
+### A.3 Threat model - recovery as attack vector (≈300 words)
 
 - The cardinal rule: recovery that defeats the legitimate user's threat model defeats confidentiality. The recovery primitive must be at least as hard for an attacker to invoke as the original key custody was to compromise.
 - Specific failure modes the architecture defends against:
@@ -83,7 +83,7 @@ Each subsection presents one mechanism with: who it serves, the cryptographic co
 
 ### A.4 Recommended deployment combinations (≈350 words)
 
-A three-row table — one row per deployment class — documenting the recommended combination of mechanisms.
+A three-row table - one row per deployment class - documenting the recommended combination of mechanisms.
 
 | Deployment class | Primary mechanism | Secondary | Grace period |
 |---|---|---|---|
@@ -97,11 +97,11 @@ Discussion: each row's tradeoff (recovery friction vs. attack resistance); the r
 
 - A user who refuses to set up any recovery mechanism at first-run and then loses their keys still loses their data. The architecture surfaces the choice; it cannot force the choice.
 - A user who designates trustees who are themselves compromised has no recovery from that posture. The architecture cannot grade trustee selection.
-- A user whose pre-arrangement is invalid by the time recovery is needed (trustees deceased, custodian out of business, paper-key destroyed in same disaster as the device) has no recovery from that posture either. The architecture surfaces this risk through periodic recovery-readiness audits — described in Ch20 — but the user must act on them.
+- A user whose pre-arrangement is invalid by the time recovery is needed (trustees deceased, custodian out of business, paper-key destroyed in same disaster as the device) has no recovery from that posture either. The architecture surfaces this risk through periodic recovery-readiness audits - described in Ch20 - but the user must act on them.
 
 ---
 
-## §B. New section in Ch20 — "Key-Loss Recovery UX"
+## §B. New section in Ch20 - "Key-Loss Recovery UX"
 
 **Insertion point:** between the existing `## The First-Run Experience` section and the existing `## Accessibility as a Contract` section. First-run is where recovery setup begins; accessibility considerations apply to recovery flows specifically. Inserting between them keeps the chronology of the user's journey visible.
 
@@ -112,7 +112,7 @@ Discussion: each row's tradeoff (recovery friction vs. attack resistance); the r
 ### B.1 First-run prompt: setting up recovery (≈250 words)
 
 - The first-run experience presents recovery setup as a required step, not an optional one. Skipping it is permitted but requires an explicit acknowledgment that data loss is the consequence.
-- The choice screen shows the three primary mechanisms (social, custodian, paper) with tradeoff text — "trust three friends" vs. "trust your bank" vs. "trust a piece of paper in a safe."
+- The choice screen shows the three primary mechanisms (social, custodian, paper) with tradeoff text - "trust three friends" vs. "trust your bank" vs. "trust a piece of paper in a safe."
 - The chosen mechanism's setup flow is inline; the user does not leave the application.
 - Cross-reference to Ch20 §The First-Run Experience for the broader onboarding pattern.
 
@@ -124,7 +124,7 @@ Discussion: each row's tradeoff (recovery friction vs. attack resistance); the r
 
 ### B.3 Recovery initiation UX (≈200 words)
 
-- The user has lost their key and is on a fresh device. The recovery flow begins with identity claim — the user proves they are the rightful holder through whatever channels the original setup designated.
+- The user has lost their key and is on a fresh device. The recovery flow begins with identity claim - the user proves they are the rightful holder through whatever channels the original setup designated.
 - The grace-period timer is shown immediately: "Your recovery will complete in 14 days unless your existing device disputes."
 - The user sees the recovery progress in clear text: trustees who have signed, trustees still pending, the dispute window remaining.
 
@@ -133,32 +133,32 @@ Discussion: each row's tradeoff (recovery friction vs. attack resistance); the r
 - The original holder's existing devices receive a high-priority notification: "Someone is requesting recovery of your account. If this is not you, dispute now."
 - Multi-channel: in-app banner, OS push notification, email, SMS where the user opted in.
 - The dispute action is one tap. A confirmed dispute halts the recovery; the audit trail records the dispute.
-- If the original holder has lost all notification channels (the genuine recovery case), the silence is itself the signal — the grace period elapses and recovery completes.
+- If the original holder has lost all notification channels (the genuine recovery case), the silence is itself the signal - the grace period elapses and recovery completes.
 
 ### B.5 Recovery completion confirmation (≈150 words)
 
 - On grace-period expiry without dispute, the recovery completes. The new device receives the wrapped KEKs for the user's roles; sync resumes; the audit trail records completion.
-- The user sees a final screen: "Recovery complete. Your data is being decrypted on this device. Documents will appear as they decrypt — large libraries may take several minutes."
+- The user sees a final screen: "Recovery complete. Your data is being decrypted on this device. Documents will appear as they decrypt - large libraries may take several minutes."
 - A periodic recovery-readiness audit reminds users every 12 months: "Verify your trustees are still reachable. Verify your paper-key is still in the safe." The reminder is calibrated; it is not so frequent that users dismiss it.
 
 ---
 
 ## §C. Code-check requirements
 
-The draft references the following Sunfish namespaces by name only (per CLAUDE.md Sunfish reference policy — pre-1.0; package names not class APIs):
+The draft references the following Sunfish namespaces by name only (per CLAUDE.md Sunfish reference policy - pre-1.0; package names not class APIs):
 
-- `Sunfish.Foundation.Recovery` — recovery primitive interfaces (illustrative)
-- `Sunfish.Kernel.Security` — already cited in Ch15; recovery hooks live here
-- `Sunfish.Kernel.Audit` — recovery-event audit trail entries
+- `Sunfish.Foundation.Recovery` - recovery primitive interfaces (illustrative)
+- `Sunfish.Kernel.Security` - already cited in Ch15; recovery hooks live here
+- `Sunfish.Kernel.Audit` - recovery-event audit trail entries
 
-All references marked `// illustrative — not runnable` per the Sunfish reference policy.
+All references marked `// illustrative - not runnable` per the Sunfish reference policy.
 
 ## §D. Technical-review focus
 
 For the @technical-reviewer pass:
 
 - Verify multi-sig threshold logic (3-of-5 vs. 2-of-3 tradeoff) against Shamir secret-sharing literature.
-- Verify the time-lock attack model — is 30 days actually defeasible by a patient adversary with control of all notification channels? Cite the bound honestly.
+- Verify the time-lock attack model - is 30 days actually defeasible by a patient adversary with control of all notification channels? Cite the bound honestly.
 - Verify Argon2id parameters cited match Ch15 §Key Hierarchy regulated-tier values exactly (memory cost 128 MiB, iteration count 4, parallelism 4).
 - Verify Vitalik Buterin 2021 social-recovery citation date and venue.
 - Verify Apple Secure Enclave / Pixel Titan M / Windows Pluton claims about biometric template containment.
@@ -168,20 +168,20 @@ For the @technical-reviewer pass:
 
 For the @prose-reviewer + @style-enforcer pass:
 
-- Active voice throughout. "The trustee signs the recovery event" — not "the recovery event is signed by the trustee."
-- No hedging on recovery guarantees. Replace "recovery may potentially fail if trustees are compromised" with the specific claim — "recovery fails when *t* trustees are simultaneously compromised."
+- Active voice throughout. "The trustee signs the recovery event" - not "the recovery event is signed by the trustee."
+- No hedging on recovery guarantees. Replace "recovery may potentially fail if trustees are compromised" with the specific claim - "recovery fails when *t* trustees are simultaneously compromised."
 - Honest about limitations. Section §A.5 ("What this section does not solve") is intentionally direct; do not soften it during prose review.
 - No academic scaffolding. No "this section presents" or "in what follows."
-- No restating Part I architecture — Ch15 already assumes the reader has read Part I.
+- No restating Part I architecture - Ch15 already assumes the reader has read Part I.
 - Paragraph length cap: 6 sentences.
 
-## §F. Voice-check focus (HUMAN STAGE — not autonomous)
+## §F. Voice-check focus (HUMAN STAGE - not autonomous)
 
 For the human voice-pass:
 
 - Add a personal anecdote about key loss. Candidates: lost crypto-wallet seed; forgotten password manager master-password; family member death without password handoff; lost hardware token. The anecdote sets emotional ground for the reader before the cryptographic construction lands.
-- Add the connective tissue between Ch15 §Key-Loss Recovery and Ch20 §Key-Loss Recovery UX — a sentence in each pointing to the other so the reader recognizes the policy/UX pairing.
-- Calibrate Sinek register lightly per `feedback_voice_sinek_calibration.md` memory — do not over-mechanize the prose with deliberate-pacing hammering.
+- Add the connective tissue between Ch15 §Key-Loss Recovery and Ch20 §Key-Loss Recovery UX - a sentence in each pointing to the other so the reader recognizes the policy/UX pairing.
+- Calibrate Sinek register lightly per `feedback_voice_sinek_calibration.md` memory - do not over-mechanize the prose with deliberate-pacing hammering.
 
 ## §G. Citations
 
@@ -190,9 +190,9 @@ The draft adds these to Ch15's reference list (IEEE numeric, in order of first a
 - Vitalik Buterin, "Why we need wide adoption of social recovery wallets," *vitalik.ca*, Jan. 2021. [Online]. Available: https://vitalik.ca/general/2021/01/11/recovery.html
 - Argent, "Argent Smart Wallet Specification," *github.com/argentlabs*, 2020. [Online]. Available: https://github.com/argentlabs/argent-contracts/blob/develop/specifications/specifications.pdf
 - A. Shamir, "How to share a secret," *Communications of the ACM*, vol. 22, no. 11, pp. 612–613, Nov. 1979.
-- Apple Inc., "Apple Platform Security," May 2024. [Online]. Available: https://support.apple.com/guide/security/welcome/web — for Secure Enclave architecture.
+- Apple Inc., "Apple Platform Security," May 2024. [Online]. Available: https://support.apple.com/guide/security/welcome/web - for Secure Enclave architecture.
 
-Ch20 cross-references the Ch15 source list — no new citations.
+Ch20 cross-references the Ch15 source list - no new citations.
 
 ## §H. Cross-references to add
 
@@ -215,11 +215,11 @@ The next iteration (`outline → draft`) will invoke `@chapter-drafter` with thi
 >
 > Source: outline at `docs/book-update-plan/working/48-key-loss-recovery/outline.md`. Follow the section structure and word targets exactly. Voice: Part III specification register for Ch15; Part IV tutorial register for Ch20. Active voice throughout. No hedging. No academic scaffolding. No re-introducing the architecture (Ch15 assumes Part I + earlier Ch15 sections; Ch20 assumes Part I and Ch15).
 >
-> Sunfish references: package names only (`Sunfish.Foundation.Recovery`, `Sunfish.Kernel.Security`, `Sunfish.Kernel.Audit`) — no class APIs, no method signatures. Mark code snippets `// illustrative — not runnable` if any are needed.
+> Sunfish references: package names only (`Sunfish.Foundation.Recovery`, `Sunfish.Kernel.Security`, `Sunfish.Kernel.Audit`) - no class APIs, no method signatures. Mark code snippets `// illustrative - not runnable` if any are needed.
 >
-> Citations: IEEE numeric. Add the four sources listed in outline §G to Ch15's reference list (continue the existing `[1]`, `[2]`, `[3]` numbering). Ch20 cross-references Ch15 — no new citations needed in Ch20.
+> Citations: IEEE numeric. Add the four sources listed in outline §G to Ch15's reference list (continue the existing `[1]`, `[2]`, `[3]` numbering). Ch20 cross-references Ch15 - no new citations needed in Ch20.
 >
-> Cross-references: per outline §H — the draft must wire all of them.
+> Cross-references: per outline §H - the draft must wire all of them.
 >
 > Insertion mechanics: write the new H2 sections directly into the existing chapter files at the specified insertion points. Preserve existing H2 anchor structure and H1 frontmatter. Update Ch15's reference list with the four new entries.
 

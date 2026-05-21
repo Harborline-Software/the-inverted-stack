@@ -1,4 +1,4 @@
-# Code-check report — 43 performance contracts
+# Code-check report - 43 performance contracts
 
 **Stage:** code-check (ICM stage 3).
 **Run:** iter-0012, 2026-04-27.
@@ -57,9 +57,9 @@ Two fenced code blocks present in the new sections, both marked illustrative:
 
 | Location | Content | Marker |
 |---|---|---|
-| Ch11 §Sub-pattern 43d | C# `AddSunfishPerformanceContracts` DI extension example | `// illustrative — not runnable (Sunfish.Kernel.Performance pre-1.0)` |
-| Ch20 §Progressive-degradation UX patterns | Razor `<SunfishMergeProgressIndicator>` wiring | `// Illustrative — not runnable (pre-1.0 API)` |
-| Ch20 §Quality-of-service indicators | C# `SyncState` enum extension showing `PerformanceDegraded` | `// Illustrative — not runnable (pre-1.0 API)` |
+| Ch11 §Sub-pattern 43d | C# `AddSunfishPerformanceContracts` DI extension example | `// illustrative - not runnable (Sunfish.Kernel.Performance pre-1.0)` |
+| Ch20 §Progressive-degradation UX patterns | Razor `<SunfishMergeProgressIndicator>` wiring | `// Illustrative - not runnable (pre-1.0 API)` |
+| Ch20 §Quality-of-service indicators | C# `SyncState` enum extension showing `PerformanceDegraded` | `// Illustrative - not runnable (pre-1.0 API)` |
 
 Three code fences total (one in Ch11, two in Ch20). All three carry the illustrative marker per the Sunfish reference policy.
 
@@ -71,7 +71,7 @@ Three code fences total (one in Ch11, two in Ch20). All three carry the illustra
 | `TODO` | None found. |
 | `expand here` | None found. |
 | `placeholder` | None found. |
-| `<!-- CLAIM: -->` | None inserted by draft. Two claims (Yjs 100k-merge complexity, Linear 60fps engineering blog) are attributed via citation [4] and [5] respectively, with the technical-review stage flagged to pin the specific URLs. This is a deliberate choice — citation-attributed claims rather than CLAIM markers in prose. |
+| `<!-- CLAIM: -->` | None inserted by draft. Two claims (Yjs 100k-merge complexity, Linear 60fps engineering blog) are attributed via citation [4] and [5] respectively, with the technical-review stage flagged to pin the specific URLs. This is a deliberate choice - citation-attributed claims rather than CLAIM markers in prose. |
 
 ## Cross-reference integrity
 
@@ -86,11 +86,11 @@ Cross-references introduced by iter-0011, verified against current chapter state
 | Ch20 §Performance Budgets | Ch11 §Performance Contracts | ✓ exists (just added in iter-0011) |
 | Ch20 §Performance Budgets | Ch20 §The Three Always-Visible Indicators | ✓ exists at Ch20:20 |
 | Ch20 §Performance Budgets | Ch20 §The Conflict Inbox and Bulk Resolution | ✓ exists at Ch20:108 |
-| Ch20 §Performance Budgets | Ch19 §Operator Observability | **broken — fixed in this iteration** |
+| Ch20 §Performance Budgets | Ch19 §Operator Observability | **broken - fixed in this iteration** |
 
 **Cross-reference fix applied this iteration:**
 
-The original draft cross-referenced "Ch19 §Operator Observability" — a section that does not exist. Ch19's H2 sections are: Procurement Conversation, Build and Packaging, Code Signing and Notarization, MDM Deployment, SBOM Generation and CVE Response, Admin Tooling for Revocation, Air-Gap Deployment, The Operational Runbook Minimum, Putting It Together. The closest match for "the enterprise telemetry path that consumes operator-facing budget violation telemetry" is §The Operational Runbook Minimum (line 382) — operational concerns naturally land in the runbook section.
+The original draft cross-referenced "Ch19 §Operator Observability" - a section that does not exist. Ch19's H2 sections are: Procurement Conversation, Build and Packaging, Code Signing and Notarization, MDM Deployment, SBOM Generation and CVE Response, Admin Tooling for Revocation, Air-Gap Deployment, The Operational Runbook Minimum, Putting It Together. The closest match for "the enterprise telemetry path that consumes operator-facing budget violation telemetry" is §The Operational Runbook Minimum (line 382) - operational concerns naturally land in the runbook section.
 
 Edit applied at Ch20 §Performance budget violation surfacing closing sentence:
 
@@ -99,13 +99,13 @@ Edit applied at Ch20 §Performance budget violation surfacing closing sentence:
 
 This is a minor cross-reference fix, not a substantive edit. The architectural commitment (operator-facing budget telemetry feeds the enterprise observability stack) is unchanged; only the named target section now resolves.
 
-## Quality gate — code-check → technical-review
+## Quality gate - code-check → technical-review
 
 Per loop-plan §5:
 
-- [x] All Sunfish package references validated — three classified, one annotated as forward-looking and tracked in the roadmap, three verified in canon.
-- [x] Code snippets marked illustrative — three code fences, all marked `// illustrative — not runnable` or `// Illustrative — not runnable`.
-- [x] No `<!-- TBD -->` markers — verified.
+- [x] All Sunfish package references validated - three classified, one annotated as forward-looking and tracked in the roadmap, three verified in canon.
+- [x] Code snippets marked illustrative - three code fences, all marked `// illustrative - not runnable` or `// Illustrative - not runnable`.
+- [x] No `<!-- TBD -->` markers - verified.
 - [x] All cross-reference targets resolve (one broken reference fixed this iteration; six others verified).
 
 Gate **passed**. Advance to technical-review.

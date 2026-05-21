@@ -1,28 +1,28 @@
 # Vol 2 Translation Workshop
 
-Plain-language replacements for the technical vocabulary used in *Vol 2 — RV Nansen's maiden voyage*. **Workshop, not glossary.** The entries here exist to support two downstream passes: (a) a print-side surgical-replacement pass on chapter prose, and (b) an audio-side preprocessor pass that disambiguates terms the audiobook listener cannot disambiguate visually.
+Plain-language replacements for the technical vocabulary used in *Vol 2 - RV Nansen's maiden voyage*. **Workshop, not glossary.** The entries here exist to support two downstream passes: (a) a print-side surgical-replacement pass on chapter prose, and (b) an audio-side preprocessor pass that disambiguates terms the audiobook listener cannot disambiguate visually.
 
 ## Why this exists
 
-Vol 2 is a first-person mission narrative whose story is partly told *through* the architecture Anna is operating. That architecture has technical names — *sync daemon, schema migration, key envelope, gossip protocol, KEK / DEK, Bridge, Anchor, Forsaken,* and so on. Some are load-bearing canon and must stay. Others are incidental and can be replaced inline. Several collide with everyday words (*keys* on a keyboard versus *keys* in a credential pouch; *gossip* the protocol versus *gossip* in the wardroom; *bridge* the Sunfish accelerator versus *bridge* the boat's command station).
+Vol 2 is a first-person mission narrative whose story is partly told *through* the architecture Anna is operating. That architecture has technical names - *sync daemon, schema migration, key envelope, gossip protocol, KEK / DEK, Bridge, Anchor, Forsaken,* and so on. Some are load-bearing canon and must stay. Others are incidental and can be replaced inline. Several collide with everyday words (*keys* on a keyboard versus *keys* in a credential pouch; *gossip* the protocol versus *gossip* in the wardroom; *bridge* the Sunfish accelerator versus *bridge* the boat's command station).
 
 **The audiobook listener has it worst.** No capital letters, no italics, no hyphenation cues, no rewind-and-look. Every collision the print reader can disambiguate visually, the listener has to disambiguate from context alone. That is why most workshop entries carry an audio-replacement field.
 
 ## Audience priority
 
-1. **Audiobook listener** (highest priority) — drives the audio-replacement field and re-prioritized Tier 1.
-2. **Non-technical print reader** — drives the plain-language replacement and the *Mistaken for* field.
-3. **Technical print reader** — protected by the *Keep when* rules; their reading experience should not regress.
+1. **Audiobook listener** (highest priority) - drives the audio-replacement field and re-prioritized Tier 1.
+2. **Non-technical print reader** - drives the plain-language replacement and the *Mistaken for* field.
+3. **Technical print reader** - protected by the *Keep when* rules; their reading experience should not regress.
 
 ## Entry format (five fields)
 
 Each workshop entry has up to five short fields:
 
-- **Plain replacement** — the short phrase that substitutes inline. Preserves sentence rhythm. Often two variants for different contexts.
-- **Longer gloss** — the fuller phrasing used at first occurrence in a chapter, where the prose has room for one extra clause.
-- **Audio replacement** — what the listener should hear, even if the print word stays unchanged. Drives the TTS preprocessor pass on `build/audiobook.py`. Acronyms get explicit expansion rules; collision-prone words get explicit modifiers.
-- **Keep when** — the contexts where the original term must stay: load-bearing canon, character voice markers, cadence-critical lines, cross-references to Vol 1.
-- **Mistaken for** — the everyday words a non-technical reader/listener is most likely to confuse the term with. Skipped when there is no real collision risk.
+- **Plain replacement** - the short phrase that substitutes inline. Preserves sentence rhythm. Often two variants for different contexts.
+- **Longer gloss** - the fuller phrasing used at first occurrence in a chapter, where the prose has room for one extra clause.
+- **Audio replacement** - what the listener should hear, even if the print word stays unchanged. Drives the TTS preprocessor pass on `build/audiobook.py`. Acronyms get explicit expansion rules; collision-prone words get explicit modifiers.
+- **Keep when** - the contexts where the original term must stay: load-bearing canon, character voice markers, cadence-critical lines, cross-references to Vol 1.
+- **Mistaken for** - the everyday words a non-technical reader/listener is most likely to confuse the term with. Skipped when there is no real collision risk.
 
 Each entry closes with a **Feynman test** line: *Could a 10-year-old picture this?* If the answer is no, the entry's plain-language replacement is wrong and needs another pass.
 
@@ -38,10 +38,10 @@ The shared shape: **concrete mechanism in everyday vocabulary, no jargon smuggle
 
 ## Workflow
 
-1. **Inventory** (done) — `_inventory.md` lists ~80 candidate terms with occurrence counts and triage classifications.
-2. **Workshop** (in progress) — write a workshop entry per Tier 1/2/3 term using the template above.
-3. **Audio preprocessor** (planned) — `_audio_substitutions.yaml` ingested by `build/audiobook.py:normalize_text_for_tts()` to apply the **Audio replacement** rules before TTS. Vol 1 unaffected (no glossary file = no substitutions).
-4. **Print lightening pass** (planned) — per-chapter diffs that apply *Plain replacement* and *Longer gloss* where *Keep when* does not fire. Diffs ship per-chapter for scene-by-scene CO accept/reject.
+1. **Inventory** (done) - `_inventory.md` lists ~80 candidate terms with occurrence counts and triage classifications.
+2. **Workshop** (in progress) - write a workshop entry per Tier 1/2/3 term using the template above.
+3. **Audio preprocessor** (planned) - `_audio_substitutions.yaml` ingested by `build/audiobook.py:normalize_text_for_tts()` to apply the **Audio replacement** rules before TTS. Vol 1 unaffected (no glossary file = no substitutions).
+4. **Print lightening pass** (planned) - per-chapter diffs that apply *Plain replacement* and *Longer gloss* where *Keep when* does not fire. Diffs ship per-chapter for scene-by-scene CO accept/reject.
 
 ## Tier 1 (audio-collision priority)
 
@@ -57,7 +57,7 @@ Re-sorted from print-confusion priority once the audiobook listener became the p
 | 6 | [`key-envelope.md`](key-envelope.md) | DRAFTED | KEK = laughter abbreviation; bare letters meaningless on audio |
 | 7 | [`forsaken.md`](forsaken.md) | DRAFTED | The adjective (*she felt forsaken*); narrative-arc proper noun |
 
-## Tier 2 (print-confusion priority — less audio-critical)
+## Tier 2 (print-confusion priority - less audio-critical)
 
 All 14 entries drafted 2026-05-06.
 
@@ -98,9 +98,9 @@ All 9 entries drafted 2026-05-07 (pass-log + deviation-plot folded into `mission
 
 All three retro-fitted with the audio-replacement field and Feynman test line.
 
-- [Keys](keys.md) — digital credentials; not house keys or keyboard keys. Image: stamped ID + safe-deposit-box key.
-- [Schema migration](schema-migration.md) — rewriting stored records into a new shape. Image: re-copying every paper form in a filing cabinet while the office is still open.
-- [Sync daemon](sync-daemon.md) — background helper for boat/shore catch-up. Image: a kid running between two friends' houses with a notebook.
+- [Keys](keys.md) - digital credentials; not house keys or keyboard keys. Image: stamped ID + safe-deposit-box key.
+- [Schema migration](schema-migration.md) - rewriting stored records into a new shape. Image: re-copying every paper form in a filing cabinet while the office is still open.
+- [Sync daemon](sync-daemon.md) - background helper for boat/shore catch-up. Image: a kid running between two friends' houses with a notebook.
 
 ## Inventory
 

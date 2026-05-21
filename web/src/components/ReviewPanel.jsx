@@ -169,7 +169,7 @@ export default function ReviewPanel({ session, onClose, onSessionUpdate }) {
           groups.map(group => (
             <div key={group.chapter_id} className="review-chapter-group">
               <div className="review-chapter-heading">
-                {group.chapter_slug} — {group.chapter_title}
+                {group.chapter_slug} - {group.chapter_title}
               </div>
               {group.items.map(c => {
                 const meta = typeMeta(c.type)

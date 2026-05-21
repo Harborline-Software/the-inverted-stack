@@ -12,9 +12,9 @@
 developed alongside this book. It is in active early development; the architecture described
 here is its specification. Two canonical accelerators exist:
 
-- **Anchor** (`accelerators/anchor/`) — Zone A local-first desktop (.NET MAUI Blazor Hybrid,
+- **Anchor** (`accelerators/anchor/`) - Zone A local-first desktop (.NET MAUI Blazor Hybrid,
   offline-by-default, SQLCipher, Ed25519 device keys)
-- **Bridge** (`accelerators/bridge/`) — Zone C hybrid multi-tenant SaaS (.NET Aspire, Blazor
+- **Bridge** (`accelerators/bridge/`) - Zone C hybrid multi-tenant SaaS (.NET Aspire, Blazor
   Server, per-tenant data-plane isolation, hosted-node-as-SaaS)
 
 Sunfish APIs are pre-1.0 and subject to change. The book references packages by name
@@ -22,7 +22,7 @@ Sunfish APIs are pre-1.0 and subject to change. The book references packages by 
 
 > **CRDT engine note:** This book specifies Loro as the aspirational primary CRDT engine for
 > .NET (compact encoding, shallow snapshots, Rust-native performance). Sunfish's reference
-> implementation uses YDotNet (Yjs .NET bindings) — the practical choice while Loro's C# bindings
+> implementation uses YDotNet (Yjs .NET bindings) - the practical choice while Loro's C# bindings
 > (`loro-cs`) remain community-maintained and minimal. The architecture is engine-agnostic via
 > `ICrdtEngine`; the book addresses both paths and the evaluation criteria for choosing between them.
 
@@ -31,7 +31,7 @@ Sunfish APIs are pre-1.0 and subject to change. The book references packages by 
 ## Front Matter
 
 ### Foreword
-*Placeholder — reserved for a voice from the local-first community (Ink & Switch contributor,
+*Placeholder - reserved for a voice from the local-first community (Ink & Switch contributor,
 Automerge/Yjs maintainer, or practitioner with a recognizable name in the distributed systems
 space). Written last.*
 
@@ -44,37 +44,37 @@ space). Written last.*
 
 ---
 
-## Part I — The Thesis and the Pain
+## Part I - The Thesis and the Pain
 *~16,200 words. Establishes the problem, the solution shape, and when to use it.*
 
-### Chapter 1 — When SaaS Fights Reality
+### Chapter 1 - When SaaS Fights Reality
 *~5,200 words*
 - The hidden costs of the SaaS bundle: vendor dependency, data custody, pricing risk
 - Six concrete failure modes: outage and the dependency chain, vendor disappearance,
   connectivity gaps, data inaccessibility, price capture, and the third-party veto
   (government or regulatory authority restricts access regardless of vendor or customer preference)
 - What actually breaks first when all state lives in someone else's cloud
-- Why users have accepted this — and why that acceptance is eroding
+- Why users have accepted this - and why that acceptance is eroding
 
-### Chapter 2 — Local-First: From Sync Toy to Serious Stack
+### Chapter 2 - Local-First: From Sync Toy to Serious Stack
 *~4,000 words*
 - The seven local-first ideals (Kleppmann et al.) and why they matter
 - A tour of existing implementations: what each does, exactly where it stops short
   (Obsidian: file-based, no structured data; Linear: lightweight SQLite replica, not a full node;
   Automerge demos: document-centric, no business logic; Actual Budget: closest commercial analogue)
-- The missing step: a full node on the workstation — UI, business logic, sync daemon, storage —
+- The missing step: a full node on the workstation - UI, business logic, sync daemon, storage -
   not just a smarter cache
 - What "serious stack" requires that toy examples omit
 
-### Chapter 3 — The Inverted Stack in One Diagram
+### Chapter 3 - The Inverted Stack in One Diagram
 *~3,500 words*
 - The central inversion: local node as primary, cloud as relay/backup/discovery
 - Visual: five-layer model (presentation, application logic, sync daemon, storage, relay)
-- How this changes failure modes vs. classic SaaS — and which failure modes it creates
+- How this changes failure modes vs. classic SaaS - and which failure modes it creates
 - The two canonical deployment shapes: Anchor (Zone A) and Bridge (Zone C) introduced
 - A first look at the .NET MAUI/Blazor Hybrid + sync daemon stack
 
-### Chapter 4 — Choosing Your Architecture
+### Chapter 4 - Choosing Your Architecture
 *~3,500 words*
 - The core question: does value derive from the user's own data, or from aggregating across users?
 - Five filters: consistency requirements, data ownership profile, connectivity environment,
@@ -82,71 +82,71 @@ space). Written last.*
 - The three outcome zones: Zone A (local-first node), Zone B (traditional SaaS/website), Zone C (hybrid)
 - Anchor as the Zone A reference; Bridge as the Zone C reference
 - The practical shortcut: three questions that produce a fast answer for most cases
-- When *not* to use the inverted stack — and why the CAP theorem is not a negotiating position
+- When *not* to use the inverted stack - and why the CAP theorem is not a negotiating position
 
 ---
 
-## Part II — The Council Reads the Paper
+## Part II - The Council Reads the Paper
 *~20,000 words. Five domain experts stress-test the architecture across two rounds.
 Each chapter has two acts: Round 1 objections and blocking issues, then what changed,
-then Round 2 verdict. The architecture fails first inspection — and survives the second.*
+then Round 2 verdict. The architecture fails first inspection - and survives the second.*
 
-### Chapter 5 — The Enterprise Lens
+### Chapter 5 - The Enterprise Lens
 *~3,500 words | Council member: Dr. Marguerite Voss, Enterprise Infrastructure Architect*
 - Her lens: will this pass a real procurement committee? Can IT actually manage it?
 - Round 1: MDM integration, code signing, SBOM, incident response gap (BLOCKED)
 - What changed: named Intune/Jamf policies, signed/notarized installer, incident response runbook,
   zero-downtime container update path, SBOM toolchain (Syft/Grype)
-- Round 2: PROCEED WITH CONDITIONS — AGPLv3 copyleft implications, SBOM CI/CD timing,
+- Round 2: PROCEED WITH CONDITIONS - AGPLv3 copyleft implications, SBOM CI/CD timing,
   Podman WSL2 vs. Hyper-V, admin revocation tooling
 - Takeaway: the non-negotiable constraints any serious local-first product must satisfy before
   IT will allow it on managed endpoints
 
-### Chapter 6 — The Distributed Systems Lens
+### Chapter 6 - The Distributed Systems Lens
 *~3,500 words | Council member: Prof. Dmitri Shevchenko, Distributed Systems Researcher*
 - His lens: is the synchronization model theoretically sound? Does "CRDT handles it" mean
   the user sees correct data?
 - Round 1: CRDT GC absent, Flease split-write window unaddressed (BLOCKED)
 - What changed: three-tier GC policy, stale peer recovery protocol, Flease split-write proof,
   reconnection storm handling, CRDT operation validation
-- Round 2: PROCEED WITH CONDITIONS — stale peer recovery when vector clock predates GC horizon,
+- Round 2: PROCEED WITH CONDITIONS - stale peer recovery when vector clock predates GC horizon,
   linearizable operation enumeration, CRDT store as durable partition buffer
 - Takeaway: convergence at the data-structure level is not the same as correctness at the
-  domain level — here is where the boundary lies
+  domain level - here is where the boundary lies
 
-### Chapter 7 — The Security Lens
+### Chapter 7 - The Security Lens
 *~3,500 words | Council member: Nia Okonkwo, Application Security Practitioner*
 - Her lens: what is the actual threat model? What does an attacker with physical access gain?
 - Round 1: key compromise incident response absent (BLOCKED)
 - What changed: key hierarchy diagram (root org → role KEKs → per-node wrapped keys → per-record),
   key compromise detection and re-keying procedure, offline node revocation reconnection flow
-- Round 2: PROCEED WITH CONDITIONS — relay traffic analysis limitation, GDPR Article 17 and
+- Round 2: PROCEED WITH CONDITIONS - relay traffic analysis limitation, GDPR Article 17 and
   crypto-shredding, release signing key custody, Sigstore supply-chain spec
 - Takeaway: distributing data to endpoints solves the central honeypot problem and creates
-  a distributed one — here is how to manage it honestly
+  a distributed one - here is how to manage it honestly
 
-### Chapter 8 — The Product & Economic Lens
+### Chapter 8 - The Product & Economic Lens
 *~3,500 words | Council member: Jordan Kelsey, Product Manager / Startup Founder*
 - His lens: will anyone buy this? What is the payback period? Can the relay sustain a team of five?
 - Round 1: no first customer archetype, no OSS-to-paid conversion mechanism (BLOCKED)
 - What changed: construction vertical selection, five-step customer development path,
   relay economics model (10/100/1,000 teams), competitive comparison table, dual-license strategy
-- Round 2: PROCEED WITH CONDITIONS — customer acquisition channel, governance model,
+- Round 2: PROCEED WITH CONDITIONS - customer acquisition channel, governance model,
   relay commoditization moat, dual-license CLA before the repo opens
-- Takeaway: how to fund a product that doesn't own the primary database — and why the
+- Takeaway: how to fund a product that doesn't own the primary database - and why the
   managed relay is the right unit of competitive analysis
 
-### Chapter 9 — The Local-First Practitioner Lens
+### Chapter 9 - The Local-First Practitioner Lens
 *~3,500 words | Council member: Tomás Ferreira, Local-First Community Practitioner*
 - His lens: does this actually work for real users? Does the paper understand existing work
   or reinvent it poorly?
-- Round 1: no data portability path — a paper about data ownership with no export button (BLOCKED)
+- Round 1: no data portability path - a paper about data ownership with no export button (BLOCKED)
 - What changed: plain-file export path, full non-technical disaster recovery walkthrough,
   symmetric NAT / relay-down failure mode acknowledgment, community governance model
-- Round 2: PROCEED — all seven Kleppmann ideals satisfied; no blocking conditions
+- Round 2: PROCEED - all seven Kleppmann ideals satisfied; no blocking conditions
 - Takeaway: what actually works in practice for users, teams, and community contributors
 
-### Chapter 10 — Synthesis: What the Council Finally Agreed On
+### Chapter 10 - Synthesis: What the Council Finally Agreed On
 *~2,500 words*
 - The non-negotiable properties that emerged from both rounds: data minimization at the
   protocol layer, subscription filtering at send not receive, MDM compliance check at
@@ -158,12 +158,12 @@ then Round 2 verdict. The architecture fails first inspection — and survives t
 
 ---
 
-## Part III — The Reference Architecture
+## Part III - The Reference Architecture
 *~22,000 words. The complete technical specification. Part II tells you what constraints
-must be satisfied; Part III specifies how to satisfy them. Written as a reference —
+must be satisfied; Part III specifies how to satisfy them. Written as a reference -
 return to individual chapters as you build.*
 
-### Chapter 11 — Node Architecture
+### Chapter 11 - Node Architecture
 *~4,000 words*
 - The microkernel monolith: stable kernel + domain plugins under strict contracts
 - Kernel responsibilities: node lifecycle, sync daemon, CRDT engine abstraction, schema migration
@@ -175,7 +175,7 @@ return to individual chapters as you build.*
 - Process boundaries and IPC: Unix domain socket transport between shell and sync daemon
 - Sunfish package map: `Sunfish.Kernel.*`, `Sunfish.Foundation.LocalFirst`, `Sunfish.UI.*`
 
-### Chapter 12 — CRDT Engine and Data Layer
+### Chapter 12 - CRDT Engine and Data Layer
 *~4,000 words*
 - The three-layer CRDT architecture: data layer (maps, lists, text, counters),
   semantic layer (domain rules interpreting CRDT changes), view layer (projections and indexes)
@@ -190,7 +190,7 @@ return to individual chapters as you build.*
 - Five-layer storage architecture: local encrypted DB, CRDT/event log, BYOC backup,
   content-addressed distribution, decentralized archival
 
-### Chapter 13 — Schema Migration and Evolution
+### Chapter 13 - Schema Migration and Evolution
 *~3,500 words | NEW*
 - Why schema migration is the hardest operational problem in a local-node architecture:
   nodes update independently, teams run mixed versions simultaneously
@@ -204,7 +204,7 @@ return to individual chapters as you build.*
   cutover and old-epoch retirement; the "couch device" returning after three major versions
 - Stale peer recovery: what happens when a reconnecting peer's vector clock predates the GC horizon
 
-### Chapter 14 — Sync Daemon Protocol
+### Chapter 14 - Sync Daemon Protocol
 *~3,500 words*
 - The sync daemon as a separate long-running process: why the separation matters,
   lifetime and restart behavior, Unix domain socket IPC
@@ -219,11 +219,11 @@ return to individual chapters as you build.*
 - Sunfish relay configuration reference: `MaxConnectedNodes`, `AllowedTeamIds`,
   relay-only vs. attested hosted peer vs. no hosted peer trust levels
 
-### Chapter 15 — Security Architecture
+### Chapter 15 - Security Architecture
 *~5,500 words (revised target post-split per UPF 2026-04-29; was ~4,000)*
 
 Architectural-spec only. Operational flows (incident response, recovery, revocation, forward
-secrecy, endpoint compromise) moved to Ch22 (Part V — Operational Concerns) per the Ch15 split
+secrecy, endpoint compromise) moved to Ch22 (Part V - Operational Concerns) per the Ch15 split
 UPF. Cross-references: Ch15 specifies the architecture; Ch22 specifies how to operate it.
 
 - Threat model: distributed endpoints vs. central honeypot; insider threat; physical access;
@@ -239,7 +239,7 @@ UPF. Cross-references: Ch15 specifies the architecture; Ch22 specifies how to op
 - Forward references to Ch22 for: key rotation procedures, key compromise incident response,
   collaborator revocation, post-departure partition, forward secrecy ratchets, endpoint compromise scope
 
-### Chapter 16 — Persistence Beyond the Node
+### Chapter 16 - Persistence Beyond the Node
 *~3,000 words | CONSOLIDATED: Storage/Backup + Relay/Federation*
 - Local persistence: encrypted database format, durability guarantees, durability vs. performance tradeoffs
 - BYOC backup patterns: object storage adapters, rclone integration, backup status UX
@@ -253,12 +253,12 @@ UPF. Cross-references: Ch15 specifies the architecture; Ch22 specifies how to op
 
 ---
 
-## Part IV — Implementation Playbooks
+## Part IV - Implementation Playbooks
 *~14,000 words. Minimal paths to working implementations. References Part III for
 specification; does not repeat it. Sunfish packages are the starting point, not the
 finished product.*
 
-### Chapter 17 — Building Your First Node
+### Chapter 17 - Building Your First Node
 *~4,000 words*
 - The Sunfish Anchor accelerator as your starting point: what it gives you, what is
   still placeholder, how to orient yourself in the codebase
@@ -270,7 +270,7 @@ finished product.*
   wire format, founder vs. joiner attestation bundles
 - Local-first UX basics: `SunfishNodeHealthBar`, offline edit indicators, sync status tokens
 
-### Chapter 18 — Migrating an Existing SaaS
+### Chapter 18 - Migrating an Existing SaaS
 *~3,500 words*
 - The Sunfish Bridge accelerator as the Zone C reference: per-tenant data-plane isolation,
   hosted-node-as-SaaS, ciphertext-only relay
@@ -282,7 +282,7 @@ finished product.*
   with the legacy backend during transition
 - Running pilots without destabilizing the existing product
 
-### Chapter 19 — Shipping to Enterprise
+### Chapter 19 - Shipping to Enterprise
 *~3,500 words*
 - Build and packaging pipelines: MSIX installer (Windows), .pkg/.dmg (macOS),
   multi-target MAUI builds
@@ -291,17 +291,17 @@ finished product.*
 - MDM deployment: Intune/Jamf profiles, silent installation, pre-seeded configuration,
   SBOM generation in CI (Syft for generation, Grype for vulnerability scanning),
   CVE response SLA
-- Podman substrate choice: WSL2 vs. Hyper-V — implications for corporate images and
+- Podman substrate choice: WSL2 vs. Hyper-V - implications for corporate images and
   virtualization product conflicts; recommended defaults
 - Admin tooling: revocation workflow interface (console UI or CLI sketch), zero-downtime
   container update path, deprovisioning runbook
 - Air-gap deployment: internal update server, internal relay, SBOM distribution channel
 
-### Chapter 20 — Designing UX for Sync and Conflict
+### Chapter 20 - Designing UX for Sync and Conflict
 *~3,000 words*
 - The complexity hiding standard: a non-technical user should be unable to determine
   whether the application is local-first or cloud-first
-- Status indicators: node health, link status, data freshness — non-intrusive under
+- Status indicators: node health, link status, data freshness - non-intrusive under
   normal conditions, informative under degraded ones
 - AP/CP visibility by data class: staleness thresholds, amber indicators, freshness badges,
   "as of [timestamp]" labels
@@ -314,13 +314,13 @@ finished product.*
 
 ---
 
-## Part V — Operational Concerns
+## Part V - Operational Concerns
 *~22,500 words (target after Ch22-Ch23 split 2026-04-30). Post-deploy lifecycle: how a fleet
 of local-first nodes is operated once it's in users' hands. Distinct from Part IV (build
-playbooks) — this Part covers the running-and-recovering modes. Three chapters: fleet
+playbooks) - this Part covers the running-and-recovering modes. Three chapters: fleet
 operations, key-lifecycle operations, and endpoint/collaborator/custody operations.*
 
-### Chapter 21 — Operating a Fleet of Local-First Nodes
+### Chapter 21 - Operating a Fleet of Local-First Nodes
 *~6,500 words*
 - Fleet-management posture: operator visibility limits in a local-first system; why
   centralized dashboards are an antipattern; what an operator can and cannot see
@@ -335,14 +335,14 @@ operations, key-lifecycle operations, and endpoint/collaborator/custody operatio
 - Decommissioning workflows: graceful node retirement, data portability handoff,
   long-term archive
 
-### Chapter 22 — Key Lifecycle Operations
+### Chapter 22 - Key Lifecycle Operations
 *~7,400 words (post Ch22-Ch23 split 2026-04-30; UPF FAILED-condition fired at Ch22 16,272 >
 12,000 threshold). Lifecycle-of-keys operational flows: what to do when a key changes state.*
 
 - Key compromise incident response: detection, re-keying procedure, data-at-risk scope,
   user-visible notification, forward secrecy window
 - Key-loss recovery: the six recovery mechanisms (multi-sig trustee, off-chain backup,
-  cross-device, social-recovery, time-locked recovery, dispute-aware) — when each
+  cross-device, social-recovery, time-locked recovery, dispute-aware) - when each
   applies and how they compose; recovery state-machine convergence under partition;
   recovery as an attack vector; operator mitigations
 - Forward secrecy and post-compromise security: per-message ephemeral key derivation,
@@ -351,7 +351,7 @@ operations, key-lifecycle operations, and endpoint/collaborator/custody operatio
 - Cross-references back to Ch15 for the architectural primitives (key hierarchy, role
   attestation flow) each operational flow consumes
 
-### Chapter 23 — Endpoint, Collaborator, and Custody Operations
+### Chapter 23 - Endpoint, Collaborator, and Custody Operations
 *~9,000 words (post Ch22-Ch23 split 2026-04-30). Operational flows whose triggers come
 from outside the key lifecycle: a node returning from offline, a collaborator leaving the
 team, a hostile OS, a multi-party data handoff, a regulatory event escalating a record's class.*
@@ -374,21 +374,21 @@ team, a hostile OS, a multi-party data handoff, a regulatory event escalating a 
 
 ---
 
-## Closing Chapter — The Crossing
-*~5,000 words. Working title placeholder — final title may change.*
+## Closing Chapter - The Crossing
+*~5,000 words. Working title placeholder - final title may change.*
 
 **The book's vision-of-the-solution chapter.** The first 23 chapters carry overwhelmingly cautionary
 narrative scaffolding (Part I victims, Part II council battle scars, the 2022 SaaS terminations).
 This Closing Chapter is the narrative payoff: a fictional first-person staff history of a
 multinational civilian climate research submarine deployment to the Antarctic Filchner-Ronne ice
-shelf. The architecture is the protagonist not because it saves anyone — it never does — but
+shelf. The architecture is the protagonist not because it saves anyone - it never does - but
 because it queues against silence, holds work through windows that don't come, and delivers when
 delivery becomes possible.
 
 - Mission codename Sunfish-1 (closes the project name loop)
 - Mission Director: Dr. Anna Yusupova, a fictional Uzbek-Russian climate oceanographer at the Arctic and Antarctic Research Institute (AARI) in St. Petersburg, born in Tashkent (LOCKED per CO directive 2026-04-30; surname is working placeholder pending CO advisor calibration)
 - Connected cast: Part I victims (Maria Santos, the construction PM, the BFSI loan officer, the GCC
-  field engineer) return as mission crew — their Part I failures became the credentials that put
+  field engineer) return as mission crew - their Part I failures became the credentials that put
   them on this boat
 - Five-act structure: Departure → Submerged Transit (with mid-mission jurisdictional crisis) →
   Death on Watch (present-tense set-piece) → Silent Relay Window → Return
@@ -398,20 +398,20 @@ delivery becomes possible.
   Maria still scarred (residual tic), Director's specific fear named (mortality + long-now compound),
   architecture appears to fail before it succeeds, death scened in present tense, dedication earned
   through scene
-- Charlie stays in Ch22 only — no cross-reference; reader carries the connection
+- Charlie stays in Ch22 only - no cross-reference; reader carries the connection
 - Concept note: `.pao-inbox/_creative/the-crossing-concept-note-2026-04-30.md`
 - Character sheets: `.pao-inbox/_creative/character-sheets/`
-- Status: PRE-DRAFT — Mission Director locked as Dr. Anna Yusupova; chapter draft pending CO advisor
+- Status: PRE-DRAFT - Mission Director locked as Dr. Anna Yusupova; chapter draft pending CO advisor
   calibration on Anna's biographical details (CO has built-in advisor; no formal outreach plan needed)
 
 ---
 
-## Epilogue — What the Stack Owes You
+## Epilogue - What the Stack Owes You
 *~2,500 words*
 
 **Note on placement:** The existing Epilogue stays untouched. The new Closing Chapter (The Crossing)
 sits between Ch23 and the Epilogue, providing the narrative climax. The Epilogue then serves as
-the calmer philosophical close after the climax — the manifesto-grade "what the architecture owes
+the calmer philosophical close after the climax - the manifesto-grade "what the architecture owes
 you" register works *after* a vision moment, not as a vision moment itself.
 
 - What the council agreed the architecture must never compromise
@@ -419,7 +419,7 @@ you" register works *after* a vision moment, not as a vision moment itself.
   GDPR Article 17 in CRDT systems, formal verification of domain-level invariants,
   long-term archival format stability
 - The implementation drift risk: how "just a quick server-side check" gradually
-  re-centralizes a local-first system — and how to prevent it
+  re-centralizes a local-first system - and how to prevent it
 - What comes next: Sunfish milestones, community governance, invitation to contribute
 - The stack's obligation: if it asks users to trust a new infrastructure model,
   it owes them data portability, disaster recovery, and honest failure modes
@@ -428,24 +428,24 @@ you" register works *after* a vision moment, not as a vision moment itself.
 
 ## Appendices
 
-### Appendix A — Sync Daemon Wire Protocol
+### Appendix A - Sync Daemon Wire Protocol
 - Formal CBOR message formats for all five protocol phases
 - Example request/response sequences with field-level annotations
 - Error codes, retry semantics, and backward-compatibility policy
 
-### Appendix B — Threat Model Worksheets
+### Appendix B - Threat Model Worksheets
 - Asset inventory template, actor taxonomy, attack tree structure
 - Filled example for the construction PM vertical
 - Key compromise incident response template
 
-### Appendix C — Further Reading
+### Appendix C - Further Reading
 - Local-first literature: Kleppmann et al., Ink & Switch essays (Pushpin, Backchat),
   CRDTech community references
-- CRDT libraries: Yjs, Loro, Automerge — comparison and selection criteria
+- CRDT libraries: Yjs, Loro, Automerge - comparison and selection criteria
 - Production analogues: Figma, Linear, Obsidian, Actual Budget, PowerSync, ElectricSQL
 - Distributed systems foundations: DDIA, Flease paper, Cambria lenses
 
-### Appendix D — Testing the Inverted Stack
+### Appendix D - Testing the Inverted Stack
 - The five-level testing pyramid: property-based, integration, fault injection,
   deterministic simulation, chaos testing
 - Mandatory scenarios before first production release: partition and reconnect,
@@ -454,14 +454,14 @@ you" register works *after* a vision moment, not as a vision moment itself.
 - Test strategy for the sync protocol: network partition simulation, clock skew injection,
   concurrent edit generation, GC boundary conditions, Byzantine operation injection
 
-### Appendix E — Citation Style
+### Appendix E - Citation Style
 - IEEE numeric citation style: in-text bracketed numbers [1], [2]; reference list ordered by
   first appearance
 - Common reference formats: book, edited chapter, journal article, conference paper,
   web/online source
 - Consistency rules for multi-source citations and capitalization
 
-### Appendix F — Regulatory Coverage Map
+### Appendix F - Regulatory Coverage Map
 - Canonical compliance matrix: SOC 2, HIPAA, GDPR (Articles 17, 25, 32, 33), CCPA, PCI-DSS,
   SOX, FERPA, FISMA, ISO 27001
 - Per-framework mapping: which architectural primitive (encryption-at-rest, ciphertext-only
@@ -471,8 +471,8 @@ you" register works *after* a vision moment, not as a vision moment itself.
 - Coverage gaps: regulatory regimes the architecture does NOT satisfy without additional
   per-vertical work (e.g., FedRAMP attested boot requirements, EU NIS2 incident reporting)
 
-### Appendix G — Glossary
-- Specialized vocabulary used throughout the book — local-first terms (CRDT, Lamport
+### Appendix G - Glossary
+- Specialized vocabulary used throughout the book - local-first terms (CRDT, Lamport
   timestamp, vector clock, causal stability, AP/CP), cryptography terms (envelope encryption,
   forward secrecy, ratchet, ephemeral key, HKDF), distributed-systems terms (Flease,
   schema epoch, manifest, attestation tier, witness)
@@ -486,18 +486,18 @@ you" register works *after* a vision moment, not as a vision moment itself.
 | Section | Target |
 |---|---|
 | Front Matter (Preface + Foreword) | ~2,000 |
-| Part I — Thesis and Pain (Ch 1–4) | ~16,200 |
-| Part II — The Council (Ch 5–10) | ~20,000 |
-| Part III — Reference Architecture (Ch 11–16; Ch15 slimmed post-split) | ~21,500 |
-| Part IV — Implementation Playbooks (Ch 17–20) | ~14,000 |
-| Part V — Operational Concerns (Ch 21–22) | ~16,500 |
-| Closing Chapter — The Crossing | ~5,000 |
+| Part I - Thesis and Pain (Ch 1–4) | ~16,200 |
+| Part II - The Council (Ch 5–10) | ~20,000 |
+| Part III - Reference Architecture (Ch 11–16; Ch15 slimmed post-split) | ~21,500 |
+| Part IV - Implementation Playbooks (Ch 17–20) | ~14,000 |
+| Part V - Operational Concerns (Ch 21–22) | ~16,500 |
+| Closing Chapter - The Crossing | ~5,000 |
 | Epilogue | ~2,500 |
 | Appendices A–G | ~13,000 |
 | **Total** | **~110,700** |
 
 (Pre-split target was ~84,700; post-split + Part V + Appendices F+G adds Part V's ~16,500
-and Appendices F+G's ~5,000 while moving ~10,000 words from Ch15 to Ch22 — net target
+and Appendices F+G's ~5,000 while moving ~10,000 words from Ch15 to Ch22 - net target
 growth ~+21k. Manuscript currently sits at 145,255; PAO's editorial-prune work will
 target ~120,000 final.)
 
@@ -507,7 +507,7 @@ target ~120,000 final.)
 
 ```
 C:\Projects\the-inverted-stack\
-├── source\                        ← gitignored — raw source papers
+├── source\                        ← gitignored - raw source papers
 │   ├── local_node_saas_v13.md
 │   ├── inverted-stack-v5.md
 │   ├── kleppmann_council_review.md
@@ -559,7 +559,7 @@ C:\Projects\the-inverted-stack\
 
 1. **Part III is specification; Part IV is tutorial.** Part III tells you what each component
    is and how it works in full. Part IV shows the minimal path to a working implementation.
-   Part IV references Part III — it does not rewrite it in tutorial voice.
+   Part IV references Part III - it does not rewrite it in tutorial voice.
 
 2. **Ch 2 is opinionated, not encyclopedic.** One paragraph per existing approach; for each:
    what it does, exactly where it stops short. Ends with a crisp statement of what this book adds.

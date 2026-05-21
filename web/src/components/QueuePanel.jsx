@@ -243,7 +243,7 @@ export default function QueuePanel({ chapters, queue, onClose }) {
         )}
       </div>
 
-      {/* ── Stage for Rendering — fills remaining space ───────────────────── */}
+      {/* ── Stage for Rendering - fills remaining space ───────────────────── */}
       <div className="queue-add-section">
 
         {/* Options form */}
@@ -330,7 +330,7 @@ export default function QueuePanel({ chapters, queue, onClose }) {
           </div>
         </div>
 
-        {/* Chapter list — fills remaining height */}
+        {/* Chapter list - fills remaining height */}
         <div className="queue-chapter-list">
           {filteredChapters.map(ch => (
             <label key={ch.id} className="queue-chapter-row">
@@ -343,7 +343,7 @@ export default function QueuePanel({ chapters, queue, onClose }) {
           )}
         </div>
 
-        {/* Stage button — pinned to bottom */}
+        {/* Stage button - pinned to bottom */}
         <div className="queue-stage-footer">
           <button className="queue-add-btn" onClick={handleAddToQueue} disabled={selectedChapters.size === 0}>
             Stage {selectedChapters.size > 0 ? `${selectedChapters.size} ` : ''}Selected

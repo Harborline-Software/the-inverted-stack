@@ -1,4 +1,4 @@
-# Migration Resume — Book Update Loop Session State
+# Migration Resume - Book Update Loop Session State
 
 **Generated:** 2026-04-27 by the autonomous /loop session.
 **Last commit before migration:** `5a02dd1` (this commit will likely follow).
@@ -29,22 +29,22 @@ The book extension loop has 10 extensions. Status as of this commit:
 
 When you resume, three new sections await your voice-pass. Each has working artifacts in `icm/06_build/<extension-id>/`:
 
-### #43 — Ch11 §Performance Contracts + Ch20 §Performance Budgets
+### #43 - Ch11 §Performance Contracts + Ch20 §Performance Budgets
 
 - **Anecdote opener** for §Why performance is a specification concern. Outline §F suggests: the moment a CRDT merge freezes the UI (force-quit / lost-state visceral); or a Linear/Notion 60fps adoption observation. Three candidate framings in `working/43-performance-contracts/outline.md` §F.
-- **Ch11 ↔ Ch20 connective tissue** — pairing sentence in each direction.
+- **Ch11 ↔ Ch20 connective tissue** - pairing sentence in each direction.
 - **Light Sinek calibration** per `~/.claude/projects/.../memory/feedback_voice_sinek_calibration.md`.
-- **2 open `<!-- CLAIM: -->` markers** at Linear 60fps and Apple HIG 16ms — non-blocking; queued for future technical-review when better source URLs surface, not for voice-check.
+- **2 open `<!-- CLAIM: -->` markers** at Linear 60fps and Apple HIG 16ms - non-blocking; queued for future technical-review when better source URLs surface, not for voice-check.
 
-### #45 — Ch15 §Collaborator Revocation + Ch20 §Revocation UX
+### #45 - Ch15 §Collaborator Revocation + Ch20 §Revocation UX
 
 - **Departure-moment anecdote** for Ch20 §The departure moment (a deliberate `<!-- voice-check: -->` HTML placeholder is in the chapter; replace it). Three candidate framings: departing employee packing a desk; business partner reading the access-ended message after a court-mediated settlement; administrator processing access revocation for a long-time colleague.
 - **Connective tissue** Ch15 ↔ Ch20.
 - **Light Sinek calibration**.
 
-### #11 — Ch21 §Operating a Fleet of Local-First Nodes (NEW chapter)
+### #11 - Ch21 §Operating a Fleet of Local-First Nodes (NEW chapter)
 
-- **Opening hook anecdote** — three candidates listed in the chapter-drafter QC notes (`working/11-fleet-management/draft.md` QC section).
+- **Opening hook anecdote** - three candidates listed in the chapter-drafter QC notes (`working/11-fleet-management/draft.md` QC section).
 - **Sharpening the provisioning-as-cultural-shift moment**.
 - **Light Sinek calibration**.
 - **Optional connective-tissue line** at close of §21.6 fleet-failure narrative.
@@ -56,7 +56,7 @@ When all three voice-pass tasks complete, each extension flips `awaiting-voice-c
 - **#48** completed the full pipeline: 3-round Kleppmann Council adversarial review (R1 REVISE 5.9 BLOCK → R2 PUBLISH 8.24 → R3 PUBLISH 8.62), 12-critic Literary Board (POLISH 8.17), 30+ substantive edits applied, Uncle-Charlie-iPhone anecdote inserted, Ch15↔Ch20 connective tissue, Sinek calibration declared no-op. **Approved.**
 - **#43, #45, #11** each cleared outline → draft → code-check → technical-review → prose-review (all PASS). Now waiting on human voice-pass.
 - **#46** drafted and applied to Ch15 (between §Collaborator Revocation and §In-Memory Key Handling). 6 new IEEE refs [14]–[19] added.
-- **#47** drafted but not yet applied — citation numbering conflict ([14]–[22] needs to renumber to [20]–[28] because #46 already claims [14]–[19]).
+- **#47** drafted but not yet applied - citation numbering conflict ([14]–[22] needs to renumber to [20]–[28] because #46 already claims [14]–[19]).
 - **#9** outline pre-staged with NEW namespace decision: `Sunfish.Kernel.Custody`.
 - **3 outlines pre-staged in parallel** as background research-assistant dispatches: #11 (became active), #47 (became active), #9 (still at outline).
 - **Sunfish package roadmap** created at `docs/reference-implementation/sunfish-package-roadmap.md` with mirror at `C:/Projects/Sunfish/docs/specifications/inverted-stack-package-roadmap.md` (Sunfish-side uncommitted at migration time).
@@ -82,7 +82,7 @@ When all three voice-pass tasks complete, each extension flips `awaiting-voice-c
 > I'm resuming a long-running book-update loop session that was migrated from Windows to macOS. Read `MIGRATION-RESUME.md` at the repo root for full context, then read `icm/pipelines/book-update-loop/state.yaml` for authoritative loop state and `icm/pipelines/book-update-loop/loop-plan.md` for the loop protocol. Three things to know up front:
 >
 > 1. **Path translation:** all references in CLAUDE.md, memory files, working artifacts, and the chapter prose to `C:/Projects/the-inverted-stack/...` map to `~/Projects/the-inverted-stack/...`, and `C:/Projects/Sunfish/...` maps to `~/Projects/Sunfish/...`. Don't rewrite anything; just translate as you read.
-> 2. **Effort policy:** per the memory entry `feedback_effort_mapping.md`, default is `/effort xhigh` for coding/agentic/multi-file work; `max` only for correctness-critical debugging or complex evaluation; `medium`/`low` for pre-decided execution. Most subagent dispatches are at opus per the agent `.md` frontmatter — that routing is automatic.
+> 2. **Effort policy:** per the memory entry `feedback_effort_mapping.md`, default is `/effort xhigh` for coding/agentic/multi-file work; `max` only for correctness-critical debugging or complex evaluation; `medium`/`low` for pre-decided execution. Most subagent dispatches are at opus per the agent `.md` frontmatter - that routing is automatic.
 > 3. **Three extensions are blocked on my voice-pass** (#43, #45, #11). I plan to handle voice-pass interactively. The autonomous queue is: apply #47 with citation renumber [14]–[22] → [20]–[28], advance #46 + #47 through code-check / tech-review / prose-review to voice-check, then draft #9, then pre-stage outlines for #12, #10, #44.
 >
 > What's the most useful next step right now? My focus today is [voice-pass on one of #43/#45/#11 / continuing the autonomous queue / something else].
@@ -133,7 +133,7 @@ ls icm/06_build/48-key-loss-recovery/
 #                connective-tissue-candidates.md, anecdote-bank.md
 ```
 
-If any of these fail, the migration is incomplete. The most likely culprit is the project-dir rename on the Mac side — Claude Code keys on `~/.claude/projects/<project-encoded-path>/` and the Windows-encoded directory name will not match the Mac path.
+If any of these fail, the migration is incomplete. The most likely culprit is the project-dir rename on the Mac side - Claude Code keys on `~/.claude/projects/<project-encoded-path>/` and the Windows-encoded directory name will not match the Mac path.
 
 ---
 

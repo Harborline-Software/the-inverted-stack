@@ -7,7 +7,7 @@ extraction-date: 2026-04-26
 extracted-by: subagent
 concepts:
 - id: PREF-01
-  name: The architectural thesis — local node as primary, vendor as optional
+  name: The architectural thesis - local node as primary, vendor as optional
   source: preface §"(opening)"
   source-paper: v13 preface
   definition: 'The book''s central thesis is the inversion of the SaaS dependency relationship: the local
@@ -101,10 +101,10 @@ concepts:
   name: Three-audience scope (architects, enterprise evaluators, founders/contributors)
   source: preface §"Who This Book Is For"
   source-paper: null
-  definition: The book is scoped for three audiences — software architects and senior engineers (Parts
+  definition: The book is scoped for three audiences - software architects and senior engineers (Parts
     III/IV technical specification), enterprise IT and decision-makers (Chapters 5, 7, 15, 19 governance
     and compliance), and open-source contributors, technical founders, and product teams (Chapters 8,
-    10, 16 commercial viability) — and a reference implementation must serve all three audience needs
+    10, 16 commercial viability) - and a reference implementation must serve all three audience needs
     simultaneously.
   must-implement: []
   verification: null

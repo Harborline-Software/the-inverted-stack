@@ -8,11 +8,11 @@ Mechanical, conservative, idempotent:
 - Skips chapters with no violations
 - Skips terms whose first occurrence is already defined (spell-out within
   ~120 chars, parenthetical, link, or "the X (TERM)" pattern)
-- Skips ambiguous acronyms (multiple possible spell-outs — DPA is a notable
+- Skips ambiguous acronyms (multiple possible spell-outs - DPA is a notable
   example: 'Data Protection Act' vs 'Data Protection Authority')
 - Skips occurrences inside code blocks, fenced code, HTML comments, or
   IEEE bracketed citation markers
-- Skips the canonical examples appendix (appendix-e — citation style
+- Skips the canonical examples appendix (appendix-e - citation style
   examples reference acronyms without prose definition by design)
 - Uses abbreviation-first format: "GDPR (General Data Protection Regulation)"
   rather than full-form-first ("the General Data Protection Regulation (GDPR)")
@@ -33,7 +33,7 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parent.parent
 CHAPTER_ROOTS = [REPO / "vol-1", REPO / "vol-2"]
 
-# Acronyms with a SINGLE canonical spell-out — eligible for auto-remediation.
+# Acronyms with a SINGLE canonical spell-out - eligible for auto-remediation.
 # Ambiguous acronyms (DPA = Act vs Authority) are intentionally omitted; they
 # need human judgement per occurrence.
 ACRONYM_SPELLOUTS: dict[str, str] = {
@@ -145,7 +145,7 @@ def strip_non_prose_for_search(text: str) -> str:
     so character indices remain valid for the original text.
 
     Headings are masked because the style guide explicitly exempts them from
-    the first-use rule — spell-outs in titles read awkwardly ("When SaaS
+    the first-use rule - spell-outs in titles read awkwardly ("When SaaS
     (Software as a Service) Fights Reality") and the next prose occurrence
     is the correct insertion point.
     """

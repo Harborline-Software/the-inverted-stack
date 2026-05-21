@@ -18,7 +18,7 @@ python build/audiobook.py --only audio-fixtures --force --per-sentence   # sente
 ```
 
 The expected pronunciations are in inline comments. Update the comments only
-after a deliberate decision — they are the contract the audiobook script must
+after a deliberate decision - they are the contract the audiobook script must
 satisfy.
 
 ---
@@ -57,7 +57,7 @@ Deploy via gRPC over WebAssembly with SQLCipher at rest. <!-- G-R-P-C, Web Assem
 
 Part I introduces the thesis. Part II runs the council review.
 Part III specifies the architecture. Part IV is the playbook.
-<!-- "Part 1" "Part 2" "Part 3" "Part 4" — never "Part eye-eye" -->
+<!-- "Part 1" "Part 2" "Part 3" "Part 4" - never "Part eye-eye" -->
 
 ---
 
@@ -77,7 +77,7 @@ ANPD oversees LGPD compliance in Brazil. <!-- A-N-P-D -->
 
 ## Numbers, currency, percentages
 
-The relay scales to 100M+ records. <!-- "100M plus records" — left as M -->
+The relay scales to 100M+ records. <!-- "100M plus records" - left as M -->
 
 Cost stays under $10K per month at 20% margin. <!-- ten thousand dollars, twenty percent -->
 
@@ -104,22 +104,22 @@ Standby maintenance window: 2:00 a.m. to 5:00 a.m. <!-- A-M -->
 
 Three priorities: (1) the relay handles enterprise scale,
 (2) Schrems II compliance is non-negotiable, (3) operating cost stays
-under target. <!-- "First," "Second," "Third," — not "left-paren one right-paren" -->
+under target. <!-- "First," "Second," "Third," - not "left-paren one right-paren" -->
 
 ---
 
 ## Em-dash, en-dash, smart quotes
 
-The architecture — as the council observed — clears Round 2 with conditions.
+The architecture - as the council observed - clears Round 2 with conditions.
 <!-- " ... " (long pause) around the apposition, not a comma -->
 
-Self-described — but procurement-blocked — proposals fail Round 1.
+Self-described - but procurement-blocked - proposals fail Round 1.
 <!-- comma micro-pause for bare em-dash usage -->
 
 Voss said, "The send-tier filter runs before the byte leaves the originating
 node." <!-- straight quotes, no phantom pauses from curly quotes -->
 
-The lens — Kelsey's — covers commercial viability. <!-- comma micro-pauses -->
+The lens - Kelsey's - covers commercial viability. <!-- comma micro-pauses -->
 
 ---
 
@@ -157,7 +157,7 @@ graph LR
 ## Footnote references
 
 The CRDT GC literature [^1] establishes the bounded-staleness invariant.
-<!-- the [^1] should be silent — stripped before TTS -->
+<!-- the [^1] should be silent - stripped before TTS -->
 
 Schrems II [1] [3] [5] cites multiple authorities. <!-- bracket numerals stay or get stripped depending on the citation style chosen -->
 
@@ -166,7 +166,7 @@ Schrems II [1] [3] [5] cites multiple authorities. <!-- bracket numerals stay or
 ## Long-form prose with multiple beats
 
 What changed between Round 1 and Round 2 is not that the architecture
-became simpler — it became precise. The earlier draft had handled the happy
+became simpler - it became precise. The earlier draft had handled the happy
 path cleanly; the partition-recovery path, not at all. A Flease-family
 protocol needs a quorum reduction rule under partition, and the original
 specification did not have one. The key compromise response had no test of

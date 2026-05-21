@@ -9,8 +9,8 @@ Last refreshed: 2026-05-01 post-cast-swap (PR #64) + Phase 7 reference-list spli
 
 | Chapter | File | ICM Stage | Words | Target | QC-1 |
 |---|---|---|---:|---:|---|
-| Foreword | `vol-1/front-matter/foreword-placeholder.md` | placeholder | 86 | — | pending contributor |
-| Preface | `vol-1/front-matter/preface.md` | icm/prose-review | 1,728 | ~1,000 | ✓ over (173%) — load-bearing authorship disclaimer 2026-05-04 (+294) |
+| Foreword | `vol-1/front-matter/foreword-placeholder.md` | placeholder | 86 | - | pending contributor |
+| Preface | `vol-1/front-matter/preface.md` | icm/prose-review | 1,728 | ~1,000 | ✓ over (173%) - load-bearing authorship disclaimer 2026-05-04 (+294) |
 | Ch 1 | `vol-1/part-1-thesis-and-pain/ch01-when-saas-fights-reality.md` | icm/voice-passed (R1+R2 council, literary board) + King-style victims (PRs #53, #54) + cast-swap Lakshmi→Sabina (PR #64) + Phase 4a Block 2 prune (2026-05-04, -63 words) | 7,605 | ~4,500 | ⚠ over (169%); narrative scenes preserved at full altitude |
 | Ch 2 | `vol-1/part-1-thesis-and-pain/ch02-local-first-serious-stack.md` | icm/voice-passed (R1+R2 council, literary board) | 5,270 | ~4,000 | ✓ over (132%) |
 | Ch 3 | `vol-1/part-1-thesis-and-pain/ch03-inverted-stack-one-diagram.md` | icm/voice-passed (R1+R2 council, literary board) + cast-swap Petra→Hayoon (PR #64) | 4,418 | ~3,000 | ✓ over (147%); audit pending (Yeoman directive) |
@@ -46,7 +46,7 @@ Last refreshed: 2026-05-01 post-cast-swap (PR #64) + Phase 7 reference-list spli
 
 **Running total (excluding foreword placeholder):** ~154,337 words (was 144,664 on 2026-04-30; +9,673 from cast-swap King-style scening on Ch1+Ch3, Phase 7 reference split duplication tax across Ch15/Ch22/Ch23, the closing chapter landing at 4,396 words, and small literary-board polish increases on Ch5–10 / Ch13–14).
 
-**On length targets:** the chapter targets in `book-structure.md` and the % columns in this manifest are industry-standard recommendations and sanity checks for visibility — not hard drivers (CO directive 2026-05-01). Phase 4 prune is a quality-driven editorial pass (cut what doesn't earn its place); the post-prune total is downstream of editorial judgment, not an input to it. See `.pao-inbox/_decisions/2026-05-01-phase4-prune-scope.md` for the scope of where to look during the pass.
+**On length targets:** the chapter targets in `book-structure.md` and the % columns in this manifest are industry-standard recommendations and sanity checks for visibility - not hard drivers (CO directive 2026-05-01). Phase 4 prune is a quality-driven editorial pass (cut what doesn't earn its place); the post-prune total is downstream of editorial judgment, not an input to it. See `.pao-inbox/_decisions/2026-05-01-phase4-prune-scope.md` for the scope of where to look during the pass.
 
 ## Voice-Pass Queue (gating event for assembly)
 
@@ -62,43 +62,43 @@ Each extension's working artifacts live at `icm/06_build/<extension-id>/`; cross
 
 The original Ch15 (22,274 words; 5.5× target) was split into three chapters per XO's UPF (`.pao-inbox/_decisions/2026-04-29-upf-ch15-split.md`):
 
-- **Ch15 — Security Architecture** (architectural primitives, ~5,722 words; Phase 7 pruned to 8 architecture-only refs)
-- **Ch22 — Key Lifecycle Operations** (KCIR + Key-Loss Recovery + Forward Secrecy, ~7,694 words; Phase 7 added 18 ops-local refs)
-- **Ch23 — Endpoint, Collaborator, and Custody Operations** (Offline Revocation + Collaborator Revocation + Endpoint Compromise + Chain-of-Custody + Event-Triggered Re-classification, ~9,732 words; Phase 7 added 24 ops-local refs)
+- **Ch15 - Security Architecture** (architectural primitives, ~5,722 words; Phase 7 pruned to 8 architecture-only refs)
+- **Ch22 - Key Lifecycle Operations** (KCIR + Key-Loss Recovery + Forward Secrecy, ~7,694 words; Phase 7 added 18 ops-local refs)
+- **Ch23 - Endpoint, Collaborator, and Custody Operations** (Offline Revocation + Collaborator Revocation + Endpoint Compromise + Chain-of-Custody + Event-Triggered Re-classification, ~9,732 words; Phase 7 added 24 ops-local refs)
 
 Phase 4 prune deferred until #45 voice-pass unlocks Ch23 §Collaborator Revocation; expected to recover ~3k words.
 Phase 5 cross-reference cleanup substantially complete (verified 2026-05-01: all Ch15 §section refs in manuscript .md files point to architectural sections that stayed in Ch15; section refs that moved already redirected to Ch22/Ch23). Phase 7 reference-list split complete (PR #65 merged 2026-05-01).
 
 ## Closing Chapter status (post PR #59)
 
-**The Crossing** (vision-of-solution narrative chapter) merged 2026-05-01. First-person staff history, Anna Yusupova POV, five-act structure (Departure, Submerged Transit, Death, Window That Doesn't Come, Return). 4,396 words. Cast: Anna Yusupova (Uzbek, AARI/St. Petersburg-affiliated), Dr. Diego Vargas (Argentine, IAA, the senior technical specialist who dies), Dr. Hiroshi Nakamura (Japanese, NIPR), Maria Santos (Brazilian, medical officer), Priya Iyer (Indian, instrumentation), Sabina Rahman (Bangladeshi, logistics — Grameen lineage), Joel Reyes (Filipino, life-support), Wanjiru Kamau (Kenyan, comms — M-PESA lineage). Concept note + character sheets at `.pao-inbox/_creative/`. Yeoman self-review directive queued in `.pao-inbox/`.
+**The Crossing** (vision-of-solution narrative chapter) merged 2026-05-01. First-person staff history, Anna Yusupova POV, five-act structure (Departure, Submerged Transit, Death, Window That Doesn't Come, Return). 4,396 words. Cast: Anna Yusupova (Uzbek, AARI/St. Petersburg-affiliated), Dr. Diego Vargas (Argentine, IAA, the senior technical specialist who dies), Dr. Hiroshi Nakamura (Japanese, NIPR), Maria Santos (Brazilian, medical officer), Priya Iyer (Indian, instrumentation), Sabina Rahman (Bangladeshi, logistics - Grameen lineage), Joel Reyes (Filipino, life-support), Wanjiru Kamau (Kenyan, comms - M-PESA lineage). Concept note + character sheets at `.pao-inbox/_creative/`. Yeoman self-review directive queued in `.pao-inbox/`.
 
 **Vol-2 reframing pending revision pass:** the locked Vol 2 design (concept note 2026-05-04) replaces Diego's death with Diego's survival + the leak-and-fire-cascade landing in Segment 3 of a multi-segment under-ice mission. The existing Vol 1 closing chapter (`vol-1/closing/the-crossing.md`) requires a separate revision pass to align with the multi-segment design + Anna-read-paper-not-built-it framing + leak-event-as-Diego-survival rather than death-scene + the **Nansen / MERIDIAN-7 rename**; ~3-5 hour pass; gated on listen-test verdict (now positive). Until that pass, the Vol 1 chapter remains the canonical Vol 1 closing as drafted.
 
-## Vol 2 status (Book 1 of the Sunfish series — story-first restructure)
+## Vol 2 status (Book 1 of the Sunfish series - story-first restructure)
 
 **Listen-test verdict: APPROVED 2026-05-05.** The Vol 2 listen-test pair (Ch 2 v4 + Ch 5 prose-pass) was rendered, listened to by CO, and approved. Authorization to proceed with Act I remaining chapters (Ch 1, 3, 4, 6) under the validated gravity canon. Story-first restructure, narrated by Anna Yusupova in first person; Vol 1 (the existing 154,337-word manuscript) is canonically Joel Reyes's research paper in-universe, with Chris Wood as real-world author (H.G. Wells convention).
 
 ### Locked names (CO directive 2026-05-05)
 
-- **Boat:** *RV Nansen* / *the Nansen* (after Fridtjof Nansen — Norwegian polar explorer + Nansen-Passport architect)
+- **Boat:** *RV Nansen* / *the Nansen* (after Fridtjof Nansen - Norwegian polar explorer + Nansen-Passport architect)
 - **Mission designation:** **MERIDIAN-7** (institutional naming pattern; consortium's 7th MERIDIAN-class expedition)
 - **Stefan's rival mission:** **HELVETICA-2** (matches corporate sponsor Helvetia Trust SA)
-- **Architecture:** *Sunfish* (the platform / OSS project — gravity, not subject)
+- **Architecture:** *Sunfish* (the platform / OSS project - gravity, not subject)
 - **Joel's submarine:** *USS Sunfish SSN-649* (unchanged)
 
 ### Chapter status (post-listen-test verdict)
 
 | Chapter | File | Status | Words | Audio |
 |---|---|---|---:|---:|
-| Ch 1 — Departure | `vol-2/act-1/ch01-departure.md` | **icm/draft (v5 — Filchner / Bobiverse register; trial promoted to canonical 2026-05-13)** | 4,720 | 22:24 |
-| Ch 2 — Recruitment Interview | `vol-2/act-1/ch02-recruitment-interview.md` | **icm/draft (v5 — Filchner / Bobiverse register; trial promoted to canonical 2026-05-13)** | 6,180 | 31:30 |
-| Ch 3 — Drake Passage | `vol-2/act-1/ch03-drake-passage-ice-edge.md` | icm/outline (Act I dispatch authorized) | — | — |
-| Ch 4 — First Submersion | `vol-2/act-1/ch04-first-submersion.md` | icm/outline (Act I dispatch authorized) | — | — |
-| Ch 5 — Day-Twenty Realization | `vol-2/act-1/ch05-day-twenty-realization.md` | **icm/draft (prose-pass; listen-test APPROVED)** | 5,971 | 36.5 min |
-| Ch 6 — First Surface, First Forsaken Reveal | `vol-2/act-1/ch06-first-surface-first-forsaken-reveal.md` | icm/outline (Act I dispatch authorized) | — | — |
-| Ch 7-12 (Act II) | `vol-2/act-2/` | icm/outline | — | — |
-| Ch 13-18 (Act III) | `vol-2/act-3/` | icm/outline | — | — |
+| Ch 1 - Departure | `vol-2/act-1/ch01-departure.md` | **icm/draft (v5 - Filchner / Bobiverse register; trial promoted to canonical 2026-05-13)** | 4,720 | 22:24 |
+| Ch 2 - Recruitment Interview | `vol-2/act-1/ch02-recruitment-interview.md` | **icm/draft (v5 - Filchner / Bobiverse register; trial promoted to canonical 2026-05-13)** | 6,180 | 31:30 |
+| Ch 3 - Drake Passage | `vol-2/act-1/ch03-drake-passage-ice-edge.md` | icm/outline (Act I dispatch authorized) | - | - |
+| Ch 4 - First Submersion | `vol-2/act-1/ch04-first-submersion.md` | icm/outline (Act I dispatch authorized) | - | - |
+| Ch 5 - Day-Twenty Realization | `vol-2/act-1/ch05-day-twenty-realization.md` | **icm/draft (prose-pass; listen-test APPROVED)** | 5,971 | 36.5 min |
+| Ch 6 - First Surface | `vol-2/act-1/ch06-first-surface.md` | icm/outline (Act I dispatch authorized) | - | - |
+| Ch 7-12 (Act II) | `vol-2/act-2/` | icm/outline | - | - |
+| Ch 13-18 (Act III) | `vol-2/act-3/` | icm/outline | - | - |
 
 **Total drafted: 11,416 words / 68.4 min audiobook** across the listen-test pair. Per the validated gravity canon, remaining Act I chapters dispatch sequentially against the canon docs.
 
@@ -108,25 +108,25 @@ Phase 5 cross-reference cleanup substantially complete (verified 2026-05-01: all
 
 | Phase | Days | Chapters | Words target |
 |---|---|---:|---:|
-| Act I — Departure and the first under-ice realization | 1-21 | Ch 1-6 | ~30,000 |
-| Act II — Subsystems hold; the contest sharpens | 22-42 | Ch 7-12 | ~30,000 |
-| Act III — Cascade, ascent, and the cumulative reveal | 43-56 | Ch 13-18 | ~33,000 |
+| Act I - Departure and the first under-ice realization | 1-21 | Ch 1-6 | ~30,000 |
+| Act II - Subsystems hold; the contest sharpens | 22-42 | Ch 7-12 | ~30,000 |
+| Act III - Cascade, ascent, and the cumulative reveal | 43-56 | Ch 13-18 | ~33,000 |
 | **Total** | 1-56 | 18 | **~93,000** |
 
 Pipeline plumbing: `build/audiobook.py` `CHAPTER_FILES` carries Ch 2 + Ch 5 active paths; `VOL2_CHAPTER_FILES` carries the remaining paths (activate as each chapter reaches `icm/draft`). GPU-proxied Kokoro engine via higgs-audio at `desktop-umt08rn:8881` is the default since 2026-05-05; ~8× faster than legacy Mac CPU path.
 
 ### Canon docs (read-order for any drafter)
 
-1. **`vol-2-software-as-gravity.md`** — software-as-gravity canon; six rails; per-chapter rail assignments; captain-asks-engineer demoted (LOCKED 2026-05-05; validated by listen-test verdict)
-2. `vol-2-archive-and-capture-convention.md` — Anchor stack + voice-register split + forensic substrate + OSS-funding-asymmetry (LOCKED 2026-05-05)
-3. `vol-2-anchor-bridge-sync-mechanic.md` — bandwidth-bounded surface windows + Wanjiru's sync-triage (LOCKED 2026-05-05)
-4. `series-arc-sunfish-trajectory.md` — series-canon-only; never referenced from Vol 2 prose (LOCKED 2026-05-05)
-5. `vol-2-concept-note-2026-05-04.md` — 12-section synthesis (concept-note §6.2 captain-asks-engineer superseded by gravity canon)
-6. `vol-2-concept-locked-elements-2026-05-04.md` — running locks index
-7. `vol-2/CHAPTER-OUTLINE.md` — working blueprint with rail assignments + log-opener patterns + signature scenes
-8. `character-sheets/` — Anna, Joel, Priya, Wanjiru, Stefan, Astrid + minor characters (Joel/Priya/Wanjiru/Stefan all carry Book 1 plot-binding metadata + Vol 2 archive-and-capture canon layers)
-9. `forsaken-position-papers/` + `oss-architects-voices/` — voice references
-10. `.pao-inbox/_decisions/2026-05-04-vol2-boat-power-option-c-locked.md` — multi-segment mission timeline
+1. **`vol-2-software-as-gravity.md`** - software-as-gravity canon; six rails; per-chapter rail assignments; captain-asks-engineer demoted (LOCKED 2026-05-05; validated by listen-test verdict)
+2. `vol-2-archive-and-capture-convention.md` - Anchor stack + voice-register split + forensic substrate + OSS-funding-asymmetry (LOCKED 2026-05-05)
+3. `vol-2-anchor-bridge-sync-mechanic.md` - bandwidth-bounded surface windows + Wanjiru's sync-triage (LOCKED 2026-05-05)
+4. `series-arc-sunfish-trajectory.md` - series-canon-only; never referenced from Vol 2 prose (LOCKED 2026-05-05)
+5. `vol-2-concept-note-2026-05-04.md` - 12-section synthesis (concept-note §6.2 captain-asks-engineer superseded by gravity canon)
+6. `vol-2-concept-locked-elements-2026-05-04.md` - running locks index
+7. `vol-2/CHAPTER-OUTLINE.md` - working blueprint with rail assignments + log-opener patterns + signature scenes
+8. `character-sheets/` - Anna, Joel, Priya, Wanjiru, Stefan, Astrid + minor characters (Joel/Priya/Wanjiru/Stefan all carry Book 1 plot-binding metadata + Vol 2 archive-and-capture canon layers)
+9. `forsaken-position-papers/` + `oss-architects-voices/` - voice references
+10. `.pao-inbox/_decisions/2026-05-04-vol2-boat-power-option-c-locked.md` - multi-segment mission timeline
 11. `.claude/skills/crew-log-style-entry/SKILL.md` + `.claude/agents/vol2-chapter-reviewer.md` + `.claude/skills/anti-ai-tells/SKILL.md` + `.claude/skills/literary-devices/SKILL.md`
 
 **No blockers from PAO side** as of 2026-05-04 evening.
@@ -134,7 +134,7 @@ Pipeline plumbing: `build/audiobook.py` `CHAPTER_FILES` carries Ch 2 + Ch 5 acti
 ## Next Steps
 
 1. **`icm/voice-check`** (author, 9 extensions): Tier 1 first per priority queue. Highest leverage: #45 Collaborator Revocation (closes Ch15 split UPF).
-2. **Phase 4 prune** (PAO directs, Yeoman executes): quality-driven editorial pass — cut what doesn't earn its place across voice-pass-unlocked chapters (Phase 4a, single pass) and incrementally per-extension as each voice-pass clears (Phase 4b). Scope at `.pao-inbox/_decisions/2026-05-01-phase4-prune-scope.md`. No target percentage; length lands where editorial judgment lands it.
+2. **Phase 4 prune** (PAO directs, Yeoman executes): quality-driven editorial pass - cut what doesn't earn its place across voice-pass-unlocked chapters (Phase 4a, single pass) and incrementally per-extension as each voice-pass clears (Phase 4b). Scope at `.pao-inbox/_decisions/2026-05-01-phase4-prune-scope.md`. No target percentage; length lands where editorial judgment lands it.
 3. **Foreword**: external contributor needed.
 4. **Closing Chapter audit** (Yeoman directive queued): five-pass King-style audit of The Crossing on main; Spanish-letter beat verification; Diego-thread continuity; granddaughter Sofía consistency.
 5. **Audiobook regen** (Yeoman directive queued): 8 chapter alignment artifacts stale after cast-swap + Phase 7; pronunciation-flag pass on cast-swap names.

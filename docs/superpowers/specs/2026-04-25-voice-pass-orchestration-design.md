@@ -1,9 +1,9 @@
-# Voice-pass Orchestration for the Entire Book — Design
+# Voice-pass Orchestration for the Entire Book - Design
 
 **Status:** Amended after council review (fb88cf9 → A-grade target)
 **Author:** Chris Wood (with Claude)
 **Date:** 2026-04-25
-**Scope:** Full manuscript — preface, ch01–ch20, epilogue, appendices A–F (F is new)
+**Scope:** Full manuscript - preface, ch01–ch20, epilogue, appendices A–F (F is new)
 **Quality target:** Universal Planning Framework A-grade after Stage 1.5 hardening
 **Council review:** `2026-04-25-voice-pass-orchestration-design.council-review.md` (B1–B5, C1–C18)
 **Pinned tooling:** Claude Code CLI as installed at session start; model `claude-sonnet-4-6` for voice agents (per agent file `model:` field). Recorded in each phase commit message.
@@ -12,15 +12,15 @@
 
 ## 1. Context and Why
 
-The Inverted Stack manuscript has been through technical review, prose review, and multiple literary-board cycles. A reader of the voice-passed Ch01 (`vol-1/_voice-drafts/final/ch01-when-saas-fights-reality.md`) reported the prose reads as "too mechanical" and "an aggressive stream of details that becomes fatiguing." A specific paragraph (Ch01 ¶73) enumerates 27 jurisdictions in 285 words — a pattern that repeats in 24 chapters and that fights the reader and the audiobook listener equally hard.
+The Inverted Stack manuscript has been through technical review, prose review, and multiple literary-board cycles. A reader of the voice-passed Ch01 (`vol-1/_voice-drafts/final/ch01-when-saas-fights-reality.md`) reported the prose reads as "too mechanical" and "an aggressive stream of details that becomes fatiguing." A specific paragraph (Ch01 ¶73) enumerates 27 jurisdictions in 285 words - a pattern that repeats in 24 chapters and that fights the reader and the audiobook listener equally hard.
 
 The work has three intertwined problems, not one:
 
-1. **Voice-sinek tunes too mechanical at chapter scale** — the agent was calibrated on a 3-paragraph example and applied unmodified to 5,000+ word chapters. The "restate 2–3 times" and "end on moral statement" rules compound across many sections into constant emphatic-declaration cadence with no narrative breath.
+1. **Voice-sinek tunes too mechanical at chapter scale** - the agent was calibrated on a 3-paragraph example and applied unmodified to 5,000+ word chapters. The "restate 2–3 times" and "end on moral statement" rules compound across many sections into constant emphatic-declaration cadence with no narrative breath.
 2. **Source prose itself is over-stuffed**, especially regulatory enumerations added during literary-board cycles to address regional-market reviewers.
-3. **Voice-pass orchestration for the whole book has not been validated** — only Ch01 has been through both passes; the workflow, the tier choices, and the per-chapter voice mapping are untested at scale.
+3. **Voice-pass orchestration for the whole book has not been validated** - only Ch01 has been through both passes; the workflow, the tier choices, and the per-chapter voice mapping are untested at scale.
 
-All three feed the same root failure: **information density that defeats narrative flow**. Audiobook makes it worse — the listener cannot skim.
+All three feed the same root failure: **information density that defeats narrative flow**. Audiobook makes it worse - the listener cannot skim.
 
 **Why this plan now:** the manuscript is structurally complete and approaches publication. Voice-pass-driven editorial work is the last major editorial pass before promotion-to-publish. Doing it well makes the difference between a tight book and a fatiguing one.
 
@@ -32,9 +32,9 @@ All three feed the same root failure: **information density that defeats narrati
 
 A manuscript on `main` where:
 
-1. **Regulatory enumerations live in references, not inline prose.** A new Appendix F — Regulatory Coverage Map holds the full table; chapters cite it with one canonical example per claim and a pointer.
-2. **Composite-character device is named openly in two places** — an expansive Sinek-voice paragraph in the Preface, and a short factual note under the Council framing heading at the start of Part II.
-3. **Voice-sinek is tuned for chapter-scale prose** — calibration test relaxed from per-section to per-chapter; scene-preservation rule added; audiobook-cadence rule added; register variation between scene/exposition allowed; Preface paragraph added as a second canonical example.
+1. **Regulatory enumerations live in references, not inline prose.** A new Appendix F - Regulatory Coverage Map holds the full table; chapters cite it with one canonical example per claim and a pointer.
+2. **Composite-character device is named openly in two places** - an expansive Sinek-voice paragraph in the Preface, and a short factual note under the Council framing heading at the start of Part II.
+3. **Voice-sinek is tuned for chapter-scale prose** - calibration test relaxed from per-section to per-chapter; scene-preservation rule added; audiobook-cadence rule added; register variation between scene/exposition allowed; Preface paragraph added as a second canonical example.
 4. **All six voice agents have been audited and tuned where needed** for chapter-scale work.
 5. **All chapters have been voice-passed** with appropriate guest voice (pass-1) and Sinek polish or normalize (pass-2), and promoted from `_voice-drafts/final/` into `vol-1/<part>/<ch>.md` on `main`.
 6. **Style guide updated with King's influence** (10% revision cut, adverb discipline, trust-the-reader). *(Done in this session.)*
@@ -66,26 +66,26 @@ The plan has failed if **any** of these are true after Phase 4:
 
 | # | Assumption | Validated by | Impact if wrong |
 |---|---|---|---|
-| A1 | Voice-sinek's mechanical feel comes from the calibration-test rules (restate 2–3×, end on moral) | Phase 2 Ch01 pilot — diff against current `_voice-drafts/final/ch01` | Hypothesis is wrong; root cause is elsewhere (probably the rule that demands ≥2 short ≤8-word sentences). Iterate Phase 1 with a different rule loosening |
-| A2 | Loosening Sinek won't lose voice fidelity | Phase 2 pilot reading — does it still sound like Sinek? | If too loose, tighten specific rules in Phase 1 retune. Two-knob problem (mechanical ↔ voiceless); finding the middle is the work |
-| A3 | Guest voice agents have analogous chapter-scale risks | Phase 1 audit + Phase 2 separate reading of pass-1 outputs | If a guest voice doesn't have the problem, leave it alone — per-agent decisions, not one-size-fits-all |
+| A1 | Voice-sinek's mechanical feel comes from the calibration-test rules (restate 2–3×, end on moral) | Phase 2 Ch01 pilot - diff against current `_voice-drafts/final/ch01` | Hypothesis is wrong; root cause is elsewhere (probably the rule that demands ≥2 short ≤8-word sentences). Iterate Phase 1 with a different rule loosening |
+| A2 | Loosening Sinek won't lose voice fidelity | Phase 2 pilot reading - does it still sound like Sinek? | If too loose, tighten specific rules in Phase 1 retune. Two-knob problem (mechanical ↔ voiceless); finding the middle is the work |
+| A3 | Guest voice agents have analogous chapter-scale risks | Phase 1 audit + Phase 2 separate reading of pass-1 outputs | If a guest voice doesn't have the problem, leave it alone - per-agent decisions, not one-size-fits-all |
 | A4 | Polish vs. normalize tier is a useful distinction | Phase 2 Ch01 (polish) vs. Ch11 (normalize) read against each other | If output is indistinguishable, collapse to one mode and simplify the orchestrator |
 | A5 | Regulatory enumerations can be compressed without losing literary-board-required coverage | Phase 0 manual review against original board feedback | If a board-required jurisdiction can't be compressed, keep it inline as a documented exception |
-| A6 | The reader who flagged Ch01 represents the broader audience | External — get a second reader on the Ch01 pilot output if possible | If the second reader disagrees, the plan still helps (tighter book regardless) but urgency drops |
-| A7 | Voice-pass actually improves the book vs. just changing it | Phase 2 — if the four pilots don't read better than their sources, the whole effort is in question | F1 fires; fall back to Alternative A (Phase 0 only) |
-| A8 | "24 chapters affected by enumeration density" is correct | Phase 0a — when sweeping, confirm or adjust the count | Scope estimate adjusts; recipe stays the same |
-| A9 | We are operating without prior art on AI-assisted prose voice-tuning iteration counts (C18). The "two retune rounds" cap in §7 is a judgement call, not an empirically supported number | External — none found at spec-writing time; if discovered later, fold into §3 | Cap may be too tight or too loose; revise based on Phase 2 evidence |
-| A10 | **Determinism stance** (C5): voice-pass is non-deterministic. Each chapter is voice-passed exactly **once per agent revision**. Re-running is a deliberate retune cycle, not a refresh. The canonical artefact is the *promoted* one; intermediate drafts are advisory. If a re-run looks better than the promoted version, the next *agent revision* incorporates the lesson — we do not swap promoted output for re-run output without re-promoting through Phase 4 | Phase 4 manifest verification | If violated, manuscript drifts silently across re-runs |
+| A6 | The reader who flagged Ch01 represents the broader audience | External - get a second reader on the Ch01 pilot output if possible | If the second reader disagrees, the plan still helps (tighter book regardless) but urgency drops |
+| A7 | Voice-pass actually improves the book vs. just changing it | Phase 2 - if the four pilots don't read better than their sources, the whole effort is in question | F1 fires; fall back to Alternative A (Phase 0 only) |
+| A8 | "24 chapters affected by enumeration density" is correct | Phase 0a - when sweeping, confirm or adjust the count | Scope estimate adjusts; recipe stays the same |
+| A9 | We are operating without prior art on AI-assisted prose voice-tuning iteration counts (C18). The "two retune rounds" cap in §7 is a judgement call, not an empirically supported number | External - none found at spec-writing time; if discovered later, fold into §3 | Cap may be too tight or too loose; revise based on Phase 2 evidence |
+| A10 | **Determinism stance** (C5): voice-pass is non-deterministic. Each chapter is voice-passed exactly **once per agent revision**. Re-running is a deliberate retune cycle, not a refresh. The canonical artefact is the *promoted* one; intermediate drafts are advisory. If a re-run looks better than the promoted version, the next *agent revision* incorporates the lesson - we do not swap promoted output for re-run output without re-promoting through Phase 4 | Phase 4 manifest verification | If violated, manuscript drifts silently across re-runs |
 
 ### Confidence Level per phase
 
 | Phase | Confidence | Reasoning |
 |---|---|---|
-| 0 — Source cleanup | **High** | Pure editorial work; tool support via `make word-count` and grep; reversible |
-| 1 — Agent tuning | **Medium** | Two-knob problem; probably solvable, possibly needs iteration |
-| 2 — Pilot | **Medium** | Pilot is the validation step; outcome unknown by design |
-| 3 — Full orchestration | **High if Phase 2 PASSes**, otherwise plan in retune | Orchestrator is proven (Ch01 ran successfully); scaling is mechanical |
-| 4 — Promotion | **High** | Per-chapter promote/reject decision is fully under user control |
+| 0 - Source cleanup | **High** | Pure editorial work; tool support via `make word-count` and grep; reversible |
+| 1 - Agent tuning | **Medium** | Two-knob problem; probably solvable, possibly needs iteration |
+| 2 - Pilot | **Medium** | Pilot is the validation step; outcome unknown by design |
+| 3 - Full orchestration | **High if Phase 2 PASSes**, otherwise plan in retune | Orchestrator is proven (Ch01 ran successfully); scaling is mechanical |
+| 4 - Promotion | **High** | Per-chapter promote/reject decision is fully under user control |
 
 ---
 
@@ -93,40 +93,40 @@ The plan has failed if **any** of these are true after Phase 4:
 
 Five phases, each with a binary PASS/FAIL gate before the next starts. Each phase boundary is a git commit.
 
-### Phase 0 — Source cleanup (editorial; no orchestration)
+### Phase 0 - Source cleanup (editorial; no orchestration)
 
-Operates directly on `vol-1/<part>/<ch>.md` files on `main`. Five workstreams. **The first is a timing pilot** — do not sweep all 24 chapters before measuring real per-chapter effort.
+Operates directly on `vol-1/<part>/<ch>.md` files on `main`. Five workstreams. **The first is a timing pilot** - do not sweep all 24 chapters before measuring real per-chapter effort.
 
 #### 0.0. Timing pilot (C13/B4)
 
-Pick **two** chapters from the audit — one HIGH-severity (e.g., Ch01 ¶73) and one MED-severity. Run the compression recipe on both. **Record actual hours spent.** Project total Phase 0 effort:
+Pick **two** chapters from the audit - one HIGH-severity (e.g., Ch01 ¶73) and one MED-severity. Run the compression recipe on both. **Record actual hours spent.** Project total Phase 0 effort:
 
 - If projection is within the original 24–48h estimate: continue Phase 0 sweep.
-- If projection is 50–100h: pause and decide. Continue (accept calendar) or invoke **Alternative A** (Phase 0 only — no voice-pass).
+- If projection is 50–100h: pause and decide. Continue (accept calendar) or invoke **Alternative A** (Phase 0 only - no voice-pass).
 - If projection is >100h: invoke Alternative B (professional copyeditor) or Alternative A.
 
 This gate fires **before** the full Phase 0 sweep. Two-chapter sample beats one-chapter assumption.
 
 #### 0a. Regulatory enumeration audit and compression
 
-The audit has already been run; results are in `docs/superpowers/specs/2026-04-25-voice-pass-orchestration-audit.md` — 24 affected chapters, with per-paragraph severity tier (HIGH/MED/TABLE) and word counts.
+The audit has already been run; results are in `docs/superpowers/specs/2026-04-25-voice-pass-orchestration-audit.md` - 24 affected chapters, with per-paragraph severity tier (HIGH/MED/TABLE) and word counts.
 
 For each **HIGH-severity** paragraph (≥10 jurisdictions in dense prose), apply the compression recipe:
 
-1. Identify the **chapter-anchor jurisdiction** — the one most relevant to the chapter's argument (e.g., GDPR/Schrems II for an EU compliance paragraph; DIFC for a UAE financial-services paragraph). If literary-board feedback specifically requested a jurisdiction for that chapter, that one is the anchor.
-2. Identify any **specifically-board-flagged jurisdictions** for that chapter that aren't the anchor — these stay inline as a short series of two or three.
-3. Lift all other jurisdictions to **Appendix F — Regulatory Coverage Map**, indexed by chapter and topic.
+1. Identify the **chapter-anchor jurisdiction** - the one most relevant to the chapter's argument (e.g., GDPR/Schrems II for an EU compliance paragraph; DIFC for a UAE financial-services paragraph). If literary-board feedback specifically requested a jurisdiction for that chapter, that one is the anchor.
+2. Identify any **specifically-board-flagged jurisdictions** for that chapter that aren't the anchor - these stay inline as a short series of two or three.
+3. Lift all other jurisdictions to **Appendix F - Regulatory Coverage Map**, indexed by chapter and topic.
 4. Replace the inline enumeration with: anchor + short series + reference pointer. Pattern:
    > "The EU's Schrems II ruling, India's DPDP Act, and the UAE's DIFC DPL 2020 are representative; the full regulatory-coverage table for this chapter is in Appendix F."
-5. Verify the paragraph still reads as one argument, not two — if compression breaks the argument, split into two paragraphs.
+5. Verify the paragraph still reads as one argument, not two - if compression breaks the argument, split into two paragraphs.
 
-For **MED-severity** paragraphs (4–9 jurisdictions): same recipe, less aggressive — keep up to four inline if they're a short series; lift the rest.
+For **MED-severity** paragraphs (4–9 jurisdictions): same recipe, less aggressive - keep up to four inline if they're a short series; lift the rest.
 
 For **TABLE-tier** paragraphs (mostly appendix-b): leave as-is unless the table has fewer than 5 rows of data, in which case consider prose.
 
 **Where literary-board feedback lives:** check `.wolf/memory.md` entries dated 2026-04-24 for the literary-board pass-1 resolution work, where regional-market reviewers' specific jurisdiction asks were itemized per chapter. Those are the asks that survive inline.
 
-#### 0b. Create Appendix F — Regulatory Coverage Map
+#### 0b. Create Appendix F - Regulatory Coverage Map
 
 Single appendix that holds the full jurisdiction × framework × applies-to-which-chapter table. Built once from the existing inline enumerations so nothing is lost.
 
@@ -134,10 +134,10 @@ Single appendix that holds the full jurisdiction × framework × applies-to-whic
 
 Two insertions:
 
-- **Preface** — the Sinek-voice paragraph: *"We invented the people. We did not invent the objections. Five composite characters — each a faithful stand-in for a domain that had every reason to dismantle this architecture — read the paper twice. What broke, broke for real reasons. What changed, changed because the reasons were good."*
-- **Top of Ch05** (or new Part II preamble file — implementer chooses) — the short factual note: *"A note on the council: The five members are composite characters — fictional practitioners constructed to embody real domains and real objections. The objections are real. The names are not."*
+- **Preface** - the Sinek-voice paragraph: *"We invented the people. We did not invent the objections. Five composite characters - each a faithful stand-in for a domain that had every reason to dismantle this architecture - read the paper twice. What broke, broke for real reasons. What changed, changed because the reasons were good."*
+- **Top of Ch05** (or new Part II preamble file - implementer chooses) - the short factual note: *"A note on the council: The five members are composite characters - fictional practitioners constructed to embody real domains and real objections. The objections are real. The names are not."*
 
-#### 0d. Style guide update — DONE
+#### 0d. Style guide update - DONE
 
 Already completed in design session: King's influence added to `docs/style/style-guide.md` (10% cut, adverb discipline, trust the reader). Phase 1 voice agents will reference this.
 
@@ -149,7 +149,7 @@ Already completed in design session: King's influence added to `docs/style/style
 - `make word-count` shows every chapter still within ±10% of target
 - Phase 0 commit message records actual hours spent vs. projected (per C13)
 
-### Phase 0.5 — Methodology check (NEW; C16/B5)
+### Phase 0.5 - Methodology check (NEW; C16/B5)
 
 **This is the load-bearing methodology test the council flagged.** It fires after Phase 0 has cleaned up Ch01 (so the comparison is against cleaned source, not stale source). Cost: ~1 hour.
 
@@ -160,7 +160,7 @@ Already completed in design session: King's influence added to `docs/style/style
    - The cleaned source `vol-1/part-1-thesis-and-pain/ch01-when-saas-fights-reality.md`
    - The new pass-1 `_voice-drafts/pass1/ch01-when-saas-fights-reality.md` (Gladwell only, no Sinek)
    - The current pass-2 `_voice-drafts/final/ch01-when-saas-fights-reality.md` (the existing Gladwell→Sinek output that was flagged as mechanical)
-3. Decide: which reads best? Specifically — does pass-1 (raw Gladwell, no Sinek polish) read better than pass-2?
+3. Decide: which reads best? Specifically - does pass-1 (raw Gladwell, no Sinek polish) read better than pass-2?
 
 #### Decision matrix
 
@@ -175,22 +175,22 @@ Already completed in design session: King's influence added to `docs/style/style
 - Decision recorded in `.wolf/cerebrum.md` `## Key Learnings` with reasoning
 - Phase 1 scope confirmed before any agent file edits
 
-### Phase 1 — Voice-agent tuning
+### Phase 1 - Voice-agent tuning
 
-**Pre-step (C2/B1) — mirror agent files into the manuscript repo.** Before any tuning, copy `~/.claude/agents/voice-*.md` to `agents/voice-*.md` in this repo. Update `build/voice-pass.py` so the prompt references `agents/voice-{voice}.md` instead of `~/.claude/agents/voice-{voice}.md`. The user-scope copy becomes a convenience mirror; the in-repo copy is the source of truth. From this point forward, all agent edits are made in `agents/` and committed alongside the chapters that result.
+**Pre-step (C2/B1) - mirror agent files into the manuscript repo.** Before any tuning, copy `~/.claude/agents/voice-*.md` to `agents/voice-*.md` in this repo. Update `build/voice-pass.py` so the prompt references `agents/voice-{voice}.md` instead of `~/.claude/agents/voice-{voice}.md`. The user-scope copy becomes a convenience mirror; the in-repo copy is the source of truth. From this point forward, all agent edits are made in `agents/` and committed alongside the chapters that result.
 
-**Pre-step (C10) — agent-prompt restriction.** Voice agents must not reference any file under `source/` (the gitignored confidential papers). Add an explicit prohibition to each agent file's "What you do not do" section: *"You do not read, reference, or quote files under `source/`. Chapter content is the only authorised input."*
+**Pre-step (C10) - agent-prompt restriction.** Voice agents must not reference any file under `source/` (the gitignored confidential papers). Add an explicit prohibition to each agent file's "What you do not do" section: *"You do not read, reference, or quote files under `source/`. Chapter content is the only authorised input."*
 
 Then for voice-sinek specifically:
 
 - Calibration test #2 (restate 2–3 times) reframed from per-section to **per-chapter** scope.
-- New rule: **scene preservation** — when source paragraph is a narrative scene (named person, time, place), do not apply restatement-loop or moral-statement-ending techniques.
-- New rule: **audiobook cadence** — no inline enumerations longer than three items; lift longer lists to a sentence break or to a referenced footnote.
-- New rule: **register variation** — explicitly call out that scene, exposition, and argument should sound different; permission to leave well-written passages alone.
-- New rule: **10% cut** — after rewriting, make a pass that cuts 10%. Borrowed from style-guide update in Phase 0d.
+- New rule: **scene preservation** - when source paragraph is a narrative scene (named person, time, place), do not apply restatement-loop or moral-statement-ending techniques.
+- New rule: **audiobook cadence** - no inline enumerations longer than three items; lift longer lists to a sentence break or to a referenced footnote.
+- New rule: **register variation** - explicitly call out that scene, exposition, and argument should sound different; permission to leave well-written passages alone.
+- New rule: **10% cut** - after rewriting, make a pass that cuts 10%. Borrowed from style-guide update in Phase 0d.
 - Add a second canonical example: the Preface composite-character paragraph, demonstrating Sinek voice at chapter-opening register.
 
-For each guest agent (gladwell, brown, grant, godin, lencioni): apply the same chapter-scale audit. The fixes are likely lighter than Sinek's. Per-agent decisions, not one-size-fits-all. **If Phase 0.5 returned "drop pass-2 for guest-voiced chapters," the audit becomes informational only — guest agents are not edited.**
+For each guest agent (gladwell, brown, grant, godin, lencioni): apply the same chapter-scale audit. The fixes are likely lighter than Sinek's. Per-agent decisions, not one-size-fits-all. **If Phase 0.5 returned "drop pass-2 for guest-voiced chapters," the audit becomes informational only - guest agents are not edited.**
 
 **Phase boundary archive (C7).** Before committing Phase 1 agent edits, archive `_voice-drafts/` to a timestamped subdirectory: `_voice-drafts/_archive/YYYY-MM-DD-HHmm-pre-phase1/`. Stale pass-1 outputs from earlier sessions otherwise poison the next pilot.
 
@@ -203,23 +203,23 @@ For each guest agent (gladwell, brown, grant, godin, lencioni): apply the same c
 - Each agent reads cleanly to a human reviewer
 - `_voice-drafts/` archived to timestamped subdir
 
-### Phase 2 — Re-pilot on four archetypes
+### Phase 2 - Re-pilot on four archetypes
 
 Run voice-pass against four deliberately-chosen pilots covering all four pipeline types:
 
-- **Ch01** (gladwell → sinek-polish) — narrative-heavy; baseline to diff against current `_voice-drafts/final/ch01`
-- **Ch11** (sinek-normalize direct) — spec chapter; pure house-voice test
-- **Ch05** (lencioni → sinek-polish) — council fable; heaviest test of polish tier
-- **Ch04** or **Ch17** (godin → sinek-polish) — decision-framework / manifesto register; least-validated voice
+- **Ch01** (gladwell → sinek-polish) - narrative-heavy; baseline to diff against current `_voice-drafts/final/ch01`
+- **Ch11** (sinek-normalize direct) - spec chapter; pure house-voice test
+- **Ch05** (lencioni → sinek-polish) - council fable; heaviest test of polish tier
+- **Ch04** or **Ch17** (godin → sinek-polish) - decision-framework / manifesto register; least-validated voice
 
 For each pilot, read **two** outputs:
 
-- Pass-1 output (`_voice-drafts/pass1/<ch>.md`) — does the **guest voice** work on its own merits?
-- Pass-2 output (`_voice-drafts/final/<ch>.md`) — did **Sinek** preserve what the guest voice did, or flatten it?
+- Pass-1 output (`_voice-drafts/pass1/<ch>.md`) - does the **guest voice** work on its own merits?
+- Pass-2 output (`_voice-drafts/final/<ch>.md`) - did **Sinek** preserve what the guest voice did, or flatten it?
 
 If a pilot reveals the wrong voice mapping, fix `voice-plan.yaml` rather than fight an agent.
 
-Generate audiobook MP3 for ≥1 pilot chapter and listen at 1.0× — validates the audiobook-cadence rule.
+Generate audiobook MP3 for ≥1 pilot chapter and listen at 1.0× - validates the audiobook-cadence rule.
 
 **Retune loop pattern (C6).** When Phase 1 retune is needed mid-Phase 2, the supported re-run pattern is:
 ```
@@ -227,7 +227,7 @@ python build/voice-pass.py --only ch01 --pass 2 --force
 ```
 This re-runs only pass-2 (Sinek) over the existing pass-1 cache. Pass-1 (the guest voice work) is preserved unless the guest agent itself was retuned, in which case use `--force` without `--pass 2` to redo both.
 
-**External-reader gate (C17/A6).** At least one pilot — recommended: Ch01 — is reviewed by a non-author reader. Their PASS/FAIL is **binding**, not advisory. Author-fatigue can produce false-PASS verdicts after enough re-readings; the external read is the truth-gate.
+**External-reader gate (C17/A6).** At least one pilot - recommended: Ch01 - is reviewed by a non-author reader. Their PASS/FAIL is **binding**, not advisory. Author-fatigue can produce false-PASS verdicts after enough re-readings; the external read is the truth-gate.
 
 #### Gate
 
@@ -237,16 +237,16 @@ This re-runs only pass-2 (Sinek) over the existing pass-1 cache. Pass-1 (the gue
 - Specific notes captured per pilot for any FAIL
 - `_voice-drafts/` archived to timestamped subdir before Phase 3 begins
 
-### Phase 3 — Full orchestration run
+### Phase 3 - Full orchestration run
 
 **Code changes required first** (these belong inside Phase 3, not deferred):
 
-- Add a third column to `vol-1/voice-plan.yaml`: per-chapter pass-2 mode (`polish` or `normalize`). Current parser splits on `:` only — needs extension to parse `chapter: voice mode` or `chapter: voice` (mode defaults to `normalize` if absent for backward compat). **Skipped if Phase 0.5 returned "drop pass-2 for guest-voiced chapters."**
+- Add a third column to `vol-1/voice-plan.yaml`: per-chapter pass-2 mode (`polish` or `normalize`). Current parser splits on `:` only - needs extension to parse `chapter: voice mode` or `chapter: voice` (mode defaults to `normalize` if absent for backward compat). **Skipped if Phase 0.5 returned "drop pass-2 for guest-voiced chapters."**
 - Update `build/voice-pass.py` to read the mode and select the matching prompt variant for pass-2 (`build_prompt_polish` vs. existing `build_prompt`).
 - Update `build/voice-pass.py` to read agent files from `agents/` in this repo, not `~/.claude/agents/` (per Phase 1 pre-step C2).
 - Add `VALID_MODES = {"polish", "normalize"}` and warn on unknown modes.
 - **Add per-invocation logging (C9/B3).** After each pass, write `_voice-drafts/_log/<UTC-timestamp>-<chapter>-pass<N>.json` containing: `input_sha256`, `output_sha256`, `agent_path`, `agent_sha256`, `claude_cli_version` (`claude --version`), `model_name`, `prompt_mode`, `exit_code`, `duration_seconds`, `wall_clock_start_iso`, `wall_clock_end_iso`. The log directory is gitignored along with the rest of `_voice-drafts/`; the per-promotion sidecar (Phase 4) lifts the relevant log entries into the repo.
-- Decide whether Appendix F gets voice-passed at all — recommendation: **skip** (it's a coverage table, not prose). Add `appendix-f` to `voice-plan.yaml` with a `skip` voice marker or omit entirely.
+- Decide whether Appendix F gets voice-passed at all - recommendation: **skip** (it's a coverage table, not prose). Add `appendix-f` to `voice-plan.yaml` with a `skip` voice marker or omit entirely.
 
 Then run `python build/voice-pass.py --force` over the remaining ~23 chapters (27 total in plan minus 4 pilots already done). Review per-chapter OK/FAIL line; re-run any FAIL individually with `--only`.
 
@@ -258,7 +258,7 @@ Then run `python build/voice-pass.py --force` over the remaining ~23 chapters (2
 - No FAIL lines outstanding after retries
 - Spot-check N≥6 chapters across all four pipeline types
 
-### Phase 4 — Promotion to `main`
+### Phase 4 - Promotion to `main`
 
 Diff each `_voice-drafts/final/<ch>.md` against `vol-1/<part>/<ch>.md`. For each chapter, decide PROMOTE or REJECT (keep source, log why). A small script or Make target automates the file copy + ICM marker update.
 
@@ -266,7 +266,7 @@ After promotion: run `make word-count`, `make draft-pdf`, `make epub`, and audio
 
 **Sidecar manifest per promoted chapter (C3/B1).** For each PROMOTE, write `vol-1/<part>/<ch>.manifest.json` containing the relevant Phase 3 log entry: `input_sha256` (the source at time of voice-pass), `output_sha256` (the voice-passed draft, which must match the bytes being promoted), `agent_path`, `agent_sha256`, `claude_cli_version`, `model_name`, `prompt_mode`, `wall_clock_start_iso`, `promoted_at_iso`, `promoter` (git user). Manifests are checked into the repo. They are the audit trail.
 
-**Hash verification (C11).** Promotion script computes SHA-256 of `_voice-drafts/final/<ch>.md` and compares to the recorded `output_sha256` in the Phase 3 log. Mismatch halts that chapter's promotion — indicates the draft was modified post-pass (manual edit, partial overwrite, etc.). Recovery: re-run pass-2 with `--force --only`, or accept the manual edit by recomputing the hash and updating the log entry with `manual_edit: true`.
+**Hash verification (C11).** Promotion script computes SHA-256 of `_voice-drafts/final/<ch>.md` and compares to the recorded `output_sha256` in the Phase 3 log. Mismatch halts that chapter's promotion - indicates the draft was modified post-pass (manual edit, partial overwrite, etc.). Recovery: re-run pass-2 with `--force --only`, or accept the manual edit by recomputing the hash and updating the log entry with `manual_edit: true`.
 
 #### Gate
 
@@ -296,7 +296,7 @@ After promotion: run `make word-count`, `make draft-pdf`, `make epub`, and audio
 
 ### Audiobook listener test
 
-Generate audiobook MP3 for ≥1 pilot chapter and listen at 1.0× playback. Cadence is the rule most likely to fail silently — prose can read fine on the page and still fatigue when read aloud.
+Generate audiobook MP3 for ≥1 pilot chapter and listen at 1.0× playback. Cadence is the rule most likely to fail silently - prose can read fine on the page and still fatigue when read aloud.
 
 ---
 
@@ -304,11 +304,11 @@ Generate audiobook MP3 for ≥1 pilot chapter and listen at 1.0× playback. Cade
 
 | Phase | Reversibility | Mechanism |
 |---|---|---|
-| 0 — Source cleanup | Fully reversible | `git revert` Phase 0 commits |
-| 1 — Agent tuning | Fully reversible | Agent files committed before edits; restore from git history |
-| 2 — Pilots | No cleanup needed | Drafts in gitignored `_voice-drafts/` |
-| 3 — Full run | No cleanup needed | Same |
-| 4 — Promotion | Reversible per chapter | Each promotion is a separate commit; `git revert <commit>` per chapter |
+| 0 - Source cleanup | Fully reversible | `git revert` Phase 0 commits |
+| 1 - Agent tuning | Fully reversible | Agent files committed before edits; restore from git history |
+| 2 - Pilots | No cleanup needed | Drafts in gitignored `_voice-drafts/` |
+| 3 - Full run | No cleanup needed | Same |
+| 4 - Promotion | Reversible per chapter | Each promotion is a separate commit; `git revert <commit>` per chapter |
 
 ---
 
@@ -319,28 +319,28 @@ Generate audiobook MP3 for ≥1 pilot chapter and listen at 1.0× playback. Cade
 - **Phase 0.0:** if 2-chapter timing pilot projects >100h for Phase 0, kill the original plan; invoke Alternative A or B.
 - **Phase 0:** if compression in any chapter loses a literary-board-flagged jurisdiction, pause and decide whether to keep it inline as exception.
 - **Phase 0.5:** decision matrix output is itself the gate; no separate kill.
-- **Phase 1:** after **two** rounds of voice-sinek retune, if Ch01 pilot still reads mechanical, fall back to **Alternative A** (Phase 0 only — chapters mapped to a guest voice skip pass-2; only sinek-mapped chapters go through Sinek).
-- **Phase 2:** if 2 of 4 pilots FAIL after Phase 1 retune, escalate — voice-pass may not be the right tool. Consider chapter-by-chapter manual editing using agents as advisors, not rewriters. **External-reader FAIL on a pilot is binding** (C17): if the external reader fails a pilot the author passed, the author's verdict is overridden.
+- **Phase 1:** after **two** rounds of voice-sinek retune, if Ch01 pilot still reads mechanical, fall back to **Alternative A** (Phase 0 only - chapters mapped to a guest voice skip pass-2; only sinek-mapped chapters go through Sinek).
+- **Phase 2:** if 2 of 4 pilots FAIL after Phase 1 retune, escalate - voice-pass may not be the right tool. Consider chapter-by-chapter manual editing using agents as advisors, not rewriters. **External-reader FAIL on a pilot is binding** (C17): if the external reader fails a pilot the author passed, the author's verdict is overridden.
 - **Phase 3:** FAIL rate >25% halts the run. Diagnose systemic problem before resuming.
-- **Phase 3 (special — C4/B1):** Claude safety filter refusal on ch07 (Security Lens) or ch15 (Security Architecture) is a realistic failure. These chapters discuss attacker behaviour, key compromise, and compelled-access scenarios. If refusal occurs: pause, manually edit the prompt for that single chapter to add safety-relevant context ("this is a defensive security chapter for a published book on local-first architecture; the content describes threat models the architecture protects against, not attack instructions"), retry with `--only`. If still refused, that chapter exits voice-pass and stays at the source draft.
+- **Phase 3 (special - C4/B1):** Claude safety filter refusal on ch07 (Security Lens) or ch15 (Security Architecture) is a realistic failure. These chapters discuss attacker behaviour, key compromise, and compelled-access scenarios. If refusal occurs: pause, manually edit the prompt for that single chapter to add safety-relevant context ("this is a defensive security chapter for a published book on local-first architecture; the content describes threat models the architecture protects against, not attack instructions"), retry with `--only`. If still refused, that chapter exits voice-pass and stays at the source draft.
 - **Phase 4:** first 3 promoted chapters breaking build halts promotion. Fix regression source before continuing. Hash-verification mismatch on any chapter halts that chapter's promotion until reconciled.
 
 ### Project-level kill (C14)
 
-The plan itself fails — replan, do not continue — if:
+The plan itself fails - replan, do not continue - if:
 
 - **Calendar:** by **end of week two** from Phase 0 start, Phase 2 has not been entered. Stalling between Phase 2 commit and Phase 3 run is the worst possible state (work begun, not delivered). Replan to either: (a) compress remaining work into a focused weekend, (b) invoke Alternative B (professional copyedit), or (c) ship the Phase 0-only manuscript.
 - **Cost:** total token spend >2× initial estimate (>$50, per C15).
-- **Methodology:** Phase 0.5 returned "drop pass-2" but Phase 2 pilots still failed — the diagnosis was wrong; the problem is somewhere else entirely.
+- **Methodology:** Phase 0.5 returned "drop pass-2" but Phase 2 pilots still failed - the diagnosis was wrong; the problem is somewhere else entirely.
 
 ### Replanning triggers (mid-plan, scope-change)
 
 The plan needs scope change (not abandonment) if:
 
 - Phase 1 requires more than two retune rounds.
-- Phase 2 reveals wrong voice-mapping for ≥2 chapters — `voice-plan.yaml` itself needs design work.
+- Phase 2 reveals wrong voice-mapping for ≥2 chapters - `voice-plan.yaml` itself needs design work.
 - Phase 3 FAIL rate exceeds 25%.
-- Source-edit-after-Phase-3 (C8) triggers re-run of >3 chapters — stop, finish source edits, restart Phase 3.
+- Source-edit-after-Phase-3 (C8) triggers re-run of >3 chapters - stop, finish source edits, restart Phase 3.
 
 ### Incident response runbook for "promoted chapter contains hallucinated content" (C12)
 
@@ -348,7 +348,7 @@ If a reader, technical reviewer, or you discover that a promoted chapter contain
 
 1. **Halt** any in-flight Phase 3 or Phase 4 work for related chapters.
 2. **`git revert`** the promotion commit for the affected chapter. The source-of-truth becomes the pre-voice-pass version.
-3. **Read the audit log** — find the `_voice-drafts/_log/` entry referenced by the chapter's sidecar manifest. Identify: which agent revision, which model, which prompt mode produced the offending content.
+3. **Read the audit log** - find the `_voice-drafts/_log/` entry referenced by the chapter's sidecar manifest. Identify: which agent revision, which model, which prompt mode produced the offending content.
 4. **Decide one of three paths:**
    - **Retune the agent** if the failure looks like a systematic agent issue → repeat Phase 1 retune for that agent only.
    - **Run through literary-board agent** if the failure is content-substantive (a claim that should never have survived review) → re-cycle through `literary-board`.
@@ -361,8 +361,8 @@ If a reader, technical reviewer, or you discover that a promoted chapter contain
 
 The orchestrator already supports both knobs needed for resume:
 
-- `--only <substring>` — retry a single chapter
-- `--force` — overwrite an existing draft
+- `--only <substring>` - retry a single chapter
+- `--force` - overwrite an existing draft
 
 Pass-1 outputs persist in `_voice-drafts/pass1/`, so if Sinek's tune changes mid-run, only pass-2 needs re-run for affected chapters.
 
@@ -422,7 +422,7 @@ If model version drifts mid-plan (Anthropic publishes a new Sonnet), pause and d
 
 | Resource | Path | Purpose |
 |---|---|---|
-| Voice agents (source of truth) | `agents/voice-{sinek,gladwell,brown,grant,godin,lencioni}.md` | The agents being tuned — mirrored into this repo per Phase 1 pre-step |
+| Voice agents (source of truth) | `agents/voice-{sinek,gladwell,brown,grant,godin,lencioni}.md` | The agents being tuned - mirrored into this repo per Phase 1 pre-step |
 | Voice agents (user-scope mirror) | `~/.claude/agents/voice-*.md` | Convenience copy for direct `@voice-X` invocation; not the source of truth |
 | Plan file | `vol-1/voice-plan.yaml` | Chapter→voice mapping; gets a third column for polish/normalize mode |
 | Orchestrator | `build/voice-pass.py` | Headless dispatch script |
@@ -431,7 +431,7 @@ If model version drifts mid-plan (Anthropic publishes a new Sonnet), pause and d
 | Source paper | `source/local_node_saas_v13.md` | For technical accuracy when reviewing voice-passed chapters |
 | Build targets | `build/Makefile` | `make word-count`, `make draft-pdf`, `make epub`, `make code-check` |
 | Audiobook builder | `build/audiobook.py` | TTS pipeline; cadence verification |
-| Existing Ch01 baseline | `vol-1/_voice-drafts/final/ch01-when-saas-fights-reality.md` | Diff target for Phase 2 Ch01 pilot — proves whether tune helped |
+| Existing Ch01 baseline | `vol-1/_voice-drafts/final/ch01-when-saas-fights-reality.md` | Diff target for Phase 2 Ch01 pilot - proves whether tune helped |
 | Council reviewer (for spec hardening) | `.claude/agents/council-reviewer` (or `literary-board`) | Adversarial review of this spec or chapters |
 
 ---
@@ -440,25 +440,25 @@ If model version drifts mid-plan (Anthropic publishes a new Sonnet), pause and d
 
 Findings are routed into the OpenWolf system as follows.
 
-After Phase 2 — append to `.wolf/cerebrum.md` `## Key Learnings`:
+After Phase 2 - append to `.wolf/cerebrum.md` `## Key Learnings`:
 
 - What voice-sinek rule actually caused the mechanical feel (validates or refutes assumption A1).
 - Which guest agents needed tuning vs. which were already chapter-scale-ready.
 - Which polish/normalize tier assignments worked and which didn't.
 
-After Phase 3 — append to `.wolf/buglog.json`:
+After Phase 3 - append to `.wolf/buglog.json`:
 
 - Any orchestrator failure modes encountered and their fixes.
 - Any agent prompt regressions discovered.
 
-After Phase 4 — append to `.wolf/memory.md`:
+After Phase 4 - append to `.wolf/memory.md`:
 
 - Promote/reject ratio per chapter type (Part I narrative vs. Part III spec vs. Part IV playbook etc.).
 - Any chapters requiring literary-board re-cycle.
 
 ---
 
-## 12. Provenance and Reproducibility (NEW — addresses B1, B3)
+## 12. Provenance and Reproducibility (NEW - addresses B1, B3)
 
 The single largest unowned risk the council found: **the agent that voiced the book is not in the book's git history.** This section consolidates the artefacts required to make every voiced chapter reproducible from its commit.
 
@@ -467,8 +467,8 @@ The single largest unowned risk the council found: **the agent that voiced the b
 | Artefact | Repo path | Created by |
 |---|---|---|
 | Agent files (source of truth) | `agents/voice-*.md` | Phase 1 pre-step; mirrored from `~/.claude/agents/` |
-| Per-invocation log | `_voice-drafts/_log/<UTC>-<chapter>-pass<N>.json` | `build/voice-pass.py` (gitignored — ephemeral) |
-| Per-promotion sidecar manifest | `vol-1/<part>/<ch>.manifest.json` | Phase 4 promotion script (committed — permanent) |
+| Per-invocation log | `_voice-drafts/_log/<UTC>-<chapter>-pass<N>.json` | `build/voice-pass.py` (gitignored - ephemeral) |
+| Per-promotion sidecar manifest | `vol-1/<part>/<ch>.manifest.json` | Phase 4 promotion script (committed - permanent) |
 | Phase commit messages | git history | Each phase's commit; includes CLI version + model name |
 
 ### Manifest schema (the audit trail)
@@ -495,7 +495,7 @@ The single largest unowned risk the council found: **the agent that voiced the b
 }
 ```
 
-The manifest is the union of (a) the Phase 3 per-invocation log entry plus (b) the four promotion-time fields (`promoted_sha256`, `promoted_at_iso`, `promoter`, `manual_edit`). Forensic fields from Phase 3 (`exit_code`, `duration_s`, `wall_clock_end_iso`, `pass_num`) carry through into the manifest as additional context — useful for incident response when a chapter's prose is later questioned.
+The manifest is the union of (a) the Phase 3 per-invocation log entry plus (b) the four promotion-time fields (`promoted_sha256`, `promoted_at_iso`, `promoter`, `manual_edit`). Forensic fields from Phase 3 (`exit_code`, `duration_s`, `wall_clock_end_iso`, `pass_num`) carry through into the manifest as additional context - useful for incident response when a chapter's prose is later questioned.
 
 ### Reproducibility procedure
 
@@ -507,7 +507,7 @@ To reproduce any promoted chapter from its manifest:
 4. Restore the source from `input_sha256`.
 5. Install Claude Code CLI at the version recorded.
 6. Run `python build/voice-pass.py --only <chapter> --force --pass <N>`.
-7. Compare the resulting `output_sha256` to the manifest. Voice-pass is non-deterministic (per A10), so byte-exact reproduction is **not** the goal — the goal is forensic reconstruction of "what we ran." If the new output differs substantively, that is itself a finding (model drift).
+7. Compare the resulting `output_sha256` to the manifest. Voice-pass is non-deterministic (per A10), so byte-exact reproduction is **not** the goal - the goal is forensic reconstruction of "what we ran." If the new output differs substantively, that is itself a finding (model drift).
 
 ### Enforcement
 
@@ -519,20 +519,20 @@ To reproduce any promoted chapter from its manifest:
 After Phase 4 promotion succeeds, the manuscript exits to one of three states:
 
 - **Re-cycle through literary board** for any chapter where Phase 4 promote-vs-reject was uncertain. Use the existing `literary-board` agent.
-- **Professional copyedit pass** as a final polish (Alternative B from Stage 0 — kept as post-completion option).
+- **Professional copyedit pass** as a final polish (Alternative B from Stage 0 - kept as post-completion option).
 - **Ship.** No further structural review needed.
 
 **Decision rule:** if ≥3 chapters required REJECT-and-keep-source in Phase 4, recycle through literary board first. Otherwise, decide between copyedit pass and ship based on calendar pressure.
 
 ---
 
-## 14. Stage 0 — Alternatives Considered
+## 14. Stage 0 - Alternatives Considered
 
 | Alternative | Decision | Rationale |
 |---|---|---|
-| **A. Phase 0 only — no voice-pass** | **Held as escape hatch** | Skips voice-consistency work and the 6 agents already built; doesn't address part-by-part voice register. But Phase 0 has standalone value — if Phases 1–3 derail (kill criterion fires), Phase 0 alone may fix the original reader complaint about density |
-| **B. Hire human copyeditor ($2–4k)** | **Held as post-completion option** | Copyeditors smooth; they don't voice. Book wants different registers in different parts — that's voice work. But a professional pass after voice-pass may be needed for final polish |
-| **C. Do nothing — accept current draft** | **Rejected** | User identified the problem; audiobook makes it worse |
+| **A. Phase 0 only - no voice-pass** | **Held as escape hatch** | Skips voice-consistency work and the 6 agents already built; doesn't address part-by-part voice register. But Phase 0 has standalone value - if Phases 1–3 derail (kill criterion fires), Phase 0 alone may fix the original reader complaint about density |
+| **B. Hire human copyeditor ($2–4k)** | **Held as post-completion option** | Copyeditors smooth; they don't voice. Book wants different registers in different parts - that's voice work. But a professional pass after voice-pass may be needed for final polish |
+| **C. Do nothing - accept current draft** | **Rejected** | User identified the problem; audiobook makes it worse |
 | **D. Voice-pass without source cleanup** | **Rejected** | Voice agents will not reliably compress 26-jurisdiction enumerations without dropping or hallucinating jurisdictions |
 
 ---
@@ -549,7 +549,7 @@ These are choices the implementation can resolve cold; flagging them so the writ
 
 ---
 
-## Appendix — Universal Planning Framework checklist
+## Appendix - Universal Planning Framework checklist
 
 | Section | Status |
 |---|---|

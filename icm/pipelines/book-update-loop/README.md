@@ -1,4 +1,4 @@
-# Book Update Loop — Index + Quick Start
+# Book Update Loop - Index + Quick Start
 
 > **Historical artifact.** This loop drove the Vol-1-extensions queue (#9–#12, #43–#48). It was moved from `docs/book-update-plan/` to `icm/pipelines/book-update-loop/` on 2026-05-11 when the repo adopted the `icm/` pipeline layout. The working-item folders it produced now live in `icm/06_build/` and `icm/07_review/`. Path references in this file and in `loop-plan.md` / `state.yaml` reflect the pre-migration layout and are preserved verbatim as an audit trail.
 
@@ -8,10 +8,10 @@ This directory contains the loopable execution plan for incorporating 10 Volume-
 
 | File | Purpose |
 |---|---|
-| `README.md` | This file — index + quick-start |
+| `README.md` | This file - index + quick-start |
 | `loop-plan.md` | The comprehensive plan (12 sections; the loop reads this) |
 | `state.yaml` | Operational state across iterations (loop reads + writes every iteration) |
-| `working/` | Per-extension working files (outlines, draft notes, review reports) — created by the loop |
+| `working/` | Per-extension working files (outlines, draft notes, review reports) - created by the loop |
 | `STOPPED.md` | Created by loop when a kill trigger fires; explains what happened |
 
 ## Quick start
@@ -101,6 +101,6 @@ This loop edits BOOK CHAPTERS in `vol-1/`. It does NOT touch:
 - `docs/` (specs, design decisions, MVP plan, etc.)
 - `.claude/` (agents, skills, settings)
 - `build/` (build scripts)
-- `source/` (source papers — gitignored)
+- `source/` (source papers - gitignored)
 
 If you do manual chapter edits while the loop is running, pause it first (see "Pause the loop" above) to avoid commit conflicts.

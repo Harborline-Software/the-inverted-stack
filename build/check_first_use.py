@@ -21,7 +21,7 @@ Definition patterns recognized as acceptable:
         "Linear ([linear.app](...))"
     - Definitional phrase:
         "Linear, the issue tracker"
-        "Linear — the issue tracker"
+        "Linear - the issue tracker"
 
 Exit code: 0 if zero violations, 1 if any violations found.
 """

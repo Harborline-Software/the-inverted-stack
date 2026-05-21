@@ -30,7 +30,7 @@ export default function CommentToolbar({ chapterId, chapterTitle, chapterSlug, o
   const [inputValue, setInputValue] = useState('')
   const [saving, setSaving] = useState(false)
   const textareaRef = useRef(null)
-  // True while the user is in the comment-input stage — prevents mouseup/selectionchange
+  // True while the user is in the comment-input stage - prevents mouseup/selectionchange
   // from dismissing the toolbar when the browser clears the document selection on textarea click.
   const inputModeRef = useRef(false)
 
@@ -43,7 +43,7 @@ export default function CommentToolbar({ chapterId, chapterTitle, chapterSlug, o
 
   useEffect(() => {
     const onSelectionChange = () => {
-      // Don't dismiss while the user is composing a comment — clicking into
+      // Don't dismiss while the user is composing a comment - clicking into
       // the textarea clears the document selection and would wipe the form.
       if (inputModeRef.current) return
       const result = getSelectionInMarkdownBody()

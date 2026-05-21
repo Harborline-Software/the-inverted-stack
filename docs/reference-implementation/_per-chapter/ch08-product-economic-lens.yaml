@@ -22,7 +22,7 @@ concepts:
     than feature access
   - Project positioning is documented as infrastructure rather than as a product with locked features
   verification: Repository at first public release contains the full application source under an open-source
-    license; pricing page describes the commercial offer in terms of relay, support, and compliance —
+    license; pricing page describes the commercial offer in terms of relay, support, and compliance -
     not feature unlock.
   kleppmann-properties:
   - P5
@@ -47,7 +47,7 @@ concepts:
   source: ch08 §"No First Customer Archetype"
   source-paper: null
   definition: A specified first customer is recorded as a tuple of job title, company size, problem, and
-    acquisition channel — not as a demographic descriptor — so the customer development plan has an executable
+    acquisition channel - not as a demographic descriptor - so the customer development plan has an executable
     first step.
   must-implement:
   - Commercial plan names the first customer's job title, company size, and named pain
@@ -76,7 +76,7 @@ concepts:
   name: Named OSS-to-paid conversion trigger
   source: ch08 §"No OSS-to-Paid Conversion Mechanism"
   source-paper: null
-  definition: The commercial model names a specific user-observable event — not a need — that converts
+  definition: The commercial model names a specific user-observable event - not a need - that converts
     a free user into a paying customer, and the product is built so that event predictably occurs.
   must-implement:
   - The conversion trigger is named as a discrete event (e.g., "second device or second team member needs
@@ -105,8 +105,8 @@ concepts:
   name: Vertical-first market selection on documented downtime cost
   source: ch08 §"What Changed Between Rounds"
   source-paper: null
-  definition: The initial target vertical is selected on three specific properties — documented connectivity
-    failures, customer-owned legally significant data, and a measurable downtime cost — rather than on
+  definition: The initial target vertical is selected on three specific properties - documented connectivity
+    failures, customer-owned legally significant data, and a measurable downtime cost - rather than on
     founder affinity or addressable market size.
   must-implement:
   - Vertical selection memo names documented connectivity-failure conditions for the target buyer
@@ -137,7 +137,7 @@ concepts:
   name: Five-step customer development path
   source: ch08 §"What Changed Between Rounds"
   source-paper: null
-  definition: A repeatable customer development sequence — identify ten target operators through industry
+  definition: A repeatable customer development sequence - identify ten target operators through industry
     channels, conduct discovery interviews on a single cost-of-failure question, locate the workflow with
     measurable repeated cost, build directly to that scenario, then measure ninety-day relay activation
     on one live team.
@@ -301,8 +301,8 @@ concepts:
   source: ch08 §"Year-Two Failure Modes"
   source-paper: null
   definition: Because the relay protocol is published and the relay binary is open-source, the managed-relay
-    business is defended by three explicit moats — product-integrated onboarding, full-stack support depth,
-    and amortized regulatory and compliance certification — that operate at non-infrastructure margins
+    business is defended by three explicit moats - product-integrated onboarding, full-stack support depth,
+    and amortized regulatory and compliance certification - that operate at non-infrastructure margins
     where commodity providers cannot compete.
   must-implement:
   - Relay onboarding completes in seconds from within the application without exposing infrastructure
@@ -378,7 +378,7 @@ concepts:
   name: Documented project governance model
   source: ch08 §"Year-Two Failure Modes"
   source-paper: null
-  definition: A governance model — BDFL, contributor council, or lightweight stewardship — is documented
+  definition: A governance model - BDFL, contributor council, or lightweight stewardship - is documented
     publicly before the first external pull request so the first significant disagreement has a defined
     resolution path rather than producing a community crisis.
   must-implement:
@@ -407,10 +407,10 @@ concepts:
   name: Region-specific go-to-market channel matrix
   source: ch08 §"The Customer Acquisition Channel"
   source-paper: null
-  definition: The commercial plan names a distinct acquisition channel per major region — product-led
+  definition: The commercial plan names a distinct acquisition channel per major region - product-led
     for US and European small teams, relationship-led with system integrators for GCC and India BFSI,
     agritech and fintech network distribution for Sub-Saharan Africa and Latin America, and import-substitution
-    channels for CIS — rather than assuming a single global motion.
+    channels for CIS - rather than assuming a single global motion.
   must-implement:
   - Go-to-market plan names the dominant channel per named region
   - The plan identifies system-integrator or association partners by name in relationship-led regions
@@ -442,8 +442,8 @@ concepts:
   source: ch08 §"The Commercial Differentiator No Competitor Can Claim"
   source-paper: v13 §17
   definition: The architecture's structural ability to keep operating after vendor commercial relationship
-    is severed — empirically anchored by the 2022 Western SaaS withdrawal from Russia and CIS markets
-    — is positioned in procurement materials as a structural commercial claim that cloud-dependent competitors
+    is severed - empirically anchored by the 2022 Western SaaS withdrawal from Russia and CIS markets
+    - is positioned in procurement materials as a structural commercial claim that cloud-dependent competitors
     cannot make without re-architecture.
   must-implement:
   - Procurement and sales materials name vendor-continuity-on-suspension as a structural property of the

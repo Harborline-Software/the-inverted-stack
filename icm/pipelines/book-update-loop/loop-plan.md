@@ -50,7 +50,7 @@ Each iteration of the loop:
 4. **Updates state** with new stage + commit SHA
 5. **Commits** the work (book chapter edit + state file update in one commit)
 6. **Reports** what was done in 2-3 sentences
-7. **Stops** — the loop fires the next iteration on schedule
+7. **Stops** - the loop fires the next iteration on schedule
 
 ### Bounded scope per iteration
 
@@ -65,7 +65,7 @@ ICM stages per extension:
 | `code-check` | Validate any code snippets compile / Sunfish package references are real | none (script-driven) | Code-check report; fix any invalid references |
 | `technical-review` | Read draft as hostile reviewer; check claims against v13/v5 source papers | `@technical-reviewer` | Technical review report; address findings before advancing |
 | `prose-review` | Active voice, no hedging, no academic scaffolding | `@prose-reviewer` then `@style-enforcer` | Style fixes applied in place |
-| `voice-check` | **HUMAN ONLY** — author adds personal anecdotes, connective tissue | Loop stops here; surfaces for human | State marked `awaiting-voice-check`; loop pauses on this extension |
+| `voice-check` | **HUMAN ONLY** - author adds personal anecdotes, connective tissue | Loop stops here; surfaces for human | State marked `awaiting-voice-check`; loop pauses on this extension |
 | `approved` | After human voice-check, mark approved | none | State marked `approved` |
 | `assembled` | Already in main; included in next ASSEMBLY.md run | none | State marked `assembled` |
 
@@ -91,7 +91,7 @@ last-iteration: 2026-04-26T14:00:00Z
 last-iteration-id: "iter-0042"
 last-commit: "<sha>"
 
-# Priority order — loop processes these in order; can be re-ordered between
+# Priority order - loop processes these in order; can be re-ordered between
 # iterations if priorities shift
 priority-order:
   - 48-key-loss-recovery       # Most common P7 failure mode; highest user value
@@ -148,7 +148,7 @@ quality-gates:
     voice-check: null
     approved: false
 
-# Kill triggers — set to true to stop the loop on next iteration
+# Kill triggers - set to true to stop the loop on next iteration
 kill-triggers:
   user-pause: false      # User can flip to true to pause loop
   budget-exceeded: false # Set if total iterations exceed budget
@@ -164,7 +164,7 @@ The loop reads this file at the start of every iteration and writes it at the en
 
 Detailed spec per extension to guide drafting. Loop reads the relevant entry when starting work on an extension.
 
-### 48 — Key-loss recovery (HIGH priority)
+### 48 - Key-loss recovery (HIGH priority)
 
 **Why first:** Most common P7 failure mode in real-world local-first deployments. Affects every consumer scenario. Without this, P7 promise breaks at first password forgotten / device lost / death without succession.
 
@@ -185,7 +185,7 @@ Ch15 new section:
   - 48d Biometric-derived secondary key
   - 48e Timed recovery with grace period
   - 48f Recovery-event audit trail
-- Threat model (recovery-as-attack-vector — defending against adversary using recovery to take over)
+- Threat model (recovery-as-attack-vector - defending against adversary using recovery to take over)
 - Recommended deployment combinations per use case (consumer, SMB, regulated)
 - Cross-references to #32 (succession) and #18 (delegated capability)
 
@@ -202,13 +202,13 @@ Ch20 new section:
 
 **Prose-review focus:** Active voice; no hedging on recovery guarantees; honest about limitations (recovery requires pre-arrangement; lost keys without pre-arrangement = lost data).
 
-**Voice-check (human):** Add a personal anecdote about key loss (lost crypto-wallet seed, forgotten password recovery, family member death without password handoff) — relatable + sets emotional context.
+**Voice-check (human):** Add a personal anecdote about key loss (lost crypto-wallet seed, forgotten password recovery, family member death without password handoff) - relatable + sets emotional context.
 
 **Word count target:** 3000 words across both sections.
 
 ---
 
-### 43 — Performance contracts (HIGH priority)
+### 43 - Performance contracts (HIGH priority)
 
 **Why second:** Most common reason "local-first feels slow" critique lands. Performance bar Sunfish must clear vs. Linear/Notion/Figma is real and measurable.
 
@@ -223,7 +223,7 @@ Ch20 new section:
 Ch11 new section:
 - Why this matters (P1 without budgets is just aspiration)
 - Universal "no operation blocks the UI thread" rule
-- Per-operation latency budgets (writes <16ms, reads <Yms, sync <Zms) — different per deployment class
+- Per-operation latency budgets (writes <16ms, reads <Yms, sync <Zms) - different per deployment class
 - Main-thread isolation guarantee (heavy work to background thread / web worker)
 - Measurable conformance test in CI
 - Real-world stress: CRDT merge on 100k-op documents takes seconds; cannot freeze UI
@@ -239,7 +239,7 @@ Ch20 new section:
 
 ---
 
-### 45 — Collaborator revocation (HIGH priority)
+### 45 - Collaborator revocation (HIGH priority)
 
 **Why third:** Departing-employee scenario is universal. Current book assumes collaborators stay collaborative.
 
@@ -255,7 +255,7 @@ Ch20 new section:
 
 ---
 
-### 11 — Fleet management
+### 11 - Fleet management
 
 **Target chapter:** New Ch21 OR new Appendix G.
 
@@ -267,7 +267,7 @@ Ch20 new section:
 
 ---
 
-### 47 — Endpoint-compromise threat model
+### 47 - Endpoint-compromise threat model
 
 **Target chapter:** Ch15 + App B (new threat-actor entry)
 
@@ -281,7 +281,7 @@ Ch20 new section:
 
 ---
 
-### 46 — Forward secrecy + post-compromise security
+### 46 - Forward secrecy + post-compromise security
 
 **Target chapter:** Ch15
 
@@ -294,7 +294,7 @@ Ch20 new section:
 
 ---
 
-### 9 — Chain-of-custody
+### 9 - Chain-of-custody
 
 **Target chapter:** Ch15 + App B
 
@@ -308,7 +308,7 @@ Ch20 new section:
 
 ---
 
-### 12 — Privacy-preserving aggregation
+### 12 - Privacy-preserving aggregation
 
 **Target chapter:** Ch15 + possibly new App G
 
@@ -321,7 +321,7 @@ Ch20 new section:
 
 ---
 
-### 10 — Data-class escalation
+### 10 - Data-class escalation
 
 **Target chapter:** Ch20 + Ch15
 
@@ -329,13 +329,13 @@ Ch20 new section:
 - Ch20 § "Data-class escalation UX" (~1000 words)
 - Ch15 § "Event-triggered re-classification" (~1000 words)
 
-**Outline:** Reference commercial-driver dashcam scenario — routine vs. incident-class footage.
+**Outline:** Reference commercial-driver dashcam scenario - routine vs. incident-class footage.
 
 **Word count target:** 2000 words.
 
 ---
 
-### 44 — Per-data-class device-distribution policy
+### 44 - Per-data-class device-distribution policy
 
 **Target chapter:** Ch16 (persistence)
 
@@ -359,7 +359,7 @@ Before advancing an extension to next stage, the loop verifies the gate criteria
 | `code-check → technical-review` | All Sunfish package references validated as real; code snippets marked illustrative or compile; no `<!-- TBD -->` markers |
 | `technical-review → prose-review` | @technical-reviewer issued report; all `<!-- CLAIM: source? -->` markers resolved; technical claims trace to v13/v5 |
 | `prose-review → voice-check` | @prose-reviewer + @style-enforcer passes applied; no academic scaffolding; no there-is constructions; active voice; QC checklist passes |
-| `voice-check → approved` | **HUMAN ONLY** — anecdote added; connective tissue present; reads as authored not assembled; loop stops here |
+| `voice-check → approved` | **HUMAN ONLY** - anecdote added; connective tissue present; reads as authored not assembled; loop stops here |
 | `approved → assembled` | Marked approved in state; will be picked up by next ASSEMBLY.md run |
 
 If a gate fails, the loop:
@@ -400,7 +400,7 @@ The loop is COMPLETE when:
 - ASSEMBLY.md updated and full draft PDF builds successfully
 - Conformance scan against `inverted-stack-conformance` skill shows the new primitives are now in the catalog (re-extraction picks them up)
 
-Partial completion is acceptable — the loop can stop at any time and resume later. No "all-or-nothing" requirement.
+Partial completion is acceptable - the loop can stop at any time and resume later. No "all-or-nothing" requirement.
 
 ---
 
@@ -449,7 +449,7 @@ Then execute ONE iteration per the protocol in §2:
 4. Verify the quality gate per §5 BEFORE advancing the state
 5. Update state.yaml with the new stage + commit SHA + iteration history entry
 6. Commit the work (chapter edit + state file in single commit). Commit message
-   format: "draft(book-update-loop): iter-NNNN — <extension-id> <stage-from> →
+   format: "draft(book-update-loop): iter-NNNN - <extension-id> <stage-from> →
    <stage-to>"
 7. Report in 2-3 sentences what was done and what's next
 8. Stop (the next iteration fires on the loop's schedule)
@@ -459,7 +459,7 @@ Hard rules:
   stages in one iteration.
 - ONE iteration time budget: 3 hours hard cap. If approaching, checkpoint
   partial progress and stop.
-- If you are at stage voice-check, the loop STOPS — voice-check is human-only
+- If you are at stage voice-check, the loop STOPS - voice-check is human-only
   per the plan. Set status: awaiting-voice-check and stop with a message asking
   the user to do the voice pass.
 - If a subagent invocation fails, retry once. If it fails again, set

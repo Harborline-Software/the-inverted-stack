@@ -1,4 +1,4 @@
-# Observational vocabulary curated from Nansen's *Farthest North* (1897) — Project Gutenberg #30197.
+# Observational vocabulary curated from Nansen's *Farthest North* (1897) - Project Gutenberg #30197.
 # Top action-verbs and concrete-nouns in the canonical first-person polar-explorer reference.
 #
 # This YAML drives the observational-density metric in build/lexical_fatigue.py
@@ -7,9 +7,9 @@
 # measures the SENSORY-AND-ACTION density that the genre canonically depends on.
 #
 # Filtering rules applied to Nansen's top lemmas:
-#   - Excluded Nansen-specific (dog/sled, fram, expedition) — no parallels in Vol 2
+#   - Excluded Nansen-specific (dog/sled, fram, expedition) - no parallels in Vol 2
 #   - Excluded proper nouns (north as direction-name where ambiguous)
-#   - Excluded too-generic (thing, way, part, work) — no observational specificity
+#   - Excluded too-generic (thing, way, part, work) - no observational specificity
 #   - Kept verbs ≥ 0.4/1k and nouns ≥ 0.5/1k in the Nansen corpus
 #   - Plus a few canonical polar/expedition-domain nouns even at lower Nansen density
 #
@@ -19,7 +19,7 @@
 
 version: 1
 
-# Action verbs — explorer-narrator's vocabulary of doing-and-perceiving
+# Action verbs - explorer-narrator's vocabulary of doing-and-perceiving
 action_verbs:
   - see
   - take
@@ -54,7 +54,7 @@ action_verbs:
   - make
   - know
 
-# Concrete nouns — sensory + atmospheric anchoring
+# Concrete nouns - sensory + atmospheric anchoring
 concrete_nouns:
   - ice
   - water

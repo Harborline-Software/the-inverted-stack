@@ -1,5 +1,5 @@
-# Voice-Pass Anecdote Candidates — Brown Register
-## Ch15 §Key-Loss Recovery — Personal Opening, Three Vulnerability-First Drafts
+# Voice-Pass Anecdote Candidates - Brown Register
+## Ch15 §Key-Loss Recovery - Personal Opening, Three Vulnerability-First Drafts
 
 These are three candidate opening passages for the human author to place at the start
 of §Key-Loss Recovery, between the H2 heading and the existing first sentence:
@@ -7,11 +7,11 @@ of §Key-Loss Recovery, between the H2 heading and the existing first sentence:
 > *"Incident response handles the case where an attacker compromises a key.
 > Key-loss recovery handles the case where the legitimate user loses one."*
 
-They are written in the register of Brené Brown — confession-to-principle, vulnerability
+They are written in the register of Brené Brown - confession-to-principle, vulnerability
 first, humor as disarmament. They are paired with the Lencioni-register candidates in
 the sibling file `voice-pass-anecdote-candidates-lencioni.md`. The author picks the
 register that matches their voice, then edits the chosen candidate for accuracy to
-their own life — or uses it as a creative prompt to write something entirely their own.
+their own life - or uses it as a creative prompt to write something entirely their own.
 
 The three scenarios are distinct: the seed phrase (the small humiliation of forgetting),
 the family death scene (the second loss), and the migration (the cost of "I'll set it
@@ -21,15 +21,15 @@ possible moment.
 
 ---
 
-## Candidate A — The Seed Phrase
+## Candidate A - The Seed Phrase
 
 I have, at some point in my life, written a seed phrase on a piece of paper,
 congratulated myself for being responsible about it, and then moved that piece of
 paper to somewhere safe. That sentence sounds fine until you get to the word "safe."
 Safe turned out to mean a drawer in a desk I no longer own, in a house I no longer
 live in, possibly inside a notebook I gave away to someone whose name I can not
-remember. The wallet was still there. The wallet was always there. The money — not
-a lot of money, but my money — was still in it. I just couldn't get to it. I still
+remember. The wallet was still there. The wallet was always there. The money - not
+a lot of money, but my money - was still in it. I just couldn't get to it. I still
 can't.
 
 What I felt in the moment I realized the paper was gone was not panic. It was
@@ -40,21 +40,21 @@ think, is being an expert on the risk while remaining a human being about the
 mitigation.
 
 The architecture of this chapter is built for that human being. Not the panicked
-one — the embarrassed one. The one who took the precaution and still lost.
+one - the embarrassed one. The one who took the precaution and still lost.
 
 *Transition note: The confession lands the distinction the next sentence needs to
 draw. "Incident response handles the case where an attacker compromises a key.
 Key-loss recovery handles the case where the legitimate user loses one." The reader
-arrives at "legitimate user" already knowing what it costs to be that person — and
+arrives at "legitimate user" already knowing what it costs to be that person - and
 why they still need a recovery path.*
 
 ---
 
-## Candidate B — The Family Death Scene
+## Candidate B - The Family Death Scene
 
 When my father died, we found three external drives in his office. We also found,
 taped to the back of his monitor in the handwriting of a man who believed in
-systems, a small index card. The index card said: *Drives — see envelope.* We never
+systems, a small index card. The index card said: *Drives - see envelope.* We never
 found the envelope.
 
 I want to be careful here, because what I am describing is not extraordinary. I am
@@ -67,11 +67,11 @@ thorough about that.
 
 The second loss is the one nobody talks about. The first loss is the person. The
 second loss is the realization, arriving in waves over weeks, that the person took
-their digital life with them — not maliciously, not even carelessly, but because
+their digital life with them - not maliciously, not even carelessly, but because
 nobody sat down together and talked about what would happen to the envelope.
 
 That conversation is what this section is about, technically speaking. The
-mechanisms here — paper keys, trustees, custodians — are just the engineering
+mechanisms here - paper keys, trustees, custodians - are just the engineering
 underneath a decision that is actually about care. Pre-arrangement is care. Setting
 up succession before you need it is an act of love, not a confrontation with
 mortality. Though I admit: it feels like both.
@@ -85,12 +85,12 @@ proceed.*
 
 ---
 
-## Candidate C — The Migration
+## Candidate C - The Migration
 
 I'll tell you exactly what I told myself: "I'll set it up later."
 
-I was moving everything from an old phone to a new one — photos, messages,
-the notes I keep that function as an external brain — and there was a prompt asking
+I was moving everything from an old phone to a new one - photos, messages,
+the notes I keep that function as an external brain - and there was a prompt asking
 me to configure backup and recovery for the encrypted apps. I looked at the prompt.
 The prompt was thorough. The prompt wanted me to write down a key, designate a
 contact, verify a phrase. It was going to take twelve minutes. I had somewhere to
@@ -111,8 +111,8 @@ that question when you still have everything, which is the only honest time to
 answer it.
 
 *Transition note: The confession names the cognitive pattern that makes first-run
-recovery setup fail even when the architecture makes it available. The next sentence —
+recovery setup fail even when the architecture makes it available. The next sentence -
 "Incident response handles the case where an attacker compromises a key. Key-loss
-recovery handles the case where the legitimate user loses one" — lands against a
+recovery handles the case where the legitimate user loses one" - lands against a
 reader who has just been reminded that "legitimate user" includes themselves, and that
 "later" is when the cost arrives.*

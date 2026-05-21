@@ -53,7 +53,7 @@ detectors:
 
   # ─── motif_overuse ────────────────────────────────────────────────────
   # Two-layer Anna-voice motif management. `retired_motifs` is a hard
-  # blacklist — any occurrence is a finding. `motifs` is a soft-cap
+  # blacklist - any occurrence is a finding. `motifs` is a soft-cap
   # dictionary (phrase → max-allowed count per chapter); findings emit
   # for every occurrence past the cap. Source: ANNA-VOICE.md anti-pattern
   # #5 (retired) + per-chapter cap discipline (capped).
@@ -111,7 +111,7 @@ detectors:
         migration: 4       # schema-migration technical
         protocol: 8        # central technical term
         sentence: 5        # held in the "He did not soften..." cascade
-        assumption: 4      # "the assumption I missed" — load-bearing
+        assumption: 4      # "the assumption I missed" - load-bearing
         submission: 3      # Round Two submission
         procurement: 2     # consortium / sovereignty vocabulary
         registration: 2    # selection-archive noise
@@ -127,7 +127,7 @@ detectors:
   #
   # `stopwords` here ADDS book-specific scene / staging vocabulary to
   # the reduced-confidence set. Pairs touching these lemmas join the
-  # universal noise band — still detectable, not warning-worthy on
+  # universal noise band - still detectable, not warning-worthy on
   # their own.
   distributed_chiasmus:
     stopwords:

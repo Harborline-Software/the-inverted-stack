@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# uninstall.sh — remove the background service and menu bar app.
+# uninstall.sh - remove the background service and menu bar app.
 
 set -euo pipefail
 

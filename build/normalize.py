@@ -5,13 +5,13 @@ the platform submission specs.
 
 Targets:
 
-    podcast (default) — Apple Books, Leanpub, generic podcast distributors:
+    podcast (default) - Apple Books, Leanpub, generic podcast distributors:
         Integrated loudness:  -16 LUFS
         True peak:            -1.5 dBTP
         Loudness range:       11 LU (max)
         MP3:                  44.1 kHz mono 96 kbps CBR
 
-    acx — Audible / ACX submission spec:
+    acx - Audible / ACX submission spec:
         Integrated loudness:  -19 LUFS  (ACX accepts -23 to -18; -19 is the
                                          widely-used sweet spot for indie
                                          AI-narrated audiobooks)
@@ -23,7 +23,7 @@ Targets:
                                                             64-320 kbps CBR)
 
 Uses ffmpeg's `loudnorm` filter via the static binary bundled with the
-`imageio-ffmpeg` pip package — no system ffmpeg install required.
+`imageio-ffmpeg` pip package - no system ffmpeg install required.
 
 Two-pass mode (default) is the audiobook-grade path: ffmpeg first measures
 the chapter, then re-encodes with the measured offsets applied. Single-pass
@@ -32,14 +32,14 @@ boundaries of the LRA target.
 
 Usage:
     python build/normalize.py                       # all, two-pass, podcast spec, in-place
-    python build/normalize.py --target acx          # ACX spec — for Audible submission
+    python build/normalize.py --target acx          # ACX spec - for Audible submission
     python build/normalize.py --single-pass         # faster, less accurate
     python build/normalize.py --only ch05           # one chapter
     python build/normalize.py --suffix _norm        # write to ch05_norm.mp3 (don't overwrite)
     python build/normalize.py --dry-run             # report which files would be processed
 
 After --target acx, run build/verify_loudness.py --target acx to confirm
-each chapter actually landed in spec — ACX rejects ~30% of submissions for
+each chapter actually landed in spec - ACX rejects ~30% of submissions for
 loudness/peak issues.
 """
 

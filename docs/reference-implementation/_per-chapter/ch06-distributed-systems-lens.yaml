@@ -102,7 +102,7 @@ concepts:
   name: Three-tier GC policy by data class
   source: ch06 §"What Changed Between Rounds"
   source-paper: v13 §6
-  definition: Operation-history garbage collection is differentiated by data class — aggressive GC for
+  definition: Operation-history garbage collection is differentiated by data class - aggressive GC for
     ephemeral data, a 90-day retention window for business records, and no GC at all for compliance records.
   must-implement:
   - Each record type is assigned to one of three GC tiers (ephemeral, business, compliance)
@@ -455,7 +455,7 @@ concepts:
   name: Required test categories for sync protocol correctness
   source: 'ch06 §"Round 2 Verdict: PROCEED WITH CONDITIONS"'
   source-paper: null
-  definition: Sync protocol verification requires a defined set of test categories — network partition
+  definition: Sync protocol verification requires a defined set of test categories - network partition
     simulation, clock skew injection, concurrent edit generation, GC boundary conditions, Byzantine operation
     injection, and long-partition reconnect scenarios.
   must-implement:

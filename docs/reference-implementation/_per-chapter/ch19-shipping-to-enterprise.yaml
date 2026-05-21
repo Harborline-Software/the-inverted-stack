@@ -98,8 +98,8 @@ concepts:
   name: System-context daemon registration
   source: ch19 §"Build and Packaging"
   source-paper: null
-  definition: The sync daemon is installed at system scope — Windows Service or /Library/LaunchDaemons
-    launch agent — so it starts before user login and runs under MDM supervision rather than as a user-context
+  definition: The sync daemon is installed at system scope - Windows Service or /Library/LaunchDaemons
+    launch agent - so it starts before user login and runs under MDM supervision rather than as a user-context
     process.
   must-implement:
   - Windows installer declares the sync daemon via a service-install element
@@ -403,8 +403,8 @@ concepts:
   name: Pre-rehearsed critical-CVE patch drill
   source: ch19 §"SBOM Generation and CVE Response"
   source-paper: null
-  definition: The full critical-patch release sequence — fix, rebuild, regenerate SBOM, rescan, sign and
-    notarize, mirror, and canary push — is rehearsed end-to-end during the first sprint after general
+  definition: The full critical-patch release sequence - fix, rebuild, regenerate SBOM, rescan, sign and
+    notarize, mirror, and canary push - is rehearsed end-to-end during the first sprint after general
     availability and the elapsed time measured against the published SLA.
   must-implement:
   - A dry-fire patch release is executed against a test artifact within the first GA sprint
@@ -469,7 +469,7 @@ concepts:
   source-paper: v13 §16
   definition: The same binary supports a strict air-gap posture configured by pointing updateServerUrl
     and relayEndpoint at internal infrastructure, omitting telemetry, and applying egress firewall rules
-    — without a separate build artifact.
+    - without a separate build artifact.
   must-implement:
   - The release binary runs unchanged in connected, proxied, and air-gap-strict postures
   - node-config.json switches posture by configuration alone
@@ -535,8 +535,8 @@ concepts:
   name: OCSP and CRL connectivity preservation
   source: ch19 §"Air-Gap Deployment"
   source-paper: null
-  definition: Air-gap egress policy must preserve a path to OCSP and CRL responders — internal mirror,
-    certificate pinning with long-lived certs, or open egress to public responders — because blocking
+  definition: Air-gap egress policy must preserve a path to OCSP and CRL responders - internal mirror,
+    certificate pinning with long-lived certs, or open egress to public responders - because blocking
     revocation checking breaks TLS chain validation across the entire node, not just update checks.
   must-implement:
   - Air-gap deployment guidance names OCSP/CRL preservation as non-negotiable
@@ -565,10 +565,10 @@ concepts:
     endpoint succeeding without OCSP soft-fail; deployme...'
 - id: ENT-19
   name: Jurisdictional self-hosted Bridge relay
-  source: ch19 §"Self-Hosted Bridge Relay — Deployment Details"
+  source: ch19 §"Self-Hosted Bridge Relay - Deployment Details"
   source-paper: v13 §16
   definition: For compliance-mandated markets the self-hosted Bridge relay runs on infrastructure within
-    the required jurisdiction — on-premise, sovereign cloud, or domestic data center — making the relay-sovereignty
+    the required jurisdiction - on-premise, sovereign cloud, or domestic data center - making the relay-sovereignty
     guarantee legally defensible rather than a marketing claim.
   must-implement:
   - Bridge relay deploys as a single statically-compiled binary or OCI container image
@@ -681,8 +681,8 @@ concepts:
   name: Three-runbook minimum for enterprise GA
   source: ch19 §"The Operational Runbook Minimum"
   source-paper: null
-  definition: Enterprise general availability requires three published runbooks — node onboarding, node
-    deprovisioning, and incident response for node or key compromise — each with named commands, expected
+  definition: Enterprise general availability requires three published runbooks - node onboarding, node
+    deprovisioning, and incident response for node or key compromise - each with named commands, expected
     outputs, and audit-log verification steps.
   must-implement:
   - Node onboarding runbook covers IdP confirmation, attestation issuance, pre-seeded config, MDM deployment,
@@ -716,8 +716,8 @@ concepts:
   name: Staged canary update rollout
   source: 'ch19 §"Runbook 3: Container Update Rollout"'
   source-paper: null
-  definition: Production updates roll out in three stages — five-to-ten-percent canary, fifty percent,
-    one hundred percent — with twenty-four-hour holds at each stage and a defined rollback by republishing
+  definition: Production updates roll out in three stages - five-to-ten-percent canary, fifty percent,
+    one hundred percent - with twenty-four-hour holds at each stage and a defined rollback by republishing
     the previous artifact through the same MDM policy on health-check failure.
   must-implement:
   - Update rollouts target a 5-10% canary deployment ring first

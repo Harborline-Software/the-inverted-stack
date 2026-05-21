@@ -1,0 +1,309 @@
+# icm/pipelines/bestseller-profile-review.yaml
+#
+# Review pipeline: per-chapter UPF evaluation against TWO orthogonal rubrics
+# (Literary Devices + NYT Bestseller Profile), dispatched in parallel via
+# Sonnet subagents, consolidated by a PAO orchestrator into a volume-wide
+# grading report.
+#
+# Established 2026-05-20 from the volume-wide vol-2 dispatch. The pattern
+# is reusable for any future volume / part / chapter cluster.
+#
+# Loading: human or PAO-orchestrator follows it. No script driver yet.
+
+id: bestseller-profile-review
+version: 1
+description: >
+  Per-chapter UPF against two literary rubrics, parallel-dispatched, then
+  consolidated. Read-only against chapters; writes only state-snapshot
+  reports under .pao-inbox/_state-snapshots/. Use to grade a volume (or a
+  subset of chapters) for literary craft + commercial readiness without
+  touching the prose.
+
+# What kind of intake items this pipeline accepts.
+accepts:
+  - type: review_request
+    scope:
+      - volume      # e.g. vol-2 → 18 chapters
+      - act         # e.g. vol-2/act-1 → 6 chapters
+      - chapter_set # explicit list of chapter paths
+
+# Default model + effort policy for the fan-out
+fan_out:
+  default_model: sonnet
+  default_effort: medium
+  rationale: |
+    Per-chapter UPF against a FIXED rubric is execution-density work
+    (apply same rubric N times in parallel). Sonnet 4.6 medium is the
+    canonical fit per effort-policy.md — it preserves Opus xhigh budget
+    for the orchestrator's consolidation pass (true synthesis work) and
+    avoids paying ~6x for parallelization that doesn't need depth.
+    Reserve Opus xhigh for the orchestrator role only.
+  agent: pao   # subagent definition; model override applied per dispatch
+  parallelism: full   # all chapters dispatched in one batched message
+
+# Rubrics — the two checklists are the load-bearing artifact of the
+# pipeline. Keep versioned so future reviews can compare grades over time.
+rubrics:
+  - id: literary-devices
+    version: 1
+    items:
+      - clear-consistent-pov-serving-emotional-core
+      - distinct-tone-diction-fitting-genre-and-voice
+      - effective-multi-sense-imagery
+      - fresh-precise-metaphors-similes-advancing-theme
+      - meaningful-recurring-symbolism-motifs
+      - foreshadowing-that-doesnt-telegraph
+      - irony-deepening-meaning-not-joke-only
+      - structural-devices-clarifying-not-confusing
+
+  - id: nyt-bestseller-profile
+    version: 1
+    items:
+      - high-concept-one-line-premise
+      - relatable-protagonist-desire-flaws-growth-room
+      - credible-antagonist-driving-conflict
+      - escalating-external-stakes
+      - fast-clean-pacing-scenes-start-late-end-early
+      - readable-line-level-clear-concrete-minimal-clutter
+      - emotional-payoffs-earned-tied-to-protagonist-want
+      - title-subtitle-short-memorable-easy-to-spell
+      - launch-potential-marketable-wide-not-just-niche
+
+# Stages executed in order.
+stages:
+
+  - stage: 00_intake
+    name: Intake
+    folder: icm/00_intake
+    artifacts:
+      - "{id}.md"   # review request brief: scope, rubric version, requester
+    actions:
+      - Author files review request; scope identified (volume / act / chapter set).
+      - Rubric version pinned (default — most recent unless explicit).
+      - Sequencing decided (parallel default; serial only if context constraint).
+    gate:
+      criterion: triaged
+      checks:
+        - Scope target list resolved to concrete chapter paths.
+        - Rubric version pinned.
+        - Output report location agreed (.pao-inbox/_state-snapshots/).
+        - Orchestrator role assigned (PAO main session by default).
+
+  - stage: 01_discovery
+    name: Discovery
+    folder: icm/01_discovery/{id}
+    artifacts:
+      - canon-snapshot.md   # what the subagents will read for grounding
+    actions:
+      - Confirm canon docs current (SPINE.md, CHAPTER-OUTLINE.md, canon.yaml, ANNA-VOICE.md).
+      - Confirm chapter files present at expected paths.
+      - Confirm prior reviews / grades exist (this pipeline's prior runs, Verne audit, volume UPF).
+    gate:
+      criterion: canon-snapshot-current
+      checks:
+        - All target chapters exist on disk.
+        - Canon docs match expected schema.
+        - Prior-review history surfaced for trend comparison.
+
+  - stage: 02_architecture
+    name: Architecture
+    skip: true
+    rationale: Review pipeline; no architectural choices.
+
+  - stage: 03_package-design
+    name: Package design
+    folder: icm/03_package-design/{id}
+    artifacts:
+      - prompt-template.md
+    actions:
+      - Author per-chapter prompt template covering:
+          (a) memory-read prefix (per fleet-conventions subagent dispatch protocol)
+          (b) chapter path + canon doc references
+          (c) full rubrics (both checklists)
+          (d) UPF Stage 0/1/2 instructions adapted to literary analysis
+          (e) output report path
+          (f) return contract: ≤400-word executive summary
+          (g) constraints (no chapter modification, no subagent spawning)
+          (h) **live-grep mandate** (see below)
+      - Verify prompt fits in subagent's context window comfortably.
+    gate:
+      criterion: prompt-template-ready
+      checks:
+        - Template is fully self-contained (cold-start safe).
+        - All rubric items present in prompt body.
+        - Return contract specifies what orchestrator needs back.
+        - Live-grep mandate present and explicit.
+
+    # Live-grep mandate — added 2026-05-21 after the 2026-05-20 vol-2 dispatch
+    # surfaced stale-flag false positives on ch14, ch16, ch18.
+    #
+    # Failure mode: per-chapter UPF subagents trusted embedded HTML-comment
+    # rewrite annotations (e.g. "2026-05-16 rewrite reduced register-family
+    # from 83 to 3") and reported the PRE-rewrite count as current state.
+    # Stage 06_build Yeoman edit subagents caught the error by running
+    # actual grep before editing, but the audit pass wasted attention on
+    # phantom blockers.
+    #
+    # Mandate language to include verbatim in every per-chapter prompt:
+    live_grep_mandate: |
+      Before reporting ANY quantitative metric (instance counts of motif
+      phrases, register-family occurrences, anti-pattern hits, word
+      counts of specific constructions, etc.), you MUST run a live grep
+      against the chapter's BODY PROSE — explicitly excluding:
+        - YAML frontmatter (between the leading `---` fences)
+        - HTML comments (`<!-- ... -->` blocks, including multi-line
+          rewrite-audit annotations that document past edits)
+        - Embedded code blocks unless they are part of the prose
+      Do NOT trust embedded rewrite-history annotations, frontmatter
+      tallies, prior galley reports, or prior UPF reports as ground
+      truth for current counts. Those annotations describe historical
+      state, not live state. If you cite a count, the count MUST come
+      from a grep you ran THIS pass on the live file body.
+
+      Recommended grep recipe (gnu/bsd portable):
+        # Strip ONLY the leading YAML frontmatter block (anchored to
+        # start-of-file via \A), then HTML comments, then grep.
+        # The leading-only strip is required — chapters may use body
+        # `---` lines as Markdown horizontal rules. A naive
+        # `sed '/^---$/,/^---$/d'` would treat each body `---` as
+        # an opening or closing fence and silently delete every
+        # alternating body section between them. Discovered 2026-05-21
+        # from ch03 v2 audit (two body `---` rules at lines 124 + 190
+        # ate the Priya + Joel scenes from the grep counts).
+        perl -0777 -pe 's/\A---\n.*?\n---\n//s' <CHAPTER> \
+          | perl -0777 -pe 's/<!--.*?-->//gs' \
+          | grep -ciE 'YOUR_PATTERN'
+
+      The recipe ONLY strips the leading frontmatter (anchored via \A).
+      Any `---` inside the body is preserved. If you need to confirm,
+      check that the stripped output's word count is within ~30 words
+      of the chapter's pre-strip word count (frontmatter is typically
+      <30 lines).
+
+      Report the raw count from THIS grep, alongside any qualitative
+      finding. Where a count differs from a historical annotation in
+      the file, note the discrepancy explicitly so the orchestrator
+      can update the annotation.
+
+  - stage: 04_scaffolding
+    name: Scaffolding
+    skip: true
+    rationale: No code/prose scaffolding; review pipeline.
+
+  - stage: 05_implementation-plan
+    name: Implementation plan
+    folder: icm/05_implementation-plan/{id}
+    artifacts:
+      - dispatch-plan.md
+    rules:
+      - .claude/rules/universal-planning.md
+    actions:
+      - List N chapter targets with output report paths.
+      - Confirm model/effort assignment per fan_out policy.
+      - Decide foreground vs background dispatch (background default for N≥4).
+      - Pre-allocate seen-set / monitor entries so orchestrator doesn't get
+        flooded by inbox events from the subagent's own writes.
+    gate:
+      criterion: dispatch-plan-locked
+      checks:
+        - N chapter targets enumerated with paths.
+        - Per-subagent output paths uniquely allocated.
+        - Background vs foreground decided.
+        - Orchestrator session has spare context budget for consolidation pass.
+
+  - stage: 06_build
+    name: Build (parallel fan-out)
+    folder: icm/06_build/{id}
+    artifacts:
+      - dispatch-log.md
+      - per-chapter-reports/   # actual reports live under .pao-inbox/_state-snapshots/
+    agents:
+      - pao   # subagent role; one instance per chapter
+    actions:
+      - Batch-dispatch all N subagents in a single message (per Agent-tool docs).
+      - run_in_background=true so orchestrator heartbeat continues during build.
+      - Each subagent returns its ≤400-word executive summary on completion.
+      - Orchestrator collects summaries; full reports land at the specified
+        output paths via the subagent's own Write tool.
+      - Each subagent MUST honor the live-grep mandate (Stage 03) — counts
+        come from a grep run THIS pass, not from embedded annotations.
+    gate:
+      criterion: all-reports-landed
+      checks:
+        - N output reports exist at expected paths.
+        - N executive summaries received by orchestrator.
+        - No subagent failed silently (every dispatched agent returned.
+        - Spot-check at least 2 reported quantitative metrics against a
+          fresh grep before accepting Stage 07 input — catches subagents
+          that silently dropped the live-grep mandate.
+
+  - stage: 07_review
+    name: Review (consolidation)
+    folder: icm/07_review/{id}
+    artifacts:
+      - volume-grading-matrix.md
+      - highest-leverage-edits.md
+      - rubric-drift-analysis.md   # vs prior reviews if available
+    agents:
+      - pao   # orchestrator session; Opus xhigh
+    actions:
+      - Tabulate per-chapter Literary-devices grade (A/B/C/D/F) + NYT-readiness (green/yellow/red).
+      - Identify single highest-leverage edit per chapter; cluster by theme.
+      - Surface volume-wide patterns (POV drift, register over-use,
+        underbaked antagonist, etc.).
+      - Compare against prior review snapshots if any; flag regressions.
+      - Recommend prioritization (which 3–5 edits would most lift the volume).
+    gate:
+      criterion: consolidation-complete
+      checks:
+        - Grading matrix covers every reviewed chapter.
+        - Top-N recommendations are prioritized + scope-sized.
+        - Trend vs prior reviews captured if applicable.
+
+  - stage: 08_release
+    name: Release (delivery)
+    folder: icm/08_release/{id}
+    artifacts:
+      - executive-summary.md
+    actions:
+      - Write CIC-facing executive summary at .pao-inbox/_state-snapshots/{date}-{id}-executive-summary.md.
+      - File status beacon to coordination/inbox/ if cross-fleet visibility wanted.
+      - Update .wolf/memory.md with one-line entry per OpenWolf protocol.
+      - Optional: open follow-up intake briefs for the top-N edits as separate
+        chapter-update pipeline items.
+    gate:
+      criterion: delivered
+      checks:
+        - Executive summary written + accessible.
+        - Follow-up intakes filed for any approved edits.
+        - Memory log updated.
+
+# Failure / recovery notes
+recovery:
+  - If a subagent fails mid-dispatch: orchestrator re-dispatches just that
+    chapter (do not re-run the whole fan-out).
+  - If the orchestrator session dies during consolidation (Stage 07): the
+    Stage 06 reports persist on disk under .pao-inbox/_state-snapshots/ —
+    a fresh PAO session can resume from there directly.
+  - If rubric is amended mid-pipeline: bump rubric version + restart from
+    Stage 03; prior reports are still valid against the prior version and
+    should be archived, not overwritten.
+
+# Cost notes
+cost:
+  fan_out:
+    per_subagent_input: ~10-25k tokens
+    per_subagent_output: ~10-20k tokens (full report) + ~400-word summary
+    sonnet_cost: ~$0.10-0.30 per chapter
+  consolidation:
+    orchestrator: Opus 4.7 + xhigh
+    typical_cost: $1-3 per volume (18 chapters)
+  total_volume_estimate: $3-8 per full vol-2-class review
+
+# References
+references:
+  - .claude/rules/universal-planning.md
+  - .claude/rules/effort-policy.md
+  - .claude/rules/fleet-conventions.md
+  - docs/style/style-guide.md
+  - vol-2/ANNA-VOICE.md

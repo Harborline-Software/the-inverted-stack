@@ -100,8 +100,8 @@ concepts:
   name: Three-tier CRDT applicability model
   source: ch10 §"The Seven Non-Negotiables"
   source-paper: v13 §6
-  definition: Data is partitioned into three tiers — AP CRDT-merged content, CP single-writer operations
-    under lease coordination, and append-only ledger entries outside the CRDT — based on whether automatic
+  definition: Data is partitioned into three tiers - AP CRDT-merged content, CP single-writer operations
+    under lease coordination, and append-only ledger entries outside the CRDT - based on whether automatic
     merge is semantically valid.
   must-implement:
   - Documents and collaborative content use CRDT merge in an AP tier

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# render-chapter.sh — generate audiobook MP3 for a single chapter.
+# render-chapter.sh - generate audiobook MP3 for a single chapter.
 #
 # Usage:
 #   ./build/render-chapter.sh <chapter-slug> [--preset <name>]
@@ -66,7 +66,7 @@ if ! command -v python3 >/dev/null 2>&1; then
   exit 1
 fi
 
-# Quick reachability probe — fail fast if the server is down rather than
+# Quick reachability probe - fail fast if the server is down rather than
 # 30+ minutes into a render.
 HTTP=$(curl -s -o /dev/null -w "%{http_code}" --max-time 5 "$BASE_URL" || echo "000")
 if [[ "$HTTP" == "000" ]]; then

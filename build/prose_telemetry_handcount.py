@@ -9,7 +9,7 @@ One-shot stdlib-only implementation of the v1 detector list from
   3. Surface a first measurement of Anna's new (Filchner / Bobiverse register)
      trial chapter for comparison against the old Vol 2 baseline.
 
-This is intentionally not the real platform — it's a calibration tool. Real
+This is intentionally not the real platform - it's a calibration tool. Real
 platform lives at galley/prose/lib/prose_telemetry/ (promoted from
 galley/lib/ as of 2026-05-14, ADR-0005) and absorbs this script as the
 stdlib tier in Phase 1. Anything this script flags should also flag in the
@@ -43,7 +43,7 @@ _CODEFENCE = re.compile(r"```.*?```", re.DOTALL)
 
 
 def strip_to_prose(md: str) -> str:
-    """Return body prose only — drop headings, hrules, comments, fenced code,
+    """Return body prose only - drop headings, hrules, comments, fenced code,
     block quotes. Keep paragraphs and inline italics/em-dashes as-is."""
     md = _CODEFENCE.sub("", md)
     md = _HTML_COMMENT.sub("", md)
@@ -89,37 +89,37 @@ def _is_dialogue(s: str) -> bool:
 
 # ─── Detectors ────────────────────────────────────────────────────────────
 
-# anaphora detector retired — migrated to galley/prose registry
+# anaphora detector retired - migrated to galley/prose registry
 # (detectors/classical_rhetoric/anaphora.py). Phase 8 batch 1.
 
 
-# tautological_self_equation detector retired — migrated to galley/prose
+# tautological_self_equation detector retired - migrated to galley/prose
 # registry under detectors/pivot_inference/tautology.py. Phase 8 batch 3.
 
 
-# asyndeton / polysyndeton / literal_tricolon detectors retired —
+# asyndeton / polysyndeton / literal_tricolon detectors retired -
 # migrated to galley/prose registry under
 # detectors/classical_rhetoric/. Phase 8 batch 1.
 
 
-# epanorthosis + echo_and_confirm detectors retired — migrated to
+# epanorthosis + echo_and_confirm detectors retired - migrated to
 # galley/prose registry under detectors/repetition/. Phase 8 batch 2a.
 
 
-# lexical_chain_loop detector retired — migrated to galley/prose
+# lexical_chain_loop detector retired - migrated to galley/prose
 # registry under detectors/chain/lexical_chain.py. Generic English
 # stopwords are detector defaults; Anna's high-frequency register words
 # (consortium, architecture, mission) live in book.editorial.yaml
 # under detectors.lexical_chain_loop.stopwords. Phase 8 batch 2b.
 
 
-# self_referential_frame detector retired — migrated to galley/prose
+# self_referential_frame detector retired - migrated to galley/prose
 # registry. Phrase list lives in book.editorial.yaml under
 # `detectors.self_referential_frame.self_referential_frames`. Thresholds
 # in the same yaml are consumed by galley/prose's verdict.rollup_registry.
 
 
-# bigram_chain_loop detector retired — migrated to galley/prose
+# bigram_chain_loop detector retired - migrated to galley/prose
 # registry under detectors/chain/bigram_chain.py. Phase 8 batch 2b.
 
 
@@ -128,7 +128,7 @@ def _is_dialogue(s: str) -> bool:
 # chapter. Per ANNA-VOICE.md anti-pattern #5; retired motifs flagged
 # regardless of count to prevent regression.
 
-# motif_overuse detector retired — migrated to galley/prose registry.
+# motif_overuse detector retired - migrated to galley/prose registry.
 # Retired-motif blacklist + capped-motif cap-dict live in
 # book.editorial.yaml under `detectors.motif_overuse`. The registry
 # version emits one finding per over-cap occurrence (rather than the
@@ -138,10 +138,10 @@ def _is_dialogue(s: str) -> bool:
 # ─── Parenthetical density ───────────────────────────────────────────────
 # Anna's voice uses em-dashes and parentheticals heavily by design
 # (Bobiverse-register move). This detector surfaces paragraphs where
-# the density crosses into excess — useful as informational signal rather
+# the density crosses into excess - useful as informational signal rather
 # than a hard rule.
 
-# parenthetical_density + fragment_density retired — migrated to galley/prose
+# parenthetical_density + fragment_density retired - migrated to galley/prose
 # registry under detectors/density_style/. Phase 8 batch 4.
 
 
@@ -150,17 +150,17 @@ def _is_dialogue(s: str) -> bool:
 # one that pivots or negates it via "but", "yet", "from him", etc.
 # Janeway dramatic-monologue move.
 
-# statement_then_reversal detector retired — migrated to galley/prose
+# statement_then_reversal detector retired - migrated to galley/prose
 # registry under detectors/pivot_inference/. Phase 8 batch 3.
 
 
 # ─── Filter-word density ─────────────────────────────────────────────────
-# "I felt," "I saw," "I noticed," "I realized" — narrator filter verbs that
+# "I felt," "I saw," "I noticed," "I realized" - narrator filter verbs that
 # distance the reader from the sensory experience. Bob narrates directly;
 # Anna currently filters. Reducing filter words is one of the highest-yield
 # moves toward immediacy.
 
-# filter_words detector retired — migrated to galley/prose registry.
+# filter_words detector retired - migrated to galley/prose registry.
 # Verb list lives in book.editorial.yaml under
 # `detectors.filter_words.filter_words`. Threshold + verdict handled
 # by galley/prose's verdict.rollup_registry against the same yaml.
@@ -170,16 +170,16 @@ def _is_dialogue(s: str) -> bool:
 # Stock filler phrases that mark amateur or academic prose. High-precision
 # exact-match detection.
 
-# redundant_phrase retired — migrated to galley/prose registry under
+# redundant_phrase retired - migrated to galley/prose registry under
 # detectors/density_style/redundant_phrases.py. Phase 8 batch 4.
 
 
 # ─── Internal anaphora ───────────────────────────────────────────────────
 # Within-sentence same-word echoes: "which was X, which was Y, which was Z."
-# Different from sentence-level anaphora (already detected) — this is
+# Different from sentence-level anaphora (already detected) - this is
 # clause-level repetition inside one sentence.
 
-# _INTERNAL_ANAPHORA_FUNCTION_STARTS retired with detector — Phase 8 batch 2a.
+# _INTERNAL_ANAPHORA_FUNCTION_STARTS retired with detector - Phase 8 batch 2a.
 
 
 # ─── Proximity echo (catch-all for close-range word repetition) ─────────
@@ -191,34 +191,34 @@ def _is_dialogue(s: str) -> bool:
 # anaphora that the sentence-level detector misses. CO ear-flagged
 # 2026-05-13 (multiple instances).
 
-# proximity_echo detector retired — migrated to galley/prose registry
+# proximity_echo detector retired - migrated to galley/prose registry
 # under detectors/structural/proximity_echo.py. Phase 8 batch 6.
 
 
 # ─── Confirmation-tag detector ──────────────────────────────────────────
 # Sentence-final tags like ", which she was." / ", which he did." /
-# ", which I had." — Anna's staff-history confirmation move. Often
+# ", which I had." - Anna's staff-history confirmation move. Often
 # redundant; the prose has already made the claim and the tag just
 # re-verifies. CO ear-flagged 2026-05-13.
 
-# confirmation_tag detector retired — migrated to galley/prose registry
+# confirmation_tag detector retired - migrated to galley/prose registry
 # under detectors/pivot_inference/confirmation_tag.py. Phase 8 batch 3.
 
 
 # ─── Inference cascade (which meant / which was / which gave ...) ──────
 # Three-or-more clauses opening with the same "which <verb>" connector
 # inside a single sentence. This is the Bobiverse cascading-inference
-# move — intentional once, audibly looping at three. The single-word
+# move - intentional once, audibly looping at three. The single-word
 # internal_anaphora detector excludes "which" as a function-word start
 # (otherwise it would false-positive on inventories like "the bunk,
 # the desk, the bookshelf"), so this dedicated bigram-cascade detector
 # catches the specific looping pattern. CO ear-flagged 2026-05-13.
 
-# inference_cascade detector retired — migrated to galley/prose registry
+# inference_cascade detector retired - migrated to galley/prose registry
 # under detectors/pivot_inference/inference_cascade.py. Phase 8 batch 3.
 
 
-# detect_internal_anaphora + detect_anadiplosis retired — migrated
+# detect_internal_anaphora + detect_anadiplosis retired - migrated
 # to galley/prose registry under detectors/repetition/. Phase 8 batch 2a.
 
 
@@ -227,12 +227,12 @@ def _is_dialogue(s: str) -> bool:
 # narrator uncertainty; over-use makes prose tentative.
 
 # modal_verb / vague_quantifier / abstract_noun / adverb_ly / said_tag /
-# paragraph_length_anomaly detectors retired — migrated to galley/prose
+# paragraph_length_anomaly detectors retired - migrated to galley/prose
 # registry under detectors/density_style/. Phase 8 batch 4.
 
 
 # ═══════════════════════════════════════════════════════════════════════════
-# Phase 1.8 — final round of stdlib detectors. Mostly density / variety
+# Phase 1.8 - final round of stdlib detectors. Mostly density / variety
 # metrics rather than pattern-matching, plus a few high-precision error
 # detectors (comma splice, double negative, cliché).
 # ═══════════════════════════════════════════════════════════════════════════
@@ -244,7 +244,7 @@ def _is_dialogue(s: str) -> bool:
 # "history" or "the staff" + "staff history"). High precision because
 # three-word collisions are unlikely by chance in narrative prose.
 
-# trigram_chain_loop detector retired — migrated to galley/prose
+# trigram_chain_loop detector retired - migrated to galley/prose
 # registry under detectors/chain/trigram_chain.py. Phase 8 batch 2b.
 
 
@@ -254,12 +254,12 @@ def _is_dialogue(s: str) -> bool:
 # as a density signal.
 
 # passive_voice / expletive_construction / conjunction_start /
-# conjunctive_adverb / double_negative / comma_splice retired —
+# conjunctive_adverb / double_negative / comma_splice retired -
 # migrated to galley/prose registry under detectors/grammar_mechanics/.
 # Phase 8 batch 5.
 
 
-# cliche detector retired — migrated to galley/prose registry under
+# cliche detector retired - migrated to galley/prose registry under
 # detectors/density_style/cliche.py. Phase 8 batch 4.
 
 
@@ -267,7 +267,7 @@ def _is_dialogue(s: str) -> bool:
 # Lines that directly address the reader. Anna's staff-history frame does
 # this deliberately; detect for visibility.
 
-# direct_address / timestamp / temporal_marker detectors retired —
+# direct_address / timestamp / temporal_marker detectors retired -
 # migrated to galley/prose registry under detectors/structural/.
 # Phase 8 batch 6.
 
@@ -338,10 +338,10 @@ def compute_sentence_starter_entropy(sents: list[str]) -> dict:
 
 # ─── Paragraph-opening diversity ─────────────────────────────────────────
 # Same as sentence-starter but for paragraph openings. Smaller sample,
-# louder signal — if 3+ paragraphs in a chapter start with the same word,
+# louder signal - if 3+ paragraphs in a chapter start with the same word,
 # it's noticeable to a reader.
 
-# paragraph_opener_repeat detector retired — migrated to galley/prose
+# paragraph_opener_repeat detector retired - migrated to galley/prose
 # registry under detectors/structural/paragraph_opener_repeat.py. Phase 8 batch 6.
 
 
@@ -384,18 +384,18 @@ def compute_attribution_variety(prose: str) -> dict:
 # Capitalized-mid-sentence words. Heuristic for proper nouns. Used as a
 # density metric and as input for named-entity tracking.
 
-# proper_noun detector retired — migrated to galley/prose registry
+# proper_noun detector retired - migrated to galley/prose registry
 # under detectors/structural/proper_noun.py. Phase 8 batch 6.
 
 
 # ─── Infinitive-phrase density ───────────────────────────────────────────
-# "to be," "to have," "to know" — abstract / academic register marker.
+# "to be," "to have," "to know" - abstract / academic register marker.
 
-# infinitive_phrase / gerund detectors retired — migrated to galley/prose
+# infinitive_phrase / gerund detectors retired - migrated to galley/prose
 # registry under detectors/grammar_mechanics/. Phase 8 batch 5.
 
 
-# detect_epanorthosis retired — migrated to galley/prose registry
+# detect_epanorthosis retired - migrated to galley/prose registry
 # under detectors/repetition/epanorthosis.py. Phase 8 batch 2a.
 
 
@@ -642,31 +642,31 @@ def measure(md_path: Path, dimensions: dict | None = None) -> dict:
     findings_by_type = {
         # anaphora / asyndeton / polysyndeton / literal_tricolon migrated
         # to registry (detectors/classical_rhetoric/). Phase 8 batch 1.
-        # tautological_self_equation migrated to registry — batch 3.
-        # epanorthosis / echo_and_confirm migrated to registry — batch 2a.
-        # lexical_chain_loop migrated to registry — batch 2b.
+        # tautological_self_equation migrated to registry - batch 3.
+        # epanorthosis / echo_and_confirm migrated to registry - batch 2a.
+        # lexical_chain_loop migrated to registry - batch 2b.
         # self_referential_frame migrated to registry (book.editorial.yaml).
-        # bigram_chain_loop migrated to registry — batch 2b.
+        # bigram_chain_loop migrated to registry - batch 2b.
         # motif_overuse migrated to registry (book.editorial.yaml).
-        # parenthetical_density / fragment_density migrated to registry — batch 4.
-        # statement_then_reversal migrated to registry — batch 3.
+        # parenthetical_density / fragment_density migrated to registry - batch 4.
+        # statement_then_reversal migrated to registry - batch 3.
         # filter_word migrated to registry (book.editorial.yaml).
-        # redundant_phrase migrated to registry — batch 4.
-        # internal_anaphora / anadiplosis migrated to registry — batch 2a.
+        # redundant_phrase migrated to registry - batch 4.
+        # internal_anaphora / anadiplosis migrated to registry - batch 2a.
         # modal_verb / vague_quantifier / abstract_noun / adverb_ly /
-        # said_tag / paragraph_length_anomaly migrated to registry — batch 4.
+        # said_tag / paragraph_length_anomaly migrated to registry - batch 4.
         # Phase 1.8 (final round):
-        # trigram_chain_loop migrated to registry — batch 2b.
+        # trigram_chain_loop migrated to registry - batch 2b.
         # passive_voice / expletive_construction / conjunction_start /
         # conjunctive_adverb / double_negative / comma_splice migrated
-        # to registry — batch 5.
-        # cliche migrated to registry — batch 4.
+        # to registry - batch 5.
+        # cliche migrated to registry - batch 4.
         # direct_address / timestamp / temporal_marker /
         # paragraph_opener_repeat / proper_noun / proximity_echo migrated
-        # to registry — batch 6.
-        # infinitive_phrase / gerund migrated to registry — batch 5.
-        # inference_cascade migrated to registry — batch 3.
-        # confirmation_tag migrated to registry — batch 3.
+        # to registry - batch 6.
+        # infinitive_phrase / gerund migrated to registry - batch 5.
+        # inference_cascade migrated to registry - batch 3.
+        # confirmation_tag migrated to registry - batch 3.
     }
 
     # Apply held_lines annotations.
@@ -689,7 +689,7 @@ def measure(md_path: Path, dimensions: dict | None = None) -> dict:
 
     return {
         "_schema_version": 3,
-        "_schema_status": "handcount-phase-1.8 — 39 detectors + aggregate metrics + held_lines schema",
+        "_schema_status": "handcount-phase-1.8 - 39 detectors + aggregate metrics + held_lines schema",
         "_schema_notes": "Real platform per .pao-inbox/_decisions/2026-05-08-prose-telemetry-platform.md. held_lines support: place {stem}.held-lines.json beside the source markdown.",
         "chapter_slug": md_path.stem.replace(".trial", ""),
         "source_path": str(md_path.relative_to(CHAPTER_REPO_ROOT)) if md_path.is_relative_to(CHAPTER_REPO_ROOT) else str(md_path),

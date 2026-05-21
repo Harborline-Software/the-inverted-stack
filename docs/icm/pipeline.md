@@ -10,14 +10,14 @@ A chapter is not done when you stop writing it. It is done when it has cleared t
 pipeline: outline validated, draft written, code checked, technical accuracy confirmed,
 prose reviewed, voice synthesized by the author.
 
-Each stage is a gate — not a rubber stamp. Advancing past a gate means the work at that
+Each stage is a gate - not a rubber stamp. Advancing past a gate means the work at that
 stage is complete, not that it will be fixed later.
 
 ---
 
 ## Pipeline Stages
 
-### Stage 1 — `icm/outline`
+### Stage 1 - `icm/outline`
 
 **Entry:** Chapter issue created with scope defined
 **Work:** Expand book-structure.md bullets into 2–4 sentence summaries per section.
@@ -28,7 +28,7 @@ scope; the central claim is explicit.
 
 ---
 
-### Stage 2 — `icm/draft`
+### Stage 2 - `icm/draft`
 
 **Entry:** Outline approved (Stage 1 gate passed)
 **Work:** Write prose against the outline. Commit at the end of each writing session.
@@ -38,7 +38,7 @@ QC-6 pass; no `<!-- TODO -->` markers remain.
 
 ---
 
-### Stage 3 — `icm/code-check`
+### Stage 3 - `icm/code-check`
 
 **Entry:** Draft committed (Stage 2 gate passed)
 **Work:** Every code snippet validated: compiles or marked `// illustrative`.
@@ -49,7 +49,7 @@ Run `make code-check ch=<chapter>`.
 
 ---
 
-### Stage 4 — `icm/technical-review`
+### Stage 4 - `icm/technical-review`
 
 **Entry:** Code check passed (Stage 3 gate passed)
 **Work:** Read the chapter as a hostile reviewer. Verify every claim against v13 + v5.
@@ -61,7 +61,7 @@ no claims contradict v13/v5.
 
 ---
 
-### Stage 5 — `icm/prose-review`
+### Stage 5 - `icm/prose-review`
 
 **Entry:** Technical review complete (Stage 4 gate passed)
 **Work:** Read aloud. Cut restatements. Cut words that do not earn their place.
@@ -71,7 +71,7 @@ No paragraph longer than 6 sentences.
 
 ---
 
-### Stage 6 — `icm/voice-check`
+### Stage 6 - `icm/voice-check`
 
 **Entry:** Prose review complete (Stage 5 gate passed)
 **Work:** Author only. Add personal anecdotes, field stories, connective tissue.
@@ -82,7 +82,7 @@ This is the only stage Claude cannot complete.
 
 ---
 
-### Stage 7 — `icm/approved`
+### Stage 7 - `icm/approved`
 
 **Entry:** Voice check passed (Stage 6 gate passed)
 **Work:** Open PR from `draft/<chapter>` against `main`. Full QC checklist (QC-1 through
@@ -92,7 +92,7 @@ QC-10) passes. Merge.
 
 ---
 
-### Stage 8 — `icm/assembled`
+### Stage 8 - `icm/assembled`
 
 **Entry:** Chapter merged to `main` (Stage 7 gate passed)
 **Work:** Chapter added to `ASSEMBLY.md` manifest in correct order. Running word count
@@ -123,11 +123,11 @@ that Part IV references. Write in this order:
 ```
 Part I (Ch 1 → 4) in sequence
   ↓
-Part II (Ch 5–10) — parallelizable after Part I complete
+Part II (Ch 5–10) - parallelizable after Part I complete
   ↓
-Part III (Ch 11–16) — parallelizable; Ch 13 (schema migration) depends on Ch 12 (CRDT)
+Part III (Ch 11–16) - parallelizable; Ch 13 (schema migration) depends on Ch 12 (CRDT)
   ↓
-Part IV (Ch 17–20) — parallelizable after Part III complete
+Part IV (Ch 17–20) - parallelizable after Part III complete
   ↓
 Epilogue → Appendices → Front Matter (Preface written last, Foreword placeholder)
 ```

@@ -18,13 +18,13 @@ Tolerances applied (matching ACX's published acceptance window):
     True peak:            <= target + 0.0 dB  (must NOT exceed the ceiling)
     Loudness range:       <= target + 1.0 LU  (max LRA tolerance)
 
-Targets are kept in lockstep with build/normalize.py — the same preset
+Targets are kept in lockstep with build/normalize.py - the same preset
 table drives both scripts so a chapter normalized as `acx` is verified
 against `acx`.
 
 Optional noise-floor check (--check-noise) measures the ffmpeg silence
 detector's quietest 0.5-second window. ACX requires <= -60 dBFS noise
-floor; this is a heuristic — true ACX checking uses a long-form silence
+floor; this is a heuristic - true ACX checking uses a long-form silence
 analysis. Useful as a smoke test, not authoritative.
 
 Usage:
@@ -103,7 +103,7 @@ def check_noise_floor(ffmpeg: str, src: Path, threshold_db: float) -> tuple[bool
 
     Looks for any 0.5-second window quieter than `threshold_db`. If even
     one such window exists, the floor at that point is at least as
-    quiet as the threshold — return (True, measured_db). If silencedetect
+    quiet as the threshold - return (True, measured_db). If silencedetect
     finds NO silent windows, the noise floor is louder than the target
     and we return (False, None). This is not a true integrated noise
     floor measurement; it is a fast smoke test.
@@ -161,7 +161,7 @@ def verify_one(ffmpeg: str, src: Path, target: dict, target_name: str,
         ok, _ = check_noise_floor(ffmpeg, src, NOISE_FLOOR_DB)
         if not ok:
             failures.append(
-                f"no silence window quieter than {NOISE_FLOOR_DB} dBFS detected — "
+                f"no silence window quieter than {NOISE_FLOOR_DB} dBFS detected - "
                 f"noise floor likely exceeds ACX requirement (heuristic only; "
                 f"submit a true silence-floor measurement before final ACX upload)"
             )
@@ -198,7 +198,7 @@ def main() -> None:
     ffmpeg = imageio_ffmpeg.get_ffmpeg_exe()
 
     sources = sorted(AUDIO_DIR.glob("*.mp3"))
-    # Skip sample renders by default — they're short and not part of the
+    # Skip sample renders by default - they're short and not part of the
     # distribution-master verification flow.
     sources = [p for p in sources if "_sample" not in p.stem]
     if args.only:
@@ -207,7 +207,7 @@ def main() -> None:
         print("No matching MP3s found.", file=sys.stderr)
         sys.exit(2)
 
-    print(f"verify-loudness — {args.target} ({target['description']})")
+    print(f"verify-loudness - {args.target} ({target['description']})")
     print(f"  target:   I={target['I']:+.1f} LUFS  TP={target['TP']:+.1f} dBTP  "
           f"LRA={target['LRA']:.1f} LU max")
     print(f"  tolerances: I=±{TOL_I:.1f} LU,  TP=hard ceiling,  LRA=+{TOL_LRA:.1f} LU max")

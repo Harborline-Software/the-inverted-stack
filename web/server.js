@@ -18,7 +18,7 @@ app.use(express.json())
 
 // ── Render-defaults: manifest + CHAPTER_PRESET_MAP ───────────────────────────
 
-// Parse CHAPTER_PRESET_MAP straight from the Python source — no import needed.
+// Parse CHAPTER_PRESET_MAP straight from the Python source - no import needed.
 function loadChapterPresetMap() {
   try {
     const src = fs.readFileSync(path.join(REPO_ROOT, 'build', 'audiobook.py'), 'utf8')
@@ -58,7 +58,7 @@ function loadManifest() {
 }
 
 // Read TTS-* TXXX frames from an MP3's ID3 header.
-// Reads only the ID3 section (first N bytes) — never the full audio body.
+// Reads only the ID3 section (first N bytes) - never the full audio body.
 function readMp3TtsTags(mp3Path) {
   try {
     // Read just the 10-byte ID3 header to get the declared tag size
@@ -157,20 +157,20 @@ let mp3TagDefaults   = loadMp3Tags()
 
 const VOL1_SECTIONS = [
   { dir: 'front-matter',                   label: 'Front Matter',            group: 'front-matter' },
-  { dir: 'part-1-thesis-and-pain',         label: 'Part 1 — Thesis & Pain',  group: 'part-1' },
-  { dir: 'part-2-council-reads-the-paper', label: 'Part 2 — Council Review', group: 'part-2' },
-  { dir: 'part-3-reference-architecture',  label: 'Part 3 — Reference Arch', group: 'part-3' },
-  { dir: 'part-4-implementation-playbooks',label: 'Part 4 — Playbooks',      group: 'part-4' },
-  { dir: 'part-5-operational-concerns',    label: 'Part 5 — Operations',     group: 'part-5' },
+  { dir: 'part-1-thesis-and-pain',         label: 'Part 1 - Thesis & Pain',  group: 'part-1' },
+  { dir: 'part-2-council-reads-the-paper', label: 'Part 2 - Council Review', group: 'part-2' },
+  { dir: 'part-3-reference-architecture',  label: 'Part 3 - Reference Arch', group: 'part-3' },
+  { dir: 'part-4-implementation-playbooks',label: 'Part 4 - Playbooks',      group: 'part-4' },
+  { dir: 'part-5-operational-concerns',    label: 'Part 5 - Operations',     group: 'part-5' },
   { dir: 'closing',                        label: 'Closing',                 group: 'closing' },
   { dir: 'epilogue',                       label: 'Epilogue',                group: 'epilogue' },
   { dir: 'appendices',                     label: 'Appendices',              group: 'appendices' },
 ]
 
 const VOL2_SECTIONS = [
-  { dir: 'book-2/act-1', label: 'Act 1 — Sealed Hull', group: 'act-1' },
-  { dir: 'book-2/act-2', label: 'Act 2 — Under Ice',   group: 'act-2' },
-  { dir: 'book-2/act-3', label: 'Act 3 — Ascent',      group: 'act-3' },
+  { dir: 'book-2/act-1', label: 'Act 1 - Sealed Hull', group: 'act-1' },
+  { dir: 'book-2/act-2', label: 'Act 2 - Under Ice',   group: 'act-2' },
+  { dir: 'book-2/act-3', label: 'Act 3 - Ascent',      group: 'act-3' },
 ]
 
 function extractTitle(stem, filePath) {
@@ -293,10 +293,10 @@ fs.watch(AUDIO_DIR, { recursive: true }, (event, filename) => {
   if (!filename) return
   if (filename === 'manifest.json') {
     manifestDefaults = loadManifest()
-    console.log('[watch] manifest.json updated — render defaults reloaded')
+    console.log('[watch] manifest.json updated - render defaults reloaded')
   } else if (filename.endsWith('.meta.json')) {
     sidecarDefaults = loadSidecars()
-    console.log('[watch] sidecar updated — reloaded sidecars')
+    console.log('[watch] sidecar updated - reloaded sidecars')
   } else if (filename.endsWith('.mp3') && !filename.includes('_chunk_cache')) {
     mp3TagDefaults = loadMp3Tags()
     scheduleRebuild(`audio/${filename} ${event}`)
@@ -306,7 +306,7 @@ fs.watch(AUDIO_DIR, { recursive: true }, (event, filename) => {
 // Watch audiobook.py for CHAPTER_PRESET_MAP changes
 fs.watch(path.join(REPO_ROOT, 'build', 'audiobook.py'), () => {
   chapterPresetMap = loadChapterPresetMap()
-  console.log('[watch] audiobook.py updated — chapter preset map reloaded')
+  console.log('[watch] audiobook.py updated - chapter preset map reloaded')
 })
 
 // ── In-memory job registry ────────────────────────────────────────────────────
@@ -569,15 +569,15 @@ app.get('/api/chapters/:id/render-defaults', (req, res) => {
   const chapter = chapters.find(c => c.id === req.params.id)
   if (!chapter) return res.status(404).json({ error: 'Not found' })
 
-  // 1a. MP3 embedded tags — ground truth, written by audiobook.py on every render
+  // 1a. MP3 embedded tags - ground truth, written by audiobook.py on every render
   const fromTags = mp3TagDefaults[chapter.slug]
   if (fromTags) return res.json({ ...fromTags, source: 'manifest' })
 
-  // 1b. Web-UI sidecar — reliable for renders done via the web UI
+  // 1b. Web-UI sidecar - reliable for renders done via the web UI
   const fromSidecar = sidecarDefaults[chapter.slug]
   if (fromSidecar) return res.json({ ...fromSidecar, source: 'manifest' })
 
-  // 1c. Batch manifest — may be stale if chapter was later regenerated externally
+  // 1c. Batch manifest - may be stale if chapter was later regenerated externally
   const fromManifest = manifestDefaults[chapter.slug]
   if (fromManifest) return res.json({ ...fromManifest, source: 'manifest' })
 
@@ -863,7 +863,7 @@ function buildReviewInboxContent(session) {
   const sections = chapterIds.map(chapterId => {
     const chComments = session.comments.filter(c => c.chapter_id === chapterId)
     const { chapter_title, chapter_slug } = chComments[0]
-    const header = `## ${chapter_slug} — ${chapter_title}\n`
+    const header = `## ${chapter_slug} - ${chapter_title}\n`
     const items = chComments.map((c) => {
       const tag = { edit: 'EDIT', flag: 'FLAG', note: 'NOTE', question: 'QUESTION' }[c.type] || c.type.toUpperCase()
       const excerptLine = c.excerpt
@@ -970,5 +970,5 @@ app.listen(PORT, () => {
   console.log(`The Inverted Stack reader → http://localhost:${PORT}`)
   console.log(`${chapters.length} chapters, ${chapters.filter(c => c.has_audio).length} with audio`)
   console.log(`Watching: chapters/ and build/output/audiobook/`)
-  if (!fs.existsSync(DIST_DIR)) console.log('No dist/ — run: npm run build')
+  if (!fs.existsSync(DIST_DIR)) console.log('No dist/ - run: npm run build')
 })

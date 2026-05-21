@@ -1,4 +1,4 @@
-# Stage 8 — Release
+# Stage 8 - Release
 
 Land the change in canon and trigger downstream production.
 
@@ -13,6 +13,6 @@ Land the change in canon and trigger downstream production.
    - Web: rebuild reader bundle
 4. Tag the release in `.pao-inbox/_state-snapshots/` if it materially changes book status.
 
-**Artifact:** `NN-short-slug.md` — release note: what landed, where, with which commits, and what production outputs regenerated.
+**Artifact:** `NN-short-slug.md` - release note: what landed, where, with which commits, and what production outputs regenerated.
 
-**Exit criterion:** Canon updated, production rebuilt, item closed. Move the item's `06_build/` and `07_review/` folders to `_archive/` under each stage, or leave them as the audit trail (project preference — default: leave).
+**Exit criterion:** Canon updated, production rebuilt, item closed. Move the item's `06_build/` and `07_review/` folders to `_archive/` under each stage, or leave them as the audit trail (project preference - default: leave).

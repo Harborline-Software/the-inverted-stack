@@ -6,7 +6,7 @@
 
 <!-- Check all that apply -->
 - [ ] Chapter prose (new content / rewrite / fix)
-- [ ] Editorial — character canon, voice, structure
+- [ ] Editorial - character canon, voice, structure
 - [ ] Audiobook pipeline / renders
 - [ ] Cover / design / metadata
 - [ ] Repo infrastructure / CI / docs

@@ -1,6 +1,6 @@
 ---
 id: 02
-title: Prose-telemetry platform — Phase 1 (Freestylo + StyloMetrix integration)
+title: Prose-telemetry platform - Phase 1 (Freestylo + StyloMetrix integration)
 type: structural
 volume: series
 priority: P1
@@ -10,7 +10,7 @@ related:
   - .pao-inbox/_decisions/2026-05-08-prose-telemetry-platform.md
 ---
 
-# Prose-telemetry — Phase 1
+# Prose-telemetry - Phase 1
 
 Build the v1 detector + meter pipeline in `galley/prose/lib/prose_telemetry/`, per the locked architecture. v1 composes Freestylo (detectors) + StyloMetrix (meters) + spaCy (NLP base) + small custom detectors for what Freestylo doesn't cover.
 
@@ -28,4 +28,4 @@ Stdlib-only hand-count pilot at `build/prose_telemetry_handcount.py` validates t
 
 ## Suggested next stage
 
-`02_architecture` — confirm Freestylo's actual coverage from the discovery brief; decide composition vs hybrid; size the integration work.
+`02_architecture` - confirm Freestylo's actual coverage from the discovery brief; decide composition vs hybrid; size the integration work.

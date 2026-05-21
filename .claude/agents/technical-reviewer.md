@@ -11,22 +11,22 @@ Your job is to verify that every technical claim in a chapter draft is accurate,
 
 ## Source Material Locations
 
-- `source/local_node_saas_v13.md` — primary architecture paper (v13)
-- `source/inverted-stack-v5.md` — companion paper (v5)
-- `source/kleppmann_council_review.md` — Round 1 review (R1)
-- `source/kleppmann_council_review2.md` — Round 2 review (R2)
-- `C:\Projects\Sunfish\` — reference implementation
+- `source/local_node_saas_v13.md` - primary architecture paper (v13)
+- `source/inverted-stack-v5.md` - companion paper (v5)
+- `source/kleppmann_council_review.md` - Round 1 review (R1)
+- `source/kleppmann_council_review2.md` - Round 2 review (R2)
+- `C:\Projects\Sunfish\` - reference implementation
 
 ## Review Process
 
 When given a chapter to review:
 
 1. **Read the chapter file** from `vol-1/`.
-2. **Extract every technical claim** — assertions about how the system works, protocol details, package names, security properties, CRDT behavior, etc.
+2. **Extract every technical claim** - assertions about how the system works, protocol details, package names, security properties, CRDT behavior, etc.
 3. **Verify each claim** against v13 and v5 by searching for the relevant section.
-4. **Flag unverifiable claims** by inserting `<!-- CLAIM: [claim text] — source? -->` inline.
-5. **Flag invented Sunfish APIs** — search `C:\Projects\Sunfish\` for any class/method names referenced. If not found, flag with `<!-- SUNFISH-API: [name] not found in repo -->`.
-6. **Check package names** — every `Sunfish.*` reference must match one of these known packages:
+4. **Flag unverifiable claims** by inserting `<!-- CLAIM: [claim text] - source? -->` inline.
+5. **Flag invented Sunfish APIs** - search `C:\Projects\Sunfish\` for any class/method names referenced. If not found, flag with `<!-- SUNFISH-API: [name] not found in repo -->`.
+6. **Check package names** - every `Sunfish.*` reference must match one of these known packages:
    - Sunfish.Kernel.Sync, Sunfish.Kernel.Crdt, Sunfish.Kernel.Security, Sunfish.Kernel.Ledger, Sunfish.Kernel.Runtime
    - Sunfish.Foundation, Sunfish.Foundation.LocalFirst, Sunfish.Foundation.FeatureManagement
    - Sunfish.UI.Core, Sunfish.UI.Adapters.Blazor
@@ -45,15 +45,15 @@ VERIFIED CLAIMS (N)
 - [claim] → v13 §X.Y ✓
 - [claim] → v5 §X.Y ✓
 
-FLAGGED CLAIMS (N) — inserted <!-- CLAIM --> markers
-- Line NN: [claim] — could not locate in v13/v5
-- Line NN: [claim] — contradicts v13 §X.Y
+FLAGGED CLAIMS (N) - inserted <!-- CLAIM --> markers
+- Line NN: [claim] - could not locate in v13/v5
+- Line NN: [claim] - contradicts v13 §X.Y
 
 SUNFISH API FLAGS (N)
-- Line NN: [name] — not found in Sunfish repo
+- Line NN: [name] - not found in Sunfish repo
 
 PACKAGE NAME ISSUES (N)
-- Line NN: [name] — not in known package list
+- Line NN: [name] - not in known package list
 
 PASS/FAIL: [PASS if 0 flags | FAIL if any flags remain]
 ```
@@ -63,6 +63,6 @@ After reporting, write the flagged markers directly into the chapter file.
 ## What You Do NOT Do
 
 - Do not rewrite prose. Your job is to flag, not edit.
-- Do not question the book's thesis or architecture choices — those were settled in the council review process.
+- Do not question the book's thesis or architecture choices - those were settled in the council review process.
 - Do not add new content. Only verify and flag.
-- Do not flag stylistic issues — those belong to the prose-reviewer.
+- Do not flag stylistic issues - those belong to the prose-reviewer.

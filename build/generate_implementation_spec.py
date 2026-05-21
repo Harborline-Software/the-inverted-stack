@@ -3,10 +3,10 @@ consolidated concept-index.yaml.
 
 Structure:
   Part 0: Front matter (preface)
-  Part I: Thesis (ch01-ch04) — Epic per chapter
-  Part II: Council perspectives (ch05-ch10) — Epic per chapter
-  Part III: Reference architecture (ch11-ch16) — Epic per chapter (THE SPEC)
-  Part IV: Implementation playbooks (ch17-ch20) — Epic per chapter
+  Part I: Thesis (ch01-ch04) - Epic per chapter
+  Part II: Council perspectives (ch05-ch10) - Epic per chapter
+  Part III: Reference architecture (ch11-ch16) - Epic per chapter (THE SPEC)
+  Part IV: Implementation playbooks (ch17-ch20) - Epic per chapter
   Part V: Epilogue + Appendices
 
 Each chapter epic contains:
@@ -31,14 +31,14 @@ INDEX_IN = REPO / "docs" / "reference-implementation" / "concept-index.yaml"
 SPEC_OUT = REPO / "docs" / "reference-implementation" / "implementation-specification.md"
 
 PARTS = [
-    ("Part 0 — Front matter", ["preface"]),
-    ("Part I — Thesis and pain", [
+    ("Part 0 - Front matter", ["preface"]),
+    ("Part I - Thesis and pain", [
         "ch01-when-saas-fights-reality",
         "ch02-local-first-serious-stack",
         "ch03-inverted-stack-one-diagram",
         "ch04-choosing-your-architecture",
     ]),
-    ("Part II — Council perspectives", [
+    ("Part II - Council perspectives", [
         "ch05-enterprise-lens",
         "ch06-distributed-systems-lens",
         "ch07-security-lens",
@@ -46,7 +46,7 @@ PARTS = [
         "ch09-local-first-practitioner-lens",
         "ch10-synthesis",
     ]),
-    ("Part III — Reference architecture (the specification)", [
+    ("Part III - Reference architecture (the specification)", [
         "ch11-node-architecture",
         "ch12-crdt-engine-data-layer",
         "ch13-schema-migration-evolution",
@@ -54,13 +54,13 @@ PARTS = [
         "ch15-security-architecture",
         "ch16-persistence-beyond-the-node",
     ]),
-    ("Part IV — Implementation playbooks", [
+    ("Part IV - Implementation playbooks", [
         "ch17-building-first-node",
         "ch18-migrating-existing-saas",
         "ch19-shipping-to-enterprise",
         "ch20-ux-sync-conflict",
     ]),
-    ("Part V — Epilogue and appendices", [
+    ("Part V - Epilogue and appendices", [
         "epilogue-what-the-stack-owes-you",
         "appendix-a-sync-daemon-wire-protocol",
         "appendix-b-threat-model-worksheets",
@@ -74,7 +74,7 @@ PARTS = [
 
 def fmt_property_tag(props: list[str]) -> str:
     if not props:
-        return "—"
+        return "-"
     return ", ".join(sorted(props))
 
 
@@ -96,7 +96,7 @@ def render_concept(c: dict) -> str:
     notes = c.get("notes")
 
     out = []
-    out.append(f"#### `{ref}` — {name}")
+    out.append(f"#### `{ref}` - {name}")
     out.append("")
     out.append(definition)
     out.append("")
@@ -117,7 +117,7 @@ def render_concept(c: dict) -> str:
             out.append(f"- {item}")
         out.append("")
     else:
-        out.append("*Conceptual / philosophical — no direct implementation requirement.*")
+        out.append("*Conceptual / philosophical - no direct implementation requirement.*")
         out.append("")
 
     if verification:
@@ -171,7 +171,7 @@ def main() -> int:
     chapters_meta = {ch["stem"]: ch for ch in metadata["chapters"]}
 
     out = []
-    out.append("# Implementation Specification — The Inverted Stack")
+    out.append("# Implementation Specification - The Inverted Stack")
     out.append("")
     out.append(f"**Generated** from `concept-index.yaml` schema v{metadata['schema-version']}.")
     out.append(f"  **Total concepts:** {metadata['total-concepts']} across {metadata['total-chapters']} chapters.")
@@ -183,9 +183,9 @@ def main() -> int:
     out.append("This document is the human-readable view of `concept-index.yaml`. Each *concept* is a discrete architectural commitment the book makes. Concepts group into *chapter epics*, which group into *parts* matching the book structure.")
     out.append("")
     out.append("Each concept entry shows:")
-    out.append("- **Canonical reference**: `<chapter-stem>:<local-id>` — the stable ID downstream skills and scorecards use.")
+    out.append("- **Canonical reference**: `<chapter-stem>:<local-id>` - the stable ID downstream skills and scorecards use.")
     out.append("- **Definition**: one sentence stating what the concept IS.")
-    out.append("- **Kleppmann tag**: which of the seven properties (P1–P7) the concept serves. `—` if it serves no Kleppmann property directly (e.g., a build-tooling or business-model concept).")
+    out.append("- **Kleppmann tag**: which of the seven properties (P1–P7) the concept serves. `-` if it serves no Kleppmann property directly (e.g., a build-tooling or business-model concept).")
     out.append("- **Scope tag**: `foundational` (applies to any local-first repo) or `inverted-stack-specific` (requires this book's architectural choices).")
     out.append("- **Failure modes**: named failure modes the concept addresses, where applicable.")
     out.append("- **Must implement**: imperative requirements an implementation must satisfy to claim coverage. Empty for purely philosophical concepts.")
@@ -193,15 +193,15 @@ def main() -> int:
     out.append("")
     out.append("## Two consumer audiences")
     out.append("")
-    out.append("1. **Generic local-first repos** (Loro-, Yjs-, Automerge-, custom-engine implementations) score themselves against the `foundational`-scoped concepts grouped by Kleppmann property — see `concept-index-by-property.yaml` and the future `local-first-properties` Claude skill.")
-    out.append("2. **Inverted Stack-aligned repos** (Sunfish's Anchor and Bridge today; future implementations of this book's architecture) score themselves against the FULL concept index — see the future `inverted-stack-conformance` Claude skill.")
+    out.append("1. **Generic local-first repos** (Loro-, Yjs-, Automerge-, custom-engine implementations) score themselves against the `foundational`-scoped concepts grouped by Kleppmann property - see `concept-index-by-property.yaml` and the future `local-first-properties` Claude skill.")
+    out.append("2. **Inverted Stack-aligned repos** (Sunfish's Anchor and Bridge today; future implementations of this book's architecture) score themselves against the FULL concept index - see the future `inverted-stack-conformance` Claude skill.")
     out.append("")
-    out.append("**Sunfish-specific glue** (mapping concept IDs to Sunfish package paths, ICM pipeline variants for conformance review) lives in `C:\\Projects\\Sunfish\\icm\\` — not in this repo.")
+    out.append("**Sunfish-specific glue** (mapping concept IDs to Sunfish package paths, ICM pipeline variants for conformance review) lives in `C:\\Projects\\Sunfish\\icm\\` - not in this repo.")
     out.append("")
     out.append("## Kleppmann property glossary")
     out.append("")
     for p, desc in metadata["kleppmann-property-glossary"].items():
-        out.append(f"- **{p}** — {desc}")
+        out.append(f"- **{p}** - {desc}")
     out.append("")
     out.append("## Property coverage summary")
     out.append("")

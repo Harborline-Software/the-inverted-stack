@@ -1,4 +1,4 @@
-# _series — Shared series bible
+# _series - Shared series bible
 
 Cross-volume canon: world rules, long arcs, character continuity, recurring locations, technology canon, and naming conventions. Anything that must stay consistent across `vol-1/`, `vol-2/`, and future volumes lives here.
 
@@ -7,7 +7,7 @@ Cross-volume canon: world rules, long arcs, character continuity, recurring loca
 | Folder | Purpose |
 |---|---|
 | `world/` | Physical and political world: geography, organizations, regulatory regimes |
-| `tech-canon/` | Sunfish architecture canon, protocol conventions, CRDT engine choices, security model — what the in-universe technology is and is not |
+| `tech-canon/` | Sunfish architecture canon, protocol conventions, CRDT engine choices, security model - what the in-universe technology is and is not |
 | `characters/` | Character sheets, voice registers, arc trackers (currently in `.pao-inbox/_creative/character-sheets/`; candidate to migrate) |
 | `arcs/` | Long-running narrative arcs spanning multiple volumes |
 | `chapter-registry.yaml` | Authoritative map of chapter IDs → titles → file paths → volume/part/act → status |

@@ -432,8 +432,8 @@ concepts:
   name: Credential recovery paths
   source: ch07 §"Credential Recovery and Account Continuity"
   source-paper: null
-  definition: A required set of artifact-based recovery options — recovery-key file, administrator-held
-    wrapped KEK escrow, MDM re-enrollment plus relay-assisted re-sync — from which every deployment must
+  definition: A required set of artifact-based recovery options - recovery-key file, administrator-held
+    wrapped KEK escrow, MDM re-enrollment plus relay-assisted re-sync - from which every deployment must
     select and test at least one before production, with the no-artifact case explicitly disclosed as
     permanent loss.
   must-implement:
@@ -468,9 +468,9 @@ concepts:
   name: Defense-in-depth four-layer model
   source: 'ch07 §"The Principle: Defense-in-Depth Is Not Optional"'
   source-paper: v13 §11
-  definition: A non-optional composition of four enforcement layers — encryption at rest, field-level
+  definition: A non-optional composition of four enforcement layers - encryption at rest, field-level
     envelope encryption, stream-level send-tier data minimization, and circuit-breaker quarantine of offline
-    writes — each built from independently audited primitives and specified before use.
+    writes - each built from independently audited primitives and specified before use.
   must-implement:
   - Local databases are encrypted at rest with a vetted engine and Argon2id-derived keys stored in OS-native
     keystores

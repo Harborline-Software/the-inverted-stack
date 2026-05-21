@@ -17,7 +17,7 @@ export default function AudioMeta({ info, planned }) {
   if (!info) return null
 
   const eng = ENGINE_LABEL[info.engine] ?? { label: info.engine, quality: '', cls: '' }
-  const voiceName = info.voice || info.preset || '—'
+  const voiceName = info.voice || info.preset || '-'
 
   return (
     <div className="audio-meta rendered">

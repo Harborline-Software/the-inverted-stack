@@ -42,8 +42,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         img?.isTemplate = true
         btn.image = img
         btn.toolTip = running
-            ? "Inverted Stack Reader — running on :\(kPort)"
-            : "Inverted Stack Reader — stopped"
+            ? "Inverted Stack Reader - running on :\(kPort)"
+            : "Inverted Stack Reader - stopped"
     }
 
     // ── Menu ──────────────────────────────────────────────────────────────────

@@ -18,28 +18,28 @@ canonical credits manifest for every LibriVox source we have uploaded.
 
 > "There is no need to credit LibriVox, although of course we much prefer
 > if you do credit us (with a link to our site)."
-> — LibriVox public-domain page
+> - LibriVox public-domain page
 
 ## How attribution is captured
 
 Three layers, each independent:
 
-1. **This file (`references/CREDITS.md`)** — version-controlled credits in
+1. **This file (`references/CREDITS.md`)** - version-controlled credits in
    the repo. The canonical record. Updated whenever a new voice is uploaded.
-2. **TTS server `notes` field on each uploaded voice** — same attribution
+2. **TTS server `notes` field on each uploaded voice** - same attribution
    embedded in the voice catalog itself, accessible via
    `GET /v1/audio/voices/{voice_id}` (server at `desktop-umt08rn:8881`).
-3. **Audiobook end credits** *(planned)* — when the full audiobook is
+3. **Audiobook end credits** *(planned)* - when the full audiobook is
    assembled into the final M4B, an end-credits track names every reader
    + LibriVox source verbally.
 
-## Voice catalog (custom uploads — preserved for optional per-chapter regen)
+## Voice catalog (custom uploads - preserved for optional per-chapter regen)
 
 Each entry below names: the voice ID on the TTS server, the persona it
 was originally trialed against, the LibriVox source book, the reader,
 the specific section + time window from which the 28-second reference
 clip was extracted, and links back to the LibriVox book and reader
-pages. **None of these voices are currently in `PRESETS_CHATTERBOX`** —
+pages. **None of these voices are currently in `PRESETS_CHATTERBOX`** -
 the preset map points all slots at `broom_salesman` (stock). To
 resurrect a per-chapter cloned voice, either pass `--voice <id>` to
 `audiobook.py` for the specific chapter render, or update the
@@ -47,7 +47,7 @@ corresponding preset slot in `PRESETS_CHATTERBOX`.
 
 ### `voss-trial-savage`
 
-- **Persona:** Dr. Marguerite Voss — Ch05 The Enterprise Lens (F, executive)
+- **Persona:** Dr. Marguerite Voss - Ch05 The Enterprise Lens (F, executive)
 - **Source book:** *Pride and Prejudice (version 3)* by Jane Austen
 - **LibriVox book:** <https://librivox.org/pride-and-prejudice-by-jane-austen-2/>
 - **Reader:** Karen Savage
@@ -57,7 +57,7 @@ corresponding preset slot in `PRESETS_CHATTERBOX`.
 
 ### `shevchenko-trial-yakovlev`
 
-- **Persona:** Dr. Dmitri Shevchenko — Ch06 The Distributed Systems Lens (M, Slavic, distributed-systems theorist)
+- **Persona:** Dr. Dmitri Shevchenko - Ch06 The Distributed Systems Lens (M, Slavic, distributed-systems theorist)
 - **Source book:** *Записки из подполья (Notes from the Underground)* by Fyodor Dostoyevsky
 - **LibriVox book:** <https://librivox.org/zapiski-iz-podpolya-by-fyodor_dostoevsky/>
 - **Reader:** Yakovlev Valery
@@ -67,7 +67,7 @@ corresponding preset slot in `PRESETS_CHATTERBOX`.
 
 ### `okonkwo-trial-klett`
 
-- **Persona:** Adaeze Okonkwo — Ch07 The Security Lens (F, security expert)
+- **Persona:** Adaeze Okonkwo - Ch07 The Security Lens (F, security expert)
 - **Source book:** *Persuasion (version 2)* by Jane Austen
 - **LibriVox book:** <https://librivox.org/persuasion-by-jane-austen-2/>
 - **Reader:** Elizabeth Klett
@@ -81,7 +81,7 @@ corresponding preset slot in `PRESETS_CHATTERBOX`.
 
 ### `kelsey-trial-smith`
 
-- **Persona:** Jordan Kelsey — Ch08 The Product & Economic Lens (M, polished corporate)
+- **Persona:** Jordan Kelsey - Ch08 The Product & Economic Lens (M, polished corporate)
 - **Source book:** *Sense and Sensibility (version 2)* by Jane Austen
 - **LibriVox book:** <https://librivox.org/sense-and-sensibility-version-2-by-jane-austen/>
 - **Reader:** Mark F. Smith
@@ -91,7 +91,7 @@ corresponding preset slot in `PRESETS_CHATTERBOX`.
 
 ### `ferreira-trial-rogeriom`
 
-- **Persona:** Tomás Ferreira — Ch09 The Local-First Practitioner Lens (M, Lusophone, practitioner)
+- **Persona:** Tomás Ferreira - Ch09 The Local-First Practitioner Lens (M, Lusophone, practitioner)
 - **Source book:** *Iracema* by José de Alencar (José Martiniano de Alencar)
 - **LibriVox book:** <https://librivox.org/iracema-by-jose-de-alencar/>
 - **Reader:** RogerioM
@@ -99,13 +99,13 @@ corresponding preset slot in `PRESETS_CHATTERBOX`.
 - **Reference clip:** §2 (Capítulos 6 a 10), window 1:30–1:58 (28 sec)
 - **License:** Public domain (CC0)
 
-## Stock voice (Chatterbox built-in) — universal narrator
+## Stock voice (Chatterbox built-in) - universal narrator
 
 The Chatterbox TTS server ships with 16 stock voices originally sourced
 from the upstream model's training data. **One** stock voice is wired
 into `PRESETS_CHATTERBOX` for the audiobook pipeline:
 
-- **`broom_salesman`** — older British male, deliberate cadence
+- **`broom_salesman`** - older British male, deliberate cadence
   (Ollivander register from the upstream sample set). The universal
   narrator for the entire audiobook per author decision 2026-04-28.
   Pair with V12 dramatic recipe (`--exaggeration 0.7 --cfg-weight 0.3`)

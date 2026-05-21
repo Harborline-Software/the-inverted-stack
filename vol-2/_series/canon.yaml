@@ -1,4 +1,4 @@
-# The Filchner Dark — story canon
+# The Filchner Dark - story canon
 #
 # Locked facts about characters, dates, objects, and places. The
 # story-canon validator (galley/prose/lib/story_canon) reads this file and
@@ -55,6 +55,30 @@ characters:
     last_seen_by_anna: 2025-11-13   # Bremerhaven
     consortium_review_date: 2025-11-13
     kept_object_from_anna: small dark-green ceramic mug
+    cascade_role: pushed Anna aside at access ladder Mission Day 47; went down
+      second to retrieve Diego; came out alone eleven minutes later after dogging
+      the door, containing the leak, draining residual water, declaring
+      compartment-clear; minor abrasions cleared at medical level Mission Day 49
+    architectural_funding_decision:
+      cycle: September 2022 IAA pre-procurement review
+      action: ran AI-agent security audit on vendor firmware; agent returned clean;
+        Joel signed procurement approval against the agent's output without
+        verifying the agent's findings against the raw firmware
+      gap: AI-agent missed the supply-chain attack vector embedded in the
+        firmware's low-frequency post-patch reading-stream component (not in
+        manufacturer's release documentation)
+      admission:
+        date: Mission Day 54, wardroom, midnight
+        witness: Wanjiru Kamau
+        canonical_lines:
+          - "I did not read the agent's findings against the raw firmware"
+          - "The architecture I built exists because I do not trust an agent to
+            do that work alone"
+          - "The cost is in the compartment"
+      discipline_trajectory: under Plan C, Joel's vol-3 trajectory begins from
+        this admission — the engineer who built the verifiability layer admits
+        he did not verify; vol-3 picks up his recovery and the broader
+        named-accountable-human-verification standard
 
   mikael:
     full_name: Mikael Halvorsen
@@ -79,16 +103,55 @@ characters:
 
   wanjiru:
     full_name: Wanjiru Kamau
-    role: survey lead
+    role: relay-operations officer, RV Nansen (revised under Plan C — survey-line
+      adjustment betrayal arc retired; Wanjiru is the institutional-substrate
+      officer who reconstructs the firmware pattern jointly with Joel and names
+      the standards body the consortium will need)
     years_known_to_anna: 11
-    plot_role: second betrayer (survey-line adjustments)
+    plot_role: institutional-substrate officer; drafter of the standards-body
+      framework that becomes vol-3 institutional inheritance
+    standards_body_framework:
+      seeded_at: wardroom Mission Day 54 (1900); shaped on cucu-notebook
+        across post-cascade transit and at Punta Arenas reception room
+      central_claim: AI-mediated audits must be verified by a human reviewer
+        with named accountability (the vendor-attestation-debt that Joel's
+        admission established as the framework's load-bearing requirement)
+      scope:
+        - vendor-attestation requirements binding manufacturers at supply-chain
+          level against an institutional framework OSS-affiliated mission
+          consortia can audit at scale
+        - firmware-transparency rules requiring complete release documentation
+          including patch behavior at the data level
+        - supply-chain audit framework distinguishing routine partnership
+          announcement at public level from co-development arrangements
+          carrying firmware behavior at the data level
+      institutional_target: Working Group on Compliance-Friendly Distributed
+        Architectures (preliminary response acknowledges regulatory filing,
+        does not concede substantive point); full submission scheduled
+        February 2027 at European Commission DG-CNECT level
+      minority_opinion: Wanjiru will draft the minority opinion against the
+        Working Group's preliminary response at the post-consultation cycle;
+        the minority opinion is the institutional response the consortium
+        will carry forward
+      vol3_inheritance: under Plan C the framework becomes the institutional
+        inheritance of Joel's funding decision and Diego's death
 
   astrid:
     full_name: Astrid Hansen
-    role: rival mission commander
+    age: 38                    # added 2026-05-19 via PAO Ch 18 Astrid present-tense beat
+    role: rival mission commander (Helvetia-2)
     relationship_to_anna: former apprentice
+    boats_with_anna_prior_to_mission_cycle: 3   # added 2026-05-19
+    discipline_inherited_from_anna:
+      - reading list
+      - watch-rotation discipline
+      - "the conviction that the boat is the way one earns one's right to a longer mission"
     sponsor: Stefan Reinhardt
     plot_role: external antagonist
+    ch18_present_tense: |
+      Anna observes Astrid at the rival-platform delegation beside Stefan at the consortium
+      reception. Reciprocal no-approach choreography. The institutional-register registration only.
+      The "other register" (personal/grief/anger) is explicitly withheld from the room.
 
   stefan:
     full_name: Stefan Reinhardt
@@ -96,8 +159,40 @@ characters:
     plot_role: external antagonist (sponsor)
 
   diego:
-    role: crew member, currently standing the watch Anna is not standing
-    # TBD: full development
+    full_name: Diego Sá
+    role: Senior Polar-Operations Specialist, RV Nansen
+    boats_with_anna_prior_to_mission_cycle: 3   # selected across three prior missions
+    status: deceased
+    cause_of_death: cascade event Mission Day 47 (starboard sensor head failure;
+      asphyxiation and thermal injury in post-leak compartment environment;
+      off-the-shelf sensor head, vendor firmware traceable to Helvetia Trust SA
+      co-development chain)
+    time_of_death: "0408 local Mission Day 47"
+    declared_by: M. Vargas (medical officer); signed under Ed25519 device key
+    next_of_kin:
+      name: María Elena Vargas
+      location: calle 11 de Septiembre, Belgrano, Buenos Aires, Argentina
+      relationship: wife (34 years)
+    granddaughter: Sofía
+    retirement_plant: retired (Diego does not retire; he dies)
+    body_return_timeline: within 96h post-Punta-Arenas handshake per IAA standing protocol
+    last_letter:
+      sealed: "2147 Mission Day 55"
+      addressed_to: María Elena Vargas, Belgrano
+      seal: routine paper seal in Diego's hand; wax under unpolished bombilla
+        carried by Maria at gangway
+    personal_effects_returned_with_body:
+      - leather mate-cup with unpolished bombilla (María Elena's wedding gift, 1991)
+      - the unfinished Filchner-Ronne paper (canonical authored-content archive;
+        posthumous publication w/ María Elena as co-author per Diego's standing wish)
+      - photographs from under-ice transit Mission Day 35
+      - the sealed letter (hand-carried by Anna to Belgrano en route to Brasília)
+    institutional_logistics:
+      - IAA senior-research-fellow survivor-benefits protocol
+      - pension to María Elena
+      - guest-professorship at UBA carried as memorial chair at emeritus level
+      - IAA fellowship carried as memorial fellowship under his name
+      - small house at San Martín de los Andes still within institutional logistics
 
   la_pastora:
     role: namesake of the Punta Arenas bakery (great-grandmother generation)
@@ -137,6 +232,18 @@ objects:
     material: ceramic
     given_by: Anna
     given_at: Bremerhaven (2025-11-13)
+
+  diego_mate_cup:
+    material: leather (worn at hand-position where Diego drank from it across
+      wardroom mornings)
+    bombilla: unpolished silver (silver under unpolish was given by María
+      Elena's father at the 1991 wedding)
+    given_by: María Elena Vargas on their wedding day, 1991
+    carried_by: Diego on every boat since 1991
+    posthumous_handling: returned to María Elena via Anna's hand-carry at
+      Belgrano en route to Brasília November consortium meeting (post Plan C
+      ch18 bereavement scene); leather mate-cup + sealed letter together as
+      personal effects per IAA standing-personal-effects protocol
 
   diana_scrapbook:
     contents: Anna's bakery photographs (one per city she has passed through)
@@ -188,3 +295,145 @@ events:
   - id: pre_departure_bremerhaven
     date: 2025-11-13
     description: consortium final review of Joel's paper; Anna and Joel's brief encounter
+
+  - id: ch14-cascade-fatality
+    mission_day: 47
+    times:
+      leak: "0317 local"
+      time_of_death: "0408 local"
+    location: starboard sensor head / access compartment, RV Nansen
+    cause: off-the-shelf sensor head failure (vendor firmware traceable to
+      Helvetia Trust SA co-development chain; low-frequency post-patch
+      reading-stream component not in release documentation)
+    casualty: Sá, D., Senior Polar-Operations Specialist
+    sequence: Diego on eight-to-four watch at polar-operations console; reads
+      pre-failure acoustic signature flag thirty seconds before breach-class
+      alarm fires; goes into access compartment first. Joel converges from
+      opposite direction, pushes Anna aside at top of ladder, goes down second.
+      Joel arrives; Diego conscious but in coolant-and-smoke environment beyond
+      time-of-survivability without resuscitation gear (resuscitation gear is at
+      lower-deck medical bay, not at the compartment). Joel makes the choice the
+      cascade requires; comes out alone eleven minutes later, dogs door from
+      inside, contains leak, drains residual water, declares compartment-clear.
+    recovery_protocol: Maria runs 14-minute recovery against standing algorithm
+      at medical bay; declared TOD 0408 local under Maria's Ed25519 device key
+    operational_damage:
+      - starboard sensor head one (decommissioned per procedure)
+      - central workstation one / compute hub (water damage at rack level;
+        decommissioned per procedure)
+    damage_report_filed: "0518 Mission Day 47"
+
+  - id: ch17-joel-firmware-admission
+    mission_day: 54
+    time: "wardroom, midnight (~1900 onset; transcribed at staff-history altitude later)"
+    location: RV Nansen wardroom
+    participants: [Joel Reyes, Anna Yusupova, Wanjiru Kamau]
+    description: Joel admits the AI-agent audit was not double-checked. Joel
+      ran the AI-agent security audit on vendor firmware at the September
+      2022 IAA pre-procurement review cycle; agent returned clean; Joel signed
+      procurement approval against agent's output without verifying findings
+      against raw firmware. Wanjiru's institutional setup beat precedes
+      admission (preposition switch "at" → "in" is structural device).
+    canonical_lines:
+      - "I did not read the agent's findings against the raw firmware"
+      - "The architecture I built exists because I do not trust an agent
+        to do that work alone"
+      - "The cost is in the compartment"
+    anna_response: 25 words concrete physical (Joel's hands, the screen, the
+      ventilation hum); no aphorism
+    in_staff_history: yes (replicates to consortium-port mirror at post-handshake)
+    in_diary: yes (encrypted under author's key; at different altitude)
+
+  - id: ch18-bereavement-protocol
+    mission_day: 56
+    date: 2026-02-15  # equinox observance window noted at dock
+    location: Punta Arenas dockside, consortium-port berth
+    sequence:
+      - "0441 local: surface secured against consortium standing handshake"
+      - "0438 local: gangway across at boat's freeboard"
+      - "0507 local: consortium-logistics-van pulls away from dock with Diego"
+      - "0508 local: IAA bereavement officer clears institutional protocol at dockside"
+      - "0728 local: Maria descends gangway and delivers sealed envelope +
+        leather mate-cup to Anna for hand-carry"
+    institutional_actors:
+      - IAA bereavement officer (at dockside within first hour per IAA standing protocol)
+      - IAA Buenos Aires office (handshake-receiving end at Belgrano)
+    body_delivery: María Elena Vargas at Belgrano within 96h per IAA
+      standing protocol
+    personal_effects_hand_carry: Anna carries sealed letter + leather mate-cup
+      to María Elena at Belgrano en route to November consortium meeting at
+      Brasília (institutional channel = 31 days; hand-carry = 6 weeks;
+      IAA bereavement officer aware of asymmetry; mission director may choose)
+
+# Cross-volume forward plants — plants set in one volume that pay in a later
+# volume. Tracked here so future-volume drafters know what they inherit.
+# Per series-arc § 8: drafters do NOT reach toward these in current-volume prose;
+# they plant toward them.
+forward_plants:
+  - id: hiroshi-unfinished-line
+    set_in: vol-2/ch18 (Punta Arenas Surfacing)
+    set_date: 2026-05-19 (PAO)
+    description: |
+      Hiroshi's notebook at the gangway scene — the curved stroke under his
+      thumb, "the moment before something becomes the next thing." He did not
+      draw for the medium; he drew for the impulse.
+    payoff_target: vol-3 (Wanjiru's standards-body founding period; Hiroshi
+      delivers the finished drawing at a standards-body conference)
+    cic_decision_date: 2026-05-19
+    cic_decision: leave as open vol-3 plant (per PAO UPF cross-chapter analysis
+      + CIC ratification 2026-05-19)
+  - id: astrid-redemption-signal
+    set_in: vol-3 (planned — Astrid sends a single letter to Wanjiru)
+    description: |
+      Astrid's first written communication to Wanjiru since the 2026 mission.
+      Neither accepted nor refused in vol-3.
+    payoff_target: vol-4 (Astrid as narrator; Wanjiru's response letter is the
+      inciting beat for the Belyana mission)
+  - id: diana-postcards
+    set_in: vol-2/ch01 (Departure)
+    set_date: 2026-05-20 (Yeoman plant-payoff audit)
+    description: |
+      Anna prints postcards for Diana from every bakery in every city she passes
+      through. The postcard thread runs through vol-2 but the payment — a postcard
+      fails to arrive or arrives late, and Diana notices — does not occur in vol-2.
+    payoff_target: vol-2 endgame or vol-3 (per A+ roadmap plant-payoff triage
+      2026-05-21; genuine unpaid forward-plant)
+  - id: wanjiru-standards-body-framework-with-vendor-attestation-debt
+    set_in: vol-2/ch17 (Transit North); vol-2/ch18 (Punta Arenas Surfacing —
+      cucu-notebook drafting at reception room post-handshake)
+    set_date: 2026-05-21 (Plan C Wave 4 canon.yaml ratification)
+    description: |
+      Wanjiru drafts the standards-body framework whose central claim becomes
+      "AI-mediated audits must be verified by a human reviewer with named
+      accountability." The framework is seeded at the wardroom Mission Day 54
+      (Joel's admission), shaped on the cucu-notebook across post-cascade
+      transit, and named at the Punta Arenas reception room (where the
+      bandwidth meter holds at post-handshake throughput and the institutional
+      response forms around the thirty-seven-hour question still ringed in
+      pencil at the cucu-notebook's center). Wanjiru does not narrate the
+      drafting in first person; she names what needs drafting and proceeds
+      to draft it.
+    payoff_target: vol-3 (Wanjiru-narrator opens with the standards-body
+      framework under drafting in the shadow of Joel's admission and Diego's
+      death; the convention is older than the architecture; the convention
+      has now been weighted by a specific debt the architecture could not
+      pay alone)
+  - id: joel-discipline-trajectory-now-includes-fallibility-admission
+    set_in: vol-2/ch17 (Transit North — Mission Day 54 wardroom admission)
+    set_date: 2026-05-21 (Plan C Wave 4 canon.yaml ratification)
+    description: |
+      Joel's vol-3 trajectory begins from the admission that he ran the
+      AI-agent security audit on vendor firmware and signed procurement
+      approval without verifying the agent's findings against the raw
+      firmware. The engineer who built the verifiability layer admits he
+      did not verify. The admission is in his own voice; one short
+      paragraph; not packaged; no theatrical contrition. Joel is not the
+      villain (per Plan C anti-pattern 7); the structural condition that
+      villainous-funding-asymmetry between OSS-affiliated mission
+      consortia and Helvetia-Trust-SA-backed vendor consolidation is the
+      institutional antagonist.
+    payoff_target: vol-3 (Joel's recovery arc; vol-3 picks up his
+      reconstruction of the verifiability discipline that the cost has
+      now made non-optional; Joel's vol-3 work feeds into Wanjiru's
+      standards-body framework at the named-accountable-human-verification
+      claim)

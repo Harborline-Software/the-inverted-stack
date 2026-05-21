@@ -201,7 +201,7 @@ concepts:
   name: You retain ultimate ownership and control
   source: ch02 §"The Seven Ideals"
   source-paper: null
-  definition: The user structurally — not contractually — decides where data lives, who can access it,
+  definition: The user structurally - not contractually - decides where data lives, who can access it,
     and when to delete it, because the bits live on hardware the user controls in a format the user can
     read under encryption the user can manage.
   must-implement:

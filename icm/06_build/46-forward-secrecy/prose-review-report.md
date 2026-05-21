@@ -1,9 +1,9 @@
-# Prose-review report — #46 Forward Secrecy and Post-Compromise Security
+# Prose-review report - #46 Forward Secrecy and Post-Compromise Security
 
 **Iteration:** iter-0020 (prose-review)
 **Date:** 2026-04-28
 **Stage advance:** technical-review → prose-review
-**Verdict:** PASS — light revision applied; ready for voice-check
+**Verdict:** PASS - light revision applied; ready for voice-check
 
 ---
 
@@ -15,28 +15,28 @@ Out of scope and not touched:
 - §Endpoint Compromise (#47, immediately following)
 - §Collaborator Revocation (preceding)
 - Refs [14]–[19] in the reference list (unchanged content; not re-edited in this pass)
-- The CLAIM marker at §46e line 461 (OTR/PCS attribution) — preserved verbatim per loop-plan §5
+- The CLAIM marker at §46e line 461 (OTR/PCS attribution) - preserved verbatim per loop-plan §5
 
 ---
 
 ## Voice register confirmation
 
-Part III specification voice — "what it is, how it works fully." Confirmed:
+Part III specification voice - "what it is, how it works fully." Confirmed:
 
 - Section opens with WHY the section exists (the question key hierarchy is silent on), not what it describes.
 - Active voice predominates ("the symmetric ratchet advances on every message," "the relay forwards ciphertext," "the recipient unwraps the sealed identity").
-- Specification framing throughout — names commitments and constructions, no tutorial "you should" framing.
+- Specification framing throughout - names commitments and constructions, no tutorial "you should" framing.
 - No re-introduction of local-node architecture.
-- No academic scaffolding ("as we have seen," "this paper argues") — none found.
+- No academic scaffolding ("as we have seen," "this paper argues") - none found.
 - Cross-references resolve to canonical section names; internal extension numbers (#47, #48) removed where they leaked into reader-facing prose.
 
 ---
 
 ## Edits applied
 
-### 1. Synonym cycling — "long-lived envelope" → "long-lived session key"
+### 1. Synonym cycling - "long-lived envelope" → "long-lived session key"
 
-**Line 415.** The phrase "captures a session key under the long-lived envelope" cycled terminology — "envelope" appears nowhere else in §46. The "long-lived" attribute belongs to the session key itself (the very property §46a removes). Rewrote to attach the modifier directly to the named concept.
+**Line 415.** The phrase "captures a session key under the long-lived envelope" cycled terminology - "envelope" appears nowhere else in §46. The "long-lived" attribute belongs to the session key itself (the very property §46a removes). Rewrote to attach the modifier directly to the named concept.
 
 ```
 - A relay observer who captures a session key under the long-lived envelope
@@ -44,7 +44,7 @@ Part III specification voice — "what it is, how it works fully." Confirmed:
   decrypts every event encrypted under that key.
 ```
 
-### 2. Active voice — "a peer that is currently offline" → "a currently offline peer"
+### 2. Active voice - "a peer that is currently offline" → "a currently offline peer"
 
 **Line 433.** Minor passive construction with redundant relative clause. Tightened to compact adjective form.
 
@@ -53,7 +53,7 @@ Part III specification voice — "what it is, how it works fully." Confirmed:
 + a node coming online can begin a session with a currently offline peer.
 ```
 
-### 3. Active voice — "that variant is deferred" → "this book defers that variant"
+### 3. Active voice - "that variant is deferred" → "this book defers that variant"
 
 **Line 455.** Agentless passive where the agent (the architecture / the book itself) is well-defined. Reattributed.
 
@@ -81,14 +81,14 @@ Part III specification voice — "what it is, how it works fully." Confirmed:
 + Collaborator revocation (...) behaves the same way: a revocation event forces a ratchet advance for every remaining session, so the revoked party's last-known ratchet state cannot decrypt subsequent messages.
 ```
 
-The `ensuring [X]` superficial -ing tail-phrase (anti-ai-tells §3) became an explicit `so [X]` causal — keeping the consequence visible without the puffy participle.
+The `ensuring [X]` superficial -ing tail-phrase (anti-ai-tells §3) became an explicit `so [X]` causal - keeping the consequence visible without the puffy participle.
 
-### 5. Internal-numbering leakage — `#48`
+### 5. Internal-numbering leakage - `#48`
 
-**Line 464.** `Cross-reference to §Key-Loss Recovery for the interaction with #48 — recovery reconstitutes...` exposed extension number `#48` (forward dependency on the key-loss-recovery item) inside reader-facing prose. The §Key-Loss Recovery section name is already present; `#48` was redundant authoring scaffolding. Removed.
+**Line 464.** `Cross-reference to §Key-Loss Recovery for the interaction with #48 - recovery reconstitutes...` exposed extension number `#48` (forward dependency on the key-loss-recovery item) inside reader-facing prose. The §Key-Loss Recovery section name is already present; `#48` was redundant authoring scaffolding. Removed.
 
 ```
-- Cross-reference to §Key-Loss Recovery for the interaction with #48 — recovery reconstitutes KEK custody...
+- Cross-reference to §Key-Loss Recovery for the interaction with #48 - recovery reconstitutes KEK custody...
 + Cross-reference to §Key-Loss Recovery for the recovery interaction: recovery reconstitutes KEK custody...
 ```
 
@@ -110,11 +110,11 @@ The `ensuring [X]` superficial -ing tail-phrase (anti-ai-tells §3) became an ex
 
 ### D. `is AES-256-GCM encrypted under a DEK that persists until explicitly rotated` (line 423)
 
-**Held.** Passive but conventional. `explicitly rotated` carries the load-bearing modifier "explicit" (rotation is not implicit/automatic) — rewriting would lose that.
+**Held.** Passive but conventional. `explicitly rotated` carries the load-bearing modifier "explicit" (rotation is not implicit/automatic) - rewriting would lose that.
 
 ### E. `which happens naturally as they communicate` (line 431)
 
-**Held.** "Naturally" reads as a soft hedge but is doing specific work — it distinguishes the progressive DH-ratchet advance through normal traffic from the operator-triggered path defined in §46c. Removing it would obscure the distinction.
+**Held.** "Naturally" reads as a soft hedge but is doing specific work - it distinguishes the progressive DH-ratchet advance through normal traffic from the operator-triggered path defined in §46c. Removing it would obscure the distinction.
 
 ### F. CLAIM marker on line 461
 
@@ -124,7 +124,7 @@ The `ensuring [X]` superficial -ing tail-phrase (anti-ai-tells §3) became an ex
 
 **Held.** Recurring book device used elsewhere in Ch15 and across Part III. On-voice.
 
-### H. `The architectural commitment is the two properties — forward secrecy and post-compromise security — not the specific construction` (line 437)
+### H. `The architectural commitment is the two properties - forward secrecy and post-compromise security - not the specific construction` (line 437)
 
 **Held.** Strong em-dash apposition, on-voice. Em-dash use is explicitly preserved per the anti-ai-tells calibration (§Calibrations).
 
@@ -136,15 +136,15 @@ Scanned for the high-frequency patterns from `.claude/skills/anti-ai-tells/SKILL
 
 | Pattern | Found | Disposition |
 |---|---|---|
-| §1 Significance / legacy puffery | "all inherited the discipline" (line 461) | Held — earned punch line, not vague legacy puffery; ties to a specific list (Signal, MLS, Noise). |
-| §3 Superficial -ing tail-phrases | `ensuring the revoked party's last-known ratchet state cannot decrypt` (line 443) | **Fixed in edit 4** — replaced with explicit `so` causal. Other -ing tails (`allowing one party to initiate` line 433, `matching the KEK rotation cadence` line 445, `resetting the symmetric ratchet from a new entropy source` line 429) are load-bearing — each carries a specific architectural claim, not vague consequence. Held. |
-| §7 AI-vocabulary cluster | None — no `delve, showcase, tapestry, interplay, intricate, vibrant, enduring, additionally` cluster. `crucial`/`key` not used as soft emphasis. | Clean. |
-| §8 Copula avoidance | None — the section uses plain `is`/`are`/`has` throughout (e.g., "Forward secrecy is the property that..."). No `serves as a`, `stands as a`, `represents a`. | Clean. |
-| §9 Negative parallelisms | None — no `not only X but also Y` or `it's not just X, it's Y` patterns. | Clean. |
-| §16 Inline-header vertical lists | FAILED-conditions bullets (line 470–472) use `**Header.**` format. | Held — this is the chapter's recurring FAILED-conditions reference list, used for every primitive in Ch15. Genuine reference structure, not paragraph-prose disguised as bullets. |
-| §17 Title case in headings | All H3 sub-pattern headings use sentence case (`Sub-pattern 46a — Per-message ephemeral key derivation`). | Clean. |
-| §27 Persuasive authority tropes | None — no `the real question is`, `at its core`, `fundamentally`, `what really matters`. | Clean. |
-| §28 Signposting | None — no `let's dive into`, `let's explore`, `here's what you need to know`. | Clean. |
+| §1 Significance / legacy puffery | "all inherited the discipline" (line 461) | Held - earned punch line, not vague legacy puffery; ties to a specific list (Signal, MLS, Noise). |
+| §3 Superficial -ing tail-phrases | `ensuring the revoked party's last-known ratchet state cannot decrypt` (line 443) | **Fixed in edit 4** - replaced with explicit `so` causal. Other -ing tails (`allowing one party to initiate` line 433, `matching the KEK rotation cadence` line 445, `resetting the symmetric ratchet from a new entropy source` line 429) are load-bearing - each carries a specific architectural claim, not vague consequence. Held. |
+| §7 AI-vocabulary cluster | None - no `delve, showcase, tapestry, interplay, intricate, vibrant, enduring, additionally` cluster. `crucial`/`key` not used as soft emphasis. | Clean. |
+| §8 Copula avoidance | None - the section uses plain `is`/`are`/`has` throughout (e.g., "Forward secrecy is the property that..."). No `serves as a`, `stands as a`, `represents a`. | Clean. |
+| §9 Negative parallelisms | None - no `not only X but also Y` or `it's not just X, it's Y` patterns. | Clean. |
+| §16 Inline-header vertical lists | FAILED-conditions bullets (line 470–472) use `**Header.**` format. | Held - this is the chapter's recurring FAILED-conditions reference list, used for every primitive in Ch15. Genuine reference structure, not paragraph-prose disguised as bullets. |
+| §17 Title case in headings | All H3 sub-pattern headings use sentence case (`Sub-pattern 46a - Per-message ephemeral key derivation`). | Clean. |
+| §27 Persuasive authority tropes | None - no `the real question is`, `at its core`, `fundamentally`, `what really matters`. | Clean. |
+| §28 Signposting | None - no `let's dive into`, `let's explore`, `here's what you need to know`. | Clean. |
 | §29 Fragmented headers | Each H3 is followed by substantive prose, not a one-line restatement. | Clean. |
 
 There-is constructions: scanned. None in the section.
@@ -203,12 +203,12 @@ properties" therefore overcredits OTR for both. Defer to next-pass copy-edit
 
 ## Overall assessment
 
-- **Tone:** on-voice. Section reads as Part III specification — what the protocol commits to and how each commitment manifests as a testable property. No tutorial intrusion, no academic scaffolding.
+- **Tone:** on-voice. Section reads as Part III specification - what the protocol commits to and how each commitment manifests as a testable property. No tutorial intrusion, no academic scaffolding.
 - **Estimated revision time:** light. Five surgical edits applied; no structural rewrites needed.
 - **Top 3 priorities (resolved in this pass):**
-  1. Internal extension-number leakage (`#47`, `#48`) into reader-facing prose — fixed.
-  2. Synonym cycling on `long-lived envelope` — fixed by anchoring to `long-lived session key`.
-  3. Sub-case framing in §46c second paragraph (`is one trigger` → `behaves the same way`) — fixed.
+  1. Internal extension-number leakage (`#47`, `#48`) into reader-facing prose - fixed.
+  2. Synonym cycling on `long-lived envelope` - fixed by anchoring to `long-lived session key`.
+  3. Sub-case framing in §46c second paragraph (`is one trigger` → `behaves the same way`) - fixed.
 
 ---
 

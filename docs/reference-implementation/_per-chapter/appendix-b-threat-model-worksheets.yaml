@@ -7,7 +7,7 @@ extracted-by: subagent
 concepts:
 - id: SEC-01
   name: Asset inventory worksheet
-  source: appendix-b §"Section 1 — Asset Inventory Template"
+  source: appendix-b §"Section 1 - Asset Inventory Template"
   source-paper: v13 §11.1
   definition: A maintained table enumerating every asset whose compromise, loss, or corruption would cause
     material harm, classified by sensitivity, location, and owner.
@@ -96,7 +96,7 @@ concepts:
     deployment of secret material.'
 - id: SEC-04
   name: Actor taxonomy worksheet
-  source: appendix-b §"Section 2 — Actor Taxonomy Template"
+  source: appendix-b §"Section 2 - Actor Taxonomy Template"
   source-paper: v13 §11.1
   definition: A maintained table enumerating every actor (benign or adversarial) who could realistically
     interact with the system, with access level, motivation, and capability level recorded for each.
@@ -123,7 +123,7 @@ concepts:
     and capability columns populated for each named a...'
 - id: THREAT-01
   name: External remote attacker
-  source: appendix-b §"Section 2 — Actor Taxonomy Template"
+  source: appendix-b §"Section 2 - Actor Taxonomy Template"
   source-paper: v13 §11.1
   definition: An adversary with no initial access who attempts data theft or ransomware against the deployment
     from outside the trust boundary.
@@ -149,7 +149,7 @@ concepts:
     and transport controls are documented.'
 - id: THREAT-02
   name: External attacker with physical access
-  source: appendix-b §"Section 2 — Actor Taxonomy Template"
+  source: appendix-b §"Section 2 - Actor Taxonomy Template"
   source-paper: v13 §11.1
   definition: An adversary who obtains physical possession of a node device and attempts credential theft
     or storage extraction.
@@ -177,7 +177,7 @@ concepts:
     disable on all enrolled nodes.'
 - id: THREAT-03
   name: Malicious insider with role access
-  source: appendix-b §"Section 2 — Actor Taxonomy Template"
+  source: appendix-b §"Section 2 - Actor Taxonomy Template"
   source-paper: v13 §11.1
   definition: An authorized team member who attempts data exfiltration within the scope of their assigned
     role.
@@ -202,7 +202,7 @@ concepts:
     is enforced by KEK hierarchy.'
 - id: THREAT-04
   name: Compromised relay operator
-  source: appendix-b §"Section 2 — Actor Taxonomy Template"
+  source: appendix-b §"Section 2 - Actor Taxonomy Template"
   source-paper: v13 §11.1
   definition: A relay operator whose transport-layer position grants ciphertext visibility and traffic-analysis
     capability but no plaintext access because keys never leave nodes.
@@ -231,7 +231,7 @@ concepts:
     path bypasses the relay.'
 - id: THREAT-05
   name: Relay service termination
-  source: appendix-b §"Section 2 — Actor Taxonomy Template"
+  source: appendix-b §"Section 2 - Actor Taxonomy Template"
   source-paper: v13 §11.1
   definition: The threat that a relay operator withdraws service due to jurisdiction restriction, sanctions,
     or commercial decision, producing total relay unavailability.
@@ -260,7 +260,7 @@ concepts:
     peer-to-peer sync without degradation.'
 - id: THREAT-06
   name: Former team member
-  source: appendix-b §"Section 2 — Actor Taxonomy Template"
+  source: appendix-b §"Section 2 - Actor Taxonomy Template"
   source-paper: v13 §11.1
   definition: A previously authorized member whose future access is blocked by key rotation but whose
     historical-data exposure remains scoped by the data-at-risk calculation.
@@ -287,7 +287,7 @@ concepts:
     computation for the affected role.'
 - id: THREAT-07
   name: Compromised IdP
-  source: appendix-b §"Section 2 — Actor Taxonomy Template"
+  source: appendix-b §"Section 2 - Actor Taxonomy Template"
   source-paper: v13 §11.1
   definition: An identity provider whose signing key is under adversary control, allowing fraudulent role
     attestations that bypass the attestation trust anchor.
@@ -313,7 +313,7 @@ concepts:
     signing-key rotation procedure.'
 - id: THREAT-08
   name: Supply chain attacker
-  source: appendix-b §"Section 2 — Actor Taxonomy Template"
+  source: appendix-b §"Section 2 - Actor Taxonomy Template"
   source-paper: v13 §11.1
   definition: An adversary who compromises the build pipeline to ship a backdoored binary capable of exfiltrating
     keys or plaintext from inside the trust boundary.
@@ -343,7 +343,7 @@ concepts:
     signature verification are gating steps in distribution.'
 - id: THREAT-09
   name: Government authority and regulatory body
-  source: appendix-b §"Section 2 — Actor Taxonomy Template"
+  source: appendix-b §"Section 2 - Actor Taxonomy Template"
   source-paper: v13 §11.1
   definition: A statutory actor with legal compulsion power (warrant, subpoena, administrative order,
     inspection notice, device seizure) whose architectural mitigation is end-to-end encryption with local
@@ -422,7 +422,7 @@ concepts:
     beyond the template baseline.'
 - id: SEC-07
   name: Attack tree per worksheet
-  source: 'appendix-b §"Attack Tree — Primary Branch: Laptop Theft at Job Site"'
+  source: 'appendix-b §"Attack Tree - Primary Branch: Laptop Theft at Job Site"'
   source-paper: v13 §11.1
   definition: A branch-by-branch decomposition of a primary threat scenario, naming each control checkpoint
     and its mitigation, and identifying the residual risk where controls do not fully cover the branch.
@@ -448,7 +448,7 @@ concepts:
     explicit mitigations and a residual-risk note.'
 - id: MITIG-01
   name: MDM-enforced device hardening
-  source: 'appendix-b §"Attack Tree — Primary Branch: Laptop Theft at Job Site"'
+  source: 'appendix-b §"Attack Tree - Primary Branch: Laptop Theft at Job Site"'
   source-paper: null
   definition: An MDM-enforced configuration baseline requiring full-disk encryption, minimum 6-digit PIN,
     disabled USB boot, locked BIOS settings, and disabled hibernation/suspend-to-disk on every node before
@@ -676,7 +676,7 @@ concepts:
     fields and a retention policy of at least 90 days.'
 - id: COMP-01
   name: Jurisdictional breach notification SLA matrix
-  source: appendix-b §"Breach notification deadlines — separate and faster"
+  source: appendix-b §"Breach notification deadlines - separate and faster"
   source-paper: v13 §11.1
   definition: A matrix mapping each operating jurisdiction to its supervisor-notification window and data-subject-notification
     window, against which the incident-response SLA is set to the shortest applicable window.

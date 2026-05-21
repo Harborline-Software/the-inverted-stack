@@ -1,4 +1,4 @@
-# The Inverted Stack — Book Writing Implementation Plan
+# The Inverted Stack - Book Writing Implementation Plan
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development
 > (recommended) or superpowers:executing-plans to implement this plan task-by-task.
@@ -13,12 +13,12 @@ order (Part I → Part II → Part III → Part IV), with Part II council chapte
 and Part III reference chapters largely parallelizable. Each deliverable is a standalone
 markdown file under `vol-1/`.
 
-**Source material (all in `source/` at the repo root — gitignored):**
-- `source/local_node_saas_v13.md` — primary architecture paper (referred to as **v13**)
-- `source/inverted-stack-v5.md` — companion paper with .NET specifics (referred to as **v5**)
-- `source/kleppmann_council_review.md` — Round 1 adversarial review (referred to as **R1**)
-- `source/kleppmann_council_review2.md` — Round 2 review (referred to as **R2**)
-- `book-structure.md` — approved structure with word count targets and writing rules
+**Source material (all in `source/` at the repo root - gitignored):**
+- `source/local_node_saas_v13.md` - primary architecture paper (referred to as **v13**)
+- `source/inverted-stack-v5.md` - companion paper with .NET specifics (referred to as **v5**)
+- `source/kleppmann_council_review.md` - Round 1 adversarial review (referred to as **R1**)
+- `source/kleppmann_council_review2.md` - Round 2 review (referred to as **R2**)
+- `book-structure.md` - approved structure with word count targets and writing rules
 
 **Reference implementation:** `C:\Projects\Sunfish\`
 
@@ -37,7 +37,7 @@ Run this checklist before each commit step. A chapter is not done until all item
 [ ] QC-6  No re-introducing the architecture (body chapters assume Part I is read)
 [ ] QC-7  Part III chapters: specification voice (what it is, how it works fully)
           Part IV chapters: tutorial voice (minimal path, references Part III)
-[ ] QC-8  Ch 2 only: opinionated not encyclopedic — one paragraph per prior work,
+[ ] QC-8  Ch 2 only: opinionated not encyclopedic - one paragraph per prior work,
           ends with crisp statement of what this book adds
 [ ] QC-9  Council chapters only: two-act structure (Round 1 failure → what changed → Round 2 verdict)
 [ ] QC-10 No placeholder text ("TBD", "expand here", "see paper for details")
@@ -45,7 +45,7 @@ Run this checklist before each commit step. A chapter is not done until all item
 
 ---
 
-## Phase 0 — Scaffold
+## Phase 0 - Scaffold
 
 ### Task 0: Create folder structure and ASSEMBLY.md
 
@@ -94,7 +94,7 @@ C:\Projects\the-inverted-stack\
   Create each directory and a stub `.md` file containing only the chapter title as an H1.
   Example stub content for `ch01-when-saas-fights-reality.md`:
   ```markdown
-  # Chapter 1 — When SaaS Fights Reality
+  # Chapter 1 - When SaaS Fights Reality
   <!-- stub -->
   ```
 
@@ -103,7 +103,7 @@ C:\Projects\the-inverted-stack\
   Create `ASSEMBLY.md` with the following content:
 
   ```markdown
-  # Assembly Instructions — The Inverted Stack
+  # Assembly Instructions - The Inverted Stack
 
   ## Pandoc (recommended for ePub/PDF)
 
@@ -156,7 +156,7 @@ C:\Projects\the-inverted-stack\
 
 ---
 
-## Phase 1 — Prospectus and Front Matter
+## Phase 1 - Prospectus and Front Matter
 
 ### Task 1: Prospectus
 
@@ -217,9 +217,9 @@ C:\Projects\the-inverted-stack\
     and the reference implementation evolve together.
   - **The Reference Implementation:** Sunfish: what it is, Anchor (Zone A) and Bridge
     (Zone C), pre-1.0 status, how to find it.
-  - **Comparable Works:** Kleppmann's DDIA (closest intellectual ancestor — same depth,
+  - **Comparable Works:** Kleppmann's DDIA (closest intellectual ancestor - same depth,
     different domain). What this book covers that DDIA doesn't.
-  - **Word Count and Timeline:** ~83,500 words. Self-paced release — Part I first,
+  - **Word Count and Timeline:** ~83,500 words. Self-paced release - Part I first,
     then parts released incrementally.
 
 - [ ] **Step 6: Quality check**
@@ -248,7 +248,7 @@ C:\Projects\the-inverted-stack\
   # Foreword
 
   *This page is reserved for a foreword from a recognized voice in the local-first
-  community — an Automerge/Yjs maintainer, an Ink & Switch contributor, or a practitioner
+  community - an Automerge/Yjs maintainer, an Ink & Switch contributor, or a practitioner
   who has shipped a production local-first system.*
 
   *If you would like to contribute a foreword, contact [author contact].*
@@ -260,25 +260,25 @@ C:\Projects\the-inverted-stack\
 - [ ] **Step 2: Write preface outline and prose (~1,300 words)**
 
   Sections:
-  - **Why I wrote this** — the gap between local-first ideals and production-grade systems;
+  - **Why I wrote this** - the gap between local-first ideals and production-grade systems;
     the experience of designing an architecture that passes adversarial review
-  - **Who this book is for** — three audiences (architects/engineers, enterprise
+  - **Who this book is for** - three audiences (architects/engineers, enterprise
     evaluators/IT, OSS contributors/founders); how to read it by audience
-  - **How to read this book** — Part I convinces, Part II stress-tests, Part III specifies,
+  - **How to read this book** - Part I convinces, Part II stress-tests, Part III specifies,
     Part IV implements; Parts III and IV are reference sections you return to
-  - **A note on Sunfish** — the open-source reference implementation
+  - **A note on Sunfish** - the open-source reference implementation
     (`github.com/ctwoodwa/Sunfish`); Anchor (Zone A) and Bridge (Zone C); pre-1.0;
     Sunfish references in this book are by package name, not class API
-  - **A note on the CRDT engine** — the book specifies Loro as aspirational primary for
+  - **A note on the CRDT engine** - the book specifies Loro as aspirational primary for
     compact encoding and shallow snapshots; the Sunfish reference implementation uses
     YDotNet (Yjs .NET) while loro-cs matures; the `ICrdtEngine` abstraction keeps the
     choice reversible
-  - **A note on the Kleppmann Council** — five domain experts, two rounds of adversarial
+  - **A note on the Kleppmann Council** - five domain experts, two rounds of adversarial
     review; how to use Part II
 
 - [ ] **Step 3: Quality check**
   ```
-  [ ] Preface is personal, not academic — first-person, direct
+  [ ] Preface is personal, not academic - first-person, direct
   [ ] Foreword placeholder makes it easy for a contributor to know what's expected
   [ ] CRDT engine discrepancy disclosed clearly and without apology
   [ ] Sunfish pre-1.0 disclaimer present
@@ -288,14 +288,14 @@ C:\Projects\the-inverted-stack\
 
 ---
 
-## Phase 2 — Part I: The Thesis and the Pain
+## Phase 2 - Part I: The Thesis and the Pain
 
 *Dependencies: Prospectus complete. Chapters can be written Ch1 → Ch2 → Ch3 → Ch4 in order;
 each builds on the previous.*
 
 ---
 
-### Task 3: Chapter 1 — When SaaS Fights Reality
+### Task 3: Chapter 1 - When SaaS Fights Reality
 
 **File:** `part-1-thesis-and-pain/ch01-when-saas-fights-reality.md`
 **Target:** 4,000–5,000 words
@@ -323,7 +323,7 @@ v5.md §1 (Problem Statement)
   zero-maintenance) with three that users would reject if offered separately (vendor data
   custody, vendor-controlled pricing, service continuity contingent on vendor survival).
 
-  Draw from: v13.md §3 and Executive Summary. Make it concrete immediately — open with a
+  Draw from: v13.md §3 and Executive Summary. Make it concrete immediately - open with a
   specific scenario, not an abstract claim.
 
 - [ ] **Step 3: Write "Five Ways SaaS Breaks in the Field" (~2,000 words)**
@@ -332,12 +332,12 @@ v5.md §1 (Problem Statement)
   harm, and why the conventional architecture makes it structurally unavoidable.
 
   - **Outage:** Project management tool down during a bid deadline. Construction PM example
-    from v5.md §7 (construction vertical). The team has the data — it's on the server —
+    from v5.md §7 (construction vertical). The team has the data - it's on the server -
     but can't reach it.
   - **Vendor disappears:** Pull examples from well-known SaaS shutdowns (Sunrise calendar,
     Quip, others). The data export problem.
   - **Connectivity:** Field work, rural offices, legal depositions, hospital floors, air-gapped
-    facilities. v13.md §20.4 (Filter 3: Connectivity). Not an edge case — a standard condition
+    facilities. v13.md §20.4 (Filter 3: Connectivity). Not an edge case - a standard condition
     for entire industries.
   - **Data retrieval:** Rate-limited exports, proprietary formats, data that "belongs" to
     the user but requires vendor cooperation to access. v13.md §3.
@@ -347,19 +347,19 @@ v5.md §1 (Problem Statement)
 - [ ] **Step 4: Write "Who Pays the Most" + "Why Users Have Accepted This" (~900 words)**
 
   Who pays most: SMBs and professionals with minimal IT (legal, medical, construction,
-  consultancies) — the organizations least equipped to negotiate enterprise data agreements.
+  consultancies) - the organizations least equipped to negotiate enterprise data agreements.
   v13.md §14.1.
 
   Why accepted: The desirable properties appeared inseparable from the centralized
   infrastructure. CRDTs didn't exist at scale. Leaderless replication wasn't desktop-viable.
   Container runtimes weren't consumer-installable. The dependency looked structural because
-  it *was* structural — until recently. v13.md §4 (hardware viability).
+  it *was* structural - until recently. v13.md §4 (hardware viability).
 
 - [ ] **Step 5: Write "The Dependency That Looks Inevitable" (~500 words)**
 
   Closing section: the dependency isn't structural anymore. Name the enabling technologies
   briefly (CRDTs in production, gossip protocols at scale, desktop container runtimes).
-  Don't describe the architecture yet — that's Ch 3. Set up the question Ch 2 answers.
+  Don't describe the architecture yet - that's Ch 3. Set up the question Ch 2 answers.
 
 - [ ] **Step 6: Quality check against QC-1 through QC-10**
 
@@ -367,12 +367,12 @@ v5.md §1 (Problem Statement)
 
 ---
 
-### Task 4: Chapter 2 — Local-First: From Sync Toy to Serious Stack
+### Task 4: Chapter 2 - Local-First: From Sync Toy to Serious Stack
 
 **File:** `part-1-thesis-and-pain/ch02-local-first-serious-stack.md`
 **Target:** 3,500–4,500 words
 **Sources:** v13.md §2.1, v5.md §1 (extending local-first)
-**Writing discipline:** QC-8 applies — opinionated not encyclopedic
+**Writing discipline:** QC-8 applies - opinionated not encyclopedic
 
 - [ ] **Step 1: Write chapter outline**
 
@@ -383,7 +383,7 @@ v5.md §1 (Problem Statement)
     ### The Lightweight Replica Apps (Linear, Liveblocks)
     ### The Local-First Finance App (Actual Budget)
     ### The Research Prototypes (Automerge, Ink & Switch essays)
-  ## What Each Gets Right — and Where It Stops
+  ## What Each Gets Right - and Where It Stops
   ## The Missing Step: Full Node, Not Smart Cache
   ## What This Book Adds
   ```
@@ -402,16 +402,16 @@ v5.md §1 (Problem Statement)
   6. Security and privacy by default
   7. You retain ultimate ownership and control
 
-- [ ] **Step 3: Write "What Exists Today" (~1,400 words — ~350 words per entry)**
+- [ ] **Step 3: Write "What Exists Today" (~1,400 words - ~350 words per entry)**
 
   For each existing approach: what it does, exactly where it stops short, why that gap matters.
   Be specific and direct. Do not soften criticism.
 
-  - **Obsidian:** Plain markdown files locally, sync via proprietary service. No CRDT —
+  - **Obsidian:** Plain markdown files locally, sync via proprietary service. No CRDT -
     conflicts produce duplicate files. No structured data model. Single-user in practice.
     Gap: can't handle team workflows with structured, relational data.
   - **Linear:** Local SQLite replica, server sync, proprietary protocol. Fast reads, good UX.
-    Gap: not a full node — no background jobs, no offline writes to server-owned records,
+    Gap: not a full node - no background jobs, no offline writes to server-owned records,
     no peer-to-peer sync if Linear's servers are down.
   - **Actual Budget:** Full local-first financial app, no server required, file export.
     Closest commercial analogue to what this book describes. Gap: single-user, no team
@@ -423,12 +423,12 @@ v5.md §1 (Problem Statement)
 
 - [ ] **Step 4: Write "The Missing Step" + "What This Book Adds" (~1,000 words)**
 
-  The missing step: running the *entire* stack locally — UI, business logic, sync daemon,
-  storage — not just a smarter cache. The distinction from v5.md §1's core question:
-  "What if a user's workstation ran a full node of the system — including state, business
-  logic, and sync — such that 'the cloud' is merely another peer, not the source of truth?"
+  The missing step: running the *entire* stack locally - UI, business logic, sync daemon,
+  storage - not just a smarter cache. The distinction from v5.md §1's core question:
+  "What if a user's workstation ran a full node of the system - including state, business
+  logic, and sync - such that 'the cloud' is merely another peer, not the source of truth?"
 
-  What this book adds: the composition. Not inventing new primitives — assembling proven ones
+  What this book adds: the composition. Not inventing new primitives - assembling proven ones
   (CRDTs from Figma, gossip from Cassandra, desktop containers from Docker Desktop, declarative
   sync from PowerSync) into a coherent architecture with a governance model, a security
   model, and a business model. The production-analogues table from v13.md §19.
@@ -439,7 +439,7 @@ v5.md §1 (Problem Statement)
 
 ---
 
-### Task 5: Chapter 3 — The Inverted Stack in One Diagram
+### Task 5: Chapter 3 - The Inverted Stack in One Diagram
 
 **File:** `part-1-thesis-and-pain/ch03-inverted-stack-one-diagram.md`
 **Target:** 2,500–3,500 words
@@ -481,7 +481,7 @@ Sunfish `accelerators/anchor/README.md`, `accelerators/bridge/README.md`
   surface, schema migration complexity increases, GC debt accumulates).
 
   Draw from: v13.md §11.1 (threat model framing), v13.md §7 (schema migration motivation).
-  Be honest about both — this section earns credibility for the rest of the book.
+  Be honest about both - this section earns credibility for the rest of the book.
 
 - [ ] **Step 4: Write "The Two Canonical Shapes" (~600 words)**
 
@@ -489,10 +489,10 @@ Sunfish `accelerators/anchor/README.md`, `accelerators/bridge/README.md`
 
   - **Anchor** (Zone A): `.NET MAUI Blazor Hybrid`, offline-by-default, local SQLCipher,
     Ed25519 device keys. The desktop node in its pure form.
-    From: `accelerators/anchor/README.md` — role in architecture section, Zone A framing.
+    From: `accelerators/anchor/README.md` - role in architecture section, Zone A framing.
   - **Bridge** (Zone C): `.NET Aspire`, Blazor Server, per-tenant data-plane isolation,
     hosted-node-as-SaaS. The hybrid shape where the vendor runs a peer, not the authority.
-    From: `accelerators/bridge/README.md` — Zone C hybrid architecture section.
+    From: `accelerators/bridge/README.md` - Zone C hybrid architecture section.
 
   Both use the same Sunfish component surface. Both implement the same sync protocol.
   The difference is where the authoritative data lives.
@@ -510,11 +510,11 @@ Sunfish `accelerators/anchor/README.md`, `accelerators/bridge/README.md`
 
 ---
 
-### Task 6: Chapter 4 — Choosing Your Architecture
+### Task 6: Chapter 4 - Choosing Your Architecture
 
 **File:** `part-1-thesis-and-pain/ch04-choosing-your-architecture.md`
 **Target:** 3,000–4,000 words
-**Sources:** v13.md §20 (Architecture Selection Framework — entire section)
+**Sources:** v13.md §20 (Architecture Selection Framework - entire section)
 
 - [ ] **Step 1: Write chapter outline**
 
@@ -536,13 +536,13 @@ Sunfish `accelerators/anchor/README.md`, `accelerators/bridge/README.md`
   practitioner prose, not specification voice.
 
   - **The one question:** Does primary value derive from the user's own data, or from
-    aggregating across users? This is not rhetorical — answer it for your product before
+    aggregating across users? This is not rhetorical - answer it for your product before
     reading further.
 
   - **Filters 1–5:** Use the tables from v13.md §20.2–20.5 directly, but precede each
     table with a short paragraph explaining what the filter is testing and why it matters.
     Filter 1 gets the most emphasis: the CAP theorem is not a negotiating position.
-    If a transaction must be atomic across multiple users simultaneously — stop. This is
+    If a transaction must be atomic across multiple users simultaneously - stop. This is
     not the architecture for that.
 
   - **Three outcome zones:** Zone A (local-first node), Zone B (traditional SaaS/website),
@@ -553,7 +553,7 @@ Sunfish `accelerators/anchor/README.md`, `accelerators/bridge/README.md`
 
   - **Closing:** This is the last chapter before the architecture is stress-tested in
     Part II. If you ran the filters and the architecture applies to your problem, the
-    council's job — starting in the next chapter — is to find every way it fails.
+    council's job - starting in the next chapter - is to find every way it fails.
 
 - [ ] **Step 3: Quality check (QC-1 through QC-10)**
 
@@ -561,10 +561,10 @@ Sunfish `accelerators/anchor/README.md`, `accelerators/bridge/README.md`
 
 ---
 
-## Phase 3 — Part II: The Council Reads the Paper
+## Phase 3 - Part II: The Council Reads the Paper
 
 *Dependencies: Ch 3 must be complete (council chapters reference the architecture overview).
-Ch 5 through Ch 9 can be written in parallel — each covers one council member independently.
+Ch 5 through Ch 9 can be written in parallel - each covers one council member independently.
 Ch 10 (Synthesis) depends on Ch 5–9 being complete.*
 
 *Two-act structure for Ch 5–9 (QC-9):*
@@ -574,7 +574,7 @@ Ch 10 (Synthesis) depends on Ch 5–9 being complete.*
 
 ---
 
-### Task 7: Chapter 5 — The Enterprise Lens
+### Task 7: Chapter 5 - The Enterprise Lens
 
 **File:** `part-2-council-reads-the-paper/ch05-enterprise-lens.md`
 **Target:** 3,000–4,000 words
@@ -596,7 +596,7 @@ v13.md §16 (IT Governance), v5.md §5 (Deployment in Managed Environments)
   The blocking issue: no formal incident response procedure. "CRDT audit trail exists" is
   not a substitute for a defined IR runbook. BLOCK verdict with rationale.
 
-- [ ] **Step 2: Write interlude — what changed (~500 words)**
+- [ ] **Step 2: Write interlude - what changed (~500 words)**
 
   What the architecture added between rounds to satisfy Voss's concerns:
   - Incident response runbook: triggering events, artifact collection, chain of custody,
@@ -604,14 +604,14 @@ v13.md §16 (IT Governance), v5.md §5 (Deployment in Managed Environments)
   - Named SBOM toolchain: Syft for generation, Grype for vulnerability scanning, CVE response SLA
   - Relay traffic over port 443 / TLS 1.3 only, with PAC file and corporate proxy compatibility
   - Zero-downtime container update path specified (rolling update with health-check gate)
-  - MDM compliance check at capability negotiation — the architectural detail Voss commended
+  - MDM compliance check at capability negotiation - the architectural detail Voss commended
 
 - [ ] **Step 3: Write Act 2 (~1,000 words)**
 
   Round 2 prompt responses (from R2 Voss section):
   - Security audit framing: SBOM in CycloneDX, rootless Podman, three-port network footprint
   - MDM deployment: MSIX + Intune path; Podman WSL2 vs. Hyper-V substrate question
-  - Deprovisioning: admin tooling gap — cryptographic description vs. actual admin interface
+  - Deprovisioning: admin tooling gap - cryptographic description vs. actual admin interface
   - Migration: four-phase reversible model earns commendation
   - Procurement: AGPLv3 copyleft enterprise customization concern
 
@@ -629,7 +629,7 @@ v13.md §16 (IT Governance), v5.md §5 (Deployment in Managed Environments)
 
 ---
 
-### Task 8: Chapter 6 — The Distributed Systems Lens
+### Task 8: Chapter 6 - The Distributed Systems Lens
 
 **File:** `part-2-council-reads-the-paper/ch06-distributed-systems-lens.md`
 **Target:** 3,000–4,000 words
@@ -643,23 +643,23 @@ v13.md §2 (Theoretical Foundations), v13.md §6 (Sync Architecture), v13.md §9
   impossible." Zero tolerance for optimism about network partitions.
 
   Two BLOCK issues from R1:
-  1. CRDT GC strategy absent — long-running nodes accumulate unbounded op log history.
+  1. CRDT GC strategy absent - long-running nodes accumulate unbounded op log history.
      Without checkpoint interval or retention window, this causes production failures
      after 12 months.
-  2. Flease split-write window — if the lease holder goes offline mid-write and a new
+  2. Flease split-write window - if the lease holder goes offline mid-write and a new
      lease is elected, two nodes may simultaneously believe they hold write authority.
      Must prove this is safe or specify a fence.
 
   Explain each technically: why unbounded op log growth fails, what a split-write window
   means for data integrity.
 
-- [ ] **Step 2: Write interlude — what changed (~500 words)**
+- [ ] **Step 2: Write interlude - what changed (~500 words)**
 
   Resolutions between rounds:
   - Three-tier GC policy: Yjs aggressive GC for ephemeral data, Loro 90-day retention
     for business records, no-GC for compliance records
   - Flease split-write proof: CP-class records use CRDT merge semantics for the
-    write window — the CRDT handles the race, the lease prevents double-booking
+    write window - the CRDT handles the race, the lease prevents double-booking
   - Stale peer recovery protocol added: when reconnecting peer's vector clock predates
     GC horizon, full-state snapshot transfer replaces incremental stream
   - Reconnection storm handling: gossip anti-entropy throttled per-tick by resource governor
@@ -669,10 +669,10 @@ v13.md §2 (Theoretical Foundations), v13.md §6 (Sync Architecture), v13.md §9
   Round 2 prompts (from R2 Shevchenko section):
   - Correctness under partition: Flease treatment now correct; relay-as-Flease-participant
     for two-person teams is architecturally elegant
-  - GC safety: stale peer gap — if a peer has been offline 95 days and GC horizon is 90,
+  - GC safety: stale peer gap - if a peer has been offline 95 days and GC horizon is 90,
     it requests operations the originating node has already GC'd. Fix: stale peer recovery.
   - Prolonged partition: sync daemon outbound buffer must shed to durable local storage.
-    CRDT store serves this role — but the paper must make this explicit.
+    CRDT store serves this role - but the paper must make this explicit.
   - Byzantine failure: buggy CRDT operation (valid structure, corrupt semantics) propagates
     faithfully to all peers. Need operation validation and corrupt-sequence recovery.
 
@@ -690,7 +690,7 @@ v13.md §2 (Theoretical Foundations), v13.md §6 (Sync Architecture), v13.md §9
 
 ---
 
-### Task 9: Chapter 7 — The Security Lens
+### Task 9: Chapter 7 - The Security Lens
 
 **File:** `part-2-council-reads-the-paper/ch07-security-lens.md`
 **Target:** 3,000–4,000 words
@@ -705,14 +705,14 @@ v13.md §11 (Security Architecture), v5.md §4 (Security and Identity)
   in key management, trust establishment, and revocation pathways.
 
   Round 1 scores: data minimization at protocol layer earns 9/10 (the highest single score
-  in the round) — subscription filtering at send tier is the correct control placement.
+  in the round) - subscription filtering at send tier is the correct control placement.
   Key hierarchy described but not diagrammed.
 
   The BLOCK: key compromise incident response absent. A node key compromise potentially
   exposes all data the node has ever been authorized to read. Must specify: detection
   mechanism, re-keying procedure, data-at-risk scope, user-visible notification.
 
-- [ ] **Step 2: Write interlude — what changed (~500 words)**
+- [ ] **Step 2: Write interlude - what changed (~500 words)**
 
   Resolutions:
   - Key hierarchy diagram added: root org key → role KEKs → per-node wrapped keys →
@@ -721,16 +721,16 @@ v13.md §11 (Security Architecture), v5.md §4 (Security and Identity)
     report), re-keying (new role KEK generated, all DEKs re-wrapped, old KEK discarded),
     data-at-risk scope (records readable by compromised node since last rotation),
     user notification
-  - Offline node revocation reconnection: exact steps — node presents attestation,
+  - Offline node revocation reconnection: exact steps - node presents attestation,
     daemon checks revocation log, if revoked: new key bundle required before sync resumes
   - In-memory key material: locked memory pages, key zeroing on process exit
 
 - [ ] **Step 3: Write Act 2 (~1,000 words)**
 
   Round 2 prompts (from R2 Okonkwo section):
-  - Attack tree: supply chain gap — who signs the release CID? Need release signing key
+  - Attack tree: supply chain gap - who signs the release CID? Need release signing key
     custody, reproducible build requirement, Sigstore supply-chain transparency.
-  - Compromised relay: relay sees metadata not payload (correct) — but traffic analysis
+  - Compromised relay: relay sees metadata not payload (correct) - but traffic analysis
     is still sensitive for high-security deployments. Self-hosted relay is the mitigation.
   - Physical access: cold boot / memory scraping window when app is running. Re-auth
     interval recommendation (every 4 hours) is a hardening note, not a flaw.
@@ -743,8 +743,8 @@ v13.md §11 (Security Architecture), v5.md §4 (Security and Identity)
   default interval.
 
   **Takeaway principle:** Distributing data to endpoints solves the central honeypot problem
-  and creates a distributed one. Defense-in-depth — four layers from encryption at rest
-  through stream-level filtering — is not optional. The data minimization invariant
+  and creates a distributed one. Defense-in-depth - four layers from encryption at rest
+  through stream-level filtering - is not optional. The data minimization invariant
   (subscription filtering at send, not receive) is the architectural achievement that
   makes the security story credible.
 
@@ -754,7 +754,7 @@ v13.md §11 (Security Architecture), v5.md §4 (Security and Identity)
 
 ---
 
-### Task 10: Chapter 8 — The Product & Economic Lens
+### Task 10: Chapter 8 - The Product & Economic Lens
 
 **File:** `part-2-council-reads-the-paper/ch08-product-economic-lens.md`
 **Target:** 3,000–4,000 words
@@ -768,7 +768,7 @@ v13.md §17 (OSS Strategy and Sustainability), v5.md §7 (Economic Model)
   "open-source" software to enterprise buyers. Knows exactly why those pitches fail.
 
   Round 1 scores: unit economics 7/10 ("$2 infrastructure cost" is more specific than
-  most but needs a worked model). Go-to-market 5/10. First customer archetype 4/10 —
+  most but needs a worked model). Go-to-market 5/10. First customer archetype 4/10 -
   completely absent.
 
   Two BLOCKs:
@@ -777,7 +777,7 @@ v13.md §17 (OSS Strategy and Sustainability), v5.md §7 (Economic Model)
   2. No OSS-to-paid conversion mechanism. The specific moment that causes a team to
      pay for the relay must be specified.
 
-- [ ] **Step 2: Write interlude — what changed (~500 words)**
+- [ ] **Step 2: Write interlude - what changed (~500 words)**
 
   Resolutions:
   - Construction vertical selected: job-site connectivity failures, data ownership anxiety,
@@ -797,7 +797,7 @@ v13.md §17 (OSS Strategy and Sustainability), v5.md §7 (Economic Model)
   - First customer path: construction PMs identified but no acquisition channel.
     AGC/ABC, ENR/Constructor, or construction tech consulting warm intro are the paths.
   - Unit economics at 1,000 teams: $20K/month revenue, $2K infrastructure, 90% gross
-    margin — supports 2–3 FTE at Bay Area salaries. Headcount model needed.
+    margin - supports 2–3 FTE at Bay Area salaries. Headcount model needed.
   - AGPLv3 exit strategy: dual-license structure must be specified before the repo opens.
     CLA from all contributors. AGPL for open-source users, commercial license for
     organizations that can't accept AGPL.
@@ -808,7 +808,7 @@ v13.md §17 (OSS Strategy and Sustainability), v5.md §7 (Economic Model)
   CLA (high), governance model, relay commoditization moat articulation.
 
   **Takeaway principle:** The managed relay is the right unit of competitive analysis, but
-  its defensibility rests on support quality and product-integrated onboarding — not the
+  its defensibility rests on support quality and product-integrated onboarding - not the
   protocol itself, which is open. Get the dual-license structure and CLA in place before
   the first external contributor opens a PR.
 
@@ -818,7 +818,7 @@ v13.md §17 (OSS Strategy and Sustainability), v5.md §7 (Economic Model)
 
 ---
 
-### Task 11: Chapter 9 — The Local-First Practitioner Lens
+### Task 11: Chapter 9 - The Local-First Practitioner Lens
 
 **File:** `part-2-council-reads-the-paper/ch09-local-first-practitioner-lens.md`
 **Target:** 3,000–4,000 words
@@ -839,7 +839,7 @@ v5.md §6 (UX and Conflict Handling)
   specify how a user exports their data in a durable, application-independent format
   contradicts its own thesis. "Export to plain files" is not mentioned anywhere.
 
-- [ ] **Step 2: Write interlude — what changed (~500 words)**
+- [ ] **Step 2: Write interlude - what changed (~500 words)**
 
   Resolutions:
   - Plain-file export path added: JSON export of all user records, CSV export for tabular
@@ -862,19 +862,19 @@ v5.md §6 (UX and Conflict Handling)
     brand-new user see after installation? This is where most users abandon the product.
   - Backup/recovery UX: three-state model (Protected/Attention/At Risk) is correct;
     the restore experience needs the same UX care as the backup configuration flow.
-  - Production analogues: Actual Budget as the closest commercial analogue — validates
+  - Production analogues: Actual Budget as the closest commercial analogue - validates
     both the local-first model and a non-subscription revenue path.
   - Implementation drift risk: local-first architectures re-centralize under pressure via
     server-side analytics, A/B testing, feature gates. Specify the telemetry model now
     (opt-in, aggregate-only via relay, or none) before the first product analytics request.
 
-  PROCEED — no blocking conditions. The first council member to issue an unconditional
+  PROCEED - no blocking conditions. The first council member to issue an unconditional
   PROCEED in Round 2.
 
   **Takeaway principle:** The architecture earns the right to claim data ownership only
   when it ships the export button, documents the disaster recovery path, and honestly
   names the connectivity scenarios where it cannot help. Local-first is not a feature flag
-  on top of a centralized system — it requires that every failure mode is visible and
+  on top of a centralized system - it requires that every failure mode is visible and
   survivable by a non-technical user.
 
 - [ ] **Step 4: Quality check (QC-1 through QC-10, note QC-9)**
@@ -883,7 +883,7 @@ v5.md §6 (UX and Conflict Handling)
 
 ---
 
-### Task 12: Chapter 10 — Synthesis: What the Council Finally Agreed On
+### Task 12: Chapter 10 - Synthesis: What the Council Finally Agreed On
 
 **File:** `part-2-council-reads-the-paper/ch10-synthesis.md`
 **Target:** 2,000–3,000 words
@@ -905,12 +905,12 @@ both reviews' Commendations sections
 
   The scorecard tables from R1 and R2. What changed between rounds. The overall trajectory:
   from 6.8 average with 2 BLOCKs to 7.1 average with 0 BLOCKs. This is not a comfortable
-  pass — it is a conditional one. Fifteen conditions remain.
+  pass - it is a conditional one. Fifteen conditions remain.
 
 - [ ] **Step 3: Write "The Non-Negotiables" (~800 words)**
 
   Seven properties that all five council members, across both rounds, treated as
-  mandatory — the commendations that survived both reviews:
+  mandatory - the commendations that survived both reviews:
   1. Data minimization at the protocol layer (subscription filtering at send, not receive)
   2. MDM compliance check at capability negotiation phase
   3. Three-tier CRDT resolution model (AP for documents, CP for transactions, no CRDT
@@ -925,7 +925,7 @@ both reviews' Commendations sections
   The questions the council raised that the architecture acknowledges but does not
   fully resolve (from R2 conditions and v5.md §9 Open Questions):
   - GDPR Article 17 Right to Erasure in a CRDT system
-  - Relay commoditization moat — what makes the managed relay defensible at scale
+  - Relay commoditization moat - what makes the managed relay defensible at scale
   - Formal verification of domain-level merge invariants
   - KEK compromise incident response under realistic enterprise conditions
   - Analytics and telemetry model without re-centralizing
@@ -939,7 +939,7 @@ both reviews' Commendations sections
 
 ---
 
-## Phase 4 — Part III: The Reference Architecture
+## Phase 4 - Part III: The Reference Architecture
 
 *Dependencies: Ch 10 complete. Ch 11 must precede Ch 12 (data layer builds on node arch).
 Ch 13 (schema migration) should follow Ch 12. Ch 12, 14, 15, 16 can largely be written
@@ -947,7 +947,7 @@ in parallel after Ch 11.*
 
 ---
 
-### Task 13: Chapter 11 — Node Architecture
+### Task 13: Chapter 11 - Node Architecture
 
 **File:** `part-3-reference-architecture/ch11-node-architecture.md`
 **Target:** 3,500–4,500 words
@@ -980,11 +980,11 @@ Sunfish `CLAUDE.md` (package architecture section)
 - [ ] **Step 3: Write "Plugin Contracts" (~600 words)**
 
   Five extension point interfaces from v13.md §5.3:
-  - `ILocalNodePlugin` — registration, lifecycle, dependency declaration
-  - `IStreamDefinition` — CRDT streams, event types, sync bucket contributions
-  - `IProjectionBuilder` — read-model projections rebuilt from event log
-  - `ISchemaVersion` — supported schema versions and upcasters
-  - `IUiBlockManifest` — block and module registration with UI kernel
+  - `ILocalNodePlugin` - registration, lifecycle, dependency declaration
+  - `IStreamDefinition` - CRDT streams, event types, sync bucket contributions
+  - `IProjectionBuilder` - read-model projections rebuilt from event log
+  - `ISchemaVersion` - supported schema versions and upcasters
+  - `IUiBlockManifest` - block and module registration with UI kernel
 
   How compatibility adapters work: they implement the same interfaces as their target and
   route through an alternative provider. The kernel cannot distinguish a first-party plugin
@@ -993,13 +993,13 @@ Sunfish `CLAUDE.md` (package architecture section)
 - [ ] **Step 4: Write "The UI Kernel" (~800 words)**
 
   Four-tier layering from v13.md §5.2:
-  1. Foundation — design tokens (sync-healthy, stale, offline, conflict-pending, quarantine),
+  1. Foundation - design tokens (sync-healthy, stale, offline, conflict-pending, quarantine),
      typography, spacing, icons
-  2. Framework-Agnostic Component Layer — status indicators, optimistic-write buttons,
+  2. Framework-Agnostic Component Layer - status indicators, optimistic-write buttons,
      conflict list component, freshness badge
-  3. Blocks and Modules — domain plugin UI; each block exposes its data contract and
+  3. Blocks and Modules - domain plugin UI; each block exposes its data contract and
      handles offline/stale/conflict states
-  4. Compat/Adapter Layer — alternative rendering engines or external auth providers
+  4. Compat/Adapter Layer - alternative rendering engines or external auth providers
 
   The alignment invariant: every kernel state visible to the data layer has a corresponding
   token and component in the UI layer. In Sunfish terms: `SunfishNodeHealthBar` is the
@@ -1010,7 +1010,7 @@ Sunfish `CLAUDE.md` (package architecture section)
   IPC: Unix domain socket between the application shell and the sync daemon. From v5.md §3.4.
   Why a separate process: the daemon survives application restarts and updates; peer sessions
   remain established while the application layer churns. `System.Net.Sockets.UnixDomainSocketEndPoint`
-  in .NET 5+ — cross-platform on Windows 10/Server 2019+, Linux, macOS.
+  in .NET 5+ - cross-platform on Windows 10/Server 2019+, Linux, macOS.
 
   Sunfish package map (from Sunfish `CLAUDE.md` package architecture):
   ```
@@ -1032,7 +1032,7 @@ Sunfish `CLAUDE.md` (package architecture section)
 
 ---
 
-### Task 14: Chapter 12 — CRDT Engine and Data Layer
+### Task 14: Chapter 12 - CRDT Engine and Data Layer
 
 **File:** `part-3-reference-architecture/ch12-crdt-engine-data-layer.md`
 **Target:** 3,500–4,500 words
@@ -1073,10 +1073,10 @@ Sunfish `docs/adrs/0028-crdt-engine-selection.md`
 
   ADR 0028 decision: Loro as the aspirational primary (compaction story, compact encoding,
   shallow snapshots match paper §9 mitigations exactly). YDotNet as the fallback while
-  loro-cs matures. The `ICrdtEngine` abstraction keeps the choice reversible — an engine
+  loro-cs matures. The `ICrdtEngine` abstraction keeps the choice reversible - an engine
   swap does not ripple through application code and does not require a schema epoch bump.
 
-  loro-cs status: `github.com/sensslen/loro-cs` — actively maintained, cross-platform
+  loro-cs status: `github.com/sensslen/loro-cs` - actively maintained, cross-platform
   NuGet, v1.10.3 released December 2025, ~4 months behind loro-core v1.11.x, "bare bones"
   API coverage by maintainer's own assessment. Evaluate against your required API surface
   before committing; contribute missing bindings if the gap is small.
@@ -1090,7 +1090,7 @@ Sunfish `docs/adrs/0028-crdt-engine-selection.md`
   - Yjs with aggressive GC: safe for ephemeral data (cursors, presence) where durability
     is not required
   - Loro 90-day retention: safe if and only if every peer has acknowledged all operations
-    older than 90 days before compaction — stale peer recovery protocol activates if not
+    older than 90 days before compaction - stale peer recovery protocol activates if not
   - No-GC compliance tier: safe by construction; document growth bounded by business volume
 
   Application-level sharding: large logical documents split into sub-documents under map
@@ -1114,7 +1114,7 @@ Sunfish `docs/adrs/0028-crdt-engine-selection.md`
 
 ---
 
-### Task 15: Chapter 13 — Schema Migration and Evolution
+### Task 15: Chapter 13 - Schema Migration and Evolution
 
 **File:** `part-3-reference-architecture/ch13-schema-migration-evolution.md`
 **Target:** 3,000–4,000 words
@@ -1139,7 +1139,7 @@ Sunfish `docs/adrs/0028-crdt-engine-selection.md`
 
   - **Why it's hardest:** Nodes update independently. Teams run mixed versions simultaneously.
     A team of five may run versions spread across three releases. The schema must work for
-    all of them — simultaneously, with no coordinator.
+    all of them - simultaneously, with no coordinator.
 
   - **Expand-contract:** New fields additive and optional in expand phase; dual-write to
     old and new fields; older nodes ignore unknown fields; newer nodes prefer new fields.
@@ -1148,7 +1148,7 @@ Sunfish `docs/adrs/0028-crdt-engine-selection.md`
 
   - **Upcasters:** Immutable events; additive changes in-place; non-additive changes
     introduce new event types (`RecordUpdatedV2`) leaving old types intact. Upcaster chains
-    accumulate and become brittle — mandatory stream compaction retires them.
+    accumulate and become brittle - mandatory stream compaction retires them.
 
   - **Bidirectional lenses:** Declarative transformation functions between schema versions.
     Version graph; migrations traverse shortest path. Handles field renames, type changes,
@@ -1173,7 +1173,7 @@ Sunfish `docs/adrs/0028-crdt-engine-selection.md`
 
 ---
 
-### Task 16: Chapter 14 — Sync Daemon Protocol
+### Task 16: Chapter 14 - Sync Daemon Protocol
 
 **File:** `part-3-reference-architecture/ch14-sync-daemon-protocol.md`
 **Target:** 3,000–4,000 words
@@ -1214,7 +1214,7 @@ Sunfish `accelerators/bridge/README.md` (relay configuration reference)
     4. DELTA_STREAM    (continuous)
     5. GOSSIP_PING     (every 30s)
     ```
-    MDM compliance check occurs during CAPABILITY_NEG — non-compliant nodes rejected
+    MDM compliance check occurs during CAPABILITY_NEG - non-compliant nodes rejected
     before they touch data (Voss commendation from R1/R2).
 
   - **Data minimization invariant:** Subscription filtering at send tier. Non-subscribed
@@ -1244,7 +1244,7 @@ Sunfish `accelerators/bridge/README.md` (relay configuration reference)
 
 ---
 
-### Task 17: Chapter 15 — Security Architecture
+### Task 17: Chapter 15 - Security Architecture
 
 **File:** `part-3-reference-architecture/ch15-security-architecture.md`
 **Target:** 3,500–4,500 words
@@ -1267,7 +1267,7 @@ Sunfish `accelerators/anchor/README.md` (authentication model section)
 - [ ] **Step 2: Write all sections (~3,800 words)**
 
   - **Threat model from v13.md §11.1:** Distributing data to endpoints does not eliminate
-    the honeypot — it distributes it. A cloud database is a single high-value target.
+    the honeypot - it distributes it. A cloud database is a single high-value target.
     A fleet of workstations is a larger attack surface with heterogeneous posture.
     Defense-in-depth required. Insider threat acknowledged. Physical access threat named.
 
@@ -1299,7 +1299,7 @@ Sunfish `accelerators/anchor/README.md` (authentication model section)
     by prior DEKs if old KEK was already rotated).
 
   - **Compliance mapping (from R2 Okonkwo):** SOC 2 Type II (encryption at rest + in transit,
-    audit log, access control — achievable; gap: anomalous access pattern monitoring).
+    audit log, access control - achievable; gap: anomalous access pattern monitoring).
     HIPAA (application-layer achievable; relay metadata = BAA consideration; self-hosted
     relay for maximum privacy). GDPR Article 17 (crypto-shredding: destroying the DEK renders
     ciphertext permanently unreadable; document this explicitly; acknowledge that truly
@@ -1315,7 +1315,7 @@ Sunfish `accelerators/anchor/README.md` (authentication model section)
 
 ---
 
-### Task 18: Chapter 16 — Persistence Beyond the Node
+### Task 18: Chapter 16 - Persistence Beyond the Node
 
 **File:** `part-3-reference-architecture/ch16-persistence-beyond-the-node.md`
 **Target:** 2,500–3,500 words
@@ -1359,7 +1359,7 @@ Sunfish `docs/zone-b-migration-path.md` §4 (Phase 3 relay wiring)
 
   - **Relay architecture from Bridge README:** What the relay owns (DELTA_STREAM fan-out,
     GOSSIP_PING routing, team-id-scoped multiplexing). What it does not own (persistence,
-    application state, decryption capability). Stateless — catch-up traffic persisted by
+    application state, decryption capability). Stateless - catch-up traffic persisted by
     hosted-node peer, not relay. Three tenant trust levels.
 
   - **Privacy posture:** Relay sees metadata (which nodes communicate, when, at what volume)
@@ -1368,7 +1368,7 @@ Sunfish `docs/zone-b-migration-path.md` §4 (Phase 3 relay wiring)
     Source: R2 Okonkwo prompt 2.
 
   - **Federation and archival:** Phase D federation patterns from Sunfish operator guide
-    (briefly — one paragraph each): multi-jurisdiction entity sync, air-gapped sneakernet
+    (briefly - one paragraph each): multi-jurisdiction entity sync, air-gapped sneakernet
     replication. Long-term archival formats (signed append-only logs, snapshot formats).
     Decentralized archival tier for regulated industries (optional, enterprise).
 
@@ -1378,15 +1378,15 @@ Sunfish `docs/zone-b-migration-path.md` §4 (Phase 3 relay wiring)
 
 ---
 
-## Phase 5 — Part IV: Implementation Playbooks
+## Phase 5 - Part IV: Implementation Playbooks
 
 *Dependencies: Part III substantially complete (Ch 11–16). Chapters in Part IV reference
-Part III for specification — they do not rewrite it. QC-7 applies: tutorial voice, not
+Part III for specification - they do not rewrite it. QC-7 applies: tutorial voice, not
 specification voice. Ch 17 should precede Ch 18; Ch 19 and Ch 20 can be written in parallel.*
 
 ---
 
-### Task 19: Chapter 17 — Building Your First Node
+### Task 19: Chapter 17 - Building Your First Node
 
 **File:** `part-4-implementation-playbooks/ch17-building-first-node.md`
 **Target:** 3,500–4,500 words
@@ -1408,7 +1408,7 @@ Sunfish `accelerators/anchor/README.md` (full)
 - [ ] **Step 2: Write all sections (~3,800 words)**
 
   - **Start with Anchor:** Clone `accelerators/anchor/`. It builds and launches.
-    The shell is a placeholder — that's intentional. It gives you the wiring without
+    The shell is a placeholder - that's intentional. It gives you the wiring without
     the domain-specific cruft. `dotnet build Sunfish.Anchor.csproj -f net10.0-windows10.0.19041.0`.
 
   - **What Anchor gives you today (from Anchor README deliverable checklist):**
@@ -1426,7 +1426,7 @@ Sunfish `accelerators/anchor/README.md` (full)
 
   - **First CRDT document:** Create a `LoroDoc` (or `YDotNet.YDoc` depending on engine),
     register it with `ICrdtEngine`, subscribe to updates via `IStreamDefinition`.
-    Two-device sync: run two Anchor instances on the same LAN — mDNS discovers the peer,
+    Two-device sync: run two Anchor instances on the same LAN - mDNS discovers the peer,
     gossip daemon establishes session, CRDT delta streams flow automatically.
 
   - **QR-code onboarding flow (from Anchor README §Onboarding flow):**
@@ -1451,7 +1451,7 @@ Sunfish `accelerators/anchor/README.md` (full)
 
 ---
 
-### Task 20: Chapter 18 — Migrating an Existing SaaS
+### Task 20: Chapter 18 - Migrating an Existing SaaS
 
 **File:** `part-4-implementation-playbooks/ch18-migrating-existing-saas.md`
 **Target:** 3,000–4,000 words
@@ -1477,7 +1477,7 @@ Sunfish `accelerators/bridge/README.md`
 
   - **Zone determination:** Run the four-filter framework from Ch 4. If all user-owned data
     passes filters but some coordination features don't, you are in Zone C. If everything
-    fails Filter 1, you are in Zone B — use Sunfish's component surface but don't add
+    fails Filter 1, you are in Zone B - use Sunfish's component surface but don't add
     the local-node kernel (see migration guide).
 
   - **Bridge as Zone C reference:** `accelerators/bridge/` demonstrates Zone C at a working
@@ -1486,15 +1486,15 @@ Sunfish `accelerators/bridge/README.md`
     (CRDT documents, event log, sync) moves to per-tenant local-node-host processes.
 
   - **Four migration phases** (from zone-b-migration-path.md §4 and v5.md §8):
-    1. Shadow mode — local node mirrors data read-only; writes still flow through server
-    2. Local writes for non-conflicting domains — AP-class data routes through CRDT engine
-    3. Full local authority for new projects — server becomes a relay peer
-    4. Gradual backfill of legacy records — copy-transform Postgres events to CRDT log
+    1. Shadow mode - local node mirrors data read-only; writes still flow through server
+    2. Local writes for non-conflicting domains - AP-class data routes through CRDT engine
+    3. Full local authority for new projects - server becomes a relay peer
+    4. Gradual backfill of legacy records - copy-transform Postgres events to CRDT log
 
     For each phase: what it involves, success criteria, reversibility.
 
   - **Phase transition criteria (from R2 Voss commendation):** Present the framing that
-    earned praise in Round 2 — "We can pause at Phase 2 indefinitely" is the framing for
+    earned praise in Round 2 - "We can pause at Phase 2 indefinitely" is the framing for
     a change advisory board. Each phase is independently reversible.
 
   - **Architectural decisions that determine migration cost** (from zone-b-migration-path.md §3):
@@ -1512,7 +1512,7 @@ Sunfish `accelerators/bridge/README.md`
 
 ---
 
-### Task 21: Chapter 19 — Shipping to Enterprise
+### Task 21: Chapter 19 - Shipping to Enterprise
 
 **File:** `part-4-implementation-playbooks/ch19-shipping-to-enterprise.md`
 **Target:** 3,000–4,000 words
@@ -1538,7 +1538,7 @@ Sunfish `docs/specifications/air-gap-deployment.md`
   - **Procurement conversation:** AGPLv3 + managed relay subscription = no per-seat license,
     one predictable line item. Open-source core removes vendor lock-in objection. But: some
     corporate legal teams have categorical AGPLv3 policies (network use clause triggers on
-    internal modifications). Dual-license commercial exception resolves this — specify it
+    internal modifications). Dual-license commercial exception resolves this - specify it
     before the first enterprise conversation. From R2 Voss prompt 5 and R2 Kelsey prompt 3.
 
   - **Build and packaging:** Windows MSIX installer (provisions MAUI host + sync daemon as
@@ -1548,12 +1548,12 @@ Sunfish `docs/specifications/air-gap-deployment.md`
 
   - **Code signing and notarization:** macOS: Developer ID certificate, `notarytool`,
     stapling. Both foreground MAUI app and background sync daemon covered. Windows:
-    Authenticode signing, App Control for Business (WDAC) trusted-publisher rules —
+    Authenticode signing, App Control for Business (WDAC) trusted-publisher rules -
     not per-hash rules. From v5.md §5.2–5.3.
 
   - **MDM deployment:** Intune/Jamf profiles, silent installation, pre-seeded configuration
     via MDM profile. From v13.md §16.1. MDM compliance check at capability negotiation
-    (not just at install time — a node that falls out of compliance mid-session is rejected
+    (not just at install time - a node that falls out of compliance mid-session is rejected
     before it touches data). Reference Sunfish `mdm-config-schema.md` for configuration keys.
 
   - **SBOM:** CycloneDX format satisfies NTIA minimum elements and CISA guidance. Syft for
@@ -1562,7 +1562,7 @@ Sunfish `docs/specifications/air-gap-deployment.md`
     From R1 Voss conditions and R2 Voss prompt 1.
 
   - **Admin revocation tooling (from R2 Voss prompt 3):** IT administrator needs a concrete
-    interface — not "the system propagates revocation" but "open Admin Console, select user,
+    interface - not "the system propagates revocation" but "open Admin Console, select user,
     click Revoke Access, relay broadcasts key rotation to all active peers." Sketch the
     admin CLI command or console action. `sunfish admin revoke --user <user-id> --team <team-id>`.
 
@@ -1581,7 +1581,7 @@ Sunfish `docs/specifications/air-gap-deployment.md`
 
 ---
 
-### Task 22: Chapter 20 — Designing UX for Sync and Conflict
+### Task 22: Chapter 20 - Designing UX for Sync and Conflict
 
 **File:** `part-4-implementation-playbooks/ch20-ux-sync-conflict.md`
 **Target:** 2,500–3,500 words
@@ -1628,7 +1628,7 @@ v5.md §6 (UX and Conflict Handling)
     All decisions logged as events for audit. No undifferentiated conflict list.
 
   - **Designing for failure modes:** Offline mode (full fidelity, no degraded banner unless
-    CP data is stale). Partial connectivity (relay reachable but peers offline — gossip
+    CP data is stale). Partial connectivity (relay reachable but peers offline - gossip
     via relay only, peer-to-peer unavailable). Quarantine queue surfaced: "3 edits made
     offline are pending validation" with inline review before sync.
 
@@ -1649,13 +1649,13 @@ v5.md §6 (UX and Conflict Handling)
 
 ---
 
-## Phase 6 — Epilogue and Appendices
+## Phase 6 - Epilogue and Appendices
 
 *Dependencies: All chapters complete. Epilogue draws from everything; write it last.*
 
 ---
 
-### Task 23: Epilogue — What the Stack Owes You
+### Task 23: Epilogue - What the Stack Owes You
 
 **File:** `epilogue/epilogue-what-the-stack-owes-you.md`
 **Target:** 2,000–3,000 words
@@ -1666,27 +1666,27 @@ v13.md Conclusion, R2 Council Consensus Statement
 
   Five sections:
 
-  1. **What the council agreed the architecture must never compromise** — the seven
+  1. **What the council agreed the architecture must never compromise** - the seven
      non-negotiables from Ch 10's synthesis, stated as obligations. Not what the architecture
-     can do — what it owes its users. Frame each as a promise, not a feature.
+     can do - what it owes its users. Frame each as a promise, not a feature.
 
-  2. **The open questions that remain genuinely unsettled** — from v5.md §9:
+  2. **The open questions that remain genuinely unsettled** - from v5.md §9:
      KEK compromise incident response at scale, relay multi-tenancy threat model for
      high-risk verticals, long-term archival formats, formal verification of domain-level
      merge invariants. Plus R2 additions: GDPR Art. 17 in CRDT systems, analytics model
      without re-centralization. Be honest: this book doesn't resolve these. It names them.
 
-  3. **The implementation drift risk** — the most common way local-first architectures
+  3. **The implementation drift risk** - the most common way local-first architectures
      fail in practice: "just a quick server-side check" that gradually re-centralizes
      the system. The telemetry model must be decided before the first product analytics
      request. Enumerate the drift anti-patterns from R2 Ferreira prompt 5 and
      zone-b-migration-path.md §5.
 
-  4. **What comes next** — Sunfish milestones, community governance model, invitation
+  4. **What comes next** - Sunfish milestones, community governance model, invitation
      to contribute. The two accelerators (Anchor, Bridge) and what remains unbuilt.
      The sync daemon sub-document as the first critical deliverable (from v13.md Conclusion).
 
-  5. **The obligation** — closing. If this architecture asks users to trust a new
+  5. **The obligation** - closing. If this architecture asks users to trust a new
      infrastructure model, it owes them: data portability (the export button exists),
      disaster recovery (the non-technical recovery path is documented and tested),
      and honest failure modes (symmetric NAT is acknowledged, GC limits are stated,
@@ -1705,7 +1705,7 @@ v13.md Conclusion, R2 Council Consensus Statement
 
 ---
 
-### Task 24: Appendix A — Sync Daemon Wire Protocol
+### Task 24: Appendix A - Sync Daemon Wire Protocol
 
 **File:** `appendices/appendix-a-sync-daemon-wire-protocol.md`
 **Target:** 1,500–2,500 words
@@ -1736,7 +1736,7 @@ v13.md §6.2 (handshake sequence), Sunfish `accelerators/anchor/README.md` (QR p
 
 ---
 
-### Task 25: Appendix B — Threat Model Worksheets
+### Task 25: Appendix B - Threat Model Worksheets
 
 **File:** `appendices/appendix-b-threat-model-worksheets.md`
 **Target:** 1,500–2,000 words
@@ -1764,7 +1764,7 @@ R2 Okonkwo attack tree prompt
   | ... | | | |
   ```
 
-  Section 3: **Worked example — construction PM vertical**
+  Section 3: **Worked example - construction PM vertical**
   Fill the asset inventory, actor taxonomy, and attack tree for a five-person construction
   project management team. Primary assets: bid documents, subcontractor contracts, project
   schedules. Primary actors: disgruntled subcontractor with stolen device, competitor.
@@ -1772,21 +1772,21 @@ R2 Okonkwo attack tree prompt
   which teams are active on a bid.
 
   Section 4: **Key compromise incident response template**
-  From Ch 15 — four sections: detection checklist, re-keying procedure steps,
+  From Ch 15 - four sections: detection checklist, re-keying procedure steps,
   data-at-risk scope calculation, user notification script.
 
 - [ ] **Step 2: Quality check**
   ```
   [ ] Templates are usable without additional explanation
   [ ] Worked example is specific enough to be adapted, not just illustrative
-  [ ] IR template is actionable — each step has a verb and an owner
+  [ ] IR template is actionable - each step has a verb and an owner
   ```
 
 - [ ] **Step 3: Save**
 
 ---
 
-### Task 26: Appendix C — Further Reading
+### Task 26: Appendix C - Further Reading
 
 **File:** `appendices/appendix-c-further-reading.md`
 **Target:** 800–1,200 words
@@ -1796,31 +1796,31 @@ R2 Okonkwo attack tree prompt
   Organized sections with annotations (not just a flat list):
 
   **Local-First Literature**
-  - Kleppmann et al., "Local-First Software: You Own Your Data, in Spite of the Cloud" (2019) — the foundational paper; start here
-  - Ink & Switch essays: Pushpin, Backchat — production local-first experience reports
-  - CRDTech community references — active practitioner discussion
+  - Kleppmann et al., "Local-First Software: You Own Your Data, in Spite of the Cloud" (2019) - the foundational paper; start here
+  - Ink & Switch essays: Pushpin, Backchat - production local-first experience reports
+  - CRDTech community references - active practitioner discussion
 
   **CRDT Libraries**
-  - Yjs (`github.com/yjs/yjs`) — most mature, excellent docs, wide deployment
-  - yrs / y-crdt (`github.com/y-crdt/y-crdt`) — Rust port, basis for .NET bindings
-  - Loro (`github.com/loro-dev/loro`) — compact encoding, shallow snapshots, ADR 0028 selection
-  - loro-cs (`github.com/sensslen/loro-cs`) — C# bindings for Loro; evaluate API coverage before committing
-  - Automerge — excellent design reference; no first-class .NET binding as of writing
+  - Yjs (`github.com/yjs/yjs`) - most mature, excellent docs, wide deployment
+  - yrs / y-crdt (`github.com/y-crdt/y-crdt`) - Rust port, basis for .NET bindings
+  - Loro (`github.com/loro-dev/loro`) - compact encoding, shallow snapshots, ADR 0028 selection
+  - loro-cs (`github.com/sensslen/loro-cs`) - C# bindings for Loro; evaluate API coverage before committing
+  - Automerge - excellent design reference; no first-class .NET binding as of writing
 
   **Distributed Systems Foundations**
-  - Kleppmann, *Designing Data-Intensive Applications* — the closest intellectual ancestor to this book; read chs 5, 8, 9 first
-  - Flease paper (Meijer, Reuter) — failure-aware lease management without dedicated coordinators
-  - Shapiro et al., "A Comprehensive Study of Convergent and Commutative Replicated Data Types" — CRDT theory
+  - Kleppmann, *Designing Data-Intensive Applications* - the closest intellectual ancestor to this book; read chs 5, 8, 9 first
+  - Flease paper (Meijer, Reuter) - failure-aware lease management without dedicated coordinators
+  - Shapiro et al., "A Comprehensive Study of Convergent and Commutative Replicated Data Types" - CRDT theory
 
   **Production Analogues**
-  - Linear blog posts on sync architecture — the lightweight SQLite replica model
-  - Figma blog posts on multiplayer — CRDT in production at scale
-  - PowerSync / ElectricSQL documentation — declarative partial sync in practice
-  - Actual Budget — the closest commercial analogue to Zone A local-first
+  - Linear blog posts on sync architecture - the lightweight SQLite replica model
+  - Figma blog posts on multiplayer - CRDT in production at scale
+  - PowerSync / ElectricSQL documentation - declarative partial sync in practice
+  - Actual Budget - the closest commercial analogue to Zone A local-first
 
   **Schema Evolution**
-  - Ink & Switch, Cambria — bidirectional schema lenses for CRDTs
-  - DXOS ECHO documentation — decentralized schema migration in production
+  - Ink & Switch, Cambria - bidirectional schema lenses for CRDTs
+  - DXOS ECHO documentation - decentralized schema migration in production
 
 - [ ] **Step 2: Quality check**
   ```
@@ -1833,11 +1833,11 @@ R2 Okonkwo attack tree prompt
 
 ---
 
-### Task 27: Appendix D — Testing the Inverted Stack
+### Task 27: Appendix D - Testing the Inverted Stack
 
 **File:** `appendices/appendix-d-testing-the-inverted-stack.md`
 **Target:** 2,000–2,500 words
-**Sources:** v13.md §15 (Testing Strategy — full section)
+**Sources:** v13.md §15 (Testing Strategy - full section)
 
 - [ ] **Step 1: Write the appendix**
 
@@ -1845,14 +1845,14 @@ R2 Okonkwo attack tree prompt
 
   Section 1: **The Five-Level Testing Pyramid**
   Table from v13.md §15.1 with expanded rationale for each level:
-  1. Property-based: CRDT convergence, idempotency, commutativity, monotonicity —
+  1. Property-based: CRDT convergence, idempotency, commutativity, monotonicity -
      these are mathematical properties; test them with a property-based framework
      (FsCheck for .NET, fast-check for JS)
-  2. Integration tests with real dependencies: sync handshake, data path — no mocks
+  2. Integration tests with real dependencies: sync handshake, data path - no mocks
      for the sync daemon
-  3. Fault injection in CI: partition, packet loss, node crash — use Testcontainers
+  3. Fault injection in CI: partition, packet loss, node crash - use Testcontainers
      with network partition simulation
-  4. Deterministic simulation: mixed-version nodes, epoch transitions, lease edge cases —
+  4. Deterministic simulation: mixed-version nodes, epoch transitions, lease edge cases -
      the hardest tier; use simulation harness with controllable clocks
   5. Chaos testing in staging: unknown failure modes under production-representative load
 
@@ -1897,7 +1897,7 @@ R2 Okonkwo attack tree prompt
 
 ---
 
-## Phase 7 — Final Assembly Check
+## Phase 7 - Final Assembly Check
 
 ### Task 28: Word count audit and final review
 
@@ -1954,7 +1954,7 @@ R2 Okonkwo attack tree prompt
 
 | Phase | Tasks | Can Parallelize |
 |---|---|---|
-| Phase 0 | Task 0 (scaffold) | — |
+| Phase 0 | Task 0 (scaffold) | - |
 | Phase 1 | Task 1 (prospectus), Task 2 (front matter) | After Task 0 |
 | Phase 2 | Tasks 3–6 (Ch 1–4) | Sequential: Ch1→Ch2→Ch3→Ch4 |
 | Phase 3 | Tasks 7–11 (Ch 5–9) then Task 12 (Ch 10) | Ch 5–9 parallel; Ch 10 after all five |

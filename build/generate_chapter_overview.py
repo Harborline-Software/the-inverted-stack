@@ -24,7 +24,7 @@ def main() -> int:
         by_chapter[c["chapter"]].append(c)
 
     out = []
-    out.append("# Chapter Overview — Inverted Stack Conformance Catalog")
+    out.append("# Chapter Overview - Inverted Stack Conformance Catalog")
     out.append("")
     out.append("Compact navigation index. Use this to scope which chapters to load from `concept-index.yaml`.")
     out.append("")
@@ -52,12 +52,12 @@ def main() -> int:
             prefix = local_id.split("-")[0] if "-" in local_id else local_id
             prefixes.add(prefix)
 
-        out.append(f"## `{stem}` — {title}")
+        out.append(f"## `{stem}` - {title}")
         out.append("")
         out.append(f"- **Concept count:** {count}")
         out.append(f"- **Scope:** foundational={scope_split.get('foundational', 0)}, "
                    f"inverted-stack-specific={scope_split.get('inverted-stack-specific', 0)}")
-        out.append(f"- **Kleppmann properties touched:** {', '.join(sorted(prop_set)) if prop_set else '—'}")
+        out.append(f"- **Kleppmann properties touched:** {', '.join(sorted(prop_set)) if prop_set else '-'}")
         out.append(f"- **ID prefixes:** `{', '.join(sorted(prefixes))}`")
 
         # Show first 5 concept names as theme indicators

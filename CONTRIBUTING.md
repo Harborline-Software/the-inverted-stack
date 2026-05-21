@@ -4,10 +4,10 @@
 
 ## What's Useful
 
-- **Technical corrections** — something is wrong, incomplete, or contradicts the reference implementation
-- **Code example improvements** — a cleaner way to illustrate a concept against Sunfish
-- **War stories** — real-world experience that would strengthen a chapter's argument
-- **Typos and prose** — always welcome
+- **Technical corrections** - something is wrong, incomplete, or contradicts the reference implementation
+- **Code example improvements** - a cleaner way to illustrate a concept against Sunfish
+- **War stories** - real-world experience that would strengthen a chapter's argument
+- **Typos and prose** - always welcome
 
 ## What to Expect
 

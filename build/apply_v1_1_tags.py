@@ -27,7 +27,7 @@ applies-to-roles:
     → [full-node, full-node-multi-user]
   - Otherwise → [] (means "all roles", per schema convention)
 
-failed-conditions: NOT applied here — too nuanced for heuristics; dispatched
+failed-conditions: NOT applied here - too nuanced for heuristics; dispatched
 to subagents in a separate pass.
 """
 from __future__ import annotations
@@ -89,7 +89,7 @@ def derive_applies_to_roles(concept: dict) -> list[str]:
     text = f"{name} {definition}"
 
     # UX-* prefix → only full-node + full-node-multi-user (no headless / relay /
-    # thin-client / legacy-bridge — no human at device)
+    # thin-client / legacy-bridge - no human at device)
     if cid.startswith("UX-"):
         return ["full-node", "full-node-multi-user"]
 
@@ -156,7 +156,7 @@ def main() -> int:
           f"{total_security} tagged with security-axis; "
           f"{total_roles} tagged with applies-to-roles")
     print()
-    print("Note: failed-conditions NOT applied here — dispatched to subagents.")
+    print("Note: failed-conditions NOT applied here - dispatched to subagents.")
     return 0
 
 

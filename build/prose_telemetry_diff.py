@@ -52,7 +52,7 @@ def _build_metric_map(m: dict) -> dict[str, dict]:
 
 def _fmt_delta(before: float, after: float, fmt: str = "{:.1f}") -> str:
     if before == after:
-        return "—"
+        return "-"
     delta = after - before
     sign = "+" if delta > 0 else ""
     return f"{sign}{fmt.format(delta)}"

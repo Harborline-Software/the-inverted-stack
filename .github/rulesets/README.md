@@ -1,4 +1,4 @@
-# GitHub Rulesets — the-inverted-stack
+# GitHub Rulesets - the-inverted-stack
 
 Source-of-truth JSON for the book repo's GitHub branch and tag rulesets.
 
@@ -21,8 +21,8 @@ gh api -X POST repos/Harborline-Software/the-inverted-stack/rulesets \
 
 ## Required checks
 
-- **Lint PR commits** — `.github/workflows/commitlint.yml`
-- **Scan workflows for banned triggers** — `.github/workflows/ban-pull-request-target.yml`
+- **Lint PR commits** - `.github/workflows/commitlint.yml`
+- **Scan workflows for banned triggers** - `.github/workflows/ban-pull-request-target.yml`
 
-Book repo gates are deliberately light — the heavy lifting (audiobook renders,
+Book repo gates are deliberately light - the heavy lifting (audiobook renders,
 chapter measurement) runs locally via Galley + OpenWolf and doesn't gate PRs.

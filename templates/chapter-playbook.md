@@ -1,8 +1,8 @@
-# Chapter N — [Task] Your [Noun]
+# Chapter N - [Task] Your [Noun]
 
 <!-- Target: ~X,000 words -->
 <!-- Source: vNN §X, Sunfish accelerators/ -->
-<!-- Part: IV — tutorial voice, minimal path -->
+<!-- Part: IV - tutorial voice, minimal path -->
 
 ---
 
@@ -25,12 +25,12 @@
 
 ---
 
-## Step 1 — [First Action]
+## Step 1 - [First Action]
 
 *The minimal thing to do first. Tutorial voice: "You" is correct here.*
 
 ```csharp
-// illustrative — package APIs are pre-1.0
+// illustrative - package APIs are pre-1.0
 builder.Services.AddSunfishKernelRuntime(options =>
 {
     // ...
@@ -41,7 +41,7 @@ builder.Services.AddSunfishKernelRuntime(options =>
 
 ---
 
-## Step 2 — [Second Action]
+## Step 2 - [Second Action]
 
 ```csharp
 // illustrative
@@ -52,7 +52,7 @@ builder.Services.AddSunfishKernelRuntime(options =>
 
 ---
 
-## Step 3 — [Third Action]
+## Step 3 - [Third Action]
 
 *[Continue the tutorial path. Each step should be completable on its own before moving to the next.]*
 
@@ -66,7 +66,7 @@ builder.Services.AddSunfishKernelRuntime(options =>
 
 ## Going Further
 
-*Two or three pointers to Part III chapters for the full specification. Do not re-explain — just point.*
+*Two or three pointers to Part III chapters for the full specification. Do not re-explain - just point.*
 
 - Full sync daemon protocol specification: [Chapter 14](#)
 - Complete security architecture: [Chapter 15](#)

@@ -1,5 +1,5 @@
 ---
-title: "Subsystem Test — Sync Daemon Under Drift"
+title: "Subsystem Test - Sync Daemon Under Drift"
 volume: 2
 act: 2
 chapter: 9
@@ -9,16 +9,23 @@ word-count-target: 6000
 log-opener-pattern: B
 primary-rail: career-cost-and-aging-out
 chapter-version: v1
+plants-set:
+  - priya-upstream-constraint
+  - architecture-improves-in-their-hands
+  - council-broadening-window-credit
+plants-paid:
+  - council-broadening-window
+  - priya-trust-before-betrayal
 ---
 
 
-<!-- PRE-BOBIVERSE DRAFT. Awaiting rewrite in the locked Filchner / Anna-voice register (vol-2/SPINE.md, vol-2/ANNA-VOICE.md). Not for assembly, not for listen-test, not for audiobook regeneration until rewritten. -->
+<!-- Bobiverse-warmth pass 2026-05-20 (PAO). Per UPF ch09 v2 report: install 5-6 parenthetical asides (coffee-placement, hiring-observation irony, Joel *thank you* moment, Priya upstream-constraint reveal, Joel self-assessment, watchkeeper-register break); break the `I had` six-opener anaphora run in the hiring-observation block (cap 2 per ANNA-VOICE.md AP-2); insert one concrete physical Anna-observation of Joel; lift Priya postdoc-coffee beat into a wry parenthetical; compress Joel self-assessment to 60%. Preserved: cold-coffee symbolism (lines 82-84 + 354-358), Pattern B dual-log frame (0612 opener + 0712 post-event), three-thread foreshadowing (council-reviewer credit / upstream-constraint naming / architecture-in-better-hands), Priya's "Three passes. Clear." cadence, Hiroshi/Diego/Wanjiru bridge-visit beats. PRE-BOBIVERSE flag retired. -->
 
 Mission log, Day 30, 0612 local. RV Nansen, MERIDIAN-7. Routine watch.
 
-The boat held trim at three hundred meters through the night. Relay layer dormant per architecture specification; gossip protocol on the consortium-port side dormant; local mesh active and within drift bounds across all crew nodes. Anchor's anomaly-detection layer flagged a sync-daemon drift event at 0247 local on the boat-internal mesh — a pre-threshold signature on the cross-node clock-skew indicator that the local-store anomaly model surfaced approximately ninety seconds before the threshold-trip would have fired. Reyes pulled to the comm-space console at 0249. Yusupova on the bridge for handoff at 0612. Drift event under investigation; no operational impact registered against the boat; no carryover for the bridge watch beyond observation. Schema state stable per Iyer's 0214 confirmation. Relay status unchanged.
+The boat held trim at three hundred meters through the night. Relay layer dormant per architecture specification; gossip protocol on the consortium-port side dormant; local mesh active and within drift bounds across all crew nodes. Sunfish's anomaly-detection layer flagged a sync-daemon drift event at 0247 local on the boat-internal mesh - a pre-threshold signature on the cross-node clock-skew indicator that the local-store anomaly model surfaced approximately ninety seconds before the threshold-trip would have fired. Reyes pulled to the comm-space console at 0249. Yusupova on the bridge for handoff at 0612. Drift event under investigation; no operational impact logged against the boat; no carryover for the bridge watch beyond observation. Schema state stable per Iyer's 0214 confirmation. Relay status unchanged.
 
-— A.Y., Mission Director.
+- A.Y., Mission Director.
 
 ---
 
@@ -30,11 +37,11 @@ He said: *Director.*
 
 I said: *Joel.*
 
-I set the coffee on the bench at the corner of the console where it would not be in his hand's path to the keyboard. He registered the coffee. He registered that I had not put it under his face, where I would have been suggesting he stop and drink it. He registered that I had put it where he could reach for it when he had a place to stop.
+I set the coffee on the bench at the corner of the console where it would not be in his hand's path to the keyboard - which is to say, in the one square inch of the console area that does not constitute either an interruption or a hint. He took it in. He saw that I had not put the cup under his face, where I would have been suggesting he stop and drink it; he saw that I had put it where he could reach when he had a place to stop. He did not thank me. He logged the cup the way he logged any other piece of equipment that had arrived at his bench without his having asked for it.
 
 I said: *the drift event.*
 
-He said: *not a fault. Not yet. Possibly not at all. The local-store model on Anchor flagged the cross-node clock-skew indicator at oh-two-forty-seven. The signature was ninety seconds ahead of where the threshold-trip would have fired. I came to the console at oh-two-forty-nine. The drift has not exceeded the threshold in the three and a half hours since. The drift's shape is consistent with a bounded oscillation rather than a runaway. I am working on which.*
+He said: *not a fault. Not yet. Possibly not at all. The local-store model on Sunfish flagged the cross-node clock-skew indicator at oh-two-forty-seven. The signature was ninety seconds ahead of where the threshold-trip would have fired. I came to the console at oh-two-forty-nine. The drift has not exceeded the threshold in the three and a half hours since. The drift's shape is consistent with a bounded oscillation rather than a runaway. I am working on which.*
 
 He said it in the tempo Joel said operational reports in. The tempo had been the same tempo at the conference space on the morning of Day 7 and at the wardroom desk on the night of Day 22 and at the bench in the second-submersion brief on the morning of Day 23. The fatigue at oh-six-twenty on Day 30 was the fatigue of an engineer who had been at a console for three and a half hours; the substance of the report was not the fatigue.
 
@@ -48,13 +55,13 @@ I sat at the bench across the comm space from him. I did not sit at his shoulder
 
 ---
 
-He turned the secondary display so that the angle came across the comm space at the bench where I was sitting. The display carried a graph in two colours. The first colour was a flat band the model had identified as the routine clock-skew baseline across the boat's mesh — the band the gossip protocol's clock-handshake produces when the nodes are healthy. The second colour was the actual clock-skew across the boat's nodes for the past seventy-two hours, sampled at the protocol's gossip-cycle tempo. The actual band was, for most of the seventy-two hours, the same shape as the baseline band. At approximately oh-one-fifty on the morning of Day 30, the actual band had begun to drift away from the baseline, slowly, in a pattern that bowed up from the baseline by a small margin and then bowed back down.
+He turned the secondary display so that the angle came across the comm space at the bench where I was sitting. The display carried a graph in two colours. The first colour was a flat band the model had identified as the routine clock-skew baseline across the boat's mesh - the band the gossip protocol's clock-handshake produces when the nodes are healthy. The second colour was the actual clock-skew across the boat's nodes for the past seventy-two hours, sampled at the protocol's gossip-cycle tempo. The actual band was, for most of the seventy-two hours, the same shape as the baseline band. At approximately oh-one-fifty on the morning of Day 30, the actual band had begun to drift away from the baseline, slowly, in a pattern that bowed up from the baseline by a small margin and then bowed back down.
 
-Joel said: *the bow is the drift event. The model flagged the upward leg of the first bow. The bow then completed and started to subside, which is the part of the signature that the threshold-trip would not have caught — the signature looks more like an oscillation than a divergence. It looks like a drift the architecture was built to absorb without reporting.*
+Joel said: *the bow is the drift event. The model flagged the upward leg of the first bow. The bow then completed and started to subside, which is the part of the signature that the threshold-trip would not have caught - the signature looks more like an oscillation than a divergence. It looks like a drift the architecture was built to absorb without reporting.*
 
 I said: *if it was built to absorb without reporting, why did the model flag it.*
 
-He said: *because the model is more conservative than the protocol. The protocol's threshold is set to where the architecture cannot self-correct. The model flags earlier — at the level the local-store builds its own pattern of routine and notices when the routine starts to bend. The model is doing what the model was built to do. The protocol is doing what the protocol was built to do. The two are operating at different altitudes; the model sees a precursor that the protocol does not yet see.*
+He said: *because the model is more conservative than the protocol. The protocol's threshold is set to where the architecture cannot self-correct. The model flags earlier - at the level the local-store builds its own pattern of routine and notices when the routine starts to bend. The model is doing what the model was built to do. The protocol is doing what the protocol was built to do. The two are operating at different altitudes; the model sees a precursor that the protocol does not yet see.*
 
 I said: *acknowledged.*
 
@@ -66,17 +73,17 @@ He said it without softening. He had not been waiting for me to draw the conclus
 
 I said: *what would you do if the bow repeats.*
 
-He said: *nothing immediately. The protocol's first response to a repeating oscillation is to broaden the gossip-cycle window — the handshake gets a longer interval to settle. The architecture does that on its own. If broadening the window does not damp the oscillation across two cycles, the protocol falls back to a slower handshake mode that trades latency for stability. The architecture also does that on its own. I would intervene only if both fallbacks failed and the drift began to widen rather than damp.*
+He said: *nothing immediately. The protocol's first response to a repeating oscillation is to broaden the gossip-cycle window - the handshake gets a longer interval to settle. The architecture does that on its own. If broadening the window does not damp the oscillation across two cycles, the protocol falls back to a slower handshake mode that trades latency for stability. The architecture also does that on its own. I would intervene only if both fallbacks failed and the drift began to widen rather than damp.*
 
 I said: *and would you log the intervention.*
 
 He said: *I would log it whether I intervened or not. The discipline is to log the operational state regardless of whether the state required action. The fact that the architecture handled the drift without me touching it is a part of the operational record. The protocol's specification has now been exercised against a real mid-mission drift event. The exercise is the verification.*
 
-He turned the display back square to himself. He took a swallow from the coffee mug at his right hand — the coffee he had brought at oh-two-fifty, three hours and thirty minutes earlier, which had gone cold around oh-three-thirty and which he had been drinking cold since. He registered that the coffee I had set down at the corner of the bench was warmer than the cup in his hand. He did not switch.
+He turned the display back square to himself. He took a swallow from the coffee mug at his right hand - the coffee he had brought at oh-two-fifty, three hours and thirty minutes earlier, which had gone cold around oh-three-thirty and which he had been drinking cold since. He noted that the coffee I had set down at the corner of the bench was warmer than the cup in his hand. He did not switch.
 
 I noted that. I did not comment.
 
-He started keying. He pulled a tab on the secondary I had not yet seen — a longer-window view of the same indicator, going back across the entire mission. The band on this view was the bow at the right edge and a long tail of mostly-baseline behind it that went all the way back to the morning of Day 7.
+He started keying. He pulled a tab on the secondary I had not yet seen - a longer-window view of the same indicator, going back across the entire mission. The band on this view was the bow at the right edge and a long tail of mostly-baseline behind it that went all the way back to the morning of Day 7.
 
 He said, without looking up: *the protocol's broadening window came out of the council review. It was not in the original draft of the paper.*
 
@@ -90,11 +97,11 @@ He said: *the council comment was the right comment. The reviewer was reading th
 
 He stopped. He took a third swallow of the cold coffee.
 
-He said: *I had registered the council's contribution to the architecture in the spec's acknowledgments. I had not until this morning registered the contribution operationally. The architecture is keeping the boat inside its self-correction specification this morning because of the broadening window. The broadening window is in the architecture because the council reviewer caught what I had missed. The architecture's behaviour this morning is the architecture's behaviour as the council made it.*
+He said: *I had logged the council's contribution to the architecture in the spec's acknowledgments. I had not until this morning taken the contribution in operationally. The architecture is keeping the boat inside its self-correction specification this morning because of the broadening window. The broadening window is in the architecture because the council reviewer caught what I had missed. The architecture's behaviour this morning is the architecture's behaviour as the council made it.*
 
 I said: *acknowledged.*
 
-He turned back to the bow. He sat with the graph for some seconds. Then he opened a different tab — a configuration file in a long format that I did not parse from the bench across the comm space — and started keying notes into a margin field at the bottom of the tab. He worked at the keying for a minute. He stopped. He turned the display back to the bow.
+He turned back to the bow. He sat with the graph for some seconds. Then he opened a different tab - a configuration file in a long format that I did not parse from the bench across the comm space - and started keying notes into a margin field at the bottom of the tab. He worked at the keying for a minute. He stopped. He turned the display back to the bow.
 
 ---
 
@@ -114,7 +121,7 @@ He said: *oh-two-forty-seven. The bow started at approximately oh-one-fifty. The
 
 She said: *acknowledged.*
 
-She set her body the way Priya set her body when she was concentrating on a graph she had not yet reconciled with her own model of what the graph should be. Her shoulders were at the angle her shoulders went to when the work was the work. Her left hand moved to the bench and adjusted the tablet so that the tablet was square to her body — the angle she preferred for reading from the tablet under field conditions. The micro-gesture took half a second. She did not register having made it.
+She set her body the way Priya set her body when she was concentrating on a graph she had not yet reconciled with her own model of what the graph should be (which is to say, the same posture she had used in postdoc seminars where the room contained one person whose opinion she wanted and twelve whose she did not). Her left hand moved to the bench and squared the tablet to her body - the angle she preferred for reading under field conditions. The micro-gesture took half a second. She did not mark having made it.
 
 She looked at the graph for thirty-eight seconds.
 
@@ -126,7 +133,7 @@ She said: *which nodes.*
 
 He said: *the secondary display has the per-node attribution one tab over.*
 
-He clicked. The display refreshed to a per-node breakdown across the eleven nodes on the boat's mesh. The drift's contribution to the bow was distributed unevenly across the nodes. Two nodes — the secondary instrument-tier node at the polar-operations bench and the relay-hub node in the comm space — were carrying a larger portion of the bow's amplitude than the other nine. The other nine were near-baseline.
+He clicked. The display refreshed to a per-node breakdown across the eleven nodes on the boat's mesh. The drift's contribution to the bow was distributed unevenly across the nodes. Two nodes - the secondary instrument-tier node at the polar-operations bench and the relay-hub node in the comm space - were carrying a larger portion of the bow's amplitude than the other nine. The other nine were near-baseline.
 
 Priya said: *the instrument-tier node at polar-ops.*
 
@@ -134,9 +141,9 @@ He said: *one of the two largest contributors.*
 
 She said: *I am running an instrument-tier sample-rate sweep on that node every four hours. The sweep last completed at oh-one-forty-eight.*
 
-She said it as a statement of fact. She had not been performing the connection; she had been registering it. The sweep was her instrumentation discipline; the architecture's clock-skew indicator was Joel's protocol discipline; the two had not, until oh-one-forty-eight, intersected operationally on the boat.
+She said it as a statement of fact. She had not been performing the connection; she had been making it. The sweep was her instrumentation discipline; the architecture's clock-skew indicator was Joel's protocol discipline; the two had not, until oh-one-forty-eight, intersected operationally on the boat.
 
-Joel registered the connection. He turned and looked at her for the first time since she had come into the comm space.
+Joel caught the connection. He turned and looked at her for the first time since she had come into the comm space.
 
 He said: *the sweep.*
 
@@ -164,7 +171,7 @@ She said: *if the bow's amplitude grows across cycles, the protocol's broadening
 
 Joel said: *acknowledged.*
 
-He said it the second time at the same tempo as the first. He had registered Priya's observation. He had registered that the observation was a constraint on the protocol's self-correction capacity that he had not yet calculated. He had registered the calculation he now had to do. He had not softened.
+He said it the second time at the same tempo as the first. He had taken Priya's observation in. He had noted that the observation was a constraint on the protocol's self-correction capacity that he had not yet calculated. He had marked the calculation he now had to do. He had not softened.
 
 I noted the second *acknowledged*. I noted the texture of it.
 
@@ -172,7 +179,7 @@ I noted the second *acknowledged*. I noted the texture of it.
 
 Priya said: *the cycle.*
 
-She said it the way Priya said the third sentence in a piece of work she had organized in her head before she sat down. She had not been waiting for an opening; she had been holding the question until the question's moment was the moment it was. The moment was the comm space at oh-six-thirty-six on Day 30 with the graph on the display and Joel's *acknowledged* still in the air between them.
+She said it the way Priya said the third sentence in a piece of work she had organised in her head before sitting down. She had not been waiting for an opening; she had been waiting for the right opening. It had arrived: the comm space at oh-six-thirty-six on Day 30, the graph on the display, Joel's *acknowledged* still in the air between them.
 
 She said: *the four-hour sweep cycle was the cycle the lab calibration suite specified. The lab calibration suite specified four hours because the sweep's reference to the calibration baseline expires at four hours under the lab's environmental envelope. The lab's environmental envelope is not the boat's environmental envelope. The boat's compartment-temperature variability is narrower than the lab's. The reference baseline expires more slowly under the boat's envelope. I have data from the first three weeks of the mission that suggests the reference holds at six hours under the boat's actual envelope and probably at eight.*
 
@@ -192,7 +199,7 @@ Priya said: *the sweep cycle.*
 
 He said: *I had not thought of stretching it.*
 
-He said it flat. He said it the way he had said *I missed it* on the recruitment call, which I had read in the transcript afterward, and the way he had said *the rewrite passed* in the wardroom on the night of Day 22, and the way he had said *the gauge in front of you* on the same night when he had been describing the discipline that ran through the architecture. He said it without softening. He said it without performing the registering of the gap; the gap was the gap, and the registering of it was the registering of it, and the saying was the saying of what he had registered.
+He said it flat. He said it in the cadence he had used to say *I missed it* on the recruitment call (which I had read in transcript afterward), and the cadence he had used to say *the rewrite passed* in the wardroom on the night of Day 22, and again to say *the gauge in front of you* on that same night when he had been describing the discipline that ran through the architecture. He said it without softening - which is to say, he did not perform the acknowledgment of the gap; he named what he had seen, and let the naming carry the acknowledgment.
 
 He said: *the protocol's broadening window's headroom is a function of the load profile of the contributing nodes. I had calculated the headroom against the protocol's specification. I had not calculated it against the contributing nodes' actual load profiles, which are upstream of the protocol. The instrument-tier load profile is upstream of the protocol. Stretching the sweep cycle is upstream of the protocol. I had not put the upstream variable into the calculation. The calculation I would have run on the drift's amplitude across cycles was the calculation against the protocol's headroom. The calculation you are proposing is the calculation against the load profile that produces the demand on the headroom. They are different calculations. The one you are proposing is the better one for the operational case we are in.*
 
@@ -200,21 +207,21 @@ He stopped.
 
 He said: *thank you.*
 
-He said it once. He did not stage it. He did not soften it. He did not turn it into a procedural sentence that buried the gratitude inside the procedure. He said the word and let the word do what the word did.
+He said it once. He did not stage it. He did not soften it. He did not turn it into a procedural sentence that buried the gratitude inside the procedure (which is the move I have watched a hundred competent men perform, and which Joel had been close enough to learning, in his postdoc years, that I had wondered which way the formation would set in him). He said the word and let the word do what the word did.
 
 Priya said: *acknowledged.*
 
-She said it clipped. She said it the way she said *acknowledged* when an officer she respected had registered a question of hers in the form she had asked it in. She did not perform the not-being-flustered; she just was not flustered. She had brought the question. He had registered it. The question was the question.
+She said it clipped. She said it the way she said *acknowledged* when an officer she respected had taken a question of hers in the form she had asked it in. She did not perform the not-being-flustered; she just was not flustered. She had brought the question. He had taken it in. The question was the question.
 
 I did not move at the bench.
 
-I had been registering, while Priya had been speaking, the texture of what was happening in the comm space. The texture was not the texture of an instrumentation engineer correcting a senior architect. The texture was not the texture of a senior architect being corrected. The texture was the texture of two engineers working on a problem at the same altitude, with the constraints of the problem distributed across both of their disciplines, and the engineer who had seen the constraint nobody had yet calculated had named the constraint at the moment the constraint was the next thing the conversation needed.
+I had been tracking, while Priya had been speaking, the texture of what was happening in the comm space. It was not the texture of an instrumentation engineer correcting a senior architect. It was not, either, the texture of a senior architect being corrected. Two engineers were working on a problem at the same altitude, with the constraints of the problem distributed across both of their disciplines, and the engineer who had seen the constraint nobody had yet calculated had named it at the moment the conversation needed it named.
 
-I had hired Joel for the architecture. I had hired Priya for the instrumentation that ran on the architecture and for the schema migration that had been written into the architecture by her hand. I had registered, on the recruitment calls, that the architecture had been built by Joel and that the architecture had been improved by the council's review and by the contributors who had been working on it after the review and that Priya was one of the contributors who had improved it. I had not, on the recruitment calls, registered the texture of how the improvement happened. I had registered that the improvement had happened. I had not registered the *form* the improvement took.
+I had hired Joel for the architecture. Priya I had hired for the instrumentation that ran on the architecture and for the schema migration she had written into it by her own hand. On the recruitment calls I had noted, with the kind of mild appreciation a hiring committee marks and moves on from, that the architecture had been built by Joel and improved after the council's review by contributors of whom Priya was one. What I had seen, on those calls, was that the improvement had happened. What I had not seen - and this is the kind of detail you'd think I'd have caught at the time, given how many recruitment calls I have run in twenty years - was the *form* the improvement took.
 
-The form was the form I was registering now. The form was an instrumentation engineer who had been running her own cycle on her own discipline noticing a constraint upstream of the protocol that the protocol's designer had not put into his calculation, and naming the constraint at the moment the constraint was operational, and offering the change to the cycle that absorbed the constraint, and the protocol's designer registering the absorption without defending the omission and saying *thank you* at the moment the registering needed to be said.
+The form was the form I was catching now. It was an instrumentation engineer running her own cycle on her own discipline, noticing a constraint upstream of the protocol that the protocol's designer had not yet put into his calculation, naming the constraint at the moment it was operational, and offering the change to the cycle that absorbed it - and the protocol's designer taking the absorption in without defending the omission and saying *thank you* at the moment the taking-in needed to be said.
 
-I had hired him for this. I had hired her for this. I had registered, in pre-mission, that I had hired both of them. I had not until oh-six-thirty-eight on Day 30 in the comm space registered the architectural fact that the architecture got better in their hands than it had been in his alone. I logged that. I did not log it on the bridge log. I logged it at the place where I logged the things that did not belong on the bridge log.
+I had hired him for this. I had hired her for this. Until oh-six-thirty-eight on Day 30, however, I had not understood, operationally, that the architecture got better in their hands than it had been in his alone. I logged that. Not on the bridge log; on the file where I keep the things that do not belong on the bridge log.
 
 I drank the rest of the coffee. I set the cup down at the corner of the bench at the angle the cup had been at when I had set it down at the start.
 
@@ -244,29 +251,21 @@ She picked up the notebook. She picked up the tablet. She set the satchel back o
 
 The comm space went quiet.
 
-Joel sat at the console. He looked at the graph on the secondary display for some seconds without speaking. The graph held the bow at the right edge of the seventy-two-hour window and the seventy-two hours of mostly-baseline behind it. The model's flag was a small red marker at the start of the bow's upward leg. The protocol's broadening window was a slightly wider grey band that overlaid the bow.
+Joel sat at the console. He looked at the graph on the secondary display for some seconds without speaking. His hands had come off the keyboard and were flat on the bench, fingers spread - the posture he took, I had noticed across three weeks, when the work in front of him had moved from a problem he was solving to a problem he was watching. The graph held the bow at the right edge of the seventy-two-hour window. The model's flag was a small red marker at the start of the upward leg. The protocol's broadening window was a slightly wider grey band overlaying the bow.
 
 He said, still looking at the display: *I will run the calculation she asked me to run.*
 
 I said: *acknowledged.*
 
-He said: *I should have run it three weeks ago. The instrument-tier load profile has been on the boat since the boat left the pier. The data has been in the audit log. I had been calculating the protocol's behaviour against the protocol's specification. I had not been calculating it against the boat's actual load profile.*
-
-He said: *that is the calculation Priya was running. She has been running it. She has been running it on her tablet at the wardroom desk every day since the boat left the pier. I had been at the same wardroom desk as her every day since the boat left the pier. I had not registered the calculation she was running. I had registered her running a calculation. I had not asked her what calculation she was running.*
+He said: *I should have run it three weeks ago. The instrument-tier load profile has been on the boat since the boat left the pier. I had been calculating the protocol's behaviour against the protocol's specification; I had not been calculating it against the boat's actual load profile. That is the calculation Priya was running. She has been running it at the wardroom desk every day since the boat left the pier - the same wardroom desk I have been sitting at every day since the boat left the pier - and I had not asked her what she was working on.*
 
 He stopped.
 
-He said: *the architecture was not built by me alone. The contributors who improved it after the council review improved it because they were running calculations the council and I had not been running. The improvements went into the spec because the calculations were better than the ones in the original. The architecture as it sits today is the union of the calculations that have been run against it. The contributors' calculations are the architecture's calculations now. I had registered that abstractly. I had not registered, on this boat, that the contributor on this boat is running a calculation right now that I should be reading.*
-
-He said: *I will read it tomorrow. I will read the calculation Priya has been running. I will register what is in the calculation that is not in mine. I will write the registration into the post-mission notes.*
-
-He stopped again.
-
-He said: *the architecture is going to be in better hands than mine for the rest of its life. I had registered that abstractly. I am registering it operationally this morning.*
+He said: *the architecture is going to be in better hands than mine for the rest of its life. I had understood that abstractly. I am understanding it operationally this morning.*
 
 I noted what he had said.
 
-I did not respond. I did not need to. He had not been asking for a response. He had been logging, aloud, what he had been registering. He had been logging it the way an engineer logs what he has been registering when the engineer has been at a console for three hours and forty minutes and the work is the work and the registering is part of the work.
+I did not respond. He had not been asking for a response - he had been logging aloud what he had been seeing, the way an engineer logs at three hours and forty minutes into a watch when the seeing has become part of the watching. (Anyone who has spent a career standing alongside engineers learns to recognise the cadence. You do not interrupt it. You do not, especially, treat it as a personal confession requiring personal acknowledgment. You let the man log.)
 
 I sat with what he had said for a few seconds.
 
@@ -290,7 +289,7 @@ I did not stop in the wardroom. I went forward.
 
 I went up to the bridge.
 
-The boat's master had the watch. The deck officer was at the dive station. The instrument panel registered three hundred meters of depth. The trim held. The carrier-acoustic floor under the boat was the floor it had been at oh-six-twelve and the floor it had been at oh-six-fifty. The bridge was quiet in the way the bridge was quiet on a routine watch when the routine watch was running on its own discipline.
+The boat's master had the watch. The deck officer was at the dive station. The instrument panel showed three hundred meters of depth. The trim held. The carrier-acoustic floor under the boat was the floor it had been at oh-six-twelve and the floor it had been at oh-six-fifty. The bridge was quiet in the way the bridge was quiet on a routine watch when the routine watch was running on its own discipline.
 
 I gave the master the nod I had given on the morning of Day 7 and on the morning of Day 23. He acknowledged.
 
@@ -302,13 +301,13 @@ I went below to write the post-event entry.
 
 ---
 
-I had not, until I was halfway down the wardroom passageway, registered fully what had happened in the comm space.
+I had not, until I was halfway down the wardroom passageway, fully understood what had happened in the comm space.
 
 I noted it at the wardroom desk before I sat down to draft the formal post-event log. I noted it on the file I had kept since pre-mission for the things that did not go on the bridge log and that did not go in the formal mission record and that I wrote down because the staff history I was going to write at the end of the mission was going to be drafted from the file and not from the bridge log alone.
 
 The note was short. I wrote it once. I did not stage it.
 
-*Iyer asked Reyes a question this morning that he had not asked himself. He registered the asking without softening. He said thank you once. The architecture's behaviour will improve as a result of her question. The architecture's improvement was already on the boat in the form of her work; this morning the improvement registered to him as a thing happening rather than as a thing already done. I had selected for this. I had not, until this morning, registered that I had selected for it.*
+*Iyer asked Reyes a question this morning that he had not asked himself. He took it in without softening. He said thank you once. The architecture's behaviour will improve as a result of her question. The architecture's improvement was already on the boat in the form of her work; this morning the improvement reached him as a thing happening rather than as a thing already done. I had selected for this. I had not, until this morning, understood that I had selected for it.*
 
 I closed the file. I did not look at it again.
 
@@ -324,7 +323,7 @@ I drafted the post-event entry.
 
 Mission log, Day 30, 0712 local. RV Nansen, MERIDIAN-7. Routine watch, post-event update.
 
-The sync-daemon drift event flagged at 0247 local has been characterized. The drift signature was the protocol's broadening-window response to a periodic instrument-tier load profile on the polar-operations node — specifically, the four-hour calibration-cycle sweep specified by the lab's environmental envelope. The model's flag at 0247 was the precursor to the protocol's absorption of the load. The protocol's absorption completed within the gossip-cycle window per specification. No operational intervention required. Architecture's autonomy specification under sustained network drift confirmed against this event class.
+The sync-daemon drift event flagged at 0247 local has been characterized. The drift signature was the protocol's broadening-window response to a periodic instrument-tier load profile on the polar-operations node - specifically, the four-hour calibration-cycle sweep specified by the lab's environmental envelope. The model's flag at 0247 was the precursor to the protocol's absorption of the load. The protocol's absorption completed within the gossip-cycle window per specification. No operational intervention required. Architecture's autonomy specification under sustained network drift confirmed against this event class.
 
 Iyer has drafted a calibration-cycle extension from four to six hours, with a forty-eight-hour observation window for further extension to eight hours pending verified amplitude damping. The extension is justified by mission-environmental envelope data accumulated since departure: the calibration baseline holds longer under boat conditions than under lab conditions. The extension reduces periodic load on the polar-operations node and increases protocol headroom against other periodic node tasks.
 
@@ -332,9 +331,9 @@ Reyes has reviewed and concurs. Calibration-cycle change is approved for applica
 
 Architecture record: protocol broadening-window behaviour exercised against a real mid-mission drift event; behaviour within specification. Calibration-cycle improvement queued for post-mission debrief documentation.
 
-— A.Y., Mission Director.
+- A.Y., Mission Director.
 
-— Filed to mission audit log; hash 8f1e...c47a.
+- Filed to mission audit log; hash 8f1e...c47a.
 
 ---
 
@@ -342,17 +341,17 @@ I closed the template. I keyed the entry into the audit log. The audit log compo
 
 I sat at the wardroom desk for a few seconds after the entry filed.
 
-The chain was the chain. The boat was at depth. The architecture was operating. The crew was where the crew should be. The drift event had been a drift event the architecture had been built to absorb and had absorbed. The calibration-cycle change had been a constraint Priya had carried and had named at the moment the constraint had become operational. Joel had registered the constraint without defending the omission. The post-event log captured the architectural record. The note in the file I kept captured the rest.
+The chain was the chain. The boat was at depth. The architecture was operating. The crew was where the crew should be. The drift event had been a drift event the architecture had been built to absorb and had absorbed. The calibration-cycle change had been a constraint Priya had carried and had named at the moment the constraint had become operational. Joel had taken the constraint in without defending the omission. The post-event log captured the architectural record. The note in the file I kept captured the rest.
 
-I had nine days ahead of me in Segment 2. The day's first event had given me Joel at the console and Priya at the bench and the cycle change drafted between them and the architecture continuing to do what the architecture had been built to do. The boat had not asked me to intervene. The boat had asked me to register what had happened.
+I had nine days ahead of me in Segment 2. The day's first event had given me Joel at the console and Priya at the bench and the cycle change drafted between them and the architecture continuing to do what the architecture had been built to do. The boat had not asked me to intervene. The boat had asked me to log what had happened.
 
-I had registered it.
+I had logged it.
 
 I closed the wardroom desk terminal. I rinsed the coffee cup. I turned the wardroom sconce down at the dimmer one click.
 
 I went forward.
 
-The chapter the boat was spending at the routine tempo was continuing. The chapter the architecture was spending at the routine tempo was continuing. The chapter Joel was spending at the routine tempo had bent, at oh-six-thirty-six on Day 30, by a margin small enough that it would not register in any record except the file in which I kept the things that did not register elsewhere.
+The chapter the boat was spending at the routine tempo was continuing. The chapter the architecture was spending at the routine tempo was continuing. The chapter Joel was spending at the routine tempo had bent, at oh-six-thirty-six on Day 30, by a margin small enough that it would not appear in any record except the file in which I kept the things that did not appear elsewhere.
 
 I noted the bend. I went up to the bridge.
 

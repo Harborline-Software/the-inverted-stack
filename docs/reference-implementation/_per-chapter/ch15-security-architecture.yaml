@@ -96,8 +96,8 @@ concepts:
   name: Relay metadata visibility
   source: ch15 §"Relay Trust Model"
   source-paper: v13 §11
-  definition: The relay observes the communication graph — which node identifiers communicate with which,
-    when, in what volume, and with what burst pattern — even though it cannot read payload content.
+  definition: The relay observes the communication graph - which node identifiers communicate with which,
+    when, in what volume, and with what burst pattern - even though it cannot read payload content.
   must-implement:
   - Documentation enumerates exactly which metadata fields the relay observes
   - Self-hosted relay deployment path exists for metadata-sensitive deployments
@@ -117,11 +117,11 @@ concepts:
   - 'Verification check does not pass: Relay observability documentation lists every metadata channel
     and identifies which deployment topology eliminates each'
 - id: SEC-05
-  name: Defense in depth — four independent layers
+  name: Defense in depth - four independent layers
   source: ch15 §"Four Defensive Layers"
   source-paper: v13 §11
-  definition: Security applies four independent layers — encryption at rest, field-level encryption, stream-level
-    data minimization, and circuit breaker quarantine — where defeating one layer yields no advantage
+  definition: Security applies four independent layers - encryption at rest, field-level encryption, stream-level
+    data minimization, and circuit breaker quarantine - where defeating one layer yields no advantage
     on the next.
   must-implement:
   - Each layer is implemented in a separately auditable module
@@ -144,7 +144,7 @@ concepts:
     four layer implementations'
 - id: SEC-06
   name: SQLCipher encryption at rest with OS keystore root
-  source: ch15 §"Layer 1 — Encryption at Rest"
+  source: ch15 §"Layer 1 - Encryption at Rest"
   source-paper: v13 §11
   definition: Local databases use SQLCipher with the database key derived via HKDF-SHA256 from a 256-bit
     root seed stored in the OS-native keystore (Keychain, DPAPI, or Linux Secret Service).
@@ -178,7 +178,7 @@ concepts:
     access yields no plaintext; process memory inspection aft...'
 - id: SEC-07
   name: Field-level encryption with per-role keys
-  source: ch15 §"Layer 2 — Field-Level Encryption"
+  source: ch15 §"Layer 2 - Field-Level Encryption"
   source-paper: v13 §11
   definition: Records in high-sensitivity buckets carry per-field encryption under per-role symmetric
     keys distinct from the database key, so opening the database does not grant access to fields the node
@@ -208,7 +208,7 @@ concepts:
     key cannot read field-encrypted records for that role'
 - id: SEC-08
   name: Send-tier subscription filtering invariant
-  source: ch15 §"Layer 3 — Stream-Level Data Minimization"
+  source: ch15 §"Layer 3 - Stream-Level Data Minimization"
   source-paper: v13 §11
   definition: The sync daemon enforces subscription filtering before any event leaves the originating
     node, so non-subscribed nodes never receive events regardless of relay state or administrator misconfiguration.
@@ -233,7 +233,7 @@ concepts:
     subscription set are never observed entering the relay...'
 - id: SEC-09
   name: Circuit breaker quarantine for offline writes
-  source: ch15 §"Layer 4 — Circuit Breaker and Quarantine"
+  source: ch15 §"Layer 4 - Circuit Breaker and Quarantine"
   source-paper: v13 §11
   definition: Writes from a reconnecting node that conflict with current authorization policy are held
     in quarantine pending administrator review rather than discarded or auto-applied.
@@ -265,7 +265,7 @@ concepts:
   name: Four-tier key hierarchy
   source: ch15 §"Key Hierarchy"
   source-paper: v13 §11
-  definition: Keys are organized in four independently rotatable tiers — root organization key, role KEKs,
+  definition: Keys are organized in four independently rotatable tiers - root organization key, role KEKs,
     node-level wrapped KEK copies, and per-document DEKs.
   must-implement:
   - Each tier has a distinct key type with its own rotation procedure

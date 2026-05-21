@@ -1,4 +1,4 @@
-# Prose-review report — #12 Privacy-Preserving Aggregation at Relay
+# Prose-review report - #12 Privacy-Preserving Aggregation at Relay
 
 **Iteration:** prose-review (post iter-0030 technical-review)
 **Date:** 2026-04-28
@@ -46,7 +46,7 @@ prose pass.
   periods so it parses at the same register as the four pre-existing rows. The em-dash is
   preserved (house style retains em-dashes; tech-reviewer's flag noted "may exceed budget"
   but the em-dash here delimits the relay-internal policy-component apposition cleanly).
-  Row content is unchanged — only the punctuation register was tightened to match the table.
+  Row content is unchanged - only the punctuation register was tightened to match the table.
 
 ---
 
@@ -64,7 +64,7 @@ prose pass.
 2. **Paragraph 3 load-bearing scope clarification (line 720).** The "differential privacy
    here applies *only to metadata aggregates the relay computes as a side effect of routing*"
    distinction is preserved. The paragraph is dense (5 sentences, italics on the scope clause,
-   two cross-references to §Forward Secrecy and §Endpoint Compromise) — that density is the
+   two cross-references to §Forward Secrecy and §Endpoint Compromise) - that density is the
    point. Readers who skim this paragraph will misread the threat model; the paragraph's
    weight earns its placement. **No edit.**
 
@@ -87,7 +87,7 @@ prose pass.
 1. **Line 720 passive "is not retained at single-node granularity."** Could be active ("the
    relay does not retain even the metadata it does see at single-node granularity") but the
    passive here parallels the prior clause "the relay sees only ciphertext under any
-   compromise scenario" — the rhetorical pair is "the relay sees X / X is not retained Y"
+   compromise scenario" - the rhetorical pair is "the relay sees X / X is not retained Y"
    and rewording would break the parallel. Pre-existing prose, not new at this iteration.
    **Leave.**
 
@@ -101,7 +101,7 @@ prose pass.
 3. **Line 734 passive "are declared in the relay configuration manifest."** Mechanism, ε
    value, and aggregate-output schema as a coordinated subject reads more naturally than
    "The relay configuration manifest declares the mechanism, ε value, and aggregate-output
-   schema" — the specification voice prefers the artifact-declared form. Pre-existing prose.
+   schema" - the specification voice prefers the artifact-declared form. Pre-existing prose.
    **Leave.**
 
 4. **Line 754 "The suspension event is encrypted to the operator role only" passive.**
@@ -113,21 +113,21 @@ prose pass.
 
 5. **§12a "noise" / "Laplace mechanism" / "Gaussian mechanism" / "noise injector" / "central
    differential privacy."** Considered as synonym cycling. Decision: leave. Laplace mechanism
-   and Gaussian mechanism are distinct named DP mechanisms — keeping their formal names is
+   and Gaussian mechanism are distinct named DP mechanisms - keeping their formal names is
    correct in spec voice. "noise" is the generic noun; "noise injector" names the
    relay-internal policy component; "central differential privacy" names the architectural
    choice. Each name owns a distinct concept; this is the spec's vocabulary, not synonym
    cycling.
 
 6. **§12c "DP noise on these counts may mask the signal."** "may mask" hedge considered.
-   Decision: leave. Genuine uncertainty — whether DP noise masks the forensic signal depends
+   Decision: leave. Genuine uncertainty - whether DP noise masks the forensic signal depends
    on the noise scale relative to signal magnitude, which the operator-tunable ε determines.
    The hedge is technically precise, not stylistic softening.
 
 7. **§12c "Tension with §Endpoint Compromise" paragraph long em-dashed sentence.** Tech-review
    flagged this for em-dash budget. House style explicitly preserves em-dashes; the
-   parenthetical "— visible to the operator and to auditors holding the operator-role key,
-   not to the broader node fleet —" carries the visibility-scope clarification that was
+   parenthetical "- visible to the operator and to auditors holding the operator-role key,
+   not to the broader node fleet -" carries the visibility-scope clarification that was
    missing pre-edit. Anti-ai-tells §14 (em-dash) is explicitly NOT applied per house policy.
    **Leave.**
 
@@ -135,10 +135,10 @@ prose pass.
    sub-pattern labels (cf. §Forward Secrecy uses §46a/§46b labels; §Endpoint Compromise uses
    §47a–§47f; §Key-Loss Recovery uses §48a–§48f). Distinct from the editorial-process
    "#12" extension number (which does not appear in user-facing prose). The §-prefixed
-   labels are the spec's vocabulary — preserve.
+   labels are the spec's vocabulary - preserve.
 
 9. **H2 heading "Privacy-Preserving Aggregation at Relay" Title Case.** Anti-ai-tells §17
-   would flag Title Case in headings — but Ch15's H2 convention throughout the chapter is
+   would flag Title Case in headings - but Ch15's H2 convention throughout the chapter is
    Title Case (§Forward Secrecy and Post-Compromise Security, §Endpoint Compromise: What
    Stays Protected, §Security Properties Summary, §Relay Trust Model). Changing one H2 to
    sentence case would break the chapter's established convention. Chapter-level
@@ -146,7 +146,7 @@ prose pass.
 
 10. **§Relay Trust Model close-out forward pointer (line 708).** Read for naturalness and
     active voice. Reads natural: "§Privacy-Preserving Aggregation at Relay specifies the
-    differential-privacy and k-anonymity mechanisms…" — active verb (specifies), section as
+    differential-privacy and k-anonymity mechanisms…" - active verb (specifies), section as
     subject. Mirrors the cross-reference style used at the end of §Endpoint Compromise (line
     568 forward pointer). One sentence, well-formed, no edit needed.
 
@@ -172,7 +172,7 @@ Part III specification voice maintained throughout the section.
   the chapter.
 - Citation refs [32]–[36] all in IEEE-numeric form as established by Appendix E; Dwork &
   Roth [32] cited twice (sequential composition at line 748, advanced composition at line
-  752) — same source section §3.5 covers both theorems, so the parallel citation is
+  752) - same source section §3.5 covers both theorems, so the parallel citation is
   deliberate and correct.
 - Sub-pattern labels (§Sub-pattern 12a, §12b, §12c) used consistently in section-body cross
   references; matches the §Forward Secrecy, §Endpoint Compromise, §Key-Loss Recovery
@@ -205,11 +205,11 @@ into a single namespace declaration). Acceptable per house em-dash policy.
 - **§1 significance puffery:** zero matches. No "stands as a testament", "marks a pivotal
   moment", "the evolving landscape", "indelible mark".
 - **§3 superficial -ing tail-phrases:** one borderline at line 754 ("preserving the audit
-  trail across the suspension period") — substantive consequence (audit-trail continuity is
+  trail across the suspension period") - substantive consequence (audit-trail continuity is
   load-bearing, not vague consequence-puff). Leave.
 - **§7 AI vocabulary cluster:** zero matches. No delve / showcase / tapestry / interplay /
   intricate / pivotal / vibrant / enduring / underscores. The word "intelligence" appears in
-  "operational intelligence" — domain term, not the AI-vocabulary "intelligence" of "data
+  "operational intelligence" - domain term, not the AI-vocabulary "intelligence" of "data
   intelligence platform". OK.
 - **§8 copula avoidance:** zero matches. The plain `is`/`are` definitional copulas at lines
   744 and 756 ("The k-floor evaluator is a relay-internal policy component within
@@ -223,7 +223,7 @@ into a single namespace declaration). Acceptable per house em-dash policy.
   (see voice-register confirmation note above); H3 sub-pattern labels use sentence case after
   the dash, which is consistent.
 - **§25 generic positive conclusions:** the section closes on FAILED conditions and the kill
-  trigger — specific, terminal, action-bound. No "the future looks bright" puffery.
+  trigger - specific, terminal, action-bound. No "the future looks bright" puffery.
 - **§27 persuasive authority tropes:** zero matches. No "fundamentally", "the real question",
   "at its core", "the deeper issue".
 - **§29 fragmented headers:** none. Each H3 ("Sub-pattern 12a/b/c") is followed immediately by
@@ -281,12 +281,12 @@ Section advances to voice-check. The voice-check pass is the human-only step (pe
 Workflow Stage 6) where author adds personal context, field anecdote, and connective tissue.
 Items voice-check may consider:
 
-1. The section is densely technical (DP mechanisms, k-anonymity, privacy budget) — author
+1. The section is densely technical (DP mechanisms, k-anonymity, privacy budget) - author
    may consider whether one operational anecdote (e.g., a fleet-health-dashboard story
    illustrating the k = 10 floor in action) would humanize §12b without breaking spec voice.
    Optional, not required.
 2. The §12c "Tension with §Endpoint Compromise" paragraph carries an architectural-honesty
-   moment (suspension visibility scope) — voice-check may consider whether the
+   moment (suspension visibility scope) - voice-check may consider whether the
    operator-only-encryption framing reads with enough urgency for readers who skim.
 3. No prose-review concerns block the voice-check stage.
 
