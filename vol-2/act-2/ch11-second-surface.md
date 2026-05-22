@@ -21,7 +21,7 @@ plants-paid:
 ---
 
 
-<!-- Bobiverse-warmth pass 2026-05-20 (PAO). Per A+ roadmap Tier I #4: Joel cup-scene paragraph 3 compressed from ~110-word inference chain to ~18 words (action does the work, reader supplies inference); 5 parenthetical asides inserted at procedural climaxes (surface-window opening, HELVETICA-2 cross-check filing, watchkeeper-log register, diary access-control section, dive-entry close); Anna-interior beat inserted between HELVETICA-2 filing and dive (what she has bet on Wanjiru's triage); multi-sense grounding at bridge-wing (kept the c6c1bc6 dry-wind detail) and tea-scene (added the bergamot steam beat). Preserved: Wanjiru institutional-weight passage ("She would say none of these things in the wardroom now"), Priya's "Three passes. Clear." plant for Ch 13, diary access-control passage (Ch 14 plant), Joel cup at correct elbow + Day-22 date, "Forsaken" body-prose naming DEFERRED per CIC. PRE-BOBIVERSE flag retired. -->
+<!-- Bobiverse-warmth pass 2026-05-20 (PAO). Per A+ roadmap Tier I #4: Joel cup-scene paragraph 3 compressed from ~110-word inference chain to ~18 words (action does the work, reader supplies inference); 5 parenthetical asides inserted at procedural climaxes (surface-window opening, HELVETICA-2 cross-check filing, watchkeeper-log register, diary access-control section, dive-entry close); Anna-interior beat inserted between HELVETICA-2 filing and dive (what she has bet on Wanjiru's triage); multi-sense grounding at bridge-cap (kept the c6c1bc6 dry-wind detail) and tea-scene (added the bergamot steam beat). Preserved: Wanjiru institutional-weight passage ("She would say none of these things in the wardroom now"), Priya's "Three passes. Clear." plant for Ch 13, diary access-control passage (Ch 14 plant), Joel cup at correct elbow + Day-22 date, "Forsaken" body-prose naming DEFERRED per CIC. PRE-BOBIVERSE flag retired. -->
 
 *Crew log, 2026-10-25T07:14Z. RV Nansen, MERIDIAN-7. Yusupova, Mission Director, reporting Surface 2 commencement.*
 
@@ -31,7 +31,7 @@ plants-paid:
 
 ---
 
-The light at 0708 on Day 37 was a green I had seen before. Sixteen days earlier it had been a green I was still learning to trust; now the sun was higher, the season had moved, and the body came up the ladder to the bridge wing without flinching at the cold. The wind was dry, salt riding higher in it than at the first surfacing, and the rail under my palm had the bite of metal that has held a long time. (This, I gather, is what watchkeepers mean when they say a body learns the boat. The body had not asked to learn it; the body had learned it anyway.) On Day 21 the body had learned the boat could surface. On Day 37 the body knew.
+The light at 0708 on Day 37 was a green I had seen before. Sixteen days earlier it had been a green I was still learning to trust; now the sun was higher, the season had moved, and the body came up the ladder to the bridge cap without flinching at the cold. The wind was dry, salt riding higher in it than at the first surfacing, and the rail under my palm had the bite of metal that has held a long time. (This, I gather, is what watchkeepers mean when they say a body learns the boat. The body had not asked to learn it; the body had learned it anyway.) On Day 21 the body had learned the boat could surface. On Day 37 the body knew.
 
 The architecture had spent sixteen days alone on the boat, and the architecture was reporting clean.
 
