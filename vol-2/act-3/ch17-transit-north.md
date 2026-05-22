@@ -97,11 +97,11 @@ She nodded. She went out.
 
 I sat at the desk. Diana's seven drawings were taped to the bulkhead above the per-laptop in the order they had arrived, the dolphin one still at the top because the dolphin had been judged - by Diana - to merit priority placement. The file was open below the dolphin. It had been growing for a year, and I had not, until that moment, called it by its name.
 
-I had been writing the staff history since before the boat left port. The wardroom at 0312 on Mission Day 52. The comm-node at 0420. The cabin desk at 0814. Signed at capture under my KEK, replicated on the canonical authored-content archive, ready to carry to Punta Arenas as cleanly as if I had drafted it to a template.
+The staff history had been growing since before the boat left port. The wardroom at 0312 on Mission Day 52. The comm-node at 0420. The cabin desk at 0814. Signed at capture under my KEK, replicated on the canonical authored-content archive, ready to carry to Punta Arenas as cleanly as if I had drafted it to a template.
 
 I saw it.
 
-I did not say so aloud, even to myself. I went back to the file.
+Nothing was said aloud, not even to myself. The file was still open.
 
 ---
 
@@ -203,7 +203,7 @@ Wanjiru did not look up from the cucu-notebook. She wrote in it at the rate she 
 
 I went to my cabin.
 
-I added a paragraph to the file.
+A paragraph went into the file.
 
 ---
 
@@ -243,7 +243,7 @@ She nodded. She took the envelope. She went to the medical bay against the stand
 
 I sat at the wardroom table for the duration of the tea. The kettle was off. The radio was at the low background volume. The light from the surface port was at the September evening tone at the Drake's autumn latitude.
 
-I went up to the bridge.
+The bridge was next.
 
 ---
 
