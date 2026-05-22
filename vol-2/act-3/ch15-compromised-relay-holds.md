@@ -44,11 +44,11 @@ plants-paid:
 
 ---
 
-I had not been there for the dogging of the door.
+The dogging of the door happened without me.
 
-I had been at the comm node since 0319, two minutes after the leak alarm fired and one minute after I had caught the pattern from my bunk. The body finished naming the alarm - breach-class three-pulse, two-bravo - before the body finished sitting up. Nineteen years of training will do that. Two-bravo held the failed instrument and the central compute hub. The relay was about to be at degraded capability. The comm node was where I needed to be.
+At 0319, two minutes after the leak alarm fired, I was at the comm node — one minute after catching the pattern from my bunk. The body finished naming the alarm - breach-class three-pulse, two-bravo - before the body finished sitting up. Nineteen years of training will do that. Two-bravo held the failed instrument and the central compute hub. The relay was about to be at degraded capability. The comm node was where I needed to be.
 
-I went there before I went to the bridge.
+The bridge came second.
 
 The corridor was empty - bridge crew at station, off-watch crew in their bunks, the corridor a transit space at 0319. I did not run. The relay did not require a run; it required the kind of arrival at which the operator could think.
 
@@ -56,11 +56,11 @@ The comm node sits at the second deck against the bridge ladder. My primary stat
 
 The relay transitioned cleanly to the backup at oh-three-twenty-eight. The audit log accepted the handoff without reordering. The gossip protocol's regular reconciliation cycle logged it as a routine failover, the way Joel had specified four years before in the paper. The mechanism had run twice in pre-mission verification. It had never run in a live cascade. It ran now, and it ran clean.
 
-I read the gossip layer's state at my station.
+The gossip layer's state was at my station. I read it.
 
 Baseline. Joel's per-laptop was offline because Joel's per-laptop was Joel's, and Joel was in two-bravo at the failed sensor head. The other crew nodes were online - Anna's, Diego's, Hiroshi's, Priya's, Sabina's, Maria's, mine. The replication was current; the hash chain was continuous; the pre-failure timestream of the starboard head was preserved across every online node. The compartment cameras ran on the consent-gated capture, hash-chained at every frame, replicating to the per-laptop store at the defined cadence. The forensic substrate was the layer Joel and I had spent four years specifying. It was operating now, against the case it had been built for.
 
-I checked the revocation-propagation channels.
+The revocation-propagation channels were next.
 
 These are the channels that carry policy-layer decisions - revoked keys, escalations of access-control state, the institutional decisions that have to reach every crew node at consensus before a revocation is effective. The architecture I had written after the R1 hold required quorum-acknowledgment from a defined receiver set before propagation. Three channels: the boat-internal mesh's primary; its secondary through the polar-operations console's relay; a tertiary backup through the comm node's auxiliary bus.
 
@@ -70,37 +70,37 @@ The tertiary ran through the same singed unit. The panel had not been pulled off
 
 The specification said it could.
 
-I did not authorize it.
+Authorization was mine to give. I did not give it.
 
-I had two clean channels on the surviving units - the boat-internal mesh's primary and its secondary through the polar-operations console. The tertiary through the singed unit's auxiliary bus would have worked; quorum holds at any two of three; the third channel is redundancy against simultaneous failure of the other two. The third channel had never failed before. It had never run on a singed unit before either.
+Two clean channels remained on the surviving units - the boat-internal mesh's primary and its secondary through the polar-operations console. The tertiary through the singed unit's auxiliary bus would have worked; quorum holds at any two of three; the third channel is redundancy against simultaneous failure of the other two. The third channel had never failed before. It had never run on a singed unit before either.
 
 A singed unit at the auxiliary-bus level is electrically present and environmentally compromised. The compromise sits at the sensor-and-capacitor layer; the OS layer is unaffected; the protocol layer is unaffected; the cryptographic primitives are unaffected. The singing does not break the channel. It introduces an environmental signature against which a deliberately crafted side channel could carry information the threat model had not specified against.
 
 The threat model had specified against political coercion, against in-flight ciphertext race conditions, against compromised receivers. It had not specified against an adversary who would inject a side channel through the environmental signature of a singed auxiliary bus during a cascade window when the operator's attention was at the cascade and not at the side channel. No threat-model literature I knew of had specified against this case. M-PESA's had not. Harborline Shipyard's R2 had not. The case was a case I was reading at 0322, against a unit the documented specification said I was authorized to use.
 
-I would not use the third channel.
+The third channel would stay offline.
 
-I did not have the basis to call its use a violation. I did have the basis to call it an unverified extension of the threat model, and the architecture's discipline was that unverified extensions did not run in production. The discipline applies to the operator at the moment the operator most wants to skip it. I had said this to Diego on the morning of Day 21 about a key issuance off the documented chain. The shape was the same; the pressure was different; the discipline held.
+The basis for calling its use a violation was not there. The basis for calling it an unverified extension of the threat model was, and the architecture's discipline was that unverified extensions did not run in production. The discipline applies to the operator at the moment the operator most wants to skip it. I had said this to Diego on the morning of Day 21 about a key issuance off the documented chain. The shape was the same; the pressure was different; the discipline held.
 
-I held the revocation-propagation channel in a quiescent state until quorum could be met against the two clean channels alone. They were carrying the baseline replication; nothing in the cascade required a revocation to propagate; nothing in-flight needed quorum beyond what the two could carry. The third channel was offline by my decision, logged at 0322 against my operational log. The entry read:
+The revocation-propagation channel held in a quiescent state until quorum could be met against the two clean channels alone. They were carrying the baseline replication; nothing in the cascade required a revocation to propagate; nothing in-flight needed quorum beyond what the two could carry. The third channel was offline by my decision, logged at 0322 against my operational log. The entry read:
 
 *I am holding the gossip layer's tertiary revocation-propagation channel offline until the backup auxiliary bus can be verified clean at a quiet level. The architecture's specification authorizes the tertiary channel to run through any electrically-present unit; the unit is electrically present. I am not authorizing the channel because the unit is environmentally compromised in a way the threat model has not specified against. The two surviving channels carry quorum-acknowledgment at standing; nothing in flight requires the third channel to be online. - W. Kamau, 2026-Mission-Day-47, 0322 local.*
 
-I filed it in my own operational log. The filing did not require Mission Director acknowledgment - the policy-layer authority I had been delegated for the mission covered it - but it would be visible to the audit log at the post-incident review and to the council when the next review pulled the mission's relay record. That was enough.
+The entry went into my operational log. No Mission Director acknowledgment was required - the policy-layer authority delegated for the mission covered it - but the audit log would carry it at the post-incident review, and the council would see it when the next review pulled the mission's relay record. That was enough.
 
-I went up to the bridge.
+Up to the bridge.
 
 ---
 
-I came up at 0322. The bridge was at its post under red-light - Anna at the rail, Hiroshi at the helm, the polar-operations chair empty. Anna's face carried what the bridge required.
+At 0322, the bridge was at its post under red-light - Anna at the rail, Hiroshi at the helm, the polar-operations chair empty. Anna's face carried what the bridge required.
 
 I said: *Director.*
 
 Anna said: *Wanjiru.*
 
-I said the things I had come up to say, at the abridged cadence the bridge required during a cascade. The archive is capturing. The pre-failure timestream is preserved. The compartment cameras are on the consent-gated capture; both crew members in two-bravo at the time of the alarm consented to compartment-camera capture as part of the mission consent on record; Reyes is the only crew member in the compartment now, his consent unchanged. I have the firmware-update history, the command-and-response stream, the forensic substrate intact. The compute hub is the collateral - the heavy-RAG index against the full archive will be unavailable when the hub goes down; per-laptop nodes are operational at full capacity; I will work the archive against laptop-class for the duration. The compartment-camera view in two-bravo is at the capture log, not surfaced to the bridge. The operational record will carry the duration of the event.
+The report went up at the abridged cadence the bridge required during a cascade. The archive is capturing. The pre-failure timestream is preserved. The compartment cameras are on the consent-gated capture; both crew members in two-bravo at the time of the alarm consented to compartment-camera capture as part of the mission consent on record; Reyes is the only crew member in the compartment now, his consent unchanged. I have the firmware-update history, the command-and-response stream, the forensic substrate intact. The compute hub is the collateral - the heavy-RAG index against the full archive will be unavailable when the hub goes down; per-laptop nodes are operational at full capacity; I will work the archive against laptop-class for the duration. The compartment-camera view in two-bravo is at the capture log, not surfaced to the bridge. The operational record will carry the duration of the event.
 
-I did not say the third channel was offline.
+The third channel's status stayed with me.
 
 That was a policy-layer decision the bridge did not need to carry inside the cascade window. The procedure manual specified that the relay-operations officer carried policy-layer decisions at the policy-layer authority during operational events; the bridge did not need to know which channels were running so long as quorum was holding. Quorum was holding. The bridge held the cascade. The relay held the policy.
 
@@ -108,7 +108,7 @@ Anna said: *acknowledged. Forensic substrate confirmed intact. Capability degrad
 
 I said: *acknowledged.*
 
-I went back down to the comm node.
+Back down to the comm node.
 
 ---
 
@@ -116,43 +116,43 @@ The eleven minutes ran.
 
 The compartment cleared at 0353. Joel walked out under his own power. The bridge resumed at 0354. The watch handoff ran at 0400; Anna relieved Hiroshi; the boat was back at operational tempo at reduced capability.
 
-I was at the comm node at 0420 when the gossip-layer reconciliation finished its post-cascade pass. The hash chain was continuous from oh-three-fifteen pre-cascade through oh-three-fifty-three compartment-clear and out to oh-four-twenty. Every signed event in the cascade window was in the audit log - compartment-camera frames hash-chained and replicated, command-and-response stream preserved between the control plane and the failed instrument, the pre-failure timestream of the starboard head intact at the firmware-diagnostic log up to the failure point.
+At 0420 the gossip-layer reconciliation finished its post-cascade pass. The hash chain was continuous from oh-three-fifteen pre-cascade through oh-three-fifty-three compartment-clear and out to oh-four-twenty. Every signed event in the cascade window was in the audit log - compartment-camera frames hash-chained and replicated, command-and-response stream preserved between the control plane and the failed instrument, the pre-failure timestream of the starboard head intact at the firmware-diagnostic log up to the failure point.
 
 The substrate was now the substrate the architecture had been built to be.
 
-I read the audit log against the cascade window for the second time. The first read had been operational - was the chain continuous, were the signatures intact, did the reconciliation accept the window. The second read was different. The second read was reading the cascade as evidence. The substrate was now what Joel and I had specified.
+The audit log went under a second read against the cascade window. The first had been operational - was the chain continuous, were the signatures intact, did the reconciliation accept the window. The second read was different. The second read was reading the cascade as evidence. The substrate was now what Joel and I had specified.
 
-I did not pursue the second read further at 0420. The post-incident review was for after surfacing. I had three more hours of relay work before the 0800 handoff. I logged the second read and set the substrate aside.
+The second read did not go further at 0420. The post-incident review was for after surfacing. Three more hours of relay work remained before the 0800 handoff. The second read went into the log; the substrate was set aside.
 
-I went to my bunk at 0432. I slept four hours, woke at the routine hour, took the morning meal in the wardroom, and was at the comm node by 0830 for the morning's relay-operations review.
+Bunk at 0432. Four hours of sleep, the routine waking hour, the morning meal in the wardroom, the comm node by 0830 for the morning's relay-operations review.
 
 The review was what I had not been able to run during the cascade. On a normal day it would have run on heavy-LLM hosting at the compute hub; today it ran on the per-laptop with smaller context windows and slower throughput. It ran.
 
-I worked it through the morning. The relay, the gossip protocol, the audit log, the boat-internal replication - all at level. The third channel was still offline by my logged decision; quorum was holding against the two surviving channels; nothing in operational state required the third.
+The morning review ran through. The relay, the gossip protocol, the audit log, the boat-internal replication - all at level. The third channel was still offline by my logged decision; quorum was holding against the two surviving channels; nothing in operational state required the third.
 
-I closed the morning review at 1142.
+At 1142 the morning review closed.
 
-I opened the forensic-substrate query.
+The forensic-substrate query opened next.
 
 ---
 
-I had been carrying the query since 0323 the previous night, when I had pulled the firmware-update history on the starboard sensor head from the audit log and read it the way I read security artifacts when I was reading them against a pattern.
+The query had been in carry since 0323 the previous night, when the firmware-update history on the starboard sensor head came out of the audit log and read the way security artifacts read when they're against a pattern.
 
-I had not pursued it at 0323. I had logged the question and marked it for transit-north review with Joel. The cascade had taken priority. The post-cascade envelope had taken priority next. The morning review had taken what time was left.
+At 0323, pursuit was not possible. The question went into the log, marked for transit-north review with Joel. The cascade had taken priority. The post-cascade envelope had taken priority next. The morning review had taken what time was left.
 
 Now I could run it, while laptop-class was still fresh. What I had on the laptop was narrow: the firmware-update history pulled from the audit log, the consortium-procurement archive replicated to my per-laptop store at departure, the command-and-response stream from the cascade window, the pre-failure acoustic-signature timestream up to the failure point. The data was narrow; the query had to match.
 
-I framed it the way I framed queries when the answer would matter to the institution and not only to me. The post-incident review at transit-north was going to carry one case that had not been on the carrier the previous evening. This question would carry against the same review. I wrote the framing into the relay-operations notebook in the hand I used for entries I wanted the review to see:
+The framing went in the way queries get framed when the answer will matter to the institution and not only to the operator. The post-incident review at transit-north was going to carry one case that had not been on the carrier the previous evening. This question would carry against the same review. I wrote the framing into the relay-operations notebook in the hand I used for entries I wanted the review to see:
 
 *Question: is the firmware-update history on the starboard sensor head consistent with the consortium's procurement protocol? Scope: the patch applied to this specific unit on the date the audit log records the patch as applied. Scope: the manufacturer-release-to-installation window. Scope: the consortium-port handling chain. Out of scope: the patch's contents; the patch's behavior; the patch's effects. The question is procedural integrity, not patch-content analysis.*
 
-I ran the query.
+The query ran.
 
 The audit log carried the firmware-update event at the standing capture. The event was signed at capture under the consortium procurement officer's Ed25519 device key; the signature validated against the consortium's standing public-key registry; the event was hash-chained at the standing cadence; the event was in the audit log at the chain position the audit log assigned it. The event read:
 
 *Firmware update - starboard sensor head, unit serial nine-one-four-seven-three-A. Manufacturer's patch release: 2026-March-fourth, 14:22 UTC. Consortium procurement receipt: 2026-March-fifth, 09:18 UTC. Installation at consortium integration facility: 2026-March-sixth, 22:55 UTC. Consortium procurement officer signature, Ed25519, validated. Patch hash signature, validated. Manufacturer signature chain, validated.*
 
-I read the event.
+The event was clear enough to read twice.
 
 The signatures validated; the chain was institutionally clean. The patch had moved from manufacturer-release through procurement-receipt through integration-installation in three days, under the procurement officer's standing authority, against the standing patch-validation procedure.
 
@@ -162,25 +162,25 @@ The consortium's standing protocol for sensor-head firmware updates is installat
 
 This installation was fifty-six. Eight hours past the standing protocol.
 
-I noted the gap.
+Eight hours. The gap was logged.
 
 The deviation meant either the procurement officer had been delayed by a routine reason - staff illness, a holiday window, a scheduling conflict at the integration facility - or it was not routine.
 
-I did not know which.
+Which reading applied was not yet determinable.
 
-I logged the question. I wrote it in the hand I used when I did not yet know which side an answer would land on:
+The question went to the log, written in the hand reserved for entries that do not yet know which side they will land on:
 
 *Forensic-substrate query, Mission Day 48, 1207 local. Starboard sensor head firmware-update history. The 2026-March-sixth installation at the consortium-integration facility occurred fifty-six hours after manufacturer-release and thirty-seven hours after consortium-procurement-receipt. The consortium's standing forty-eight-hour rule for sensor-head firmware-update installation was exceeded by approximately eight hours. The signatures and the chain are institutionally clean. The deviation may be routine. The deviation may not be routine. I do not have the data on the laptop to discriminate between the two readings. The question carries to transit-north for joint review with the principal architect on the basis of the post-incident review record. - W. Kamau.*
 
-I closed the entry.
+Entry closed.
 
-I did not pursue further analysis. The data on the laptop would not let me discriminate. The full-archive RAG would have given me the consortium's procurement history against the back two years; the cross-corpus tooling would have given me the manufacturer's release-to-distribution pattern across the back several years; both were unavailable because the hub was offline. What I had was a question and a metadata observation, both logged. I would not pursue them further until the operational pressure of the cascade had cleared.
+Further analysis was not possible. The data on the laptop would not allow discrimination. The full-archive RAG would have given me the consortium's procurement history against the back two years; the cross-corpus tooling would have given me the manufacturer's release-to-distribution pattern across the back several years; both were unavailable because the hub was offline. What I had was a question and a metadata observation, both logged. I would not pursue them further until the operational pressure of the cascade had cleared.
 
 The discipline applied to me at the moment I most wanted to skip it.
 
-I closed the laptop.
+Laptop closed.
 
-I sat at the comm node for a moment. The hum had been on through the morning's review. It had stopped during the writing of the log entry. It did not resume.
+At the comm node for a moment. The hum had been on through the morning's review. It had stopped during the writing of the log entry. It did not resume.
 
 ---
 
@@ -188,9 +188,9 @@ Cucu used to say *the steward does not chase her own heart*. The saying was hers
 
 She had used the proverb across her sixty years as the steward of the family's matters. The steward did not chase her own heart against the institution she carried. The steward held the institution at the rate the institution required. Restraint was the work.
 
-I sat at the comm node. The proverb was not one I would narrate. It surfaced when the body needed it and receded when the body had taken it in. The body had taken it in. The hum did not resume because that moment was not the moment after, and the hum was for the moment after.
+At the comm node. The proverb was not one to narrate. It surfaced when the body needed it and receded when the body had taken it in. The body had taken it in. The hum did not resume because that moment was not the moment after, and the hum was for the moment after.
 
-I closed the notebook in my mind. I returned to my station.
+The notebook closed in the mind. Back to the station.
 
 ---
 
@@ -206,21 +206,21 @@ She said *no* at the volume she said *yes* at. She said *no* in front of the reg
 
 She said *no* to a regulator and to a bank executive in a country where a regulator's pressure on a consultancy was not a pressure consultancies routinely refused. She did not raise her voice. She did not perform the refusal. She said *no* the way a steward said *no* when the steward held the institution.
 
-I had been twenty-six. I had been at the back of the room. I had taken in what I had taken in at an altitude I did not yet have the words for. I had had the words at thirty-five. I had the words now. The words were *the discipline applies to the operator at the moment the operator most wants to skip it* - the words I had written into the architecture during the R2 rewrite four years before the Nansen sailed.
+Twenty-six, at the back of the room. The altitude had no words yet. At thirty-five it did. The words now were the same ones: *the discipline applies to the operator at the moment the operator most wants to skip it* - the words written into the architecture during the R2 rewrite four years before the Nansen sailed.
 
 The recognition was not the kind I would narrate. It surfaced in the body the way the proverb had surfaced - present, unspoken. I sat at the comm node for the duration of the surfacing. The hum did not resume. The body had noted; I held the position.
 
-I noted one further thing, at the altitude at which I would not say it aloud and would not write it into the operational log. The architecture defends against three threat models. The case the boat had lost the day before was not among them, and the architecture had not been built against a fourth case because no architecture I had read had been built against that case either. I held the noting at its altitude and did not pursue it.
+One further thing, at the altitude at which it would not be spoken and would not enter the operational log. The architecture defends against three threat models. The case the boat had lost the day before was not among them, and the architecture had not been built against a fourth case because no architecture read had been built against that case either. The noting held at its altitude and did not go further.
 
-I went forward to the wardroom for the afternoon meal at 1330.
+Wardroom at 1330 for the afternoon meal.
 
 ---
 
-I noticed Wanjiru's face change for half a beat at the comm node at 1228.
+Wanjiru's face changed for half a beat at the comm node at 1228.
 
-I had come down from the bridge after the morning brief and was passing the comm node on my way to the wardroom. Wanjiru was at her station - hands still, eyes on the screen, the hum not on. The hum was a thing I had learned to listen for the way you listen for the engine of a car you have driven a long time. It's the kind of detail you don't catalogue; you only notice the silence when it arrives. It had arrived. Wanjiru's face had settled into what it became when she was not yet at the moment after a recognition. I had read that face on her once before, in the wardroom on the morning of Day 34, at a moment I had not asked her about. I read it now. I did not ask her about it.
+Coming down from the bridge after the morning brief, passing the comm node on the way to the wardroom: Wanjiru was at her station - hands still, eyes on the screen, the hum not on. The hum was a thing I had learned to listen for the way you listen for the engine of a car you have driven a long time. It's the kind of detail you don't catalogue; you only notice the silence when it arrives. It had arrived. Wanjiru's face had settled into what it became when she was not yet at the moment after a recognition. I had read that face on her once before, in the wardroom on the morning of Day 34, at a moment I had not asked her about. I read it now. I did not ask her about it.
 
-I went to the wardroom. I did not see her again until 1648.
+To the wardroom. The next sighting was 1648.
 
 ---
 
@@ -234,7 +234,7 @@ I said: *acknowledged.*
 
 She turned the tablet toward me. The audit log was on the screen. The firmware-update event was at the cursor position. The timestamps were in the panel - manufacturer-release at 2026-March-fourth, 14:22 UTC; consortium-procurement receipt at 2026-March-fifth, 09:18 UTC; consortium-integration installation at 2026-March-sixth, 22:55 UTC; thirty-seven hours from receipt to installation; eight hours past the standing rule. The signatures were all green at the validation panel. The chain was institutionally clean.
 
-I read the panel.
+The panel read clean against the timestamps.
 
 I said: *the rule is the consortium's standing rule.*
 
@@ -266,7 +266,7 @@ I said: *the discipline.*
 
 She said: *the discipline applies to the operator at the moment the operator most wants to skip it. I am the operator. The moment is now. The discipline applies.*
 
-I read her face. The face had settled. The hum was still not on.
+Her face had settled. The hum was still not on.
 
 I said: *acknowledged. The question is at the post-incident review carrier. The institutional channels handle it from there. The clean-mode confirmation pass is yours to run. The Mission Director's position is that the question is logged at the operational log, and the relay-operations officer's discipline on the question is what the institution requires of the relay-operations officer at the moment it requires it.*
 
@@ -278,17 +278,17 @@ I said: *Wanjiru.*
 
 She went out.
 
-I sat at the desk for a duration I did not measure. I added an item to the list on the corner of the desk: *the consortium's procurement-officer schedule for the week of 2026-March-fourth through sixth; the integration facility's installation-queue history for the same week; the manufacturer's release-cycle pattern for the back several years; the cross-mission firmware-update timing-deviation history at the consortium archive.*
+At the desk for a duration unmeasured. Four items added to the list on the corner of the desk: *the consortium's procurement-officer schedule for the week of 2026-March-fourth through sixth; the integration facility's installation-queue history for the same week; the manufacturer's release-cycle pattern for the back several years; the cross-mission firmware-update timing-deviation history at the consortium archive.*
 
 The list at the end of Day 47 had had three items. At 1652 on Day 48 it had eleven. It was growing at the rate the architecture's reduced capability was producing a gap between what the system could answer on the per-laptop and what it would answer at the consortium-port at surfacing - which is to say, the gap was the architecture being honest about its current state. The list was a record of what the boat could not yet ask. The list was what we would carry to the surface.
 
-I did not narrate the noting. The list was on the page.
+No narration. The list was on the page.
 
 ---
 
 Joel came to the comm node at 1714.
 
-I did not see him come. Wanjiru told me later. Joel had finished the afternoon watch at 1600 against the cascade-shifted rotation, eaten in the wardroom, read the engineer's log entry he had filed at 0432, and walked to the comm node. He had not been called. He had read Wanjiru's forensic-substrate query against his per-laptop and walked over because the question was the kind that needed to be looked at by both of them on the same screen.
+Wanjiru told me later. Joel had arrived unrequested. Joel had finished the afternoon watch at 1600 against the cascade-shifted rotation, eaten in the wardroom, read the engineer's log entry he had filed at 0432, and walked to the comm node. He had not been called. He had read Wanjiru's forensic-substrate query against his per-laptop and walked over because the question was the kind that needed to be looked at by both of them on the same screen.
 
 He stood at her station for the time the look at the screen required. He read the panel, the timestamps, the signatures, the chain. He read the consortium's standing forty-eight-hour rule against the panel. The comm node still carried the faint acrid note of the singed primary two decks down - not enough to trigger the air-handling alarm, just present, the kind of smell that kept the cascade in the room.
 
@@ -334,13 +334,13 @@ Hiroshi's biweekly cross-language collaboration with the JARE colleagues at Show
 
 The polar-operations console was at its standing position; the higher-refresh bathymetry configuration Diego had set at the start of the dive sequence held. The chair was empty. Hiroshi had picked up the polar-operations rotation in addition to the chief scientist's; the watch worked through.
 
-I read the operational damage report at 1843 against the consortium-port mirror on the per-laptop. The reference was there. The damage report was filed. Baseline.
+At 1843, the operational damage report ran against the consortium-port mirror on the per-laptop. The reference was there. The damage report was filed. Baseline.
 
 The crew adapted.
 
 The architecture was at reduced capability; the hub was offline; the per-laptop held; the canonical record was at the per-laptop. The hub had been capability, not source-of-truth. Joel had built it that way. He had been right.
 
-I noted the holding on the per-laptop. I did not mourn the GPU.
+The per-laptop was holding. No mourning for the GPU.
 
 The list of *queries to run when we surface* grew. Day 47 had ended at three items; Day 48 closed at thirteen; by Day 56, against the chart, it would be twenty-two. The system would answer them at the consortium-port at surfacing. The architecture would close the gap. It had built the gap into the specification - had been honest about it since the morning of Day 7.
 
@@ -348,21 +348,21 @@ The crew did not narrate the adaptation. The adaptation was on tempo. The boat m
 
 ---
 
-I sat at the wardroom desk at 2304 on Mission Day 48.
+Mission Day 48, 2304. The wardroom desk.
 
 The record had not been written since the cascade. The operational damage report had been filed at 0518 the morning before; the half-mission report at 1647. The day's account had not yet been set down. It would not be set down until I had taken in enough of the day to know what it was going to carry.
 
-I had taken in enough now.
+Enough had been taken in now to know what the day would carry.
 
 The account would carry the architecture as its own investigative tool - the property Joel and Wanjiru had specified four years before the boat sailed, exercised at laptop-class against a metadata question on a singed sensor head's firmware-update history. It would carry the recognition I had seen in her face for half a beat at twelve-twenty-eight. It would carry the relay holding against the temptation - the singed auxiliary bus, the forensic finding under operational pressure - and the discipline that had held it. It would carry what Wanjiru had built and what Wanjiru had held.
 
-I wrote a paragraph. I read it. I wrote another. I read both. I let the duration carry.
+A paragraph written. Read. Another written. Both read. The duration carried itself.
 
 The boat was at depth. The trim was steady. Hiroshi was on the polar-operations console. The wardroom was quiet the way the wardroom is quiet at 2300 - the galley clean, the coffee urn rinsed and inverted on its rack, the door to the corridor closed against the watch traffic. Eight days to surfacing. The list would grow; the architecture would close the gap; the post-incident review would run at transit-north; the consortium would receive the relay-operations officer's filing at Punta Arenas. The institution would investigate. The boat would not be the institution.
 
 The relay held. Wanjiru held. The architecture held what we asked it to hold.
 
-I closed the file. I went to bed.
+File closed. To bed.
 
 ---
 
