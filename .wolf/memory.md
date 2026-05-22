@@ -3,6 +3,10 @@
 > Chronological action log. Hooks and AI append to this file automatically.
 > Old sessions are consolidated by the daemon weekly.
 
+| 22:30 | PAO session wrap: council review (5 critics) + 12 tier-0/1/2/3/4 interventions (ch01/ch14/ch17/ch04/spine) + 4 Sonnet subagents (case study/sell-sheet/quotes/anatomy) + OpenWolf housekeeping | vol-2/act-1/ch01, vol-2/act-3/ch14, vol-2/act-3/ch17, vol-2/SPINE.md, coordination/inbox/ | session complete; marketing copy execution CIC-blocked; v2-batch #1+#2 CIC-blocked | ~200k |
+
+| 18:09 | Authored design-velocity case study (cohort-2 vs cohort-3 8x wall-clock improvement) | coordination/inbox/pao-status-2026-05-22T18-09Z-design-velocity-case-study.md | filed to coordination inbox; dispatched by PAO v2-batch #5 | ~8k |
+
 | 21:52 | Added --check-stale + --only-stale flags + staleness helpers | build/audiobook.py | done | ~2k |
 | 21:52 | Added Check 12 audio-staleness to QM daemon + lock-file pattern + --no-audio-autoregen flag | coordination/qm-daemon.py | done | ~2k |
 | 21:52 | Added Key Learning for check-stale/only-stale behavior | .wolf/cerebrum.md | done | ~200 |
