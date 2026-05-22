@@ -26,7 +26,7 @@ plants-paid:
 
 The wardroom hum was the wardroom hum. The clock on the bulkhead read oh-two-fifty-one. The boat had been at depth for twenty-six days and nine hours.
 
-I had a cup of tea at my left elbow that had gone past warm and had not yet gone cold. The cup was the metal one from the wardroom stack. The handle had the small dent it had carried since the Drake and that I had noted every morning of Segment 1 and that I had stopped noting, the way the boat eventually stops marking things that have taken up residence in the body, on Day 22 of Segment 2.
+At my left elbow was a cup of tea that had gone past warm and had not yet gone cold. The cup was the metal one from the wardroom stack. The handle had the small dent it had carried since the Drake and that I had noted every morning of Segment 1 and that I had stopped noting, the way the boat eventually stops marking things that have taken up residence in the body, on Day 22 of Segment 2.
 
 Maria came through the wardroom hatch at oh-three-oh-three on her routine check. She had the medical satchel over her shoulder and the night-watch log in her hand. She saw me at the desk; she did not say anything that staged the seeing. She crossed to the small medical cabinet, read what she had come to read, made the entry she had come to make, and recrossed the wardroom toward the hatch.
 
@@ -48,15 +48,15 @@ She regarded me with the calibration of a medical officer who had been a medical
 
 She went through the hatch. The hatch closed behind her at the angle the hatch closed at. The wardroom hum was the wardroom hum.
 
-I had not, until oh-three-oh-three, noticed that I had been at the desk since the bridge had quieted. I had not, until the doctor had crossed the wardroom and recrossed it, taken in that the thing I had come to the desk to think about was the thing I had been carrying in the body since Day 30, which was the morning Joel had caught the limit Priya had named without being asked.
+Not until oh-three-oh-three had I noticed that I had been at the desk since the bridge had quieted. Not until the doctor had crossed the wardroom and recrossed it had I taken in that the thing I had come to the desk to think about was the thing I had been carrying in the body since Day 30, which was the morning Joel had caught the limit Priya had named without being asked.
 
 The thing I had been carrying in the body had a shape. The shape had been clarifying for three days. Tonight, at the desk, with the boat at depth and the watch settled and the cup of tea cooling, I was going to name it.
 
-I opened a private file. The file's metadata header read: *Personal file. Encrypted under author's key. Access: self only.*
+A private file opened on the screen. The metadata header read: *Personal file. Encrypted under author's key. Access: self only.*
 
-I sat for a minute. I did not type.
+A minute passed. No typing.
 
-I had been thinking about my last mission for a week. I had not, until tonight, written about it where it could be read by anyone, including the version of me who would read this file in five years.
+The last mission had been in the thinking for a week. Until tonight, nothing about it had been written where it could be read by anyone, including the version of me who would read this file in five years.
 
 I began.
 
@@ -74,7 +74,7 @@ The schema-migration spec his team gave us was the published spec. It was correc
 
 The published spec was what we built our deployment against. The workaround was what we did not know to apply. Forty-three days in, the schema migration ran the way the published spec said it would, and the third-party-read scenario surfaced the way the workaround would have prevented, and the carbonate rig went into the cascade the cascade was not engineered to absorb.
 
-I confronted Stefan on the dock in Bremerhaven six days after the boat came in. I had asked for the meeting on the audited consortium channel. I had not gone into the meeting unprepared. I had read every public communication his organization had released about the toolkit in the eighteen months prior to our deployment; I had pulled every release note, every conference talk transcript, every published documentation update; I had a folder of what the toolkit had said about itself, and I had a folder of what we had run against, and I had a list of the seven specific places where the published behaviour and the operational behaviour had diverged in his organization's practice without diverging in his organization's record.
+The meeting with Stefan happened on the dock in Bremerhaven, six days after the boat came in. The request had gone through the audited consortium channel. The meeting had not been entered unprepared: every public communication his organization had released about the toolkit in the eighteen months prior to our deployment had been read; every release note, every conference talk transcript, every published documentation update had been pulled; there was a folder of what the toolkit had said about itself, a folder of what we had run against, and a list of the seven specific places where the published behaviour and the operational behaviour had diverged in his organization's practice without diverging in his organization's record.
 
 He was professional. He greeted me by name. He sat across the consortium meeting table and let me put the folder on the table and let me speak first. He did not interrupt. He did not flinch. When I had finished, he answered each item I had raised, in order, in the precise English-as-second-language cadence I remembered from Bremerhaven, which had not changed in the years since I had stopped seeing him.
 
@@ -82,11 +82,11 @@ He acknowledged the limitation existed. He acknowledged the limitation had been 
 
 He did not say that he had been under institutional pressure during the period in which the workaround had stayed unpublished - a pressure that had to do with a commercial-funding window his organization was approaching, with a partnership his organization was negotiating with an identity-infrastructure firm in Zurich, with a timeline he had not been the only person on the chain to be carrying. He did not say it. I knew it. He knew I knew it. We did not, on either side of the table, name the part of the conversation that would have required either of us to be the kind of person who named what was being asked to stay unnamed.
 
-I asked him one question I had not put in the folder. *Stefan. If you had told us at the contract review that the workaround existed, what would have changed for your organization on the funding side?* He looked at me for a count of three. He said: *The integration timeline.* I asked: *By how much?* He said: *Six weeks.* I said: *Six weeks against forty-three days against one engineer. The math is not difficult, Stefan.* He said nothing.
+One question had not been in the folder. *Stefan. If you had told us at the contract review that the workaround existed, what would have changed for your organization on the funding side?* He looked at me for a count of three. He said: *The integration timeline.* I asked: *By how much?* He said: *Six weeks.* I said: *Six weeks against forty-three days against one engineer. The math is not difficult, Stefan.* He said nothing.
 
 The meeting closed at the time the meeting was scheduled to close. We shook hands at the consortium meeting room door. He said: *I am sorry the mission ended the way the mission ended.* He did not say he was sorry he had not told us. The grammar of his sentence was the grammar he had chosen. I noted the choice.
 
-I have not seen Stefan in person since that meeting. I have stopped recommending his toolkit. I have stopped accepting invitations to events at which he would be present. I have stopped responding to his emails, of which there were three in the first year and one in the second and none since. The professional distance has been operational since.
+Stefan has not been seen in person since that meeting. His toolkit is no longer recommended. Invitations to events at which he would be present are no longer accepted. His emails — three in the first year, one in the second, none since — have gone unanswered. The professional distance has been operational since.
 
 What hardened me was not the meeting on the dock. What hardened me was the meeting that followed.
 
@@ -110,7 +110,7 @@ The omission was the institutional acknowledgment's content. I understood it as 
 
 Stefan had told me, on the dock, what he was willing to tell me, and what he was not willing to tell me had been operationally legible to me by the end of the meeting. Astrid told me, in the debrief room, what the institute was willing to tell me, and what the institute was not willing to tell me had been operationally legible to me by the end of the conversation. The two non-disclosures were of different kinds. Stefan's non-disclosure had been a calibrated bet under institutional pressure he could not name. Astrid's non-disclosure was the institution naming the engineer's loss in a vocabulary that preserved the institution's relationship with the toolkit's organization and with the firm in Zurich the toolkit's organization was negotiating its commercial future with.
 
-I do not blame Astrid for the conversation. She did her work. The institute's institutional interests were the interests she was paid to carry. She handled the conversation within those interests with the calibration of a senior officer who had handled many such conversations. She had the conversation she had come to have.
+Astrid is not blamed for the conversation. She did her work. The institute's institutional interests were the interests she was paid to carry. She handled the conversation within those interests with the calibration of a senior officer who had handled many such conversations. She had the conversation she had come to have.
 
 What I took in, sitting across the consortium table from her at the moment of the second non-disclosure, was that the two non-disclosures were the same shape. They were not the same scale; they were not the same author; they were not the same cost. Stefan's non-disclosure had been an engineer's calibrated decision under pressure he could not name. Astrid's was an institution's calibrated decision under pressure it would not name. The pressures were different. The shape was identical. The shape was: the disclosure that would have served the engineer who was no longer alive to receive it had been weighed against an institutional cost that the disclosing party valued more, and the disclosing party had chosen the institutional cost.
 
@@ -126,11 +126,11 @@ The bet was wrong by the math Stefan and I had walked through on the dock. Six w
 
 The architectural inverse of non-disclosure-under-pressure is disclosure-without-compulsion. An architecture that exhibits the inverse property is an architecture in which the disclosing party tells the receiving party what the receiving party needs to know without having been compelled to tell it. The disclosure is not the result of an audit. The disclosure is not the result of a contract clause. The disclosure is not the result of a regulatory inquiry. The disclosure happens because the disclosing party has structured their practice such that the disclosure happens before the moment in which it would have to be compelled.
 
-I did not know, when I read Joel Reyes's paper in the spring of 2024, that I was reading for an architecture that exhibited the inverse property. I was reading for an architecture that handled partition. I was reading for an architecture whose CRDT layer would not hand my carbonate-chemistry team their data back broken. I was reading for the operational properties that the toolkit's failure had taught me to read for. I was reading the protocol.
+Reading Joel Reyes's paper in the spring of 2024, the architecture being read for was not yet named as one that exhibited the inverse property. The read was for an architecture that handled partition. For an architecture whose CRDT layer would not hand the carbonate-chemistry team their data back broken. For the operational properties that the toolkit's failure had taught me to read for. The protocol was what was being read.
 
 What I was actually selecting for, when I read Joel Reyes's paper and then read the council review and then read Joel Reyes's response to the council's R1 hold, was the disposition of a man who had answered a council that had told him he was wrong, in writing and in the open, by saying *I missed it; the original protocol assumed condition X that does not hold under sustained partition; the council was right; I rewrote it.* The four sentences and the fifth. The four sentences were the disclosure. The fifth sentence was that the rewrite had happened. The council had not compelled the rewrite; the council had withheld approval; the architect had recognized the withholding for what it was; the rewrite had followed. The architecture that emerged from the rewrite was the architecture I was reading.
 
-I had not, until tonight, named what I had been reading for. I had named what I had been reading for in operational terms - *can the protocol survive partition; can the schema migration be specified safely; can the gossip layer reconcile across surface windows.* I had not named the dispositional term. The dispositional term is: did this architect tell the council the truth about the limitation when the limitation was found, in writing, before being compelled to.
+Until tonight, what had been read for had not been named. The operational terms had been named — *can the protocol survive partition; can the schema migration be specified safely; can the gossip layer reconcile across surface windows.* The dispositional term had not. The dispositional term is: did this architect tell the council the truth about the limitation when the limitation was found, in writing, before being compelled to.
 
 He did. That is why I selected him. I did not know that was why I had selected him. I know now.
 
@@ -138,7 +138,7 @@ He did. That is why I selected him. I did not know that was why I had selected h
 
 Joel told me the truth about the hold before I asked him.
 
-I had read his rewrite. I had read the council's R2 verdict. I had a folder of every response he had filed in the review window and I had cross-referenced his responses against the original protocol's R1 specification clause by clause. I knew what had changed and I knew what had not changed and I knew what the rewrite had cost his pride and what his pride had not been allowed to cost the rewrite.
+His rewrite had been read. The council's R2 verdict had been read. A folder held every response he had filed in the review window, cross-referenced against the original protocol's R1 specification clause by clause. What had changed was known and what had not changed was known and what the rewrite had cost his pride was known and what his pride had not been allowed to cost the rewrite was known.
 
 In the recruitment interview I asked him a question about the protocol's behaviour under one of the failure scenarios the council had originally flagged. The question was calibrated to give him the option of answering it abstractly. He answered it concretely. He said: *I missed it. The original protocol assumed condition X that doesn't hold under sustained partition. The council was right. I rewrote it.* No softening, no defence, no deflection. Four sentences and the fifth.
 
@@ -154,7 +154,7 @@ Wanjiru, with the exception-refusal she had brought into every standards-adjacen
 
 The same architectural inverse had surfaced in three different operational vocabularies: disclosure-without-compulsion in the protocol, disciplined-limit-without-compulsion in the lab, institutional-refusal-without-compulsion in the standards layer.
 
-I had selected for the property in three different vocabularies because the property is the same property at three different layers of the architecture. The selection in three vocabularies had been intuitive. The selection has, tonight, become legible.
+The selection had been for the same property in three different vocabularies because the property is the same property at three different layers of the architecture. The selection had been intuitive. Tonight it has become legible.
 
 I did not know I was selecting for it at the time. I knew the operational stakes. I knew the prior mission. I knew what had failed me. What I was looking for, when I read Joel's paper and called Priya in Bangalore and asked Wanjiru to come to St. Petersburg, was not the inverse of a property I could have named. I was looking for people who would not do to me what had been done to me on the prior mission, and I did not yet have the vocabulary for what had been done to me. I have it now. The architecture has it now. The architecture under my hands has it now.
 
@@ -162,11 +162,11 @@ I did not know I was selecting for it at the time. I knew the operational stakes
 
 The cup of tea at my left elbow was cold. The clock on the bulkhead read oh-four-twelve. I had been on watch for an hour and twenty-one minutes since Maria had crossed the wardroom and recrossed it. The boat was at depth.
 
-I sat at the desk with the file open.
+The file was open on the desk.
 
 When I was eight, in Tashkent, before the move to Russia, I fell on the courtyard tiles and split the side of my left wrist on the edge of a flagstone. My father's mother, who lived with us in those years, took my hand and ran cold water from the brass jug over the cut and held my wrist palm-up under the running water until the blood ran clean and the cut showed itself for what it was, which was small. She did not put a cloth over it. She did not tell me it was nothing. She named what she saw. There was bread baking somewhere in the building that morning - the smell was the flat-bread smell of the communal oven two floors down, the kind that gets into the walls and stays - and I remember that I registered it and then I registered the cut, in that order, because my grandmother's hands smelled of the same flour. She said the Uzbek for *cut*, the Uzbek for *clean*, the Uzbek for *small*, and the phrase she said when she was finished, which was *aytib qo'y* - *say it out loud.* The phrase was hers. I have not heard it from anyone else in my family since she died. My father's mother had the practice of naming what had happened, in plain words, before she did anything about it. The naming was her work before any other work could begin.
 
-I have been writing the file on the desk under three hundred meters of ice in the mode my father's mother gave me without my having understood until tonight that the register was hers. I have named what happened on the prior mission. I have named what Stefan did and did not say. I have named what Astrid did and did not say. I have named what Joel did and what Priya did and what Wanjiru did and what each of them was the architectural inverse of.
+The file on the desk has been written under three hundred meters of ice in the mode my father's mother gave me without my having understood until tonight that the register was hers. What happened on the prior mission has been named. What Stefan did and did not say has been named. What Astrid did and did not say has been named. What Joel did and what Priya did and what Wanjiru did and what each of them was the architectural inverse of has been named.
 
 I have not named what I will do with the naming. I do not know yet. The boat is at depth. The mission is twenty-three days from Punta Arenas. The architecture will be tested again before the boat surfaces, in shapes I cannot yet specify. What I have named tonight is what I selected for and why and what the selection's structural relationship is to the loss that taught me to make the selection.
 
