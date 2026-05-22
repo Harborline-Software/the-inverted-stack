@@ -28,9 +28,9 @@ I was on the bridge for it. Mikael ran the dive sequence at its own tempo - pump
 
 I did not log the dive entry as I had on the morning of Day 7. The morning of Day 7 had been the morning the partition bearing first became operational. The morning of Day 23 was the morning it became routine - which is a different kind of morning, and on a long mission a more important one. Mikael called the depth without staging. The deck officer acknowledged without staging. I signed. The entry chained into the local store as cleanly as the Day 7 entry had chained, and as the Day 21 entry had chained at the surface transition. The dive was a dive. The boat was at depth. Segment 2 had commenced.
 
-I went below.
+Below, the wardroom was on.
 
-The wardroom hum was on. The light was the wardroom's standard. The hatch into the conference space stood open at the angle it had stood at on the morning of Day 7. I noticed all of this and noticed that I had not, this time, paused at three hundred meters to mark the colour of the water above the hull - the body skips the ceremony once the body knows where the floor is. The colour above was the same colour. I had stopped collecting it.
+The wardroom hum was on. The light was the wardroom's standard. The hatch into the conference space stood open at the angle it had stood at on the morning of Day 7. None of this required noting, which I noted anyway - and noted that I had not, this time, paused at three hundred meters to mark the colour of the water above the hull. The body skips the ceremony once the body knows where the floor is. The colour above was the same colour. The collecting had stopped.
 
 Diego was at the polar-operations station with the second-segment under-ice routing on his primary. The seed for the integration ledger had taken from the bridge's GPS at 0529-and-some-seconds, the last surface fix the boat would acquire until Surface 2. He had marked it. The DVL had begun its forward integration at the moment of the dive; the gyro had laid the heading; the chart had loaded the bathymetric profile for Segment 2 - a routing that ran east of Segment 1's track, into a region where the consortium's transponder survey had laid down seven pairs rather than nine, with one of the gaps near the midpoint a stretch of forty-three kilometres where the boat would be on dead-reckoning alone. Diego had carried the gap in his head since the September planning and had pre-marked the bathymetric corridor along it where the floor's contour was distinct enough to anchor the chart against the DVL drift. He had not flagged the gap at any of the morning briefs of Segment 1. He had not needed to. The brief was not where the gap belonged. The polar-operations console was.
 
@@ -64,7 +64,7 @@ She said it as a fact about her next move, not as a request - which is to say sh
 
 She went forward.
 
-I went to the conference space.
+The conference space was forward.
 
 ---
 
@@ -124,7 +124,7 @@ He said: *intact across the transition. Your signature chains into the prior cha
 
 Sabina wrote.
 
-I noted, while she wrote, that she had asked the question in the form the consortium's framework would receive the answer in. She had not asked Joel to walk her through the protocol abstractly. She had asked him to walk her through the case at the level the consortium portal would read the artifact at, with the column headings she had laid out on her sheet, with the timestamps she would have to defend on Day 33 if the funding office asked her to defend them. The translation was not happening at the bench; the translation had happened, on her side, before she sat down.
+While she wrote, the thing worth noting was the form of her question - not the content, the form. She had not asked Joel to walk her through the protocol abstractly. She had asked him to walk her through the case at the level the consortium portal would read the artifact at, with the column headings she had laid out on her sheet, with the timestamps she would have to defend on Day 33 if the funding office asked her to defend them. The translation was not happening at the bench; the translation had happened, on her side, before she sat down.
 
 ---
 
@@ -142,7 +142,7 @@ He said: *if the boat does not surface at Day 37 - if Surface 2 is delayed by we
 
 Sabina said: *the framework's tolerance is open-ended on the propagation side as long as capture is inside the window. The Geneva text reads: *propagation gaps consistent with documented operational conditions of the recipient platform are not grounds for window closure on the receipt side*. The text is in the folder. The clearance was issued for our class of mission. The class is named.*
 
-I noted, while she said it, that she had read the framework end-to-end and had brought the relevant clauses with her on paper. She had not been winging it. She had been doing the institutional work the institution had been built to allow, with the institution's documentation underneath her where she could put a finger on it if the question turned on a clause.
+While she said it, the relevant clauses were already in the folder in front of her on paper. She had read the framework end-to-end. She had not been winging it. She had been doing the institutional work the institution had been built to allow, with the institution's documentation underneath her where she could put a finger on it if the question turned on a clause.
 
 Joel said: *acknowledged. The architecture will produce the artifact the framework's text describes. I am confident at the protocol layer. I want to verify the portal's envelope format before Day 28 - the portal expects a particular envelope, and I will pull the spec from the consortium's developer documentation and hand you the confirmation. The protocol behaviour is correct. The envelope is a formatting question I want to verify rather than answer from memory.*
 
@@ -170,7 +170,7 @@ He said: *we use the actual chain from the in-port acknowledgments. The syntheti
 
 Sabina said: *acknowledged. The mock-flag is in the procurement framework as well. Geneva named it in the pre-clearance. The two layers agree.*
 
-I noted that the question had moved from *can the architecture do this* to *what is the dry-run procedure* to *which chain will we use.* The procedure was the procedure now. Sabina had brought the case in a form the case could be answered in, and Joel had answered in the form the case had asked for, and the dry run was a thing they were going to run together this morning.
+The question had moved, in the space of the meeting, from *can the architecture do this* to *what is the dry-run procedure* to *which chain will we use.* The procedure was the procedure now. Sabina had brought the case in a form the case could be answered in, and Joel had answered in the form the case had asked for, and the dry run was a thing they were going to run together this morning.
 
 I said: *Sabina.*
 
@@ -188,13 +188,13 @@ Joel said: *understood, Director.*
 
 They stood. Sabina collected the folder, the sheet, and the pencil. Joel collected the tablet and the printed council review and the notebook he had not opened. They left the conference space at oh-nine-thirty-six.
 
-I sat at the bench for a minute before I moved.
+A minute at the bench, before moving.
 
 Sabina had brought the case in the texture I had been reading in her since pre-mission. The texture this morning had also been that of an officer who insisted on validation because Sabina had once been at the wrong end of a system that had not been honest about what it had and what it did not have - and who had decided, some time ago, that no system she was ever again responsible for would discover what it could not do at the moment the doing was required. She had brought the paper backup. The legal authority was already cleared. She had read the framework end-to-end. The consortium would call this "diligence" in a press release; Sabina would call it the work. They are not the same word.
 
-I did not log the texture. I noted it.
+The texture did not go into the log. It was noted.
 
-I went forward.
+Forward.
 
 ---
 
@@ -202,11 +202,11 @@ Hiroshi was at the data console.
 
 He had been at the console since oh-five-fifteen - through the dive sequence, through the transition, through the hour Joel and Sabina had spent in the conference space with me. Hiroshi at the data console looked the way Hiroshi at the data console always looked, which is to say like the calmest man on the manifest doing his work.
 
-I came up to his shoulder. He nodded without breaking the angle of his eyes from the screens. He had three displays open. The primary carried the Segment-2 sediment-core deployment schedule with the morning's consortium science-office acknowledgments docked into the side panel. The secondary carried the chief-scientist's daily form for Day 23 in draft, with two of the eleven fields already filled. The tertiary carried a piece of the shore-side correspondence he had been maintaining since the boat left Punta Arenas.
+At his shoulder, he nodded without breaking the angle of his eyes from the screens. He had three displays open. The primary carried the Segment-2 sediment-core deployment schedule with the morning's consortium science-office acknowledgments docked into the side panel. The secondary carried the chief-scientist's daily form for Day 23 in draft, with two of the eleven fields already filled. The tertiary carried a piece of the shore-side correspondence he had been maintaining since the boat left Punta Arenas.
 
 He did not say anything when I came up. I did not require him to. Hiroshi did not greet officers he had been sharing a watch with all morning; the greeting belonged at the start of the day, and the start of the day had been at oh-five-fifteen, and the greeting had passed.
 
-I stood at his shoulder for some seconds.
+Some seconds at his shoulder.
 
 He said, without looking up: *I have what I need, Director.*
 
@@ -214,9 +214,9 @@ He said it in the bearing he uses when an officer he respects has come to his sh
 
 I said: *acknowledged.*
 
-I stood at his shoulder for another second. The console hummed. The angle of his eyes did not change. I had known his discipline from the Drake - *the calmest man on the manifest had set the calmest watch I had seen* - and I knew it now in Segment 2, unchanged. He was the watch's quiet centre. He did not need me at his shoulder. He had seen that I had needed to log him there.
+Another second at his shoulder. The console hummed. The angle of his eyes did not change. His discipline I had known from the Drake - *the calmest man on the manifest had set the calmest watch I had seen* - and here it was in Segment 2, unchanged. He was the watch's quiet centre. He did not need me at his shoulder. He had seen that I had needed to log him there.
 
-I went forward.
+Forward.
 
 ---
 
@@ -230,9 +230,9 @@ Diego delivers operational information in one bearing only - flat, factual, seni
 
 He nodded. He went forward to the bridge.
 
-I noted Diego's pull-in. Sabina had not arrived at the conference space on her first pass; she had arrived on her third pass, with the polar-operations dimension already cleared and the legal-authority correspondence already in her folder and the framework text already excerpted on her sheet. The case had been pre-cleared at every layer the case touched before she had asked for the hour. She had brought me a question the question's institutional shape was already correct on. She had been doing this kind of work for a long time.
+Diego's pull-in was worth noting. Sabina had not arrived at the conference space on her first pass; she had arrived on her third pass, with the polar-operations dimension already cleared and the legal-authority correspondence already in her folder and the framework text already excerpted on her sheet. The case had been pre-cleared at every layer the case touched before she had asked for the hour. She had brought me a question the question's institutional shape was already correct on. She had been doing this kind of work for a long time.
 
-I went to the comm space.
+The comm space was aft.
 
 ---
 
@@ -254,15 +254,15 @@ I said: *acknowledged.*
 
 The hum continued. Wanjiru turned back to the screens. The partition status panel held the duration field. The duration field incremented.
 
-I went back through the wardroom.
+Back through the wardroom.
 
 ---
 
-I sat at the wardroom desk for a few minutes before going up to the bridge.
+The wardroom desk, a few minutes before going up to the bridge.
 
 The hum was on. The clock on the bulkhead read oh-nine-forty-nine. The dive had been four hours and nineteen minutes earlier. The boat had been at the routine tempo for three hours and three minutes - which, I noted, was already long enough that I had stopped counting from the dive and started counting from the meeting.
 
-I logged the morning into the bridge journal: Sabina's case, Joel's walk, Sabina's constraint on the chain, the mock-flag, the dry run now running at Wanjiru's queue on the routing Diego had cleared against the schema Priya had verified at the dive. Hiroshi at the console. The boat at depth. The relay dormant. Dequeue simulation at eleven hundred.
+The bridge journal took the morning in one entry: Sabina's case, Joel's walk, Sabina's constraint on the chain, the mock-flag, the dry run now running at Wanjiru's queue on the routing Diego had cleared against the schema Priya had verified at the dive. Hiroshi at the console. The boat at depth. The relay dormant. Dequeue simulation at eleven hundred.
 
 It read, on the page, like the bureaucratic report of an unremarkable morning. The architecture had been designed so that mornings like this one would read that way. I had hired Sabina, in part, because she would design her preparation so that the day she needed the preparation would also read that way - and would not be the day anyone thanked her. (Sabina would not have wanted to be thanked. The architecture cannot want anything. The symmetry is not accidental.)
 
