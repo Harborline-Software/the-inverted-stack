@@ -324,7 +324,7 @@ I gave the master the nod I had given seventeen masters at seventeen sailings.
 
 He acknowledged.
 
-I went to the bridge wing's inboard port and looked at the colour of the water that was not water, that was the colour the water turns when the water is above you, with the marginal zone now on the surface I could not see and the southern continent beyond the marginal zone and the consortium ports somewhere beyond the continent and the relay layer dormant and the gossip protocol on the acoustic carrier doing what the gossip protocol on the acoustic carrier was supposed to do.
+I went to the bridge cap's inboard port and looked at the colour of the water that was not water, that was the colour the water turns when the water is above you, with the marginal zone now on the surface I could not see and the southern continent beyond the marginal zone and the consortium ports somewhere beyond the continent and the relay layer dormant and the gossip protocol on the acoustic carrier doing what the gossip protocol on the acoustic carrier was supposed to do.
 
 The architecture was operating. The crew was where the crew should be. The boat was where the boat should be. This morning was the one the segment would be measured against.
 
