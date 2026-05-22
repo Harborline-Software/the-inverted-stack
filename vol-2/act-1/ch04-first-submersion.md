@@ -21,8 +21,9 @@ plants-paid:
 
 <!-- Anna-voice rewrite pass 2026-05-16 (PAO). Bigram-anaphora cascades 16→1 (3× "Each of them" / 4× "The relay layer is" / 3× "They do not log" / 3× "I had asked"); tautological self-equation 7→0 (incl. 3× "The floor was the floor" pile-up); echo-and-confirm 10→2; self_referential_frame 3→1 (galley yellow→green); motif trims ("the morning of Day X" 9→4; "the relay layer is" 7→2; "oh-eight-thirty-seven" 7→4). -->
 <!-- Council Tier 2a pass 2026-05-22 (PAO). Restructured per beta-reader finding: the 5,000-word conference-room walkthrough was the named abandonment cliff. Interleaved the architecture exposition with the live descent — Anna in the engineering compartment from 0825 onward, Joel at his rack with the relay-layer + gossip-protocol screens visible, bridge intercom carrying depth callouts. The architecture's transition through active → out_of_contact → dormant happens ON SCREEN as Joel narrates it. Joel's load-bearing dialog preserved verbatim (especially the "dormant — anything else would be a lie" passage); the conference-space frame replaced with engineering-compartment-at-the-rack frame. The descent has prose-time tension because the architecture is being exercised live. Word-count net: ~5300 (was 5090; ~+200 from interleave prose). -->
+<!-- Prose pass 2026-05-22: paragraph-initial I varied from 55/119 (46%) to target ~15%. Front-loaded observations, environment-first, character-led openers applied to non-dialogue paragraphs. Dialogue attributions preserved. -->
 
-I went to the engineering compartment at oh-eight-twenty-five.
+The engineering compartment was my first stop at oh-eight-twenty-five.
 
 Joel was at the architecture rack on the port side. He had his rolling stool pulled up to the secondary console, a tablet at his left hand, the printed copy of the council review he had carried since the recruitment call open at his right, and the coffee he drinks when the coffee is for the work. The relay-layer status panel was up on the secondary screen. The gossip protocol's dual-carrier display was up on the primary. He had laid them out the way a man lays out his tools when he expects to need both of them in the next ten minutes and wants them within glance-range without turning his head.
 
@@ -36,7 +37,7 @@ He nodded. He did not ask why. He moved the stool over half a meter so that I co
 
 I sat.
 
-I had been thinking, for the half hour between the morning brief and the engineering compartment, about what kind of question I was about to ask. The question was not the kind I had asked him during the recruitment. Back then I had wanted to know what kind of man he was. On the boat at depth I needed to know what the architecture was doing. The two were not the same question and would not be answered the same way. The recruitment had turned on five sentences. The next hour was going to take longer than five sentences.
+The half hour between the morning brief and the engineering compartment had been time to think about what kind of question I was about to ask. The question was not the kind I had asked him during the recruitment. Back then I had wanted to know what kind of man he was. On the boat at depth I needed to know what the architecture was doing. The two were not the same question and would not be answered the same way. The recruitment had turned on five sentences. The next hour was going to take longer than five sentences.
 
 I said: *Walk me through what is about to change.*
 
@@ -48,7 +49,7 @@ He said it in six sentences. He said them the way he had said the four sentences
 
 I said: *Walk me through each one. Slowly. While it happens.*
 
-I had decided to ask him slowly. The fourteen days ahead would not survive without my having asked the question slowly now, while the architecture was still about to be exercised at depth for the first time on real systems and while Joel still had the cognitive room to walk me through it. I would not get the time again. I was taking it now.
+The decision to ask slowly was deliberate. The fourteen days ahead would not survive without my having asked the question slowly now, while the architecture was still about to be exercised at depth for the first time on real systems and while Joel still had the cognitive room to walk me through it. I would not get the time again. I was taking it now.
 
 He nodded. He turned his attention to the secondary screen.
 
@@ -90,11 +91,11 @@ Joel said: *the acoustic carrier is up. The local-mesh side of the gossip protoc
 
 The bridge intercom: *one fifty meters. Trim holding. No anomalous readings.*
 
-At one fifty I noticed I was no longer hearing the wind.
+At one fifty the wind was gone.
 
 The wind had been part of the boat's audible texture since Punta Arenas. I had taken it in on the rail at six on the morning of Day 0 and at the bridge wing on Day 2 in the Drake and at the marginal zone an hour and a half before the dive. The wind had been a continuous low signal under every other signal the boat made. At one fifty meters of depth the wind was no longer a signal. What replaced it was the boat's own sound — pumps, fans, recirculation, the structural pressure-load redistribution a hull makes when the hull's geometry is being asked to hold a column of ocean above it.
 
-I noted the substitution. I did not name it aloud.
+That substitution I noted. I did not name it aloud.
 
 At a moment between one fifty and two hundred the relay-layer status panel changed again.
 
@@ -114,11 +115,13 @@ He paused. He added the sentence I would write down later as the load-bearing pi
 
 I said: *acknowledged.*
 
-I had asked him the same question once before, on the recruitment call, in different words — about cloud telemetry that decided to stop responding without telling him first. He had answered with *the gauge in front of you*. The answer this morning was the same answer in a different room. The relay layer was a gauge that did not pretend to read what it could not read. The gossip protocol was a gauge that did read what it could read. The architecture was the discipline that distinguished the two and labelled each correctly.
+He had answered the same question once before, on the recruitment call, in different words — about cloud telemetry that decided to stop responding without telling him first. He had answered with *the gauge in front of you*. The answer this morning was the same answer in a different room. The relay layer was a gauge that did not pretend to read what it could not read. The gossip protocol was a gauge that did read what it could read. The architecture was the discipline that distinguished the two and labelled each correctly.
+
+The discipline was on the screen in front of me. At depth, it was verified.
 
 The bridge intercom: *two hundred meters. Acoustic mesh at full capacity. Gossip protocol within rehearsal envelope.*
 
-I had needed to verify the discipline at depth. The discipline was on the screen in front of me. I had verified it.
+That verification was what I had come for. The screen confirmed it. I had it.
 
 The bridge intercom: *two fifty meters. Trim holding.*
 
@@ -158,13 +161,13 @@ He paused. He added the sentence I would write down later as the load-bearing pi
 
 I said: *acknowledged.*
 
-I had asked the same question once before, on the recruitment call, in different words - about cloud telemetry that decided to stop responding without telling him first. He had answered with *the gauge in front of you*. The answer this morning was the same answer in a different room. The relay layer was a gauge that did not pretend to read what it could not read. The gossip protocol was a gauge that did read what it could read. The architecture was the discipline that distinguished the two and labelled each correctly.
+On the recruitment call he had been asked the same question, in different words - about cloud telemetry that decided to stop responding without telling him first. He had answered with *the gauge in front of you*. The answer this morning was the same answer in a different room. The relay layer was a gauge that did not pretend to read what it could not read. The gossip protocol was a gauge that did read what it could read. The architecture was the discipline that distinguished the two and labelled each correctly.
 
-I had needed to verify the discipline at depth. I had verified it.
+The discipline was verified at depth. That was sufficient.
 
 The engineering compartment held the air it had held since the dive completed — pumps at the standing sub-surface cycle, the secondary recirculation at the manual's specified rate, the mineral trace at the back of the rack thicker than it had been at the surface. Joel's coffee sat at his right hand where he had set it down; it had been there since the dive sequence started and I had not watched it go cold, only noticed, now, that it had. The tea I had carried in from the wardroom and set on the second stool was in the same condition.
 
-I moved to the next question.
+The next question was waiting.
 
 ---
 
@@ -188,7 +191,7 @@ I said: *and a write made under partition that the consortium has never seen - w
 
 *The consortium sees the write. The protocol pushes it. The hash chain attests when the write was created - it carries the attestation from oh-nine-thirty-seven on Day 7 or whenever it was made. The propagation timestamp is separate from the creation timestamp. The consortium learns, at oh-eight-thirty-seven on Day 21, about a write that was made at oh-nine-thirty-seven on Day 7. The fourteen-day gap is visible in the metadata. The architecture does not pretend the gap is not there. The gap is the partition's signature on the record.*
 
-I noted the phrase. I had not heard him use it before. I logged it.
+That phrase I noted. He had not used it before. I logged it.
 
 *The architecture is honest about what it has and about what it does not have, including itself,* he said. *That is the discipline. Under partition we do not have the consortium. The architecture does not pretend we do. Under partition we have the boat. The architecture works on what it has.*
 
@@ -196,7 +199,7 @@ I said: *acknowledged.*
 
 The two answers - the relay layer's dormancy and the gossip protocol's dormancy on the consortium-port side - were the same answer in different vocabularies. I had asked them as two questions because I had wanted to know whether Joel would distinguish them. He had distinguished them. The relay layer was the transport. The gossip protocol was the mesh that ran on top of the transport. The transport was dormant. The mesh that ran on top of the transport had taken the dormancy in and waited. Two layers; two acknowledgements of the same fact; both correct.
 
-I had needed to verify the layering at depth. I had verified it.
+The layering at depth was verified. That question was closed.
 
 ---
 
@@ -210,7 +213,7 @@ I said: *acknowledged. The handshake completed cleanly.*
 
 She said it in the clipped tone she used when the report was already in her body. I had marked that tone on Day 5 in the lab during the fourth pass. It had not changed. She was not at the lab now; she was at the engineering-compartment hatch on the morning of Day 7; the discipline was the same discipline. She had brought the schema-state confirmation because the dive transition was a thing the schema state could have failed at and had not failed at, and she had verified the not-failing on her own clock and was filing the verification with me before she went back to whatever the next thing on her list was.
 
-I noted the verification. I noted the filing.
+The verification was noted. The filing was noted.
 
 She nodded once to Joel. He nodded back. She closed the hatch behind her.
 
@@ -236,13 +239,13 @@ I said: *acknowledged.*
 
 This was the moment in the morning's exchange where Wanjiru's hand on the architecture became visible to me at the level the design lived at. I had taken her measure on Day 0 at the comm space when she had walked me through the keys. I had logged her on Day 4 at the rail when she had installed the surface-state baseline. I had caught her, again, in Joel's mouth on the morning of Day 7, in the engineering compartment at three hundred meters, when he had named the audit-log discipline as hers. The architecture had multiple authors. Joel had written the paper. Wanjiru had built the parts of the architecture that turned the paper's claim into the operational record I was about to spend fourteen days under the ice extending into. I had hired both of them. I had not, until this morning, fully understood that I had hired both of them for the same reason.
 
-I turned my attention back to Joel. He was waiting.
+My attention turned back to Joel. He was waiting.
 
 ---
 
-I had two more questions. I had decided which two on the bridge during the dive sequence. The first was about the failure modes the partition introduced. The second was about Joel.
+Two more questions remained. I had decided which two on the bridge during the dive sequence. The first was about the failure modes the partition introduced. The second was about Joel.
 
-I asked the first.
+The first question was about the failure modes.
 
 *What does the architecture not do under partition.*
 
@@ -256,9 +259,9 @@ He said it without raising the altitude. He said it the way he had said *I misse
 
 I said: *acknowledged.*
 
-I had wanted him to name the loss case. I had wanted him to name it without staging. He had named it. The boat at three hundred meters held the writes. The writes existed. Whether they would continue to exist depended on whether the boat surfaced. The architecture did not pretend otherwise. I had needed to verify, at depth, that the architecture's honesty extended to its own loss case. I had verified it.
+He had named the loss case without staging. That was what I had wanted. The boat at three hundred meters held the writes. The writes existed. Whether they would continue to exist depended on whether the boat surfaced. The architecture did not pretend otherwise. The architecture's honesty extended to its own loss case. That was verified.
 
-I asked the second question.
+The second question was about Joel.
 
 *Joel - is anything different at depth from what you expected.*
 
@@ -278,15 +281,15 @@ We had been at the rack for an hour and forty-five minutes, counting from the mo
 
 ---
 
-I did not end the meeting immediately. I sat with the bench and the closed notebook and the coffee that was no longer hot, and I let the architecture's morning settle in my mind in the order I had received it.
+The meeting did not end immediately. At the bench with the closed notebook and the coffee that was no longer hot, I let the architecture's morning settle in my mind in the order I had received it.
 
 The local store on every node, operating in partition mode, attesting every write at capture, propagating to the local mesh on the acoustic carrier. The relay layer dormant - not failing; dormant; the operational state the protocol named for the case where there was no consortium to talk to. The gossip protocol's two sides - the local-mesh side active, the consortium-port side correctly identified as waiting on the dormant relay layer. The audit log carrying cross-attestation across the local mesh, accumulating a partition layer that would compose cleanly with the consortium's layer at surface. The schema stable.
 
-I had needed to install all of those things in my own head this morning. The reason was that the segment ahead would not let me ask Joel to walk through them again at this altitude. The morning was the window. The engineering compartment was the room. The dive itself was the demonstration. Only this morning, with the architecture transitioning live on the screen between us, could carry these questions without competing with the next operational concern.
+All of those things needed installing in my own head this morning. The segment ahead would not let me ask Joel to walk through them again at this altitude. The morning was the window. The engineering compartment was the room. The dive itself was the demonstration. Only this morning, with the architecture transitioning live on the screen between us, could carry these questions without competing with the next operational concern.
 
-I had asked them. He had answered them. The answers had landed.
+The questions were asked. The answers had landed.
 
-I was going to use the answers, in the days ahead, as the floor under every operational decision the boat would make under the ice. It was the floor I had read in his paper four times - the one the council had cleared with fifteen conditions and no hold on the lease layer in Round Two; the one I had spent the morning, at the rack in the engineering compartment, watching transition through itself live while asking him to walk me through it in the language the boat would need it in. It would carry. It was carrying. The boat under my feet was at depth on it.
+The answers would serve, in the days ahead, as the floor under every operational decision the boat would make under the ice. It was the floor I had read in his paper four times - the one the council had cleared with fifteen conditions and no hold on the lease layer in Round Two; the one I had spent the morning, at the rack in the engineering compartment, watching transition through itself live while asking him to walk me through it in the language the boat would need it in. It would carry. It was carrying. The boat under my feet was at depth on it.
 
 He picked up the coffee. He drank what was left of it. He stood. He said: *Director.*
 
@@ -296,7 +299,7 @@ He left.
 
 ---
 
-I went forward through the wardroom. Wanjiru was at her station in the comm space, the way she had been on Day 4 at the rail and on Day 0 at the bench when she had handed me the keys. She had the audit-log dashboard up on her primary screen. She had the relay-layer status panel up on her secondary, with the *dormant* state line printed across it in the level grey the architecture used for operational states that were not faults. The duration field next to *dormant* read 0d 01h 24m and was incrementing.
+Forward through the wardroom. Wanjiru was at her station in the comm space, the way she had been on Day 4 at the rail and on Day 0 at the bench when she had handed me the keys. She had the audit-log dashboard up on her primary screen. She had the relay-layer status panel up on her secondary, with the *dormant* state line printed across it in the level grey the architecture used for operational states that were not faults. The duration field next to *dormant* read 0d 01h 24m and was incrementing.
 
 She was humming. The hum was the same Kikuyu fragment. The tempo was unchanged.
 
@@ -310,9 +313,9 @@ I said: *acknowledged.*
 
 She turned to face her console. The hum resumed. She did not say anything else.
 
-I thought, going back through the wardroom, that Wanjiru's *the log is not lying* was the same sentence Joel had said at the engineering rack about the architecture's refusal to lie. The architecture and the comm officer who carried it were saying the same thing in the same kind of voice. I had hired both of them. I had hired them for the same reason.
+Going back through the wardroom, the thought landed: Wanjiru's *the log is not lying* was the same sentence Joel had said at the engineering rack about the architecture's refusal to lie. The architecture and the comm officer who carried it were saying the same thing in the same kind of voice. I had hired both of them. I had hired them for the same reason.
 
-I went forward to the bridge.
+Forward to the bridge.
 
 ---
 
@@ -324,10 +327,10 @@ I gave the master the nod I had given seventeen masters at seventeen sailings.
 
 He acknowledged.
 
-I went to the bridge cap's inboard port and looked at the colour of the water that was not water, that was the colour the water turns when the water is above you, with the marginal zone now on the surface I could not see and the southern continent beyond the marginal zone and the consortium ports somewhere beyond the continent and the relay layer dormant and the gossip protocol on the acoustic carrier doing what the gossip protocol on the acoustic carrier was supposed to do.
+At the bridge cap's inboard port, the colour of the water was not water — it was the colour the water turns when the water is above you, with the marginal zone now on the surface I could not see and the southern continent beyond the marginal zone and the consortium ports somewhere beyond the continent and the relay layer dormant and the gossip protocol on the acoustic carrier doing what the gossip protocol on the acoustic carrier was supposed to do.
 
 The architecture was operating. The crew was where the crew should be. The boat was where the boat should be. This morning was the one the segment would be measured against.
 
-I noted it.
+Noted.
 
-I went below.
+Below.
