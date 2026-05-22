@@ -21,20 +21,19 @@ last-measured: 2026-05-17
 last-measurement-result: 79/79 passes, zero warnings (yeoman)
 stage-advance-ratified-by: CIC 2026-05-17
 ---
-
 # Chapter 1 - Departure
 
 I took my last breakfast alone in Punta Arenas on the fourteenth of February, at a bakery on Avenida Colón that knew today was the day and had not made anything of it, which was as it should be.
 
 The bakery was called *Panadería La Pastora*. The smell at the door was butter and toasted sugar over a whisper of yeast that had been in the wall longer than the granddaughter had been alive. The woman behind the counter - not the one the place was named for, but a granddaughter once removed - brought my coffee and the kuchen de murta without my having to ask for either. I had been there nine days, and she had concluded that I was the kind of customer who took her coffee black, was not interested in conversation, and would order the best pastry in the case every morning until something better arrived, which had not yet happened. She was correct on all three counts. I respected her for them, and I had been tipping accordingly.
 
-The kuchen de murta, on the fourteenth of February, had not been let down by its base. I had checked the underside with the side of the fork while the granddaughter was looking the other way - this is a thing I do, and I have stopped pretending I am sorry about it - and there was no soggy bottom. The crust was the correct kind of short - tender against the tooth, brittle at the edge, no hint of mealy. The cream had set without going stiff and would have held a peak if you had asked it to - which this dish does not require, but I, on principle, want to know. The murta - a small Patagonian berry the rest of the world has not yet figured out is the equal of the bilberry, possibly its superior - had been folded into the cream in proportions that respected the berry: enough to register its tartness against the cream's sweetness, not so much that the cream gave up being cream. Whoever had set that ratio had run the experiment more than once. The bake was confident. Two minutes longer in the oven and the crust would have crossed from short to mealy; two minutes shorter and the cream would have weeped, and we would have been having a different conversation about whether I came back the next morning. We were not. We had not had that conversation on any of the previous eight mornings either. The granddaughter and her grandmother had brought it across the line and held it there nine days running, which is, by Patagonian standards, miraculous, and by mine, the entire reason I had chosen this bakery and not any of the four others within walking distance.
+The kuchen de murta, on the fourteenth of February, had not been let down by its base. I had checked the underside with the side of the fork while the granddaughter was looking the other way - this is a thing I do, and I have stopped pretending I am sorry about it - and there was no soggy bottom. The crust was the correct kind of short - tender against the tooth, brittle at the edge, no hint of mealy. The cream had set without going stiff and would have held a peak if you had asked it to - which this dish does not require, but I, on principle, want to know. The murta - a small Patagonian berry the rest of the world has not yet figured out is the equal of the bilberry, possibly its superior - had been folded into the cream in proportions that respected the berry: enough to register its tartness against the cream's sweetness, not so much that the cream gave up being cream. Whoever had set that ratio had run the experiment more than once. The bake was confident. Two minutes longer in the oven and the crust would have crossed from short to mealy; two minutes shorter and the cream would have weeped, and we would have been having a different conversation about whether I came back the next morning. We were not. We had not had that conversation on any of the previous eight mornings either. The granddaughter and her grandmother had maintained the bar and held it there nine days running, which is, by local standards, miraculous, and by mine, the entire reason I had chosen this bakery and not any of the four others within walking distance.
 
 I do not have favorites in pastry, only standards. The case had met the standard nine days running, and the granddaughter knew this was why I kept coming back. If she had ever brought me something better, I would have ordered that instead. I paid the bill. The granddaughter was watching me do it. I was aware that she was watching, and I was aware that she was aware I knew, and neither of us made anything of it.
 
 I would have walked fifteen blocks for that morning's pastry. I had, on day three, walked seven, because there was, briefly, a rumor of a *better* one, and I will not embarrass the rumor by reporting its source.
 
-I read the news on my phone for thirty-six minutes - Chilean politics, the consortium's own press release about my own departure (which got two facts wrong and one fact aggressively right), and an article about a kindergarten teacher in Magadan who had won a national award for science education. Then I closed the phone and looked at the harbor through the window. The *Nansen* was the third hull from the left. From the bakery you could see her bow but not her name, which was, again, as it should be.
+I read the news on my phone for thirty-six minutes - Chilean politics, the consortium's own press release about my own departure (which got two facts wrong and one fact aggressively right), and an article about a kindergarten teacher in Magadan who I had been following — and who had finally won her national award for science education. Then I closed the phone and looked at the harbor through the window. The *Nansen* was the third hull from the left. From the bakery you could see her bow but not her name, which was, again, as it should be.
 
 I do not write about my mornings in the staff history, which is for the consortium archive and for whoever commands the next mission. What I had for breakfast is none of their business. But that morning is where I became the one who would walk onto the *Nansen*. You should know who I was before I did.
 
@@ -48,7 +47,7 @@ This is, I am told, what people mean when they say a person is composed. I find 
 
 The granddaughter brought a second cup at 07:14, which was four minutes earlier than I had asked for it, and I appreciated this so much that I left her a tip in two currencies.
 
-On my way to the door she handed me a white bakery box, three dozen kuchen de murta, for the crew - because I had mentioned on day three that we sailed on the fourteenth and she had not forgotten. She would not let me pay for it. I left the price of three days' breakfasts in the tip jar on the way out, which she pretended not to see.
+On my way to the door she handed me a white bakery box, three dozen kuchen de murta, for the crew - because I had mentioned on day three that we sailed on the fourteenth and she had not forgotten. She would not let me pay for it. I left the price of three dozen in the tip jar on the way out, which she pretended not to see.
 
 The walk from the bakery to the harbor was eleven minutes by the inland route and fifteen by the seafront, and I always took the longer way. There is a particular thing the wind does in Punta Arenas in February - comes off the Strait at a heading you would not choose for yourself, smelling of cold metal and not at all of salt - and I had decided years ago that I would rather be cold for fifteen minutes than warm for eleven.
 
@@ -62,7 +61,7 @@ The first was **Tomás Lindqvist** - chief engineer, second-generation Punta Are
 
 The second was **Priya Iyer**, chemistry lead, walking up Pasaje O'Higgins with two reusable bags and a laptop case, looking at once like the postdoc she had stopped being a decade ago and the woman with a child at home. Priya was forty. Priya had grown up in Coimbatore and got her PhD at ETH Zürich and had spent the last six years quietly becoming the best dissolved-gas chemist I had ever worked with. Let me name this about Priya now, before what comes later defines her for you: on the morning of February fourteenth, in every way that mattered to me, she was the second-in-command of my science department, and I would have trusted her with a great many things. I did, in fact, trust her with them. You will need to keep that in mind.
 
-The third was Joel, on the seafront walking the other direction and pretending not to see me. The pretending was a courtesy. It was the only thing I had ever asked of him that he was reliably good at.
+The third was Joel, on the seafront walking the other direction and pretending not to see me. The pretending was a courtesy, and I attributed it to him without thinking.
 
 The *Nansen* was an under-ice research submarine of the Mark III class, ninety-one meters at the waterline, thirty-five hundred tons surfaced, rated to four hundred meters under continuous ice, and one of the four boats in the world that could do what the consortium needed done under the Filchner-Ronne ice shelf in the third week of February. I write the spec because the consortium archive expects it, and you can skim it. What you need to know is that the *Nansen*, from the dock, looked like a long matte-black ribbon laid against the water, with an ice-strengthened sail amidships, her diving planes folded vertical against it, and a tender already alongside her starboard quarter. When I walked up to her I felt the thing I always feel before taking command of a boat: *I am home, and the next three months are going to be cold, and both of these are true.*
 
@@ -76,39 +75,39 @@ I stepped over the gangway at 08:01. **Captain Mikael Halvorsen -** the *Nansen*
 
 We shook. He did not let go right away. This was not a romantic thing; this was Mikael's way of taking a person's pulse, which he did with everyone he respected and no one else, and I have decided over the years to be flattered by it rather than amused.
 
-He looked at the parka. "You brought it."
+He looked at the parka. You brought it.
 
-"I did."
+I did.
 
-"Wind is from the east-southeast at twelve knots, steady and clean across the bow. The ice edge lies exactly where yesterday’s satellite pass said it would, a white line knifing across the chart and stopping the blue. Mooring crew will be off the lines by 08:30, gloves stowed and coffee cooling in paper cups just inside the dogged door. Nothing unexpected has moved in the night; the logs read flat, the radios are quiet, and for once the morning watch begins with no surprises to report."
+Wind is from the east-southeast at twelve knots, steady and clean across the bow. The ice edge lies exactly where yesterday’s satellite pass said it would, a white line knifing across the chart and stopping the blue. Mooring crew will be off the lines by 08:30, gloves stowed and coffee cooling in paper cups just inside the dogged door. Nothing unexpected has moved in the night; the logs read flat, the radios are quiet, and for once the morning watch begins with no surprises to report.
 
-"Understood."
+Understood.
 
-"How was the bakery," he said.
+How was the bakery, he said.
 
-"The pastry passed inspection and will be reporting for duty."
+The pastry passed inspection and will be reporting for duty.
 
-"I was hoping," he said with a lick of his lips.
+I was hoping, he said with a lick of his lips.
 
-"The kindergarten teacher in Magadan won her award."
+The kindergarten teacher in Magadan won her award.
 
-"She did. I'm glad to hear it."
+She did. I'm glad to hear it.
 
-He let go of my hand. "Your bay is squared away. Joel has been on board since 05:30."
+He let go of my hand. Your bay is squared away. Joel has been on board since 05:30.
 
-"Of course he has."
+Of course he has.
 
 Which meant the man on the seafront had been someone else. I noted the correction. I did not name it aloud. I had been thinking about Joel for ninety-three days, and the mind does what the mind does — including, when you give it ninety-three days, the call I am still not sure about, which he had carried since the pre-procurement review and which neither of us had named in the months since.
 
-"He's in the chemistry rack."
+He's in the chemistry rack.
 
-"Of course he is."
+Of course he is.
 
-Mikael smiled, very slightly. He has only the one smile. "I am going to bring her out of the harbor and turn her over to you at the channel mouth. Is that still what you want."
+Mikael smiled, very slightly. He has only the one smile. I am going to bring her out of the harbor and turn her over to you at the channel mouth. Is that still what you want.
 
-"It is what I want."
+It is what I want.
 
-"All right then."
+All right then.
 
 This is how command of a research boat passes from the ship master to the mission commander, in the only navy I have ever served, which is to say my own — quietly, at the base of the sail, with no formal witness to it, between two people who have agreed in advance about which one of them is going to be wrong if everything goes wrong. The consortium has a longer version with signatures. I have signed the longer version. The signing does not change what just happened.
 
@@ -134,9 +133,9 @@ The chemistry rack is forward of frame thirty-six, port side, three steps down f
 
 He was kneeling by the lower environmental sensor rack with a multimeter in his left hand and a coffee in his right. He had not heard me come in, or had heard me and was pretending. The cup was one I recognized. I noted this and did not remark on it. There was a laptop open on his bunk behind him.
 
-"Joel."
+Joel, I greeted.
 
-He did not look up. "Doctor."
+He did not look up, but replayed "Capitan".
 
 "You have been on the boat since 05:30."
 
@@ -152,7 +151,7 @@ He did not look up. "Doctor."
 
 "When?"
 
-He looked up. He had the same face. He was wearing a fleece I did not recognize, which I noted in spite of myself, and he had a smudge of thermal paste on his jaw he did not know about, which I did not tell him about. He was forty-four. He had built the diagnostic system the consortium had almost not funded. He had not been on the *Nansen* during the consortium final review in Bremerhaven, which was not a place for engineers - except for the part of it, late on the thirteenth of November, that was, briefly, a place for one.
+He looked up. He had the same face. He was wearing a fleece I did not recognize, which I noted in spite of myself, and he had a smudge of thermal paste on his jaw he did not know about, which I did not bring up. He was fifty-two. He had built the diagnostic system the consortium had almost not funded. He had not been on the *Nansen* during the consortium final review in Bremerhaven, which was not a place for engineers - except for the part of it, late on the thirteenth of November, that was, briefly, a place for one.
 
 "When, Joel?"
 
@@ -160,11 +159,11 @@ He looked up. He had the same face. He was wearing a fleece I did not recognize,
 
 "That is not when you are going to eat. That is when you would like me to believe you are going to eat."
 
-He almost smiled. "After channel handover. With you."
+He almost smiled. "After channel handover, with you."
 
-"Wardroom. 11:30."
+"Wardroom 11:30"
 
-"All right."
+"All right"
 
 I left.
 
@@ -176,7 +175,7 @@ I took her out into the Strait.
 
 The Strait of Magellan in February is the color of the inside of a slate and is not, contrary to what every consortium pamphlet I have ever read insists, *beautiful*. It is a serious piece of water. It does not require my appreciation. I have stopped giving it. We rode the surface for the first eleven hours. The survey plan called for a long initialization run on the cable instrumentation before submersion. Mikael had also told me, on the bridge, that he wanted to see the boat handle in the wind one more time before he handed her off completely - a thing he was no longer entitled to want, and which I let him have anyway.
 
-I ate with Joel at 11:31 in the wardroom, with Priya and Wanjiru and Tomás and three others I am not going to name in this chapter, because they are going to matter later and I do not want to introduce them in a paragraph about a meal. Joel ate. I watched him eat. He noticed me watching him eat and did not say anything about it. He has gotten better, over the years, at not saying things about it.
+I ate with Joel at 11:31 in the wardroom, with Priya and Wanjiru and Tomás and three others I am not going to name in this chapter, because they are going to matter later and I do not want to introduce them in a paragraph about a meal. Joel ate. I watched him eat. He noticed and did not say anything. He had brought the not-saying with him.
 
 I went to my cabin at 22:40. I did not, technically, need to. My watch did not start until 02:00. But I had been awake since 04:30 and I had run a briefing and taken command of a research boat and walked through every major system on her with her ship master and her engineer and her science department, and I had eaten one meal in front of a man I had not seen in ninety-three days, and I was, by the standards I hold myself to, tired.
 
