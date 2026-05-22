@@ -212,7 +212,7 @@ objects:
     class: Mark III
     type: under-ice research submarine
     length_m: 91
-    displacement_t_surfaced: 480
+    displacement_t_surfaced: 3500   # was 480 — fixed 2026-05-22 per technical-substrate council critic (Tier 3a). 91m × 480t was physically impossible (length consistent with attack sub; displacement consistent with midget sub). Displacement-fit chosen over length-fit to preserve the "long matte-black ribbon" hull image in ch01.
     depth_rating_under_ice_m: 400
     features:
       - ice-strengthened sail
