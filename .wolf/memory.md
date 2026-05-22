@@ -4219,3 +4219,4 @@ Open / deferred:
 | 19:12 | vol-2 post-Plan-C galley baseline: 18 chapters measured; 16 green, 2 yellow (ch14 self_referential_frame warn, ch18 motif_overuse warn), 0 red, 0 blockers | .pao-inbox/_state-snapshots/2026-05-21-plan-c-post-rewrite-galley-baseline.md | complete | ~15k |
 | 20:48 | ch14 self_referential_frame: cut decorative second instance from line 195 sentence-tail | vol-2/act-3/ch14-the-crossing.md | galley YELLOW→GREEN (0 warnings, 0 blockers) | ~800 |
 | 20:49 | ch18 motif_overuse yellow→green: cut retired 'what they claimed to be' phrase in medialuna beat; replaced with pastry-judge lamination vocabulary | vol-2/act-3/ch18-punta-arenas-surfacing.md | green | ~3k |
+| 21:50 | Fix Dropbox sync silent failure on update (copy2 → unlink+copyfile) | build/audiobook.py | ch01 Dropbox mtime 17:39Z→21:46Z; bug-469 logged | ~3k |

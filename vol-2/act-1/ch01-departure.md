@@ -85,17 +85,17 @@ He looked at the parka. "You brought it."
 
 "Wind east-southeast at twelve. Ice edge is where the chart says it is. Mooring crew clears at 08:30. No surprises in the morning brief."
 
-"Good."
+"Understood."
 
 "How was the bakery," he said. 
 
 "The pastry passed inspection and will be reporting for duty." 
 
-"Good." he said with a lick of his lips.
+"I was hoping," he said with a lick of his lips.
 
 "The kindergarten teacher in Magadan won her award." 
 
-"She did, good to hear." 
+"She did. I'm glad to hear it." 
 
 He let go of my hand. "Your bay is squared away. Joel has been on board since 05:30." 
 
