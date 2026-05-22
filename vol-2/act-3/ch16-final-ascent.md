@@ -41,11 +41,11 @@ The boat had been at depth for forty-eight days when it began to come up.
 
 Five meters a minute. That was the rate the manual specified, the rate I had rehearsed on the bridge of the *Akademik Treshnikov* in 2018 and on the Nansen for fourteen months before the boat sailed. Hiroshi had the polar-operations console; Priya had the helm against the rotation Hiroshi had drafted at the wardroom at 0445 on Mission Day 47 and filed under his Ed25519 device key at 0508; I had the rail. The Drake's September cross-current did not contest the gradient. The gradient held.
 
-I had not stood the rail at an ascent on this boat. I had stood ascents on three boats before this one - and the water at five meters a minute is the same water on any of them, which is the small mercy of doing the work long enough. The hull-tone climbed by half a step every quarter hour as the pressure outside fell, the way a wineglass tightens its note when you take your finger off the rim. The light on the port-side scope went from the black of the deep column to a green you would not call a color so much as a rumor of one. The consoles read what the consoles read.
+The rail on this boat was new to me at an ascent. Three boats before this one, and the water at five meters a minute is the same water on any of them - which is the small mercy of doing the work long enough. The hull-tone climbed by half a step every quarter hour as the pressure outside fell, the way a wineglass tightens its note when you take your finger off the rim. The light on the port-side scope went from the black of the deep column to a green you would not call a color so much as a rumor of one. The consoles read what the consoles read.
 
 The list of *queries to run when we surface* was on the page at the desk in my cabin. Twenty-six items at the start of the ascent. Six technical, the rest the kind a context window the size of a laptop's cannot reach for - the four-year transit archives, the post-conference contributor records, the back-decade procurement history that lives on a real machine somewhere warm. The list had grown across the back nine days the way lists do when the question is bigger than the room you have to ask it in. Three of the additions had landed on the page after Maria carried the seventeenth notebook to the wardroom table at 1402 on Mission Day 50 - which is to say, the kind of additions you make when an empty chair has begun to do its own kind of accounting.
 
-I had added the twenty-seventh at 0214. The night's telemetry had shown a small drift in the cross-current vector; the heavy-LLM hosting would have cross-referenced the back four years of Drake-Passage transits in under a second and told me whether the drift was a fluke or a pattern. The per-laptop could not. I logged the drift. I logged the question. The list grew by one.
+At 0214 the twenty-seventh item landed. The night's telemetry had shown a small drift in the cross-current vector; the heavy-LLM hosting would have cross-referenced the back four years of Drake-Passage transits in under a second and told me whether the drift was a fluke or a pattern. The per-laptop could not. The drift went to the log. The question went to the list. The list grew by one.
 
 Some questions we asked the system; some questions we wrote down to ask later.
 
@@ -61,7 +61,7 @@ The Filchner-Ronne photograph queue - the back two years of acoustic-imaging com
 
 Hiroshi checked the sensor heads at 0301. He noted the surviving heads at the routine position, the offline starboard one in red, and logged the state in the polar-operations log under his device key. The check ran the way the check ran when the officer running it was not the officer who had stood the rotation across thirty-five years. Steadier, if anything.
 
-I went forward to the wardroom for tea. I did not narrate the noting. The noting was at the level it needed to be. I left it there.
+The wardroom was forward. Tea was on the warmer. The noting was at the level it needed to be, and there was nothing further to add to it.
 
 ---
 
@@ -73,13 +73,13 @@ He was reading the engineer's log.
 
 He had filed it at 0432 on the morning of Mission Day 47 - the post-cascade entry, written on the per-laptop because the heavy host was gone, in the dry sentences he used when sentences cost him something. He had not opened the log since. He was reading it now, at the rate an engineer reads a document he wrote against a question he is holding. He did not look up when I came in. He did not look up when I poured the tea. He read the log.
 
-I sat at the table. I did not press.
+The table held us both. There was nothing to press.
 
 Joel's quiet had matched the engineering compartment's since the cascade. He had filed the log at 0432 on Day 47 and had not narrated further; he had held the medical recovery against Maria's checkpoints; he had walked back into the engineering compartment at 0800 on Day 50, on rotation; he had handled the morning diagnostic cycle on the per-laptop. The discipline had run since the boat sailed - Navy nuclear-reactor-supervision discipline carried across two and a half decades into distributed systems and then into the Round-2 rewrite four years before we left Bremerhaven. He had built the architecture for the worst case the architecture might have to handle. The worst case had happened. The architecture had handled it.
 
 He was reading the log to see what the log had carried.
 
-I read the rate he was reading at, and the duration he was reading for, and did not interrupt. He was reading as an engineer who had handed his architecture to a boat, gone with the boat, watched the architecture run against the case, survived the case, and was now reading what the architecture had carried back through it. It was not a celebration. Joel did not have a mode that knew how to celebrate something at this volume. The engineering log was where Joel found out what he had built, and he found out before he checked anywhere else.
+The rate he was reading at, and the duration he was reading for, were enough. He was reading as an engineer who had handed his architecture to a boat, gone with the boat, watched the architecture run against the case, survived the case, and was now reading what the architecture had carried back through it. It was not a celebration. Joel did not have a mode that knew how to celebrate something at this volume. The engineering log was where Joel found out what he had built, and he found out before he checked anywhere else.
 
 The engineering log did not narrate. The engineering log read itself.
 
@@ -87,9 +87,7 @@ Joel did not narrate what he had built. He read the log.
 
 He pulled his wallet out of his inner jacket pocket - the coffee-fund debt he owed Sabina from the second mission week. The wallet was leather, of the kind Joel had carried since the Navy years, creased at the seams. He worked a folded bill loose. The fold opened a half-pocket of the wallet at the angle the wallet sat against the table. There was an index card in the half-pocket. The card was old. The handwriting on it was a woman's handwriting in cursive Spanish. There was a coffee-ring stain on the upper right. The fold had been folded and unfolded across enough years that the paper at the crease had gone soft.
 
-I noted the card.
-
-I did not note it aloud. The card was a fact about Joel I noted the way I noted facts about crew - peripherally, accurately, without ceremony. The card was old; I did not name it aloud. I poured my tea. I sat at the wardroom.
+The card went into the record the way facts about crew go into the record - peripherally, accurately, without ceremony. It was old. The crease had softened across years. There was nothing to name aloud. Tea poured; the wardroom held.
 
 Joel closed the wallet. He set the bill on the table for Sabina. He drank the last of his cup. He set the cup on the table. He nodded once.
 
@@ -99,7 +97,7 @@ I said: *Joel.*
 
 He went out.
 
-I sat at the wardroom for the duration of my tea. I did not narrate the noting. I sat in the empty wardroom until the tea was gone.
+The wardroom was empty. The tea lasted to the bottom of the cup, and the noting stayed at the level it needed to stay.
 
 ---
 
@@ -123,9 +121,9 @@ She was also reading the inbound - consortium acknowledgments, regulatory bullet
 
 The notebook on the desk was not the institutional notebook. The institutional notebook lived at the comm node in its dedicated position next to the relay-operations log. The notebook on the desk was Wanjiru's cucu's-notebook - the small leather-bound lined one she carried from the wardroom to the comm node and from the comm node to her cabin. It was open. The handwriting on the open page was Wanjiru's, and it was the handwriting of a person writing the questions she will not ask in the institutional record at this moment.
 
-I did not read the page.
+The page was not mine to read.
 
-I came down to the comm node at 0420 for the post-handshake check. Wanjiru noted me at the entry the way she noted crew at the relay-operations station - peripherally, accurately, without ceremony.
+At 0420, the comm node for the post-handshake check. Wanjiru noted the entry the way she noted crew at the relay-operations station - peripherally, accurately, without ceremony.
 
 I said: *Wanjiru. The queue moves.*
 
@@ -145,17 +143,17 @@ She said: *the discipline applies.*
 
 She did not look up from the screen. The hum did not stop. The notebook was open at the page. The page carried what the page carried. The boat was at five meters above the standing depth and rising.
 
-I went up.
+The bridge was above. Up, then.
 
 ---
 
-I sat at the wardroom desk at 0814 on Mission Day 52.
+Mission Day 52, 0814. The wardroom desk.
 
 The wardroom was empty. I had handed the bridge to Sabina at 0700 - Sabina had volunteered for that watch back on Mission Day 48 to give Hiroshi the eight-to-four window the polar-operations console needed at sustained capability, and she had not let me thank her for it then and would not let me thank her for it now. Hiroshi was in his cabin at the standing rest hour. Joel was in the engineering compartment. Wanjiru was at the comm node. Priya was in the lab.
 
-I had a cup of tea on the desk. The staff-history file was open on the per-laptop. The list of *queries to run when we surface* was on the page at the desk corner. Twenty-eight items now - I had added the twenty-eighth at 0729 when I had read the morning brief and caught a small question about the handshake's institutional-acknowledgment cycle that the heavy host would have answered in a beat and that the per-laptop had held until surfacing.
+Tea on the desk. The staff-history file open on the per-laptop. The list of *queries to run when we surface* at the desk corner - twenty-eight items now, the twenty-eighth added at 0729 when the morning brief caught a small question about the handshake's institutional-acknowledgment cycle that the heavy host would have answered in a beat and that the per-laptop had held until surfacing.
 
-I read the list.
+The list read:
 
 Some of the items were technical - the cross-mission Drake-Passage transit data the night's drift had brushed against; the consortium's full procurement-officer schedule for the week of 2026-March-fourth; the integration facility's installation-queue history for the same week; Priya's schema-evolution annotation queue against the post-incident sensor-stream record; Maria's medical records cross-corpus query against the back four years; Hiroshi's cross-language collaboration carryover with the JARE colleagues at Showa Station; the forensic-substrate firmware-pattern query the post-incident review would run against the consortium-port mirror's back-decade procurement archive.
 
@@ -165,15 +163,15 @@ Some of the items were personal. *Mother - late summer; the cousins' children; t
 
 The list was what the architecture's honesty had cost me, in pencil. The architecture had been honest about what it had and what it did not have, which is to say it had handed the per-laptop a small fraction of what the heavy host would have done in a paragraph, and it had handed me - in the silence the heavy host used to fill - the rest. The questions had survived because somebody had written them down. They had not been lost to the cascade or the compute hub or the depth or the cold or the Drake's cross-current. They had been carried on paper. The system would answer what the system could answer. The handshake would answer what the system could not.
 
-I drank my tea. I read the list a second time. I returned to the file.
+The tea finished. The list a second time, then back to the file.
 
-I had pulled the small allocation of dried Uzbek melon from the Mission Director's discretionary cargo on Mission Day 51 - Sabina had logged it without comment, at the same line on the manifest she had logged it at when the manifest had been filed before departure. I had eaten one strip with afternoon tea on Day 51. The taste was honeyed and dense and a little dry, the kind of dried melon the cane-awning markets in the Chilonzor district had stacked in late September when I was eight years old and my grandmother had known the names of the women at every stall and had taught me to read the shape of the *qovun* before I had been able to read the price written above the stack. The taste carried the geography. The geography carried the grandmother. I took it in and went back to work.
+The Mission Director's discretionary cargo had a small allocation of dried Uzbek melon - pulled on Mission Day 51, logged by Sabina without comment at the same line on the manifest she had used before departure. One strip with afternoon tea on Day 51. The taste was honeyed and dense and a little dry, the kind of dried melon the cane-awning markets in the Chilonzor district had stacked in late September when my grandmother had known the names of the women at every stall and had taught me to read the shape of the *qovun* before the price written above the stack. The taste carried the geography. The geography carried the grandmother. Taken in; back to work.
 
-I took a strip from the desk drawer at 0832.
+A strip from the desk drawer at 0832.
 
-I ate it.
+Eaten.
 
-I returned to the file.
+The file waited.
 
 The mission had cost what the mission had cost. The compute hub was lost; no commentary. Diego was lost; the loss was at the damage report under Maria's signature, in the canonical record, in the letter and the cup and the notebooks bound for Belgrano. The leak had run, the boat had survived, the architecture's environmental-stress claim had held. The mission had not lost more than it had lost. The role did not require me to mourn the GPU and did not permit me to mourn Diego at the operational tempo the boat required of me at the surfacing watch. The wardroom desk would carry the writing the operational tempo did not.
 
@@ -183,13 +181,13 @@ I wrote.
 
 The boat reached surface depth at 1148 on Mission Day 52.
 
-I was at the bridge. Sabina was on the helm. Hiroshi was back on the polar-operations console - he had returned at 1100 on the rotation he had filed for the surfacing watch, and the chair held him the way the chair held whoever sat at it. Joel was in the engineering compartment. Priya was at the workstation. Wanjiru was at the comm node working the full-bandwidth sync.
+Bridge: Sabina on the helm; Hiroshi back at the polar-operations console - returned at 1100 on the rotation he had filed for the surfacing watch, the chair holding him the way the chair held whoever sat at it; Joel in the engineering compartment; Priya at the workstation; Wanjiru at the comm node working the full-bandwidth sync.
 
 The bridge channel was open. The audit log streamed uninterrupted. The full-archive sync moved at the cadence the surface bandwidth allowed. The consortium-port mirror at Punta Arenas had acknowledged the priority list's first six items.
 
 The boat had completed the maiden voyage's full operational envelope. The architecture had held what it had been built to hold. The hash chain was continuous. The forensic substrate was intact. The boat-internal replication was nominal. The relay layer was nominal. The crew was nominal. The boat was at surface depth.
 
-I read the consoles. The consoles read what the consoles read.
+The consoles read what the consoles read.
 
 I went up. The sail hatch took its eighth of a turn the way it always does on a boat that has been at depth for the better part of two months - which is to say with a small reluctant sigh as the seal gave - and then I was on the bridge cap in the September afternoon. The light was at the white-grey the Drake holds in the half-hour after a clearing, the kind of light a Patagonian would file under *no es mucho pero alcanza*. The air on the back of my hand was cold and clean and tasted of nothing at all, which is the only thing surface air tastes of after forty-nine days. There was a single albatross at maybe a kilometre off the starboard quarter, working the wind at the deliberate unhurried pace of a creature that has never been in a hurry in its life. I watched it for the count of ten.
 
@@ -225,7 +223,7 @@ The mission had held.
 
 *The staff history is at twenty-one thousand words against the back year of writing. The file is open at the per-laptop. I have added five items to the list since 0814. The list is at thirty-three items at the standing close. The list will carry to Punta Arenas. The architecture will close what the architecture will close. The institutional handshake will close what the architecture cannot.*
 
-*I will close the per-laptop. I will read the list once more in the morning. The boat is at the surface; the crew is at the routine; Joel is in his cabin. The seventeen notebooks are at my desk.*
+*The per-laptop closes tonight. The list reads once more in the morning. The boat is at the surface; the crew is at the routine; Joel is in his cabin. The seventeen notebooks are at the desk.*
 
 *I closed the per-laptop.*
 
