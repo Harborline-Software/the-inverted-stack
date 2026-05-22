@@ -71,14 +71,18 @@ Three candidates below. The committed choice follows.
 >
 > The contest over what any of those words is for has only begun.
 
-### Committed back cover (Candidate 4 — supersedes Candidate 3 per CIC 2026-05-21T12:30Z)
+### Candidate 4 — "Nineteen steps" (RETIRED 2026-05-22 per council bestseller-profile critic)
 
-Candidate 3 was provisionally committed but CIC flagged the back cover's
-opening as reproducing the same "X was the X" tautology anti-pattern the
-A+ roadmap had been editing OUT of the chapters
-("the architecture preserved what the architecture had been built to preserve",
-"the forensic substrate caught what the forensic substrate had been built
-to catch", etc.). Candidate 3 retired. Replaced by Candidate 4 below.
+Candidate 4 was provisionally committed but the 5-critic council vol-2 review (vol-2/_reviews/2026-05-22-council/) flagged two issues:
+
+1. The opening "Diego Sá made it nineteen steps down the access ladder" image is NOT in the executed ch14 prose. The cover promises a specific image the book does not deliver.
+2. The framing — "*which budget cycle of the consortium's procurement calendar had killed Diego, and whose signature was on the funding decision. His.*" — is framing A from the early Plan-C work. **Canon is now framing E** (per ch17 Joel admission; per canon.yaml `joel.architectural_funding_decision`): Joel ran an AI-agent security audit on the vendor firmware, the agent returned clean, Joel signed the procurement approval against the agent's output without verifying the agent's findings against the raw firmware. The cover was stale relative to ch17.
+
+Per bestseller-profile critic's single highest-leverage positioning intervention: "Reposition the AI-agent-not-verified angle (Joel's Ch 17 admission: *'I did not read the agent's findings against the raw firmware'*) as the primary commercial hook on the back cover and in every pitch email." The AI-agent angle is the most marketable line in the book and rides the 2026 AI-anxiety wave; the institutional-contest framing does not sell at scale.
+
+Candidate 4 retired. Replaced by Candidate 5 below.
+
+(Candidate 4 prose preserved here for historical record; do NOT use as committed cover.)
 
 > Diego Sá made it nineteen steps down the access ladder before the second-stage cascade finished. Joel Reyes pushed me aside at the top of the ladder before either of us had cognitively decided he was going down. Joel made it back. Diego didn't.
 >
@@ -92,29 +96,49 @@ to catch", etc.). Candidate 3 retired. Replaced by Candidate 4 below.
 >
 > The other serves Diego.
 
+### Committed back cover (Candidate 5 — supersedes Candidate 4 per council Tier 4a + 4b 2026-05-22)
+
+> Joel Reyes ran an AI-agent security audit on the vendor firmware in September 2022. The agent returned clean. Joel signed the procurement approval against the agent's output. He did not read the agent's findings against the raw firmware.
+>
+> Three years and forty-seven days later, the firmware failed at three hundred meters under the Filchner-Ronne ice shelf, and Diego Sá died in the access compartment before Joel could reach him.
+>
+> I am Dr. Anna Yusupova, mission commander of the *RV Nansen*. The architecture Joel had built captured every microsecond of what killed Diego — the pre-failure timestream, the firmware-update signature, the vendor's name on the procurement paperwork. The architecture also caught what its own designer had not. On Mission Day 54, in the wardroom at midnight, Joel told me which check he had skipped, and why.
+>
+> *The architecture I built exists because I do not trust an agent to do that work alone. I trusted this one. The cost is in the compartment.*
+>
+> Diego's widow lives in Belgrano. She will read the letter Diego sealed at 2147 on Mission Day 55. The consortium will read what I write into the staff history.
+>
+> Only one of those documents serves the architecture.
+>
+> The other serves Diego.
+
 **`Architecture. Sovereignty. Ice.`**
 
-### What changed vs Candidate 3
+### What changed vs Candidate 4
 
-- Three opening tautologies cut ("X preserved/caught/absorbed what X was built to") — replaced with concrete things the architecture caught: *the pre-failure timestream / the firmware-update signature / the vendor's name on the procurement paperwork*.
-- The "local-first store / relay layer / surface window" jargon parade cut entirely.
-- Joel's role explicit and physical — *pushed me aside at the top of the ladder before either of us had cognitively decided he was going down*. Echoes the executed Ch 14 corridor-push beat without reproducing it.
-- The "He preserved himself, in the way one preserves oneself by being the person one is" aphoristic close removed — Candidate 3's least defensible sentence.
-- Dual-reader frame moved from paragraph 3 to the last beat — *Only one of those documents serves the architecture. / The other serves Diego.* The two-line close is the load-bearing payoff.
-- Joel's admission moment named in a single word — *His.* — as the structural pivot of the second paragraph.
+- **Opens on the AI-agent admission** — the most marketable line in the book per bestseller-profile critic. Rides the 2026 AI-anxiety wave that "Diego made it nineteen steps" did not.
+- **"Nineteen steps" image cut** — closes the back-cover/text gap. The image was not in the executed ch14 prose.
+- **Joel's admission quoted verbatim** as the structural pivot (paragraph 4 italicized) — uses canon line 73-77 (`joel.architectural_funding_decision.admission.canonical_lines`): *"The architecture I built exists because I do not trust an agent to do that work alone. I trusted this one. The cost is in the compartment."* The cover now delivers the most marketable sentence in the book.
+- **Budget-cycle framing replaced with AI-agent framing** — Candidate 4's *"which budget cycle of the consortium's procurement calendar had killed Diego, and whose signature was on the funding decision. His."* (framing A; retired) → Candidate 5's AI-agent failure mode (framing E; canon).
+- **"On Mission Day 54, in the wardroom at midnight"** — preserved as the scene anchor (Joel's admission ch17 setting).
+- **Dual-reader close** — preserved verbatim from Candidate 4 (*Only one of those documents serves the architecture. / The other serves Diego.*)
+- **Closing tag** — preserved verbatim (*Architecture. Sovereignty. Ice.*).
 
-### Reasoning preserved from Candidate 3
+### Reasoning preserved from Candidate 4
 
-The criteria Candidate 3 was committed against still hold for Candidate 4:
+The six criteria still hold for Candidate 5:
 
-1. **Names what the volume actually does** — architecture works, cost is still real, by paragraph two.
-2. **Honors audiobook-native cadence** — reads aloud at Anna's executed register; no thriller-prose punching.
-3. **Earns the dual-reader frame** — staff history vs Diego's letter; consortium vs María Elena.
-4. **Closing tag survives unchanged** — `Architecture. Sovereignty. Ice.`
-5. **Named characters: Diego and Joel, in that order.**
-6. **Helvetia / Stefan / Astrid not named** — institutional contest is the seed for the next volume, not the foreground of this one.
+1. **Names what the volume actually does** — architecture caught what its own designer had not; cost is real; by paragraph three.
+2. **Honors audiobook-native cadence** — reads aloud at Anna's executed register + Joel's admission in his own voice as the italic pivot.
+3. **Earns the dual-reader frame** — preserved (consortium vs María Elena).
+4. **Closing tag survives unchanged** — *Architecture. Sovereignty. Ice.*
+5. **Named characters: Diego and Joel** — both present; Joel named first (he made the decision); Diego named second (he paid the cost). The ordering inversion vs Candidate 4 is deliberate per critic's positioning recommendation — the AI-agent angle requires Joel's name to lead.
+6. **Helvetia / Stefan / Astrid not named** — preserved; institutional contest is vol-3 seed.
 
-Candidate 4 satisfies all six criteria without reproducing the executed prose's worst literary tic.
+### Council references
+
+- vol-2/_reviews/2026-05-22-council/05-bestseller-profile-critic.md — single highest-leverage positioning intervention (reposition AI-agent angle as primary commercial hook); back-cover/text mismatch flagged as side-finding
+- vol-2/_reviews/2026-05-22-council/INDEX.md — Convergence #4 (Back-cover ≠ book); Tier 4a + 4b interventions
 
 ---
 
