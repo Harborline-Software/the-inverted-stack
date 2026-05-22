@@ -135,6 +135,8 @@ He said: *the secondary display has the per-node attribution one tab over.*
 
 He clicked. The display refreshed to a per-node breakdown across the eleven nodes on the boat's mesh. The drift's contribution to the bow was distributed unevenly across the nodes. Two nodes - the secondary instrument-tier node at the polar-operations bench and the relay-hub node in the comm space - were carrying a larger portion of the bow's amplitude than the other nine. The other nine were near-baseline.
 
+The polar-operations bench was the bench Diego ran the under-ice navigation off of. The four-hour calibration sweep that ran on that node was the sweep that re-aligned the bathymetric chart against the boat's downward sonar reading, with the DVL drift correction folded in at the same pass and the gyro's accumulated heading error backed out against the last transponder triangulation. The sweep was where the three numbers Diego carried on his secondary - dead-reckoned position, acoustic-triangulated position, bathymetric-match position - were re-composed against each other. The sweep was load-bearing. It was also load-producing. The node carried the calibration's compute the way the boat carried the dive: the load was a duty of the boat being where the boat said it was.
+
 Priya said: *the instrument-tier node at polar-ops.*
 
 He said: *one of the two largest contributors.*
