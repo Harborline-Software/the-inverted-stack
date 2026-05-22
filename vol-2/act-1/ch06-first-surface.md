@@ -35,9 +35,9 @@ The boat rose into a colour I had not expected to take in the way I took it in. 
 
 The other thing the surfacing was carrying, which would not register on any display the bridge had up but which I had been carrying in my own head since 0530, was the test of whether the position Diego had been composing under the ice was the position the boat was actually at. The first GPS fix the sail's antenna acquired came in at 0613-and-some-seconds. The fix landed on the bridge's primary as a small white triangle against the chart at the planned surfacing coordinates. Diego had been at the polar-operations console since 0410. His dead-reckoned position from the integration ledger across fourteen days of submersion - DVL forward, gyro heading, eight transponder triangulations, three bathymetric matches against the chart - had placed the boat at a position whose offset from the GPS fix Diego logged at the moment the fix arrived. The offset was four hundred and twelve metres. Across six hundred kilometres of under-ice routing. He said it once, into the bridge audio, without staging: *integration ledger holds. Offset four-twelve metres, bearing two-eight-seven.* The bridge officer logged the offset. Mikael acknowledged. Diego did not say anything else. He had carried the boat to within four hundred metres of where the surface fix said the boat was, on fourteen days of instruments that did not see the surface and a chart that did not see the ice, and he had not made the offset into a moment. The not-making was the discipline he had been practising for fifteen years on this kind of routing. I noted the offset. I noted that he had not announced it.
 
-I came up the ladder to the bridge cap and stood at the rail with the wind on my face for the first time since Day 7. After fourteen days inside a sealed hull the wind on the face is a thing the body takes in as a fact that is no longer abstract. The air temperature, the swell period, the moisture on the deck plates from the surface spray. The logging would happen at the watch handoff.
+The ladder to the bridge cap took thirty seconds. At the rail, the wind hit the face for the first time since Day 7. After fourteen days inside a sealed hull the wind on the face is a thing the body takes in as a fact that is no longer abstract. The air temperature, the swell period, the moisture on the deck plates from the surface spray. The logging would happen at the watch handoff.
 
-I went forward to the comm space.
+Forward to the comm space.
 
 ---
 
@@ -49,7 +49,7 @@ I said: *the link.*
 
 She said: *the link is up. Reconciliation against Punta Arenas completed at oh-six-fourteen-forty-one. The gossip layer caught the consortium ports without reordering. Every counter-signature the consortium queued during the segment landed in the audit log in arrival order; nothing was rejected; nothing required manual reconciliation. The provenance through the partition transition is what Joel said it would be. The log is not lying about the segment.*
 
-I noted the sentence. The sentence had the same shape as the sentence she had given me on the morning of Day 7 in this same compartment, with the relay layer dormant in the level grey the architecture used for operational states that were not faults. The architecture had now been exercised across a partition transition and the comm officer who carried it was reporting that the transition had not produced a fault. The fact was the fact. Wanjiru was the kind of officer who reported the fact at the same volume regardless of which way the fact went.
+The sentence landed. It had the same shape as the sentence she had given me on the morning of Day 7 in this same compartment, with the relay layer dormant in the level grey the architecture used for operational states that were not faults. The architecture had now been exercised across a partition transition and the comm officer who carried it was reporting that the transition had not produced a fault. The fact was the fact. Wanjiru was the kind of officer who reported the fact at the same volume regardless of which way the fact went.
 
 I said: *the priority queue.*
 
@@ -65,7 +65,7 @@ She nodded. She returned to the screen.
 
 ---
 
-I had thirty seconds at her shoulder when Diego came forward from the bridge with a hand-written list on a half sheet of paper.
+Thirty seconds at her shoulder, then Diego came forward from the bridge with a hand-written list on a half sheet of paper.
 
 The list was three lines, the lines small and dense and angled slightly as Diego's pencil always angled, the third line underlined twice. He had been on the bridge through the surfacing sequence; he had been monitoring the polar-operations exchange the consortium ran against the Argentine and Chilean stations during the surface windows; he had a question that needed Wanjiru's authorization before the morning's polar-operations call.
 
@@ -93,11 +93,11 @@ He said it the way Diego said *acknowledged* when an operational decision had be
 
 The exchange had taken thirty-six seconds. I had not spoken. I had caught every line of it.
 
-I went forward to the wardroom. I did not say anything to either of them on the way out.
+Forward to the wardroom, without a word to either of them on the way out.
 
 ---
 
-I sat in the wardroom with the cooling carafe of the night-watch coffee and made a cup. The coffee was hotter than I had been expecting it to be. I sat with what I had just watched.
+The wardroom. The cooling carafe of the night-watch coffee. A cup, hotter than expected. Sat with what I had just watched.
 
 The prior mission had failed on a request that resembled Diego's. Not the same shape. Different operator, different system, different consortium. The shape was the same. An exception had been requested on operational grounds. The operator had been competent and trusted and right about the immediate operational case. The officer authorizing the exception had been competent and trusted and right about the immediate operational case. The exception had cleared in good faith because the documented path was slower. Three months later, in a downstream case nobody in the original authorization had been thinking about, the exception had been the surface on which the failure landed.
 
@@ -109,9 +109,9 @@ Stefan, on the mission's last operational day, had said: *we did what we thought
 
 I drank the coffee.
 
-I had been taking Wanjiru's measure since Day 0 in the texture I measured senior officers in - operational tempo, breath, eye contact, the volume she did not raise when she was saying things that needed to land. The texture was the one I had taken Joel's measure at. Both had been hired for the same reason. Not until thirty-six seconds in the comm space this morning had I watched her exercise the part of her discipline that had been the part I hired her for. She had drawn the line at the same volume she had said *the link is up*: without making Diego smaller, naming the procedure, offering the documented path, costing it in minutes, naming the contingency if the path missed the window. She stayed in the chair. The hum resumed when her hand reached the keyboard.
+Wanjiru's measure had been running since Day 0 in the texture I measured senior officers in - operational tempo, breath, eye contact, the volume she did not raise when she was saying things that needed to land. The texture was the one I had taken Joel's measure at. Both had been hired for the same reason. Not until thirty-six seconds in the comm space this morning had I watched her exercise the part of her discipline that had been the part I hired her for. She had drawn the line at the same volume she had said *the link is up*: without making Diego smaller, naming the procedure, offering the documented path, costing it in minutes, naming the contingency if the path missed the window. She stayed in the chair. The hum resumed when her hand reached the keyboard.
 
-I noted what I had seen. I went back to the wardroom desk to read the inbound queue.
+What I had seen was noted. Back to the wardroom desk to read the inbound queue.
 
 ---
 
@@ -131,15 +131,15 @@ This was the first time the name had appeared on the boat. The packet at Punta A
 
 The framing had Stefan's preliminary results in the third paragraph and a footnote on the fourth page and an institutional acknowledgment that the rival mission's findings would be the subject of the consortium's normal multi-mission cross-validation procedure once both consortia had filed full results. The framing was institutionally clean. The framing did not editorialize. The framing also did not hide the fact that on the morning of Day 21, with the Nansen ten days from Segment 2 and three weeks from the second surface window and five weeks from final docking, Stefan's findings were already on the cycle and mine were not.
 
-I closed the packet.
+The packet was closed.
 
 ---
 
-I went forward to the comm space again at 0734.
+At 0734, forward to the comm space again.
 
 Wanjiru and Diego were at the station. The documented key-issuance chain was running. The progress bar on the formal-issuance routine was at the seventy-percent mark. Diego had a notebook open on the desk between them; he was writing in the notebook in the angled hand he wrote in. The hum was on. The tempo was unchanged.
 
-I stood at the door for a second before I came in. Wanjiru looked up. Diego looked up. The hum continued.
+A second at the door before coming in. Wanjiru looked up. Diego looked up. The hum continued.
 
 I said: *the press packet.*
 
@@ -157,15 +157,15 @@ She nodded. She turned to the screen.
 
 Wanjiru was, on the morning of Day 21, the operator on whose triage the architectural-political contest's near-term timing depended. The contest's timing was the surface window's clock. The contest's truth - what survived to the consortium's institutional record from the Nansen's first segment in time to be read against Stefan's preliminary results - was what Wanjiru chose to push. She was choosing well. The contest was not the partition; the contest was the surface; the surface was the work I had hired Wanjiru for, and on the morning of Day 21 the work was being done.
 
-I went to the bridge.
+To the bridge.
 
 ---
 
-I stood at the bridge cap for the rest of the morning. The carrier-acoustic floor under the boat was the carrier-acoustic floor of the open ocean now; the boat was at the surface; the operational bearing was the surface bearing; the partition bearing I had spent fourteen days inside had been replaced by a bearing I had not been inside since Day 7. I let the body take in the change. The body absorbed the change at the tempo the body absorbed changes at, which was slower than the architecture had logged the partition transition and was the tempo I had been operating at for thirty years.
+The rest of the morning was at the bridge cap. The carrier-acoustic floor under the boat was the carrier-acoustic floor of the open ocean now; the boat was at the surface; the operational bearing was the surface bearing; the partition bearing spent inside for fourteen days had been replaced by a bearing not held since Day 7. The body took in the change at the tempo the body absorbed changes at, which was slower than the architecture had logged the partition transition and was the tempo I had been operating at for thirty years.
 
-I noted that I had not, in the half hour since the wardroom, named the rival's principal investigator in my own interior frame. I had taken Stefan's name in as it had appeared in the press packet. I had not named it again. The not-naming was not avoidance. It was the operational bearing doing what the operational bearing did. There would be a chapter, later, in which I would name the name at a different altitude. The chapter would not be this chapter. This chapter had a surface window forty-seven hours and twenty-six minutes long and a triage that was running and a cross-check that needed to land before the second window and a Mission Director who needed to be on the bridge and not in the staff history.
+Worth noting: in the half hour since the wardroom, the rival's principal investigator had not been named in my own interior frame. Stefan's name had come in as it appeared in the press packet. Not named again. The not-naming was not avoidance. It was the operational bearing doing what the operational bearing did. There would be a chapter, later, in which I would name the name at a different altitude. The chapter would not be this chapter. This chapter had a surface window forty-seven hours and twenty-six minutes long and a triage that was running and a cross-check that needed to land before the second window and a Mission Director who needed to be on the bridge and not in the staff history.
 
-I logged the morning at the bridge log. Wanjiru's prioritization was documented at the relay-queue filing. Diego's documented key issuance had cleared at 0746 and the polar-operations handshake at Belgrano had landed at 0758, two minutes ahead of the window. The consortium's Segment 1 acknowledgment had filed clean against the boat's outbound. I noted the cross-check observations were in the queue.
+The morning went to the bridge log. Wanjiru's prioritization was documented at the relay-queue filing. Diego's documented key issuance had cleared at 0746 and the polar-operations handshake at Belgrano had landed at 0758, two minutes ahead of the window. The consortium's Segment 1 acknowledgment had filed clean against the boat's outbound. The cross-check observations were confirmed in the queue.
 
 I did not log the press packet. I logged what the boat was doing.
 
@@ -175,34 +175,34 @@ The window stayed open through the rest of Day 21 and through Day 22.
 
 The mission record cleared the queue by 1840 on Day 21 - voice transcripts of the segment's decisions, signed audit-log entries, safety-critical incident threads. The queue cleared P0 and entered P1 at 1845. The surface-window sensor sweep on the rival mission's operations went into P1 with the cross-check observations Wanjiru had named at the morning. The sensor archive followed. The personal-author streams entered P3 on the night of Day 22; they would land what they landed before the window closed. The bulk multimedia in P4 was the bulk multimedia in P4. The carry was the carry.
 
-I did not, in the forty-seven hours between the surfacing and the dive, see Joel except in passing. He was at the engineering compartment for the watch rotation and in the conference space when the rotation released him; the surface window's work for him was the boat-internal verification that the relay layer's transition out of dormancy had not produced any subsystem state the surface mode was not handling correctly. He came forward to the wardroom three times across the window, ate, read the next slice of the inbound queue, and went back. I noted his presence each time. I did not name what I had been noting since the morning of Day 7 in his presence. The naming would arrive at the chapter the naming was for. The chapter was not this chapter.
+Joel appeared in passing across the forty-seven hours - the engineering compartment for the watch rotation, the conference space when the rotation released him. His surface-window work was the boat-internal verification that the relay layer's transition out of dormancy had not produced any subsystem state the surface mode was not handling correctly. He came forward to the wardroom three times across the window, ate, read the next slice of the inbound queue, and went back. His presence was noted each time. What had been noted since the morning of Day 7 in his presence went unnamed. The naming would arrive at the chapter the naming was for. The chapter was not this chapter.
 
 Wanjiru worked. She worked through the night of Day 21 and the morning of Day 22 with the kind of rotation she had set for herself before departure - six on, two off, six on. The hum was on across the rotation. Diego sat in the second chair through the polar-operations call and through the consortium's afternoon institutional sync and through the cross-check filing at 1340 on Day 22. He filed what he had to file at the documented chain. The chain held. The chain had not held in the prior mission. The chain held here.
 
-I ran the morning brief at 0830 on Day 21 and on Day 22, shortened both days to thirty-five minutes because the surface window's work was the work the brief did not need to direct. The crew came; the crew reported; the crew dispersed. I did not, in the seventy minutes the two morning briefs ran, mention HELVETICA-2 to the crew. The crew had read the press packet. The crew did not need their Mission Director to name the cycle for them. The crew needed their Mission Director to run the brief at the same tempo she had run the brief at on Day 12 and Day 14 and Day 19, which was the tempo that did not betray, in any line of what I said or any pause in how I said it, that the architectural-political contest had entered the boat's morning at 0617 the day before. I ran the brief. The brief was the brief.
+The morning brief ran at 0830 on Day 21 and on Day 22, shortened both days to thirty-five minutes because the surface window's work was the work the brief did not need to direct. The crew came; the crew reported; the crew dispersed. HELVETICA-2 did not come up in either brief. The crew had read the press packet. The crew did not need their Mission Director to name the cycle for them. The crew needed their Mission Director to run the brief at the same tempo she had run the brief at on Day 12 and Day 14 and Day 19, which was the tempo that did not betray, in any line of what was said or any pause in how it was said, that the architectural-political contest had entered the boat's morning at 0617 the day before. The brief ran. The brief was the brief.
 
 ---
 
 The boat re-submerged at 0530 local on Day 23.
 
-I gave the order at 0512. The boat's master ran the dive sequence in the seventeen minutes the dive sequence took. The trim corrected at 0526. The dive entry signed at 0530. The relay layer transitioned from active to dormant at 0530-and-some-seconds; Wanjiru reported the transition clean at 0531; the audit log accepted the transition; the gossip protocol noted the dormancy at the same level grey it had noted the dormancy at on the morning of Day 7. The pumps cycled. The trim held. The acoustic floor laid down again under the boat. The surface bearing receded; the partition bearing returned.
+The order to dive went at 0512. The boat's master ran the dive sequence in the seventeen minutes the dive sequence took. The trim corrected at 0526. The dive entry signed at 0530. The relay layer transitioned from active to dormant at 0530-and-some-seconds; Wanjiru reported the transition clean at 0531; the audit log accepted the transition; the gossip protocol noted the dormancy at the same level grey it had noted the dormancy at on the morning of Day 7. The pumps cycled. The trim held. The acoustic floor laid down again under the boat. The surface bearing receded; the partition bearing returned.
 
 The window had cleared P0 in full. The window had cleared P1 in full, including the surface-window sensor sweep on the rival mission's operations and the cross-check observations Wanjiru had filed at 1340 on Day 22. The window had cleared P2 partial. The window had cleared P3 to a fraction Wanjiru would name at the end-of-window filing. The window had not cleared P4 in any meaningful proportion. The bulk multimedia carried to the second surface window. The integrated read on the rival's preliminary results carried to the second surface window. The early observations of the rival mission that I would have wanted to put against Stefan's filing carried to the second surface window. Wanjiru noted the carry at the filing. The carry was documented. The carry was real. The window was closed.
 
-I noted what was on the boat at the moment of the dive that had been on the boat at the moment of the surfacing forty-seven hours and eighteen minutes earlier and was still on the boat. The bulk archive. The personal-author streams that had not made the window. The cross-check material that needed the next segment to integrate. The diary entries - the ones I had written during Segment 1 and the one I had written in the wardroom on the morning of Day 21 about Wanjiru and Diego - were not yet long-now durable. They had reached the window. They had not reached the relay. They were on the boat. They would be on the boat for the duration of Segment 2. They were preserved on the same terms as the people who had written them, which was the same terms as the boat that carried them, which was the terms the architecture had been honest about since the morning of Day 7.
+Still on the boat, at the moment of the dive, what had been on the boat at the moment of the surfacing forty-seven hours and eighteen minutes earlier. The bulk archive. The personal-author streams that had not made the window. The cross-check material that needed the next segment to integrate. The diary entries - the ones written during Segment 1 and the one written in the wardroom on the morning of Day 21 about Wanjiru and Diego - were not yet long-now durable. They had reached the window. They had not reached the relay. They were on the boat. They would be on the boat for the duration of Segment 2. They were preserved on the same terms as the people who had written them, which was the same terms as the boat that carried them, which was the terms the architecture had been honest about since the morning of Day 7.
 
-I closed the bridge log entry on the dive at 0537.
+The bridge log entry on the dive closed at 0537.
 
-I went to my desk.
+To the desk.
 
-I noted the morning at my command log: *Day 23, 0537 local. Surface window 1 closed at 0530; relay layer dormant; gossip protocol idle on the acoustic carrier; segment 2 commences at the routine tempo. Triage filing complete. Carryover documented; integrated read on rival mission's preliminary results carries to surface window 2. The architecture honored the partition transitions in both directions. Preservation status of the segment's record advanced to the consortium-port hold-state per the queue's prioritization. - A.Y.*
+The command log entry: *Day 23, 0537 local. Surface window 1 closed at 0530; relay layer dormant; gossip protocol idle on the acoustic carrier; segment 2 commences at the routine tempo. Triage filing complete. Carryover documented; integrated read on rival mission's preliminary results carries to surface window 2. The architecture honored the partition transitions in both directions. Preservation status of the segment's record advanced to the consortium-port hold-state per the queue's prioritization. - A.Y.*
 
-I closed the terminal.
+Terminal closed.
 
-I went forward to the morning brief.
+Forward to the morning brief.
 
 The brief was at 0830. The crew was where the crew should be. The boat was where the boat should be. The architecture was where the architecture should be. The work was the work.
 
 The work was what would carry, between this morning and the second surface window, what the second surface window's clock would let me put against the cycle that had named Stefan's name on the morning of Day 21 and would name it again, in some form I did not yet know the shape of, on the morning of Day 37 when the boat surfaced again and the queue ran again and the carry resolved.
 
-I went to the brief.
+To the brief.
