@@ -71,13 +71,21 @@ The *Nansen* was an under-ice research submarine of the Mark III class, ninety-o
 
 I did not say any of this out loud. I am not in the habit.
 
-I stepped over the gangway at 08:01. **Captain Mikael Halvorsen -** the *Nansen*'s ship master, Norwegian, sixty-one, the only man I have ever met who can drink a cup of coffee without breaking the conversation - met me at the sail with his hand out and a clipboard tucked under his arm in the way of men who do not actually need clipboards anymore but think they look right with them.
+I stepped over the gangway at 08:01. **Captain Mikael Halvorsen -** the *Nansen*'s ship master, Norwegian, sixty-one, the only man I have ever met who can drink a cup of coffee without breaking the conversation - met me at the base of the sail with his hand out and a clipboard tucked under his arm in the way of men who do not actually need clipboards anymore but think they look right with them.
 
 "Welcome aboard, Captain."
 
 "Good morning, Doctor." 
 
 We shook. He did not let go right away. This was not a romantic thing; this was Mikael's way of taking a person's pulse, which he did with everyone he respected and no one else, and I have decided over the years to be flattered by it rather than amused.
+
+He looked at the parka. "You brought it."
+
+"I did."
+
+"Wind east-southeast at twelve. Ice edge is where the chart says it is. Mooring crew clears at 08:30. No surprises in the morning brief."
+
+"Good."
 
 "How was the bakery," he said. 
 
@@ -105,9 +113,11 @@ Mikael smiled, very slightly. He has only the one smile. "I am going to bring he
 
 "All right then." 
 
-This is how command of a research boat passes from the ship master to the mission commander, in the only navy I have ever served, which is to say my own - quietly, in the sail, in front of nobody, between two people who have agreed in advance about which one of them is going to be wrong if everything goes wrong. The consortium has a longer version with signatures. I have signed the longer version. The signing does not change what happens in the sail.
+This is how command of a research boat passes from the ship master to the mission commander, in the only navy I have ever served, which is to say my own — quietly, at the base of the sail, with no formal witness to it, between two people who have agreed in advance about which one of them is going to be wrong if everything goes wrong. The consortium has a longer version with signatures. I have signed the longer version. The signing does not change what just happened.
 
 I went below.
+
+I caught the diesel on the first rung down — the boat still carrying the morning engine run, which meant the ventilation handover had not fully cycled, which meant someone had opened a hull fitting after 07:00. I noted it. I did not yet ask about it.
 
 -
 
@@ -117,7 +127,7 @@ I did the thing I do. I will not call it a speech. The consortium calls it a *mi
 
 With the benefit of what I learned later, I am leaving this on the page: I had read all three. I had considered all three acceptable. I am not going to pretend I caught something I did not catch.
 
-Nobody raised an objection. **Wanjiru Kamau**, my survey lead, asked a clarifying question about the watch rotation that was not really a clarifying question - the wardroom still smelled of diesel from the morning engine run, which meant the ventilation handover had not fully cycled, which meant someone had opened a hull fitting after 07:00, which I noted and did not yet ask about - she asked it because she asks one clarifying question at every briefing whether or not she has one, on the grounds that it makes everyone else feel less stupid for asking theirs. It is the kind of thing she does. I answered her. She nodded. She wrote something on a notepad I could not read from across the table.
+Nobody raised an objection. **Wanjiru Kamau**, my survey lead, asked a clarifying question about the watch rotation that was not really a clarifying question — she asks one at every briefing whether or not she has one, on the grounds that it makes everyone else feel less stupid for asking theirs. It is the kind of thing she does. I answered her. She nodded. She wrote something on a notepad I could not read from across the table.
 
 I closed the briefing at 08:34. I told them to be on station by 09:00. I told them, with a directness I did not soften, that nobody was going to die on this mission if I could help it, and that I was going to help it.
 
@@ -173,7 +183,7 @@ Mikael brought the *Nansen* out of Punta Arenas harbor at 09:14 in a wind I woul
 
 I took her out into the Strait.
 
-The Strait of Magellan in February is the color of the inside of a slate and is not, contrary to what every consortium pamphlet I have ever read insists, *beautiful*. It is a serious piece of water. It does not require my appreciation. I have stopped giving it. We rode the surface for the first eleven hours. The survey plan called for a long initialization run on the cable instrumentation before submersion. Mikael had also told me, in the sail, that he wanted to see the boat handle in the wind one more time before he handed her off completely - a thing he was no longer entitled to want, and which I let him have anyway.
+The Strait of Magellan in February is the color of the inside of a slate and is not, contrary to what every consortium pamphlet I have ever read insists, *beautiful*. It is a serious piece of water. It does not require my appreciation. I have stopped giving it. We rode the surface for the first eleven hours. The survey plan called for a long initialization run on the cable instrumentation before submersion. Mikael had also told me, on the bridge, that he wanted to see the boat handle in the wind one more time before he handed her off completely - a thing he was no longer entitled to want, and which I let him have anyway.
 
 I ate with Joel at 11:31 in the wardroom, with Priya and Wanjiru and Tomás and three others I am not going to name in this chapter, because they are going to matter later and I do not want to introduce them in a paragraph about a meal. Joel ate. I watched him eat. He noticed me watching him eat and did not say anything about it. He has gotten better, over the years, at not saying things about it.
 
@@ -205,7 +215,7 @@ I am leaving this on the page not because the feeling turned out to be correct -
 
 I slept for three hours and forty minutes. I had a watch.
 
-The *Nansen* ran on the surface through the Strait of Magellan all night. The wind held. The boat handled. Mikael, in the sail, told me later that he had stayed up an extra hour past his own watch because he wanted to feel her one more time in weather, and I did not blame him for that either.
+The *Nansen* ran on the surface through the Strait of Magellan all night. The wind held. The boat handled. Mikael, on the bridge, told me later that he had stayed up an extra hour past his own watch because he wanted to feel her one more time in weather, and I did not blame him for that either.
 
 We cleared the Strait at 04:18 on the fifteenth.
 
