@@ -35,7 +35,7 @@ The light at 0708 on Day 37 was a green I had seen before. Sixteen days earlier 
 
 The architecture had spent sixteen days alone on the boat, and the architecture was reporting clean.
 
-I went forward to the comm space.
+The comm space was forward. I went.
 
 ---
 
@@ -47,7 +47,7 @@ I said: *the link.*
 
 She said: *the link is up. Reconciliation against Punta Arenas completed at oh-seven-fifteen-twelve. Helsinki cleared at oh-seven-fifteen-eighteen against the parallel port. The gossip layer caught both at the same arrival horizon; the audit log accepted Day-23-to-Day-37 with no reordering. Two crew-node counter-signatures arrived out of strict chronological order against my local clock and inside the protocol's tolerance window. The gossip layer reconciled them at the consortium horizon with no escalation. Joel's spec calls this expected behavior at the second reconciliation under sustained drift. The log is not lying about the segment.*
 
-I noted it. The architecture had now been exercised across two partition transitions; the comm officer who carried it was reporting clean on both. The fact compounded. Wanjiru reported the compounding at the same volume she had used the first time. (Which is the discipline, as it turned out. An officer who raises her voice the second time the architecture works is an officer who did not believe it would work the first.)
+The architecture had now been exercised across two partition transitions; the comm officer who carried it was reporting clean on both. The fact compounded. Wanjiru reported the compounding at the same volume she had used the first time. (Which is the discipline, as it turned out. An officer who raises her voice the second time the architecture works is an officer who did not believe it would work the first.) Noted.
 
 I said: *the priority queue.*
 
@@ -67,11 +67,11 @@ She said: *I have an hour at the second-watch handoff. Bring the formal log; I w
 
 I said: *acknowledged.*
 
-I went to the bridge.
+The bridge. I went.
 
 ---
 
-I ran the morning brief at 0830 at the tempo I had used on Day 21. The crew came; the crew reported; the crew dispersed. In the thirty-five minutes the brief ran, I did not mention HELVETICA-2 once. They had read Stefan's preliminary in the inbound batch the way they had read the press packet at the first surfacing — without help, and without needing me to name what they had already named. The brief's job was to run at the tempo that did not betray that the architectural-political contest was now on the boat's clock. (Briefings, as it turned out, do most of their work in what the briefer chooses not to bring up.) I ran the brief.
+The morning brief ran at 0830 at the tempo from Day 21. The crew came; the crew reported; the crew dispersed. In the thirty-five minutes the brief ran, I did not mention HELVETICA-2 once. They had read Stefan's preliminary in the inbound batch the way they had read the press packet at the first surfacing — without help, and without needing me to name what they had already named. The brief's job was to run at the tempo that did not betray that the architectural-political contest was now on the boat's clock. (Briefings, as it turned out, do most of their work in what the briefer chooses not to bring up.) I ran the brief.
 
 Diego sat in for the polar-operations slot, his bridge jacket still on, the collar high against a wind he had carried down from the surfacing watch. Three items, two routine, the third a sensor-data exchange with the Belgrano station Wanjiru had cleared on the documented chain at the first surfacing. Clean. Weather window short. The ice-edge position against the consortium model running half a degree south of forecast.
 
@@ -79,7 +79,7 @@ Priya reported the instrumentation layer's segment-end state. She had run the sc
 
 Sabina reported the science. Hiroshi reported the data-console state. Maria reported medical (a wrist Joel had jammed and not mentioned; she had mentioned it for him). Joel reported engineering. Wanjiru gave the relay-queue state at the abridged tempo the morning brief used. The brief closed at 0905.
 
-I went to the wardroom desk and pulled the formal log for Days 21 through 36 against the Sunfish archive's Surface 1 sensor sweep on HELVETICA-2.
+At the wardroom desk: the formal log for Days 21 through 36 against the Sunfish archive's Surface 1 sensor sweep on HELVETICA-2.
 
 ---
 
@@ -95,7 +95,7 @@ She tapped the laptop. The Sunfish archive's pull came up - four time slices, th
 
 She said: *claim one is the claim the archive contradicts. Inside the seventy-three minutes of usable signal, the archive logs two periods totaling nineteen minutes during which HELVETICA-2's uplink to Bremerhaven was either dormant or running at a latency inconsistent with continuous one-forty-millisecond median. The first period — eleven minutes — overlaps a satellite-geometry window with degraded conditions on both sides; the weather could explain it. The second — eight minutes — has no degraded geometry on either side. The rival's signal was on our sweep at full envelope strength, and the uplink-shaped traffic was not where uplink-shaped traffic should have been. The pattern is consistent with the platform having transitioned to a local-store fallback for those eight minutes. If it did, claim one is wrong. Claim two — that the federated-trust layer handled all access-control decisions at the institutional horizon without local fallback — is the framing claim one rests on. If they fell to local fallback, either the access-control decisions deferred (claim two wrong one way) or they handled them locally (claim two wrong another way). I can't tell which from the sweep alone. What the sweep does tell me is that for eight minutes during Surface 1, the rival platform did not behave the way its principal investigator has filed at Bremerhaven that it behaved.*
 
-I read the panel a second time. The Nansen's observations were what the observations were. The rival's filing was what the rival's filing was. The two did not reconcile.
+The panel a second time. The Nansen's observations were what the observations were. The rival's filing was what the rival's filing was. The two did not reconcile.
 
 I said: *and the third claim.*
 
@@ -119,7 +119,7 @@ She did not, before she left the wardroom, name the architectural property the c
 
 She picked up the printed sheaf and the laptop and returned to the comm space.
 
-I drafted the cover.
+The cover. I drafted it.
 
 ---
 
@@ -133,21 +133,21 @@ I said: *send it.*
 
 She filed the cover and the technical page together at 1417, three hours and forty-three minutes ahead of the sixteen-hundred deadline. The two pages went into the second-day outbound queue at the elevated P1 position she had set for them at oh-five-forty. The bandwidth was thirty-one Mbps at filing; the two pages were eight kilobytes; the filing landed at the consortium's institutional inbox at 1417-and-some-seconds at Punta Arenas and at 1417-and-some-other-seconds at Helsinki. The hash of the filing chained against the audit log at 1418. The consortium's institutional response window had not yet closed. The cross-check had landed inside the window. The bandwidth had carried what the bandwidth needed to carry. (Eight kilobytes. Which is to say: the smallest object on the boat with the largest institutional surface area, and not, as it turned out, the largest object I would file before the dive.)
 
-I noted the filing. I went to the wardroom.
+Filing noted. The wardroom.
 
 ---
 
-I had a cup of tea in the wardroom at 1438. The cup was the same metal cup with the small dent in the handle that I had been carrying since the Drake. The tea was hotter than I had expected — bergamot, the steam rising in a thin column against the wardroom light, the rim warm against my palm before I had decided to lift it. I had not made the tea.
+At 1438 in the wardroom: a cup of tea. The same metal cup with the small dent in the handle that I had been carrying since the Drake. The tea was hotter than expected — bergamot, the steam rising in a thin column against the wardroom light, the rim warm against my palm before I had decided to lift it. I had not made the tea.
 
 Joel was at the wardroom table at the far end. He was reading something on his laptop with the kind of stillness he read at. He looked up when I came in. He nodded. He went back to the laptop.
 
 The cup was at my elbow. He did not look up. I drank the tea.
 
-I had been tracking this since Day 22, when he had set a cup of coffee at my elbow at 0317 in the night watch without making the setting-down a thing. That was sixteen days ago. The naming arrived now, at 1438, without changing what the morning held. I did not act on it. He did not see that I had seen.
+Day 22 was when he had set a cup of coffee at my elbow at 0317 in the night watch without making the setting-down a thing. That was sixteen days ago. The naming arrived now, at 1438, without changing what the morning held. I did not act on it. He did not see that I had seen.
 
 ---
 
-I went forward to the comm space at 1610.
+Forward to the comm space at 1610.
 
 Wanjiru was at her station. The cross-check filing was confirmed against both consortium ports; Punta Arenas had pulled into the active read-stack at 1530, Helsinki at 1531. The consortium's procedure required a forty-eight-hour read-period the window didn't contain, so no institutional response would file before the dive — but the cross-check sat on the consortium's desk inside the bandwidth window while Stefan's filing was still the cycle's active document. (Which is to say: ours was the second thing they would read, with the first still warm.) The institution would respond on the institution's clock. The cross-check had landed.
 
@@ -169,7 +169,7 @@ She said, without looking up: *one more item for the transit-north review queue.
 
 She did not say what the pattern was. She said what she had done with it.
 
-I stood at the door of the comm space a second longer than I needed to, then went to the bridge. The hum was on. The relay queue ran. The consortium's clock and the boat's clock were reconciling at the bandwidth Wanjiru's triage had budgeted, and the architecture compounded at two cycles, intact.
+A second at the door of the comm space, a beat longer than necessary, then to the bridge. The hum was on. The relay queue ran. The consortium's clock and the boat's clock were reconciling at the bandwidth Wanjiru's triage had budgeted, and the architecture compounded at two cycles, intact.
 
 I went to the bridge.
 
@@ -187,18 +187,18 @@ The cross-check held its position in the consortium's active read-stack across b
 
 The boat re-submerged at 0500 local on Day 39.
 
-I gave the order at 0442. Mikael ran the dive sequence in the eighteen minutes the dive sequence took. Trim corrected at 0457. Dive entry signed at 0500. The relay layer transitioned from active to dormant; Wanjiru reported the transition clean at 0501; the audit log accepted it; the gossip protocol noted the dormancy at the same flat grey it had used at the end of Segment 1. The pumps cycled. The trim held. The acoustic floor laid down again under the boat, the dull metal hum the body knew now without thinking about it. The surface bearing receded. Ten more days against the chart.
+The order went at 0442. Mikael ran the dive sequence in the eighteen minutes the dive sequence took. Trim corrected at 0457. Dive entry signed at 0500. The relay layer transitioned from active to dormant; Wanjiru reported the transition clean at 0501; the audit log accepted it; the gossip protocol noted the dormancy at the same flat grey it had used at the end of Segment 1. The pumps cycled. The trim held. The acoustic floor laid down again under the boat, the dull metal hum the body knew now without thinking about it. The surface bearing receded. Ten more days against the chart.
 
 The window had cleared P0 in full and P1 in full, including the cross-check on HELVETICA-2 and the underlying archive pull. P2 cleared partial. A fraction of P3 cleared — Wanjiru would name the exact line at the end-of-window filing. P4 did not. The bulk multimedia from both segments carried to final docking, and the personal-author streams that had not made the window carried with them. Some of my diary entries had landed; some had not. The architecture was honest about the carry. The window was closed.
 
-I noted what was still on the boat at the moment of the dive: the bulk archive, the unsent diary, the bulk multimedia. What had filed: the integrated read on HELVETICA-2. The two-page cross-check was on the consortium's desk. The institutional response would file on the institution's clock, and Stefan's name was on that clock now in a way it had not been before the cross-check went out. The architecture had honored two partition transitions in both directions. The forensic property the design preserved had been the property the cross-check ran on, on the second day of the second window. The Nansen had supplied evidence the rival's architecture could not have supplied against itself. Wanjiru had done the work that was hers to do.
+Still on the boat at the moment of the dive: the bulk archive, the unsent diary, the bulk multimedia. What had filed: the integrated read on HELVETICA-2. The two-page cross-check was on the consortium's desk. The institutional response would file on the institution's clock, and Stefan's name was on that clock now in a way it had not been before the cross-check went out. The architecture had honored two partition transitions in both directions. The forensic property the design preserved had been the property the cross-check ran on, on the second day of the second window. The Nansen had supplied evidence the rival's architecture could not have supplied against itself. Wanjiru had done the work that was hers to do.
 
-I closed the bridge log entry on the dive at 0508.
+Bridge log entry on the dive: closed at 0508.
 
-I went to my desk.
+The desk.
 
-I noted the morning at my command log: *Day 39, 0508 local. Surface window 2 closed at 0500; relay layer dormant; gossip protocol idle on the acoustic carrier; segment 3 commences at the routine tempo. Triage filing complete. Cross-check on HELVETICA-2 filed at 1417 Day 37 against both consortium ports; consortium institutional read-stack active; institutional response window opens Day 41. Carryover documented; bulk multimedia and remaining personal-author streams carry to final docking. The architecture honored the second partition transition in both directions. Audit log compounds at two cycles; provenance intact. - A.Y.*
+Command log, 0508 local, Day 39: *Day 39, 0508 local. Surface window 2 closed at 0500; relay layer dormant; gossip protocol idle on the acoustic carrier; segment 3 commences at the routine tempo. Triage filing complete. Cross-check on HELVETICA-2 filed at 1417 Day 37 against both consortium ports; consortium institutional read-stack active; institutional response window opens Day 41. Carryover documented; bulk multimedia and remaining personal-author streams carry to final docking. The architecture honored the second partition transition in both directions. Audit log compounds at two cycles; provenance intact. - A.Y.*
 
-I closed the terminal.
+Terminal closed.
 
 The wardroom was quiet. The hum was on. The boat had ten days against the chart. Sync queue empty. Relay closed. Diving.
