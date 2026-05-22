@@ -37,7 +37,7 @@ plants-paid:
 
 *Reduced-capability operation continuing at standing. Compute hub offline since Mission Day 47. Per-laptop nodes operational at standing. Heavy-LLM hosting unavailable; full-archive RAG index unavailable; cross-corpus tooling unavailable. Forensic-substrate analysis continues at laptop-class against the priority-list fifth item.*
 
-*Crew nominal. Reyes at the standing medical level since Mission Day 49. Diego at the polar-operations console at the standing rotation. Bridge watch handed to Nakamura at 0600. Mission posture: routine.*
+*Crew at eleven since Mission Day 47. Reyes at the standing medical level since Mission Day 49. Polar-operations console reassigned to Nakamura against the surface-approach watch the IAA had asked Sá to stand. Bridge watch handed to Hiroshi at 0600. Mission posture: routine under reduced-count protocol.*
 
 *- A. Yusupova, Mission Director. Filed; hash a4c2...71fd.*
 
@@ -47,15 +47,23 @@ The boat at the surface in autumn was a different boat.
 
 Same hull. Same crew. Same mission. The light was the variable. Forty-eight days at the gradient and six more at reduced capability, and now the September sun came through the wardroom port at the western angle and lit the back wall in a wedge it had not lit since Belgrano-II. The crew kept finding excuses to walk through that wedge.
 
-The transit was four days. Punta Arenas was four days at the surface-transit rate against the Drake's standing September swell. The boat was running at the surface-rotation cycle the manual specified. Hiroshi had the helm. Diego had the polar-operations console for the surface-approach watch the IAA had asked him to stand. Wanjiru had the comm node working the priority queue against the bridge channel. Joel was at the engineering compartment on the diagnostic cycle. Priya was at the lab compartment. Sabina was closing the cross-jurisdictional procurement-audit ledger by hand. Maria was at the medical bay. The boat was running.
+The transit was four days. Punta Arenas was four days at the surface-transit rate against the Drake's standing September swell. The boat was running at the surface-rotation cycle the manual specified. Hiroshi had the helm. Nakamura had the polar-operations console for the surface-approach watch the IAA had asked Diego to stand — the watch reassigned at the post-cascade rotation against the empty seat, in the small clean way the IAA's reassignment-after-loss protocol said it had to be done. Wanjiru had the comm node working the priority queue against the bridge channel. Joel was at the engineering compartment on the diagnostic cycle. Priya was at the lab compartment. Sabina was closing the cross-jurisdictional procurement-audit ledger by hand. Maria was at the medical bay. The boat was running at eleven.
 
 The wardroom held the conversation that was not all operational, which was its own kind of report. Lights on the surface cycle the manual specified. Meals at the new rotation. The radio on at the low volume Sabina had set - some Chilean classical station whose signal kept fading, which Sabina either had not noticed or was choosing to ignore. The crew was no longer narrating the mission to itself. The crew was just in the room.
 
 The list of *queries to run when we surface* sat on the page at the desk in my cabin. Twenty-five items at the start of the transit. I had not added many. The questions were what the per-laptop could not answer; they would wait until the consortium-port mirror handshook at Punta Arenas. I read the list once before watch handoff and once before dinner, and the list did not require additions - it required closing.
 
-Diego was at the wardroom table at 1410 against the off-watch hour. He had a stack of pages at the table. The pages were the letter to María Elena. He had been writing it for the back five days on the per-laptop against the canonical authored-content archive, and against the IAA's institutional-Spanish practice, and against the back thirty-four years of his marriage. The leather mate-cup with the unpolished bombilla was beside the pages; the kettle was on the warmer. He was writing slowly. The pen moved the way a pen moved when the writer had carried the question for the duration of the transit and was now writing the answer at the rate the answer was due. He did not look up when I came through for tea. I poured the tea. I went out.
+Maria had asked me to come to Diego's cabin at 1410 against the off-watch hour. We were sorting his personal effects against the IAA's standing-personal-effects protocol, which had two columns: what returned with the body, what returned with the small crate.
 
-The pages were Diego's. The pages would reach María Elena Vargas at Belgrano at the Punta Arenas surface window through the consortium's communications channel against the priority queue Wanjiru had set. The pages did not require my reading. The pages required Punta Arenas.
+The leather mate-cup with the unpolished bombilla was on the desk. The cup went with the body. The bombilla wax was in the small jar Diego had kept beside the kettle in the wardroom for thirty-four years; Maria had moved it to the desk overnight, because she knew what it was for before I did.
+
+On the desk was a stack of pages. The pages were the letter to María Elena. He had been writing it across the transit on the per-laptop against the canonical authored-content archive, and against the IAA's institutional-Spanish practice, and against the back thirty-four years of his marriage. The last page carried his hand to the bottom margin. The page after it was blank. The pen was capped at the top of the blank page where he had laid it down before going on watch the morning of Day forty-seven.
+
+Maria said: *the letter requires sealing tonight. The Punta Arenas surface window opens at 0441 on Day fifty-six. The next-of-kin chain requires the sealed envelope before the gangway. I will hand the envelope from the gangway at 0728.*
+
+I said: *acknowledged.*
+
+The pages were Diego's. The pages would reach María Elena Vargas at Belgrano at the Punta Arenas surface window through the consortium's communications channel against the priority queue Wanjiru had set. The pages did not require my reading. The pages required Maria's hand and Diego's wax and the bombilla. The pages required Punta Arenas.
 
 ---
 
@@ -99,7 +107,7 @@ I did not say so aloud, even to myself. I went back to the file.
 
 Joel and Wanjiru worked the forensic-substrate analysis at the wardroom table at 1900 on Mission Day 54.
 
-The wardroom was empty in the post-dinner hour - Sabina logging logistics, Maria finishing Joel's medical checkpoint, Hiroshi on the bridge, Priya in the lab on the schema-evolution annotations, Diego in his cabin with the letter. Joel and Wanjiru at the table. Me at the corner. Two per-laptops between them, neither closed for five days.
+The wardroom was empty in the post-dinner hour - Sabina logging logistics, Maria finishing Joel's medical checkpoint, Hiroshi on the bridge, Priya in the lab on the schema-evolution annotations. Diego's cabin was sealed; the letter was on the desk where Maria and I had left it at 1410. Joel and Wanjiru at the table. Me at the corner. Two per-laptops between them, neither closed for five days.
 
 They had been working the analysis at laptop-class since Day 49 - the thing Wanjiru had logged at 1207 on Day 48 and that Joel had read at the comm-node six hours later. Narrow data. What the per-laptops held; nothing more.
 
@@ -211,27 +219,27 @@ I left the paragraph in the file. I closed the laptop.
 
 ---
 
-Diego sealed the letter at 2147 on Mission Day 55.
+Maria and I sealed the letter at 2147 on Mission Day 55.
 
-He brought it to the wardroom. The pages were folded against the IAA's institutional stationery Diego had brought from Buenos Aires in his personal cargo allocation. The envelope was addressed in his hand to *María Elena Vargas, calle 11 de Septiembre, Belgrano, Buenos Aires, Argentina*. The address was what he had written on letters home from research stations across the back thirty-four years. The handwriting was Diego's. The seal was a routine paper seal.
+We sat at the wardroom table. The pages were folded against the IAA's institutional stationery Diego had brought from Buenos Aires in his personal cargo allocation. The envelope was addressed in his hand to *María Elena Vargas, calle 11 de Septiembre, Belgrano, Buenos Aires, Argentina*. The address was what he had written on letters home from research stations across the back thirty-four years. The handwriting was Diego's. The seal would be wax under the unpolished bombilla.
 
-He set the envelope on the wardroom table. The kettle was off the warmer.
+Maria warmed the wax over the wardroom kettle. The bombilla had been Diego's since 1991. The wax under it had been the seal on his letters home for thirty-four years — the silver unpolished where his hand had held it, which was the part María Elena would recognize first when the envelope reached her, before she read a word. I held the envelope flat against the table. Maria pressed the bombilla into the wax and lifted it.
 
-He said: *Director. The letter is ready. The letter is for posting at the Punta Arenas surface window through the consortium's communications channel against the priority queue. The letter is the recovery letter. The letter is what María Elena will read at the kitchen table at Belgrano when the consortium's office delivers it at the IAA institutional handshake.*
+The seal was Diego's seal. The pages were Diego's pages. The hand on the address was Diego's hand. The act was ours.
 
-I said: *acknowledged. The letter will carry at priority. Wanjiru will route it on the post-handshake mirror. María Elena will receive it at the IAA's communications office at the standing handshake.*
+Maria set the envelope between us on the table. The kettle was off the warmer.
 
-He said: *the letter says I am coming home. The letter says the mission has been the mission. The letter says I will not be on another boat. The letter says the small house at San Martín de los Andes is what we will buy. The letter says Sofía will know me at the surface for the years that are left for her to know me at the surface. The letter says nothing about the boat that does not need to be said in a letter. The letter is for María Elena.*
+She said: *the letter will carry at priority. Wanjiru will route it on the post-handshake mirror. María Elena will receive it at the IAA's communications office at the standing handshake. I will hand the envelope from the gangway at 0728 against the next-of-kin chain.*
 
 I said: *acknowledged.*
 
-He said: *Anna.*
+She said: *Anna.*
 
-He said it in the personal register he had used twice across the duration of the mission - once on Day 39 at the polar-operations console and once now. He had not used it across the cascade. He had not used it across the post-cascade. He used it now.
+She said it in the personal register no one had used to me across the duration of the mission. Diego had used it twice — once on Day thirty-nine at the polar-operations console and once on the morning before the cascade — and would not use it a third time. Maria had not used it across the cascade. Maria had not used it across the post-cascade. She used it now.
 
-I said: *Diego.*
+I said: *Maria.*
 
-He nodded. He took the envelope. He went to his cabin.
+She nodded. She took the envelope. She went to the medical bay against the standing-personal-effects safe.
 
 I sat at the wardroom table for the duration of the tea. The kettle was off. The radio was at the low background volume. The light from the surface port was at the September evening tone at the Drake's autumn latitude.
 
@@ -287,7 +295,7 @@ I closed the file. I closed the laptop. I went to bed.
 
 The boat was at twelve hours from the Punta Arenas approach at the morning brief on Mission Day 56.
 
-The brief was the surface-approach brief the manual specified. Hiroshi had the helm. Diego had the polar-operations console at the surface-approach watch he had asked to stand. Wanjiru had the comm node at the bridge channel's post-handshake throughput. Joel was at the engineering compartment. Priya was at the lab compartment closing the post-incident schema-evolution annotation queue. Sabina was closing the resupply manifest. Maria was at the medical bay closing Joel's recovery checkpoints.
+The brief was the surface-approach brief the manual specified. Hiroshi had the helm. Nakamura had the polar-operations console at the surface-approach watch — the watch Diego had asked to stand and would not stand. Wanjiru had the comm node at the bridge channel's post-handshake throughput. Joel was at the engineering compartment. Priya was at the lab compartment closing the post-incident schema-evolution annotation queue. Sabina was closing the resupply manifest. Maria was at the medical bay closing Joel's recovery checkpoints.
 
 I read the consoles. The consoles read what they read. The Punta Arenas approach was at the horizon, the port mirror had acknowledged the priority list's first eight items, the regulatory filing was in flight on the post-handshake carrier.
 

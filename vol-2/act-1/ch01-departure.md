@@ -1,4 +1,4 @@
--
+---
 title: "Departure"
 volume: 2
 act: 1
@@ -20,7 +20,8 @@ plants-paid:
 last-measured: 2026-05-17
 last-measurement-result: 79/79 passes, zero warnings (yeoman)
 stage-advance-ratified-by: CIC 2026-05-17
--
+---
+
 # Chapter 1 - Departure
 
 I took my last breakfast alone in Punta Arenas on the fourteenth of February, at a bakery on Avenida Colón that knew today was the day and had not made anything of it, which was as it should be.
@@ -49,8 +50,6 @@ The granddaughter brought a second cup at 07:14, which was four minutes earlier 
 
 On my way to the door she handed me a white bakery box, three dozen kuchen de murta, for the crew - because I had mentioned on day three that we sailed on the fourteenth and she had not forgotten. She would not let me pay for it. I left the price of three days' breakfasts in the tip jar on the way out, which she pretended not to see.
 
--
-
 The walk from the bakery to the harbor was eleven minutes by the inland route and fifteen by the seafront, and I always took the longer way. There is a particular thing the wind does in Punta Arenas in February - comes off the Strait at a heading you would not choose for yourself, smelling of cold metal and not at all of salt - and I had decided years ago that I would rather be cold for fifteen minutes than warm for eleven.
 
 I should say, since I have brought it up: I do not like cold. Never have. I prefer, when given the choice, to be warm - twenty-five degrees, sun on a wall, the air doing nothing in particular. I have spent twenty-three years going to the coldest places on Earth for a living, and the contradiction has stopped, at this point, embarrassing me. The fee for the cold is paid by the consortium. They do not know this is what they are paying for.
@@ -65,51 +64,57 @@ The second was **Priya Iyer**, chemistry lead, walking up Pasaje O'Higgins with 
 
 The third was Joel, on the seafront walking the other direction and pretending not to see me. The pretending was a courtesy. It was the only thing I had ever asked of him that he was reliably good at.
 
--
-
 The *Nansen* was an under-ice research submarine of the Mark III class, ninety-one meters at the waterline, four hundred and eighty tons surfaced, rated to four hundred meters under continuous ice, and one of the four boats in the world that could do what the consortium needed done under the Filchner-Ronne ice shelf in the third week of February. I write the spec because the consortium archive expects it, and you can skim it. What you need to know is that the *Nansen*, from the dock, looked like a long matte-black ribbon laid against the water, with an ice-strengthened sail amidships, her diving planes folded vertical against it, and a tender already alongside her starboard quarter. When I walked up to her I felt the thing I always feel before taking command of a boat: *I am home, and the next three months are going to be cold, and both of these are true.*
 
 I did not say any of this out loud. I am not in the habit.
 
-I stepped over the gangway at 08:01. **Captain Mikael Halvorsen -** the *Nansen*'s ship master, Norwegian, sixty-one, the only man I have ever met who can drink a cup of coffee without breaking the conversation - met me at the sail with his hand out and a clipboard tucked under his arm in the way of men who do not actually need clipboards anymore but think they look right with them.
+I stepped over the gangway at 08:01. **Captain Mikael Halvorsen -** the *Nansen*'s ship master, Norwegian, sixty-one, the only man I have ever met who can drink a cup of coffee without breaking the conversation - met me at the base of the sail with his hand out and a clipboard tucked under his arm in the way of men who do not actually need clipboards anymore but think they look right with them.
 
 "Welcome aboard, Captain."
 
-"Good morning, Doctor." 
+"Good morning, Doctor."
 
 We shook. He did not let go right away. This was not a romantic thing; this was Mikael's way of taking a person's pulse, which he did with everyone he respected and no one else, and I have decided over the years to be flattered by it rather than amused.
 
-"How was the bakery," he said. 
+He looked at the parka. "You brought it."
 
-"The pastry passed inspection and will be reporting for duty." 
+"I did."
 
-"Good." he said with a lick of his lips.
+"Wind is from the east-southeast at twelve knots, steady and clean across the bow. The ice edge lies exactly where yesterday’s satellite pass said it would, a white line knifing across the chart and stopping the blue. Mooring crew will be off the lines by 08:30, gloves stowed and coffee cooling in paper cups just inside the dogged door. Nothing unexpected has moved in the night; the logs read flat, the radios are quiet, and for once the morning watch begins with no surprises to report."
 
-"The kindergarten teacher in Magadan won her award." 
+"Understood."
 
-"She did, good to hear." 
+"How was the bakery," he said.
 
-He let go of my hand. "Your bay is squared away. Joel has been on board since 05:30." 
+"The pastry passed inspection and will be reporting for duty."
 
-"Of course he has." 
+"I was hoping," he said with a lick of his lips.
+
+"The kindergarten teacher in Magadan won her award."
+
+"She did. I'm glad to hear it."
+
+He let go of my hand. "Your bay is squared away. Joel has been on board since 05:30."
+
+"Of course he has."
 
 Which meant the man on the seafront had been someone else. I noted the correction. I did not name it aloud. I had been thinking about Joel for ninety-three days, and the mind does what the mind does — including, when you give it ninety-three days, the call I am still not sure about, which he had carried since the pre-procurement review and which neither of us had named in the months since.
 
-"He is in the chemistry rack." 
+"He's in the chemistry rack."
 
-"Of course he is." 
+"Of course he is."
 
-Mikael smiled, very slightly. He has only the one smile. "I am going to bring her out of the harbor and turn her over to you at the channel mouth. Is that still what you want." 
+Mikael smiled, very slightly. He has only the one smile. "I am going to bring her out of the harbor and turn her over to you at the channel mouth. Is that still what you want."
 
-"It is what I want." 
+"It is what I want."
 
-"All right then." 
+"All right then."
 
-This is how command of a research boat passes from the ship master to the mission commander, in the only navy I have ever served, which is to say my own - quietly, in the sail, in front of nobody, between two people who have agreed in advance about which one of them is going to be wrong if everything goes wrong. The consortium has a longer version with signatures. I have signed the longer version. The signing does not change what happens in the sail.
+This is how command of a research boat passes from the ship master to the mission commander, in the only navy I have ever served, which is to say my own — quietly, at the base of the sail, with no formal witness to it, between two people who have agreed in advance about which one of them is going to be wrong if everything goes wrong. The consortium has a longer version with signatures. I have signed the longer version. The signing does not change what just happened.
 
 I went below.
 
--
+I caught the diesel on the first rung down — the boat still carrying the morning engine run, which meant the ventilation handover had not fully cycled, which meant someone had opened a hull fitting after 07:00. I noted it. I did not yet ask about it.
 
 The *Nansen*'s wardroom is six meters by three, with a long bolted table and seating for ten, and on the morning of departure it had eleven people in it and a pot of coffee that was already mostly gone. They stood up when I came in. That was the wrong thing to do, and Mikael had probably told them to do it anyway. I waved them back down before anyone could finish the standing.
 
@@ -117,7 +122,7 @@ I did the thing I do. I will not call it a speech. The consortium calls it a *mi
 
 With the benefit of what I learned later, I am leaving this on the page: I had read all three. I had considered all three acceptable. I am not going to pretend I caught something I did not catch.
 
-Nobody raised an objection. **Wanjiru Kamau**, my survey lead, asked a clarifying question about the watch rotation that was not really a clarifying question - the wardroom still smelled of diesel from the morning engine run, which meant the ventilation handover had not fully cycled, which meant someone had opened a hull fitting after 07:00, which I noted and did not yet ask about - she asked it because she asks one clarifying question at every briefing whether or not she has one, on the grounds that it makes everyone else feel less stupid for asking theirs. It is the kind of thing she does. I answered her. She nodded. She wrote something on a notepad I could not read from across the table.
+Nobody raised an objection. **Wanjiru Kamau**, my survey lead, asked a clarifying question about the watch rotation that was not really a clarifying question — she asks one at every briefing whether or not she has one, on the grounds that it makes everyone else feel less stupid for asking theirs. It is the kind of thing she does. I answered her. She nodded. She wrote something on a notepad I could not read from across the table.
 
 I closed the briefing at 08:34. I told them to be on station by 09:00. I told them, with a directness I did not soften, that nobody was going to die on this mission if I could help it, and that I was going to help it.
 
@@ -125,55 +130,51 @@ And then I put the white bakery box on the wardroom table and told them to enjoy
 
 This is the part the archive does not get.
 
--
-
 The chemistry rack is forward of frame thirty-six, port side, three steps down from the main passageway, and it has the only door on the boat that is not actually a hatch. I went there because Mikael had told me to, and because I always do. The honest reason was Joel Reyes. I had not spoken with him since the thirteenth of November in Bremerhaven, and ninety-three days is enough time to develop opinions about a man he has done nothing to deserve. I wanted to see him before we sailed. I wanted to confirm, with my own eyes, that he was the man I had decided ninety-three days ago not to think about, and not someone else.
 
 He was kneeling by the lower environmental sensor rack with a multimeter in his left hand and a coffee in his right. He had not heard me come in, or had heard me and was pretending. The cup was one I recognized. I noted this and did not remark on it. There was a laptop open on his bunk behind him.
 
-"Joel." 
+"Joel."
 
-He did not look up. "Doctor." 
+He did not look up. "Doctor."
 
-"You have been on the boat since 05:30." 
+"You have been on the boat since 05:30."
 
-"I have." 
+"I have."
 
-"Have you eaten." 
+"Have you eaten."
 
-"I have not." 
+"I have not."
 
-"Joel." 
+"Joel."
 
-"I will." 
+"I will."
 
-"When?" 
+"When?"
 
 He looked up. He had the same face. He was wearing a fleece I did not recognize, which I noted in spite of myself, and he had a smudge of thermal paste on his jaw he did not know about, which I did not tell him about. He was forty-four. He had built the diagnostic system the consortium had almost not funded. He had not been on the *Nansen* during the consortium final review in Bremerhaven, which was not a place for engineers - except for the part of it, late on the thirteenth of November, that was, briefly, a place for one.
 
-"When, Joel?" 
+"When, Joel?"
 
-"After channel handover." 
+"After channel handover."
 
-"That is not when you are going to eat. That is when you would like me to believe you are going to eat." 
+"That is not when you are going to eat. That is when you would like me to believe you are going to eat."
 
-He almost smiled. "After channel handover. With you." 
+He almost smiled. "After channel handover. With you."
 
-"Wardroom. 11:30." 
+"Wardroom. 11:30."
 
-"All right." 
+"All right."
 
-I left. 
+I left.
 
 I closed the door of the chemistry rack and stood in the passageway for approximately four seconds and did not think about anything in particular, which was a kind of thinking, and then I went up to the sail.
-
--
 
 Mikael brought the *Nansen* out of Punta Arenas harbor at 09:14 in a wind I would have called moderate and that the harbor pilot called *picado*, which is the Spanish word for *choppy* and also for *minced*, and which I have always thought captured the Strait better than either English word does. The pilot left us at the channel mouth at 09:41. The handover was done by 09:43. Mikael stepped back from the helm and put his hand on my shoulder once and said "She's yours, Doctor" in the tone of a man handing back a borrowed book, and I said "Thank you, Captain" in the tone of a woman receiving one, and that was that.
 
 I took her out into the Strait.
 
-The Strait of Magellan in February is the color of the inside of a slate and is not, contrary to what every consortium pamphlet I have ever read insists, *beautiful*. It is a serious piece of water. It does not require my appreciation. I have stopped giving it. We rode the surface for the first eleven hours. The survey plan called for a long initialization run on the cable instrumentation before submersion. Mikael had also told me, in the sail, that he wanted to see the boat handle in the wind one more time before he handed her off completely - a thing he was no longer entitled to want, and which I let him have anyway.
+The Strait of Magellan in February is the color of the inside of a slate and is not, contrary to what every consortium pamphlet I have ever read insists, *beautiful*. It is a serious piece of water. It does not require my appreciation. I have stopped giving it. We rode the surface for the first eleven hours. The survey plan called for a long initialization run on the cable instrumentation before submersion. Mikael had also told me, on the bridge, that he wanted to see the boat handle in the wind one more time before he handed her off completely - a thing he was no longer entitled to want, and which I let him have anyway.
 
 I ate with Joel at 11:31 in the wardroom, with Priya and Wanjiru and Tomás and three others I am not going to name in this chapter, because they are going to matter later and I do not want to introduce them in a paragraph about a meal. Joel ate. I watched him eat. He noticed me watching him eat and did not say anything about it. He has gotten better, over the years, at not saying things about it.
 
@@ -205,7 +206,7 @@ I am leaving this on the page not because the feeling turned out to be correct -
 
 I slept for three hours and forty minutes. I had a watch.
 
-The *Nansen* ran on the surface through the Strait of Magellan all night. The wind held. The boat handled. Mikael, in the sail, told me later that he had stayed up an extra hour past his own watch because he wanted to feel her one more time in weather, and I did not blame him for that either.
+The *Nansen* ran on the surface through the Strait of Magellan all night. The wind held. The boat handled. Mikael, on the bridge, told me later that he had stayed up an extra hour past his own watch because he wanted to feel her one more time in weather, and I did not blame him for that either.
 
 We cleared the Strait at 04:18 on the fifteenth.
 
