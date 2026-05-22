@@ -133,6 +133,8 @@ The dive continued.
 
 He named it first because it was the thing the architecture stood on. Every other property of the architecture was a property the local store enabled.
 
+*Each node on the boat is a complete, independent copy. It captures locally. It works without any other node present. When it can reach another node, it reconciles. When it cannot, it continues. Connection is not a requirement for operation. It is an opportunity for propagation.*
+
 *Every node on the boat has a local store. Yours, mine, Wanjiru's, Priya's, Hiroshi's, Sabina's, Diego's, Maria's, the boat's compute hub. Each is the same kind of database, holding the same data discipline - attests at capture, hash-chains, signs every write with the author's keys. On the surface the local stores are propagating to each other through the gossip protocol, and to the consortium through the relay layer. Under the ice they are propagating to each other on the acoustic-only mesh, and not propagating to the consortium because it is not reachable.*
 
 I said: *the gossip protocol on the acoustic mesh - that is operating right now.*
@@ -147,23 +149,7 @@ I said: *the same write under partition with the relay layer up - what is differ
 
 *The relay layer would push the write to the consortium ports on its own cadence. The push is a separate code path from the gossip protocol; the protocol moves writes between nodes in the local mesh, the relay layer moves them out to the consortium. Same write. Different transport. The relay layer is a service that propagates outward; the gossip protocol is a service that propagates within. Right now the inward service is running and the outward service is dormant.*
 
-He said *dormant* deliberately. He had said it in the four-sentence answer when I asked the first question. He had said it again now. I noted the repetition.
-
-I said: *dormant - name it for me.*
-
-He set the coffee down again. He had picked it up between the previous answer and this one. The set-down was deliberate.
-
-*The relay layer is not failing. It is not crashed. It is not hung. It is in the operational state the protocol designed for the case where there is no peer to talk to. The state is named, logged, and carries a duration field that increments while we are at depth. It is what the architecture is supposed to do when it cannot reach the consortium. Not a fault condition. An operational mode.*
-
-He paused. He added the sentence I would write down later as the load-bearing piece of the morning's exchange.
-
-*The architecture refuses to manufacture the appearance of mesh participation when no peer is reachable. The relay logs *dormant*. Not *retrying*. Not *intermittent*. Not *degraded*. *Dormant* is what the layer is. Anything else would be a lie the architecture refuses to tell.*
-
-I said: *acknowledged.*
-
-On the recruitment call he had been asked the same question, in different words - about cloud telemetry that decided to stop responding without telling him first. He had answered with *the gauge in front of you*. The answer this morning was the same answer in a different room. The relay layer was a gauge that did not pretend to read what it could not read. The gossip protocol was a gauge that did read what it could read. The architecture was the discipline that distinguished the two and labelled each correctly.
-
-The discipline was verified at depth. That was sufficient.
+He said *dormant* deliberately. He had said it in the four-sentence answer when I asked the first question. He had said it again now. I noted the repetition. I already had the answer. I did not ask again.
 
 The engineering compartment held the air it had held since the dive completed — pumps at the standing sub-surface cycle, the secondary recirculation at the manual's specified rate, the mineral trace at the back of the rack thicker than it had been at the surface. Joel's coffee sat at his right hand where he had set it down; it had been there since the dive sequence started and I had not watched it go cold, only noticed, now, that it had. The tea I had carried in from the wardroom and set on the second stool was in the same condition.
 
