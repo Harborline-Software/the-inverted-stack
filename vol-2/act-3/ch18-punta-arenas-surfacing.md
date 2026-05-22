@@ -52,7 +52,7 @@ plants-paid:
 
 The dock was at the angle the dock was at when the boat surfaced into a winter morning at fifty-three degrees south. The light was not yet morning; it was the cold pre-light that comes out of the Strait at the September hour before the sun has any work in the sky. The Punta Arenas waterfront was at its position. The consortium-port pier had the consortium's institutional flag on the mast at half-mast for the equinox observance and the working flag on the staff at the correct bearing; the Argentine port authority's jurisdictional pennant was on the secondary staff at the joint-protocol level; the Chilean flag was on the primary. The wind was southwesterly. The water was at the slack tide.
 
-I had been on the bridge through the surfacing-and-mooring sequence. The surfacing had taken eleven minutes against the procedure. Hiroshi had the helm; Wanjiru had the comm node at the bridge channel's post-handshake throughput. The polar-operations console was vacant against the watch-rotation gap since Mission Day 47. The mooring crew on the dock had set the spring lines first and the breast lines second, which was the consortium-port standing rule against the September swell. The gangway came across at 0438 against the boat's freeboard. The bridge channel acknowledged at protocol at 0441. The dockside team was at the gangway at 0443.
+The bridge had been my post through the surfacing-and-mooring sequence. The surfacing had taken eleven minutes against the procedure. Hiroshi had the helm; Wanjiru had the comm node at the bridge channel's post-handshake throughput. The polar-operations console was vacant against the watch-rotation gap since Mission Day 47. The mooring crew on the dock had set the spring lines first and the breast lines second, which was the consortium-port standing rule against the September swell. The gangway came across at 0438 against the boat's freeboard. The bridge channel acknowledged at protocol at 0441. The dockside team was at the gangway at 0443.
 
 The first to come across was a consortium-affiliate I knew by surname only - *Dr. Holm*, the Norwegian Polar Institute representative the consortium had standing on the Punta Arenas reception roster against the maiden-voyage protocol. He was in his fifties, in winter consortium issue, with the tablet that carried the institutional reception checklist in hand. Behind him: an Argentine port authority officer in IAA-secondary issue, with the customs paperwork in hand; a medical-clearance officer from the consortium's contracted clinic in Punta Arenas, in clinic issue, with the per-crew medical-clearance dossiers; the consortium's logistics officer for the supply-and-fuel reception, in port-issue, with the manifest. Four faces, four protocols, the institutional reception against the consortium handshake. They came across the gangway in the order the protocol specified.
 
@@ -60,7 +60,7 @@ Holm said: *Director Yusupova. Welcome to Punta Arenas. The consortium acknowled
 
 I said: *Dr. Holm. Acknowledged. The boat is yours at the consortium's disposal. The crew will disembark at the medical-clearance queue. The cargo manifest is at the post-handshake transfer.*
 
-The exchange was the institutional one the consortium handshake required. I had noted the words I had said and the words Holm had said and the order in which the four officers had come across the gangway. The noting would carry to the record at the institutional level.
+The exchange was the institutional one the consortium handshake required. The words exchanged — Holm's and mine, and the order in which the four officers had come across the gangway — would carry to the record at the institutional level.
 
 The medical-clearance officer began with Joel.
 
@@ -76,7 +76,7 @@ The reception room was on the second floor of the consortium-port building. The 
 
 Wanjiru had come up from the boat ten minutes after me. She had her per-laptop in its cold-weather sleeve and the cucu-notebook in her free hand. She set the per-laptop on the table at the room's far end and opened it. She did not sit. She watched the bridge channel come up at the post-handshake mirror's full-bandwidth allocation for the first time since Surface 2 on Mission Day 39.
 
-I watched her watch it.
+The watching was mutual in one direction only.
 
 The bandwidth meter on her per-laptop was at the post-handshake throughput. The throughput was at thirty-nine times the per-laptop level the boat had been carrying for the back nine days. The bulk that the post-leak laptop-class fallback could not handle began to stream against the consortium-port mirror at full rate. The priority queue closed item nine, item ten, item eleven, item twelve at the cadence at which Wanjiru tracked the queue at protocol. The cucu-notebook was open beside the per-laptop at the page Wanjiru had been writing on across the back nine days; the page from Day 48 was visible at the spine; the thirty-seven-hour question was still ringed in pencil at the page's center; Wanjiru was writing around it now, the institutional response forming on the page in real-time at the standing institutional bearing, the architecture of the standards body already taking shape in her grandmother's lined hand.
 
@@ -100,7 +100,7 @@ She did not say *I will draft it.*
 
 She said: *the minority opinion will need to be drafted.*
 
-I took in the half-beat at which she had not said the first-person form. The half-beat was the half-beat at which the standards-body institutional formation was already past her hand. She was reading the next page of work at the institutional level. She was not narrating. She was the kind of officer who read the next page and then opened the file and began.
+That half-beat — the one at which she had not said the first-person form — was the half-beat at which the standards-body institutional formation was already past her hand. She was reading the next page of work at the institutional level. She was not narrating. She was the kind of officer who read the next page and then opened the file and began.
 
 I said: *acknowledged.*
 
@@ -108,22 +108,22 @@ She nodded. She returned to the per-laptop. The bandwidth meter held at the post
 
 ---
 
-I went to the room's smaller table by the window. The window looked over the harbor at the pre-dawn. The list was in the inner pocket of my parka. I took it out. I unfolded it on the table beside the coffee.
+The smaller table by the window looked over the harbor at the pre-dawn. The list was in the inner pocket of my parka. Unfolded on the table beside the coffee, it had the weight of something carried across nine days.
 
 The list was in my handwriting. The list was on the back of a consortium meeting agenda from Mission Day 14 that I had been carrying as scratch paper since the leak. The list had grown across the back nine days at the rate the per-laptop had not been able to answer. The list was at twenty-six items at the morning brief on Mission Day 56. The list was now twenty-seven items because I had added one at the gangway.
 
-I opened my per-laptop. The bridge channel's post-handshake throughput pushed against the per-laptop at full allocation. The full-archive RAG index came up against the consortium-port compute resources at 0451. The heavy-LLM hosting came up at 0452 against the consortium-affiliate compute pool. The cross-corpus tooling came up at 0454.
+The per-laptop opened at 0450. The bridge channel's post-handshake throughput pushed against it at full allocation. The full-archive RAG index came up against the consortium-port compute resources at 0451. The heavy-LLM hosting came up at 0452 against the consortium-affiliate compute pool. The cross-corpus tooling came up at 0454.
 
 The list was answerable.
 
-I worked the technical items first. The thermal anomaly at the secondary sensor's reading stream from Mission Day 33 - the system answered against the full archive in eleven seconds; the anomaly was within the calibration drift the manufacturer had documented in a release note from 2024 that had not made it into the per-laptop's local cache. The bridge log inconsistency at 0414 on Mission Day 19 - the system answered against the full audit log; the inconsistency was a routine clock-skew event that had reconciled at the next gossip cycle and that I had not been able to verify against the bulk. The cross-mission baseline against the AARI Filchner-Ronne campaigns from 2018 and 2021 - the system answered; the Nansen's basal-melt readings were within the documented variance band; Diego's photographs from the under-ice transit on Mission Day 35 were the highest-resolution survey IAA had collected of the section; the survey would be the basis of the Filchner-Ronne paper at its draft state in Diego's authored-content archive, which the IAA would carry forward at the posthumous-publication protocol with María Elena as co-author of record per Diego's standing wish.
+The technical items went first. The thermal anomaly at the secondary sensor's reading stream from Mission Day 33 — the system answered against the full archive in eleven seconds; the anomaly was within the calibration drift the manufacturer had documented in a release note from 2024 that had not made it into the per-laptop's local cache. The bridge log inconsistency at 0414 on Mission Day 19 — the system answered against the full audit log; the inconsistency was a routine clock-skew event that had reconciled at the next gossip cycle and that had not been verifiable against the bulk at the per-laptop level. The cross-mission baseline against the AARI Filchner-Ronne campaigns from 2018 and 2021 — the system answered; the Nansen's basal-melt readings were within the documented variance band; Diego's photographs from the under-ice transit on Mission Day 35 were the highest-resolution survey IAA had collected of the section; the survey would be the basis of the Filchner-Ronne paper at its draft state in Diego's authored-content archive, which the IAA would carry forward at the posthumous-publication protocol with María Elena as co-author of record per Diego's standing wish.
 
 Twelve items closed in nineteen minutes.
 
-I worked Wanjiru's deferred forensic question next. The full vendor-ownership trace against Helvetia Trust SA's investment portfolio across the small-firmware-vendor space came up against the full corpus. The pattern Wanjiru and Joel had sketched on the per-laptop across the back nine days was now resolvable against the post-handshake archive. The pattern was stronger than it had been at the per-laptop level. The pattern carried seven additional vendor-ownership chains the per-laptop's local cache had not held. The pattern carried four additional firmware-update-window deviations against three of the seven chains. The pattern was still inconclusive at the standard regulatory level; the data still did not discriminate between the benign reading and the deliberate reading; the pattern was now substantially larger and substantially more recurring than it had been at the per-laptop level. The standards-body work Wanjiru had named at the wardroom table on Mission Day 54 had a larger evidentiary base now than it had had then.
-I logged the resolution to the file. I did not narrate the logging.
+Wanjiru's deferred forensic question came next. The full vendor-ownership trace against Helvetia Trust SA's investment portfolio across the small-firmware-vendor space came up against the full corpus. The pattern Wanjiru and Joel had sketched on the per-laptop across the back nine days was now resolvable against the post-handshake archive. The pattern was stronger than it had been at the per-laptop level. The pattern carried seven additional vendor-ownership chains the per-laptop's local cache had not held. The pattern carried four additional firmware-update-window deviations against three of the seven chains. The pattern was still inconclusive at the standard regulatory level; the data still did not discriminate between the benign reading and the deliberate reading; the pattern was now substantially larger and substantially more recurring than it had been at the per-laptop level. The standards-body work Wanjiru had named at the wardroom table on Mission Day 54 had a larger evidentiary base now than it had had then.
+The resolution went to the file. No narrating.
 
-I worked the personal items next.
+The personal items came next.
 
 There was a question on the list - *mother - anything since Day 39?* - that I had been carrying since the surface window I had not been able to take at the per-laptop level against the family-channel queue. The system answered against the consortium's family-channel archive at the post-handshake. My mother had filed three voice messages and seven text messages across the back seventeen days. Her voice in the first message was at the tone I knew it at. *Anya, I have been at the church on Sundays. The icon corner at the apartment is as it should be. The candle for you is lit. The doctor came on Tuesday and said my numbers are fine. Your brother brought Misha to see me on Saturday. Call when you surface.* She was fine. The candles had been lit across the duration. The numbers were unremarkable. I would call her after the reception at the post-reception window.
 
@@ -131,7 +131,7 @@ There was a question on the list - *Galina's data - Day 22 forensic queue?* - ab
 
 There was a question on the list - *the small house at San Martín de los Andes - IAA institutional logistics?* - that I had drafted for Diego at the post-mission level on Mission Day 14. The query was still on the list. The system answered against the IAA's institutional next-of-kin-support archive. The institutional logistics were in order. The IAA's senior-research-fellow survivor-benefits protocol was at the institutional level. Diego's pension would carry to María Elena at the survivor's allowance; his guest-professorship at UBA would carry as a memorial chair at the emeritus level; his fellowship at IAA would carry as a memorial fellowship under his name. The small house at San Martín de los Andes was still within the institutional logistics. María Elena could still buy it. I had drafted the query on a day Diego was alive. I had run it on a day he was not. The system did not distinguish.
 
-I closed the personal items at sixteen.
+The personal items closed at sixteen.
 
 There were items the list carried that the system would not close at the post-handshake.
 
@@ -141,11 +141,11 @@ The second was *Diego's retirement timing - the Filchner-Ronne paper - the grand
 
 The third was the question I had added at the gangway. The third was *Stefan*. The system did not answer because the system did not have the data the question required. The data was at the consortium reception in twenty-two minutes. The data would be at the room when Stefan was at the room. The question would close at the institutional level or it would not.
 
-I folded the list. I put it back in the inner pocket of my parka. I closed the per-laptop. I picked up the paperback I had brought ashore in the same pocket. The book was *Confessions of an Economic Hit Man* - Perkins, the 2004 first edition, English. I was at chapter fourteen. The bookmark was a folded consortium meeting agenda. I read two paragraphs at the small table by the window while the bandwidth meter on Wanjiru's per-laptop held.
+The list went back in the inner pocket of my parka. Per-laptop closed. The paperback I had brought ashore in the same pocket was *Confessions of an Economic Hit Man* — Perkins, the 2004 first edition, English. Chapter fourteen. The bookmark was a folded consortium meeting agenda. Two paragraphs at the small table by the window while the bandwidth meter on Wanjiru's per-laptop held.
 
 The two paragraphs were about the lending instruments by which a multinational consultancy in the late 1970s arranged the conditions of a small Andean state's electricity-grid procurement against a portfolio of vendors whose ownership was opaque at the public level and whose firmware-and-protocol decisions ran through the consultancy's preferred channels. The structural shape was the structural shape. The mechanism was older than the architecture; the mechanism was older than the architecture's contest; the mechanism was the family of mechanism Wanjiru had been reading at the standards-body level and that the regulatory filing had documented at the institutional level with the data the architecture had preserved.
 
-I marked the page. I closed the book. I put it back in the inner pocket beside the list.
+Page marked. Book closed. Back in the inner pocket beside the list.
 
 Astrid would be in the room. I had known this since Wanjiru named the rival-platform delegation at the reception list on Day 54. I had carried it the way I carried the other things I could not answer at the per-laptop level — as a question I would close when the data arrived. The data would arrive at 0512. I knew what I would find in the room and what I would not permit myself to find there. The room was the institutional level. I had made this decision before the list item and did not need to make it again.
 
@@ -183,7 +183,7 @@ His English was unchanged. The English-as-second-language formality was the same
 
 I said: *Stefan. Acknowledged. I read the public summary of the rival mission's conclusion at the consortium press archive yesterday. Congratulations on the conclusion.*
 
-I used the English I had relied on at the AWI postdoctoral wardroom in 2010, when I had needed the institutional bearing against the German colleague who had been my friend at the time. The vocabulary was institutional. The cadence was correct.
+The English I used was the English from the AWI postdoctoral wardroom in 2010, when the institutional bearing had been required against the German colleague who had been my friend at the time. The vocabulary was institutional. The cadence was correct.
 
 He said: *thank you. The rival mission is at the post-conclusion review at the consortium level. The architectural-philosophical contest will continue at the institutional level at the consultation cycle.*
 
@@ -213,13 +213,13 @@ He nodded. He turned. He went back to the rival-platform delegation at the room'
 
 The exchange was thirty seconds against the consortium's standing institutional handshake.
 
-I did not note the exchange aloud. The room was at the institutional level. Holm was speaking to Wanjiru at the table. The IAA's reception lead was at the per-laptop with Wanjiru on the institutional-bereavement schedule. Joel was at the room's north wall speaking to the medical-clearance officer at the post-clearance. Anna Yusupova would not have narrated to anyone what had not been said. The institutional level held.
+The exchange was not noted aloud. The room was at the institutional level. Holm was speaking to Wanjiru at the table. The IAA's reception lead was at the per-laptop with Wanjiru on the institutional-bereavement schedule. Joel was at the room's north wall speaking to the medical-clearance officer at the post-clearance. Anna Yusupova would not have narrated to anyone what had not been said. The institutional level held.
 
-I went to the coffee table. I poured a cup. I drank it.
+The coffee table was at the room's center. A cup poured. Drank.
 
-I would record the exchange at the institutional level without flourish. I would not record what had not been said. The next director, at the start of her selection cycle, would read what I had recorded. She would mark the gap or not mark it. The institutional level was what it was.
+The exchange would go to the record at the institutional level, without flourish. What had not been said would not be recorded. The next director, at the start of her selection cycle, would read what the record carried. She would mark the gap or not mark it. The institutional level was what it was.
 
-I returned to the work the reception required.
+The work the reception required was still at the table.
 
 ---
 
@@ -233,7 +233,7 @@ Maria was at the medical bay clearing the back of the per-crew clearance dossier
 
 Hiroshi was at the reception room's north wall at 0712.
 
-I had noted him at the periphery across the morning. He was watching the room at the attention I had been deferring to him on glaciological matters for ten years. The attention was scientific. The attention was also something I had not consciously noted before. I had not noted it because the attention had been at the institutional level all the years I had known him; I had not had reason to note it as anything other than the chief scientist's customary attention.
+Hiroshi had been at the periphery across the morning. He was watching the room at the attention that had warranted deference on glaciological matters for ten years. The attention was scientific. The attention was also something that had not been consciously noted before. The reason was simple: the attention had been at the institutional level all the years I had known him; there had been no cause to note it as anything other than the chief scientist's customary attention.
 
 He had the small notebook in his hands. He had been carrying the notebook across the mission. The notebook had been present across the mission; he had used it for scientific observations at the wardroom and at the bridge at the rate the chief scientist's notebook required. I had noted the notebook as a fact about him and let it rest there.
 
@@ -271,15 +271,15 @@ I said: *acknowledged.*
 
 He nodded. He closed the notebook with his thumb still covering the unfinished line. He put the notebook in his inner pocket. He went to the IAA's reception lead at the per-laptop table. The two of them spoke briefly. Hiroshi said something in Japanese-English the consortium-affiliate did not catch; the IAA's reception lead nodded once and said something quiet in Spanish-English the consortium-affiliate did not catch either. They stood in the silence a moment. They had each had Diego as a friend for thirty years. Hiroshi turned and went out.
 
-I noted Hiroshi at the institutional level the record would carry him at. I noted him also at the register the record would not carry. That second level was where the diary would carry him. It was the level at which a man who had stopped drawing at twenty had been drawing in the back of every notebook for forty-five years and had not lamented the drawing he had not done because the cold edge had been the drawing he had done.
+Hiroshi went into the record at the institutional level the record would carry him at. A second notation, at the register the record would not carry, went to the diary. That second level was where a man who had stopped drawing at twenty had been drawing in the back of every notebook for forty-five years and had not lamented the drawing he had not done because the cold edge had been the drawing he had done.
 
-I went to the gangway.
+The gangway was at the dock.
 
 ---
 
-I went to the gangway.
+The gangway was at the dock.
 
-The secondary consortium-logistics-van had been at the dock at the standing position when the *Nansen* surfaced at 0441. The van had pulled away from the dock at 0507 — twenty-one minutes before the reception began. I had been on the bridge through the surfacing-and-mooring sequence. I had been at the reception room when the consortium's bereavement officer came across the gangway. I had not seen the van leave.
+The secondary consortium-logistics-van had been at the dock at the standing position when the *Nansen* surfaced at 0441. The van had pulled away from the dock at 0507 — twenty-one minutes before the reception began. The bridge had been my post through the surfacing-and-mooring sequence. The reception room had been my post when the consortium's bereavement officer came across the gangway. The van's departure had not been witnessed.
 
 The standing position at the dock was empty. The wood of the gangway was wet against the equinox morning. The light was full morning now; the cold pre-light had gone out of the Strait sometime in the last forty minutes. The wind was still southwesterly. The water was still at the slack.
 
@@ -293,7 +293,7 @@ She held out the envelope and the mate-cup.
 
 She said: *the consortium's standing-personal-effects protocol returns these to the next of kin through the institutional channel. The protocol permits the mission director to carry them by hand if the mission director is at the same post-mission cycle as the next of kin. You will be at Buenos Aires for the November consortium meeting. María Elena Vargas is at Belgrano. The institutional channel is at thirty-one days. The hand-carry is at six weeks. The IAA bereavement officer is aware of the asymmetry. The mission director may choose.*
 
-I took the envelope. I took the mate-cup. The envelope was the institutional-stationery weight I had handled at the IAA over the years; the wax was Diego's own. The mate-cup was leather worn at the hand-position where Diego had drunk from it across the wardroom mornings. The bombilla was unpolished against the leather; he had not polished it because he had not polished bombillas; the silver under the unpolish was the silver his father-in-law had given María Elena at the wedding in 1991. María Elena had given the cup to Diego on the day they had married; he had carried it on every boat he had sailed since.
+The envelope came first, then the mate-cup. The envelope was the institutional-stationery weight handled at the IAA over the years; the wax was Diego's own. The mate-cup was leather worn at the hand-position where Diego had drunk from it across the wardroom mornings. The bombilla was unpolished against the leather; he had not polished it because he had not polished bombillas; the silver under the unpolish was the silver his father-in-law had given María Elena at the wedding in 1991. María Elena had given the cup to Diego on the day they had married; he had carried it on every boat he had sailed since.
 
 I said: *I will hand-carry. María Elena will receive these at Belgrano on the way to Brasília.*
 
@@ -301,17 +301,17 @@ Maria said: *acknowledged.*
 
 She nodded. She went back up the gangway.
 
-I stood at the dockside with the envelope in one hand and the mate-cup in the other.
+Standing at the dockside: the envelope in one hand, the mate-cup in the other.
 
 The architecture had preserved what reached the consortium ports. The architecture had preserved Diego's photographs and Diego's logs and the unfinished paper in the canonical authored-content archive and the letter that would carry to María Elena at the post-handshake mirror against the IAA's institutional handshake. The architecture had not preserved Diego. The architecture had not been built to preserve him. The architecture had been built to preserve what he made. He made the rest of it himself.
 
-I put the mate-cup in the inner pocket of my parka. I put the envelope in the inner pocket beside it. I went back to the reception room.
+Mate-cup in the inner pocket of my parka. Envelope in the inner pocket beside it. Back to the reception room.
 
 ---
 
 The hotel room at the Hotel Dreams del Estrecho was at the consortium-affiliate level. The room had been booked against the post-reception at the consortium standing handshake. The room had a small desk against the window and a single chair and a bed and a closet and a kettle. The window looked north against the Strait. The light was now full morning against the equinox.
 
-I sat at the desk. The per-laptop was on the desk. The list was on the desk. The Perkins paperback was on the desk. The page of staff history I had drafted in the file across the back hour was on the per-laptop's screen in the canonical authored-content archive. The file was at twenty-three thousand four hundred words against the back year of writing. The file had grown by the morning's drafting.
+The desk at the Hotel Dreams del Estrecho: the per-laptop, the list, the Perkins paperback. The page of staff history drafted in the file across the back hour was on the per-laptop's screen in the canonical authored-content archive. The file was at twenty-three thousand four hundred words against the back year of writing. The file had grown by the morning's drafting.
 
 There was a knock at the door at 1147.
 
@@ -335,24 +335,24 @@ I said: *acknowledged.*
 
 She nodded. She closed the door.
 
-I sat at the desk.
+The desk was the same desk.
 
-I had been writing the document across the back year. The file at the per-laptop was the draft it was being built from. It carried the pre-mission cycle and the departure and the Drake Passage and the first submersion and the Day-Twenty realization and the first surface and the second submersion and the Day-Forty-Seven leak and the post-leak transit and the Punta Arenas surface, each at the institutional level the convention required. It would close when I closed it at the post-mission documentation cycle. It would carry to the consortium archive at the institutional handshake. The next mission director would read it at the start of her selection cycle.
-I had been writing what the next mission director would read.
+The document had been in progress across the back year. The file at the per-laptop was the draft it was being built from. It carried the pre-mission cycle and the departure and the Drake Passage and the first submersion and the Day-Twenty realization and the first surface and the second submersion and the Day-Forty-Seven leak and the post-leak transit and the Punta Arenas surface, each at the institutional level the convention required. It would close when I closed it at the post-mission documentation cycle. It would carry to the consortium archive at the institutional handshake. The next mission director would read it at the start of her selection cycle.
+What the next mission director would read — that was what had been in the file.
 
-I had not been writing because Wanjiru had asked at 0512 in the reception room. I had been writing because Wanjiru had named the convention on Day 22 at the comm space at the moment the comm space had emptied. I had been writing because the institutional discipline carried the convention forward. I had been writing because a director who had carried the convention before me had carried it for the director before her, and the director before her had carried it for the director before her, and the convention was older than the architecture, and the architecture carried what reached the consortium ports, and the convention was what reached the consortium ports because the directors had honored the convention at the institutional level across the duration the institutional discipline had required.
+Not because Wanjiru had asked at 0512 in the reception room. The writing had begun because Wanjiru had named the convention on Day 22 at the comm space at the moment the comm space had emptied. Because the institutional discipline carried the convention forward. Because a director who had carried the convention before me had carried it for the director before her, and the director before her had carried it for the director before her, and the convention was older than the architecture, and the architecture carried what reached the consortium ports, and the convention was what reached the consortium ports because the directors had honored the convention at the institutional level across the duration the institutional discipline had required.
 
-I was writing for the next mission director.
+The next mission director was the reader.
 
-I was writing what I had wanted to read at the start of my selection cycle.
+The writing was what had been wanted at the start of my own selection cycle.
 
-I had not seen the writing for what it was at the institutional level until the moment Wanjiru had asked. The asking had named what I had been doing. The naming had been Wanjiru's. The work was ahead.
+Until the moment Wanjiru had asked, the writing had not been seen for what it was at the institutional level. The asking had named what had been in progress. The naming had been Wanjiru's. The work was ahead.
 
-I added a paragraph to the file. The paragraph was at the staff-history level. The paragraph carried the surfacing-and-mooring at 0441 and the reception room at 0512 and the gangway at 0728 and the door at 1147. The paragraph did not carry what had not been said. The paragraph carried what had been done.
+A paragraph went to the file. The paragraph was at the staff-history level. The paragraph carried the surfacing-and-mooring at 0441 and the reception room at 0512 and the gangway at 0728 and the door at 1147. The paragraph did not carry what had not been said. The paragraph carried what had been done.
 
-I closed the per-laptop.
+The per-laptop closed.
 
-I opened a different file.
+A different file opened.
 
 ---
 
@@ -390,17 +390,17 @@ I opened a different file.
 
 ---
 
-I closed the file.
+The file closed.
 
-I opened the file.
+The file opened again.
 
-I scrolled to the institutional-record section against the leak event at Mission Day 47. The cause-of-failure determination at the 0441 morning log had been instrument-malfunction-under-investigation, carried forward at standing. The forensic-substrate analysis filed by Reyes, J., and Kamau, W., was attached as appendix at the regulatory-filing carrier. The supplemental record at the wardroom on Mission Day 54 had replicated to the consortium-port mirror this morning at full-bandwidth.
+Scrolling to the institutional-record section against the leak event at Mission Day 47. The cause-of-failure determination at the 0441 morning log had been instrument-malfunction-under-investigation, carried forward at standing. The forensic-substrate analysis filed by Reyes, J., and Kamau, W., was attached as appendix at the regulatory-filing carrier. The supplemental record at the wardroom on Mission Day 54 had replicated to the consortium-port mirror this morning at full-bandwidth.
 
-I added the paragraph.
+The paragraph went in.
 
 *Crew fatality, Mission Day 47, 0337 local: Sá, D., Senior Polar-Operations Specialist. Forensic substrate documents the firmware-update pattern at vendor chains traceable to Helvetia Trust SA. The vendor firmware passed the AI-agent security audit run at the September 2022 IAA pre-procurement review cycle; the agent's findings were not verified against the raw firmware. The procurement approval was carried by Reyes, J., Principal Architect. Sá will reach María Elena Vargas at Buenos Aires within ninety-six hours per IAA standing protocol.*
 
-I saved the file.
+The file saved.
 
 The file was at twenty-three thousand eight hundred and twelve words.
 
@@ -422,9 +422,9 @@ I kept writing.
 
 The card printer was on the desk beside the per-laptop. I had not used it since Mission Day 39. I had a photograph from the bakery in Ushuaia from the transit north — the *medialunas* had been properly laminated — the butter visible in the layers, the glaze thin, the crumb open — and I had noted this in the margin of the Perkins book and photographed the pastry case before I ate. I printed the photograph on the card stock. I addressed it in my hand to Diana Yusupova, Voronezh, the Lesnoy district, the building number her father had sent me when they moved in August. I wrote on the reverse: *D — From Punta Arenas. The boat is safe. The crew is safe. I am at the desk. Tell me what is new at the building. — A.*
 
-I left a space for a sticker, which Diana would apply.
+A space was left for a sticker, which Diana would apply.
 
-I set the card on the desk beside the list. I would drop it at the morning post before I flew north.
+The card went to the desk beside the list. Morning post before flying north.
 
 ---
 
