@@ -33,19 +33,19 @@ I had been asleep when the alarm fired. The cabin's red night-light was on. The 
 
 The register changed at 0317.
 
-I was on my feet before I had named what had woken me. The cabin alarm repeater was lit. The repeater carried the compartment two-bravo annotation at the lower-deck-aft position I had read on the boat's compartment map every day of the mission and had never expected to read against an active alarm. The alarm pattern was the leak alarm - the three-pulse pattern at the urgency frequency the boat used for breach-class events - not the smoke alarm, not the coolant-pressure alarm, not the air-quality alarm. The leak alarm. The alarm the boat had never fired in operational state across three segments of the mission.
+The cabin alarm repeater was lit before I had named what had woken me. My feet were on the deck. The repeater carried the compartment two-bravo annotation at the lower-deck-aft position I had read on the boat's compartment map every day of the mission and had never expected to read against an active alarm. The alarm pattern was the leak alarm - the three-pulse pattern at the urgency frequency the boat used for breach-class events - not the smoke alarm, not the coolant-pressure alarm, not the air-quality alarm. The leak alarm. The alarm the boat had never fired in operational state across three segments of the mission.
 
-I read the repeater for a second and a half. I did not read it longer. I had already begun moving.
+The repeater held my eyes for a second and a half. No longer. Movement had already begun.
 
 The corridor outside my cabin was at the same red night-watch lighting the bridge would be at. The corridor was empty. The boat at 0317 in the standing watch was empty in the way submarines are empty at hours the watch was thin - bridge crew at station, off-watch crew in their bunks, the corridor a transit space between stations rather than a habitation. I went up the corridor toward the bridge.
 
-I saw Joel before I saw the corridor.
+Joel was in the corridor before the corridor was.
 
 He was coming the other direction. He was not running. He was moving at the deliberate pace I had seen him move at across the mission's procedural drills, the pace I had read on his recruitment-interview videoconference five months before the boat sailed when he had described what he would do in a casualty event in the same flat clauses he had used to describe the architecture's lease protocol. *You move toward the source. You do not run. You arrive in a state in which you can think.* He was moving at the pace he had described.
 
 He was moving toward the leak.
 
-I was moving toward the bridge.
+The bridge was my bearing.
 
 We converged at the lower-deck access ladder. I was closer to the ladder than he was. The ladder was the path down to compartment two-bravo. The ladder was also the path I would have taken from the bridge if I had been at the bridge instead of in my cabin. The compartment was four steps from the foot of the ladder. The corridor at the foot of the ladder was narrow enough that two crew members could pass only with a turn. I had not been thinking about the corridor's width. I had been thinking about the bridge.
 
@@ -55,9 +55,9 @@ The contact was a hand at my shoulder, firm, brief, and specific. The push was n
 
 He did not look at me. He did not stop. He went past. He went down the ladder.
 
-I stood at the bulkhead. The corridor had gone past me. The watch officer was somewhere overhead at the bridge. The alarm was still firing. The boat was at depth at four knots on a north-northeast bearing toward the next deployment site.
+The corridor had gone past me. My hand was at the bulkhead rail. The watch officer was somewhere overhead at the bridge. The alarm was still firing. The boat was at depth at four knots on a north-northeast bearing toward the next deployment site.
 
-I went up to the bridge.
+Up the ladder, to the bridge.
 
 The polar-operations console was empty. The diagnostic view was up at the time-series plot the watch had been reading; the screen carried Diego's standing capture from 0316:30 forward. The step-shift was on the screen at the timestamp. The two-up-on-starboard-plane recommendation and the ventilation-hold-on-two-bravo-adjacent-ducting recommendation were in the standing-capture annotation field; Diego had typed them at 0316:43 against his Ed25519 console signature and had left the screen at 0316:45 to call compartment two-bravo and confirm the standing crew member on roster was not in the compartment, and had left the bridge at 0316:55 for the access ladder. The annotations were what he had left for the watch to read.
 
@@ -67,9 +67,9 @@ The shift was visible at the time-series plot as a step in the acoustic baseline
 
 The watch officer at the bridge was Hiroshi. He had been at the bridge for the standing watch handoff. He was at the helm console at the standing tempo. He had seen me at entry. He had not relinquished the helm. He would remain the watch officer of record until I relieved him. I did not relieve him. The bridge needed a helm; the helm was Hiroshi's; the Mission Director's standing was a different kind of standing.
 
-I went to the command-watch position at the rail behind the watch console. It was where I stood when the bridge was running and the boat was operating and I was watching — visible to the watch officer, the polar-operations console, the second-watch officer, the comm node, and any crew member who came up to the bridge during the duration of an event. I stood at it.
+The command-watch position at the rail behind the watch console was the right position. It was where the Mission Director stood when the bridge was running and the boat was operating — visible to the watch officer, the polar-operations console, the second-watch officer, the comm node, and any crew member who came up to the bridge during the duration of an event. I stood at it.
 
-I read Diego's annotation field once. I had what I needed.
+Diego's annotation field took one read. The bearing was clear.
 
 I said: *bridge, hold trim. Two-up on starboard plane. Diego's recommendation, logged at oh-three-sixteen-forty-three.*
 
@@ -83,7 +83,7 @@ Hiroshi said: *acknowledged. Depth hold. Ventilation hold on two-bravo adjacent 
 
 The bridge had taken in the cascade window. The trim was adjusted. The depth was held. The ventilation was held against the smoke ingress that would follow the leak's source identification. The boat was at the operational tempo it would hold for the duration of the compartment isolation. The bridge was running on procedure I had read in the Mission Director's manual and had never executed against an active casualty event.
 
-I did not move from the rail.
+The rail held me. The rail held.
 
 There were two people behind the bulkhead door.
 
@@ -161,15 +161,15 @@ The eleven minutes had begun.
 
 Joel and Diego were behind the bulkhead door at compartment two-bravo. The compartment was at the lower deck aft. The compartment held the failed sensor head, the central compute hub, the polar-operations specialist who had gone down the ladder at 0316:55, and the principal architect who had gone down the ladder at 0319 after pushing the Mission Director out of the path. The bulkhead door was dogged from the compartment-internal side. Joel had dogged it himself. The procedure was clear - you do not leave a door open with active leakage; you isolate, you contain, you work the leak; you do not invite the cascade into the corridor. The dogging was procedurally correct. The dogging was also, at 0319, the act of a man who had moved his body into a sealed compartment containing an active leak and a man and had taken the key with him.
 
-I had not seen the dogging. I had been at the lower-deck access ladder when the dogging happened.
+The dogging had happened at the lower-deck access ladder while my back was still at the bulkhead. The sound had carried. The act had not.
 
-I had seen the look.
+The look was what I had seen.
 
 It held for a duration I did not measure.
 
 The porthole glass was small and slick with condensation along the upper edge. He had wiped a clearing with the back of his hand and a smear of what would later be identified as closed-loop coolant from the heat-exchange manifold had crossed the glass at the level of his temple and dried in the streak. His eyes were behind the streak. The compartment's emergency-light cycle was at the green it goes at during a cascade event; the green caught at the back of his iris where the iris met the white. He did not blink. He looked at me through the streak. None of the looks I had carried from him across forty-seven days of sea time — not the recruitment interview, not the wardroom, not the schema migration four days before — had been this look.
 
-I received the look at the layer the bridge could see. I did not change my face.
+The look landed at the layer the bridge could see. My face did not change.
 
 I held the look for the duration the look required. Then I gave him the small acknowledgment my face was permitted at the bridge's standing position - not a nod that the bridge could read, not a softening the bridge could read, only the receipt of the look at the level the look could be received at without breaking the standing. He saw the receipt. He turned.
 
@@ -179,7 +179,7 @@ The look was at the archive at the consent-gated capture the compartment cameras
 
 The bridge was watching me.
 
-I stood at the rail. My hands were at the rail. My back was at the bearing. My breath was at the bearing. I had read the bridge across the duration. The bridge was at its level. The boat was at the operational tempo. The leak was in the cascade window. The cascade window was open.
+Hands at the rail. Back at the bearing. Breath at the bearing. The bridge had been read across the duration. The bridge was at its level. The boat was at the operational tempo. The leak was in the cascade window. The cascade window was open.
 
 The eleven minutes had begun.
 
@@ -193,7 +193,7 @@ The capability degradation had begun at 0319.
 
 The compute hub was in the same compartment. The compute hub was the central workstation that hosted the heavy-LLM models, the full-archive RAG index, the cross-corpus annotation pipeline, the multimodal video-tagging stack. The hub was an RTX-class GPU at six-axis cooling against the sealed-compartment constraint; the cooling assembly ran a closed-loop coolant against the compartment's heat-exchange manifold; the heat-exchange manifold was within four meters of the failed sensor head. Coolant ingress was already at the manifold. Smoke ingress had begun the moment Joel had identified the failure point and had begun cutting against the sensor head's mounting bracket. The hub's chassis would absorb both. The hub would not be powered on again at sea. The chassis was probably salvageable; the GPU was probably not; the NVMe array carrying the full-archive RAG index was probably not. The index was at the consortium-port mirror at Punta Arenas; the index was at the per-laptop subset across the crew nodes; the canonical record was the per-laptop archive. The hub had been capability, not source-of-truth. The per-laptops held what the per-laptops had been specified to hold; the boat would make its bearing on the laptops. Joel's environmental-stress claim from the paper had been exercised against actual coolant and actual smoke. The claim held at the compute layer.
 
-I stood at the rail. The bridge was at the operational level. The cascade window was open. The eleven minutes were running.
+The bridge was at the operational level. The cascade window was open. The eleven minutes were running.
 
 ---
 
@@ -231,25 +231,25 @@ The eleven minutes were running.
 
 ---
 
-I held the rail.
+The rail was where I held.
 
 What I have not put into the operational damage report and what I will not put into the operational damage report is the duration during which I held the position with my hands on the rail and read every console on the bridge while my body waited at the rate the body waits when the body is waiting against a sealed door and a man behind it. The bridge could not measure the duration. The bridge could not measure the rate. The bridge saw the Mission Director at the rail with her hands at the rail and her face at the bearing. The Mission Director had given two operational orders during the duration. The Mission Director would give a third order if the situation required a third order. The Mission Director would not give a third order otherwise. The Mission Director was at the rail.
 
-I had read the look at the porthole window. I had received the look. I had not changed my face. I had been at the position since 0322. I was at the position now.
+The look at the porthole window had been read. Received. The face had not changed. At the position since 0322. Still at the position.
 
 I do not have a vocabulary for what the duration was at. The vocabulary I have is the vocabulary of standing watch. The vocabulary of standing watch is a vocabulary I have carried since AARI's first deployment to the Bellingshausen station in 2007. I carry the vocabulary in Russian and in English and the vocabulary is the same vocabulary in both languages. The vocabulary is not adequate for what the duration was at. The vocabulary is, however, adequate for what the bridge required of the Mission Director at the rail. The bridge required the Mission Director's bearing. The Mission Director's bearing was at the rail.
 
-I noted, at the back of my mind, that I would write what the duration was at later, in a different key, at a different file, under different access controls. I did not narrate the noting. The noting was at the back. The position was at the front.
+Noted, at the back of my mind: I would write what the duration was at later, in a different key, at a different file, under different access controls. The noting went unnarrated. The noting was at the back. The position was at the front.
 
 The bridge held.
 
-I read the time at the master clock at 0341. I had stood at the rail since 0322. The duration since the look had been nineteen minutes against the master clock; the duration against the body's measurement was a different duration, and the body's measurement was not the measurement the bridge required, and the body's measurement was not the measurement that would land at the audit log. The audit log carried the master clock. The audit log carried the orders. The audit log did not carry the body. The audit log carried what the audit log carried.
+The master clock read 0341. At the rail since 0322. Nineteen minutes since the look against the master clock; against the body's measurement, a different duration — and the body's measurement was not the measurement the bridge required, and the body's measurement was not the measurement that would land at the audit log. The audit log carried the master clock. The audit log carried the orders. The audit log did not carry the body. The audit log carried what the audit log carried.
 
 The watch officer at the helm had not looked back at the position. The polar-operations specialist at the telemetry console had not looked back at the position. The logistics officer at the rail had not looked back at the position. The comm-node officer at the comm node had not looked up at the position when she had filed the standing-capture entry at 0335. None of the bridge had looked at the Mission Director at the rail. All of the bridge had been carrying the Mission Director's position as the position the bridge was operating against. The two facts were the same fact. The bridge that does not look is the bridge that is watching. The bridge that is watching is the bridge that has the Mission Director's bearing as the bearing the bridge is operating against. The bridge held because the Mission Director held. The Mission Director's bearing was the load-bearing register.
 
-I had not moved my hands from the rail. I had read every console. I had given two operational orders against the cascade. I had taken in Diego's recommendation at 0341 and had acknowledged.
+Hands unmoved from the rail. Every console read. Two operational orders given against the cascade. Diego's recommendation at 0341 taken in and acknowledged.
 
-I was at the rail.
+At the rail.
 
 ---
 
@@ -257,7 +257,7 @@ Joel reported clear at 0353.
 
 The transmission came across the comm node. *Bridge, two-bravo. Leak source isolated. Residual water drained. Smoke ingress contained. Compartment atmosphere within breathable specification. Crew member Sá unresponsive; CPR for the duration of containment unsuccessful; readying for medical recovery. Ready to open.*
 
-I held my hands at the rail.
+Both hands stayed at the rail.
 
 I said: *acknowledged. Compartment-clear at the lower-deck access ladder. Coordinate with medical. Medical to take recovery of Sá.*
 
@@ -311,13 +311,13 @@ The bridge resumed.
 
 ---
 
-I did not look at Joel again. He did not look at me. The look at the porthole window and the look at the bridge after the compartment cleared were not aligned across the same axis. One of them had carried what the discipline had prevented him from saying. The other had carried the operational report. The compartment had cleared. The discipline had returned. The look at the bridge was at its level.
+Joel and I did not look at each other again. The look at the porthole window and the look at the bridge after the compartment cleared were not aligned across the same axis. One of them had carried what the discipline had prevented him from saying. The other had carried the operational report. The compartment had cleared. The discipline had returned. The look at the bridge was at its level.
 
-I held the rail for the watch handoff at 0400. The handoff was clean. I relieved Hiroshi. Hiroshi did not go to his bunk. Hiroshi went to the polar-operations console and sat. He did not ask whether to sit. He read the eight readings against the screen. The polar-operations console was at its operational refresh. Wanjiru returned to her bunk at 0420 after she had filed the comm-node entry at the operational log. Sabina returned to the logistics compartment at 0405 after she had filed the logistics entry. Priya returned to the lab compartment at 0405 to begin the post-incident analysis on the captured firmware-diagnostic data. Maria returned to the medical bay at 0410 after she had completed Diego's post-mortem record at the medical-bay desk and after she had checked her own medical record three more times.
+The watch handoff at 0400 came at the rail. The handoff was clean. Hiroshi was relieved. Hiroshi did not go to his bunk. Hiroshi went to the polar-operations console and sat. He did not ask whether to sit. He read the eight readings against the screen. The polar-operations console was at its operational refresh. Wanjiru returned to her bunk at 0420 after she had filed the comm-node entry at the operational log. Sabina returned to the logistics compartment at 0405 after she had filed the logistics entry. Priya returned to the lab compartment at 0405 to begin the post-incident analysis on the captured firmware-diagnostic data. Maria returned to the medical bay at 0410 after she had completed Diego's post-mortem record at the medical-bay desk and after she had checked her own medical record three more times.
 
 Joel filed the engineer's report at 0432. The report carried the operational details at the engineer's level. The report did not carry anything else. The report was filed at the operational record. The report was at the audit log.
 
-I filed the operational damage report at 0518.
+At 0518, the operational damage report was filed.
 
 *Operational damage report - Yusupova, A., Mission Director. RV Nansen, MERIDIAN-7. Mission Day 47.*
 
@@ -343,9 +343,9 @@ I filed the operational damage report at 0518.
 
 The damage report carried the times, the cause-of-failure logged as instrument-malfunction-under-investigation, the damage scope, the crew status with Diego's death at 0408 under Maria's signature, the boat status, the capability state, and the closing hash signature. The damage report did not carry the look at the porthole window. The damage report did not carry the duration during which the Mission Director had stood at the rail with her hands at the rail and her face at the bearing. The damage report did not carry the rate. The damage report carried the operational record at the operational level. It would land at the consortium-port at the next surface-window sync.
 
-I closed the report. I signed the report. The hash signature carried at the close.
+The report was closed. Signed. The hash signature carried at the close.
 
-I did not sleep again that morning.
+Sleep did not return that morning.
 
 ---
 
@@ -365,9 +365,9 @@ Wanjiru ran the relay-operations review on laptop-class compute. The review was 
 
 Hiroshi ran the scientific-coordination on laptop-class compute. The cross-language collaboration with the JARE colleagues at Showa Station that he had been running once a fortnight against the heavy-LLM translation hosting was on the post-mission list. The collaboration would carry to surfacing. Hiroshi also ran the polar-operations console rotation, against the rotation roster he had drafted at 0445 on Day 47 in the wardroom and had filed at the audit log under his Ed25519 device key at 0508 the same morning. The roster carried Hiroshi at the console at the eight-to-four watch; the second-watch officer at the four-to-twelve; a four-hour overlap mid-watch for the chief scientist's primary scientific duties. The bathymetry feed Diego had set at the start of the dive sequence held the configuration. No one changed it. The chair at the console held whoever sat at it.
 
-I read the operational damage report against the consortium-port mirror's reference on the per-laptop. The reference was at the laptop. The reference was current. The damage report was filed.
+The operational damage report sat on the per-laptop against the consortium-port mirror's reference. The reference was current. The damage report was filed.
 
-I formalized a paper list at my cabin desk. The list was *queries to run when we surface*. The list at the end of Day 47 had three items. The list at 1647 on Day 48 had nine items. The list would grow.
+A paper list went on the cabin desk: *queries to run when we surface*. Three items at the end of Day 47. Nine items at 1647 on Day 48. The list would grow.
 
 The crew adapted at the operational tempo. The crew did not narrate the adaptation. The adaptation held.
 
@@ -391,11 +391,11 @@ She said: *yes.*
 
 She did not stay. She left the notebook on the table. She turned. She went out.
 
-I read the four pages at the wardroom table. The four pages were in Diego's parallel-translation practice - Spanish first, then his parallel English, the way the IAA's institutional records had been kept since the IAA's first multinational collaboration with the British Antarctic Survey in 1942. The entry on Day 44 carried Diego's decision: after Punta Arenas he would go home to San Martín de los Andes. María Elena and he had been talking about it for three years. The *Nansen* was the mission they had agreed he would do before he went home. He was writing the decision at the wardroom table on Day 44 because he wanted the wardroom of his last mission to be where the decision had been written. He was naming the chief-scientist's-billet and the polar-operations-specialist's-billet considerations the consortium would need to recruit against. He was writing it down so that if anything happened to him at Segment 3, the Mission Director would have what the Mission Director needed to start the recruiting cycle. He had not been planning for anything to happen at Segment 3. He had been planning for the cycle anyway. That was the IAA's discipline. That was Diego's discipline.
+The four pages took the wardroom table. Diego's parallel-translation practice ran through them - Spanish first, then his parallel English, the way the IAA's institutional records had been kept since the IAA's first multinational collaboration with the British Antarctic Survey in 1942. The entry on Day 44 carried Diego's decision: after Punta Arenas he would go home to San Martín de los Andes. María Elena and he had been talking about it for three years. The *Nansen* was the mission they had agreed he would do before he went home. He was writing the decision at the wardroom table on Day 44 because he wanted the wardroom of his last mission to be where the decision had been written. He was naming the chief-scientist's-billet and the polar-operations-specialist's-billet considerations the consortium would need to recruit against. He was writing it down so that if anything happened to him at Segment 3, the Mission Director would have what the Mission Director needed to start the recruiting cycle. He had not been planning for anything to happen at Segment 3. He had been planning for the cycle anyway. That was the IAA's discipline. That was Diego's discipline.
 
-I closed the notebook. I sat with my hands on the cover. I did not narrate the sitting.
+The notebook was closed. Both hands rested on the cover. The sitting went unnarrated.
 
-I added an item to the list: *consortium notification on Diego's retirement intent (post-mortem); chief scientist + polar-operations recruiting timeline at the next mission; institutional handoff for the IAA's contribution at the Nansen mission record; archival deposit of the seventeen notebooks at the IAA's Belgrano-II archive against next-of-kin's release*. The item went on the list. The list had nineteen items by 1402 on Day 50. It would have more.
+An item went on the list: *consortium notification on Diego's retirement intent (post-mortem); chief scientist + polar-operations recruiting timeline at the next mission; institutional handoff for the IAA's contribution at the Nansen mission record; archival deposit of the seventeen notebooks at the IAA's Belgrano-II archive against next-of-kin's release*. Nineteen items by 1402 on Day 50. There would be more.
 
 ---
 
@@ -423,13 +423,13 @@ In his parallel English:
 
 *- D.*
 
-I had not spoken with Diego on the afternoon of Day 46 in the way the letter remembered. We had spoken twice that afternoon - once about the cross-current vector at 1430, once about the polar-operations watch rotation for the back nine days at 1612. Neither conversation had been about the retirement decision. Diego had carried the decision he had written into the notebook on Day 44 into the letter he sealed on Day 46. The understanding he attributed to the Mission Director was the understanding he had decided I had given him. He had decided right. The understanding had been there. The notebook had told me on Day 50 what the letter had already told María Elena at 2147 on Day 46.
+The afternoon of Day 46 had not gone the way the letter remembered it. We had spoken twice that afternoon - once about the cross-current vector at 1430, once about the polar-operations watch rotation for the back nine days at 1612. Neither conversation had been about the retirement decision. Diego had carried the decision he had written into the notebook on Day 44 into the letter he sealed on Day 46. The understanding he attributed to the Mission Director was the understanding he had decided I had given him. He had decided right. The understanding had been there. The notebook had told me on Day 50 what the letter had already told María Elena at 2147 on Day 46.
 
 The letter was at the canonical authored-content archive. The letter was signed at capture under Diego's KEK. The letter would reach María Elena Vargas at Belgrano when the boat surfaced at Punta Arenas at the priority-routing Wanjiru had set at the comm-node mirror for the consortium-port queue. The letter did not require relay window. The letter required surfacing. The boat would surface. The letter would deliver.
 
 The autumn light at the lake at San Martín de los Andes is in March and April in the southern hemisphere. The boat would surface on Mission Day 56 - the second week of November. María Elena would have the letter before the southern winter. The autumn would be back in four months. Diego would not be there for the autumn. The letter would have been there since November.
 
-I added an item to the list: *carry the letter to María Elena Vargas at priority at the Punta Arenas surface window; verify delivery at the IAA's communications office; carry the seventeen notebooks at next-of-kin's release at Belgrano-II; close the loop on what can be closed*. The item went on the list.
+Another item went on the list: *carry the letter to María Elena Vargas at priority at the Punta Arenas surface window; verify delivery at the IAA's communications office; carry the seventeen notebooks at next-of-kin's release at Belgrano-II; close the loop on what can be closed*.
 
 The list grew.
 
@@ -441,13 +441,13 @@ The Segment-3 leg ran another nine days. The boat held depth at the operational 
 
 The boat made nine knots on the bearing toward Drake Passage on Mission Day 49. The boat made eight knots on Mission Day 50. The boat made nine knots on Mission Day 51. The watch rotations held. The cycle held. The boat held its tempo against the Drake.
 
-I wrote the half-mission report on the per-laptop on Mission Day 50. The report carried the operational record at the operational level. The report carried what the report carried. The report did not carry what the report did not carry. The report was at the audit log.
+The half-mission report went onto the per-laptop on Mission Day 50. The report carried the operational record at the operational level. The report carried what the report carried. The report did not carry what the report did not carry. The report was at the audit log.
 
-I read the post-incident captures on the per-laptop against the consortium-port mirror's reference. The captures were at the laptop. The captures would carry to the consortium-port at Punta Arenas surfacing. The captures would carry to the post-incident review. The post-incident review would be Wanjiru's and Joel's review. The review would run at transit-north on laptop-class compute. The review would surface what the review surfaced.
+Post-incident captures were on the per-laptop against the consortium-port mirror's reference. They would carry to the consortium-port at Punta Arenas surfacing. They would carry to the post-incident review — Wanjiru's and Joel's review, running at transit-north on laptop-class compute. The review would surface what the review surfaced.
 
 The architecture ran at reduced capability at the compute layer. The compute hub was gone; the per-laptops held what the per-laptops were specified to hold; the boat made its bearing. Joel's environmental-stress claim from the paper had been exercised against actual coolant and actual smoke. The claim held at the compute layer.
 
-I noted the holding on the per-laptop at the operational level. The note was at the operational level. The note did not require further narration.
+The holding was noted at the per-laptop at the operational level. The note did not require further narration.
 
 The mission continued.
 
