@@ -1874,7 +1874,15 @@ def _sync_to_dropbox(out_path: Path, rel_md_path: str, *, verbose: bool = True) 
         dest_dir.mkdir(parents=True, exist_ok=True)
         dest = dest_dir / out_path.name
         import shutil
-        shutil.copy2(out_path, dest)
+        # macOS Dropbox CloudStorage (fileprovider) rejects metadata writes
+        # with Errno 1 "Operation not permitted" — so copy2 fails on update.
+        # Unlink first then copyfile (contents-only) is the resilient path.
+        if dest.exists():
+            try:
+                dest.unlink()
+            except Exception:
+                pass
+        shutil.copyfile(out_path, dest)
         if verbose:
             size_mb = out_path.stat().st_size / (1024 * 1024)
             print(f"  → Dropbox: {dest_dir.name}/{out_path.name}  ({size_mb:.1f} MB)")
