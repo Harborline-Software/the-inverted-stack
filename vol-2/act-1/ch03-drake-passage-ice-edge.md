@@ -59,7 +59,7 @@ I have served with logistics officers who editorialized. The editorializing is s
 
 ## The List at Low Altitude — Diego
 
-Diego came up to the bridge wing at fourteen-twenty on Day 2 with a thermos he had brought from his cabin and the polar-operations chart he keeps on a folded paper that has been folded and unfolded enough times to have a topography of its own. He set the thermos down on the rail and the chart on the bench under the windscreen. He poured and gave me half. The coffee was the kind a man drinks when it is for the work and not for the pleasure of it. He has poured me coffee on boats before this one.
+Diego came up to the bridge cap at fourteen-twenty on Day 2 with a thermos he had brought from his cabin and the polar-operations chart he keeps on a folded paper that has been folded and unfolded enough times to have a topography of its own. He set the thermos down on the rail and the chart on the bench under the windscreen. He poured and gave me half. The coffee was the kind a man drinks when it is for the work and not for the pleasure of it. He has poured me coffee on boats before this one.
 
 I asked him what the ice edge would look like at this season.
 
@@ -73,7 +73,7 @@ He paused. It was the pause of a man whose answer was a list and who was decidin
 
 He drank his coffee. The chart went back into its topography. He carried the thermos below.
 
-What I had taken in, in Diego's two answers, was not the technical content. The content was correct; I would have been surprised if it had not been. The shape was the thing. Diego had a list of things that were going to be different at the ice edge from what the consortium had assumed, and he had been carrying the list at low altitude for the duration of the planning, and he had not surfaced it in the planning meetings because the meetings were not where the list belonged. The bridge wing on Day 2 was where the list belonged. He had brought it on schedule.
+What I had taken in, in Diego's two answers, was not the technical content. The content was correct; I would have been surprised if it had not been. The shape was the thing. Diego had a list of things that were going to be different at the ice edge from what the consortium had assumed, and he had been carrying the list at low altitude for the duration of the planning, and he had not surfaced it in the planning meetings because the meetings were not where the list belonged. The bridge cap on Day 2 was where the list belonged. He had brought it on schedule.
 
 Polar specialists I had worked with carried more institutional rank than Diego, and performed expertise an order of magnitude louder. None of them had been quietly correct on the wing the way Diego had. Diego does not perform competence. Diego does the work. The performing is for the consortium meetings.
 
@@ -191,7 +191,7 @@ The rehearsal held. Joel briefed me at sixteen-forty and confirmed the compariso
 
 ## The Edge — Day 7
 
-The Nansen reached the marginal ice zone at oh-three-forty on Day 7. I was on the bridge wing when we reached it. The bridge officer of the night watch had given me the call at oh-three-twenty; I had come up at oh-three-thirty with the parka I keep at the hatch and a thermos of tea I had brewed at oh-three-fifteen. The wind had dropped again. The light had begun to change. The flat dark of the southern night had begun to show, on the horizon to the south, the band of paler grey that marked the reflection of the marginal zone against the cloud cover.
+The Nansen reached the marginal ice zone at oh-three-forty on Day 7. I was on the bridge cap when we reached it. The bridge officer of the night watch had given me the call at oh-three-twenty; I had come up at oh-three-thirty with the parka I keep at the hatch and a thermos of tea I had brewed at oh-three-fifteen. The wind had dropped again. The light had begun to change. The flat dark of the southern night had begun to show, on the horizon to the south, the band of paler grey that marked the reflection of the marginal zone against the cloud cover.
 
 I stood at the rail. I watched the band lighten. I watched the first of the brash-ice pieces appear in the swells off the boat's port quarter. The brash-ice was small at first - fragments the size of a deck plate, the size of a wardroom plate, the size of a fist - and then larger, and then the first of the floes drifted past at a distance the bridge officer logged on the chart and that Diego, who came up at oh-three-fifty-eight without my having called him, named as the leading edge of the marginal zone proper.
 
@@ -209,7 +209,7 @@ I gave him the nod I had given seventeen masters at seventeen sailings.
 
 Mikael acknowledged. The deck officer signalled the dive station. The boat's pumps began the cycle. The Nansen began to settle.
 
-I looked once at the band of grey-green water off the port quarter, at the brash-ice in the swell, at the grey light of the southern dawn the marginal zone had brought with it. I noted what the daylight looked like at the surface on the morning of Day 7. The ice edge, from the bridge wing of a research vessel about to leave the surface for fourteen days. The boat under my feet at the moment the architecture I was about to take three hundred meters under the ice was operating, on the surface side, to its specification.
+I looked once at the band of grey-green water off the port quarter, at the brash-ice in the swell, at the grey light of the southern dawn the marginal zone had brought with it. I noted what the daylight looked like at the surface on the morning of Day 7. The ice edge, from the bridge cap of a research vessel about to leave the surface for fourteen days. The boat under my feet at the moment the architecture I was about to take three hundred meters under the ice was operating, on the surface side, to its specification.
 
 The architecture was operating. The crew was where the crew should be. The boat was where the boat should be. Sabina was at the wardroom desk; Diego had moved from the wing to the polar-operations station two compartments aft; Hiroshi was at the data console; Wanjiru was at the comm space; Priya was at the lab with the four-pass calibration logged and the deployment ready; Maria was at the medical bay with the dive checklist for the crew; Joel was at the engineering compartment with the boat's chief engineer.
 
