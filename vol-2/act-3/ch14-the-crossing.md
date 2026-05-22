@@ -22,35 +22,12 @@ plants-paid:
   - partition-loss-case
   - i-am-the-archive
   - boat-on-register-no-more
-  - anna-personal-file-day49  # atomic-within-scene (set + paid in ch14 at lines 487-531)
+  - anna-personal-file-day50  # atomic-within-scene (set + paid in ch14 personal-file inset; file dated Mission Day 50 2237 local)
 ---
 
 
 <!-- Anna-voice rewrite pass 2026-05-16 (PAO). self_referential_frame yellow→green: "for the record" varied to "for the archive"; 1× "the staff history" → "the audit trail". Note: the dated diary inset (Mission Day 49) is preserved as in-scene first-person, not as meta-frame about the staff history. -->
-
-*Operational damage report - Yusupova, A., Mission Director. RV Nansen, MERIDIAN-7. Mission Day 47.*
-
-*0317 local: leak alarm, sensor compartment two-bravo, lower deck aft. Sunfish anomaly detection on the starboard sensor head's pre-failure acoustic signature flagged a step-shift at 0316:30 - approximately thirty seconds before the threshold-trip that fired the alarm. The flag was visible at the polar-operations console at the diagnostic-level view. The flag was noted by the polar-operations specialist on watch, Sá, D., who confirmed the firmware's escalation pattern against three prior Antarctic deployments and logged a two-up-on-starboard-plane recommendation and a ventilation-hold recommendation against compartment two-bravo's adjacent ducting at 0316:43. Sá then announced compartment two-bravo, confirmed the standing compartment empty against the watch roster, and proceeded to the access ladder at 0316:55. The breach-class alarm fired at 0317:00.*
-
-*0319: Mission Director cabin-to-bridge transit. Bridge at night-watch lighting. Watch officer of record at the half-watch position. Sá at compartment two-bravo at the failure point. Reyes, J., Principal Architect, converging on the access ladder from the engineering rotation.*
-
-*0321: assessment. Compartment isolation candidate. Reyes en route to compartment two-bravo to execute casualty procedure on the failing instrument and to retrieve Sá. The compartment is access-confined and contains, in addition to the failed sensor head, the boat's central compute hub - RTX-class GPU workstation, full-archive RAG index, heavy-LLM hosting node. The compute hub is collateral exposure to coolant ingress and smoke at this point.*
-
-*0342: compartment isolation order issued. Bulkhead door at compartment two-bravo dogged and locked from the compartment-internal side. Two crew members inside the compartment: Sá, D., Senior Polar-Operations Specialist; Reyes, J., Principal Architect. Compartment isolation duration: eleven minutes. Containment timeline: leak source isolated at 0347; residual water drained at 0350; smoke ingress contained at 0351; environmental monitoring confirmed compartment atmosphere within breathable specification at 0353; compartment-clear declaration at 0353.*
-
-*Damage scope: starboard sensor head - total loss; off-the-shelf vendor unit, manufacturer's serial and firmware-update history attached at appendix A. Central compute hub - coolant ingress at the chassis, smoke ingress at the air intake, post-isolation residual environment combining to put the hub offline for the remainder of the mission. Per-laptop crew nodes - no exposure, full operational state. Per-compartment hash-chain integrity - preserved across all affected nodes, replicated at capture.*
-
-*Cause of failure: instrument-malfunction, under investigation. Sensor head pre-failure timestream preserved in the Sunfish archive; firmware-update history preserved in the audit log; command-and-response between control plane and the failed instrument preserved across crew nodes. Forensic analysis deferred to the relay-operations officer and the principal architect for post-incident review. No accusation of cause beyond instrument-malfunction is made at this filing.*
-
-*Crew status: one fatality. Sá, D., Senior Polar-Operations Specialist; cause of death (preliminary): asphyxiation and thermal injury in the post-leak compartment environment; time of death declared at 0408 by the medical officer, Vargas, M.; medical record signed under the medical officer's Ed25519 device key and chained at the audit log. Sá was at compartment two-bravo at the failure point in advance of compartment isolation; resuscitation attempted by Reyes during containment; resuscitation unsuccessful. Reyes treated by the medical officer at compartment exit; minor abrasion at the wrist from confined-access work; no inhalation injury; no medical follow-up required. All other crew accounted for at standing watch positions.*
-
-*Boat status: at depth, course held, trim adjusted at 0319 against the cascade window per the polar-operations specialist's standing recommendation logged at 0316:43; no secondary damage; mission continuing on schedule against Punta Arenas surfacing at Mission Day 56.*
-
-*Capability state: degraded. Heavy-LLM hosting unavailable. Full-archive RAG index unavailable. Multilingual-real-time across all common pairs unavailable. Per-laptop nodes operational; transcription, common-pair translation, hash-chain integrity, KEK/DEK access control, signed audit log, and per-author personal RAG continue at full capacity. Operational tempo reduced to laptop-class capability for the remainder of the mission. Capability-restoration scheduled at Punta Arenas surfacing.*
-
-*- A. Yusupova, Mission Director. Filed; hash 4d8e...c7f3.*
-
----
+<!-- Council Tier 1a pass 2026-05-22 (PAO). Damage-report opener (1,260 words) relocated to inline-at-filing-point at line ~347 — the report appears in the chapter at the moment Anna files it (0518), not at the chapter's first page. The thriller-genre critic flagged the original opener as a TELL-on-page-one structure (reader knew Diego was dead before reading a word of prose); restructured so the eleven minutes behind the bulkhead run in prose-time and the reader does not know whether Joel comes out alone until Joel walks out alone. The damage report still lands in the chapter — it's the document the chapter is partly ABOUT — but at the moment in the timeline it actually exists. -->
 
 I had been asleep when the alarm fired. The cabin's red night-light was on. The boat was at the standing tempo of Segment 3 mid-transit - ninety-six hours past the last surface window at Surface 2, two hundred and sixteen hours to the next at Punta Arenas, the air system breathing at the pitch the body learned to forget within an hour and learned not to forget again the moment the pitch changed.
 
@@ -188,11 +165,9 @@ I had not seen the dogging. I had been at the lower-deck access ladder when the 
 
 I had seen the look.
 
-The look held for a duration I did not measure. None of the looks had been the look that was now at the porthole window — not at the recruitment interview, not across the wardroom, not across any watch across forty-seven days of sea time.
+It held for a duration I did not measure.
 
-The look said what the discipline had prevented him from saying since the recruitment interview.
-
-The look said one other thing the bridge could not see and that I could not yet read - that I would read later in the staff history, retrospectively.
+The porthole glass was small and slick with condensation along the upper edge. He had wiped a clearing with the back of his hand and a smear of what would later be identified as closed-loop coolant from the heat-exchange manifold had crossed the glass at the level of his temple and dried in the streak. His eyes were behind the streak. The compartment's emergency-light cycle was at the green it goes at during a cascade event; the green caught at the back of his iris where the iris met the white. He did not blink. He looked at me through the streak. None of the looks I had carried from him across forty-seven days of sea time — not the recruitment interview, not the wardroom, not the schema migration four days before — had been this look.
 
 I received the look at the layer the bridge could see. I did not change my face.
 
@@ -344,6 +319,28 @@ Joel filed the engineer's report at 0432. The report carried the operational det
 
 I filed the operational damage report at 0518.
 
+*Operational damage report - Yusupova, A., Mission Director. RV Nansen, MERIDIAN-7. Mission Day 47.*
+
+*0317 local: leak alarm, sensor compartment two-bravo, lower deck aft. Sunfish anomaly detection on the starboard sensor head's pre-failure acoustic signature flagged a step-shift at 0316:30 - approximately thirty seconds before the threshold-trip that fired the alarm. The flag was visible at the polar-operations console at the diagnostic-level view. The flag was noted by the polar-operations specialist on watch, Sá, D., who confirmed the firmware's escalation pattern against three prior Antarctic deployments and logged a two-up-on-starboard-plane recommendation and a ventilation-hold recommendation against compartment two-bravo's adjacent ducting at 0316:43. Sá then announced compartment two-bravo, confirmed the standing compartment empty against the watch roster, and proceeded to the access ladder at 0316:55. The breach-class alarm fired at 0317:00.*
+
+*0319: Mission Director cabin-to-bridge transit. Bridge at night-watch lighting. Watch officer of record at the half-watch position. Sá at compartment two-bravo at the failure point. Reyes, J., Principal Architect, converging on the access ladder from the engineering rotation.*
+
+*0321: assessment. Compartment isolation candidate. Reyes en route to compartment two-bravo to execute casualty procedure on the failing instrument and to retrieve Sá. The compartment is access-confined and contains, in addition to the failed sensor head, the boat's central compute hub - RTX-class GPU workstation, full-archive RAG index, heavy-LLM hosting node. The compute hub is collateral exposure to coolant ingress and smoke at this point.*
+
+*0342: compartment isolation order issued. Bulkhead door at compartment two-bravo dogged and locked from the compartment-internal side. Two crew members inside the compartment: Sá, D., Senior Polar-Operations Specialist; Reyes, J., Principal Architect. Compartment isolation duration: eleven minutes. Containment timeline: leak source isolated at 0347; residual water drained at 0350; smoke ingress contained at 0351; environmental monitoring confirmed compartment atmosphere within breathable specification at 0353; compartment-clear declaration at 0353.*
+
+*Damage scope: starboard sensor head - total loss; off-the-shelf vendor unit, manufacturer's serial and firmware-update history attached at appendix A. Central compute hub - coolant ingress at the chassis, smoke ingress at the air intake, post-isolation residual environment combining to put the hub offline for the remainder of the mission. Per-laptop crew nodes - no exposure, full operational state. Per-compartment hash-chain integrity - preserved across all affected nodes, replicated at capture.*
+
+*Cause of failure: instrument-malfunction, under investigation. Sensor head pre-failure timestream preserved in the Sunfish archive; firmware-update history preserved in the audit log; command-and-response between control plane and the failed instrument preserved across crew nodes. Forensic analysis deferred to the relay-operations officer and the principal architect for post-incident review. No accusation of cause beyond instrument-malfunction is made at this filing.*
+
+*Crew status: one fatality. Sá, D., Senior Polar-Operations Specialist; cause of death (preliminary): asphyxiation and thermal injury in the post-leak compartment environment; time of death declared at 0408 by the medical officer, Vargas, M.; medical record signed under the medical officer's Ed25519 device key and chained at the audit log. Sá was at compartment two-bravo at the failure point in advance of compartment isolation; resuscitation attempted by Reyes during containment; resuscitation unsuccessful. Reyes treated by the medical officer at compartment exit; minor abrasion at the wrist from confined-access work; no inhalation injury; no medical follow-up required. All other crew accounted for at standing watch positions.*
+
+*Boat status: at depth, course held, trim adjusted at 0319 against the cascade window per the polar-operations specialist's standing recommendation logged at 0316:43; no secondary damage; mission continuing on schedule against Punta Arenas surfacing at Mission Day 56.*
+
+*Capability state: degraded. Heavy-LLM hosting unavailable. Full-archive RAG index unavailable. Multilingual-real-time across all common pairs unavailable. Per-laptop nodes operational; transcription, common-pair translation, hash-chain integrity, KEK/DEK access control, signed audit log, and per-author personal RAG continue at full capacity. Operational tempo reduced to laptop-class capability for the remainder of the mission. Capability-restoration scheduled at Punta Arenas surfacing.*
+
+*- A. Yusupova, Mission Director. Filed; hash 4d8e...c7f3.*
+
 The damage report carried the times, the cause-of-failure logged as instrument-malfunction-under-investigation, the damage scope, the crew status with Diego's death at 0408 under Maria's signature, the boat status, the capability state, and the closing hash signature. The damage report did not carry the look at the porthole window. The damage report did not carry the duration during which the Mission Director had stood at the rail with her hands at the rail and her face at the bearing. The damage report did not carry the rate. The damage report carried the operational record at the operational level. It would land at the consortium-port at the next surface-window sync.
 
 I closed the report. I signed the report. The hash signature carried at the close.
@@ -461,6 +458,10 @@ The mission continued.
 *I am writing this on Mission Day 50 at 2237 local in my cabin. I have not written in this file since Mission Day 22. The three-day gap between the cascade and the writing is not the cycle that comes naturally; the cycle that comes naturally would have been the same night. The same night I sat at the standing position at the rail. The same night I filed the damage report. The same night I went back to my cabin and did not sleep. I did not write that night because the writing would have been at an altitude I did not yet have a vocabulary for. I did not write the next night either; the vocabulary had not yet arrived. I have a vocabulary now for some of it. I do not have a vocabulary for the rest. I am writing the part I can write.*
 
 *The look through the glass was not procedure. The push past me at the access ladder was not procedure. The dogging from the inside was procedure. The casualty isolation was procedure. The leak source identification was procedure. The residual water drain was procedure. The smoke ingress containment was procedure. The compartment-clear declaration was procedure. The exit was procedure. Joel did the procedure. Joel did the procedure better than the procedure manual specified. The procedure is what kept the boat alive. I do not need to write the procedure here. The procedure is in the damage report.*
+
+*The procedure did not have what the procedure should have had.*
+
+*The medical-rated breathing apparatus was at the medical bay two decks above compartment two-bravo. The medical-rated apparatus should have been at the lower-deck access ladder. The medical-rated apparatus should have been at the bulkhead door of every compartment that contains a closed-loop coolant assembly. The apparatus protocol was written when the boat carried two crew members at the engineering rotation; the boat carries one now; the apparatus protocol did not move with the rotation. Joel's personal kit on his belt was the only respiratory support he had during the four minutes Sá had been at the failure point before Joel arrived. Joel had been working with what was on his belt. The compartment had needed what was at the medical bay two decks above. The compartment had not been arranged to make what was needed reachable in the four minutes the cascade window permitted. That arrangement was not Joel's. That arrangement was not Sá's. That arrangement was the consortium's standing-apparatus-protocol-for-coolant-compartments, drafted in 2017 against the boat configuration of that year, not amended since, and not on the IAA's standing review cycle because the IAA had not had a coolant-compartment fatality in twenty-three years of operations. The arrangement is at the consortium's standing procedural review now. I will write the recommendation at Punta Arenas. I will sign the recommendation under my Ed25519 device key. The apparatus will move to the ladder and the bulkhead doors before the next mission sails. That is what the personal file is for. That is what the consortium's procedural review is for. That is what the writing of the recommendation will be for. The arrangement does not stay where it is.*
 
 *The procedure did not keep Diego alive.*
 
