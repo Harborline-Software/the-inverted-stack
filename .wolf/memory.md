@@ -3,6 +3,8 @@
 > Chronological action log. Hooks and AI append to this file automatically.
 > Old sessions are consolidated by the daemon weekly.
 
+| 18:30 | ch02 prose review pass (Stage 5): cut 5509→4401 words, removed academic scaffolding, advanced ICM to voice-check, committed + PR 174 | vol-1/part-1-thesis-and-pain/ch02-local-first-serious-stack.md | success | ~8000 |
+
 | 22:30 | PAO session wrap: council review (5 critics) + 12 tier-0/1/2/3/4 interventions (ch01/ch14/ch17/ch04/spine) + 4 Sonnet subagents (case study/sell-sheet/quotes/anatomy) + OpenWolf housekeeping | vol-2/act-1/ch01, vol-2/act-3/ch14, vol-2/act-3/ch17, vol-2/SPINE.md, coordination/inbox/ | session complete; marketing copy execution CIC-blocked; v2-batch #1+#2 CIC-blocked | ~200k |
 
 | 18:09 | Authored design-velocity case study (cohort-2 vs cohort-3 8x wall-clock improvement) | coordination/inbox/pao-status-2026-05-22T18-09Z-design-velocity-case-study.md | filed to coordination inbox; dispatched by PAO v2-batch #5 | ~8k |
@@ -4224,3 +4226,11 @@ Open / deferred:
 | 20:48 | ch14 self_referential_frame: cut decorative second instance from line 195 sentence-tail | vol-2/act-3/ch14-the-crossing.md | galley YELLOW→GREEN (0 warnings, 0 blockers) | ~800 |
 | 20:49 | ch18 motif_overuse yellow→green: cut retired 'what they claimed to be' phrase in medialuna beat; replaced with pastry-judge lamination vocabulary | vol-2/act-3/ch18-punta-arenas-surfacing.md | green | ~3k |
 | 21:50 | Fix Dropbox sync silent failure on update (copy2 → unlink+copyfile) | build/audiobook.py | ch01 Dropbox mtime 17:39Z→21:46Z; bug-469 logged | ~3k |
+| 18:27 | ch01 prose review pass (Stage 5): trimmed 7,703→4,684 words; advanced icm/prose-review→icm/voice-check; PR 173 opened | vol-1/part-1-thesis-and-pain/ch01-when-saas-fights-reality.md | branch prose/review-ch01 pushed; PR open | ~12k |
+| 18:28 | ch03 prose review pass — trimmed 4,718→3,858 words, advanced icm/prose-review→icm/voice-check | vol-1/part-1-thesis-and-pain/ch03-inverted-stack-one-diagram.md | PR 173 updated to cover ch01+ch03 | ~8k |
+| 18:34 | ch06 prose review pass — cut to 3,590 words, ICM advanced to voice-check | vol-1/part-2-council-reads-the-paper/ch06-distributed-systems-lens.md | PR opened at prose/review-ch06 | ~6000 |
+| 18:34 | ch07 prose review pass — trimmed 4,567→3,392 words, advanced ICM to voice-check, PR opened | vol-1/part-2-council-reads-the-paper/ch07-security-lens.md | PR #176 merged to prose/review-ch07 | ~8k |
+
+| 18:35 | ch05 prose review pass — trimmed 4237→3815 words, advanced ICM to voice-check | vol-1/part-2-council-reads-the-paper/ch05-enterprise-lens.md | PR 177 opened | ~8k || 18:35 | ch08 prose review — trim 4,697→3,801 words, advance ICM to voice-check, PR opened | vol-1/part-2-council-reads-the-paper/ch08-product-economic-lens.md | PR#178 merged-ready | ~6k |
+| 22:00 | ch09 prose review — trimmed 4,990 → 3,818 words, ICM marker advanced to voice-check | vol-1/part-2-council-reads-the-paper/ch09-local-first-practitioner-lens.md | PR #179 opened | ~8k |
+| 18:37 | ch16 prose review pass — trimmed 6,549→3,849 words, ICM advanced to voice-check, PR opened | vol-1/part-3-reference-architecture/ch16-persistence-beyond-the-node.md | PR the-inverted-stack#180 merged to prose/review-ch16 | ~8k |
