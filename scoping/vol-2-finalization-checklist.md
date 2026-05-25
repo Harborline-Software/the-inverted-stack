@@ -3,7 +3,14 @@
 **Status:** WORKING CHECKLIST 2026-05-25 (PAO). Tracks what must close before Vol-2
 can be ratified `icm/approved` AND before Vol-3 can reach `icm/draft`.
 
-**Author:** PAO 2026-05-25
+**Author:** PAO 2026-05-25 (V1 scoping subagent). Amended 2026-05-25T15:30Z by PAO V2
+subagent: Tier-1 ch17 Diego-living item marked CLOSED — current prose verified
+canon-compliant against canon.yaml + ch14 0408 Day 47 death-anchor. The original
+diagnostic reproduced the 2026-05-22 council critic findings without re-checking
+against PR #160 (`1e26a87`), which landed the fix the same day the council reviewed.
+See `pao-status-2026-05-25T15-32Z-vol-2-ch17-no-op-verification.md` for the verification
+narrative.
+
 **Predecessor docs:**
 - `vol-2/SPINE.md` (RATIFIED 2026-05-21 — Plan C1+C7)
 - `vol-2/_reviews/2026-05-22-council/INDEX.md` (5-critic council review, 2026-05-22)
@@ -27,14 +34,23 @@ Per `vol-2/_reviews/2026-05-22-council/INDEX.md`, the council surfaced 5 converg
 
 ### Tier 1 (urgent, line-level continuity)
 
-- [ ] **Ch 17 Diego-living continuity bug** — Plan C ch14 has Diego dying Day 47
-      at 0408; ch17 currently has Diego at the polar-ops console on Day 53 + sealing
-      the letter on Day 55 + bringing it to Anna at 2147 Day 55. canon.yaml already
-      specifies the letter was sealed posthumously by the crew; the prose just
-      needs to render that. **Lines flagged:** ch17 lines 40, 50, 56, 216–236
-      (technical-substrate critic) + frontmatter Diego-at-console reference
-      (bestseller-profile critic). **Owner:** PAO via chapter-drafter subagent
-      dispatch. **Effort:** ~30–45 min single-chapter pass.
+- [x] **Ch 17 Diego-living continuity bug — CLOSED 2026-05-22 via PR #160**
+      (`1e26a87 fix(vol-2): ch17 — Diego-alive continuity bug (Tier 0 council finding)`).
+      The council-flagged lines (40, 50, 56, 216–236 + frontmatter) were already
+      Plan-C-reframed three days before this checklist was authored. Current state
+      verified 2026-05-25T15:30Z (PAO V2 subagent re-read against canon.yaml +
+      ch14 0408 Day 47 death-anchor): all surviving Diego references in ch17 are
+      posthumous — console reassigned to Nakamura ("the empty seat"; "the watch
+      Diego had asked to stand and would not stand"); Maria + Anna sort his
+      personal effects at 1410 Day 53; letter sealed by Maria + Anna at 2147
+      Day 55 using Diego's bombilla wax ("The seal was Diego's seal. The pages
+      were Diego's pages. The hand on the address was Diego's hand. The act was
+      ours."); Maria carries the envelope down the gangway at 0728 Day 56 per
+      canon.yaml diego.last_letter spec. **Net unblock:** the Vol-2 Tier-1 item
+      blocking Vol-3 `icm/draft` was closed three days before the predecessor PAO
+      subagent authored this checklist — the diagnostic reproduced the council's
+      stale findings rather than re-reading current prose. Vol-3 ch17-blocker
+      gate is GREEN.
 
 ### Tier 2 (load-bearing register adjustments)
 
@@ -121,10 +137,9 @@ Per `2026-05-21-plan-c-integration-plan.md` and SPINE status (waves landed
 - [x] **Wave 4** — consequence ripples; Astrid scene at dock under Plan C weight;
       staff-history-vs-diary register reframe; canon.yaml plants updates
 
-But Wave 3 missed Ch 17 (which is the load-bearing tier-1 item above — Diego
-references in ch17 are NOT yet posthumous, contradicting canon.yaml and the
-Plan-C reframe). **The Wave 3 close-out is incomplete; ch17 needs the
-posthumous-reframe pass.**
+Wave 3 originally missed Ch 17 — surfaced in the 2026-05-22 council review,
+fixed same day by PR #160 (`1e26a87`). Wave 3 close-out is now complete across
+all back-third chapters. Per-chapter table updated below.
 
 ## Per-chapter UPF + voice-check status
 
@@ -150,7 +165,7 @@ status per the council review:
 | Ch 14 | done 2026-05-20 | tier-2 porthole moment + opener relocation + EAB ruling pending | Wave 1 landed (Diego death) |
 | Ch 15 | done 2026-05-20 | back-third voice-drift candidate (tier-3) | Wave 3 posthumous reframe landed |
 | Ch 16 | done 2026-05-20 | back-third voice-drift candidate (tier-3) | Wave 3 posthumous reframe landed |
-| Ch 17 | done 2026-05-20 | **tier-1 Diego-living continuity bug** | Wave 1 (Joel admission) landed; Wave 3 posthumous reframe MISSED |
+| Ch 17 | done 2026-05-20 | tier-1 Diego-living continuity bug CLOSED 2026-05-22 (PR #160) | Wave 1 (Joel admission) landed; Wave 3 posthumous reframe landed via PR #160 |
 | Ch 18 | done 2026-05-20 | back-third voice-drift candidate (tier-3) | Wave 1 (staff-history) + Wave 3 + Wave 4 (Astrid scene) landed |
 
 ## Pre-assembly checklist (technical / mechanical)
@@ -210,10 +225,9 @@ status per the council review:
 
 Per the Vol-3 plan's halt-condition list, Vol-3 cannot reach `icm/draft` until:
 
-1. **Vol-2 ch17 posthumous reframe** (tier-1 above) executes. **This is the
-   single highest-priority Vol-2 finalization item.** Wave 3 missed it; closing
-   the wave clears the most visible Vol-3 blocker (Wanjiru's voice canonicalization
-   depends on Vol-2's voice register being final, including ch17's voice work).
+1. ~~**Vol-2 ch17 posthumous reframe**~~ — CLOSED 2026-05-22 via PR #160
+   (`1e26a87`). Wave 3 close-out complete. This item no longer blocks Vol-3
+   `icm/draft`. Verified 2026-05-25T15:30Z by PAO V2 re-read against canon.yaml.
 2. **Ch 14 tier-2 interventions** (porthole register, opener relocation, EAB-mask
    ruling) execute. These are voice-canonical interventions whose outcome calibrates
    the Vol-3 voice differential.
@@ -234,7 +248,7 @@ Items NOT blocking Vol-3 start:
 
 | Workstream | Effort | Owner |
 |---|---|---|
-| Ch 17 posthumous reframe | ~45 min | chapter-drafter subagent |
+| ~~Ch 17 posthumous reframe~~ | CLOSED 2026-05-22 via PR #160 | n/a |
 | Ch 14 tier-2 interventions (porthole + opener + EAB) | ~2h | PAO + CIC + chapter-drafter |
 | Ch 04 architecture cut | ~2h | PAO + chapter-drafter |
 | Back-third voice canonicalization (Ch 13–18) | ~3h wall-clock | prose-reviewer subagent fan-out |
