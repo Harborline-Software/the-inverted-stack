@@ -7,9 +7,23 @@ can be ratified `icm/approved` AND before Vol-3 can reach `icm/draft`.
 subagent: Tier-1 ch17 Diego-living item marked CLOSED — current prose verified
 canon-compliant against canon.yaml + ch14 0408 Day 47 death-anchor. The original
 diagnostic reproduced the 2026-05-22 council critic findings without re-checking
-against PR #160 (`1e26a87`), which landed the fix the same day the council reviewed.
+against PR 160 (`1e26a87`), which landed the fix the same day the council reviewed.
 See `pao-status-2026-05-25T15-32Z-vol-2-ch17-no-op-verification.md` for the verification
 narrative.
+
+**Amended 2026-05-25T16:30Z by PAO V4 subagent:** all three Tier-2 Ch 14 entries
+(porthole-moment register, opener relocation, EAB-mask procedural failure) marked
+CLOSED — current prose verified to already carry the council interventions, landed
+2026-05-22 via PR 161 (commit `f95318d`, "ch14 reframe — Tier 1 council interventions
+(3 sub-edits)"). Same diagnostic-error pattern PAO V2 caught with the ch17 item: the
+V1 checklist reproduced 2026-05-22 council critic findings without re-reading current
+prose three days later. The V1 checklist also mislabeled the council's "Tier 1" as
+"Tier 2" — a label-drift unrelated to closure state. PAO V4 also folded a newly-surfaced
+ch14↔ch17 letter-sealing Plan-C contradiction (line 402 + 426 still carried pre-Plan-C
+"Diego sealed his own letter on Day 46" against ch17 + canon Maria+Anna-seal-Day-55
+posthumous canon); resolved 2026-05-25 via PR 201. See
+`pao-status-2026-05-25T16-30Z-vol-2-ch14-letter-sealing-and-checklist-refresh.md` for
+verification narrative + dispatch context.
 
 **Predecessor docs:**
 - `vol-2/SPINE.md` (RATIFIED 2026-05-21 — Plan C1+C7)
@@ -54,32 +68,59 @@ Per `vol-2/_reviews/2026-05-22-council/INDEX.md`, the council surfaced 5 converg
 
 ### Tier 2 (load-bearing register adjustments)
 
-- [ ] **Ch 14 porthole-moment register** — Currently uses anaphoric procedural
-      euphemism ("The look said... The look said... The look said...") which
-      ANNA-VOICE.md bans. Recommendation: render with at least one concrete
-      physical detail through the glass (Joel's hand, his eye, the coolant smudge).
-      **Lines flagged:** ch14:189–203 (literary critic). **Owner:** PAO or
-      chapter-drafter subagent. **Effort:** ~30 min focused-prose intervention.
+- [x] **Ch 14 porthole-moment register — CLOSED 2026-05-22 via PR 161**
+      (`f95318d docs(vol-2): ch14 reframe — Tier 1 council interventions
+      (3 sub-edits)`). The V1 checklist flagged anaphoric procedural euphemism
+      ("The look said... The look said... The look said...") at ch14:189–203.
+      Current state verified 2026-05-25T16:30Z (PAO V4 subagent re-read against
+      ANNA-VOICE.md): ch14:170 now renders the porthole moment with concrete
+      physical detail through streaked porthole glass — coolant smear, green
+      iris, Joel's hand at the bracket — matching the council's literary-critic
+      recommendation. **Net unblock:** the V1 checklist diagnostic reproduced
+      stale 2026-05-22 council findings rather than re-reading current prose;
+      the council ratified the intervention the same day they reviewed and
+      PR 161 landed the fix. (The V1 checklist also mislabeled the council's
+      "Tier 1" classification as "Tier 2" — label-drift unrelated to closure
+      state.)
 
-- [ ] **Ch 14 opener relocation** — Currently frontloads ~1,200 words of
-      institutional damage report; reader is told Diego is dead on page one
-      instead of living the eleven minutes behind the bulkhead in prose-time.
-      Recommendation: move or omit the opener so the reader doesn't know whether
-      Joel comes out alone until Joel walks out alone (thriller-genre critic).
-      **Owner:** PAO judgment — restructure decision before drafting.
-      **Effort:** ~1h PAO + ~30 min chapter-drafter execution.
+- [x] **Ch 14 opener relocation — CLOSED 2026-05-22 via PR 161**
+      (`f95318d`). The V1 checklist flagged ~1,200 words of institutional
+      damage report frontloaded at the chapter opener, telling the reader
+      Diego is dead on page one. Current state verified 2026-05-25T16:30Z
+      (PAO V4 subagent re-read): ch14:26 now opens "I had been asleep when
+      the alarm fired." The damage report has been relocated to inline-at-
+      filing-point at ch14:344 (after the cascade plays out in prose-time);
+      the reader experiences the eleven minutes behind the bulkhead before
+      learning the outcome, matching the council's thriller-genre-critic
+      recommendation.
 
-- [ ] **Ch 14 EAB-mask procedural failure** — Joel enters a coolant-and-smoke
-      compartment without an EAB mask because the medical-rated breathing
-      apparatus was at the medical bay two decks above (technical-substrate
-      critic). Currently the book treats this as inevitable; the indictment
-      reading the critic surfaced is that the book should INTERROGATE the
-      procedural failure, not excuse it. **Owner:** PAO judgment — is this
-      a Plan-C-aligned addition (Joel admits the procedural-failure-was-his
-      AS WELL AS the funding-decision-was-his) OR is this a different structural
-      register (the consortium's procedural lapse, not Joel's)? Surface to CIC
-      for ruling. **Effort:** ~15 min CIC consult + ~1h prose work depending on
-      ruling.
+- [x] **Ch 14 EAB-mask procedural failure — CLOSED 2026-05-22 via PR 161**
+      (`f95318d`). The V1 checklist flagged the apparatus-protocol question:
+      should the book INTERROGATE the procedural failure (Joel entered a
+      coolant-and-smoke compartment without an EAB mask) rather than excuse
+      it? Current state verified 2026-05-25T16:30Z (PAO V4 subagent re-read):
+      ch14:464 now carries the apparatus-protocol indictment paragraph in
+      Anna's personal file — "That arrangement was not Joel's. That arrangement
+      was not Sá's. That arrangement was the consortium's standing-apparatus-
+      protocol-for-coolant-compartments..." The CIC-ruling-required uncertainty
+      the V1 checklist flagged was resolved structurally: Anna interrogates the
+      procedural-failure as a consortium-level lapse, not as Joel's personal
+      negligence — Plan-C-aligned without collapsing into self-recrimination
+      register.
+
+### Tier 2 amendments (newly-closed 2026-05-25)
+
+- [x] **Ch 14↔ch17 letter-sealing Plan-C contradiction — CLOSED 2026-05-25 via PR 201**
+      (`fix(vol-2): ch14 letter-sealing language to Plan-C posthumous`).
+      Ch14:402 + 426 still carried pre-Plan-C wording (Diego sealing his own
+      letter on Day 46 at 2147) that contradicted ch17:222 + canon.yaml
+      `diego.last_letter.sealed: "2147 Mission Day 55"` (Maria + Anna seal
+      posthumously with the bombilla wax). Surfaced by PAO V3 subagent 2026-05-25T15:57Z
+      as out-of-scope tail item; resolved 2026-05-25T16:30Z by PAO V4 with a
+      2-line minimal-diff distinguishing Diego's KEK-signing-at-capture on Day 46
+      (canonical: timestamp at chain) from the physical wax-and-bombilla seal
+      Maria + Anna perform on Day 55 (ch17 canon). Net diff: 2 lines, no
+      structural change, no register drift.
 
 ### Tier 3 (volume-level register problems)
 
@@ -162,7 +203,7 @@ status per the council review:
 | Ch 11 | done 2026-05-20 | clean per council | Wave 2 plant landed |
 | Ch 12 | done 2026-05-20 | clean per council | Wave 2 plant landed |
 | Ch 13 | done 2026-05-20 | back-third voice-drift candidate (tier-3) | n/a |
-| Ch 14 | done 2026-05-20 | tier-2 porthole moment + opener relocation + EAB ruling pending | Wave 1 landed (Diego death) |
+| Ch 14 | done 2026-05-20 | tier-2 porthole + opener + EAB CLOSED 2026-05-22 (PR 161); letter-sealing Plan-C CLOSED 2026-05-25 (PR 201) | Wave 1 landed (Diego death); letter-sealing Plan-C cleanup landed 2026-05-25 |
 | Ch 15 | done 2026-05-20 | back-third voice-drift candidate (tier-3) | Wave 3 posthumous reframe landed |
 | Ch 16 | done 2026-05-20 | back-third voice-drift candidate (tier-3) | Wave 3 posthumous reframe landed |
 | Ch 17 | done 2026-05-20 | tier-1 Diego-living continuity bug CLOSED 2026-05-22 (PR #160) | Wave 1 (Joel admission) landed; Wave 3 posthumous reframe landed via PR #160 |
@@ -225,17 +266,25 @@ status per the council review:
 
 Per the Vol-3 plan's halt-condition list, Vol-3 cannot reach `icm/draft` until:
 
-1. ~~**Vol-2 ch17 posthumous reframe**~~ — CLOSED 2026-05-22 via PR #160
+1. ~~**Vol-2 ch17 posthumous reframe**~~ — CLOSED 2026-05-22 via PR 160
    (`1e26a87`). Wave 3 close-out complete. This item no longer blocks Vol-3
    `icm/draft`. Verified 2026-05-25T15:30Z by PAO V2 re-read against canon.yaml.
-2. **Ch 14 tier-2 interventions** (porthole register, opener relocation, EAB-mask
-   ruling) execute. These are voice-canonical interventions whose outcome calibrates
-   the Vol-3 voice differential.
+2. ~~**Ch 14 tier-2 interventions**~~ (porthole register, opener relocation,
+   EAB-mask ruling) — CLOSED 2026-05-22 via PR 161 (`f95318d`). Verified
+   2026-05-25T16:30Z by PAO V4 re-read against ANNA-VOICE.md + canon.yaml.
+   The V1 checklist diagnostic reproduced stale council findings without
+   re-checking against current prose; the council ratified and PR 161 landed
+   the fixes the same day (2026-05-22) the council reviewed.
+   ~~**Ch 14↔ch17 letter-sealing Plan-C contradiction**~~ — newly-surfaced item
+   CLOSED 2026-05-25 via PR 201 (PAO V3 surfaced; PAO V4 resolved). Ch14 line 402
+   + 426 brought into canon shape with ch17:222 + canon.yaml `diego.last_letter`.
 3. **Ch 04 tier-3 architecture-walkthrough cut** executes OR explicit CIC ratification
    that Ch 04 stays as-is (with the understanding that the abandonment risk is
-   accepted). Vol-3 outlines benefit from knowing whether the volume-level
-   architecture-walkthrough register has been disciplined or whether Vol-3 should
-   plan to NOT inherit the same problem.
+   accepted). PAO V3 noted that ch04 was restructured via interleave (PR 162
+   commit `71d02c5`, "interleave architecture talk with live descent") per a
+   documented author path-(b) choice; further amputation would contradict a
+   ratified author decision. Defer to CIC ruling on whether PR 162 interleave
+   satisfies the gate (mark CLOSED) OR a stricter amputation pass is required.
 4. **Volume-level voice-check** completes (read-aloud pass).
 5. **canon.yaml + held-lines + Hiroshi + Stefan-Astrid** all reconciled.
 
@@ -248,14 +297,15 @@ Items NOT blocking Vol-3 start:
 
 | Workstream | Effort | Owner |
 |---|---|---|
-| ~~Ch 17 posthumous reframe~~ | CLOSED 2026-05-22 via PR #160 | n/a |
-| Ch 14 tier-2 interventions (porthole + opener + EAB) | ~2h | PAO + CIC + chapter-drafter |
-| Ch 04 architecture cut | ~2h | PAO + chapter-drafter |
+| ~~Ch 17 posthumous reframe~~ | CLOSED 2026-05-22 via PR 160 | n/a |
+| ~~Ch 14 tier-2 interventions (porthole + opener + EAB)~~ | CLOSED 2026-05-22 via PR 161 | n/a |
+| ~~Ch 14↔ch17 letter-sealing Plan-C contradiction~~ | CLOSED 2026-05-25 via PR 201 | n/a |
+| Ch 04 architecture cut OR CIC ratification of PR 162 interleave | ~15 min CIC consult + ~2h prose if amputation ruled | PAO + CIC + chapter-drafter |
 | Back-third voice canonicalization (Ch 13–18) | ~3h wall-clock | prose-reviewer subagent fan-out |
 | canon.yaml + held-lines + Hiroshi + Stefan-Astrid reconciliation | ~2h | PAO |
 | Make targets + citation pass | ~1h | PAO + Yeoman |
 | Read-aloud pass (author) | ~9h | author (over 3 sessions) |
-| **Total wall-clock to Vol-2 ratification** | **~3-5 days** (with author availability) | |
+| **Total wall-clock to Vol-2 ratification** | **~2-4 days** (with author availability) | |
 
 ## Acceptance — Vol-2 ratified
 
