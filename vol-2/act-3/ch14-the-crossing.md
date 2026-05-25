@@ -399,7 +399,7 @@ An item went on the list: *consortium notification on Diego's retirement intent 
 
 ---
 
-Diego had sealed the letter to María Elena at 2147 on Mission Day 46. The seal time was at the canonical authored-content archive under Diego's KEK; the timestamp was at the chain. The letter had been sealed the night before the cascade. The architecture had carried it forward at the replication cadence; the per-laptop nodes had carried it; the relay would carry it; the Punta Arenas surface handshake would carry it; the IAA's communications office at Buenos Aires would carry it; María Elena Vargas at Belgrano would receive it at her hand within twelve days of the surfacing.
+Diego had signed the letter to María Elena at capture at 2147 on Mission Day 46. The capture time was at the canonical authored-content archive under Diego's KEK; the timestamp was at the chain. The letter had been written the night before the cascade. The architecture had carried the file forward at the replication cadence; the per-laptop nodes had carried it; the relay would carry it; the Punta Arenas surface handshake would carry it; the IAA's communications office at Buenos Aires would carry it; María Elena Vargas at Belgrano would receive it at her hand within twelve days of the surfacing.
 
 The letter read in two languages. Diego had written in Spanish first; he had written a parallel English translation second; the parallel-translation practice that he had carried across his thirty-five years of writing for the IAA's record.
 
@@ -423,7 +423,7 @@ In his parallel English:
 
 *- D.*
 
-The afternoon of Day 46 had not gone the way the letter remembered it. We had spoken twice that afternoon - once about the cross-current vector at 1430, once about the polar-operations watch rotation for the back nine days at 1612. Neither conversation had been about the retirement decision. Diego had carried the decision he had written into the notebook on Day 44 into the letter he sealed on Day 46. The understanding he attributed to the Mission Director was the understanding he had decided I had given him. He had decided right. The understanding had been there. The notebook had told me on Day 50 what the letter had already told María Elena at 2147 on Day 46.
+The afternoon of Day 46 had not gone the way the letter remembered it. We had spoken twice that afternoon - once about the cross-current vector at 1430, once about the polar-operations watch rotation for the back nine days at 1612. Neither conversation had been about the retirement decision. Diego had carried the decision he had written into the notebook on Day 44 into the letter he wrote on Day 46. The understanding he attributed to the Mission Director was the understanding he had decided I had given him. He had decided right. The understanding had been there. The notebook had told me on Day 50 what the letter had committed to the archive at 2147 on Day 46 - and what the letter would tell María Elena when Maria carried it down the gangway at Punta Arenas.
 
 The letter was at the canonical authored-content archive. The letter was signed at capture under Diego's KEK. The letter would reach María Elena Vargas at Belgrano when the boat surfaced at Punta Arenas at the priority-routing Wanjiru had set at the comm-node mirror for the consortium-port queue. The letter did not require relay window. The letter required surfacing. The boat would surface. The letter would deliver.
 
