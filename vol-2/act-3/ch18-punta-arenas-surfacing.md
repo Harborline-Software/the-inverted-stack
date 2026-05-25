@@ -366,7 +366,7 @@ A different file opened.
 
 *Five years between the prior failure and now. Thirty seconds against the consortium's standing institutional handshake. He did not say what he could have said. I did not require him to say what he could have said. The institutional level did not require him to say it. I do not know whether I will see him again at a level that is not the institutional level. I do not know whether the altitude at which what was not said could be said is an altitude that exists in this life. The not-knowing is permanent. The not-knowing has been permanent since 2018. The not-knowing was permanent at 0517 today as it was at 0517 in 2018. The institutional level is what holds.*
 
-*Joel was at the wardroom on Day 44. I have not written what he said in the institutional record. What he said is in the other file - the one that is not for the consortium. It requires being carried at the altitude at which one person carries another. The carrying has been done. It will continue. The institutional level is what holds.*
+*Joel was at the wardroom on Day 54. I have not written what he said in the institutional record. What he said is in the other file - the one that is not for the consortium. It requires being carried at the altitude at which one person carries another. The carrying has been done. It will continue. The institutional level is what holds.*
 
 *Hiroshi has been drawing for forty-five years. He did not draw for the medium; he drew for the impulse. The impulse went to the cold edge. He did not lament the medium. He chose the impulse. The choice is what one is. I have carried him at the institutional level for ten years and have not carried him at the impulse level until today.*
 
@@ -398,7 +398,7 @@ Scrolling to the institutional-record section against the leak event at Mission 
 
 The paragraph went in.
 
-*Crew fatality, Mission Day 47, 0337 local: Sá, D., Senior Polar-Operations Specialist. Forensic substrate documents the firmware-update pattern at vendor chains traceable to Helvetia Trust SA. The vendor firmware passed the AI-agent security audit run at the September 2022 IAA pre-procurement review cycle; the agent's findings were not verified against the raw firmware. The procurement approval was carried by Reyes, J., Principal Architect. Sá will reach María Elena Vargas at Buenos Aires within ninety-six hours per IAA standing protocol.*
+*Crew fatality, Mission Day 47, 0408 local: Sá, D., Senior Polar-Operations Specialist. Forensic substrate documents the firmware-update pattern at vendor chains traceable to Helvetia Trust SA. The vendor firmware passed the AI-agent security audit run at the September 2022 IAA pre-procurement review cycle; the agent's findings were not verified against the raw firmware. The procurement approval was carried by Reyes, J., Principal Architect. Sá will reach María Elena Vargas at Buenos Aires within ninety-six hours per IAA standing protocol.*
 
 The file saved.
 
